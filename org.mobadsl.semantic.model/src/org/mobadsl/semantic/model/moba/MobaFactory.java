@@ -1,0 +1,222 @@
+/**
+ */
+package org.mobadsl.semantic.model.moba;
+
+import org.eclipse.emf.ecore.EFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
+ * <!-- end-user-doc -->
+ * @see org.mobadsl.semantic.model.moba.MobaPackage
+ * @generated
+ */
+public interface MobaFactory extends EFactory {
+	/**
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	MobaFactory eINSTANCE = org.mobadsl.semantic.model.moba.impl.MobaFactoryImpl.init();
+
+	/**
+	 * Returns a new object of class '<em>Application</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Application</em>'.
+	 * @generated
+	 */
+	MobaApplication createMobaApplication();
+
+	/**
+	 * Returns a new object of class '<em>Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Template</em>'.
+	 * @generated
+	 */
+	MobaTemplate createMobaTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Generator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generator</em>'.
+	 * @generated
+	 */
+	MobaGenerator createMobaGenerator();
+
+	/**
+	 * Returns a new object of class '<em>Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Type</em>'.
+	 * @generated
+	 */
+	MobaDataType createMobaDataType();
+
+	/**
+	 * Returns a new object of class '<em>Constant</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constant</em>'.
+	 * @generated
+	 */
+	MobaConstant createMobaConstant();
+
+	/**
+	 * Returns a new object of class '<em>Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property</em>'.
+	 * @generated
+	 */
+	MobaProperty createMobaProperty();
+
+	/**
+	 * Returns a new object of class '<em>Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Settings</em>'.
+	 * @generated
+	 */
+	MobaSettings createMobaSettings();
+
+	/**
+	 * Returns a new object of class '<em>Cache</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cache</em>'.
+	 * @generated
+	 */
+	MobaCache createMobaCache();
+
+	/**
+	 * Returns a new object of class '<em>Dto</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dto</em>'.
+	 * @generated
+	 */
+	MobaDto createMobaDto();
+
+	/**
+	 * Returns a new object of class '<em>Dto Index</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dto Index</em>'.
+	 * @generated
+	 */
+	MobaDtoIndex createMobaDtoIndex();
+
+	/**
+	 * Returns a new object of class '<em>Payload</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Payload</em>'.
+	 * @generated
+	 */
+	MobaPayload createMobaPayload();
+
+	/**
+	 * Returns a new object of class '<em>Queue</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Queue</em>'.
+	 * @generated
+	 */
+	MobaQueue createMobaQueue();
+
+	/**
+	 * Returns a new object of class '<em>Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service</em>'.
+	 * @generated
+	 */
+	MobaService createMobaService();
+
+	/**
+	 * Returns a new object of class '<em>Rest Custom</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rest Custom</em>'.
+	 * @generated
+	 */
+	MobaRestCustom createMobaRestCustom();
+
+	/**
+	 * Returns a new object of class '<em>Rest Crud</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rest Crud</em>'.
+	 * @generated
+	 */
+	MobaRestCrud createMobaRestCrud();
+
+	/**
+	 * Returns a new object of class '<em>Dto Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dto Attribute</em>'.
+	 * @generated
+	 */
+	MobaDtoAttribute createMobaDtoAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Dto Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dto Reference</em>'.
+	 * @generated
+	 */
+	MobaDtoReference createMobaDtoReference();
+
+	/**
+	 * Returns a new object of class '<em>Payload Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Payload Attribute</em>'.
+	 * @generated
+	 */
+	MobaPayloadAttribute createMobaPayloadAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Payload Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Payload Reference</em>'.
+	 * @generated
+	 */
+	MobaPayloadReference createMobaPayloadReference();
+
+	/**
+	 * Returns a new object of class '<em>Queue Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Queue Reference</em>'.
+	 * @generated
+	 */
+	MobaQueueReference createMobaQueueReference();
+
+	/**
+	 * Returns a new object of class '<em>Muliplicity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Muliplicity</em>'.
+	 * @generated
+	 */
+	MobaMuliplicity createMobaMuliplicity();
+
+	/**
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
+	MobaPackage getMobaPackage();
+
+} //MobaFactory

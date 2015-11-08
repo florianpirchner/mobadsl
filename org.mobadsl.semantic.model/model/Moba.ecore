@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="moba" nsURI="http://www.mobadsl.org/model/Moba" nsPrefix="moba">
+  <eClassifiers xsi:type="ecore:EClass" name="MobaApplication" eSuperTypes="#//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//MobaApplicationFeature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaApplicationFeature" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaTemplate" eSuperTypes="#//MobaApplicationFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="template" eType="#//MobaApplication"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaGenerator" eSuperTypes="#//MobaApplicationFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorConst" eType="#//MobaConstant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDataType" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="array" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateFormatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dateFormatConstant" eType="#//MobaConstant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaConstant" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaPropertiesProvider" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//MobaProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueConst" eType="#//MobaConstant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaData" abstract="true" eSuperTypes="#//MobaApplicationFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaSettings" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaSettings"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaCache">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheTypeString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cacheTypeConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheStrategyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cacheStrategyConst" eType="#//MobaConstant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDto" eSuperTypes="#//MobaData #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cache" eType="#//MobaCache"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//MobaDtoFeature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="index" eType="#//MobaDtoIndex"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDtoIndex">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" unique="false"
+        upperBound="-1" eType="#//MobaDtoAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaPayload" eSuperTypes="#//MobaData #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaPayload"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//MobaPayloadFeature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaQueue" eSuperTypes="#//MobaData #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaQueue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//MobaQueueFeature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaService" eSuperTypes="#//MobaApplicationFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRestCustom" eSuperTypes="#//MobaService #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRestCrud" eSuperTypes="#//MobaService #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDtoFeature" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDtoAttribute" eSuperTypes="#//MobaDtoFeature #//MobaMultiplicityProvider #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaMultiplicityProvider" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" eType="#//MobaMuliplicity"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDtoReference" eSuperTypes="#//MobaDtoFeature #//MobaMultiplicityProvider #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascading" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaPayloadFeature" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaPayloadAttribute" eSuperTypes="#//MobaPayloadFeature #//MobaMultiplicityProvider #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaPayloadReference" eSuperTypes="#//MobaPayloadFeature #//MobaMultiplicityProvider #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascading" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaPayload"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaQueueFeature" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaQueueReference" eSuperTypes="#//MobaQueueFeature #//MobaMultiplicityProvider #//MobaPropertiesProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascading" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaData"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaMuliplicity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lower" eType="#//MobaLowerBound"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upper" eType="#//MobaUpperBound"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MobaLowerBound">
+    <eLiterals name="OPTIONAL" literal="?"/>
+    <eLiterals name="MANY" value="1" literal="*"/>
+    <eLiterals name="ZERO" value="2" literal="0"/>
+    <eLiterals name="ATLEASTONE" value="3" literal="+"/>
+    <eLiterals name="ONE" value="4" literal="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MobaUpperBound">
+    <eLiterals name="NULL" literal="NULL"/>
+    <eLiterals name="ONE" value="1" literal="1"/>
+    <eLiterals name="MANY" value="2" literal="*"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.mobadsl.grammar
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.mobadsl.grammar; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common,
+ org.mobadsl.semantic.model;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.mobadsl.grammar.generator,
+ org.mobadsl.grammar.parser.antlr.internal,
+ org.mobadsl.grammar.validation,
+ org.mobadsl.grammar.services,
+ org.mobadsl.grammar.parser.antlr,
+ org.mobadsl.grammar.scoping,
+ org.mobadsl.grammar.serializer,
+ org.mobadsl.grammar
+Import-Package: org.apache.log4j

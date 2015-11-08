@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Moba -->
+      <package
+            uri="http://www.mobadsl.org/model/Moba"
+            class="org.mobadsl.semantic.model.moba.MobaPackage"
+            genModel="model/Moba.genmodel"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,124 @@
+grammar org.mobadsl.^grammar.Moba with org.eclipse.xtext.common.Terminals
+
+import "platform:/resource/org.mobadsl.semantic.model/model/Moba.ecore"
+
+MobaApplication:
+	'application' name=ID '{'
+	(features+=MobaApplicationFeature*)
+	'}';
+
+MobaApplicationFeature:
+	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaService | MobaGenerator;
+
+/**
+ * Will import a Moba-Application.
+ */
+MobaTemplate:
+	'use template' template=[MobaApplication];
+
+MobaGenerator:
+	'use generator' (generatorString=STRING | generatorConst = [MobaConstant]);
+
+MobaDataType:
+	'datatype' name=ID ((primitive?='isPrimitive')? & (array?='isArray')? &
+	((date?='isDate' | date?='isTime' | date?='isTimestamp')
+	('(' (dateFormatString=STRING | dateFormatConstant=[MobaConstant]) ')')?)?) MobaPropertiesProvider?;
+
+MobaConstant:
+	'const' name=ID '=' value=STRING MobaPropertiesProvider?;
+
+fragment MobaPropertiesProvider:
+	'[' properties+=MobaProperty (',' properties+=MobaProperty)* ']';
+
+MobaProperty:
+	(keyString=STRING | keyConst=[MobaConstant]) '=' (valueString=STRING | valueConst=[MobaConstant]);
+
+MobaData:
+	MobaDto | MobaPayload | MobaQueue;
+
+MobaSettings:
+	{MobaSettings}
+	'settings' ('extends' superType=[MobaSettings])? MobaPropertiesProvider?;
+
+MobaCache:
+	{MobaCache}
+	'cache'
+	// optional
+	('('
+	// type
+	(('type' '=' (cacheTypeString=STRING |
+	cacheTypeConst=[MobaConstant]))?
+	// strategy
+	& ('strategy' '=' (cacheStrategyString=STRING |
+	cacheStrategyConst=[MobaConstant]))?) ')')?;
+
+MobaDto:
+	'dto' name=ID (('extends' superType=[MobaDto])? & (cache=MobaCache)?) MobaPropertiesProvider? '{' features+=MobaDtoFeature*
+	(index=MobaDtoIndex)?
+	'}';
+
+MobaDtoIndex:
+	'index' attributes+=[MobaDtoAttribute] (',' attributes+=[MobaDtoAttribute]*);
+
+MobaPayload:
+	'payload' name=ID ('extends' superType=[MobaPayload])? MobaPropertiesProvider? '{'
+	features+=MobaPayloadFeature*
+	'}';
+
+MobaQueue:
+	'queue' name=ID ('extends' superType=[MobaQueue])? MobaPropertiesProvider? '{'
+	features+=MobaQueueFeature*
+	'}';
+
+MobaService:
+	MobaRestCustom | MobaRestCrud;
+
+MobaRestCustom:
+	'rest' name=ID MobaPropertiesProvider?;
+
+MobaRestCrud:
+	'restCrud' name=ID MobaPropertiesProvider?;
+
+MobaDtoFeature:
+	MobaDtoAttribute | MobaDtoReference;
+
+MobaDtoAttribute:
+	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
+	(domainDescription?='domainDescription')?)
+	type=[MobaDataType] MobaMultiplicityProvider name=ID MobaPropertiesProvider?;
+
+fragment MobaMultiplicityProvider:
+	(multiplicity=MobaMuliplicity)?;
+
+MobaDtoReference:
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto] MobaMultiplicityProvider name=ID
+	MobaPropertiesProvider?;
+
+MobaPayloadFeature:
+	MobaPayloadAttribute | MobaPayloadReference;
+
+MobaPayloadAttribute:
+	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
+	(domainDescription?='domainDescription')? & ('alias' '(' alias=ID ')')?)
+	type=[MobaDataType] MobaMultiplicityProvider name=ID MobaPropertiesProvider?;
+
+MobaPayloadReference:
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaPayload] MobaMultiplicityProvider
+	name=ID
+	MobaPropertiesProvider?;
+
+MobaQueueFeature:
+	MobaQueueReference;
+
+MobaQueueReference:
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaData] MobaMultiplicityProvider name=ID
+	MobaPropertiesProvider?;
+
+MobaMuliplicity:
+	'[' (lower=MobaLowerBound) ('..' upper=MobaUpperBound)? ']';
+
+enum MobaLowerBound:
+	MANY='*' | ZERO='0' | OPTIONAL='?' | ATLEASTONE='+' | ONE='1';
+
+enum MobaUpperBound:
+	MANY='*' | ONE='1';
