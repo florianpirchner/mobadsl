@@ -22,7 +22,14 @@ public class Bounds {
 			return new Bounds(MobaLowerBound.ZERO, MobaUpperBound.ONE);
 		}
 
-		MobaMuliplicity multiplicity = prop.getMultiplicity();
+		return createFor(prop.getMultiplicity());
+	}
+
+	public static Bounds createFor(MobaMuliplicity multiplicity) {
+
+		if (multiplicity == null) {
+			return new Bounds(MobaLowerBound.ZERO, MobaUpperBound.ONE);
+		}
 
 		MobaLowerBound lb = null;
 		MobaUpperBound ub = null;
@@ -80,6 +87,7 @@ public class Bounds {
 		}
 
 		return new Bounds(lower, upper);
+
 	}
 
 	public Bounds(MobaLowerBound lower, MobaUpperBound upper) {
@@ -122,4 +130,5 @@ public class Bounds {
 	public boolean isOptional() {
 		return lower == MobaLowerBound.ZERO;
 	}
+
 }

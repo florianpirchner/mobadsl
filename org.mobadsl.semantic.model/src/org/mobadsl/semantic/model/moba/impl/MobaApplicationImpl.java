@@ -275,14 +275,14 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 
 	@SuppressWarnings("unchecked")
 	protected <T> List<T> collect(Class<T> clazz) {
-		return getFeatures().stream().filter(e -> e.getClass().isAssignableFrom(clazz)).map(e -> (T) e)
+		return getFeatures().stream().filter(e -> clazz.isAssignableFrom(e.getClass())).map(e -> (T) e)
 				.collect(Collectors.<T> toList());
 	}
 
 	@SuppressWarnings("unchecked")
 	protected <T> List<T> collectAll(MobaApplication instance, Class<T> clazz) {
 		List<T> result = new ArrayList<>();
-		result.addAll(instance.getFeatures().stream().filter(e -> e.getClass().isAssignableFrom(clazz)).map(e -> (T) e)
+		result.addAll(instance.getFeatures().stream().filter(e -> clazz.isAssignableFrom(e.getClass())).map(e -> (T) e)
 				.collect(Collectors.<T> toList()));
 
 		for (MobaTemplate template : instance.getTemplates()) {
@@ -291,6 +291,24 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 
 		return result;
 	}
+
+	// private void doGetAllTemplates(MobaApplication app, List<MobaTemplate>
+	// result) {
+	//
+	// List<MobaTemplate> templates = app.getTemplates();
+	// if (templates.isEmpty()) {
+	// return;
+	// }
+	//
+	// for (MobaTemplate template : templates) {
+	// if (result.contains(template)) {
+	// throw new RecursionException(app, template);
+	// }
+	// result.add(template);
+	//
+	// doGetAllTemplates(template.getTemplate(), result);
+	// }
+	// }
 
 	@Override
 	public List<MobaConstant> getConstants() {

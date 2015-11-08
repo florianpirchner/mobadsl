@@ -5,18 +5,21 @@ package org.mobadsl.semantic.model.moba;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Property</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '
+ * <em><b>Property</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString <em>Key String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst <em>Key Const</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString <em>Value String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst <em>Value Const</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString
+ * <em>Key String</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst
+ * <em>Key Const</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString
+ * <em>Value String</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst
+ * <em>Value Const</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty()
@@ -25,13 +28,14 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MobaProperty extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Key String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Key String</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Key String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Key String</em>' attribute isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Key String</em>' attribute.
 	 * @see #setKeyString(String)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty_KeyString()
@@ -41,23 +45,27 @@ public interface MobaProperty extends EObject {
 	String getKeyString();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString <em>Key String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Key String</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString
+	 * <em>Key String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Key String</em>' attribute.
 	 * @see #getKeyString()
 	 * @generated
 	 */
 	void setKeyString(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Key Const</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Key Const</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Key Const</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Key Const</em>' reference isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Key Const</em>' reference.
 	 * @see #setKeyConst(MobaConstant)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty_KeyConst()
@@ -67,23 +75,27 @@ public interface MobaProperty extends EObject {
 	MobaConstant getKeyConst();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst <em>Key Const</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Key Const</em>' reference.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst
+	 * <em>Key Const</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Key Const</em>' reference.
 	 * @see #getKeyConst()
 	 * @generated
 	 */
 	void setKeyConst(MobaConstant value);
 
 	/**
-	 * Returns the value of the '<em><b>Value String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Value String</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Value String</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Value String</em>' attribute.
 	 * @see #setValueString(String)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty_ValueString()
@@ -93,23 +105,27 @@ public interface MobaProperty extends EObject {
 	String getValueString();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString <em>Value String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value String</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString
+	 * <em>Value String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Value String</em>' attribute.
 	 * @see #getValueString()
 	 * @generated
 	 */
 	void setValueString(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Value Const</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Value Const</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value Const</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Value Const</em>' reference isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Value Const</em>' reference.
 	 * @see #setValueConst(MobaConstant)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty_ValueConst()
@@ -119,13 +135,32 @@ public interface MobaProperty extends EObject {
 	MobaConstant getValueConst();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst <em>Value Const</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value Const</em>' reference.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst
+	 * <em>Value Const</em>}' reference. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Value Const</em>' reference.
 	 * @see #getValueConst()
 	 * @generated
 	 */
 	void setValueConst(MobaConstant value);
+
+	/**
+	 * Returns the key value. From {@link #getKeyString()} or
+	 * {@link #getKeyConst()}
+	 * 
+	 * @return
+	 */
+	String getKey();
+
+	/**
+	 * Returns the value. From {@link #getValueString()} or
+	 * {@link #getValueConst()}
+	 * 
+	 * @return
+	 */
+	String getValue();
 
 } // MobaProperty

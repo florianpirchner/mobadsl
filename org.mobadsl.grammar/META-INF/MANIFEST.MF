@@ -14,14 +14,18 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.util,
  org.eclipse.xtend.lib,
  org.eclipse.emf.common,
- org.mobadsl.semantic.model;bundle-version="1.0.0"
+ org.mobadsl.semantic.model;bundle-version="1.0.0",
+ org.eclipse.equinox.registry,
+ org.eclipse.core.runtime;bundle-version="3.11.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.mobadsl.grammar.generator,
- org.mobadsl.grammar.parser.antlr.internal,
- org.mobadsl.grammar.validation,
- org.mobadsl.grammar.services,
- org.mobadsl.grammar.parser.antlr,
- org.mobadsl.grammar.scoping,
- org.mobadsl.grammar.serializer,
- org.mobadsl.grammar
-Import-Package: org.apache.log4j
+Export-Package: org.mobadsl.grammar;x-internal:=true,
+ org.mobadsl.grammar.generator;x-internal:=true,
+ org.mobadsl.grammar.generator.common,
+ org.mobadsl.grammar.parser.antlr;x-internal:=true,
+ org.mobadsl.grammar.parser.antlr.internal;x-internal:=true,
+ org.mobadsl.grammar.scoping;x-internal:=true,
+ org.mobadsl.grammar.serializer;x-internal:=true,
+ org.mobadsl.grammar.services;x-internal:=true,
+ org.mobadsl.grammar.validation;x-internal:=true
+Import-Package: org.apache.log4j,
+ org.slf4j;version="1.7.2"

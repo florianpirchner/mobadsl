@@ -56,8 +56,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaDataTypeAccess().getGroup_2_2(), "rule__MobaDataType__Group_2_2__0");
 					put(grammarAccess.getMobaDataTypeAccess().getGroup_2_2_1(), "rule__MobaDataType__Group_2_2_1__0");
 					put(grammarAccess.getMobaConstantAccess().getGroup(), "rule__MobaConstant__Group__0");
-					put(grammarAccess.getMobaPropertiesAccess().getGroup(), "rule__MobaProperties__Group__0");
-					put(grammarAccess.getMobaPropertiesAccess().getGroup_2(), "rule__MobaProperties__Group_2__0");
+					put(grammarAccess.getMobaPropertiesProviderAccess().getGroup(), "rule__MobaPropertiesProvider__Group__0");
+					put(grammarAccess.getMobaPropertiesProviderAccess().getGroup_2(), "rule__MobaPropertiesProvider__Group_2__0");
 					put(grammarAccess.getMobaPropertyAccess().getGroup(), "rule__MobaProperty__Group__0");
 					put(grammarAccess.getMobaSettingsAccess().getGroup(), "rule__MobaSettings__Group__0");
 					put(grammarAccess.getMobaSettingsAccess().getGroup_2(), "rule__MobaSettings__Group_2__0");
@@ -98,8 +98,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaDataTypeAccess().getDateFormatConstantAssignment_2_2_1_1_1(), "rule__MobaDataType__DateFormatConstantAssignment_2_2_1_1_1");
 					put(grammarAccess.getMobaConstantAccess().getNameAssignment_1(), "rule__MobaConstant__NameAssignment_1");
 					put(grammarAccess.getMobaConstantAccess().getValueAssignment_3(), "rule__MobaConstant__ValueAssignment_3");
-					put(grammarAccess.getMobaPropertiesAccess().getPropertiesAssignment_1(), "rule__MobaProperties__PropertiesAssignment_1");
-					put(grammarAccess.getMobaPropertiesAccess().getPropertiesAssignment_2_1(), "rule__MobaProperties__PropertiesAssignment_2_1");
+					put(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesAssignment_1(), "rule__MobaPropertiesProvider__PropertiesAssignment_1");
+					put(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesAssignment_2_1(), "rule__MobaPropertiesProvider__PropertiesAssignment_2_1");
 					put(grammarAccess.getMobaPropertyAccess().getKeyStringAssignment_0_0(), "rule__MobaProperty__KeyStringAssignment_0_0");
 					put(grammarAccess.getMobaPropertyAccess().getKeyConstAssignment_0_1(), "rule__MobaProperty__KeyConstAssignment_0_1");
 					put(grammarAccess.getMobaPropertyAccess().getValueStringAssignment_2_0(), "rule__MobaProperty__ValueStringAssignment_2_0");

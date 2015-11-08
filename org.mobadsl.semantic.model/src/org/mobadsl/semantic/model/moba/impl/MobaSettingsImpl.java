@@ -32,6 +32,7 @@ import org.mobadsl.semantic.model.moba.MobaSettings;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +57,26 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected MobaSettings superType;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +152,27 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -153,6 +195,8 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,6 +217,9 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				setSuperType((MobaSettings)newValue);
 				return;
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -191,6 +238,9 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				setSuperType((MobaSettings)null);
 				return;
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -207,6 +257,8 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				return superType != null;
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -241,6 +293,22 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MobaSettingsImpl

@@ -3,13 +3,398 @@
  */
 package org.mobadsl.grammar.validation;
 
+import com.google.common.base.Objects;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.mobadsl.grammar.validation.AbstractMobaValidator;
+import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPayload;
+import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
+import org.mobadsl.semantic.model.moba.MobaQueue;
+import org.mobadsl.semantic.model.moba.MobaQueueFeature;
+import org.mobadsl.semantic.model.moba.MobaRestCrud;
+import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.RecursionException;
 
-/**
- * This class contains custom validation rules.
- * 
- * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
- */
 @SuppressWarnings("all")
 public class MobaValidator extends AbstractMobaValidator {
+  public final static String DUPLICATE_NAME = "duplicateName";
+  
+  @Check
+  public void checkDuplicateFeatureName(final MobaDto dto) {
+    Map<String, MobaDtoFeature> _xifexpression = null;
+    MobaDto _superType = dto.getSuperType();
+    boolean _notEquals = (!Objects.equal(_superType, null));
+    if (_notEquals) {
+      Map<String, MobaDtoFeature> _xtrycatchfinallyexpression = null;
+      try {
+        MobaDto _superType_1 = dto.getSuperType();
+        List<MobaDtoFeature> _allFeatures = _superType_1.getAllFeatures();
+        final Function1<MobaDtoFeature, String> _function = (MobaDtoFeature it) -> {
+          return it.getName();
+        };
+        _xtrycatchfinallyexpression = IterableExtensions.<String, MobaDtoFeature>toMap(_allFeatures, _function);
+      } catch (final Throwable _t) {
+        if (_t instanceof RecursionException) {
+          final RecursionException ex = (RecursionException)_t;
+          _xtrycatchfinallyexpression = Collections.<String, MobaDtoFeature>emptyMap();
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
+      }
+      _xifexpression = _xtrycatchfinallyexpression;
+    } else {
+      _xifexpression = Collections.<String, MobaDtoFeature>emptyMap();
+    }
+    final Map<String, MobaDtoFeature> superFeatureMap = _xifexpression;
+    final Set<String> currentFeatures = CollectionLiterals.<String>newHashSet();
+    int index = 0;
+    EList<MobaDtoFeature> _features = dto.getFeatures();
+    for (final MobaDtoFeature feature : _features) {
+      {
+        String _name = feature.getName();
+        boolean _containsKey = superFeatureMap.containsKey(_name);
+        if (_containsKey) {
+          this.error("Supertype contains same feature name", dto, MobaPackage.Literals.MOBA_DTO__FEATURES, index);
+        }
+        String _name_1 = feature.getName();
+        boolean _contains = currentFeatures.contains(_name_1);
+        if (_contains) {
+          this.error("Feature name must be unique", dto, MobaPackage.Literals.MOBA_DTO__FEATURES, index);
+        }
+        String _name_2 = feature.getName();
+        currentFeatures.add(_name_2);
+        index++;
+      }
+    }
+  }
+  
+  @Check
+  public void checkDuplicateFeatureName(final MobaPayload payload) {
+    Map<String, MobaPayloadFeature> _xifexpression = null;
+    MobaPayload _superType = payload.getSuperType();
+    boolean _notEquals = (!Objects.equal(_superType, null));
+    if (_notEquals) {
+      Map<String, MobaPayloadFeature> _xtrycatchfinallyexpression = null;
+      try {
+        MobaPayload _superType_1 = payload.getSuperType();
+        List<MobaPayloadFeature> _allFeatures = _superType_1.getAllFeatures();
+        final Function1<MobaPayloadFeature, String> _function = (MobaPayloadFeature it) -> {
+          return it.getName();
+        };
+        _xtrycatchfinallyexpression = IterableExtensions.<String, MobaPayloadFeature>toMap(_allFeatures, _function);
+      } catch (final Throwable _t) {
+        if (_t instanceof RecursionException) {
+          final RecursionException ex = (RecursionException)_t;
+          _xtrycatchfinallyexpression = Collections.<String, MobaPayloadFeature>emptyMap();
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
+      }
+      _xifexpression = _xtrycatchfinallyexpression;
+    } else {
+      _xifexpression = Collections.<String, MobaPayloadFeature>emptyMap();
+    }
+    final Map<String, MobaPayloadFeature> superFeatureMap = _xifexpression;
+    final Set<String> currentFeatures = CollectionLiterals.<String>newHashSet();
+    int index = 0;
+    EList<MobaPayloadFeature> _features = payload.getFeatures();
+    for (final MobaPayloadFeature feature : _features) {
+      {
+        String _name = feature.getName();
+        boolean _containsKey = superFeatureMap.containsKey(_name);
+        if (_containsKey) {
+          this.error("Supertype contains same feature name", payload, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES, index);
+        }
+        String _name_1 = feature.getName();
+        boolean _contains = currentFeatures.contains(_name_1);
+        if (_contains) {
+          this.error("Feature name must be unique", payload, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES, index);
+        }
+        String _name_2 = feature.getName();
+        currentFeatures.add(_name_2);
+        index++;
+      }
+    }
+  }
+  
+  @Check
+  public void checkDuplicateFeatureName(final MobaQueue queue) {
+    Map<String, MobaQueueFeature> _xifexpression = null;
+    MobaQueue _superType = queue.getSuperType();
+    boolean _notEquals = (!Objects.equal(_superType, null));
+    if (_notEquals) {
+      Map<String, MobaQueueFeature> _xtrycatchfinallyexpression = null;
+      try {
+        MobaQueue _superType_1 = queue.getSuperType();
+        List<MobaQueueFeature> _allFeatures = _superType_1.getAllFeatures();
+        final Function1<MobaQueueFeature, String> _function = (MobaQueueFeature it) -> {
+          return it.getName();
+        };
+        _xtrycatchfinallyexpression = IterableExtensions.<String, MobaQueueFeature>toMap(_allFeatures, _function);
+      } catch (final Throwable _t) {
+        if (_t instanceof RecursionException) {
+          final RecursionException ex = (RecursionException)_t;
+          _xtrycatchfinallyexpression = Collections.<String, MobaQueueFeature>emptyMap();
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
+      }
+      _xifexpression = _xtrycatchfinallyexpression;
+    } else {
+      _xifexpression = Collections.<String, MobaQueueFeature>emptyMap();
+    }
+    final Map<String, MobaQueueFeature> superFeatureMap = _xifexpression;
+    final Set<String> currentFeatures = CollectionLiterals.<String>newHashSet();
+    int index = 0;
+    EList<MobaQueueFeature> _features = queue.getFeatures();
+    for (final MobaQueueFeature feature : _features) {
+      {
+        String _name = feature.getName();
+        boolean _containsKey = superFeatureMap.containsKey(_name);
+        if (_containsKey) {
+          this.error("Supertype contains same feature name", queue, MobaPackage.Literals.MOBA_QUEUE__FEATURES, index);
+        }
+        String _name_1 = feature.getName();
+        boolean _contains = currentFeatures.contains(_name_1);
+        if (_contains) {
+          this.error("Feature name must be unique", queue, MobaPackage.Literals.MOBA_QUEUE__FEATURES, index);
+        }
+        String _name_2 = feature.getName();
+        currentFeatures.add(_name_2);
+        index++;
+      }
+    }
+  }
+  
+  @Check
+  public void checkDuplicateFeatureName(final MobaApplication application) {
+    final Set<String> tempConstFeatures = CollectionLiterals.<String>newHashSet();
+    final Set<String> tempDtFeatures = CollectionLiterals.<String>newHashSet();
+    final Set<String> tempDataFeatures = CollectionLiterals.<String>newHashSet();
+    final Set<String> tempServiceFeatures = CollectionLiterals.<String>newHashSet();
+    final Set<String> tempSettingsFeatures = CollectionLiterals.<String>newHashSet();
+    int index = 0;
+    EList<MobaApplicationFeature> _features = application.getFeatures();
+    for (final MobaApplicationFeature feature : _features) {
+      {
+        boolean _matched = false;
+        if (!_matched) {
+          if (feature instanceof MobaConstant) {
+            _matched=true;
+            String _name = ((MobaConstant)feature).getName();
+            boolean _contains = tempConstFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaConstant)feature).getName();
+            tempConstFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaDataType) {
+            _matched=true;
+            String _name = ((MobaDataType)feature).getName();
+            boolean _contains = tempDtFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaDataType)feature).getName();
+            tempDtFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaDto) {
+            _matched=true;
+            String _name = ((MobaDto)feature).getName();
+            boolean _contains = tempDataFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaDto)feature).getName();
+            tempDataFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaPayload) {
+            _matched=true;
+            String _name = ((MobaPayload)feature).getName();
+            boolean _contains = tempDataFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaPayload)feature).getName();
+            tempDataFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaQueue) {
+            _matched=true;
+            String _name = ((MobaQueue)feature).getName();
+            boolean _contains = tempDataFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaQueue)feature).getName();
+            tempDataFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaSettings) {
+            _matched=true;
+            String _name = ((MobaSettings)feature).getName();
+            boolean _contains = tempSettingsFeatures.contains(_name);
+            if (_contains) {
+              this.error("Feature name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaSettings)feature).getName();
+            tempSettingsFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaRestCustom) {
+            _matched=true;
+            String _name = ((MobaRestCustom)feature).getName();
+            boolean _contains = tempServiceFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaRestCustom)feature).getName();
+            tempServiceFeatures.add(_name_1);
+          }
+        }
+        if (!_matched) {
+          if (feature instanceof MobaRestCrud) {
+            _matched=true;
+            String _name = ((MobaRestCrud)feature).getName();
+            boolean _contains = tempServiceFeatures.contains(_name);
+            if (_contains) {
+              this.error("Name must be unique", application, 
+                MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            }
+            String _name_1 = ((MobaRestCrud)feature).getName();
+            tempServiceFeatures.add(_name_1);
+          }
+        }
+        index++;
+      }
+    }
+  }
+  
+  @Check
+  public void checkSuperType(final MobaDto dto) {
+    MobaDto _superType = dto.getSuperType();
+    boolean _equals = Objects.equal(_superType, null);
+    if (_equals) {
+      return;
+    }
+    try {
+      dto.getAllSuperTypes();
+    } catch (final Throwable _t) {
+      if (_t instanceof RecursionException) {
+        final RecursionException ex = (RecursionException)_t;
+        EObject _source = ex.getSource();
+        final MobaDto source = ((MobaDto) _source);
+        EObject _superType_1 = ex.getSuperType();
+        final MobaDto superType = ((MobaDto) _superType_1);
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("Recursive supertypes for ");
+        String _name = source.getName();
+        _builder.append(_name, "");
+        _builder.append(" --> ");
+        String _name_1 = superType.getName();
+        _builder.append(_name_1, "");
+        this.error(_builder.toString(), dto, 
+          MobaPackage.Literals.MOBA_DTO__SUPER_TYPE);
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
+    }
+  }
+  
+  @Check
+  public void checkSuperType(final MobaPayload payload) {
+    MobaPayload _superType = payload.getSuperType();
+    boolean _equals = Objects.equal(_superType, null);
+    if (_equals) {
+      return;
+    }
+    try {
+      payload.getAllSuperTypes();
+    } catch (final Throwable _t) {
+      if (_t instanceof RecursionException) {
+        final RecursionException ex = (RecursionException)_t;
+        EObject _source = ex.getSource();
+        final MobaPayload source = ((MobaPayload) _source);
+        EObject _superType_1 = ex.getSuperType();
+        final MobaPayload superType = ((MobaPayload) _superType_1);
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("Recursive supertypes for ");
+        String _name = source.getName();
+        _builder.append(_name, "");
+        _builder.append(" --> ");
+        String _name_1 = superType.getName();
+        _builder.append(_name_1, "");
+        this.error(_builder.toString(), payload, 
+          MobaPackage.Literals.MOBA_PAYLOAD__SUPER_TYPE);
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
+    }
+  }
+  
+  @Check
+  public void checkSuperType(final MobaQueue queue) {
+    MobaQueue _superType = queue.getSuperType();
+    boolean _equals = Objects.equal(_superType, null);
+    if (_equals) {
+      return;
+    }
+    try {
+      queue.getAllSuperTypes();
+    } catch (final Throwable _t) {
+      if (_t instanceof RecursionException) {
+        final RecursionException ex = (RecursionException)_t;
+        EObject _source = ex.getSource();
+        final MobaQueue source = ((MobaQueue) _source);
+        EObject _superType_1 = ex.getSuperType();
+        final MobaQueue superType = ((MobaQueue) _superType_1);
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("Recursive supertypes for ");
+        String _name = source.getName();
+        _builder.append(_name, "");
+        _builder.append(" --> ");
+        String _name_1 = superType.getName();
+        _builder.append(_name_1, "");
+        this.error(_builder.toString(), queue, 
+          MobaPackage.Literals.MOBA_QUEUE__SUPER_TYPE);
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
+    }
+  }
 }

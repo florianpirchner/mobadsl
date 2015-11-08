@@ -3,23 +3,243 @@
  */
 package org.mobadsl.grammar.validation
 
+import java.util.Collections
+import java.util.Set
+import org.eclipse.xtext.validation.Check
+import org.mobadsl.semantic.model.moba.MobaApplication
+import org.mobadsl.semantic.model.moba.MobaConstant
+import org.mobadsl.semantic.model.moba.MobaDataType
+import org.mobadsl.semantic.model.moba.MobaDto
+import org.mobadsl.semantic.model.moba.MobaPackage
+import org.mobadsl.semantic.model.moba.MobaPayload
+import org.mobadsl.semantic.model.moba.MobaQueue
+import org.mobadsl.semantic.model.moba.MobaRestCrud
+import org.mobadsl.semantic.model.moba.MobaRestCustom
+import org.mobadsl.semantic.model.moba.MobaSettings
+import org.mobadsl.semantic.model.moba.RecursionException
 
-/**
- * This class contains custom validation rules. 
- *
- * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
- */
 class MobaValidator extends AbstractMobaValidator {
-	
-//  public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					MobaPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
-	
+
+	public static val DUPLICATE_NAME = 'duplicateName'
+
+	@Check
+	def checkDuplicateFeatureName(MobaDto dto) {
+		// all super type features 
+		val superFeatureMap = if (dto.superType != null)
+				try {
+					dto.superType.allFeatures.toMap [
+						it.name
+					]
+				} catch (RecursionException ex) {
+					Collections.emptyMap
+				}
+			else
+				Collections.emptyMap
+
+		val Set<String> currentFeatures = newHashSet()
+		var index = 0;
+		for (feature : dto.features) {
+			if (superFeatureMap.containsKey(feature.name)) {
+				error("Supertype contains same feature name", dto, MobaPackage.Literals.MOBA_DTO__FEATURES, index)
+			}
+
+			if (currentFeatures.contains(feature.name)) {
+				error("Feature name must be unique", dto, MobaPackage.Literals.MOBA_DTO__FEATURES, index)
+			}
+			currentFeatures.add(feature.name)
+			index++;
+		}
+
+	}
+
+	@Check
+	def checkDuplicateFeatureName(MobaPayload payload) {
+		// all super type features 
+		val superFeatureMap = if (payload.superType != null)
+				try {
+					payload.superType.allFeatures.toMap [
+						it.name
+					]
+				} catch (RecursionException ex) {
+					Collections.emptyMap
+				}
+			else
+				Collections.emptyMap
+
+		val Set<String> currentFeatures = newHashSet()
+		var index = 0;
+		for (feature : payload.features) {
+			if (superFeatureMap.containsKey(feature.name)) {
+				error("Supertype contains same feature name", payload, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES,
+					index)
+			}
+
+			if (currentFeatures.contains(feature.name)) {
+				error("Feature name must be unique", payload, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES, index)
+			}
+			currentFeatures.add(feature.name)
+			index++;
+		}
+
+	}
+
+	@Check
+	def checkDuplicateFeatureName(MobaQueue queue) {
+		// all super type features 
+		val superFeatureMap = if (queue.superType != null)
+				try {
+					queue.superType.allFeatures.toMap [
+						it.name
+					]
+				} catch (RecursionException ex) {
+					Collections.emptyMap
+				}
+			else
+				Collections.emptyMap
+
+		val Set<String> currentFeatures = newHashSet()
+		var index = 0;
+		for (feature : queue.features) {
+			if (superFeatureMap.containsKey(feature.name)) {
+				error("Supertype contains same feature name", queue, MobaPackage.Literals.MOBA_QUEUE__FEATURES, index)
+			}
+
+			if (currentFeatures.contains(feature.name)) {
+				error("Feature name must be unique", queue, MobaPackage.Literals.MOBA_QUEUE__FEATURES, index)
+			}
+			currentFeatures.add(feature.name)
+			index++;
+		}
+
+	}
+
+	@Check
+	def checkDuplicateFeatureName(MobaApplication application) {
+
+		// datatypes
+		val Set<String> tempConstFeatures = newHashSet()
+		val Set<String> tempDtFeatures = newHashSet()
+		val Set<String> tempDataFeatures = newHashSet()
+		val Set<String> tempServiceFeatures = newHashSet()
+		val Set<String> tempSettingsFeatures = newHashSet()
+		var index = 0;
+		for (feature : application.features) {
+
+			switch (feature) {
+				MobaConstant: {
+					if (tempConstFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempConstFeatures.add(feature.name)
+				}
+				MobaDataType: {
+					if (tempDtFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempDtFeatures.add(feature.name)
+				}
+				MobaDto: {
+					if (tempDataFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempDataFeatures.add(feature.name)
+				}
+				MobaPayload: {
+					if (tempDataFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempDataFeatures.add(feature.name)
+				}
+				MobaQueue: {
+					if (tempDataFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempDataFeatures.add(feature.name)
+				}
+				MobaSettings: {
+					if (tempSettingsFeatures.contains(feature.name)) {
+						error("Feature name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempSettingsFeatures.add(feature.name)
+				}
+				MobaRestCustom: {
+					if (tempServiceFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempServiceFeatures.add(feature.name)
+				}
+				MobaRestCrud: {
+					if (tempServiceFeatures.contains(feature.name)) {
+						error("Name must be unique", application,
+							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					}
+					tempServiceFeatures.add(feature.name)
+				}
+			}
+
+			index++;
+		}
+	}
+
+	@Check
+	def checkSuperType(MobaDto dto) {
+		if (dto.superType == null) {
+			return
+		}
+
+		try {
+			dto.allSuperTypes
+		} catch (RecursionException ex) {
+			val MobaDto source = ex.source as MobaDto
+			val MobaDto superType = ex.superType as MobaDto
+
+			error('''Recursive supertypes for «source.name» --> «superType.name»''', dto,
+				MobaPackage.Literals.MOBA_DTO__SUPER_TYPE)
+		}
+
+	}
+
+	@Check
+	def checkSuperType(MobaPayload payload) {
+		if (payload.superType == null) {
+			return
+		}
+
+		try {
+			payload.allSuperTypes
+		} catch (RecursionException ex) {
+			val MobaPayload source = ex.source as MobaPayload
+			val MobaPayload superType = ex.superType as MobaPayload
+
+			error('''Recursive supertypes for «source.name» --> «superType.name»''', payload,
+				MobaPackage.Literals.MOBA_PAYLOAD__SUPER_TYPE)
+		}
+
+	}
+
+	@Check
+	def checkSuperType(MobaQueue queue) {
+		if (queue.superType == null) {
+			return
+		}
+
+		try {
+			queue.allSuperTypes
+		} catch (RecursionException ex) {
+			val MobaQueue source = ex.source as MobaQueue
+			val MobaQueue superType = ex.superType as MobaQueue
+
+			error('''Recursive supertypes for «source.name» --> «superType.name»''', queue,
+				MobaPackage.Literals.MOBA_QUEUE__SUPER_TYPE)
+		}
+
+	}
+
 }

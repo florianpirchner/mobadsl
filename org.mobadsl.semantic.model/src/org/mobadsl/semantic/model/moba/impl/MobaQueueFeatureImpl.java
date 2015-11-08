@@ -16,7 +16,7 @@ import org.mobadsl.semantic.model.moba.MobaQueueFeature;
  *
  * @generated
  */
-public abstract class MobaQueueFeatureImpl extends MinimalEObjectImpl.Container implements MobaQueueFeature {
+public abstract class MobaQueueFeatureImpl extends MobaFeatureImpl implements MobaQueueFeature {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

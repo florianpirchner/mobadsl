@@ -41,7 +41,6 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadAttributeImpl#isDomainDescription <em>Domain Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadAttributeImpl#getAlias <em>Alias</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadAttributeImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadAttributeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -176,26 +175,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 	 * @ordered
 	 */
 	protected MobaDataType type;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -419,27 +398,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -476,8 +434,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -516,9 +472,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__TYPE:
 				setType((MobaDataType)newValue);
 				return;
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__NAME:
-				setName((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -555,9 +508,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__TYPE:
 				setType((MobaDataType)null);
 				return;
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -586,8 +536,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 				return ALIAS_EDEFAULT == null ? alias != null : !ALIAS_EDEFAULT.equals(alias);
 			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__TYPE:
 				return type != null;
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -656,8 +604,6 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 		result.append(domainDescription);
 		result.append(", alias: ");
 		result.append(alias);
-		result.append(", name: ");
-		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

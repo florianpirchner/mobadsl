@@ -17,7 +17,6 @@ package org.mobadsl.semantic.model.moba;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainKey <em>Domain Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainDescription <em>Domain Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#getType <em>Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute()
@@ -154,31 +153,5 @@ public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityProvid
 	 * @generated
 	 */
 	void setType(MobaDataType value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // MobaDtoAttribute

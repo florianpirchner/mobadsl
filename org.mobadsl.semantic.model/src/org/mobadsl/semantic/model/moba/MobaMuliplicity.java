@@ -3,6 +3,7 @@
 package org.mobadsl.semantic.model.moba;
 
 import org.eclipse.emf.ecore.EObject;
+import org.mobadsl.semantic.model.moba.util.Bounds;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,5 +80,11 @@ public interface MobaMuliplicity extends EObject {
 	 * @generated
 	 */
 	void setUpper(MobaUpperBound value);
+	
+	/**
+	 * Returns the bounds helper class which gives fast access to the type of multiplicity.
+	 * @return
+	 */
+	Bounds getBounds();
 
 } // MobaMuliplicity

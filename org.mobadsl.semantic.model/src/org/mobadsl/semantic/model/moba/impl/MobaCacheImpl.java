@@ -335,5 +335,21 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 		result.append(')');
 		return result.toString();
 	}
+	
+	@Override
+	public String getCacheType() {
+		if (getCacheTypeConst() != null) {
+			return getCacheTypeConst().getValue();
+		}
+		return getCacheTypeString();
+	}
+
+	@Override
+	public String getCacheStrategy() {
+		if (getCacheStrategyConst() != null) {
+			return getCacheStrategyConst().getValue();
+		}
+		return getCacheStrategyString();
+	}
 
 } //MobaCacheImpl

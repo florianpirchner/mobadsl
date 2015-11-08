@@ -14,5 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface MobaQueueFeature extends EObject {
+public interface MobaQueueFeature extends MobaFeature {
 } // MobaQueueFeature

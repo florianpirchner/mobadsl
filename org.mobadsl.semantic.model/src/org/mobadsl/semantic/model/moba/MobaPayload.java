@@ -2,6 +2,8 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -90,5 +92,56 @@ public interface MobaPayload extends MobaData, MobaPropertiesProvider {
 	 * @generated
 	 */
 	EList<MobaPayloadFeature> getFeatures();
+	
+	/**
+	 * Returns the values for the current instance. Excluding the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaPayloadAttribute> getAttributes();
+
+	/**
+	 * Returns the values for the current instance. Excluding the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaPayloadReference> getReferences();
+
+	/**
+	 * Returns the values for the current instance. Including the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaPayloadFeature> getAllFeatures();
+
+	/**
+	 * Returns the values for the current instance. Including the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaPayloadAttribute> getAllAttributes();
+
+	/**
+	 * Returns the values for the current instance. Including the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaPayloadReference> getAllReferences();
+	
+	
+	/**
+	 * Returns all supertypes for this instance.
+	 * 
+	 * @return
+	 * @throws RecursionException
+	 *             if a recursion was found
+	 */
+	List<MobaPayload> getAllSuperTypes() throws RecursionException;
+
 
 } // MobaPayload

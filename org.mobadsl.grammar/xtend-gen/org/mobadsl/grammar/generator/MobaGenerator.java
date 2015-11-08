@@ -3,10 +3,18 @@
  */
 package org.mobadsl.grammar.generator;
 
+import com.google.inject.Inject;
+import java.util.List;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.ListExtensions;
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
+import org.mobadsl.semantic.model.moba.MobaApplication;
 
 /**
  * Generates code from your model files on save.
@@ -15,7 +23,35 @@ import org.eclipse.xtext.generator.IGeneratorContext;
  */
 @SuppressWarnings("all")
 public class MobaGenerator extends AbstractGenerator {
+  @Inject
+  private ExtensionGeneratorDelegate generatorDelegate;
+  
   @Override
-  public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+  public void doGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    final List<String> generatorIds = this.collectGeneratorIds(input);
+    this.generatorDelegate.generate(input, fsa, context, generatorIds);
+  }
+  
+  @Override
+  public void beforeGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    final List<String> generatorIds = this.collectGeneratorIds(input);
+    this.generatorDelegate.beforeGenerate(input, fsa, context, generatorIds);
+  }
+  
+  @Override
+  public void afterGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    final List<String> generatorIds = this.collectGeneratorIds(input);
+    this.generatorDelegate.afterGenerate(input, fsa, context, generatorIds);
+  }
+  
+  public List<String> collectGeneratorIds(final Resource resource) {
+    EList<EObject> _contents = resource.getContents();
+    EObject _get = _contents.get(0);
+    final MobaApplication application = ((MobaApplication) _get);
+    List<org.mobadsl.semantic.model.moba.MobaGenerator> _allGenerators = application.getAllGenerators();
+    final Function1<org.mobadsl.semantic.model.moba.MobaGenerator, String> _function = (org.mobadsl.semantic.model.moba.MobaGenerator it) -> {
+      return it.getGeneratorString();
+    };
+    return ListExtensions.<org.mobadsl.semantic.model.moba.MobaGenerator, String>map(_allGenerators, _function);
   }
 }

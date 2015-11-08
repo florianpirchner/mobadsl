@@ -3,9 +3,16 @@
  */
 package org.mobadsl.grammar
 
+import org.eclipse.xtext.generator.IOutputConfigurationProvider
+import org.mobadsl.grammar.generator.DelegatingOutputConfigurationProvider
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 class MobaRuntimeModule extends AbstractMobaRuntimeModule {
+
+	def Class<? extends IOutputConfigurationProvider> bindIOutputConfigurationProvider() {
+		return DelegatingOutputConfigurationProvider;
+	}
+
 }

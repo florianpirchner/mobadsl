@@ -573,32 +573,32 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleMobaConstant"
 
 
-    // $ANTLR start "ruleMobaProperties"
-    // InternalMoba.g:204:1: ruleMobaProperties : ( ( rule__MobaProperties__Group__0 ) ) ;
-    public final void ruleMobaProperties() throws RecognitionException {
+    // $ANTLR start "ruleMobaPropertiesProvider"
+    // InternalMoba.g:204:1: ruleMobaPropertiesProvider : ( ( rule__MobaPropertiesProvider__Group__0 ) ) ;
+    public final void ruleMobaPropertiesProvider() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:208:2: ( ( ( rule__MobaProperties__Group__0 ) ) )
-            // InternalMoba.g:209:2: ( ( rule__MobaProperties__Group__0 ) )
+            // InternalMoba.g:208:2: ( ( ( rule__MobaPropertiesProvider__Group__0 ) ) )
+            // InternalMoba.g:209:2: ( ( rule__MobaPropertiesProvider__Group__0 ) )
             {
-            // InternalMoba.g:209:2: ( ( rule__MobaProperties__Group__0 ) )
-            // InternalMoba.g:210:3: ( rule__MobaProperties__Group__0 )
+            // InternalMoba.g:209:2: ( ( rule__MobaPropertiesProvider__Group__0 ) )
+            // InternalMoba.g:210:3: ( rule__MobaPropertiesProvider__Group__0 )
             {
-             before(grammarAccess.getMobaPropertiesAccess().getGroup()); 
-            // InternalMoba.g:211:3: ( rule__MobaProperties__Group__0 )
-            // InternalMoba.g:211:4: rule__MobaProperties__Group__0
+             before(grammarAccess.getMobaPropertiesProviderAccess().getGroup()); 
+            // InternalMoba.g:211:3: ( rule__MobaPropertiesProvider__Group__0 )
+            // InternalMoba.g:211:4: rule__MobaPropertiesProvider__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group__0();
+            rule__MobaPropertiesProvider__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPropertiesAccess().getGroup()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getGroup()); 
 
             }
 
@@ -617,7 +617,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaProperties"
+    // $ANTLR end "ruleMobaPropertiesProvider"
 
 
     // $ANTLR start "entryRuleMobaProperty"
@@ -4772,20 +4772,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaDataType__Group__3__Impl"
-    // InternalMoba.g:1457:1: rule__MobaDataType__Group__3__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:1457:1: rule__MobaDataType__Group__3__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaDataType__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1461:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:1462:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:1461:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:1462:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:1462:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:1463:2: ( ruleMobaProperties )?
+            // InternalMoba.g:1462:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:1463:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaDataTypeAccess().getMobaPropertiesParserRuleCall_3()); 
-            // InternalMoba.g:1464:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaDataTypeAccess().getMobaPropertiesProviderParserRuleCall_3()); 
+            // InternalMoba.g:1464:2: ( ruleMobaPropertiesProvider )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -4794,10 +4794,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalMoba.g:1464:3: ruleMobaProperties
+                    // InternalMoba.g:1464:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -4807,7 +4807,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaDataTypeAccess().getMobaPropertiesParserRuleCall_3()); 
+             after(grammarAccess.getMobaDataTypeAccess().getMobaPropertiesProviderParserRuleCall_3()); 
 
             }
 
@@ -5589,20 +5589,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaConstant__Group__4__Impl"
-    // InternalMoba.g:1727:1: rule__MobaConstant__Group__4__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:1727:1: rule__MobaConstant__Group__4__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaConstant__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1731:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:1732:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:1731:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:1732:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:1732:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:1733:2: ( ruleMobaProperties )?
+            // InternalMoba.g:1732:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:1733:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaConstantAccess().getMobaPropertiesParserRuleCall_4()); 
-            // InternalMoba.g:1734:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaConstantAccess().getMobaPropertiesProviderParserRuleCall_4()); 
+            // InternalMoba.g:1734:2: ( ruleMobaPropertiesProvider )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -5611,10 +5611,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt19) {
                 case 1 :
-                    // InternalMoba.g:1734:3: ruleMobaProperties
+                    // InternalMoba.g:1734:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -5624,7 +5624,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaConstantAccess().getMobaPropertiesParserRuleCall_4()); 
+             after(grammarAccess.getMobaConstantAccess().getMobaPropertiesProviderParserRuleCall_4()); 
 
             }
 
@@ -5646,23 +5646,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaConstant__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__0"
-    // InternalMoba.g:1743:1: rule__MobaProperties__Group__0 : rule__MobaProperties__Group__0__Impl rule__MobaProperties__Group__1 ;
-    public final void rule__MobaProperties__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__0"
+    // InternalMoba.g:1743:1: rule__MobaPropertiesProvider__Group__0 : rule__MobaPropertiesProvider__Group__0__Impl rule__MobaPropertiesProvider__Group__1 ;
+    public final void rule__MobaPropertiesProvider__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1747:1: ( rule__MobaProperties__Group__0__Impl rule__MobaProperties__Group__1 )
-            // InternalMoba.g:1748:2: rule__MobaProperties__Group__0__Impl rule__MobaProperties__Group__1
+            // InternalMoba.g:1747:1: ( rule__MobaPropertiesProvider__Group__0__Impl rule__MobaPropertiesProvider__Group__1 )
+            // InternalMoba.g:1748:2: rule__MobaPropertiesProvider__Group__0__Impl rule__MobaPropertiesProvider__Group__1
             {
             pushFollow(FOLLOW_7);
-            rule__MobaProperties__Group__0__Impl();
+            rule__MobaPropertiesProvider__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group__1();
+            rule__MobaPropertiesProvider__Group__1();
 
             state._fsp--;
 
@@ -5681,12 +5681,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__0"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__0"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__0__Impl"
-    // InternalMoba.g:1755:1: rule__MobaProperties__Group__0__Impl : ( '[' ) ;
-    public final void rule__MobaProperties__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__0__Impl"
+    // InternalMoba.g:1755:1: rule__MobaPropertiesProvider__Group__0__Impl : ( '[' ) ;
+    public final void rule__MobaPropertiesProvider__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5697,9 +5697,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:1760:1: ( '[' )
             // InternalMoba.g:1761:2: '['
             {
-             before(grammarAccess.getMobaPropertiesAccess().getLeftSquareBracketKeyword_0()); 
+             before(grammarAccess.getMobaPropertiesProviderAccess().getLeftSquareBracketKeyword_0()); 
             match(input,26,FOLLOW_2); 
-             after(grammarAccess.getMobaPropertiesAccess().getLeftSquareBracketKeyword_0()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getLeftSquareBracketKeyword_0()); 
 
             }
 
@@ -5718,26 +5718,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__0__Impl"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__1"
-    // InternalMoba.g:1770:1: rule__MobaProperties__Group__1 : rule__MobaProperties__Group__1__Impl rule__MobaProperties__Group__2 ;
-    public final void rule__MobaProperties__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__1"
+    // InternalMoba.g:1770:1: rule__MobaPropertiesProvider__Group__1 : rule__MobaPropertiesProvider__Group__1__Impl rule__MobaPropertiesProvider__Group__2 ;
+    public final void rule__MobaPropertiesProvider__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1774:1: ( rule__MobaProperties__Group__1__Impl rule__MobaProperties__Group__2 )
-            // InternalMoba.g:1775:2: rule__MobaProperties__Group__1__Impl rule__MobaProperties__Group__2
+            // InternalMoba.g:1774:1: ( rule__MobaPropertiesProvider__Group__1__Impl rule__MobaPropertiesProvider__Group__2 )
+            // InternalMoba.g:1775:2: rule__MobaPropertiesProvider__Group__1__Impl rule__MobaPropertiesProvider__Group__2
             {
             pushFollow(FOLLOW_14);
-            rule__MobaProperties__Group__1__Impl();
+            rule__MobaPropertiesProvider__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group__2();
+            rule__MobaPropertiesProvider__Group__2();
 
             state._fsp--;
 
@@ -5756,35 +5756,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__1"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__1"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__1__Impl"
-    // InternalMoba.g:1782:1: rule__MobaProperties__Group__1__Impl : ( ( rule__MobaProperties__PropertiesAssignment_1 ) ) ;
-    public final void rule__MobaProperties__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__1__Impl"
+    // InternalMoba.g:1782:1: rule__MobaPropertiesProvider__Group__1__Impl : ( ( rule__MobaPropertiesProvider__PropertiesAssignment_1 ) ) ;
+    public final void rule__MobaPropertiesProvider__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1786:1: ( ( ( rule__MobaProperties__PropertiesAssignment_1 ) ) )
-            // InternalMoba.g:1787:1: ( ( rule__MobaProperties__PropertiesAssignment_1 ) )
+            // InternalMoba.g:1786:1: ( ( ( rule__MobaPropertiesProvider__PropertiesAssignment_1 ) ) )
+            // InternalMoba.g:1787:1: ( ( rule__MobaPropertiesProvider__PropertiesAssignment_1 ) )
             {
-            // InternalMoba.g:1787:1: ( ( rule__MobaProperties__PropertiesAssignment_1 ) )
-            // InternalMoba.g:1788:2: ( rule__MobaProperties__PropertiesAssignment_1 )
+            // InternalMoba.g:1787:1: ( ( rule__MobaPropertiesProvider__PropertiesAssignment_1 ) )
+            // InternalMoba.g:1788:2: ( rule__MobaPropertiesProvider__PropertiesAssignment_1 )
             {
-             before(grammarAccess.getMobaPropertiesAccess().getPropertiesAssignment_1()); 
-            // InternalMoba.g:1789:2: ( rule__MobaProperties__PropertiesAssignment_1 )
-            // InternalMoba.g:1789:3: rule__MobaProperties__PropertiesAssignment_1
+             before(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesAssignment_1()); 
+            // InternalMoba.g:1789:2: ( rule__MobaPropertiesProvider__PropertiesAssignment_1 )
+            // InternalMoba.g:1789:3: rule__MobaPropertiesProvider__PropertiesAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__PropertiesAssignment_1();
+            rule__MobaPropertiesProvider__PropertiesAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPropertiesAccess().getPropertiesAssignment_1()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesAssignment_1()); 
 
             }
 
@@ -5803,26 +5803,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__1__Impl"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__2"
-    // InternalMoba.g:1797:1: rule__MobaProperties__Group__2 : rule__MobaProperties__Group__2__Impl rule__MobaProperties__Group__3 ;
-    public final void rule__MobaProperties__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__2"
+    // InternalMoba.g:1797:1: rule__MobaPropertiesProvider__Group__2 : rule__MobaPropertiesProvider__Group__2__Impl rule__MobaPropertiesProvider__Group__3 ;
+    public final void rule__MobaPropertiesProvider__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1801:1: ( rule__MobaProperties__Group__2__Impl rule__MobaProperties__Group__3 )
-            // InternalMoba.g:1802:2: rule__MobaProperties__Group__2__Impl rule__MobaProperties__Group__3
+            // InternalMoba.g:1801:1: ( rule__MobaPropertiesProvider__Group__2__Impl rule__MobaPropertiesProvider__Group__3 )
+            // InternalMoba.g:1802:2: rule__MobaPropertiesProvider__Group__2__Impl rule__MobaPropertiesProvider__Group__3
             {
             pushFollow(FOLLOW_14);
-            rule__MobaProperties__Group__2__Impl();
+            rule__MobaPropertiesProvider__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group__3();
+            rule__MobaPropertiesProvider__Group__3();
 
             state._fsp--;
 
@@ -5841,24 +5841,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__2"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__2"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__2__Impl"
-    // InternalMoba.g:1809:1: rule__MobaProperties__Group__2__Impl : ( ( rule__MobaProperties__Group_2__0 )* ) ;
-    public final void rule__MobaProperties__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__2__Impl"
+    // InternalMoba.g:1809:1: rule__MobaPropertiesProvider__Group__2__Impl : ( ( rule__MobaPropertiesProvider__Group_2__0 )* ) ;
+    public final void rule__MobaPropertiesProvider__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1813:1: ( ( ( rule__MobaProperties__Group_2__0 )* ) )
-            // InternalMoba.g:1814:1: ( ( rule__MobaProperties__Group_2__0 )* )
+            // InternalMoba.g:1813:1: ( ( ( rule__MobaPropertiesProvider__Group_2__0 )* ) )
+            // InternalMoba.g:1814:1: ( ( rule__MobaPropertiesProvider__Group_2__0 )* )
             {
-            // InternalMoba.g:1814:1: ( ( rule__MobaProperties__Group_2__0 )* )
-            // InternalMoba.g:1815:2: ( rule__MobaProperties__Group_2__0 )*
+            // InternalMoba.g:1814:1: ( ( rule__MobaPropertiesProvider__Group_2__0 )* )
+            // InternalMoba.g:1815:2: ( rule__MobaPropertiesProvider__Group_2__0 )*
             {
-             before(grammarAccess.getMobaPropertiesAccess().getGroup_2()); 
-            // InternalMoba.g:1816:2: ( rule__MobaProperties__Group_2__0 )*
+             before(grammarAccess.getMobaPropertiesProviderAccess().getGroup_2()); 
+            // InternalMoba.g:1816:2: ( rule__MobaPropertiesProvider__Group_2__0 )*
             loop20:
             do {
                 int alt20=2;
@@ -5871,10 +5871,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalMoba.g:1816:3: rule__MobaProperties__Group_2__0
+            	    // InternalMoba.g:1816:3: rule__MobaPropertiesProvider__Group_2__0
             	    {
             	    pushFollow(FOLLOW_15);
-            	    rule__MobaProperties__Group_2__0();
+            	    rule__MobaPropertiesProvider__Group_2__0();
 
             	    state._fsp--;
 
@@ -5887,7 +5887,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getMobaPropertiesAccess().getGroup_2()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getGroup_2()); 
 
             }
 
@@ -5906,21 +5906,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__2__Impl"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__3"
-    // InternalMoba.g:1824:1: rule__MobaProperties__Group__3 : rule__MobaProperties__Group__3__Impl ;
-    public final void rule__MobaProperties__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__3"
+    // InternalMoba.g:1824:1: rule__MobaPropertiesProvider__Group__3 : rule__MobaPropertiesProvider__Group__3__Impl ;
+    public final void rule__MobaPropertiesProvider__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1828:1: ( rule__MobaProperties__Group__3__Impl )
-            // InternalMoba.g:1829:2: rule__MobaProperties__Group__3__Impl
+            // InternalMoba.g:1828:1: ( rule__MobaPropertiesProvider__Group__3__Impl )
+            // InternalMoba.g:1829:2: rule__MobaPropertiesProvider__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group__3__Impl();
+            rule__MobaPropertiesProvider__Group__3__Impl();
 
             state._fsp--;
 
@@ -5939,12 +5939,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__3"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__3"
 
 
-    // $ANTLR start "rule__MobaProperties__Group__3__Impl"
-    // InternalMoba.g:1835:1: rule__MobaProperties__Group__3__Impl : ( ']' ) ;
-    public final void rule__MobaProperties__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group__3__Impl"
+    // InternalMoba.g:1835:1: rule__MobaPropertiesProvider__Group__3__Impl : ( ']' ) ;
+    public final void rule__MobaPropertiesProvider__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5955,9 +5955,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:1840:1: ( ']' )
             // InternalMoba.g:1841:2: ']'
             {
-             before(grammarAccess.getMobaPropertiesAccess().getRightSquareBracketKeyword_3()); 
+             before(grammarAccess.getMobaPropertiesProviderAccess().getRightSquareBracketKeyword_3()); 
             match(input,27,FOLLOW_2); 
-             after(grammarAccess.getMobaPropertiesAccess().getRightSquareBracketKeyword_3()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getRightSquareBracketKeyword_3()); 
 
             }
 
@@ -5976,26 +5976,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group__3__Impl"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaProperties__Group_2__0"
-    // InternalMoba.g:1851:1: rule__MobaProperties__Group_2__0 : rule__MobaProperties__Group_2__0__Impl rule__MobaProperties__Group_2__1 ;
-    public final void rule__MobaProperties__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group_2__0"
+    // InternalMoba.g:1851:1: rule__MobaPropertiesProvider__Group_2__0 : rule__MobaPropertiesProvider__Group_2__0__Impl rule__MobaPropertiesProvider__Group_2__1 ;
+    public final void rule__MobaPropertiesProvider__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1855:1: ( rule__MobaProperties__Group_2__0__Impl rule__MobaProperties__Group_2__1 )
-            // InternalMoba.g:1856:2: rule__MobaProperties__Group_2__0__Impl rule__MobaProperties__Group_2__1
+            // InternalMoba.g:1855:1: ( rule__MobaPropertiesProvider__Group_2__0__Impl rule__MobaPropertiesProvider__Group_2__1 )
+            // InternalMoba.g:1856:2: rule__MobaPropertiesProvider__Group_2__0__Impl rule__MobaPropertiesProvider__Group_2__1
             {
             pushFollow(FOLLOW_7);
-            rule__MobaProperties__Group_2__0__Impl();
+            rule__MobaPropertiesProvider__Group_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group_2__1();
+            rule__MobaPropertiesProvider__Group_2__1();
 
             state._fsp--;
 
@@ -6014,12 +6014,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group_2__0"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group_2__0"
 
 
-    // $ANTLR start "rule__MobaProperties__Group_2__0__Impl"
-    // InternalMoba.g:1863:1: rule__MobaProperties__Group_2__0__Impl : ( ',' ) ;
-    public final void rule__MobaProperties__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group_2__0__Impl"
+    // InternalMoba.g:1863:1: rule__MobaPropertiesProvider__Group_2__0__Impl : ( ',' ) ;
+    public final void rule__MobaPropertiesProvider__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6030,9 +6030,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:1868:1: ( ',' )
             // InternalMoba.g:1869:2: ','
             {
-             before(grammarAccess.getMobaPropertiesAccess().getCommaKeyword_2_0()); 
+             before(grammarAccess.getMobaPropertiesProviderAccess().getCommaKeyword_2_0()); 
             match(input,28,FOLLOW_2); 
-             after(grammarAccess.getMobaPropertiesAccess().getCommaKeyword_2_0()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getCommaKeyword_2_0()); 
 
             }
 
@@ -6051,21 +6051,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group_2__0__Impl"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__MobaProperties__Group_2__1"
-    // InternalMoba.g:1878:1: rule__MobaProperties__Group_2__1 : rule__MobaProperties__Group_2__1__Impl ;
-    public final void rule__MobaProperties__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group_2__1"
+    // InternalMoba.g:1878:1: rule__MobaPropertiesProvider__Group_2__1 : rule__MobaPropertiesProvider__Group_2__1__Impl ;
+    public final void rule__MobaPropertiesProvider__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1882:1: ( rule__MobaProperties__Group_2__1__Impl )
-            // InternalMoba.g:1883:2: rule__MobaProperties__Group_2__1__Impl
+            // InternalMoba.g:1882:1: ( rule__MobaPropertiesProvider__Group_2__1__Impl )
+            // InternalMoba.g:1883:2: rule__MobaPropertiesProvider__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__Group_2__1__Impl();
+            rule__MobaPropertiesProvider__Group_2__1__Impl();
 
             state._fsp--;
 
@@ -6084,35 +6084,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group_2__1"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group_2__1"
 
 
-    // $ANTLR start "rule__MobaProperties__Group_2__1__Impl"
-    // InternalMoba.g:1889:1: rule__MobaProperties__Group_2__1__Impl : ( ( rule__MobaProperties__PropertiesAssignment_2_1 ) ) ;
-    public final void rule__MobaProperties__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__Group_2__1__Impl"
+    // InternalMoba.g:1889:1: rule__MobaPropertiesProvider__Group_2__1__Impl : ( ( rule__MobaPropertiesProvider__PropertiesAssignment_2_1 ) ) ;
+    public final void rule__MobaPropertiesProvider__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1893:1: ( ( ( rule__MobaProperties__PropertiesAssignment_2_1 ) ) )
-            // InternalMoba.g:1894:1: ( ( rule__MobaProperties__PropertiesAssignment_2_1 ) )
+            // InternalMoba.g:1893:1: ( ( ( rule__MobaPropertiesProvider__PropertiesAssignment_2_1 ) ) )
+            // InternalMoba.g:1894:1: ( ( rule__MobaPropertiesProvider__PropertiesAssignment_2_1 ) )
             {
-            // InternalMoba.g:1894:1: ( ( rule__MobaProperties__PropertiesAssignment_2_1 ) )
-            // InternalMoba.g:1895:2: ( rule__MobaProperties__PropertiesAssignment_2_1 )
+            // InternalMoba.g:1894:1: ( ( rule__MobaPropertiesProvider__PropertiesAssignment_2_1 ) )
+            // InternalMoba.g:1895:2: ( rule__MobaPropertiesProvider__PropertiesAssignment_2_1 )
             {
-             before(grammarAccess.getMobaPropertiesAccess().getPropertiesAssignment_2_1()); 
-            // InternalMoba.g:1896:2: ( rule__MobaProperties__PropertiesAssignment_2_1 )
-            // InternalMoba.g:1896:3: rule__MobaProperties__PropertiesAssignment_2_1
+             before(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesAssignment_2_1()); 
+            // InternalMoba.g:1896:2: ( rule__MobaPropertiesProvider__PropertiesAssignment_2_1 )
+            // InternalMoba.g:1896:3: rule__MobaPropertiesProvider__PropertiesAssignment_2_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaProperties__PropertiesAssignment_2_1();
+            rule__MobaPropertiesProvider__PropertiesAssignment_2_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPropertiesAccess().getPropertiesAssignment_2_1()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesAssignment_2_1()); 
 
             }
 
@@ -6131,7 +6131,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__Group_2__1__Impl"
+    // $ANTLR end "rule__MobaPropertiesProvider__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__MobaProperty__Group__0"
@@ -6654,20 +6654,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaSettings__Group__3__Impl"
-    // InternalMoba.g:2078:1: rule__MobaSettings__Group__3__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:2078:1: rule__MobaSettings__Group__3__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaSettings__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:2082:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:2083:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:2082:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:2083:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:2083:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:2084:2: ( ruleMobaProperties )?
+            // InternalMoba.g:2083:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:2084:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaSettingsAccess().getMobaPropertiesParserRuleCall_3()); 
-            // InternalMoba.g:2085:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaSettingsAccess().getMobaPropertiesProviderParserRuleCall_3()); 
+            // InternalMoba.g:2085:2: ( ruleMobaPropertiesProvider )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -6676,10 +6676,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt22) {
                 case 1 :
-                    // InternalMoba.g:2085:3: ruleMobaProperties
+                    // InternalMoba.g:2085:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -6689,7 +6689,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaSettingsAccess().getMobaPropertiesParserRuleCall_3()); 
+             after(grammarAccess.getMobaSettingsAccess().getMobaPropertiesProviderParserRuleCall_3()); 
 
             }
 
@@ -8081,20 +8081,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaDto__Group__3__Impl"
-    // InternalMoba.g:2565:1: rule__MobaDto__Group__3__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:2565:1: rule__MobaDto__Group__3__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaDto__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:2569:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:2570:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:2569:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:2570:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:2570:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:2571:2: ( ruleMobaProperties )?
+            // InternalMoba.g:2570:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:2571:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaDtoAccess().getMobaPropertiesParserRuleCall_3()); 
-            // InternalMoba.g:2572:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaDtoAccess().getMobaPropertiesProviderParserRuleCall_3()); 
+            // InternalMoba.g:2572:2: ( ruleMobaPropertiesProvider )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -8103,10 +8103,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalMoba.g:2572:3: ruleMobaProperties
+                    // InternalMoba.g:2572:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -8116,7 +8116,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaDtoAccess().getMobaPropertiesParserRuleCall_3()); 
+             after(grammarAccess.getMobaDtoAccess().getMobaPropertiesProviderParserRuleCall_3()); 
 
             }
 
@@ -9345,20 +9345,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaPayload__Group__3__Impl"
-    // InternalMoba.g:2970:1: rule__MobaPayload__Group__3__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:2970:1: rule__MobaPayload__Group__3__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaPayload__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:2974:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:2975:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:2974:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:2975:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:2975:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:2976:2: ( ruleMobaProperties )?
+            // InternalMoba.g:2975:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:2976:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaPayloadAccess().getMobaPropertiesParserRuleCall_3()); 
-            // InternalMoba.g:2977:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaPayloadAccess().getMobaPropertiesProviderParserRuleCall_3()); 
+            // InternalMoba.g:2977:2: ( ruleMobaPropertiesProvider )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -9367,10 +9367,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt29) {
                 case 1 :
-                    // InternalMoba.g:2977:3: ruleMobaProperties
+                    // InternalMoba.g:2977:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -9380,7 +9380,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getMobaPropertiesParserRuleCall_3()); 
+             after(grammarAccess.getMobaPayloadAccess().getMobaPropertiesProviderParserRuleCall_3()); 
 
             }
 
@@ -10100,20 +10100,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaQueue__Group__3__Impl"
-    // InternalMoba.g:3213:1: rule__MobaQueue__Group__3__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:3213:1: rule__MobaQueue__Group__3__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaQueue__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3217:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:3218:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:3217:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:3218:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:3218:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:3219:2: ( ruleMobaProperties )?
+            // InternalMoba.g:3218:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:3219:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaQueueAccess().getMobaPropertiesParserRuleCall_3()); 
-            // InternalMoba.g:3220:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaQueueAccess().getMobaPropertiesProviderParserRuleCall_3()); 
+            // InternalMoba.g:3220:2: ( ruleMobaPropertiesProvider )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -10122,10 +10122,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalMoba.g:3220:3: ruleMobaProperties
+                    // InternalMoba.g:3220:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -10135,7 +10135,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaQueueAccess().getMobaPropertiesParserRuleCall_3()); 
+             after(grammarAccess.getMobaQueueAccess().getMobaPropertiesProviderParserRuleCall_3()); 
 
             }
 
@@ -10754,20 +10754,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaRestCustom__Group__2__Impl"
-    // InternalMoba.g:3428:1: rule__MobaRestCustom__Group__2__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:3428:1: rule__MobaRestCustom__Group__2__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaRestCustom__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3432:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:3433:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:3432:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:3433:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:3433:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:3434:2: ( ruleMobaProperties )?
+            // InternalMoba.g:3433:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:3434:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaRestCustomAccess().getMobaPropertiesParserRuleCall_2()); 
-            // InternalMoba.g:3435:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaRestCustomAccess().getMobaPropertiesProviderParserRuleCall_2()); 
+            // InternalMoba.g:3435:2: ( ruleMobaPropertiesProvider )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -10776,10 +10776,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalMoba.g:3435:3: ruleMobaProperties
+                    // InternalMoba.g:3435:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -10789,7 +10789,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaRestCustomAccess().getMobaPropertiesParserRuleCall_2()); 
+             after(grammarAccess.getMobaRestCustomAccess().getMobaPropertiesProviderParserRuleCall_2()); 
 
             }
 
@@ -11005,20 +11005,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaRestCrud__Group__2__Impl"
-    // InternalMoba.g:3509:1: rule__MobaRestCrud__Group__2__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:3509:1: rule__MobaRestCrud__Group__2__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaRestCrud__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3513:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:3514:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:3513:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:3514:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:3514:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:3515:2: ( ruleMobaProperties )?
+            // InternalMoba.g:3514:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:3515:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaRestCrudAccess().getMobaPropertiesParserRuleCall_2()); 
-            // InternalMoba.g:3516:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaRestCrudAccess().getMobaPropertiesProviderParserRuleCall_2()); 
+            // InternalMoba.g:3516:2: ( ruleMobaPropertiesProvider )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -11027,10 +11027,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt35) {
                 case 1 :
-                    // InternalMoba.g:3516:3: ruleMobaProperties
+                    // InternalMoba.g:3516:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -11040,7 +11040,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaRestCrudAccess().getMobaPropertiesParserRuleCall_2()); 
+             after(grammarAccess.getMobaRestCrudAccess().getMobaPropertiesProviderParserRuleCall_2()); 
 
             }
 
@@ -11505,20 +11505,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaDtoAttribute__Group__5__Impl"
-    // InternalMoba.g:3671:1: rule__MobaDtoAttribute__Group__5__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:3671:1: rule__MobaDtoAttribute__Group__5__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaDtoAttribute__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3675:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:3676:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:3675:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:3676:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:3676:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:3677:2: ( ruleMobaProperties )?
+            // InternalMoba.g:3676:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:3677:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesParserRuleCall_5()); 
-            // InternalMoba.g:3678:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesProviderParserRuleCall_5()); 
+            // InternalMoba.g:3678:2: ( ruleMobaPropertiesProvider )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -11527,10 +11527,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt36) {
                 case 1 :
-                    // InternalMoba.g:3678:3: ruleMobaProperties
+                    // InternalMoba.g:3678:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -11540,7 +11540,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesParserRuleCall_5()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesProviderParserRuleCall_5()); 
 
             }
 
@@ -12005,20 +12005,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaDtoReference__Group__5__Impl"
-    // InternalMoba.g:3833:1: rule__MobaDtoReference__Group__5__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:3833:1: rule__MobaDtoReference__Group__5__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaDtoReference__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3837:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:3838:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:3837:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:3838:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:3838:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:3839:2: ( ruleMobaProperties )?
+            // InternalMoba.g:3838:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:3839:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesParserRuleCall_5()); 
-            // InternalMoba.g:3840:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesProviderParserRuleCall_5()); 
+            // InternalMoba.g:3840:2: ( ruleMobaPropertiesProvider )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -12027,10 +12027,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt37) {
                 case 1 :
-                    // InternalMoba.g:3840:3: ruleMobaProperties
+                    // InternalMoba.g:3840:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -12040,7 +12040,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesParserRuleCall_5()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesProviderParserRuleCall_5()); 
 
             }
 
@@ -12505,20 +12505,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaPayloadAttribute__Group__5__Impl"
-    // InternalMoba.g:3995:1: rule__MobaPayloadAttribute__Group__5__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:3995:1: rule__MobaPayloadAttribute__Group__5__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaPayloadAttribute__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3999:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:4000:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:3999:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:4000:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:4000:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:4001:2: ( ruleMobaProperties )?
+            // InternalMoba.g:4000:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:4001:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesParserRuleCall_5()); 
-            // InternalMoba.g:4002:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesProviderParserRuleCall_5()); 
+            // InternalMoba.g:4002:2: ( ruleMobaPropertiesProvider )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -12527,10 +12527,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt38) {
                 case 1 :
-                    // InternalMoba.g:4002:3: ruleMobaProperties
+                    // InternalMoba.g:4002:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -12540,7 +12540,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesParserRuleCall_5()); 
+             after(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesProviderParserRuleCall_5()); 
 
             }
 
@@ -13310,20 +13310,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaPayloadReference__Group__5__Impl"
-    // InternalMoba.g:4265:1: rule__MobaPayloadReference__Group__5__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:4265:1: rule__MobaPayloadReference__Group__5__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaPayloadReference__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4269:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:4270:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:4269:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:4270:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:4270:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:4271:2: ( ruleMobaProperties )?
+            // InternalMoba.g:4270:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:4271:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesParserRuleCall_5()); 
-            // InternalMoba.g:4272:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesProviderParserRuleCall_5()); 
+            // InternalMoba.g:4272:2: ( ruleMobaPropertiesProvider )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -13332,10 +13332,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt39) {
                 case 1 :
-                    // InternalMoba.g:4272:3: ruleMobaProperties
+                    // InternalMoba.g:4272:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -13345,7 +13345,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesParserRuleCall_5()); 
+             after(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesProviderParserRuleCall_5()); 
 
             }
 
@@ -13810,20 +13810,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaQueueReference__Group__5__Impl"
-    // InternalMoba.g:4427:1: rule__MobaQueueReference__Group__5__Impl : ( ( ruleMobaProperties )? ) ;
+    // InternalMoba.g:4427:1: rule__MobaQueueReference__Group__5__Impl : ( ( ruleMobaPropertiesProvider )? ) ;
     public final void rule__MobaQueueReference__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4431:1: ( ( ( ruleMobaProperties )? ) )
-            // InternalMoba.g:4432:1: ( ( ruleMobaProperties )? )
+            // InternalMoba.g:4431:1: ( ( ( ruleMobaPropertiesProvider )? ) )
+            // InternalMoba.g:4432:1: ( ( ruleMobaPropertiesProvider )? )
             {
-            // InternalMoba.g:4432:1: ( ( ruleMobaProperties )? )
-            // InternalMoba.g:4433:2: ( ruleMobaProperties )?
+            // InternalMoba.g:4432:1: ( ( ruleMobaPropertiesProvider )? )
+            // InternalMoba.g:4433:2: ( ruleMobaPropertiesProvider )?
             {
-             before(grammarAccess.getMobaQueueReferenceAccess().getMobaPropertiesParserRuleCall_5()); 
-            // InternalMoba.g:4434:2: ( ruleMobaProperties )?
+             before(grammarAccess.getMobaQueueReferenceAccess().getMobaPropertiesProviderParserRuleCall_5()); 
+            // InternalMoba.g:4434:2: ( ruleMobaPropertiesProvider )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -13832,10 +13832,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt40) {
                 case 1 :
-                    // InternalMoba.g:4434:3: ruleMobaProperties
+                    // InternalMoba.g:4434:3: ruleMobaPropertiesProvider
                     {
                     pushFollow(FOLLOW_2);
-                    ruleMobaProperties();
+                    ruleMobaPropertiesProvider();
 
                     state._fsp--;
 
@@ -13845,7 +13845,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaQueueReferenceAccess().getMobaPropertiesParserRuleCall_5()); 
+             after(grammarAccess.getMobaQueueReferenceAccess().getMobaPropertiesProviderParserRuleCall_5()); 
 
             }
 
@@ -18351,9 +18351,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaConstant__ValueAssignment_3"
 
 
-    // $ANTLR start "rule__MobaProperties__PropertiesAssignment_1"
-    // InternalMoba.g:5769:1: rule__MobaProperties__PropertiesAssignment_1 : ( ruleMobaProperty ) ;
-    public final void rule__MobaProperties__PropertiesAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__PropertiesAssignment_1"
+    // InternalMoba.g:5769:1: rule__MobaPropertiesProvider__PropertiesAssignment_1 : ( ruleMobaProperty ) ;
+    public final void rule__MobaPropertiesProvider__PropertiesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18364,13 +18364,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5774:2: ( ruleMobaProperty )
             // InternalMoba.g:5775:3: ruleMobaProperty
             {
-             before(grammarAccess.getMobaPropertiesAccess().getPropertiesMobaPropertyParserRuleCall_1_0()); 
+             before(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesMobaPropertyParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPropertiesAccess().getPropertiesMobaPropertyParserRuleCall_1_0()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesMobaPropertyParserRuleCall_1_0()); 
 
             }
 
@@ -18389,12 +18389,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__PropertiesAssignment_1"
+    // $ANTLR end "rule__MobaPropertiesProvider__PropertiesAssignment_1"
 
 
-    // $ANTLR start "rule__MobaProperties__PropertiesAssignment_2_1"
-    // InternalMoba.g:5784:1: rule__MobaProperties__PropertiesAssignment_2_1 : ( ruleMobaProperty ) ;
-    public final void rule__MobaProperties__PropertiesAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaPropertiesProvider__PropertiesAssignment_2_1"
+    // InternalMoba.g:5784:1: rule__MobaPropertiesProvider__PropertiesAssignment_2_1 : ( ruleMobaProperty ) ;
+    public final void rule__MobaPropertiesProvider__PropertiesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18405,13 +18405,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5789:2: ( ruleMobaProperty )
             // InternalMoba.g:5790:3: ruleMobaProperty
             {
-             before(grammarAccess.getMobaPropertiesAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0()); 
+             before(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPropertiesAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0()); 
+             after(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0()); 
 
             }
 
@@ -18430,7 +18430,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaProperties__PropertiesAssignment_2_1"
+    // $ANTLR end "rule__MobaPropertiesProvider__PropertiesAssignment_2_1"
 
 
     // $ANTLR start "rule__MobaProperty__KeyStringAssignment_0_0"

@@ -2,22 +2,28 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Dto</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '
+ * <em><b>Dto</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures <em>Features</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType
+ * <em>Super Type</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures
+ * <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}
+ * </li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto()
@@ -26,13 +32,14 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Name()
@@ -42,23 +49,26 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Super Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Super Type</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Super Type</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Super Type</em>' reference isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Super Type</em>' reference.
 	 * @see #setSuperType(MobaDto)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_SuperType()
@@ -68,10 +78,13 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	MobaDto getSuperType();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Super Type</em>' reference.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType
+	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
@@ -85,6 +98,7 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Cache</em>' containment reference.
 	 * @see #setCache(MobaCache)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Cache()
@@ -94,24 +108,28 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	MobaCache getCache();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cache</em>' containment reference.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}'
+	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Cache</em>' containment reference.
 	 * @see #getCache()
 	 * @generated
 	 */
 	void setCache(MobaCache value);
 
 	/**
-	 * Returns the value of the '<em><b>Features</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaDtoFeature}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Features</b></em>' containment reference
+	 * list. The list contents are of type
+	 * {@link org.mobadsl.semantic.model.moba.MobaDtoFeature}. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Features</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Features</em>' containment reference list
+	 * isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Features</em>' containment reference list.
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Features()
 	 * @model containment="true"
@@ -127,6 +145,7 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Index</em>' containment reference.
 	 * @see #setIndex(MobaDtoIndex)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Index()
@@ -136,13 +155,59 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	MobaDtoIndex getIndex();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' containment reference.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}'
+	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Index</em>' containment reference.
 	 * @see #getIndex()
 	 * @generated
 	 */
 	void setIndex(MobaDtoIndex value);
+
+	/**
+	 * Returns the values for the current instance. Excluding the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoAttribute> getAttributes();
+
+	/**
+	 * Returns the values for the current instance. Excluding the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoReference> getReferences();
+
+	/**
+	 * Returns the values for the current instance. Including the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoFeature> getAllFeatures();
+
+	/**
+	 * Returns the values for the current instance. Including the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoAttribute> getAllAttributes();
+
+	/**
+	 * Returns the values for the current instance. Including the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoReference> getAllReferences();
+
+	/**
+	 * Returns all supertypes for this instance.
+	 * 
+	 * @return
+	 * @throws RecursionException
+	 *             if a recursion was found
+	 */
+	List<MobaDto> getAllSuperTypes() throws RecursionException;
 
 } // MobaDto

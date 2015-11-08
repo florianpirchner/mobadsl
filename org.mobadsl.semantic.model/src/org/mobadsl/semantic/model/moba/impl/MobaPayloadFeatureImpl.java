@@ -16,7 +16,7 @@ import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
  *
  * @generated
  */
-public abstract class MobaPayloadFeatureImpl extends MinimalEObjectImpl.Container implements MobaPayloadFeature {
+public abstract class MobaPayloadFeatureImpl extends MobaFeatureImpl implements MobaPayloadFeature {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

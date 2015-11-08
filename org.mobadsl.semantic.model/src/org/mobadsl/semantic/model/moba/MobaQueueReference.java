@@ -16,7 +16,6 @@ package org.mobadsl.semantic.model.moba;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueueReference#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueueReference#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueueReference#getType <em>Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueueReference#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaQueueReference()
@@ -127,31 +126,5 @@ public interface MobaQueueReference extends MobaQueueFeature, MobaMultiplicityPr
 	 * @generated
 	 */
 	void setType(MobaData value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaQueueReference_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueueReference#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // MobaQueueReference

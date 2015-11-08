@@ -180,5 +180,11 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesProv
 	 * @generated
 	 */
 	void setDateFormatConstant(MobaConstant value);
+	
+	/**
+	 * Returns the dateformat. From {@link #getDateFormatString()} or {@link #getDateFormatConstant()}
+	 * @return
+	 */
+	String getDateFormat();
 
 } // MobaDataType

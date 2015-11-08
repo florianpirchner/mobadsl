@@ -16,7 +16,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *
  * @generated
  */
-public abstract class MobaDtoFeatureImpl extends MinimalEObjectImpl.Container implements MobaDtoFeature {
+public abstract class MobaDtoFeatureImpl extends MobaFeatureImpl implements MobaDtoFeature {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

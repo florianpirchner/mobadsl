@@ -3,6 +3,7 @@
 package org.mobadsl.semantic.model.moba;
 
 import org.eclipse.emf.ecore.EObject;
+import org.mobadsl.semantic.model.moba.util.Bounds;
 
 /**
  * <!-- begin-user-doc -->

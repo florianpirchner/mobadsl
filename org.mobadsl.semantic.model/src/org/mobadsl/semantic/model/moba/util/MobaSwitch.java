@@ -200,9 +200,16 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_FEATURE: {
+				MobaFeature mobaFeature = (MobaFeature)theEObject;
+				T result = caseMobaFeature(mobaFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_DTO_FEATURE: {
 				MobaDtoFeature mobaDtoFeature = (MobaDtoFeature)theEObject;
 				T result = caseMobaDtoFeature(mobaDtoFeature);
+				if (result == null) result = caseMobaFeature(mobaDtoFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -212,6 +219,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaDtoFeature(mobaDtoAttribute);
 				if (result == null) result = caseMobaMultiplicityProvider(mobaDtoAttribute);
 				if (result == null) result = caseMobaPropertiesProvider(mobaDtoAttribute);
+				if (result == null) result = caseMobaFeature(mobaDtoAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -227,12 +235,14 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaDtoFeature(mobaDtoReference);
 				if (result == null) result = caseMobaMultiplicityProvider(mobaDtoReference);
 				if (result == null) result = caseMobaPropertiesProvider(mobaDtoReference);
+				if (result == null) result = caseMobaFeature(mobaDtoReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MobaPackage.MOBA_PAYLOAD_FEATURE: {
 				MobaPayloadFeature mobaPayloadFeature = (MobaPayloadFeature)theEObject;
 				T result = caseMobaPayloadFeature(mobaPayloadFeature);
+				if (result == null) result = caseMobaFeature(mobaPayloadFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -242,6 +252,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaPayloadFeature(mobaPayloadAttribute);
 				if (result == null) result = caseMobaMultiplicityProvider(mobaPayloadAttribute);
 				if (result == null) result = caseMobaPropertiesProvider(mobaPayloadAttribute);
+				if (result == null) result = caseMobaFeature(mobaPayloadAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -251,12 +262,14 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaPayloadFeature(mobaPayloadReference);
 				if (result == null) result = caseMobaMultiplicityProvider(mobaPayloadReference);
 				if (result == null) result = caseMobaPropertiesProvider(mobaPayloadReference);
+				if (result == null) result = caseMobaFeature(mobaPayloadReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MobaPackage.MOBA_QUEUE_FEATURE: {
 				MobaQueueFeature mobaQueueFeature = (MobaQueueFeature)theEObject;
 				T result = caseMobaQueueFeature(mobaQueueFeature);
+				if (result == null) result = caseMobaFeature(mobaQueueFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -266,6 +279,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaQueueFeature(mobaQueueReference);
 				if (result == null) result = caseMobaMultiplicityProvider(mobaQueueReference);
 				if (result == null) result = caseMobaPropertiesProvider(mobaQueueReference);
+				if (result == null) result = caseMobaFeature(mobaQueueReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -546,6 +560,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaRestCrud(MobaRestCrud object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaFeature(MobaFeature object) {
 		return null;
 	}
 

@@ -39,7 +39,6 @@ import org.mobadsl.semantic.model.moba.MobaQueueReference;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,26 +133,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected MobaData type;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -335,27 +314,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_QUEUE_REFERENCE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -388,8 +346,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 			case MobaPackage.MOBA_QUEUE_REFERENCE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
-			case MobaPackage.MOBA_QUEUE_REFERENCE__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -422,9 +378,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 			case MobaPackage.MOBA_QUEUE_REFERENCE__TYPE:
 				setType((MobaData)newValue);
 				return;
-			case MobaPackage.MOBA_QUEUE_REFERENCE__NAME:
-				setName((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -455,9 +408,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 			case MobaPackage.MOBA_QUEUE_REFERENCE__TYPE:
 				setType((MobaData)null);
 				return;
-			case MobaPackage.MOBA_QUEUE_REFERENCE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -482,8 +432,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 				return transient_ != TRANSIENT_EDEFAULT;
 			case MobaPackage.MOBA_QUEUE_REFERENCE__TYPE:
 				return type != null;
-			case MobaPackage.MOBA_QUEUE_REFERENCE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -548,8 +496,6 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 		result.append(lazy);
 		result.append(", transient: ");
 		result.append(transient_);
-		result.append(", name: ");
-		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

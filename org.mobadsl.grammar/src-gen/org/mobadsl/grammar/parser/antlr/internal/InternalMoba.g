@@ -507,11 +507,11 @@ ruleMobaDataType returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaDataTypeRule());
 				}
-				newCompositeNode(grammarAccess.getMobaDataTypeAccess().getMobaPropertiesParserRuleCall_3());
+				newCompositeNode(grammarAccess.getMobaDataTypeAccess().getMobaPropertiesProviderParserRuleCall_3());
 			}
-			this_MobaProperties_12=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_12=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_12.current;
+				$current = $this_MobaPropertiesProvider_12.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -583,11 +583,11 @@ ruleMobaConstant returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaConstantRule());
 				}
-				newCompositeNode(grammarAccess.getMobaConstantAccess().getMobaPropertiesParserRuleCall_4());
+				newCompositeNode(grammarAccess.getMobaConstantAccess().getMobaPropertiesProviderParserRuleCall_4());
 			}
-			this_MobaProperties_4=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_4=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_4.current;
+				$current = $this_MobaPropertiesProvider_4.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -595,8 +595,8 @@ ruleMobaConstant returns [EObject current=null]
 ;
 
 
-// Rule MobaProperties
-ruleMobaProperties[EObject in_current]  returns [EObject current=in_current]
+// Rule MobaPropertiesProvider
+ruleMobaPropertiesProvider[EObject in_current]  returns [EObject current=in_current]
 @init {
 	enterRule();
 }
@@ -606,17 +606,17 @@ ruleMobaProperties[EObject in_current]  returns [EObject current=in_current]
 	(
 		otherlv_0='['
 		{
-			newLeafNode(otherlv_0, grammarAccess.getMobaPropertiesAccess().getLeftSquareBracketKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getMobaPropertiesProviderAccess().getLeftSquareBracketKeyword_0());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobaPropertiesAccess().getPropertiesMobaPropertyParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesMobaPropertyParserRuleCall_1_0());
 				}
 				lv_properties_1_0=ruleMobaProperty
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMobaPropertiesRule());
+						$current = createModelElementForParent(grammarAccess.getMobaPropertiesProviderRule());
 					}
 					add(
 						$current,
@@ -630,17 +630,17 @@ ruleMobaProperties[EObject in_current]  returns [EObject current=in_current]
 		(
 			otherlv_2=','
 			{
-				newLeafNode(otherlv_2, grammarAccess.getMobaPropertiesAccess().getCommaKeyword_2_0());
+				newLeafNode(otherlv_2, grammarAccess.getMobaPropertiesProviderAccess().getCommaKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMobaPropertiesAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getMobaPropertiesProviderAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0());
 					}
 					lv_properties_3_0=ruleMobaProperty
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMobaPropertiesRule());
+							$current = createModelElementForParent(grammarAccess.getMobaPropertiesProviderRule());
 						}
 						add(
 							$current,
@@ -654,7 +654,7 @@ ruleMobaProperties[EObject in_current]  returns [EObject current=in_current]
 		)*
 		otherlv_4=']'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getMobaPropertiesAccess().getRightSquareBracketKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getMobaPropertiesProviderAccess().getRightSquareBracketKeyword_3());
 		}
 	)
 ;
@@ -846,11 +846,11 @@ ruleMobaSettings returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaSettingsRule());
 				}
-				newCompositeNode(grammarAccess.getMobaSettingsAccess().getMobaPropertiesParserRuleCall_3());
+				newCompositeNode(grammarAccess.getMobaSettingsAccess().getMobaPropertiesProviderParserRuleCall_3());
 			}
-			this_MobaProperties_4=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_4=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_4.current;
+				$current = $this_MobaPropertiesProvider_4.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1130,11 +1130,11 @@ ruleMobaDto returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaDtoRule());
 				}
-				newCompositeNode(grammarAccess.getMobaDtoAccess().getMobaPropertiesParserRuleCall_3());
+				newCompositeNode(grammarAccess.getMobaDtoAccess().getMobaPropertiesProviderParserRuleCall_3());
 			}
-			this_MobaProperties_6=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_6=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_6.current;
+				$current = $this_MobaPropertiesProvider_6.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1304,11 +1304,11 @@ ruleMobaPayload returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaPayloadRule());
 				}
-				newCompositeNode(grammarAccess.getMobaPayloadAccess().getMobaPropertiesParserRuleCall_3());
+				newCompositeNode(grammarAccess.getMobaPayloadAccess().getMobaPropertiesProviderParserRuleCall_3());
 			}
-			this_MobaProperties_4=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_4=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_4.current;
+				$current = $this_MobaPropertiesProvider_4.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1404,11 +1404,11 @@ ruleMobaQueue returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaQueueRule());
 				}
-				newCompositeNode(grammarAccess.getMobaQueueAccess().getMobaPropertiesParserRuleCall_3());
+				newCompositeNode(grammarAccess.getMobaQueueAccess().getMobaPropertiesProviderParserRuleCall_3());
 			}
-			this_MobaProperties_4=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_4=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_4.current;
+				$current = $this_MobaPropertiesProvider_4.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1521,11 +1521,11 @@ ruleMobaRestCustom returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaRestCustomRule());
 				}
-				newCompositeNode(grammarAccess.getMobaRestCustomAccess().getMobaPropertiesParserRuleCall_2());
+				newCompositeNode(grammarAccess.getMobaRestCustomAccess().getMobaPropertiesProviderParserRuleCall_2());
 			}
-			this_MobaProperties_2=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_2=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_2.current;
+				$current = $this_MobaPropertiesProvider_2.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1575,11 +1575,11 @@ ruleMobaRestCrud returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaRestCrudRule());
 				}
-				newCompositeNode(grammarAccess.getMobaRestCrudAccess().getMobaPropertiesParserRuleCall_2());
+				newCompositeNode(grammarAccess.getMobaRestCrudAccess().getMobaPropertiesProviderParserRuleCall_2());
 			}
-			this_MobaProperties_2=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_2=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_2.current;
+				$current = $this_MobaPropertiesProvider_2.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1795,11 +1795,11 @@ ruleMobaDtoAttribute returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
 				}
-				newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesParserRuleCall_5());
+				newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesProviderParserRuleCall_5());
 			}
-			this_MobaProperties_9=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_9=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_9.current;
+				$current = $this_MobaPropertiesProvider_9.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -1986,11 +1986,11 @@ ruleMobaDtoReference returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaDtoReferenceRule());
 				}
-				newCompositeNode(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesParserRuleCall_5());
+				newCompositeNode(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesProviderParserRuleCall_5());
 			}
-			this_MobaProperties_8=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_8=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_8.current;
+				$current = $this_MobaPropertiesProvider_8.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -2247,11 +2247,11 @@ ruleMobaPayloadAttribute returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaPayloadAttributeRule());
 				}
-				newCompositeNode(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesParserRuleCall_5());
+				newCompositeNode(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesProviderParserRuleCall_5());
 			}
-			this_MobaProperties_13=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_13=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_13.current;
+				$current = $this_MobaPropertiesProvider_13.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -2408,11 +2408,11 @@ ruleMobaPayloadReference returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaPayloadReferenceRule());
 				}
-				newCompositeNode(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesParserRuleCall_5());
+				newCompositeNode(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesProviderParserRuleCall_5());
 			}
-			this_MobaProperties_8=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_8=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_8.current;
+				$current = $this_MobaPropertiesProvider_8.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
@@ -2594,11 +2594,11 @@ ruleMobaQueueReference returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaQueueReferenceRule());
 				}
-				newCompositeNode(grammarAccess.getMobaQueueReferenceAccess().getMobaPropertiesParserRuleCall_5());
+				newCompositeNode(grammarAccess.getMobaQueueReferenceAccess().getMobaPropertiesProviderParserRuleCall_5());
 			}
-			this_MobaProperties_8=ruleMobaProperties[$current]
+			this_MobaPropertiesProvider_8=ruleMobaPropertiesProvider[$current]
 			{
-				$current = $this_MobaProperties_8.current;
+				$current = $this_MobaPropertiesProvider_8.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
