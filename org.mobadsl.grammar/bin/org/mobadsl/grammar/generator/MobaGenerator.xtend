@@ -24,7 +24,7 @@ class MobaGenerator extends AbstractGenerator {
 		val List<String> generatorIds = input.collectGeneratorIds();
 		generatorDelegate.generate(input, fsa, context, generatorIds);
 	}
-	
+
 	override beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
 		generatorDelegate.beforeGenerate(input, fsa, context, generatorIds);
@@ -37,7 +37,7 @@ class MobaGenerator extends AbstractGenerator {
 
 	def List<String> collectGeneratorIds(Resource resource) {
 		val MobaApplication application = resource.contents.get(0) as MobaApplication
-		return application.allGenerators.map[it.generatorString]
+		return application.allGenerators.map[it.generatorId]
 	}
 
 }

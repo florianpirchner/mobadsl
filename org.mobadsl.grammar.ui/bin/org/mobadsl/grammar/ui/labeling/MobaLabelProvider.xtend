@@ -21,7 +21,7 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 
 	// Labels and icons can be computed like this:
 	
-//	def text(Greeting ele) {
+//	def text(Moba ele) {
 //		'A greeting to ' + ele.name
 //	}
 //

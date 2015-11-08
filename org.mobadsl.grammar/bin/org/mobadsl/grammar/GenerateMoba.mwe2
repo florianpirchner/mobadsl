@@ -40,6 +40,15 @@ Workflow {
 			serializer = {
 				generateStub = false
 			}
+			formatter = {
+				generateStub=true
+			}
+			contentAssist = {
+				generateStub=true
+			}
+			labelProvider ={
+				generateStub=true
+			}
 			validator = {
 			// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}

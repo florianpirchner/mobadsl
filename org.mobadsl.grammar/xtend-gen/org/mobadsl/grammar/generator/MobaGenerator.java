@@ -50,7 +50,7 @@ public class MobaGenerator extends AbstractGenerator {
     final MobaApplication application = ((MobaApplication) _get);
     List<org.mobadsl.semantic.model.moba.MobaGenerator> _allGenerators = application.getAllGenerators();
     final Function1<org.mobadsl.semantic.model.moba.MobaGenerator, String> _function = (org.mobadsl.semantic.model.moba.MobaGenerator it) -> {
-      return it.getGeneratorString();
+      return it.getGeneratorId();
     };
     return ListExtensions.<org.mobadsl.semantic.model.moba.MobaGenerator, String>map(_allGenerators, _function);
   }
