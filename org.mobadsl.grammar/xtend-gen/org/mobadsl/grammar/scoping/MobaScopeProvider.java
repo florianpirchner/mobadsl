@@ -58,7 +58,7 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
     return Scopes.scopeFor(_allQueues);
   }
   
-  public IScope scope_Setting(final MobaApplication ctx, final EReference ref) {
+  public IScope scope_MobaSettings(final MobaApplication ctx, final EReference ref) {
     List<MobaSettings> _allSettings = ctx.getAllSettings();
     return Scopes.scopeFor(_allSettings);
   }

@@ -1,17 +1,17 @@
 package org.mobadsl.semantic.model.moba.util;
 
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 
 public class MobaUtil {
 
 	/**
 	 * Returns the bounds for the given provider.
 	 * 
-	 * @param provider
+	 * @param object
 	 * @return
 	 */
-	public static Bounds getBounds(MobaMultiplicityProvider provider) {
-		return Bounds.createFor(provider);
+	public static Bounds getBounds(MobaMultiplicityAble object) {
+		return Bounds.createFor(object);
 	}
 
 }

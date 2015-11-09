@@ -18,25 +18,18 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getKeyString
- * <em>Key String</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getKeyConst
- * <em>Key Const</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValueString
- * <em>Value String</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValueConst
- * <em>Value Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getKeyString <em>Key String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getKeyConst <em>Key Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValueString <em>Value String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValueConst <em>Value Const</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements MobaProperty {
 	/**
-	 * The default value of the '{@link #getKeyString() <em>Key String</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getKeyString() <em>Key String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getKeyString()
 	 * @generated
 	 * @ordered
@@ -44,9 +37,8 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 	protected static final String KEY_STRING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getKeyString() <em>Key String</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getKeyString() <em>Key String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getKeyString()
 	 * @generated
 	 * @ordered
@@ -54,9 +46,8 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 	protected String keyString = KEY_STRING_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getKeyConst() <em>Key Const</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getKeyConst() <em>Key Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getKeyConst()
 	 * @generated
 	 * @ordered
@@ -64,9 +55,8 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 	protected MobaConstant keyConst;
 
 	/**
-	 * The default value of the '{@link #getValueString() <em>Value String</em>}
-	 * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getValueString() <em>Value String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueString()
 	 * @generated
 	 * @ordered
@@ -74,9 +64,8 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 	protected static final String VALUE_STRING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getValueString() <em>Value String</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getValueString() <em>Value String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueString()
 	 * @generated
 	 * @ordered
@@ -84,9 +73,8 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 	protected String valueString = VALUE_STRING_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getValueConst() <em>Value Const</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getValueConst() <em>Value Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueConst()
 	 * @generated
 	 * @ordered
@@ -95,7 +83,6 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaPropertyImpl() {
@@ -104,7 +91,6 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -114,7 +100,6 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getKeyString() {
@@ -123,30 +108,26 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setKeyString(String newKeyString) {
 		String oldKeyString = keyString;
 		keyString = newKeyString;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__KEY_STRING, oldKeyString,
-					keyString));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__KEY_STRING, oldKeyString, keyString));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaConstant getKeyConst() {
 		if (keyConst != null && keyConst.eIsProxy()) {
-			InternalEObject oldKeyConst = (InternalEObject) keyConst;
-			keyConst = (MobaConstant) eResolveProxy(oldKeyConst);
+			InternalEObject oldKeyConst = (InternalEObject)keyConst;
+			keyConst = (MobaConstant)eResolveProxy(oldKeyConst);
 			if (keyConst != oldKeyConst) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_PROPERTY__KEY_CONST,
-							oldKeyConst, keyConst));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_PROPERTY__KEY_CONST, oldKeyConst, keyConst));
 			}
 		}
 		return keyConst;
@@ -154,7 +135,6 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaConstant basicGetKeyConst() {
@@ -163,20 +143,17 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setKeyConst(MobaConstant newKeyConst) {
 		MobaConstant oldKeyConst = keyConst;
 		keyConst = newKeyConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__KEY_CONST, oldKeyConst,
-					keyConst));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__KEY_CONST, oldKeyConst, keyConst));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getValueString() {
@@ -185,30 +162,26 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setValueString(String newValueString) {
 		String oldValueString = valueString;
 		valueString = newValueString;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__VALUE_STRING,
-					oldValueString, valueString));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__VALUE_STRING, oldValueString, valueString));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaConstant getValueConst() {
 		if (valueConst != null && valueConst.eIsProxy()) {
-			InternalEObject oldValueConst = (InternalEObject) valueConst;
-			valueConst = (MobaConstant) eResolveProxy(oldValueConst);
+			InternalEObject oldValueConst = (InternalEObject)valueConst;
+			valueConst = (MobaConstant)eResolveProxy(oldValueConst);
 			if (valueConst != oldValueConst) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_PROPERTY__VALUE_CONST,
-							oldValueConst, valueConst));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_PROPERTY__VALUE_CONST, oldValueConst, valueConst));
 			}
 		}
 		return valueConst;
@@ -216,7 +189,6 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaConstant basicGetValueConst() {
@@ -225,118 +197,108 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setValueConst(MobaConstant newValueConst) {
 		MobaConstant oldValueConst = valueConst;
 		valueConst = newValueConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__VALUE_CONST, oldValueConst,
-					valueConst));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROPERTY__VALUE_CONST, oldValueConst, valueConst));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_PROPERTY__KEY_STRING:
-			return getKeyString();
-		case MobaPackage.MOBA_PROPERTY__KEY_CONST:
-			if (resolve)
-				return getKeyConst();
-			return basicGetKeyConst();
-		case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
-			return getValueString();
-		case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
-			if (resolve)
-				return getValueConst();
-			return basicGetValueConst();
+			case MobaPackage.MOBA_PROPERTY__KEY_STRING:
+				return getKeyString();
+			case MobaPackage.MOBA_PROPERTY__KEY_CONST:
+				if (resolve) return getKeyConst();
+				return basicGetKeyConst();
+			case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
+				return getValueString();
+			case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
+				if (resolve) return getValueConst();
+				return basicGetValueConst();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_PROPERTY__KEY_STRING:
-			setKeyString((String) newValue);
-			return;
-		case MobaPackage.MOBA_PROPERTY__KEY_CONST:
-			setKeyConst((MobaConstant) newValue);
-			return;
-		case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
-			setValueString((String) newValue);
-			return;
-		case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
-			setValueConst((MobaConstant) newValue);
-			return;
+			case MobaPackage.MOBA_PROPERTY__KEY_STRING:
+				setKeyString((String)newValue);
+				return;
+			case MobaPackage.MOBA_PROPERTY__KEY_CONST:
+				setKeyConst((MobaConstant)newValue);
+				return;
+			case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
+				setValueString((String)newValue);
+				return;
+			case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
+				setValueConst((MobaConstant)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_PROPERTY__KEY_STRING:
-			setKeyString(KEY_STRING_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_PROPERTY__KEY_CONST:
-			setKeyConst((MobaConstant) null);
-			return;
-		case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
-			setValueString(VALUE_STRING_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
-			setValueConst((MobaConstant) null);
-			return;
+			case MobaPackage.MOBA_PROPERTY__KEY_STRING:
+				setKeyString(KEY_STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_PROPERTY__KEY_CONST:
+				setKeyConst((MobaConstant)null);
+				return;
+			case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
+				setValueString(VALUE_STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
+				setValueConst((MobaConstant)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_PROPERTY__KEY_STRING:
-			return KEY_STRING_EDEFAULT == null ? keyString != null : !KEY_STRING_EDEFAULT.equals(keyString);
-		case MobaPackage.MOBA_PROPERTY__KEY_CONST:
-			return keyConst != null;
-		case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
-			return VALUE_STRING_EDEFAULT == null ? valueString != null : !VALUE_STRING_EDEFAULT.equals(valueString);
-		case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
-			return valueConst != null;
+			case MobaPackage.MOBA_PROPERTY__KEY_STRING:
+				return KEY_STRING_EDEFAULT == null ? keyString != null : !KEY_STRING_EDEFAULT.equals(keyString);
+			case MobaPackage.MOBA_PROPERTY__KEY_CONST:
+				return keyConst != null;
+			case MobaPackage.MOBA_PROPERTY__VALUE_STRING:
+				return VALUE_STRING_EDEFAULT == null ? valueString != null : !VALUE_STRING_EDEFAULT.equals(valueString);
+			case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
+				return valueConst != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (keyString: ");

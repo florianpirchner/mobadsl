@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MobaPayload extends MobaData, MobaPropertiesProvider {
+public interface MobaPayload extends MobaData, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

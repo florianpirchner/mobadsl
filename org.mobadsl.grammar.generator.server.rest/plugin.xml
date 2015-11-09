@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.mobadsl.grammar.generatorDelegate">
+      <generatorDelegate
+            generatorDelegateClass="org.mobadsl.grammar.generator.server.rest.RestServicesGenerator"
+            generatorId="org.mobadsl.grammar.generator.server.rest"
+            grammarName="org.mobadsl.grammar.Moba">
+      </generatorDelegate>
+   </extension>
+
+</plugin>

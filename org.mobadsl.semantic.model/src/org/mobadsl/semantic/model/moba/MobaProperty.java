@@ -12,14 +12,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString
- * <em>Key String</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst
- * <em>Key Const</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString
- * <em>Value String</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst
- * <em>Value Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString <em>Key String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst <em>Key Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString <em>Value String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst <em>Value Const</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty()
@@ -45,13 +41,10 @@ public interface MobaProperty extends EObject {
 	String getKeyString();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString
-	 * <em>Key String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyString <em>Key String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Key String</em>' attribute.
+	 * @param value the new value of the '<em>Key String</em>' attribute.
 	 * @see #getKeyString()
 	 * @generated
 	 */
@@ -105,13 +98,10 @@ public interface MobaProperty extends EObject {
 	String getValueString();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString
-	 * <em>Value String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString <em>Value String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Value String</em>' attribute.
+	 * @param value the new value of the '<em>Value String</em>' attribute.
 	 * @see #getValueString()
 	 * @generated
 	 */
@@ -135,13 +125,10 @@ public interface MobaProperty extends EObject {
 	MobaConstant getValueConst();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst
-	 * <em>Value Const</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst <em>Value Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Value Const</em>' reference.
+	 * @param value the new value of the '<em>Value Const</em>' reference.
 	 * @see #getValueConst()
 	 * @generated
 	 */

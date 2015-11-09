@@ -11,10 +11,10 @@ import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature
 import org.mobadsl.semantic.model.moba.MobaDto
 import org.mobadsl.semantic.model.moba.MobaDtoFeature
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble
 import org.mobadsl.semantic.model.moba.MobaPayload
 import org.mobadsl.semantic.model.moba.MobaPayloadFeature
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble
 import org.mobadsl.semantic.model.moba.MobaProperty
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaQueueFeature
@@ -29,7 +29,7 @@ class MobaFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(MobaPropertiesProvider mobaPropertiesProvider, extension IFormattableDocument document) {
+	def dispatch void format(MobaPropertiesAble mobaPropertiesProvider, extension IFormattableDocument document) {
 		for (MobaProperty properties : mobaPropertiesProvider.getProperties()) {
 			format(properties, document);
 		}
@@ -55,7 +55,7 @@ class MobaFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(MobaMultiplicityProvider mobaMultiplicityProvider, extension IFormattableDocument document) {
+	def dispatch void format(MobaMultiplicityAble mobaMultiplicityProvider, extension IFormattableDocument document) {
 		format(mobaMultiplicityProvider.getMultiplicity(), document);
 	}
 }

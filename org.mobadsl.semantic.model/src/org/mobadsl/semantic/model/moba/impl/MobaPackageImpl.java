@@ -7,40 +7,55 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaConstantValue;
+import org.mobadsl.semantic.model.moba.MobaConstraint;
+import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoIndex;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEnum;
+import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaFeature;
+import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaLowerBound;
+import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
+import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
+import org.mobadsl.semantic.model.moba.MobaMinConstraint;
+import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
+import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPastConstraint;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
 import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
 import org.mobadsl.semantic.model.moba.MobaPayloadReference;
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
 import org.mobadsl.semantic.model.moba.MobaRestCrud;
 import org.mobadsl.semantic.model.moba.MobaRestCustom;
 import org.mobadsl.semantic.model.moba.MobaService;
 import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaUpperBound;
 
@@ -98,7 +113,14 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mobaPropertiesProviderEClass = null;
+	private EClass mobaConstantValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaPropertiesAbleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,7 +225,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mobaMultiplicityProviderEClass = null;
+	private EClass mobaMultiplicityAbleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,6 +275,118 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * @generated
 	 */
 	private EClass mobaMuliplicityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaSettingsFeatureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaSettingsAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaConstraintableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaRegexpConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaMinConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaMaxConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaFutureConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaPastConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaNotNullConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaNullConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaMinLengthConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaMaxLengthConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaDigitsConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaEnumEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaEnumLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -469,8 +603,26 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaDataType_DateFormatConstant() {
+	public EReference getMobaDataType_DateFormatConst() {
 		return (EReference)mobaDataTypeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaDataType_SuperType() {
+		return (EReference)mobaDataTypeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaDataType_EnumAST() {
+		return (EReference)mobaDataTypeEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -496,8 +648,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaConstant_Value() {
-		return (EAttribute)mobaConstantEClass.getEStructuralFeatures().get(1);
+	public EReference getMobaConstant_ValueAST() {
+		return (EReference)mobaConstantEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -505,8 +657,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMobaPropertiesProvider() {
-		return mobaPropertiesProviderEClass;
+	public EClass getMobaConstantValue() {
+		return mobaConstantValueEClass;
 	}
 
 	/**
@@ -514,8 +666,44 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaPropertiesProvider_Properties() {
-		return (EReference)mobaPropertiesProviderEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMobaConstantValue_ValueString() {
+		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaConstantValue_ValueConst() {
+		return (EReference)mobaConstantValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaConstantValue_Tail() {
+		return (EReference)mobaConstantValueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaPropertiesAble() {
+		return mobaPropertiesAbleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaPropertiesAble_Properties() {
+		return (EReference)mobaPropertiesAbleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -597,6 +785,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EAttribute getMobaSettings_Name() {
 		return (EAttribute)mobaSettingsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaSettings_Features() {
+		return (EReference)mobaSettingsEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -919,8 +1116,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMobaMultiplicityProvider() {
-		return mobaMultiplicityProviderEClass;
+	public EClass getMobaMultiplicityAble() {
+		return mobaMultiplicityAbleEClass;
 	}
 
 	/**
@@ -928,8 +1125,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaMultiplicityProvider_Multiplicity() {
-		return (EReference)mobaMultiplicityProviderEClass.getEStructuralFeatures().get(0);
+	public EReference getMobaMultiplicityAble_Multiplicity() {
+		return (EReference)mobaMultiplicityAbleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1180,6 +1377,384 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMobaSettingsFeature() {
+		return mobaSettingsFeatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaSettingsAttribute() {
+		return mobaSettingsAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaSettingsAttribute_Lazy() {
+		return (EAttribute)mobaSettingsAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaSettingsAttribute_Transient() {
+		return (EAttribute)mobaSettingsAttributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaSettingsAttribute_DomainKey() {
+		return (EAttribute)mobaSettingsAttributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaSettingsAttribute_DomainDescription() {
+		return (EAttribute)mobaSettingsAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaSettingsAttribute_Type() {
+		return (EReference)mobaSettingsAttributeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaConstraintable() {
+		return mobaConstraintableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaConstraintable_Constraints() {
+		return (EReference)mobaConstraintableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaConstraint() {
+		return mobaConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaRegexpConstraint() {
+		return mobaRegexpConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaRegexpConstraint_FilterString() {
+		return (EAttribute)mobaRegexpConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaRegexpConstraint_FilterConst() {
+		return (EReference)mobaRegexpConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaMinConstraint() {
+		return mobaMinConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaMinConstraint_FilterValue() {
+		return (EAttribute)mobaMinConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaMinConstraint_FilterConst() {
+		return (EReference)mobaMinConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaMaxConstraint() {
+		return mobaMaxConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaMaxConstraint_FilterValue() {
+		return (EAttribute)mobaMaxConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaMaxConstraint_FilterConst() {
+		return (EReference)mobaMaxConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaFutureConstraint() {
+		return mobaFutureConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaPastConstraint() {
+		return mobaPastConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaNotNullConstraint() {
+		return mobaNotNullConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaNullConstraint() {
+		return mobaNullConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaMinLengthConstraint() {
+		return mobaMinLengthConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaMinLengthConstraint_FilterValue() {
+		return (EAttribute)mobaMinLengthConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaMinLengthConstraint_FilterConst() {
+		return (EReference)mobaMinLengthConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaMaxLengthConstraint() {
+		return mobaMaxLengthConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaMaxLengthConstraint_FilterValue() {
+		return (EAttribute)mobaMaxLengthConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaMaxLengthConstraint_FilterConst() {
+		return (EReference)mobaMaxLengthConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaDigitsConstraint() {
+		return mobaDigitsConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaDigitsConstraint_FilterIntegerValue() {
+		return (EAttribute)mobaDigitsConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaDigitsConstraint_FilterIntegerConst() {
+		return (EReference)mobaDigitsConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaDigitsConstraint_FilterFractionValue() {
+		return (EAttribute)mobaDigitsConstraintEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaDigitsConstraint_FilterFractionConst() {
+		return (EReference)mobaDigitsConstraintEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaEnum() {
+		return mobaEnumEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaEnum_SuperType() {
+		return (EReference)mobaEnumEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaEnum_Name() {
+		return (EAttribute)mobaEnumEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaEnum_Literals() {
+		return (EReference)mobaEnumEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaEnumLiteral() {
+		return mobaEnumLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaEnumLiteral_Literal() {
+		return (EAttribute)mobaEnumLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaEnumLiteral_Name() {
+		return (EAttribute)mobaEnumLiteralEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaEnumLiteral_Value() {
+		return (EAttribute)mobaEnumLiteralEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getMobaLowerBound() {
 		return mobaLowerBoundEEnum;
 	}
@@ -1240,14 +1815,21 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaDataTypeEClass, MOBA_DATA_TYPE__ARRAY);
 		createEAttribute(mobaDataTypeEClass, MOBA_DATA_TYPE__DATE);
 		createEAttribute(mobaDataTypeEClass, MOBA_DATA_TYPE__DATE_FORMAT_STRING);
-		createEReference(mobaDataTypeEClass, MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT);
+		createEReference(mobaDataTypeEClass, MOBA_DATA_TYPE__DATE_FORMAT_CONST);
+		createEReference(mobaDataTypeEClass, MOBA_DATA_TYPE__SUPER_TYPE);
+		createEReference(mobaDataTypeEClass, MOBA_DATA_TYPE__ENUM_AST);
 
 		mobaConstantEClass = createEClass(MOBA_CONSTANT);
 		createEAttribute(mobaConstantEClass, MOBA_CONSTANT__NAME);
-		createEAttribute(mobaConstantEClass, MOBA_CONSTANT__VALUE);
+		createEReference(mobaConstantEClass, MOBA_CONSTANT__VALUE_AST);
 
-		mobaPropertiesProviderEClass = createEClass(MOBA_PROPERTIES_PROVIDER);
-		createEReference(mobaPropertiesProviderEClass, MOBA_PROPERTIES_PROVIDER__PROPERTIES);
+		mobaConstantValueEClass = createEClass(MOBA_CONSTANT_VALUE);
+		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_STRING);
+		createEReference(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_CONST);
+		createEReference(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__TAIL);
+
+		mobaPropertiesAbleEClass = createEClass(MOBA_PROPERTIES_ABLE);
+		createEReference(mobaPropertiesAbleEClass, MOBA_PROPERTIES_ABLE__PROPERTIES);
 
 		mobaPropertyEClass = createEClass(MOBA_PROPERTY);
 		createEAttribute(mobaPropertyEClass, MOBA_PROPERTY__KEY_STRING);
@@ -1260,6 +1842,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaSettingsEClass = createEClass(MOBA_SETTINGS);
 		createEReference(mobaSettingsEClass, MOBA_SETTINGS__SUPER_TYPE);
 		createEAttribute(mobaSettingsEClass, MOBA_SETTINGS__NAME);
+		createEReference(mobaSettingsEClass, MOBA_SETTINGS__FEATURES);
 
 		mobaCacheEClass = createEClass(MOBA_CACHE);
 		createEAttribute(mobaCacheEClass, MOBA_CACHE__CACHE_TYPE_STRING);
@@ -1307,8 +1890,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaDtoAttributeEClass, MOBA_DTO_ATTRIBUTE__DOMAIN_DESCRIPTION);
 		createEReference(mobaDtoAttributeEClass, MOBA_DTO_ATTRIBUTE__TYPE);
 
-		mobaMultiplicityProviderEClass = createEClass(MOBA_MULTIPLICITY_PROVIDER);
-		createEReference(mobaMultiplicityProviderEClass, MOBA_MULTIPLICITY_PROVIDER__MULTIPLICITY);
+		mobaMultiplicityAbleEClass = createEClass(MOBA_MULTIPLICITY_ABLE);
+		createEReference(mobaMultiplicityAbleEClass, MOBA_MULTIPLICITY_ABLE__MULTIPLICITY);
 
 		mobaDtoReferenceEClass = createEClass(MOBA_DTO_REFERENCE);
 		createEAttribute(mobaDtoReferenceEClass, MOBA_DTO_REFERENCE__CASCADING);
@@ -1344,6 +1927,64 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaMuliplicityEClass, MOBA_MULIPLICITY__LOWER);
 		createEAttribute(mobaMuliplicityEClass, MOBA_MULIPLICITY__UPPER);
 
+		mobaSettingsFeatureEClass = createEClass(MOBA_SETTINGS_FEATURE);
+
+		mobaSettingsAttributeEClass = createEClass(MOBA_SETTINGS_ATTRIBUTE);
+		createEAttribute(mobaSettingsAttributeEClass, MOBA_SETTINGS_ATTRIBUTE__LAZY);
+		createEAttribute(mobaSettingsAttributeEClass, MOBA_SETTINGS_ATTRIBUTE__TRANSIENT);
+		createEAttribute(mobaSettingsAttributeEClass, MOBA_SETTINGS_ATTRIBUTE__DOMAIN_KEY);
+		createEAttribute(mobaSettingsAttributeEClass, MOBA_SETTINGS_ATTRIBUTE__DOMAIN_DESCRIPTION);
+		createEReference(mobaSettingsAttributeEClass, MOBA_SETTINGS_ATTRIBUTE__TYPE);
+
+		mobaConstraintableEClass = createEClass(MOBA_CONSTRAINTABLE);
+		createEReference(mobaConstraintableEClass, MOBA_CONSTRAINTABLE__CONSTRAINTS);
+
+		mobaConstraintEClass = createEClass(MOBA_CONSTRAINT);
+
+		mobaRegexpConstraintEClass = createEClass(MOBA_REGEXP_CONSTRAINT);
+		createEAttribute(mobaRegexpConstraintEClass, MOBA_REGEXP_CONSTRAINT__FILTER_STRING);
+		createEReference(mobaRegexpConstraintEClass, MOBA_REGEXP_CONSTRAINT__FILTER_CONST);
+
+		mobaMinConstraintEClass = createEClass(MOBA_MIN_CONSTRAINT);
+		createEAttribute(mobaMinConstraintEClass, MOBA_MIN_CONSTRAINT__FILTER_VALUE);
+		createEReference(mobaMinConstraintEClass, MOBA_MIN_CONSTRAINT__FILTER_CONST);
+
+		mobaMaxConstraintEClass = createEClass(MOBA_MAX_CONSTRAINT);
+		createEAttribute(mobaMaxConstraintEClass, MOBA_MAX_CONSTRAINT__FILTER_VALUE);
+		createEReference(mobaMaxConstraintEClass, MOBA_MAX_CONSTRAINT__FILTER_CONST);
+
+		mobaFutureConstraintEClass = createEClass(MOBA_FUTURE_CONSTRAINT);
+
+		mobaPastConstraintEClass = createEClass(MOBA_PAST_CONSTRAINT);
+
+		mobaNotNullConstraintEClass = createEClass(MOBA_NOT_NULL_CONSTRAINT);
+
+		mobaNullConstraintEClass = createEClass(MOBA_NULL_CONSTRAINT);
+
+		mobaMinLengthConstraintEClass = createEClass(MOBA_MIN_LENGTH_CONSTRAINT);
+		createEAttribute(mobaMinLengthConstraintEClass, MOBA_MIN_LENGTH_CONSTRAINT__FILTER_VALUE);
+		createEReference(mobaMinLengthConstraintEClass, MOBA_MIN_LENGTH_CONSTRAINT__FILTER_CONST);
+
+		mobaMaxLengthConstraintEClass = createEClass(MOBA_MAX_LENGTH_CONSTRAINT);
+		createEAttribute(mobaMaxLengthConstraintEClass, MOBA_MAX_LENGTH_CONSTRAINT__FILTER_VALUE);
+		createEReference(mobaMaxLengthConstraintEClass, MOBA_MAX_LENGTH_CONSTRAINT__FILTER_CONST);
+
+		mobaDigitsConstraintEClass = createEClass(MOBA_DIGITS_CONSTRAINT);
+		createEAttribute(mobaDigitsConstraintEClass, MOBA_DIGITS_CONSTRAINT__FILTER_INTEGER_VALUE);
+		createEReference(mobaDigitsConstraintEClass, MOBA_DIGITS_CONSTRAINT__FILTER_INTEGER_CONST);
+		createEAttribute(mobaDigitsConstraintEClass, MOBA_DIGITS_CONSTRAINT__FILTER_FRACTION_VALUE);
+		createEReference(mobaDigitsConstraintEClass, MOBA_DIGITS_CONSTRAINT__FILTER_FRACTION_CONST);
+
+		mobaEnumEClass = createEClass(MOBA_ENUM);
+		createEReference(mobaEnumEClass, MOBA_ENUM__SUPER_TYPE);
+		createEAttribute(mobaEnumEClass, MOBA_ENUM__NAME);
+		createEReference(mobaEnumEClass, MOBA_ENUM__LITERALS);
+
+		mobaEnumLiteralEClass = createEClass(MOBA_ENUM_LITERAL);
+		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__LITERAL);
+		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__NAME);
+		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__VALUE);
+
 		// Create enums
 		mobaLowerBoundEEnum = createEEnum(MOBA_LOWER_BOUND);
 		mobaUpperBoundEEnum = createEEnum(MOBA_UPPER_BOUND);
@@ -1377,45 +2018,65 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		mobaApplicationEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaApplicationEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaTemplateEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaGeneratorEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaDataTypeEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaDataTypeEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaDataTypeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaDataTypeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaConstantEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaConstantEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaConstantEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDataEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaSettingsEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaSettingsEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaSettingsEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDtoEClass.getESuperTypes().add(this.getMobaData());
-		mobaDtoEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaDtoEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaPayloadEClass.getESuperTypes().add(this.getMobaData());
-		mobaPayloadEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaPayloadEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaQueueEClass.getESuperTypes().add(this.getMobaData());
-		mobaQueueEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaQueueEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaServiceEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaRestCustomEClass.getESuperTypes().add(this.getMobaService());
-		mobaRestCustomEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaRestCustomEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaRestCrudEClass.getESuperTypes().add(this.getMobaService());
-		mobaRestCrudEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaRestCrudEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDtoFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaDtoFeature());
-		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityProvider());
-		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
+		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaDtoFeature());
-		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityProvider());
-		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
+		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaPayloadFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaPayloadAttributeEClass.getESuperTypes().add(this.getMobaPayloadFeature());
-		mobaPayloadAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityProvider());
-		mobaPayloadAttributeEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaPayloadAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
+		mobaPayloadAttributeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaPayloadAttributeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaPayloadReferenceEClass.getESuperTypes().add(this.getMobaPayloadFeature());
-		mobaPayloadReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityProvider());
-		mobaPayloadReferenceEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaPayloadReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
+		mobaPayloadReferenceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaQueueFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaQueueFeature());
-		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityProvider());
-		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaPropertiesProvider());
+		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
+		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaSettingsFeatureEClass.getESuperTypes().add(this.getMobaFeature());
+		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaSettingsFeature());
+		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
+		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaConstraintable());
+		mobaRegexpConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaMinConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaMaxConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaFutureConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaPastConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaNotNullConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaNullConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaMinLengthConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaMaxLengthConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaDigitsConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
+		mobaEnumEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaEnumEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(mobaApplicationEClass, MobaApplication.class, "MobaApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1437,14 +2098,21 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaDataType_Array(), ecorePackage.getEBoolean(), "array", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaDataType_Date(), ecorePackage.getEBoolean(), "date", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaDataType_DateFormatString(), ecorePackage.getEString(), "dateFormatString", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobaDataType_DateFormatConstant(), this.getMobaConstant(), null, "dateFormatConstant", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaDataType_DateFormatConst(), this.getMobaConstant(), null, "dateFormatConst", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaDataType_SuperType(), this.getMobaDataType(), null, "superType", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaDataType_EnumAST(), this.getMobaEnum(), null, "enumAST", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaConstantEClass, MobaConstant.class, "MobaConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaConstant_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, MobaConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaConstant_ValueAST(), this.getMobaConstantValue(), null, "valueAST", null, 0, 1, MobaConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mobaPropertiesProviderEClass, MobaPropertiesProvider.class, "MobaPropertiesProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMobaPropertiesProvider_Properties(), this.getMobaProperty(), null, "properties", null, 0, -1, MobaPropertiesProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(mobaConstantValueEClass, MobaConstantValue.class, "MobaConstantValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaConstantValue_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaConstantValue_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaConstantValue_Tail(), this.getMobaConstantValue(), null, "tail", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaPropertiesAbleEClass, MobaPropertiesAble.class, "MobaPropertiesAble", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaPropertiesAble_Properties(), this.getMobaProperty(), null, "properties", null, 0, -1, MobaPropertiesAble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaPropertyEClass, MobaProperty.class, "MobaProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaProperty_KeyString(), ecorePackage.getEString(), "keyString", null, 0, 1, MobaProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1457,6 +2125,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaSettingsEClass, MobaSettings.class, "MobaSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaSettings_SuperType(), this.getMobaSettings(), null, "superType", null, 0, 1, MobaSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaSettings_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaSettings_Features(), this.getMobaSettingsFeature(), null, "features", null, 0, -1, MobaSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaCacheEClass, MobaCache.class, "MobaCache", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaCache_CacheTypeString(), ecorePackage.getEString(), "cacheTypeString", null, 0, 1, MobaCache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1504,8 +2173,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaDtoAttribute_DomainDescription(), ecorePackage.getEBoolean(), "domainDescription", null, 0, 1, MobaDtoAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaDtoAttribute_Type(), this.getMobaDataType(), null, "type", null, 0, 1, MobaDtoAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mobaMultiplicityProviderEClass, MobaMultiplicityProvider.class, "MobaMultiplicityProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMobaMultiplicityProvider_Multiplicity(), this.getMobaMuliplicity(), null, "multiplicity", null, 0, 1, MobaMultiplicityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(mobaMultiplicityAbleEClass, MobaMultiplicityAble.class, "MobaMultiplicityAble", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaMultiplicityAble_Multiplicity(), this.getMobaMuliplicity(), null, "multiplicity", null, 0, 1, MobaMultiplicityAble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaDtoReferenceEClass, MobaDtoReference.class, "MobaDtoReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaDtoReference_Cascading(), ecorePackage.getEBoolean(), "cascading", null, 0, 1, MobaDtoReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1540,6 +2209,64 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaMuliplicityEClass, MobaMuliplicity.class, "MobaMuliplicity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaMuliplicity_Lower(), this.getMobaLowerBound(), "lower", null, 0, 1, MobaMuliplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaMuliplicity_Upper(), this.getMobaUpperBound(), "upper", null, 0, 1, MobaMuliplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaSettingsFeatureEClass, MobaSettingsFeature.class, "MobaSettingsFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaSettingsAttributeEClass, MobaSettingsAttribute.class, "MobaSettingsAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaSettingsAttribute_Lazy(), ecorePackage.getEBoolean(), "lazy", null, 0, 1, MobaSettingsAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaSettingsAttribute_Transient(), ecorePackage.getEBoolean(), "transient", null, 0, 1, MobaSettingsAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaSettingsAttribute_DomainKey(), ecorePackage.getEBoolean(), "domainKey", null, 0, 1, MobaSettingsAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaSettingsAttribute_DomainDescription(), ecorePackage.getEBoolean(), "domainDescription", null, 0, 1, MobaSettingsAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaSettingsAttribute_Type(), this.getMobaDataType(), null, "type", null, 0, 1, MobaSettingsAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaConstraintableEClass, MobaConstraintable.class, "MobaConstraintable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaConstraintable_Constraints(), this.getMobaConstraint(), null, "constraints", null, 0, -1, MobaConstraintable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaConstraintEClass, MobaConstraint.class, "MobaConstraint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaRegexpConstraintEClass, MobaRegexpConstraint.class, "MobaRegexpConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaRegexpConstraint_FilterString(), ecorePackage.getEString(), "filterString", null, 0, 1, MobaRegexpConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaRegexpConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaRegexpConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaMinConstraintEClass, MobaMinConstraint.class, "MobaMinConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaMinConstraint_FilterValue(), ecorePackage.getEFloat(), "filterValue", null, 0, 1, MobaMinConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaMinConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaMinConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaMaxConstraintEClass, MobaMaxConstraint.class, "MobaMaxConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaMaxConstraint_FilterValue(), ecorePackage.getEFloat(), "filterValue", null, 0, 1, MobaMaxConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaMaxConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaMaxConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaFutureConstraintEClass, MobaFutureConstraint.class, "MobaFutureConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaPastConstraintEClass, MobaPastConstraint.class, "MobaPastConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaNotNullConstraintEClass, MobaNotNullConstraint.class, "MobaNotNullConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaNullConstraintEClass, MobaNullConstraint.class, "MobaNullConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaMinLengthConstraintEClass, MobaMinLengthConstraint.class, "MobaMinLengthConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaMinLengthConstraint_FilterValue(), ecorePackage.getEInt(), "filterValue", null, 0, 1, MobaMinLengthConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaMinLengthConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaMinLengthConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaMaxLengthConstraintEClass, MobaMaxLengthConstraint.class, "MobaMaxLengthConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaMaxLengthConstraint_FilterValue(), ecorePackage.getEInt(), "filterValue", null, 0, 1, MobaMaxLengthConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaMaxLengthConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaMaxLengthConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaDigitsConstraintEClass, MobaDigitsConstraint.class, "MobaDigitsConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaDigitsConstraint_FilterIntegerValue(), ecorePackage.getEInt(), "filterIntegerValue", null, 0, 1, MobaDigitsConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaDigitsConstraint_FilterIntegerConst(), this.getMobaConstant(), null, "filterIntegerConst", null, 0, 1, MobaDigitsConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaDigitsConstraint_FilterFractionValue(), ecorePackage.getEInt(), "filterFractionValue", null, 0, 1, MobaDigitsConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaDigitsConstraint_FilterFractionConst(), this.getMobaConstant(), null, "filterFractionConst", null, 0, 1, MobaDigitsConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaEnumEClass, MobaEnum.class, "MobaEnum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaEnum_SuperType(), this.getMobaEnum(), null, "superType", null, 0, 1, MobaEnum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaEnum_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaEnum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaEnum_Literals(), this.getMobaEnumLiteral(), null, "literals", null, 0, -1, MobaEnum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaEnumLiteralEClass, MobaEnumLiteral.class, "MobaEnumLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaEnumLiteral_Literal(), ecorePackage.getEString(), "literal", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaEnumLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaEnumLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(mobaLowerBoundEEnum, MobaLowerBound.class, "MobaLowerBound");

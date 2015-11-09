@@ -67,6 +67,15 @@ public interface MobaFactory extends EFactory {
 	MobaConstant createMobaConstant();
 
 	/**
+	 * Returns a new object of class '<em>Constant Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constant Value</em>'.
+	 * @generated
+	 */
+	MobaConstantValue createMobaConstantValue();
+
+	/**
 	 * Returns a new object of class '<em>Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,6 +218,123 @@ public interface MobaFactory extends EFactory {
 	 * @generated
 	 */
 	MobaMuliplicity createMobaMuliplicity();
+
+	/**
+	 * Returns a new object of class '<em>Settings Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Settings Attribute</em>'.
+	 * @generated
+	 */
+	MobaSettingsAttribute createMobaSettingsAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Regexp Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Regexp Constraint</em>'.
+	 * @generated
+	 */
+	MobaRegexpConstraint createMobaRegexpConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Min Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Min Constraint</em>'.
+	 * @generated
+	 */
+	MobaMinConstraint createMobaMinConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Max Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Max Constraint</em>'.
+	 * @generated
+	 */
+	MobaMaxConstraint createMobaMaxConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Future Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Future Constraint</em>'.
+	 * @generated
+	 */
+	MobaFutureConstraint createMobaFutureConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Past Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Past Constraint</em>'.
+	 * @generated
+	 */
+	MobaPastConstraint createMobaPastConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Not Null Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Not Null Constraint</em>'.
+	 * @generated
+	 */
+	MobaNotNullConstraint createMobaNotNullConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Null Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Null Constraint</em>'.
+	 * @generated
+	 */
+	MobaNullConstraint createMobaNullConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Min Length Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Min Length Constraint</em>'.
+	 * @generated
+	 */
+	MobaMinLengthConstraint createMobaMinLengthConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Max Length Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Max Length Constraint</em>'.
+	 * @generated
+	 */
+	MobaMaxLengthConstraint createMobaMaxLengthConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Digits Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Digits Constraint</em>'.
+	 * @generated
+	 */
+	MobaDigitsConstraint createMobaDigitsConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Enum</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enum</em>'.
+	 * @generated
+	 */
+	MobaEnum createMobaEnum();
+
+	/**
+	 * Returns a new object of class '<em>Enum Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enum Literal</em>'.
+	 * @generated
+	 */
+	MobaEnumLiteral createMobaEnumLiteral();
 
 	/**
 	 * Returns the package supported by this factory.

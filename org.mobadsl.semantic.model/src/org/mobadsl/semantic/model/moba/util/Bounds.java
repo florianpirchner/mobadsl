@@ -2,7 +2,7 @@ package org.mobadsl.semantic.model.moba.util;
 
 import org.mobadsl.semantic.model.moba.MobaLowerBound;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaUpperBound;
 
 /**
@@ -17,12 +17,12 @@ public class Bounds {
 		return new Bounds(MobaLowerBound.ZERO, MobaUpperBound.ONE);
 	}
 
-	public static Bounds createFor(MobaMultiplicityProvider prop) {
-		if (prop == null) {
+	public static Bounds createFor(MobaMultiplicityAble object) {
+		if (object == null) {
 			return new Bounds(MobaLowerBound.ZERO, MobaUpperBound.ONE);
 		}
 
-		return createFor(prop.getMultiplicity());
+		return createFor(object.getMultiplicity());
 	}
 
 	public static Bounds createFor(MobaMuliplicity multiplicity) {

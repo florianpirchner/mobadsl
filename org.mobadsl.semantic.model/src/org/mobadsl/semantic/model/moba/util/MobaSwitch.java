@@ -4,10 +4,50 @@ package org.mobadsl.semantic.model.moba.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.mobadsl.semantic.model.moba.*;
+import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaCache;
+import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaConstantValue;
+import org.mobadsl.semantic.model.moba.MobaConstraint;
+import org.mobadsl.semantic.model.moba.MobaConstraintable;
+import org.mobadsl.semantic.model.moba.MobaData;
+import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaDtoIndex;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaFeature;
+import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
+import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
+import org.mobadsl.semantic.model.moba.MobaMinConstraint;
+import org.mobadsl.semantic.model.moba.MobaMuliplicity;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
+import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaPayload;
+import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
+import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
+import org.mobadsl.semantic.model.moba.MobaPayloadReference;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
+import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaQueue;
+import org.mobadsl.semantic.model.moba.MobaQueueFeature;
+import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
+import org.mobadsl.semantic.model.moba.MobaRestCrud;
+import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
+import org.mobadsl.semantic.model.moba.MobaTemplate;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,7 +109,7 @@ public class MobaSwitch<T> extends Switch<T> {
 			case MobaPackage.MOBA_APPLICATION: {
 				MobaApplication mobaApplication = (MobaApplication)theEObject;
 				T result = caseMobaApplication(mobaApplication);
-				if (result == null) result = caseMobaPropertiesProvider(mobaApplication);
+				if (result == null) result = caseMobaPropertiesAble(mobaApplication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -97,7 +137,8 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaDataType mobaDataType = (MobaDataType)theEObject;
 				T result = caseMobaDataType(mobaDataType);
 				if (result == null) result = caseMobaApplicationFeature(mobaDataType);
-				if (result == null) result = caseMobaPropertiesProvider(mobaDataType);
+				if (result == null) result = caseMobaPropertiesAble(mobaDataType);
+				if (result == null) result = caseMobaConstraintable(mobaDataType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -105,13 +146,19 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaConstant mobaConstant = (MobaConstant)theEObject;
 				T result = caseMobaConstant(mobaConstant);
 				if (result == null) result = caseMobaApplicationFeature(mobaConstant);
-				if (result == null) result = caseMobaPropertiesProvider(mobaConstant);
+				if (result == null) result = caseMobaPropertiesAble(mobaConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_PROPERTIES_PROVIDER: {
-				MobaPropertiesProvider mobaPropertiesProvider = (MobaPropertiesProvider)theEObject;
-				T result = caseMobaPropertiesProvider(mobaPropertiesProvider);
+			case MobaPackage.MOBA_CONSTANT_VALUE: {
+				MobaConstantValue mobaConstantValue = (MobaConstantValue)theEObject;
+				T result = caseMobaConstantValue(mobaConstantValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_PROPERTIES_ABLE: {
+				MobaPropertiesAble mobaPropertiesAble = (MobaPropertiesAble)theEObject;
+				T result = caseMobaPropertiesAble(mobaPropertiesAble);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,7 +179,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaSettings mobaSettings = (MobaSettings)theEObject;
 				T result = caseMobaSettings(mobaSettings);
 				if (result == null) result = caseMobaApplicationFeature(mobaSettings);
-				if (result == null) result = caseMobaPropertiesProvider(mobaSettings);
+				if (result == null) result = caseMobaPropertiesAble(mobaSettings);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -146,7 +193,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaDto mobaDto = (MobaDto)theEObject;
 				T result = caseMobaDto(mobaDto);
 				if (result == null) result = caseMobaData(mobaDto);
-				if (result == null) result = caseMobaPropertiesProvider(mobaDto);
+				if (result == null) result = caseMobaPropertiesAble(mobaDto);
 				if (result == null) result = caseMobaApplicationFeature(mobaDto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -161,7 +208,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaPayload mobaPayload = (MobaPayload)theEObject;
 				T result = caseMobaPayload(mobaPayload);
 				if (result == null) result = caseMobaData(mobaPayload);
-				if (result == null) result = caseMobaPropertiesProvider(mobaPayload);
+				if (result == null) result = caseMobaPropertiesAble(mobaPayload);
 				if (result == null) result = caseMobaApplicationFeature(mobaPayload);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -170,7 +217,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaQueue mobaQueue = (MobaQueue)theEObject;
 				T result = caseMobaQueue(mobaQueue);
 				if (result == null) result = caseMobaData(mobaQueue);
-				if (result == null) result = caseMobaPropertiesProvider(mobaQueue);
+				if (result == null) result = caseMobaPropertiesAble(mobaQueue);
 				if (result == null) result = caseMobaApplicationFeature(mobaQueue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -186,7 +233,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaRestCustom mobaRestCustom = (MobaRestCustom)theEObject;
 				T result = caseMobaRestCustom(mobaRestCustom);
 				if (result == null) result = caseMobaService(mobaRestCustom);
-				if (result == null) result = caseMobaPropertiesProvider(mobaRestCustom);
+				if (result == null) result = caseMobaPropertiesAble(mobaRestCustom);
 				if (result == null) result = caseMobaApplicationFeature(mobaRestCustom);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -195,7 +242,7 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaRestCrud mobaRestCrud = (MobaRestCrud)theEObject;
 				T result = caseMobaRestCrud(mobaRestCrud);
 				if (result == null) result = caseMobaService(mobaRestCrud);
-				if (result == null) result = caseMobaPropertiesProvider(mobaRestCrud);
+				if (result == null) result = caseMobaPropertiesAble(mobaRestCrud);
 				if (result == null) result = caseMobaApplicationFeature(mobaRestCrud);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -217,15 +264,16 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaDtoAttribute mobaDtoAttribute = (MobaDtoAttribute)theEObject;
 				T result = caseMobaDtoAttribute(mobaDtoAttribute);
 				if (result == null) result = caseMobaDtoFeature(mobaDtoAttribute);
-				if (result == null) result = caseMobaMultiplicityProvider(mobaDtoAttribute);
-				if (result == null) result = caseMobaPropertiesProvider(mobaDtoAttribute);
+				if (result == null) result = caseMobaMultiplicityAble(mobaDtoAttribute);
+				if (result == null) result = caseMobaPropertiesAble(mobaDtoAttribute);
+				if (result == null) result = caseMobaConstraintable(mobaDtoAttribute);
 				if (result == null) result = caseMobaFeature(mobaDtoAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_MULTIPLICITY_PROVIDER: {
-				MobaMultiplicityProvider mobaMultiplicityProvider = (MobaMultiplicityProvider)theEObject;
-				T result = caseMobaMultiplicityProvider(mobaMultiplicityProvider);
+			case MobaPackage.MOBA_MULTIPLICITY_ABLE: {
+				MobaMultiplicityAble mobaMultiplicityAble = (MobaMultiplicityAble)theEObject;
+				T result = caseMobaMultiplicityAble(mobaMultiplicityAble);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -233,8 +281,8 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaDtoReference mobaDtoReference = (MobaDtoReference)theEObject;
 				T result = caseMobaDtoReference(mobaDtoReference);
 				if (result == null) result = caseMobaDtoFeature(mobaDtoReference);
-				if (result == null) result = caseMobaMultiplicityProvider(mobaDtoReference);
-				if (result == null) result = caseMobaPropertiesProvider(mobaDtoReference);
+				if (result == null) result = caseMobaMultiplicityAble(mobaDtoReference);
+				if (result == null) result = caseMobaPropertiesAble(mobaDtoReference);
 				if (result == null) result = caseMobaFeature(mobaDtoReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -250,8 +298,9 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaPayloadAttribute mobaPayloadAttribute = (MobaPayloadAttribute)theEObject;
 				T result = caseMobaPayloadAttribute(mobaPayloadAttribute);
 				if (result == null) result = caseMobaPayloadFeature(mobaPayloadAttribute);
-				if (result == null) result = caseMobaMultiplicityProvider(mobaPayloadAttribute);
-				if (result == null) result = caseMobaPropertiesProvider(mobaPayloadAttribute);
+				if (result == null) result = caseMobaMultiplicityAble(mobaPayloadAttribute);
+				if (result == null) result = caseMobaPropertiesAble(mobaPayloadAttribute);
+				if (result == null) result = caseMobaConstraintable(mobaPayloadAttribute);
 				if (result == null) result = caseMobaFeature(mobaPayloadAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -260,8 +309,8 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaPayloadReference mobaPayloadReference = (MobaPayloadReference)theEObject;
 				T result = caseMobaPayloadReference(mobaPayloadReference);
 				if (result == null) result = caseMobaPayloadFeature(mobaPayloadReference);
-				if (result == null) result = caseMobaMultiplicityProvider(mobaPayloadReference);
-				if (result == null) result = caseMobaPropertiesProvider(mobaPayloadReference);
+				if (result == null) result = caseMobaMultiplicityAble(mobaPayloadReference);
+				if (result == null) result = caseMobaPropertiesAble(mobaPayloadReference);
 				if (result == null) result = caseMobaFeature(mobaPayloadReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -277,8 +326,8 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaQueueReference mobaQueueReference = (MobaQueueReference)theEObject;
 				T result = caseMobaQueueReference(mobaQueueReference);
 				if (result == null) result = caseMobaQueueFeature(mobaQueueReference);
-				if (result == null) result = caseMobaMultiplicityProvider(mobaQueueReference);
-				if (result == null) result = caseMobaPropertiesProvider(mobaQueueReference);
+				if (result == null) result = caseMobaMultiplicityAble(mobaQueueReference);
+				if (result == null) result = caseMobaPropertiesAble(mobaQueueReference);
 				if (result == null) result = caseMobaFeature(mobaQueueReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -286,6 +335,120 @@ public class MobaSwitch<T> extends Switch<T> {
 			case MobaPackage.MOBA_MULIPLICITY: {
 				MobaMuliplicity mobaMuliplicity = (MobaMuliplicity)theEObject;
 				T result = caseMobaMuliplicity(mobaMuliplicity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_SETTINGS_FEATURE: {
+				MobaSettingsFeature mobaSettingsFeature = (MobaSettingsFeature)theEObject;
+				T result = caseMobaSettingsFeature(mobaSettingsFeature);
+				if (result == null) result = caseMobaFeature(mobaSettingsFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: {
+				MobaSettingsAttribute mobaSettingsAttribute = (MobaSettingsAttribute)theEObject;
+				T result = caseMobaSettingsAttribute(mobaSettingsAttribute);
+				if (result == null) result = caseMobaSettingsFeature(mobaSettingsAttribute);
+				if (result == null) result = caseMobaMultiplicityAble(mobaSettingsAttribute);
+				if (result == null) result = caseMobaPropertiesAble(mobaSettingsAttribute);
+				if (result == null) result = caseMobaConstraintable(mobaSettingsAttribute);
+				if (result == null) result = caseMobaFeature(mobaSettingsAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_CONSTRAINTABLE: {
+				MobaConstraintable mobaConstraintable = (MobaConstraintable)theEObject;
+				T result = caseMobaConstraintable(mobaConstraintable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_CONSTRAINT: {
+				MobaConstraint mobaConstraint = (MobaConstraint)theEObject;
+				T result = caseMobaConstraint(mobaConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_REGEXP_CONSTRAINT: {
+				MobaRegexpConstraint mobaRegexpConstraint = (MobaRegexpConstraint)theEObject;
+				T result = caseMobaRegexpConstraint(mobaRegexpConstraint);
+				if (result == null) result = caseMobaConstraint(mobaRegexpConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_MIN_CONSTRAINT: {
+				MobaMinConstraint mobaMinConstraint = (MobaMinConstraint)theEObject;
+				T result = caseMobaMinConstraint(mobaMinConstraint);
+				if (result == null) result = caseMobaConstraint(mobaMinConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_MAX_CONSTRAINT: {
+				MobaMaxConstraint mobaMaxConstraint = (MobaMaxConstraint)theEObject;
+				T result = caseMobaMaxConstraint(mobaMaxConstraint);
+				if (result == null) result = caseMobaConstraint(mobaMaxConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_FUTURE_CONSTRAINT: {
+				MobaFutureConstraint mobaFutureConstraint = (MobaFutureConstraint)theEObject;
+				T result = caseMobaFutureConstraint(mobaFutureConstraint);
+				if (result == null) result = caseMobaConstraint(mobaFutureConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_PAST_CONSTRAINT: {
+				MobaPastConstraint mobaPastConstraint = (MobaPastConstraint)theEObject;
+				T result = caseMobaPastConstraint(mobaPastConstraint);
+				if (result == null) result = caseMobaConstraint(mobaPastConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_NOT_NULL_CONSTRAINT: {
+				MobaNotNullConstraint mobaNotNullConstraint = (MobaNotNullConstraint)theEObject;
+				T result = caseMobaNotNullConstraint(mobaNotNullConstraint);
+				if (result == null) result = caseMobaConstraint(mobaNotNullConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_NULL_CONSTRAINT: {
+				MobaNullConstraint mobaNullConstraint = (MobaNullConstraint)theEObject;
+				T result = caseMobaNullConstraint(mobaNullConstraint);
+				if (result == null) result = caseMobaConstraint(mobaNullConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_MIN_LENGTH_CONSTRAINT: {
+				MobaMinLengthConstraint mobaMinLengthConstraint = (MobaMinLengthConstraint)theEObject;
+				T result = caseMobaMinLengthConstraint(mobaMinLengthConstraint);
+				if (result == null) result = caseMobaConstraint(mobaMinLengthConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_MAX_LENGTH_CONSTRAINT: {
+				MobaMaxLengthConstraint mobaMaxLengthConstraint = (MobaMaxLengthConstraint)theEObject;
+				T result = caseMobaMaxLengthConstraint(mobaMaxLengthConstraint);
+				if (result == null) result = caseMobaConstraint(mobaMaxLengthConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_DIGITS_CONSTRAINT: {
+				MobaDigitsConstraint mobaDigitsConstraint = (MobaDigitsConstraint)theEObject;
+				T result = caseMobaDigitsConstraint(mobaDigitsConstraint);
+				if (result == null) result = caseMobaConstraint(mobaDigitsConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_ENUM: {
+				MobaEnum mobaEnum = (MobaEnum)theEObject;
+				T result = caseMobaEnum(mobaEnum);
+				if (result == null) result = caseMobaApplicationFeature(mobaEnum);
+				if (result == null) result = caseMobaPropertiesAble(mobaEnum);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_ENUM_LITERAL: {
+				MobaEnumLiteral mobaEnumLiteral = (MobaEnumLiteral)theEObject;
+				T result = caseMobaEnumLiteral(mobaEnumLiteral);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -384,17 +547,32 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Properties Provider</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Constant Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Properties Provider</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Constant Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaPropertiesProvider(MobaPropertiesProvider object) {
+	public T caseMobaConstantValue(MobaConstantValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Properties Able</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Properties Able</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaPropertiesAble(MobaPropertiesAble object) {
 		return null;
 	}
 
@@ -609,17 +787,17 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Multiplicity Provider</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Multiplicity Able</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Multiplicity Provider</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Multiplicity Able</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaMultiplicityProvider(MobaMultiplicityProvider object) {
+	public T caseMobaMultiplicityAble(MobaMultiplicityAble object) {
 		return null;
 	}
 
@@ -725,6 +903,246 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaMuliplicity(MobaMuliplicity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Settings Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Settings Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaSettingsFeature(MobaSettingsFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Settings Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Settings Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaSettingsAttribute(MobaSettingsAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constraintable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constraintable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaConstraintable(MobaConstraintable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaConstraint(MobaConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Regexp Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Regexp Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaRegexpConstraint(MobaRegexpConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Min Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Min Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaMinConstraint(MobaMinConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Max Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Max Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaMaxConstraint(MobaMaxConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Future Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Future Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaFutureConstraint(MobaFutureConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Past Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Past Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaPastConstraint(MobaPastConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Not Null Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Not Null Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaNotNullConstraint(MobaNotNullConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Null Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Null Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaNullConstraint(MobaNullConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Min Length Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Min Length Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaMinLengthConstraint(MobaMinLengthConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Max Length Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Max Length Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaMaxLengthConstraint(MobaMaxLengthConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Digits Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Digits Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaDigitsConstraint(MobaDigitsConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enum</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enum</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaEnum(MobaEnum object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enum Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enum Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaEnumLiteral(MobaEnumLiteral object) {
 		return null;
 	}
 

@@ -18,10 +18,10 @@ import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoIndex;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
@@ -39,7 +39,7 @@ public class MobaFormatter extends AbstractFormatter2 {
     }
   }
   
-  protected void _format(final MobaPropertiesProvider mobaPropertiesProvider, @Extension final IFormattableDocument document) {
+  protected void _format(final MobaPropertiesAble mobaPropertiesProvider, @Extension final IFormattableDocument document) {
     EList<MobaProperty> _properties = mobaPropertiesProvider.getProperties();
     for (final MobaProperty properties : _properties) {
       this.format(properties, document);
@@ -71,7 +71,7 @@ public class MobaFormatter extends AbstractFormatter2 {
     }
   }
   
-  protected void _format(final MobaMultiplicityProvider mobaMultiplicityProvider, @Extension final IFormattableDocument document) {
+  protected void _format(final MobaMultiplicityAble mobaMultiplicityProvider, @Extension final IFormattableDocument document) {
     MobaMuliplicity _multiplicity = mobaMultiplicityProvider.getMultiplicity();
     this.format(_multiplicity, document);
   }
@@ -92,11 +92,11 @@ public class MobaFormatter extends AbstractFormatter2 {
     } else if (mobaDto instanceof MobaApplication) {
       _format((MobaApplication)mobaDto, document);
       return;
-    } else if (mobaDto instanceof MobaMultiplicityProvider) {
-      _format((MobaMultiplicityProvider)mobaDto, document);
+    } else if (mobaDto instanceof MobaMultiplicityAble) {
+      _format((MobaMultiplicityAble)mobaDto, document);
       return;
-    } else if (mobaDto instanceof MobaPropertiesProvider) {
-      _format((MobaPropertiesProvider)mobaDto, document);
+    } else if (mobaDto instanceof MobaPropertiesAble) {
+      _format((MobaPropertiesAble)mobaDto, document);
       return;
     } else if (mobaDto == null) {
       _format((Void)null, document);

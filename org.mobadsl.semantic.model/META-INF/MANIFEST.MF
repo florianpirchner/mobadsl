@@ -8,3 +8,4 @@ Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.11.1"
 Export-Package: org.mobadsl.semantic.model.moba,
  org.mobadsl.semantic.model.moba.impl,
  org.mobadsl.semantic.model.moba.util
+Import-Package: org.slf4j

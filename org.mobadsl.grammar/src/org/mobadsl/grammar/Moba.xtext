@@ -1,6 +1,7 @@
 grammar org.mobadsl.^grammar.Moba with org.eclipse.xtext.common.Terminals
 
 import "platform:/resource/org.mobadsl.semantic.model/model/Moba.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 MobaApplication:
 	'application' name=ID '{'
@@ -10,24 +11,37 @@ MobaApplication:
 MobaApplicationFeature:
 	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaService | MobaGenerator;
 
-/**
+	/**
  * Will import a Moba-Application.
  */
 MobaTemplate:
 	'use template' template=[MobaApplication];
 
 MobaGenerator:
-	'use generator' (generatorString=STRING | generatorConst = [MobaConstant]);
+	'use generator' (generatorString=STRING | generatorConst=[MobaConstant]);
 
 MobaDataType:
-	'datatype' name=ID ((primitive?='isPrimitive')? & (array?='isArray')? &
+	'datatype' name=ID ('extends' superType=[MobaDataType])? ((primitive?='isPrimitive')? & (array?='isArray')? &
 	((date?='isDate' | date?='isTime' | date?='isTimestamp')
-	('(' (dateFormatString=STRING | dateFormatConstant=[MobaConstant]) ')')?)?) MobaPropertiesProvider?;
+	('(' (dateFormatString=STRING | dateFormatConst=[MobaConstant]) ')')?)?
+	& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
+	& (enumAST=MobaEnum)?) MobaPropertiesAble?;
+
+MobaEnum:
+	'enum' name=ID '{'
+	literals+=MobaEnumLiteral (',' literals+=MobaEnumLiteral)*
+	'}';
+
+MobaEnumLiteral:
+	'lit' name=ID '=' '(' literal=STRING ',' value=INT ')';
 
 MobaConstant:
-	'const' name=ID '=' value=STRING MobaPropertiesProvider?;
+	'const' name=ID '=' valueAST=MobaConstantValue MobaPropertiesAble?;
 
-fragment MobaPropertiesProvider:
+MobaConstantValue:
+	(valueString=STRING | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
+
+fragment MobaPropertiesAble:
 	'[' properties+=MobaProperty (',' properties+=MobaProperty)* ']';
 
 MobaProperty:
@@ -38,7 +52,9 @@ MobaData:
 
 MobaSettings:
 	{MobaSettings}
-	'settings' ('extends' superType=[MobaSettings])? MobaPropertiesProvider?;
+	'settings' name=ID ('extends' superType=[MobaSettings])? MobaPropertiesAble? '{'
+	features+=MobaSettingsFeature*
+	'}';
 
 MobaCache:
 	{MobaCache}
@@ -53,7 +69,8 @@ MobaCache:
 	cacheStrategyConst=[MobaConstant]))?) ')')?;
 
 MobaDto:
-	'dto' name=ID (('extends' superType=[MobaDto])? & (cache=MobaCache)?) MobaPropertiesProvider? '{' features+=MobaDtoFeature*
+	'dto' name=ID (('extends' superType=[MobaDto])? & (cache=MobaCache)?) MobaPropertiesAble? '{'
+	features+=MobaDtoFeature*
 	(index=MobaDtoIndex)?
 	'}';
 
@@ -61,12 +78,12 @@ MobaDtoIndex:
 	'index' attributes+=[MobaDtoAttribute] (',' attributes+=[MobaDtoAttribute]*);
 
 MobaPayload:
-	'payload' name=ID ('extends' superType=[MobaPayload])? MobaPropertiesProvider? '{'
+	'payload' name=ID ('extends' superType=[MobaPayload])? MobaPropertiesAble? '{'
 	features+=MobaPayloadFeature*
 	'}';
 
 MobaQueue:
-	'queue' name=ID ('extends' superType=[MobaQueue])? MobaPropertiesProvider? '{'
+	'queue' name=ID ('extends' superType=[MobaQueue])? MobaPropertiesAble? '{'
 	features+=MobaQueueFeature*
 	'}';
 
@@ -74,51 +91,105 @@ MobaService:
 	MobaRestCustom | MobaRestCrud;
 
 MobaRestCustom:
-	'rest' name=ID MobaPropertiesProvider?;
+	'rest' name=ID MobaPropertiesAble?;
 
 MobaRestCrud:
-	'restCrud' name=ID MobaPropertiesProvider?;
+	'restCrud' name=ID MobaPropertiesAble?;
 
 MobaDtoFeature:
 	MobaDtoAttribute | MobaDtoReference;
 
 MobaDtoAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')?)
-	type=[MobaDataType] MobaMultiplicityProvider name=ID MobaPropertiesProvider?;
+	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
+	constraints+=MobaConstraint)* ')')?)
+	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
 
-fragment MobaMultiplicityProvider:
+MobaSettingsFeature:
+	MobaSettingsAttribute;
+
+MobaSettingsAttribute:
+	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
+	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
+	constraints+=MobaConstraint)* ')')?)
+	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
+
+fragment MobaMultiplicityAble:
 	(multiplicity=MobaMuliplicity)?;
 
 MobaDtoReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto] MobaMultiplicityProvider name=ID
-	MobaPropertiesProvider?;
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto] MobaMultiplicityAble
+	name=ID
+	MobaPropertiesAble?;
 
 MobaPayloadFeature:
 	MobaPayloadAttribute | MobaPayloadReference;
 
 MobaPayloadAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? & ('alias' '(' alias=ID ')')?)
-	type=[MobaDataType] MobaMultiplicityProvider name=ID MobaPropertiesProvider?;
+	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
+	constraints+=MobaConstraint)* ')')? & ('alias' '(' alias=ID ')')?)
+	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
 
 MobaPayloadReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaPayload] MobaMultiplicityProvider
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaPayload]
+	MobaMultiplicityAble
 	name=ID
-	MobaPropertiesProvider?;
+	MobaPropertiesAble?;
 
 MobaQueueFeature:
 	MobaQueueReference;
 
 MobaQueueReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaData] MobaMultiplicityProvider name=ID
-	MobaPropertiesProvider?;
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaData] MobaMultiplicityAble
+	name=ID
+	MobaPropertiesAble?;
 
 MobaMuliplicity:
 	'[' (lower=MobaLowerBound) ('..' upper=MobaUpperBound)? ']';
+
+MobaConstraint:
+	MobaRegexpConstraint | MobaMinConstraint | MobaMaxConstraint | MobaMinLengthConstraint | MobaMaxLengthConstraint |
+	MobaDigitsConstraint | MobaNullConstraint | MobaNotNullConstraint;
+
+MobaRegexpConstraint:
+	'regexp' '=' (filterString=STRING | filterConst=[MobaConstant]);
+
+MobaMinConstraint:
+	'min' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+
+MobaMaxConstraint:
+	'max' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+
+MobaMinLengthConstraint:
+	'minLength' '=' (filterValue=INT | filterConst=[MobaConstant]);
+
+MobaMaxLengthConstraint:
+	'maxLength' '=' (filterValue=INT | filterConst=[MobaConstant]);
+
+MobaDigitsConstraint:
+	'digits' '(' (filterIntegerValue=INT | filterIntegerConst=[MobaConstant]) ',' (filterFractionValue=INT |
+	filterFractionConst=[MobaConstant]) ')';
+
+MobaNullConstraint:
+	{MobaNullConstraint}
+	'isNull';
+
+MobaNotNullConstraint:
+	{MobaNotNullConstraint}
+	'isNotNull';
 
 enum MobaLowerBound:
 	MANY='*' | ZERO='0' | OPTIONAL='?' | ATLEASTONE='+' | ONE='1';
 
 enum MobaUpperBound:
 	MANY='*' | ONE='1';
+
+	// if this is removed, antlr detects an error. INT and FLOAT can not become created since the are not unique definitions. 
+terminal INT returns ecore::EInt:
+	super::INT;
+
+terminal FLOAT returns ecore::EFloat:
+	INT
+	(('e' | 'E') ('+' | '-')? INT)?
+	(('b' | 'B') ('i' | 'I' | 'd' | 'D') | ('l' | 'L' | 'd' | 'D' | 'f' | 'F'))?;

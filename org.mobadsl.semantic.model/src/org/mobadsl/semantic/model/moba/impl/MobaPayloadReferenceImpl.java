@@ -6,23 +6,18 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaPayloadReference;
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 
 /**
@@ -443,15 +438,15 @@ public class MobaPayloadReferenceImpl extends MobaPayloadFeatureImpl implements 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaMultiplicityProvider.class) {
+		if (baseClass == MobaMultiplicityAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_PAYLOAD_REFERENCE__MULTIPLICITY: return MobaPackage.MOBA_MULTIPLICITY_PROVIDER__MULTIPLICITY;
+				case MobaPackage.MOBA_PAYLOAD_REFERENCE__MULTIPLICITY: return MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY;
 				default: return -1;
 			}
 		}
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_PAYLOAD_REFERENCE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES;
+				case MobaPackage.MOBA_PAYLOAD_REFERENCE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
 				default: return -1;
 			}
 		}
@@ -465,15 +460,15 @@ public class MobaPayloadReferenceImpl extends MobaPayloadFeatureImpl implements 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaMultiplicityProvider.class) {
+		if (baseClass == MobaMultiplicityAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_MULTIPLICITY_PROVIDER__MULTIPLICITY: return MobaPackage.MOBA_PAYLOAD_REFERENCE__MULTIPLICITY;
+				case MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY: return MobaPackage.MOBA_PAYLOAD_REFERENCE__MULTIPLICITY;
 				default: return -1;
 			}
 		}
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES: return MobaPackage.MOBA_PAYLOAD_REFERENCE__PROPERTIES;
+				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_PAYLOAD_REFERENCE__PROPERTIES;
 				default: return -1;
 			}
 		}

@@ -49,6 +49,10 @@ Workflow {
 			labelProvider ={
 				generateStub=true
 			}
+			quickOutline = {
+				
+			}
+			
 			validator = {
 			// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}

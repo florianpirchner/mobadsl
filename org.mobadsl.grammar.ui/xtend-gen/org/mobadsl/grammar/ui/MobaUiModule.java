@@ -5,7 +5,9 @@ package org.mobadsl.grammar.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
+import org.eclipse.xtext.documentation.IEObjectDocumentationProvider;
 import org.mobadsl.grammar.ui.AbstractMobaUiModule;
+import org.mobadsl.grammar.ui.hover.MobaHoverDocumentationProvider;
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
@@ -13,6 +15,10 @@ import org.mobadsl.grammar.ui.AbstractMobaUiModule;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class MobaUiModule extends AbstractMobaUiModule {
+  public Class<? extends IEObjectDocumentationProvider> bindIEObjectDocumentationProvider() {
+    return MobaHoverDocumentationProvider.class;
+  }
+  
   public MobaUiModule(final AbstractUIPlugin plugin) {
     super(plugin);
   }

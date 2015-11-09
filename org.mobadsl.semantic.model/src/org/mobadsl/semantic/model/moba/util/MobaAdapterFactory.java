@@ -4,12 +4,51 @@ package org.mobadsl.semantic.model.moba.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.mobadsl.semantic.model.moba.*;
+import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaCache;
+import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaConstantValue;
+import org.mobadsl.semantic.model.moba.MobaConstraint;
+import org.mobadsl.semantic.model.moba.MobaConstraintable;
+import org.mobadsl.semantic.model.moba.MobaData;
+import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaDtoIndex;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaFeature;
+import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
+import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
+import org.mobadsl.semantic.model.moba.MobaMinConstraint;
+import org.mobadsl.semantic.model.moba.MobaMuliplicity;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
+import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaPayload;
+import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
+import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
+import org.mobadsl.semantic.model.moba.MobaPayloadReference;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
+import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaQueue;
+import org.mobadsl.semantic.model.moba.MobaQueueFeature;
+import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
+import org.mobadsl.semantic.model.moba.MobaRestCrud;
+import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
+import org.mobadsl.semantic.model.moba.MobaTemplate;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,8 +131,12 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaConstantAdapter();
 			}
 			@Override
-			public Adapter caseMobaPropertiesProvider(MobaPropertiesProvider object) {
-				return createMobaPropertiesProviderAdapter();
+			public Adapter caseMobaConstantValue(MobaConstantValue object) {
+				return createMobaConstantValueAdapter();
+			}
+			@Override
+			public Adapter caseMobaPropertiesAble(MobaPropertiesAble object) {
+				return createMobaPropertiesAbleAdapter();
 			}
 			@Override
 			public Adapter caseMobaProperty(MobaProperty object) {
@@ -152,8 +195,8 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaDtoAttributeAdapter();
 			}
 			@Override
-			public Adapter caseMobaMultiplicityProvider(MobaMultiplicityProvider object) {
-				return createMobaMultiplicityProviderAdapter();
+			public Adapter caseMobaMultiplicityAble(MobaMultiplicityAble object) {
+				return createMobaMultiplicityAbleAdapter();
 			}
 			@Override
 			public Adapter caseMobaDtoReference(MobaDtoReference object) {
@@ -182,6 +225,70 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMobaMuliplicity(MobaMuliplicity object) {
 				return createMobaMuliplicityAdapter();
+			}
+			@Override
+			public Adapter caseMobaSettingsFeature(MobaSettingsFeature object) {
+				return createMobaSettingsFeatureAdapter();
+			}
+			@Override
+			public Adapter caseMobaSettingsAttribute(MobaSettingsAttribute object) {
+				return createMobaSettingsAttributeAdapter();
+			}
+			@Override
+			public Adapter caseMobaConstraintable(MobaConstraintable object) {
+				return createMobaConstraintableAdapter();
+			}
+			@Override
+			public Adapter caseMobaConstraint(MobaConstraint object) {
+				return createMobaConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaRegexpConstraint(MobaRegexpConstraint object) {
+				return createMobaRegexpConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaMinConstraint(MobaMinConstraint object) {
+				return createMobaMinConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaMaxConstraint(MobaMaxConstraint object) {
+				return createMobaMaxConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaFutureConstraint(MobaFutureConstraint object) {
+				return createMobaFutureConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaPastConstraint(MobaPastConstraint object) {
+				return createMobaPastConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaNotNullConstraint(MobaNotNullConstraint object) {
+				return createMobaNotNullConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaNullConstraint(MobaNullConstraint object) {
+				return createMobaNullConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaMinLengthConstraint(MobaMinLengthConstraint object) {
+				return createMobaMinLengthConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaMaxLengthConstraint(MobaMaxLengthConstraint object) {
+				return createMobaMaxLengthConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaDigitsConstraint(MobaDigitsConstraint object) {
+				return createMobaDigitsConstraintAdapter();
+			}
+			@Override
+			public Adapter caseMobaEnum(MobaEnum object) {
+				return createMobaEnumAdapter();
+			}
+			@Override
+			public Adapter caseMobaEnumLiteral(MobaEnumLiteral object) {
+				return createMobaEnumLiteralAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -288,16 +395,30 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPropertiesProvider <em>Properties Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaConstantValue <em>Constant Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaPropertiesProvider
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValue
 	 * @generated
 	 */
-	public Adapter createMobaPropertiesProviderAdapter() {
+	public Adapter createMobaConstantValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble <em>Properties Able</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaPropertiesAble
+	 * @generated
+	 */
+	public Adapter createMobaPropertiesAbleAdapter() {
 		return null;
 	}
 
@@ -498,16 +619,16 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityProvider <em>Multiplicity Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityAble <em>Multiplicity Able</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaMultiplicityProvider
+	 * @see org.mobadsl.semantic.model.moba.MobaMultiplicityAble
 	 * @generated
 	 */
-	public Adapter createMobaMultiplicityProviderAdapter() {
+	public Adapter createMobaMultiplicityAbleAdapter() {
 		return null;
 	}
 
@@ -606,6 +727,230 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaMuliplicityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaSettingsFeature <em>Settings Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaSettingsFeature
+	 * @generated
+	 */
+	public Adapter createMobaSettingsFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute <em>Settings Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaSettingsAttribute
+	 * @generated
+	 */
+	public Adapter createMobaSettingsAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaConstraintable <em>Constraintable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstraintable
+	 * @generated
+	 */
+	public Adapter createMobaConstraintableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaConstraint <em>Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstraint
+	 * @generated
+	 */
+	public Adapter createMobaConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRegexpConstraint <em>Regexp Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaRegexpConstraint
+	 * @generated
+	 */
+	public Adapter createMobaRegexpConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaMinConstraint <em>Min Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaMinConstraint
+	 * @generated
+	 */
+	public Adapter createMobaMinConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaMaxConstraint <em>Max Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaMaxConstraint
+	 * @generated
+	 */
+	public Adapter createMobaMaxConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaFutureConstraint <em>Future Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaFutureConstraint
+	 * @generated
+	 */
+	public Adapter createMobaFutureConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPastConstraint <em>Past Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaPastConstraint
+	 * @generated
+	 */
+	public Adapter createMobaPastConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaNotNullConstraint <em>Not Null Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaNotNullConstraint
+	 * @generated
+	 */
+	public Adapter createMobaNotNullConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaNullConstraint <em>Null Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaNullConstraint
+	 * @generated
+	 */
+	public Adapter createMobaNullConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaMinLengthConstraint <em>Min Length Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaMinLengthConstraint
+	 * @generated
+	 */
+	public Adapter createMobaMinLengthConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint <em>Max Length Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint
+	 * @generated
+	 */
+	public Adapter createMobaMaxLengthConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDigitsConstraint <em>Digits Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaDigitsConstraint
+	 * @generated
+	 */
+	public Adapter createMobaDigitsConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEnum <em>Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaEnum
+	 * @generated
+	 */
+	public Adapter createMobaEnumAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral <em>Enum Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaEnumLiteral
+	 * @generated
+	 */
+	public Adapter createMobaEnumLiteralAdapter() {
 		return null;
 	}
 

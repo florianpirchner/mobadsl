@@ -14,23 +14,18 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures
- * <em>Features</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}
- * </li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto()
  * @model
  * @generated
  */
-public interface MobaDto extends MobaData, MobaPropertiesProvider {
+public interface MobaDto extends MobaData, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
 	 * begin-user-doc -->
@@ -49,12 +44,9 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -78,13 +70,10 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	MobaDto getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
@@ -98,7 +87,6 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Cache</em>' containment reference.
 	 * @see #setCache(MobaCache)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Cache()
@@ -108,12 +96,9 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	MobaCache getCache();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}'
-	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Cache</em>' containment reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cache</em>' containment reference.
 	 * @see #getCache()
 	 * @generated
 	 */
@@ -145,7 +130,6 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Index</em>' containment reference.
 	 * @see #setIndex(MobaDtoIndex)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Index()
@@ -155,12 +139,9 @@ public interface MobaDto extends MobaData, MobaPropertiesProvider {
 	MobaDtoIndex getIndex();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}'
-	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Index</em>' containment reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Index</em>' containment reference.
 	 * @see #getIndex()
 	 * @generated
 	 */

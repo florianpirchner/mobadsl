@@ -3,7 +3,6 @@
 package org.mobadsl.semantic.model.moba.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaService;
 

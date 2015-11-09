@@ -2,7 +2,10 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -13,10 +16,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaConstraint;
+import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.RecursionException;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -28,6 +36,9 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  * <li>
  * {@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getProperties
  * <em>Properties</em>}</li>
+ * <li>
+ * {@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getConstraints
+ * <em>Constraints</em>}</li>
  * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getName
  * <em>Name</em>}</li>
  * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isPrimitive
@@ -40,8 +51,12 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  * {@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatString
  * <em>Date Format String</em>}</li>
  * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatConstant
- * <em>Date Format Constant</em>}</li>
+ * {@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatConst
+ * <em>Date Format Const</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getSuperType
+ * <em>Super Type</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getEnumAST
+ * <em>Enum AST</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +71,16 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected EList<MobaProperty> properties;
+
+	/**
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}'
+	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getConstraints()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MobaConstraint> constraints;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -160,15 +185,35 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	protected String dateFormatString = DATE_FORMAT_STRING_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDateFormatConstant()
-	 * <em>Date Format Constant</em>}' reference. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getDateFormatConst()
+	 * <em>Date Format Const</em>}' reference. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * 
-	 * @see #getDateFormatConstant()
+	 * @see #getDateFormatConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaConstant dateFormatConstant;
+	protected MobaConstant dateFormatConst;
+
+	/**
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
+	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getSuperType()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaDataType superType;
+
+	/**
+	 * The cached value of the '{@link #getEnumAST() <em>Enum AST</em>}'
+	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getEnumAST()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaEnum enumAST;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -200,6 +245,19 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 					MobaPackage.MOBA_DATA_TYPE__PROPERTIES);
 		}
 		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public EList<MobaConstraint> getConstraints() {
+		if (constraints == null) {
+			constraints = new EObjectContainmentEList<MobaConstraint>(MobaConstraint.class, this,
+					MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS);
+		}
+		return constraints;
 	}
 
 	/**
@@ -314,18 +372,17 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * 
 	 * @generated
 	 */
-	public MobaConstant getDateFormatConstant() {
-		if (dateFormatConstant != null && dateFormatConstant.eIsProxy()) {
-			InternalEObject oldDateFormatConstant = (InternalEObject) dateFormatConstant;
-			dateFormatConstant = (MobaConstant) eResolveProxy(oldDateFormatConstant);
-			if (dateFormatConstant != oldDateFormatConstant) {
+	public MobaConstant getDateFormatConst() {
+		if (dateFormatConst != null && dateFormatConst.eIsProxy()) {
+			InternalEObject oldDateFormatConst = (InternalEObject) dateFormatConst;
+			dateFormatConst = (MobaConstant) eResolveProxy(oldDateFormatConst);
+			if (dateFormatConst != oldDateFormatConst) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT, oldDateFormatConstant,
-							dateFormatConstant));
+							MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST, oldDateFormatConst, dateFormatConst));
 			}
 		}
-		return dateFormatConstant;
+		return dateFormatConst;
 	}
 
 	/**
@@ -333,8 +390,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * 
 	 * @generated
 	 */
-	public MobaConstant basicGetDateFormatConstant() {
-		return dateFormatConstant;
+	public MobaConstant basicGetDateFormatConst() {
+		return dateFormatConst;
 	}
 
 	/**
@@ -342,12 +399,102 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * 
 	 * @generated
 	 */
-	public void setDateFormatConstant(MobaConstant newDateFormatConstant) {
-		MobaConstant oldDateFormatConstant = dateFormatConstant;
-		dateFormatConstant = newDateFormatConstant;
+	public void setDateFormatConst(MobaConstant newDateFormatConst) {
+		MobaConstant oldDateFormatConst = dateFormatConst;
+		dateFormatConst = newDateFormatConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT,
-					oldDateFormatConstant, dateFormatConstant));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST,
+					oldDateFormatConst, dateFormatConst));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public MobaDataType getSuperType() {
+		if (superType != null && superType.eIsProxy()) {
+			InternalEObject oldSuperType = (InternalEObject) superType;
+			superType = (MobaDataType) eResolveProxy(oldSuperType);
+			if (superType != oldSuperType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE,
+							oldSuperType, superType));
+			}
+		}
+		return superType;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public MobaDataType basicGetSuperType() {
+		return superType;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public void setSuperType(MobaDataType newSuperType) {
+		MobaDataType oldSuperType = superType;
+		superType = newSuperType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE, oldSuperType,
+					superType));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public MobaEnum getEnumAST() {
+		return enumAST;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public NotificationChain basicSetEnumAST(MobaEnum newEnumAST, NotificationChain msgs) {
+		MobaEnum oldEnumAST = enumAST;
+		enumAST = newEnumAST;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					MobaPackage.MOBA_DATA_TYPE__ENUM_AST, oldEnumAST, newEnumAST);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public void setEnumAST(MobaEnum newEnumAST) {
+		if (newEnumAST != enumAST) {
+			NotificationChain msgs = null;
+			if (enumAST != null)
+				msgs = ((InternalEObject) enumAST).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_DATA_TYPE__ENUM_AST, null, msgs);
+			if (newEnumAST != null)
+				msgs = ((InternalEObject) newEnumAST).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_DATA_TYPE__ENUM_AST, null, msgs);
+			msgs = basicSetEnumAST(newEnumAST, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__ENUM_AST, newEnumAST,
+					newEnumAST));
 	}
 
 	/**
@@ -360,6 +507,10 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		switch (featureID) {
 		case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
 			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
+		case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
+			return ((InternalEList<?>) getConstraints()).basicRemove(otherEnd, msgs);
+		case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+			return basicSetEnumAST(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -374,6 +525,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		switch (featureID) {
 		case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
 			return getProperties();
+		case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
+			return getConstraints();
 		case MobaPackage.MOBA_DATA_TYPE__NAME:
 			return getName();
 		case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
@@ -384,10 +537,16 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			return isDate();
 		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 			return getDateFormatString();
-		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT:
+		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
 			if (resolve)
-				return getDateFormatConstant();
-			return basicGetDateFormatConstant();
+				return getDateFormatConst();
+			return basicGetDateFormatConst();
+		case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
+			if (resolve)
+				return getSuperType();
+			return basicGetSuperType();
+		case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+			return getEnumAST();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -405,6 +564,10 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			getProperties().clear();
 			getProperties().addAll((Collection<? extends MobaProperty>) newValue);
 			return;
+		case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
+			getConstraints().clear();
+			getConstraints().addAll((Collection<? extends MobaConstraint>) newValue);
+			return;
 		case MobaPackage.MOBA_DATA_TYPE__NAME:
 			setName((String) newValue);
 			return;
@@ -420,8 +583,14 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 			setDateFormatString((String) newValue);
 			return;
-		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT:
-			setDateFormatConstant((MobaConstant) newValue);
+		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
+			setDateFormatConst((MobaConstant) newValue);
+			return;
+		case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
+			setSuperType((MobaDataType) newValue);
+			return;
+		case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+			setEnumAST((MobaEnum) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -438,6 +607,9 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
 			getProperties().clear();
 			return;
+		case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
+			getConstraints().clear();
+			return;
 		case MobaPackage.MOBA_DATA_TYPE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -453,8 +625,14 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 			setDateFormatString(DATE_FORMAT_STRING_EDEFAULT);
 			return;
-		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT:
-			setDateFormatConstant((MobaConstant) null);
+		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
+			setDateFormatConst((MobaConstant) null);
+			return;
+		case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
+			setSuperType((MobaDataType) null);
+			return;
+		case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+			setEnumAST((MobaEnum) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -470,6 +648,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		switch (featureID) {
 		case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
 			return properties != null && !properties.isEmpty();
+		case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
+			return constraints != null && !constraints.isEmpty();
 		case MobaPackage.MOBA_DATA_TYPE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
@@ -481,8 +661,12 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 			return DATE_FORMAT_STRING_EDEFAULT == null ? dateFormatString != null
 					: !DATE_FORMAT_STRING_EDEFAULT.equals(dateFormatString);
-		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONSTANT:
-			return dateFormatConstant != null;
+		case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
+			return dateFormatConst != null;
+		case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
+			return superType != null;
+		case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+			return enumAST != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -494,10 +678,18 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (derivedFeatureID) {
 			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
-				return MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES;
+				return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == MobaConstraintable.class) {
+			switch (derivedFeatureID) {
+			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
+				return MobaPackage.MOBA_CONSTRAINTABLE__CONSTRAINTS;
 			default:
 				return -1;
 			}
@@ -512,10 +704,18 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (baseFeatureID) {
-			case MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES:
+			case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES:
 				return MobaPackage.MOBA_DATA_TYPE__PROPERTIES;
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == MobaConstraintable.class) {
+			switch (baseFeatureID) {
+			case MobaPackage.MOBA_CONSTRAINTABLE__CONSTRAINTS:
+				return MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS;
 			default:
 				return -1;
 			}
@@ -550,10 +750,58 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 
 	@Override
 	public String getDateFormat() {
-		if (getDateFormatConstant() != null) {
-			return getDateFormatConstant().getValue();
+		if (getDateFormatConst() != null) {
+			return getDateFormatConst().getValue();
 		}
 		return getDateFormatString();
+	}
+
+	@Override
+	public MobaDataType getRootType() {
+		if (getSuperType() == null) {
+			return this;
+		}
+		return getSuperType().getRootType();
+	}
+
+	@Override
+	public boolean isRootType() {
+		return getSuperType() == null;
+	}
+
+	@Override
+	public boolean isEnum() {
+		return getEnumAST() != null;
+	}
+
+	@Override
+	public List<MobaConstraint> getAllConstraints() {
+		List<MobaConstraint> result = new ArrayList<>();
+		getAllSuperTypes().stream().forEach(e -> result.addAll(e.getConstraints()));
+		return result;
+	}
+
+	@Override
+	public List<MobaDataType> getAllSuperTypes() throws RecursionException {
+		List<MobaDataType> result = new ArrayList<>();
+		doGetAllSuperTypes(this, result);
+		return result;
+	}
+
+	private void doGetAllSuperTypes(MobaDataType type, List<MobaDataType> result) {
+
+		MobaDataType superType = type.getSuperType();
+
+		if (superType == null) {
+			return;
+		}
+
+		if (result.contains(superType)) {
+			throw new RecursionException(type, superType);
+		}
+		result.add(superType);
+
+		doGetAllSuperTypes(superType, result);
 	}
 
 } // MobaDataTypeImpl

@@ -4,10 +4,16 @@
 package org.mobadsl.grammar.ui
 
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
+import org.mobadsl.grammar.ui.hover.MobaHoverDocumentationProvider
+import org.eclipse.xtext.documentation.IEObjectDocumentationProvider
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
  */
 @FinalFieldsConstructor
 class MobaUiModule extends AbstractMobaUiModule {
+	
+	def Class<? extends IEObjectDocumentationProvider> bindIEObjectDocumentationProvider() {
+		return MobaHoverDocumentationProvider;
+	}
 }

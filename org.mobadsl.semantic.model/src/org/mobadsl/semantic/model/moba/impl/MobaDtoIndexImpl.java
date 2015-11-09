@@ -5,13 +5,9 @@ package org.mobadsl.semantic.model.moba.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoIndex;
 import org.mobadsl.semantic.model.moba.MobaPackage;

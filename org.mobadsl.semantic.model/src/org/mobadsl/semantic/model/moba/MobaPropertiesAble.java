@@ -3,26 +3,25 @@
 package org.mobadsl.semantic.model.moba;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Properties Provider</b></em>'.
+ * A representation of the model object '<em><b>Properties Able</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaPropertiesProvider#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble#getProperties <em>Properties</em>}</li>
  * </ul>
  *
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesProvider()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesAble()
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface MobaPropertiesProvider extends EObject {
+public interface MobaPropertiesAble extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
 	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaProperty}.
@@ -33,10 +32,10 @@ public interface MobaPropertiesProvider extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' containment reference list.
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesProvider_Properties()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesAble_Properties()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<MobaProperty> getProperties();
 
-} // MobaPropertiesProvider
+} // MobaPropertiesAble

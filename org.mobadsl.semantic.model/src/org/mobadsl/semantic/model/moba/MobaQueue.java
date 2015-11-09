@@ -14,19 +14,16 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getFeatures
- * <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getFeatures <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaQueue()
  * @model
  * @generated
  */
-public interface MobaQueue extends MobaData, MobaPropertiesProvider {
+public interface MobaQueue extends MobaData, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
 	 * begin-user-doc -->
@@ -45,12 +42,9 @@ public interface MobaQueue extends MobaData, MobaPropertiesProvider {
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -74,13 +68,10 @@ public interface MobaQueue extends MobaData, MobaPropertiesProvider {
 	MobaQueue getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */

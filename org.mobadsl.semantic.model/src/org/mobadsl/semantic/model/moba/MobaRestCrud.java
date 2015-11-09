@@ -19,7 +19,7 @@ package org.mobadsl.semantic.model.moba;
  * @model
  * @generated
  */
-public interface MobaRestCrud extends MobaService, MobaPropertiesProvider {
+public interface MobaRestCrud extends MobaService, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

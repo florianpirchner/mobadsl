@@ -6,12 +6,43 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.mobadsl.semantic.model.moba.*;
+import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaCache;
+import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaConstantValue;
+import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoIndex;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaFactory;
+import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
+import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaLowerBound;
+import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
+import org.mobadsl.semantic.model.moba.MobaMinConstraint;
+import org.mobadsl.semantic.model.moba.MobaMuliplicity;
+import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaNullConstraint;
+import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaPayload;
+import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
+import org.mobadsl.semantic.model.moba.MobaPayloadReference;
+import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaQueue;
+import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
+import org.mobadsl.semantic.model.moba.MobaRestCrud;
+import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaTemplate;
+import org.mobadsl.semantic.model.moba.MobaUpperBound;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,6 +93,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_GENERATOR: return createMobaGenerator();
 			case MobaPackage.MOBA_DATA_TYPE: return createMobaDataType();
 			case MobaPackage.MOBA_CONSTANT: return createMobaConstant();
+			case MobaPackage.MOBA_CONSTANT_VALUE: return createMobaConstantValue();
 			case MobaPackage.MOBA_PROPERTY: return createMobaProperty();
 			case MobaPackage.MOBA_SETTINGS: return createMobaSettings();
 			case MobaPackage.MOBA_CACHE: return createMobaCache();
@@ -78,6 +110,19 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_PAYLOAD_REFERENCE: return createMobaPayloadReference();
 			case MobaPackage.MOBA_QUEUE_REFERENCE: return createMobaQueueReference();
 			case MobaPackage.MOBA_MULIPLICITY: return createMobaMuliplicity();
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: return createMobaSettingsAttribute();
+			case MobaPackage.MOBA_REGEXP_CONSTRAINT: return createMobaRegexpConstraint();
+			case MobaPackage.MOBA_MIN_CONSTRAINT: return createMobaMinConstraint();
+			case MobaPackage.MOBA_MAX_CONSTRAINT: return createMobaMaxConstraint();
+			case MobaPackage.MOBA_FUTURE_CONSTRAINT: return createMobaFutureConstraint();
+			case MobaPackage.MOBA_PAST_CONSTRAINT: return createMobaPastConstraint();
+			case MobaPackage.MOBA_NOT_NULL_CONSTRAINT: return createMobaNotNullConstraint();
+			case MobaPackage.MOBA_NULL_CONSTRAINT: return createMobaNullConstraint();
+			case MobaPackage.MOBA_MIN_LENGTH_CONSTRAINT: return createMobaMinLengthConstraint();
+			case MobaPackage.MOBA_MAX_LENGTH_CONSTRAINT: return createMobaMaxLengthConstraint();
+			case MobaPackage.MOBA_DIGITS_CONSTRAINT: return createMobaDigitsConstraint();
+			case MobaPackage.MOBA_ENUM: return createMobaEnum();
+			case MobaPackage.MOBA_ENUM_LITERAL: return createMobaEnumLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -165,6 +210,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaConstant createMobaConstant() {
 		MobaConstantImpl mobaConstant = new MobaConstantImpl();
 		return mobaConstant;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstantValue createMobaConstantValue() {
+		MobaConstantValueImpl mobaConstantValue = new MobaConstantValueImpl();
+		return mobaConstantValue;
 	}
 
 	/**
@@ -325,6 +380,136 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaMuliplicity createMobaMuliplicity() {
 		MobaMuliplicityImpl mobaMuliplicity = new MobaMuliplicityImpl();
 		return mobaMuliplicity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaSettingsAttribute createMobaSettingsAttribute() {
+		MobaSettingsAttributeImpl mobaSettingsAttribute = new MobaSettingsAttributeImpl();
+		return mobaSettingsAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRegexpConstraint createMobaRegexpConstraint() {
+		MobaRegexpConstraintImpl mobaRegexpConstraint = new MobaRegexpConstraintImpl();
+		return mobaRegexpConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaMinConstraint createMobaMinConstraint() {
+		MobaMinConstraintImpl mobaMinConstraint = new MobaMinConstraintImpl();
+		return mobaMinConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaMaxConstraint createMobaMaxConstraint() {
+		MobaMaxConstraintImpl mobaMaxConstraint = new MobaMaxConstraintImpl();
+		return mobaMaxConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaFutureConstraint createMobaFutureConstraint() {
+		MobaFutureConstraintImpl mobaFutureConstraint = new MobaFutureConstraintImpl();
+		return mobaFutureConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaPastConstraint createMobaPastConstraint() {
+		MobaPastConstraintImpl mobaPastConstraint = new MobaPastConstraintImpl();
+		return mobaPastConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaNotNullConstraint createMobaNotNullConstraint() {
+		MobaNotNullConstraintImpl mobaNotNullConstraint = new MobaNotNullConstraintImpl();
+		return mobaNotNullConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaNullConstraint createMobaNullConstraint() {
+		MobaNullConstraintImpl mobaNullConstraint = new MobaNullConstraintImpl();
+		return mobaNullConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaMinLengthConstraint createMobaMinLengthConstraint() {
+		MobaMinLengthConstraintImpl mobaMinLengthConstraint = new MobaMinLengthConstraintImpl();
+		return mobaMinLengthConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaMaxLengthConstraint createMobaMaxLengthConstraint() {
+		MobaMaxLengthConstraintImpl mobaMaxLengthConstraint = new MobaMaxLengthConstraintImpl();
+		return mobaMaxLengthConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaDigitsConstraint createMobaDigitsConstraint() {
+		MobaDigitsConstraintImpl mobaDigitsConstraint = new MobaDigitsConstraintImpl();
+		return mobaDigitsConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaEnum createMobaEnum() {
+		MobaEnumImpl mobaEnum = new MobaEnumImpl();
+		return mobaEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaEnumLiteral createMobaEnumLiteral() {
+		MobaEnumLiteralImpl mobaEnumLiteral = new MobaEnumLiteralImpl();
+		return mobaEnumLiteral;
 	}
 
 	/**

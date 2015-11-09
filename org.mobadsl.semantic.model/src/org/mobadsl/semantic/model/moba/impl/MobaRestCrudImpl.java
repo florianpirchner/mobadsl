@@ -6,19 +6,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaRestCrud;
 
@@ -210,9 +205,9 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_REST_CRUD__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES;
+				case MobaPackage.MOBA_REST_CRUD__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
 				default: return -1;
 			}
 		}
@@ -226,9 +221,9 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES: return MobaPackage.MOBA_REST_CRUD__PROPERTIES;
+				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_REST_CRUD__PROPERTIES;
 				default: return -1;
 			}
 		}

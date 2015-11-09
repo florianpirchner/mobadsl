@@ -6,23 +6,20 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.mobadsl.semantic.model.moba.MobaConstraint;
+import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
-import org.mobadsl.semantic.model.moba.MobaMultiplicityProvider;
+import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesProvider;
+import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 
 /**
@@ -35,6 +32,7 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getMultiplicity <em>Multiplicity</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#isDomainKey <em>Domain Key</em>}</li>
@@ -64,6 +62,16 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	 * @ordered
 	 */
 	protected EList<MobaProperty> properties;
+
+	/**
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstraints()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MobaConstraint> constraints;
 
 	/**
 	 * The default value of the '{@link #isLazy() <em>Lazy</em>}' attribute.
@@ -234,6 +242,18 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MobaConstraint> getConstraints() {
+		if (constraints == null) {
+			constraints = new EObjectContainmentEList<MobaConstraint>(MobaConstraint.class, this, MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS);
+		}
+		return constraints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isLazy() {
 		return lazy;
 	}
@@ -363,6 +383,8 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 				return basicSetMultiplicity(null, msgs);
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES:
 				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS:
+				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -379,6 +401,8 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 				return getMultiplicity();
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES:
 				return getProperties();
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS:
+				return getConstraints();
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__LAZY:
 				return isLazy();
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__TRANSIENT:
@@ -409,6 +433,10 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
+				return;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS:
+				getConstraints().clear();
+				getConstraints().addAll((Collection<? extends MobaConstraint>)newValue);
 				return;
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__LAZY:
 				setLazy((Boolean)newValue);
@@ -443,6 +471,9 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES:
 				getProperties().clear();
 				return;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS:
+				getConstraints().clear();
+				return;
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__LAZY:
 				setLazy(LAZY_EDEFAULT);
 				return;
@@ -474,6 +505,8 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 				return multiplicity != null;
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES:
 				return properties != null && !properties.isEmpty();
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS:
+				return constraints != null && !constraints.isEmpty();
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__LAZY:
 				return lazy != LAZY_EDEFAULT;
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__TRANSIENT:
@@ -495,15 +528,21 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaMultiplicityProvider.class) {
+		if (baseClass == MobaMultiplicityAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_DTO_ATTRIBUTE__MULTIPLICITY: return MobaPackage.MOBA_MULTIPLICITY_PROVIDER__MULTIPLICITY;
+				case MobaPackage.MOBA_DTO_ATTRIBUTE__MULTIPLICITY: return MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY;
 				default: return -1;
 			}
 		}
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES;
+				case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
+				default: return -1;
+			}
+		}
+		if (baseClass == MobaConstraintable.class) {
+			switch (derivedFeatureID) {
+				case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS: return MobaPackage.MOBA_CONSTRAINTABLE__CONSTRAINTS;
 				default: return -1;
 			}
 		}
@@ -517,15 +556,21 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaMultiplicityProvider.class) {
+		if (baseClass == MobaMultiplicityAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_MULTIPLICITY_PROVIDER__MULTIPLICITY: return MobaPackage.MOBA_DTO_ATTRIBUTE__MULTIPLICITY;
+				case MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY: return MobaPackage.MOBA_DTO_ATTRIBUTE__MULTIPLICITY;
 				default: return -1;
 			}
 		}
-		if (baseClass == MobaPropertiesProvider.class) {
+		if (baseClass == MobaPropertiesAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_PROVIDER__PROPERTIES: return MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES;
+				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES;
+				default: return -1;
+			}
+		}
+		if (baseClass == MobaConstraintable.class) {
+			switch (baseFeatureID) {
+				case MobaPackage.MOBA_CONSTRAINTABLE__CONSTRAINTS: return MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS;
 				default: return -1;
 			}
 		}
