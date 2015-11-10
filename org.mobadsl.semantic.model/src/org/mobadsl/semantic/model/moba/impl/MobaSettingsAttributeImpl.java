@@ -605,4 +605,8 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
 } //MobaSettingsAttributeImpl

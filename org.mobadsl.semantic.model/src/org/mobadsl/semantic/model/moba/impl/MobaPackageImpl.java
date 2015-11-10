@@ -861,6 +861,24 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaProperty_Key() {
+		return (EAttribute)mobaPropertyEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaProperty_Value() {
+		return (EAttribute)mobaPropertyEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaData() {
 		return mobaDataEClass;
 	}
@@ -1962,6 +1980,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaPropertyEClass, MOBA_PROPERTY__KEY_CONST);
 		createEAttribute(mobaPropertyEClass, MOBA_PROPERTY__VALUE_STRING);
 		createEReference(mobaPropertyEClass, MOBA_PROPERTY__VALUE_CONST);
+		createEAttribute(mobaPropertyEClass, MOBA_PROPERTY__KEY);
+		createEAttribute(mobaPropertyEClass, MOBA_PROPERTY__VALUE);
 
 		mobaDataEClass = createEClass(MOBA_DATA);
 
@@ -2260,6 +2280,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaProperty_KeyConst(), this.getMobaConstant(), null, "keyConst", null, 0, 1, MobaProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaProperty_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaProperty_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaProperty_Key(), ecorePackage.getEString(), "key", null, 0, 1, MobaProperty.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, MobaProperty.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaDataEClass, MobaData.class, "MobaData", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

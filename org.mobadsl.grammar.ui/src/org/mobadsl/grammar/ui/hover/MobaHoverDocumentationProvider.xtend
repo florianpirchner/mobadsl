@@ -56,7 +56,7 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	}
 
 	def String getToPropertiesDocu(MobaPropertiesAble type) {
-		val allProps = type.allProperties
+		val allProps = type.genProperties
 		if(allProps.empty) {
 			return ""
 		}

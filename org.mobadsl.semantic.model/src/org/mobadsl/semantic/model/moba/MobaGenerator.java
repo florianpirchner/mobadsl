@@ -14,12 +14,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName
- * <em>Name</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getFeatures
- * <em>Features</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#isActive
- * <em>Active</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator()
@@ -45,12 +42,9 @@ public interface MobaGenerator extends MobaApplicationFeature {
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaGenerator#getName
-	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */

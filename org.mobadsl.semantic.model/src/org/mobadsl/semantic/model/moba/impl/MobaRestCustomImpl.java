@@ -252,4 +252,8 @@ public class MobaRestCustomImpl extends MobaServiceImpl implements MobaRestCusto
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
 } //MobaRestCustomImpl

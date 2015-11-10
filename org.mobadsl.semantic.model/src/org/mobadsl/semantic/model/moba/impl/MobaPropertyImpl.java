@@ -22,6 +22,8 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getKeyConst <em>Key Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValueConst <em>Value Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getKey <em>Key</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +82,26 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 	 * @ordered
 	 */
 	protected MobaConstant valueConst;
+
+	/**
+	 * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String KEY_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALUE_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -223,6 +245,10 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 			case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
 				if (resolve) return getValueConst();
 				return basicGetValueConst();
+			case MobaPackage.MOBA_PROPERTY__KEY:
+				return getKey();
+			case MobaPackage.MOBA_PROPERTY__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -288,6 +314,10 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 				return VALUE_STRING_EDEFAULT == null ? valueString != null : !VALUE_STRING_EDEFAULT.equals(valueString);
 			case MobaPackage.MOBA_PROPERTY__VALUE_CONST:
 				return valueConst != null;
+			case MobaPackage.MOBA_PROPERTY__KEY:
+				return KEY_EDEFAULT == null ? getKey() != null : !KEY_EDEFAULT.equals(getKey());
+			case MobaPackage.MOBA_PROPERTY__VALUE:
+				return VALUE_EDEFAULT == null ? getValue() != null : !VALUE_EDEFAULT.equals(getValue());
 		}
 		return super.eIsSet(featureID);
 	}

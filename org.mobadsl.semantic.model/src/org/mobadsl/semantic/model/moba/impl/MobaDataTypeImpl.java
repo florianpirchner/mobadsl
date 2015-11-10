@@ -909,4 +909,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return MobaUtil.getGenFeatures(getAllProperties(), MobaPackage.Literals.MOBA_PROPERTY__KEY);
+	}
 } // MobaDataTypeImpl

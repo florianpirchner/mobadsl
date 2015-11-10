@@ -100,7 +100,7 @@ public class MobaHoverDocumentationProvider extends MultiLineCommentDocumentatio
   }
   
   public String getToPropertiesDocu(final MobaPropertiesAble type) {
-    final List<MobaProperty> allProps = type.getAllProperties();
+    final List<MobaProperty> allProps = type.getGenProperties();
     boolean _isEmpty = allProps.isEmpty();
     if (_isEmpty) {
       return "";

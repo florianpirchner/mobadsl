@@ -605,4 +605,9 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
+	
 } //MobaDtoAttributeImpl

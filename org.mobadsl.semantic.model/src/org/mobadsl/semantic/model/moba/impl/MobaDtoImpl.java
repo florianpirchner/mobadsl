@@ -527,4 +527,8 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 				MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return MobaUtil.getGenFeatures(getAllProperties(), MobaPackage.Literals.MOBA_PROPERTY__KEY);
+	}
 } // MobaDtoImpl

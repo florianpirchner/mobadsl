@@ -659,4 +659,8 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
 } //MobaPayloadAttributeImpl

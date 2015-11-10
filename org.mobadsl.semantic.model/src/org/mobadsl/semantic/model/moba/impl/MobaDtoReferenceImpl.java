@@ -501,4 +501,8 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
 } //MobaDtoReferenceImpl

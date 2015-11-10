@@ -501,4 +501,8 @@ public class MobaQueueReferenceImpl extends MobaQueueFeatureImpl implements Moba
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
 } //MobaQueueReferenceImpl

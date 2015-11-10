@@ -573,13 +573,31 @@ public interface MobaPackage extends EPackage {
 	int MOBA_PROPERTY__VALUE_CONST = 3;
 
 	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROPERTY__KEY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROPERTY__VALUE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_PROPERTY_FEATURE_COUNT = 4;
+	int MOBA_PROPERTY_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataImpl <em>Data</em>}' class.
@@ -2708,6 +2726,28 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaProperty_ValueConst();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaProperty#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProperty#getKey()
+	 * @see #getMobaProperty()
+	 * @generated
+	 */
+	EAttribute getMobaProperty_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaProperty#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProperty#getValue()
+	 * @see #getMobaProperty()
+	 * @generated
+	 */
+	EAttribute getMobaProperty_Value();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4295,6 +4335,22 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_PROPERTY__VALUE_CONST = eINSTANCE.getMobaProperty_ValueConst();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_PROPERTY__KEY = eINSTANCE.getMobaProperty_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_PROPERTY__VALUE = eINSTANCE.getMobaProperty_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataImpl <em>Data</em>}' class.

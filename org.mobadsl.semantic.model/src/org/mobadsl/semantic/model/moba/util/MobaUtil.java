@@ -124,8 +124,8 @@ public class MobaUtil {
 			// if there is a more special feature in the result, then remove the
 			// current one
 			int j = indexOfFirstOccurence(result, feature, nameAtt);
-			if (j != i) {
-				allFeatures.add(feature);
+			if (j >= 0 && j != i) {
+				toBeRemoved.add(feature);
 			}
 		}
 
@@ -138,7 +138,7 @@ public class MobaUtil {
 		// get the value of the feature to compare
 		Object featureValue = feature.eGet(valueAtt);
 		// find the first feature with a matching value
-		T firstFeature = result.stream().findFirst().filter(e -> e.eGet(valueAtt).equals(featureValue)).orElse(null);
+		T firstFeature = result.stream().filter(e -> e.eGet(valueAtt).equals(featureValue)).findFirst().orElse(null);
 		// return the index of the first feature
 		return result.indexOf(firstFeature);
 	}

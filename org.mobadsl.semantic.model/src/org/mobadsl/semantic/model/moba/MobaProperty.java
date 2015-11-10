@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKeyConst <em>Key Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValueConst <em>Value Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getKey <em>Key</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaProperty#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProperty()

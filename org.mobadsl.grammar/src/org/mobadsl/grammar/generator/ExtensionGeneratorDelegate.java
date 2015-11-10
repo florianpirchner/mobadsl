@@ -1,9 +1,10 @@
 package org.mobadsl.grammar.generator;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.runtime.CoreException;
@@ -43,29 +44,39 @@ public class ExtensionGeneratorDelegate {
 	private Injector injector;
 
 	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context, List<String> generatorIds) {
-		for (IGeneratorDelegate hook : readExtentions(languageInfo.getLanguageName(), generatorIds)) {
-			hook.generate(input, fsa, context);
+		Map<String, IGeneratorDelegate> generators = readExtentions(languageInfo.getLanguageName(), generatorIds);
+		for (String id : generatorIds) {
+			if (generators.containsKey(id)) {
+				generators.get(id).generate(input, fsa, context);
+			}
 		}
 	}
 
 	public void beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context,
 			List<String> generatorIds) {
-		for (IGeneratorDelegate hook : readExtentions(languageInfo.getLanguageName(), generatorIds)) {
-			hook.beforeGenerate(input, fsa, context);
+		Map<String, IGeneratorDelegate> generators = readExtentions(languageInfo.getLanguageName(), generatorIds);
+		for (String id : generatorIds) {
+			if (generators.containsKey(id)) {
+				generators.get(id).beforeGenerate(input, fsa, context);
+			}
 		}
 	}
 
 	public void afterGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context,
 			List<String> generatorIds) {
-		for (IGeneratorDelegate hook : readExtentions(languageInfo.getLanguageName(), generatorIds)) {
-			hook.afterGenerate(input, fsa, context);
+		Map<String, IGeneratorDelegate> generators = readExtentions(languageInfo.getLanguageName(), generatorIds);
+		for (String id : generatorIds) {
+			if (generators.containsKey(id)) {
+				generators.get(id).afterGenerate(input, fsa, context);
+			}
 		}
 	}
 
 	public Set<OutputConfiguration> getOutputConfigurations() {
 		Set<OutputConfiguration> result = new HashSet<OutputConfiguration>();
-		for (IGeneratorDelegate hook : readExtentions(languageInfo.getLanguageName(), null)) {
-			result.addAll(hook.getOutputConfigurations());
+		for (Map.Entry<String, IGeneratorDelegate> entry : readExtentions(languageInfo.getLanguageName(), null)
+				.entrySet()) {
+			result.addAll(entry.getValue().getOutputConfigurations());
 		}
 		return result;
 	}
@@ -78,20 +89,20 @@ public class ExtensionGeneratorDelegate {
 	 * @param generatorIds
 	 * @return
 	 */
-	private List<IGeneratorDelegate> readExtentions(String grammarName, List<String> generatorIds) {
+	private Map<String, IGeneratorDelegate> readExtentions(String grammarName, List<String> generatorIds) {
 		IExtensionRegistry registry = Platform.getExtensionRegistry();
 		IExtensionPoint point = registry.getExtensionPoint("org.mobadsl.grammar", INFERRER_HOOK_EXTPT);
 		if (point == null) {
-			return Collections.emptyList();
+			return Collections.emptyMap();
 		}
 
-		List<IGeneratorDelegate> delegates = new ArrayList<IGeneratorDelegate>(1);
+		Map<String, IGeneratorDelegate> delegates = new HashMap<>();
 		IExtension[] extensions = point.getExtensions();
 		for (int i = 0; i < extensions.length; i++) {
 			IConfigurationElement[] elements = extensions[i].getConfigurationElements();
 			for (int j = 0; j < elements.length; j++) {
+				String id = elements[j].getAttribute(ATTR_ID);
 				if (generatorIds != null && !generatorIds.isEmpty()) {
-					String id = elements[j].getAttribute(ATTR_ID);
 					if (!generatorIds.contains(id)) {
 						continue;
 					}
@@ -102,7 +113,7 @@ public class ExtensionGeneratorDelegate {
 						IGeneratorDelegate delegate = (IGeneratorDelegate) elements[j]
 								.createExecutableExtension(ATTR_GENERATORHOOK);
 						injector.injectMembers(delegate);
-						delegates.add(delegate);
+						delegates.put(id, delegate);
 					} catch (CoreException e) {
 						LOGGER.error("{}", e);
 					}

@@ -15,8 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble#getProperties
- * <em>Properties</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble#getProperties <em>Properties</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesAble()
@@ -25,18 +24,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MobaPropertiesAble extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Properties</b></em>' containment
-	 * reference list. The list contents are of type
-	 * {@link org.mobadsl.semantic.model.moba.MobaProperty}. <!-- begin-user-doc
+	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaProperty}.
+	 * <!-- begin-user-doc
 	 * -->
 	 * <p>
 	 * If the meaning of the '<em>Properties</em>' containment reference list
 	 * isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
-	 * @return the value of the '<em>Properties</em>' containment reference
-	 *         list.
+	 * @return the value of the '<em>Properties</em>' containment reference list.
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesAble_Properties()
 	 * @model containment="true"
 	 * @generated
@@ -50,5 +47,18 @@ public interface MobaPropertiesAble extends EObject {
 	 * @return
 	 */
 	List<MobaProperty> getAllProperties();
+	
+	/**
+	 * Returns the generator specific properties for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed properties are replaces with
+	 * their new representation. For instance, if the feature Property#key is defined in
+	 * superType and in this instance, then the Property from this instance
+	 * will be put at the original index from the equal Property in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaProperty> getGenProperties();
 
 } // MobaPropertiesAble

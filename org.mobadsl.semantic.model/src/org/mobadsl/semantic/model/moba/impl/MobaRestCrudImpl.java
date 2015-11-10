@@ -252,4 +252,8 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 		return getProperties();
 	}
 
+	@Override
+	public List<MobaProperty> getGenProperties() {
+		return getProperties();
+	}
 } //MobaRestCrudImpl
