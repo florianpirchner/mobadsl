@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.mobadsl.semantic.model.moba.MobaDto;
-import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaBean;
+import org.mobadsl.semantic.model.moba.MobaBeanReference;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPackage;
@@ -29,17 +29,17 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getMultiplicity <em>Multiplicity</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getProperties <em>Properties</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isCascading <em>Cascading</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isLazy <em>Lazy</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isTransient <em>Transient</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl#getMultiplicity <em>Multiplicity</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl#isCascading <em>Cascading</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl#isLazy <em>Lazy</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl#isTransient <em>Transient</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoReference {
+public class MobaBeanReferenceImpl extends MobaBeanFeatureImpl implements MobaBeanReference {
 	/**
 	 * The cached value of the '{@link #getMultiplicity() <em>Multiplicity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -128,14 +128,14 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaDto type;
+	protected MobaBean type;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaDtoReferenceImpl() {
+	protected MobaBeanReferenceImpl() {
 		super();
 	}
 
@@ -146,7 +146,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MobaPackage.Literals.MOBA_DTO_REFERENCE;
+		return MobaPackage.Literals.MOBA_BEAN_REFERENCE;
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		MobaMuliplicity oldMultiplicity = multiplicity;
 		multiplicity = newMultiplicity;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY, oldMultiplicity, newMultiplicity);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY, oldMultiplicity, newMultiplicity);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -182,14 +182,14 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		if (newMultiplicity != multiplicity) {
 			NotificationChain msgs = null;
 			if (multiplicity != null)
-				msgs = ((InternalEObject)multiplicity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY, null, msgs);
+				msgs = ((InternalEObject)multiplicity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY, null, msgs);
 			if (newMultiplicity != null)
-				msgs = ((InternalEObject)newMultiplicity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY, null, msgs);
+				msgs = ((InternalEObject)newMultiplicity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY, null, msgs);
 			msgs = basicSetMultiplicity(newMultiplicity, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY, newMultiplicity, newMultiplicity));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY, newMultiplicity, newMultiplicity));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 */
 	public EList<MobaProperty> getProperties() {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES);
+			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES);
 		}
 		return properties;
 	}
@@ -222,7 +222,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		boolean oldCascading = cascading;
 		cascading = newCascading;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__CASCADING, oldCascading, cascading));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_BEAN_REFERENCE__CASCADING, oldCascading, cascading));
 	}
 
 	/**
@@ -243,7 +243,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		boolean oldLazy = lazy;
 		lazy = newLazy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__LAZY, oldLazy, lazy));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_BEAN_REFERENCE__LAZY, oldLazy, lazy));
 	}
 
 	/**
@@ -264,7 +264,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		boolean oldTransient = transient_;
 		transient_ = newTransient;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__TRANSIENT, oldTransient, transient_));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_BEAN_REFERENCE__TRANSIENT, oldTransient, transient_));
 	}
 
 	/**
@@ -272,13 +272,13 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDto getType() {
+	public MobaBean getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (MobaDto)eResolveProxy(oldType);
+			type = (MobaBean)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_DTO_REFERENCE__TYPE, oldType, type));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_BEAN_REFERENCE__TYPE, oldType, type));
 			}
 		}
 		return type;
@@ -289,7 +289,7 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDto basicGetType() {
+	public MobaBean basicGetType() {
 		return type;
 	}
 
@@ -298,11 +298,11 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(MobaDto newType) {
-		MobaDto oldType = type;
+	public void setType(MobaBean newType) {
+		MobaBean oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_BEAN_REFERENCE__TYPE, oldType, type));
 	}
 
 	/**
@@ -313,9 +313,9 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY:
 				return basicSetMultiplicity(null, msgs);
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
+			case MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES:
 				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -329,17 +329,17 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY:
 				return getMultiplicity();
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
+			case MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES:
 				return getProperties();
-			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
+			case MobaPackage.MOBA_BEAN_REFERENCE__CASCADING:
 				return isCascading();
-			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__LAZY:
 				return isLazy();
-			case MobaPackage.MOBA_DTO_REFERENCE__TRANSIENT:
+			case MobaPackage.MOBA_BEAN_REFERENCE__TRANSIENT:
 				return isTransient();
-			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
+			case MobaPackage.MOBA_BEAN_REFERENCE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
 		}
@@ -355,24 +355,24 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY:
 				setMultiplicity((MobaMuliplicity)newValue);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
+			case MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
+			case MobaPackage.MOBA_BEAN_REFERENCE__CASCADING:
 				setCascading((Boolean)newValue);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__LAZY:
 				setLazy((Boolean)newValue);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__TRANSIENT:
+			case MobaPackage.MOBA_BEAN_REFERENCE__TRANSIENT:
 				setTransient((Boolean)newValue);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
-				setType((MobaDto)newValue);
+			case MobaPackage.MOBA_BEAN_REFERENCE__TYPE:
+				setType((MobaBean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -386,23 +386,23 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY:
 				setMultiplicity((MobaMuliplicity)null);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
+			case MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES:
 				getProperties().clear();
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
+			case MobaPackage.MOBA_BEAN_REFERENCE__CASCADING:
 				setCascading(CASCADING_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__LAZY:
 				setLazy(LAZY_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__TRANSIENT:
+			case MobaPackage.MOBA_BEAN_REFERENCE__TRANSIENT:
 				setTransient(TRANSIENT_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
-				setType((MobaDto)null);
+			case MobaPackage.MOBA_BEAN_REFERENCE__TYPE:
+				setType((MobaBean)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -416,17 +416,17 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY:
 				return multiplicity != null;
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
+			case MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES:
 				return properties != null && !properties.isEmpty();
-			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
+			case MobaPackage.MOBA_BEAN_REFERENCE__CASCADING:
 				return cascading != CASCADING_EDEFAULT;
-			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
+			case MobaPackage.MOBA_BEAN_REFERENCE__LAZY:
 				return lazy != LAZY_EDEFAULT;
-			case MobaPackage.MOBA_DTO_REFERENCE__TRANSIENT:
+			case MobaPackage.MOBA_BEAN_REFERENCE__TRANSIENT:
 				return transient_ != TRANSIENT_EDEFAULT;
-			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
+			case MobaPackage.MOBA_BEAN_REFERENCE__TYPE:
 				return type != null;
 		}
 		return super.eIsSet(featureID);
@@ -441,13 +441,13 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == MobaMultiplicityAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY: return MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY;
+				case MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY: return MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY;
 				default: return -1;
 			}
 		}
 		if (baseClass == MobaPropertiesAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
+				case MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
 				default: return -1;
 			}
 		}
@@ -463,13 +463,13 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == MobaMultiplicityAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY: return MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY;
+				case MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY: return MobaPackage.MOBA_BEAN_REFERENCE__MULTIPLICITY;
 				default: return -1;
 			}
 		}
 		if (baseClass == MobaPropertiesAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES;
+				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_BEAN_REFERENCE__PROPERTIES;
 				default: return -1;
 			}
 		}

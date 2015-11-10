@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaBean;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
@@ -365,7 +365,7 @@ public class MobaPayloadImpl extends MobaDataImpl implements MobaPayload {
 		return MobaUtil.getAllFeatures(types, clazz, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES);
 	}
 
-	protected <T extends EObject> List<T> collectGen(MobaDto instance, Class<T> clazz) {
+	protected <T extends EObject> List<T> collectGen(MobaBean instance, Class<T> clazz) {
 		return MobaUtil.getGenFeatures(collectAll(this, clazz), MobaPackage.Literals.MOBA_FEATURE__NAME);
 	}
 

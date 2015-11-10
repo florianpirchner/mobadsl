@@ -14,18 +14,18 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures <em>Features</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBean#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBean#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBean#getCache <em>Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBean#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBean#getIndex <em>Index</em>}</li>
  * </ul>
  *
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBean()
  * @model
  * @generated
  */
-public interface MobaDto extends MobaData, MobaPropertiesAble {
+public interface MobaBean extends MobaData, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
 	 * begin-user-doc -->
@@ -44,7 +44,7 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBean#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
@@ -62,22 +62,22 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * <!-- end-user-doc -->
 	 * 
 	 * @return the value of the '<em>Super Type</em>' reference.
-	 * @see #setSuperType(MobaDto)
+	 * @see #setSuperType(MobaBean)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_SuperType()
 	 * @model
 	 * @generated
 	 */
-	MobaDto getSuperType();
+	MobaBean getSuperType();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBean#getSuperType <em>Super Type</em>}' reference.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
-	void setSuperType(MobaDto value);
+	void setSuperType(MobaBean value);
 
 	/**
 	 * Returns the value of the '<em><b>Cache</b></em>' containment reference.
@@ -89,14 +89,14 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cache</em>' containment reference.
 	 * @see #setCache(MobaCache)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Cache()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBean_Cache()
 	 * @model containment="true"
 	 * @generated
 	 */
 	MobaCache getCache();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}' containment reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBean#getCache <em>Cache</em>}' containment reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cache</em>' containment reference.
 	 * @see #getCache()
@@ -107,7 +107,7 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference
 	 * list. The list contents are of type
-	 * {@link org.mobadsl.semantic.model.moba.MobaDtoFeature}. <!--
+	 * {@link org.mobadsl.semantic.model.moba.MobaBeanFeature}. <!--
 	 * begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Features</em>' containment reference list
@@ -120,7 +120,7 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<MobaDtoFeature> getFeatures();
+	EList<MobaBeanFeature> getFeatures();
 
 	/**
 	 * Returns the value of the '<em><b>Index</b></em>' containment reference.
@@ -131,56 +131,56 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' containment reference.
-	 * @see #setIndex(MobaDtoIndex)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_Index()
+	 * @see #setIndex(MobaBeanIndex)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBean_Index()
 	 * @model containment="true"
 	 * @generated
 	 */
-	MobaDtoIndex getIndex();
+	MobaBeanIndex getIndex();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}' containment reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBean#getIndex <em>Index</em>}' containment reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Index</em>' containment reference.
 	 * @see #getIndex()
 	 * @generated
 	 */
-	void setIndex(MobaDtoIndex value);
+	void setIndex(MobaBeanIndex value);
 
 	/**
 	 * Returns the values for the current instance. Excluding the "super types".
 	 * 
 	 * @return
 	 */
-	List<MobaDtoAttribute> getAttributes();
+	List<MobaBeanAttribute> getAttributes();
 
 	/**
 	 * Returns the values for the current instance. Excluding the "super types".
 	 * 
 	 * @return
 	 */
-	List<MobaDtoReference> getReferences();
+	List<MobaBeanReference> getReferences();
 
 	/**
 	 * Returns the values for the current instance. Including the "super types".
 	 * 
 	 * @return
 	 */
-	List<MobaDtoFeature> getAllFeatures();
+	List<MobaBeanFeature> getAllFeatures();
 
 	/**
 	 * Returns the values for the current instance. Including the "super types".
 	 * 
 	 * @return
 	 */
-	List<MobaDtoAttribute> getAllAttributes();
+	List<MobaBeanAttribute> getAllAttributes();
 
 	/**
 	 * Returns the values for the current instance. Including the "super types".
 	 * 
 	 * @return
 	 */
-	List<MobaDtoReference> getAllReferences();
+	List<MobaBeanReference> getAllReferences();
 
 	/**
 	 * Returns all supertypes for this instance.
@@ -193,7 +193,7 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * @throws RecursionException
 	 *             if a recursion was found
 	 */
-	List<MobaDto> getAllSuperTypes() throws RecursionException;
+	List<MobaBean> getAllSuperTypes() throws RecursionException;
 
 	/**
 	 * Returns the generator specific values for the current instance. Including
@@ -206,7 +206,7 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaDtoFeature> getGenFeatures();
+	List<MobaBeanFeature> getGenFeatures();
 
 	/**
 	 * Returns the generator specific values for the current instance. Including
@@ -219,7 +219,7 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaDtoAttribute> getGenAttributes();
+	List<MobaBeanAttribute> getGenAttributes();
 
 	/**
 	 * Returns the generator specific values for the current instance. Including
@@ -232,6 +232,6 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaDtoReference> getGenReferences();
+	List<MobaBeanReference> getGenReferences();
 
 } // MobaDto

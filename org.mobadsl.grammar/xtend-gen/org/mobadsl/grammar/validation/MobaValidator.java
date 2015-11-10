@@ -19,10 +19,10 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.mobadsl.grammar.validation.AbstractMobaValidator;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaBean;
+import org.mobadsl.semantic.model.moba.MobaBeanFeature;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaDto;
-import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPayload;
@@ -39,46 +39,46 @@ public class MobaValidator extends AbstractMobaValidator {
   public final static String DUPLICATE_NAME = "duplicateName";
   
   @Check
-  public void checkDuplicateFeatureName(final MobaDto dto) {
-    Map<String, MobaDtoFeature> _xifexpression = null;
-    MobaDto _superType = dto.getSuperType();
+  public void checkDuplicateFeatureName(final MobaBean dto) {
+    Map<String, MobaBeanFeature> _xifexpression = null;
+    MobaBean _superType = dto.getSuperType();
     boolean _notEquals = (!Objects.equal(_superType, null));
     if (_notEquals) {
-      Map<String, MobaDtoFeature> _xtrycatchfinallyexpression = null;
+      Map<String, MobaBeanFeature> _xtrycatchfinallyexpression = null;
       try {
-        MobaDto _superType_1 = dto.getSuperType();
-        List<MobaDtoFeature> _allFeatures = _superType_1.getAllFeatures();
-        final Function1<MobaDtoFeature, String> _function = (MobaDtoFeature it) -> {
+        MobaBean _superType_1 = dto.getSuperType();
+        List<MobaBeanFeature> _allFeatures = _superType_1.getAllFeatures();
+        final Function1<MobaBeanFeature, String> _function = (MobaBeanFeature it) -> {
           return it.getName();
         };
-        _xtrycatchfinallyexpression = IterableExtensions.<String, MobaDtoFeature>toMap(_allFeatures, _function);
+        _xtrycatchfinallyexpression = IterableExtensions.<String, MobaBeanFeature>toMap(_allFeatures, _function);
       } catch (final Throwable _t) {
         if (_t instanceof RecursionException) {
           final RecursionException ex = (RecursionException)_t;
-          _xtrycatchfinallyexpression = Collections.<String, MobaDtoFeature>emptyMap();
+          _xtrycatchfinallyexpression = Collections.<String, MobaBeanFeature>emptyMap();
         } else {
           throw Exceptions.sneakyThrow(_t);
         }
       }
       _xifexpression = _xtrycatchfinallyexpression;
     } else {
-      _xifexpression = Collections.<String, MobaDtoFeature>emptyMap();
+      _xifexpression = Collections.<String, MobaBeanFeature>emptyMap();
     }
-    final Map<String, MobaDtoFeature> superFeatureMap = _xifexpression;
+    final Map<String, MobaBeanFeature> superFeatureMap = _xifexpression;
     final Set<String> currentFeatures = CollectionLiterals.<String>newHashSet();
     int index = 0;
-    EList<MobaDtoFeature> _features = dto.getFeatures();
-    for (final MobaDtoFeature feature : _features) {
+    EList<MobaBeanFeature> _features = dto.getFeatures();
+    for (final MobaBeanFeature feature : _features) {
       {
         String _name = feature.getName();
         boolean _containsKey = superFeatureMap.containsKey(_name);
         if (_containsKey) {
-          this.error("Supertype contains same feature name", dto, MobaPackage.Literals.MOBA_DTO__FEATURES, index);
+          this.error("Supertype contains same feature name", dto, MobaPackage.Literals.MOBA_BEAN__FEATURES, index);
         }
         String _name_1 = feature.getName();
         boolean _contains = currentFeatures.contains(_name_1);
         if (_contains) {
-          this.error("Feature name must be unique", dto, MobaPackage.Literals.MOBA_DTO__FEATURES, index);
+          this.error("Feature name must be unique", dto, MobaPackage.Literals.MOBA_BEAN__FEATURES, index);
         }
         String _name_2 = feature.getName();
         currentFeatures.add(_name_2);
@@ -224,15 +224,15 @@ public class MobaValidator extends AbstractMobaValidator {
           }
         }
         if (!_matched) {
-          if (feature instanceof MobaDto) {
+          if (feature instanceof MobaBean) {
             _matched=true;
-            String _name = ((MobaDto)feature).getName();
+            String _name = ((MobaBean)feature).getName();
             boolean _contains = tempDataFeatures.contains(_name);
             if (_contains) {
               this.error("Name must be unique", application, 
                 MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
             }
-            String _name_1 = ((MobaDto)feature).getName();
+            String _name_1 = ((MobaBean)feature).getName();
             tempDataFeatures.add(_name_1);
           }
         }
@@ -307,8 +307,8 @@ public class MobaValidator extends AbstractMobaValidator {
   }
   
   @Check
-  public void checkSuperType(final MobaDto dto) {
-    MobaDto _superType = dto.getSuperType();
+  public void checkSuperType(final MobaBean dto) {
+    MobaBean _superType = dto.getSuperType();
     boolean _equals = Objects.equal(_superType, null);
     if (_equals) {
       return;
@@ -319,9 +319,9 @@ public class MobaValidator extends AbstractMobaValidator {
       if (_t instanceof RecursionException) {
         final RecursionException ex = (RecursionException)_t;
         EObject _source = ex.getSource();
-        final MobaDto source = ((MobaDto) _source);
+        final MobaBean source = ((MobaBean) _source);
         EObject _superType_1 = ex.getSuperType();
-        final MobaDto superType = ((MobaDto) _superType_1);
+        final MobaBean superType = ((MobaBean) _superType_1);
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("Recursive supertypes for ");
         String _name = source.getName();
@@ -330,7 +330,7 @@ public class MobaValidator extends AbstractMobaValidator {
         String _name_1 = superType.getName();
         _builder.append(_name_1, "");
         this.error(_builder.toString(), dto, 
-          MobaPackage.Literals.MOBA_DTO__SUPER_TYPE);
+          MobaPackage.Literals.MOBA_BEAN__SUPER_TYPE);
       } else {
         throw Exceptions.sneakyThrow(_t);
       }

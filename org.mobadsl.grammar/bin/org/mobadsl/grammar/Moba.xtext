@@ -59,7 +59,7 @@ MobaProperty:
 	(keyString=STRING | keyConst=[MobaConstant]) '=' (valueString=STRING | valueConst=[MobaConstant]);
 
 MobaData:
-	MobaDto | MobaPayload | MobaQueue;
+	MobaBean | MobaPayload | MobaQueue;
 
 MobaSettings:
 	{MobaSettings}
@@ -79,14 +79,14 @@ MobaCache:
 	& ('strategy' '=' (cacheStrategyString=STRING |
 	cacheStrategyConst=[MobaConstant]))?) ')')?;
 
-MobaDto:
-	'dto' name=ID (('extends' superType=[MobaDto])? & (cache=MobaCache)?) MobaPropertiesAble? '{'
-	features+=MobaDtoFeature*
-	(index=MobaDtoIndex)?
+MobaBean:
+	'bean' name=ID (('extends' superType=[MobaBean])? & (cache=MobaCache)?) MobaPropertiesAble? '{'
+	features+=MobaBeanFeature*
+	(index=MobaBeanIndex)?
 	'}';
 
-MobaDtoIndex:
-	'index' attributes+=[MobaDtoAttribute] (',' attributes+=[MobaDtoAttribute]*);
+MobaBeanIndex:
+	'index' attributes+=[MobaBeanAttribute] (',' attributes+=[MobaBeanAttribute]*);
 
 MobaPayload:
 	'payload' name=ID ('extends' superType=[MobaPayload])? MobaPropertiesAble? '{'
@@ -107,10 +107,10 @@ MobaRestCustom:
 MobaRestCrud:
 	'restCrud' name=ID MobaPropertiesAble?;
 
-MobaDtoFeature:
-	MobaDtoAttribute | MobaDtoReference;
+MobaBeanFeature:
+	MobaBeanAttribute | MobaBeanReference;
 
-MobaDtoAttribute:
+MobaBeanAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
 	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
@@ -128,8 +128,8 @@ MobaSettingsAttribute:
 fragment MobaMultiplicityAble:
 	(multiplicity=MobaMuliplicity)?;
 
-MobaDtoReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto] MobaMultiplicityAble
+MobaBeanReference:
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaBean] MobaMultiplicityAble
 	name=ID
 	MobaPropertiesAble?;
 

@@ -13,10 +13,10 @@ import org.eclipse.xtext.xbase.lib.Extension;
 import org.mobadsl.grammar.services.MobaGrammarAccess;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaBean;
+import org.mobadsl.semantic.model.moba.MobaBeanFeature;
+import org.mobadsl.semantic.model.moba.MobaBeanIndex;
 import org.mobadsl.semantic.model.moba.MobaCache;
-import org.mobadsl.semantic.model.moba.MobaDto;
-import org.mobadsl.semantic.model.moba.MobaDtoFeature;
-import org.mobadsl.semantic.model.moba.MobaDtoIndex;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPayload;
@@ -46,14 +46,14 @@ public class MobaFormatter extends AbstractFormatter2 {
     }
   }
   
-  protected void _format(final MobaDto mobaDto, @Extension final IFormattableDocument document) {
+  protected void _format(final MobaBean mobaDto, @Extension final IFormattableDocument document) {
     MobaCache _cache = mobaDto.getCache();
     this.format(_cache, document);
-    EList<MobaDtoFeature> _features = mobaDto.getFeatures();
-    for (final MobaDtoFeature features : _features) {
+    EList<MobaBeanFeature> _features = mobaDto.getFeatures();
+    for (final MobaBeanFeature features : _features) {
       this.format(features, document);
     }
-    MobaDtoIndex _index = mobaDto.getIndex();
+    MobaBeanIndex _index = mobaDto.getIndex();
     this.format(_index, document);
   }
   
@@ -80,8 +80,8 @@ public class MobaFormatter extends AbstractFormatter2 {
     if (mobaDto instanceof XtextResource) {
       _format((XtextResource)mobaDto, document);
       return;
-    } else if (mobaDto instanceof MobaDto) {
-      _format((MobaDto)mobaDto, document);
+    } else if (mobaDto instanceof MobaBean) {
+      _format((MobaBean)mobaDto, document);
       return;
     } else if (mobaDto instanceof MobaPayload) {
       _format((MobaPayload)mobaDto, document);

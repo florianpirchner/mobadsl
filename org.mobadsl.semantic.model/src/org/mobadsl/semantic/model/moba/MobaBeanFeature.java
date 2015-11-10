@@ -8,9 +8,9 @@ package org.mobadsl.semantic.model.moba;
  * <!-- end-user-doc -->
  *
  *
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoFeature()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanFeature()
  * @model abstract="true"
  * @generated
  */
-public interface MobaDtoFeature extends MobaFeature {
+public interface MobaBeanFeature extends MobaFeature {
 } // MobaDtoFeature

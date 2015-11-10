@@ -13,6 +13,7 @@
 'active'=59
 'alias'=49
 'application'=18
+'bean'=41
 'cache'=38
 'cascading'=69
 'const'=34
@@ -21,7 +22,6 @@
 'digits'=56
 'domainDescription'=68
 'domainKey'=67
-'dto'=41
 'enum'=32
 'extends'=27
 'generator'=22

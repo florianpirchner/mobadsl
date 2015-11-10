@@ -89,7 +89,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaDto> getDtos();
+	List<MobaBean> getDtos();
 
 	/**
 	 * Returns the moba payloads for the current application. Excluding the
@@ -188,7 +188,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaDto> getAllDtos();
+	List<MobaBean> getAllDtos();
 
 	/**
 	 * Returns the moba payloads for the current application. Including the

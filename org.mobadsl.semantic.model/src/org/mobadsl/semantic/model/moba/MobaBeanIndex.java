@@ -14,17 +14,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoIndex#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanIndex#getAttributes <em>Attributes</em>}</li>
  * </ul>
  *
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoIndex()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanIndex()
  * @model
  * @generated
  */
-public interface MobaDtoIndex extends EObject {
+public interface MobaBeanIndex extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' reference list.
-	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaDtoAttribute}.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaBeanAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Attributes</em>' reference list isn't clear,
@@ -32,10 +32,10 @@ public interface MobaDtoIndex extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' reference list.
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoIndex_Attributes()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanIndex_Attributes()
 	 * @model
 	 * @generated
 	 */
-	EList<MobaDtoAttribute> getAttributes();
+	EList<MobaBeanAttribute> getAttributes();
 
 } // MobaDtoIndex

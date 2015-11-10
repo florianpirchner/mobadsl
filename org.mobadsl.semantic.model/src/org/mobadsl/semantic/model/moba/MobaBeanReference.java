@@ -12,17 +12,17 @@ package org.mobadsl.semantic.model.moba;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isCascading <em>Cascading</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isLazy <em>Lazy</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isTransient <em>Transient</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isCascading <em>Cascading</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isLazy <em>Lazy</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isTransient <em>Transient</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanReference#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanReference()
  * @model
  * @generated
  */
-public interface MobaDtoReference extends MobaDtoFeature, MobaMultiplicityAble, MobaPropertiesAble {
+public interface MobaBeanReference extends MobaBeanFeature, MobaMultiplicityAble, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Cascading</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ public interface MobaDtoReference extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cascading</em>' attribute.
 	 * @see #setCascading(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference_Cascading()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanReference_Cascading()
 	 * @model
 	 * @generated
 	 */
 	boolean isCascading();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isCascading <em>Cascading</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isCascading <em>Cascading</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cascading</em>' attribute.
@@ -59,14 +59,14 @@ public interface MobaDtoReference extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lazy</em>' attribute.
 	 * @see #setLazy(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference_Lazy()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanReference_Lazy()
 	 * @model
 	 * @generated
 	 */
 	boolean isLazy();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isLazy <em>Lazy</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isLazy <em>Lazy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Lazy</em>' attribute.
@@ -85,14 +85,14 @@ public interface MobaDtoReference extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transient</em>' attribute.
 	 * @see #setTransient(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference_Transient()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanReference_Transient()
 	 * @model
 	 * @generated
 	 */
 	boolean isTransient();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isTransient <em>Transient</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isTransient <em>Transient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transient</em>' attribute.
@@ -110,21 +110,21 @@ public interface MobaDtoReference extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(MobaDto)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference_Type()
+	 * @see #setType(MobaBean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanReference_Type()
 	 * @model
 	 * @generated
 	 */
-	MobaDto getType();
+	MobaBean getType();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getType <em>Type</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#getType <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' reference.
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(MobaDto value);
+	void setType(MobaBean value);
 
 } // MobaDtoReference

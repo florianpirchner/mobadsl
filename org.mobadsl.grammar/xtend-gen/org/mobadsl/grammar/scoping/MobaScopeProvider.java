@@ -12,7 +12,7 @@ import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaBean;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaQueue;
@@ -45,7 +45,7 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_MobaDto(final MobaApplication ctx, final EReference ref) {
-    List<MobaDto> _allDtos = ctx.getAllDtos();
+    List<MobaBean> _allDtos = ctx.getAllDtos();
     return Scopes.scopeFor(_allDtos);
   }
   

@@ -45,9 +45,11 @@ public class ExtensionGeneratorDelegate {
 
 	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context, List<String> generatorIds) {
 		Map<String, IGeneratorDelegate> generators = readExtentions(languageInfo.getLanguageName(), generatorIds);
+
+		IGeneratorDelegate.PropertiesMap properties = new IGeneratorDelegate.PropertiesMap();
 		for (String id : generatorIds) {
 			if (generators.containsKey(id)) {
-				generators.get(id).generate(input, fsa, context);
+				generators.get(id).generate(input, fsa, context, properties);
 			}
 		}
 	}
@@ -55,9 +57,11 @@ public class ExtensionGeneratorDelegate {
 	public void beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context,
 			List<String> generatorIds) {
 		Map<String, IGeneratorDelegate> generators = readExtentions(languageInfo.getLanguageName(), generatorIds);
+
+		IGeneratorDelegate.PropertiesMap properties = new IGeneratorDelegate.PropertiesMap();
 		for (String id : generatorIds) {
 			if (generators.containsKey(id)) {
-				generators.get(id).beforeGenerate(input, fsa, context);
+				generators.get(id).beforeGenerate(input, fsa, context, properties);
 			}
 		}
 	}
@@ -65,9 +69,12 @@ public class ExtensionGeneratorDelegate {
 	public void afterGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context,
 			List<String> generatorIds) {
 		Map<String, IGeneratorDelegate> generators = readExtentions(languageInfo.getLanguageName(), generatorIds);
+
+		IGeneratorDelegate.PropertiesMap properties = new IGeneratorDelegate.PropertiesMap();
+
 		for (String id : generatorIds) {
 			if (generators.containsKey(id)) {
-				generators.get(id).afterGenerate(input, fsa, context);
+				generators.get(id).afterGenerate(input, fsa, context, properties);
 			}
 		}
 	}

@@ -12,29 +12,28 @@ import org.mobadsl.grammar.generator.common.IGeneratorDelegate;
 public class RestServicesGenerator implements IGeneratorDelegate {
 
 	@Override
-	public void beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
+	public void beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context,
+			PropertiesMap properties) {
 
 	}
 
 	@Override
-	public void afterGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
+	public void afterGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context,
+			PropertiesMap properties) {
 
 	}
 
 	@Override
-	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
-		System.out.println("Foo");
+	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context, PropertiesMap properties) {
+		fsa.generateFile("Foo", "server-rest", "Heyho");
 	}
 
 	@Override
 	public Set<OutputConfiguration> getOutputConfigurations() {
-
+		
 		OutputConfiguration config = new OutputConfiguration("server-rest");
-		config.setCanClearOutputDirectory(true);
-		config.setCreateOutputDirectory(true);
 		config.setDescription("Generates REST services for the server side.");
-		config.setInstallDslAsPrimarySource(false);
-		config.setOutputDirectory("./models");
+		config.setOutputDirectory("./rest");
 
 		return Collections.singleton(config);
 	}

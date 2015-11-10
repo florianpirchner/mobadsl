@@ -12,18 +12,18 @@ package org.mobadsl.semantic.model.moba;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isLazy <em>Lazy</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isTransient <em>Transient</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainKey <em>Domain Key</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainDescription <em>Domain Description</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isLazy <em>Lazy</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isTransient <em>Transient</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainKey <em>Domain Key</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainDescription <em>Domain Description</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanAttribute()
  * @model
  * @generated
  */
-public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityAble, MobaPropertiesAble, MobaConstraintable {
+public interface MobaBeanAttribute extends MobaBeanFeature, MobaMultiplicityAble, MobaPropertiesAble, MobaConstraintable {
 	/**
 	 * Returns the value of the '<em><b>Lazy</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lazy</em>' attribute.
 	 * @see #setLazy(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute_Lazy()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanAttribute_Lazy()
 	 * @model
 	 * @generated
 	 */
 	boolean isLazy();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isLazy <em>Lazy</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isLazy <em>Lazy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Lazy</em>' attribute.
@@ -60,14 +60,14 @@ public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transient</em>' attribute.
 	 * @see #setTransient(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute_Transient()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanAttribute_Transient()
 	 * @model
 	 * @generated
 	 */
 	boolean isTransient();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isTransient <em>Transient</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isTransient <em>Transient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transient</em>' attribute.
@@ -86,14 +86,14 @@ public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain Key</em>' attribute.
 	 * @see #setDomainKey(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute_DomainKey()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanAttribute_DomainKey()
 	 * @model
 	 * @generated
 	 */
 	boolean isDomainKey();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainKey <em>Domain Key</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainKey <em>Domain Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Domain Key</em>' attribute.
@@ -112,14 +112,14 @@ public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain Description</em>' attribute.
 	 * @see #setDomainDescription(boolean)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute_DomainDescription()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanAttribute_DomainDescription()
 	 * @model
 	 * @generated
 	 */
 	boolean isDomainDescription();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainDescription <em>Domain Description</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainDescription <em>Domain Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Domain Description</em>' attribute.
@@ -138,14 +138,14 @@ public interface MobaDtoAttribute extends MobaDtoFeature, MobaMultiplicityAble, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(MobaDataType)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoAttribute_Type()
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaBeanAttribute_Type()
 	 * @model
 	 * @generated
 	 */
 	MobaDataType getType();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#getType <em>Type</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#getType <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' reference.

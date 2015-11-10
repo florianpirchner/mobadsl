@@ -9,8 +9,6 @@ import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.mobadsl.grammar.services.MobaGrammarAccess
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature
-import org.mobadsl.semantic.model.moba.MobaDto
-import org.mobadsl.semantic.model.moba.MobaDtoFeature
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble
 import org.mobadsl.semantic.model.moba.MobaPayload
 import org.mobadsl.semantic.model.moba.MobaPayloadFeature
@@ -18,6 +16,8 @@ import org.mobadsl.semantic.model.moba.MobaPropertiesAble
 import org.mobadsl.semantic.model.moba.MobaProperty
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaQueueFeature
+import org.mobadsl.semantic.model.moba.MobaBean
+import org.mobadsl.semantic.model.moba.MobaBeanFeature
 
 class MobaFormatter extends AbstractFormatter2 {
 	
@@ -35,9 +35,9 @@ class MobaFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(MobaDto mobaDto, extension IFormattableDocument document) {
+	def dispatch void format(MobaBean mobaDto, extension IFormattableDocument document) {
 		format(mobaDto.getCache(), document);
-		for (MobaDtoFeature features : mobaDto.getFeatures()) {
+		for (MobaBeanFeature features : mobaDto.getFeatures()) {
 			format(features, document);
 		}
 		format(mobaDto.getIndex(), document);

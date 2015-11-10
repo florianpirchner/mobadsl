@@ -3,7 +3,7 @@
 package org.mobadsl.semantic.model.moba.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaBeanFeature;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 
 /**
@@ -13,13 +13,13 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *
  * @generated
  */
-public abstract class MobaDtoFeatureImpl extends MobaFeatureImpl implements MobaDtoFeature {
+public abstract class MobaBeanFeatureImpl extends MobaFeatureImpl implements MobaBeanFeature {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaDtoFeatureImpl() {
+	protected MobaBeanFeatureImpl() {
 		super();
 	}
 
@@ -30,7 +30,7 @@ public abstract class MobaDtoFeatureImpl extends MobaFeatureImpl implements Moba
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MobaPackage.Literals.MOBA_DTO_FEATURE;
+		return MobaPackage.Literals.MOBA_BEAN_FEATURE;
 	}
 
 } //MobaDtoFeatureImpl

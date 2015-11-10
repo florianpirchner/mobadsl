@@ -24,7 +24,7 @@ import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaBean;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPayload;
@@ -290,8 +290,8 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaDto> getDtos() {
-		return collect(MobaDto.class);
+	public List<MobaBean> getDtos() {
+		return collect(MobaBean.class);
 	}
 
 	@Override
@@ -355,8 +355,8 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaDto> getAllDtos() {
-		return collectAll(this, MobaDto.class);
+	public List<MobaBean> getAllDtos() {
+		return collectAll(this, MobaBean.class);
 	}
 
 	@Override

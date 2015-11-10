@@ -8,8 +8,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
-import org.mobadsl.semantic.model.moba.MobaDtoIndex;
+import org.mobadsl.semantic.model.moba.MobaBeanAttribute;
+import org.mobadsl.semantic.model.moba.MobaBeanIndex;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 
 /**
@@ -20,12 +20,12 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoIndexImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaBeanIndexImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements MobaDtoIndex {
+public class MobaBeanIndexImpl extends MinimalEObjectImpl.Container implements MobaBeanIndex {
 	/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MobaDtoAttribute> attributes;
+	protected EList<MobaBeanAttribute> attributes;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaDtoIndexImpl() {
+	protected MobaBeanIndexImpl() {
 		super();
 	}
 
@@ -52,7 +52,7 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MobaPackage.Literals.MOBA_DTO_INDEX;
+		return MobaPackage.Literals.MOBA_BEAN_INDEX;
 	}
 
 	/**
@@ -60,9 +60,9 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MobaDtoAttribute> getAttributes() {
+	public EList<MobaBeanAttribute> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<MobaDtoAttribute>(MobaDtoAttribute.class, this, MobaPackage.MOBA_DTO_INDEX__ATTRIBUTES);
+			attributes = new EObjectResolvingEList<MobaBeanAttribute>(MobaBeanAttribute.class, this, MobaPackage.MOBA_BEAN_INDEX__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -75,7 +75,7 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_INDEX__ATTRIBUTES:
+			case MobaPackage.MOBA_BEAN_INDEX__ATTRIBUTES:
 				return getAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -90,9 +90,9 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_INDEX__ATTRIBUTES:
+			case MobaPackage.MOBA_BEAN_INDEX__ATTRIBUTES:
 				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends MobaDtoAttribute>)newValue);
+				getAttributes().addAll((Collection<? extends MobaBeanAttribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -106,7 +106,7 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_INDEX__ATTRIBUTES:
+			case MobaPackage.MOBA_BEAN_INDEX__ATTRIBUTES:
 				getAttributes().clear();
 				return;
 		}
@@ -121,7 +121,7 @@ public class MobaDtoIndexImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DTO_INDEX__ATTRIBUTES:
+			case MobaPackage.MOBA_BEAN_INDEX__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
 		}
 		return super.eIsSet(featureID);

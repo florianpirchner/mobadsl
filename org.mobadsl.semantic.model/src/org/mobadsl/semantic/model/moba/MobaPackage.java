@@ -738,14 +738,14 @@ public interface MobaPackage extends EPackage {
 	int MOBA_CACHE_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl <em>Dto</em>}' class.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanImpl <em>Bean</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDto()
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBean()
 	 * @generated
 	 */
-	int MOBA_DTO = 15;
+	int MOBA_BEAN = 15;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -754,7 +754,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__PROPERTIES = MOBA_DATA_FEATURE_COUNT + 0;
+	int MOBA_BEAN__PROPERTIES = MOBA_DATA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -763,7 +763,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__NAME = MOBA_DATA_FEATURE_COUNT + 1;
+	int MOBA_BEAN__NAME = MOBA_DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -772,7 +772,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 2;
+	int MOBA_BEAN__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
@@ -781,7 +781,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__CACHE = MOBA_DATA_FEATURE_COUNT + 3;
+	int MOBA_BEAN__CACHE = MOBA_DATA_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -790,7 +790,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__FEATURES = MOBA_DATA_FEATURE_COUNT + 4;
+	int MOBA_BEAN__FEATURES = MOBA_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' containment reference.
@@ -799,26 +799,26 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__INDEX = MOBA_DATA_FEATURE_COUNT + 5;
+	int MOBA_BEAN__INDEX = MOBA_DATA_FEATURE_COUNT + 5;
 
 	/**
-	 * The number of structural features of the '<em>Dto</em>' class.
+	 * The number of structural features of the '<em>Bean</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 6;
+	int MOBA_BEAN_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 6;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoIndexImpl <em>Dto Index</em>}' class.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanIndexImpl <em>Bean Index</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoIndexImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoIndex()
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanIndexImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanIndex()
 	 * @generated
 	 */
-	int MOBA_DTO_INDEX = 16;
+	int MOBA_BEAN_INDEX = 16;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
@@ -827,16 +827,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_INDEX__ATTRIBUTES = 0;
+	int MOBA_BEAN_INDEX__ATTRIBUTES = 0;
 
 	/**
-	 * The number of structural features of the '<em>Dto Index</em>' class.
+	 * The number of structural features of the '<em>Bean Index</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_INDEX_FEATURE_COUNT = 1;
+	int MOBA_BEAN_INDEX_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadImpl <em>Payload</em>}' class.
@@ -1070,14 +1070,14 @@ public interface MobaPackage extends EPackage {
 	int MOBA_FEATURE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl <em>Dto Feature</em>}' class.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanFeatureImpl <em>Bean Feature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoFeature()
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanFeature()
 	 * @generated
 	 */
-	int MOBA_DTO_FEATURE = 23;
+	int MOBA_BEAN_FEATURE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1086,26 +1086,26 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_FEATURE__NAME = MOBA_FEATURE__NAME;
+	int MOBA_BEAN_FEATURE__NAME = MOBA_FEATURE__NAME;
 
 	/**
-	 * The number of structural features of the '<em>Dto Feature</em>' class.
+	 * The number of structural features of the '<em>Bean Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_FEATURE_FEATURE_COUNT = MOBA_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_BEAN_FEATURE_FEATURE_COUNT = MOBA_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl <em>Dto Attribute</em>}' class.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanAttributeImpl <em>Bean Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoAttribute()
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanAttributeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanAttribute()
 	 * @generated
 	 */
-	int MOBA_DTO_ATTRIBUTE = 24;
+	int MOBA_BEAN_ATTRIBUTE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1114,7 +1114,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__NAME = MOBA_DTO_FEATURE__NAME;
+	int MOBA_BEAN_ATTRIBUTE__NAME = MOBA_BEAN_FEATURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicity</b></em>' containment reference.
@@ -1123,7 +1123,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__MULTIPLICITY = MOBA_DTO_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_BEAN_ATTRIBUTE__MULTIPLICITY = MOBA_BEAN_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1132,7 +1132,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__PROPERTIES = MOBA_DTO_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_BEAN_ATTRIBUTE__PROPERTIES = MOBA_BEAN_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -1141,7 +1141,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__CONSTRAINTS = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_BEAN_ATTRIBUTE__CONSTRAINTS = MOBA_BEAN_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -1150,7 +1150,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__LAZY = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_BEAN_ATTRIBUTE__LAZY = MOBA_BEAN_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -1159,7 +1159,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__TRANSIENT = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_BEAN_ATTRIBUTE__TRANSIENT = MOBA_BEAN_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Domain Key</b></em>' attribute.
@@ -1168,7 +1168,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__DOMAIN_KEY = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_BEAN_ATTRIBUTE__DOMAIN_KEY = MOBA_BEAN_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Domain Description</b></em>' attribute.
@@ -1177,7 +1177,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_BEAN_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_BEAN_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1186,16 +1186,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_BEAN_ATTRIBUTE__TYPE = MOBA_BEAN_FEATURE_FEATURE_COUNT + 7;
 
 	/**
-	 * The number of structural features of the '<em>Dto Attribute</em>' class.
+	 * The number of structural features of the '<em>Bean Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 8;
+	int MOBA_BEAN_ATTRIBUTE_FEATURE_COUNT = MOBA_BEAN_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityAble <em>Multiplicity Able</em>}' class.
@@ -1226,14 +1226,14 @@ public interface MobaPackage extends EPackage {
 	int MOBA_MULTIPLICITY_ABLE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl <em>Dto Reference</em>}' class.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl <em>Bean Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoReference()
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanReference()
 	 * @generated
 	 */
-	int MOBA_DTO_REFERENCE = 26;
+	int MOBA_BEAN_REFERENCE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1242,7 +1242,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__NAME = MOBA_DTO_FEATURE__NAME;
+	int MOBA_BEAN_REFERENCE__NAME = MOBA_BEAN_FEATURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicity</b></em>' containment reference.
@@ -1251,7 +1251,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__MULTIPLICITY = MOBA_DTO_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_BEAN_REFERENCE__MULTIPLICITY = MOBA_BEAN_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1260,7 +1260,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__PROPERTIES = MOBA_DTO_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_BEAN_REFERENCE__PROPERTIES = MOBA_BEAN_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Cascading</b></em>' attribute.
@@ -1269,7 +1269,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__CASCADING = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_BEAN_REFERENCE__CASCADING = MOBA_BEAN_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -1278,7 +1278,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__LAZY = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_BEAN_REFERENCE__LAZY = MOBA_BEAN_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -1287,7 +1287,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__TRANSIENT = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_BEAN_REFERENCE__TRANSIENT = MOBA_BEAN_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1296,16 +1296,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_BEAN_REFERENCE__TYPE = MOBA_BEAN_FEATURE_FEATURE_COUNT + 5;
 
 	/**
-	 * The number of structural features of the '<em>Dto Reference</em>' class.
+	 * The number of structural features of the '<em>Bean Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_BEAN_REFERENCE_FEATURE_COUNT = MOBA_BEAN_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadFeatureImpl <em>Payload Feature</em>}' class.
@@ -2866,90 +2866,90 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaCache_CacheStrategyConst();
 
 	/**
-	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDto <em>Dto</em>}'.
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBean <em>Bean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dto</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDto
+	 * @return the meta object for class '<em>Bean</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBean
 	 * @generated
 	 */
-	EClass getMobaDto();
+	EClass getMobaBean();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBean#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDto#getName()
-	 * @see #getMobaDto()
+	 * @see org.mobadsl.semantic.model.moba.MobaBean#getName()
+	 * @see #getMobaBean()
 	 * @generated
 	 */
-	EAttribute getMobaDto_Name();
+	EAttribute getMobaBean_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaBean#getSuperType <em>Super Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Super Type</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDto#getSuperType()
-	 * @see #getMobaDto()
+	 * @see org.mobadsl.semantic.model.moba.MobaBean#getSuperType()
+	 * @see #getMobaBean()
 	 * @generated
 	 */
-	EReference getMobaDto_SuperType();
+	EReference getMobaBean_SuperType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaDto#getCache <em>Cache</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaBean#getCache <em>Cache</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Cache</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDto#getCache()
-	 * @see #getMobaDto()
+	 * @see org.mobadsl.semantic.model.moba.MobaBean#getCache()
+	 * @see #getMobaBean()
 	 * @generated
 	 */
-	EReference getMobaDto_Cache();
+	EReference getMobaBean_Cache();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures <em>Features</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaBean#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Features</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDto#getFeatures()
-	 * @see #getMobaDto()
+	 * @see org.mobadsl.semantic.model.moba.MobaBean#getFeatures()
+	 * @see #getMobaBean()
 	 * @generated
 	 */
-	EReference getMobaDto_Features();
+	EReference getMobaBean_Features();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaDto#getIndex <em>Index</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaBean#getIndex <em>Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Index</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDto#getIndex()
-	 * @see #getMobaDto()
+	 * @see org.mobadsl.semantic.model.moba.MobaBean#getIndex()
+	 * @see #getMobaBean()
 	 * @generated
 	 */
-	EReference getMobaDto_Index();
+	EReference getMobaBean_Index();
 
 	/**
-	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDtoIndex <em>Dto Index</em>}'.
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBeanIndex <em>Bean Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dto Index</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoIndex
+	 * @return the meta object for class '<em>Bean Index</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanIndex
 	 * @generated
 	 */
-	EClass getMobaDtoIndex();
+	EClass getMobaBeanIndex();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.mobadsl.semantic.model.moba.MobaDtoIndex#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the reference list '{@link org.mobadsl.semantic.model.moba.MobaBeanIndex#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Attributes</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoIndex#getAttributes()
-	 * @see #getMobaDtoIndex()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanIndex#getAttributes()
+	 * @see #getMobaBeanIndex()
 	 * @generated
 	 */
-	EReference getMobaDtoIndex_Attributes();
+	EReference getMobaBeanIndex_Attributes();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaPayload <em>Payload</em>}'.
@@ -3111,79 +3111,79 @@ public interface MobaPackage extends EPackage {
 	EAttribute getMobaFeature_Name();
 
 	/**
-	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDtoFeature <em>Dto Feature</em>}'.
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBeanFeature <em>Bean Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dto Feature</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoFeature
+	 * @return the meta object for class '<em>Bean Feature</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanFeature
 	 * @generated
 	 */
-	EClass getMobaDtoFeature();
+	EClass getMobaBeanFeature();
 
 	/**
-	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute <em>Dto Attribute</em>}'.
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute <em>Bean Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dto Attribute</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute
+	 * @return the meta object for class '<em>Bean Attribute</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute
 	 * @generated
 	 */
-	EClass getMobaDtoAttribute();
+	EClass getMobaBeanAttribute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isLazy <em>Lazy</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isLazy <em>Lazy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lazy</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute#isLazy()
-	 * @see #getMobaDtoAttribute()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute#isLazy()
+	 * @see #getMobaBeanAttribute()
 	 * @generated
 	 */
-	EAttribute getMobaDtoAttribute_Lazy();
+	EAttribute getMobaBeanAttribute_Lazy();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isTransient <em>Transient</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isTransient <em>Transient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Transient</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute#isTransient()
-	 * @see #getMobaDtoAttribute()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute#isTransient()
+	 * @see #getMobaBeanAttribute()
 	 * @generated
 	 */
-	EAttribute getMobaDtoAttribute_Transient();
+	EAttribute getMobaBeanAttribute_Transient();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainKey <em>Domain Key</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainKey <em>Domain Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Domain Key</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainKey()
-	 * @see #getMobaDtoAttribute()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainKey()
+	 * @see #getMobaBeanAttribute()
 	 * @generated
 	 */
-	EAttribute getMobaDtoAttribute_DomainKey();
+	EAttribute getMobaBeanAttribute_DomainKey();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainDescription <em>Domain Description</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainDescription <em>Domain Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Domain Description</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute#isDomainDescription()
-	 * @see #getMobaDtoAttribute()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute#isDomainDescription()
+	 * @see #getMobaBeanAttribute()
 	 * @generated
 	 */
-	EAttribute getMobaDtoAttribute_DomainDescription();
+	EAttribute getMobaBeanAttribute_DomainDescription();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute#getType()
-	 * @see #getMobaDtoAttribute()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute#getType()
+	 * @see #getMobaBeanAttribute()
 	 * @generated
 	 */
-	EReference getMobaDtoAttribute_Type();
+	EReference getMobaBeanAttribute_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityAble <em>Multiplicity Able</em>}'.
@@ -3207,58 +3207,58 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaMultiplicityAble_Multiplicity();
 
 	/**
-	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDtoReference <em>Dto Reference</em>}'.
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBeanReference <em>Bean Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dto Reference</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference
+	 * @return the meta object for class '<em>Bean Reference</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanReference
 	 * @generated
 	 */
-	EClass getMobaDtoReference();
+	EClass getMobaBeanReference();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isCascading <em>Cascading</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isCascading <em>Cascading</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cascading</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference#isCascading()
-	 * @see #getMobaDtoReference()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanReference#isCascading()
+	 * @see #getMobaBeanReference()
 	 * @generated
 	 */
-	EAttribute getMobaDtoReference_Cascading();
+	EAttribute getMobaBeanReference_Cascading();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isLazy <em>Lazy</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isLazy <em>Lazy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lazy</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference#isLazy()
-	 * @see #getMobaDtoReference()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanReference#isLazy()
+	 * @see #getMobaBeanReference()
 	 * @generated
 	 */
-	EAttribute getMobaDtoReference_Lazy();
+	EAttribute getMobaBeanReference_Lazy();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isTransient <em>Transient</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#isTransient <em>Transient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Transient</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference#isTransient()
-	 * @see #getMobaDtoReference()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanReference#isTransient()
+	 * @see #getMobaBeanReference()
 	 * @generated
 	 */
-	EAttribute getMobaDtoReference_Transient();
+	EAttribute getMobaBeanReference_Transient();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaBeanReference#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference#getType()
-	 * @see #getMobaDtoReference()
+	 * @see org.mobadsl.semantic.model.moba.MobaBeanReference#getType()
+	 * @see #getMobaBeanReference()
 	 * @generated
 	 */
-	EReference getMobaDtoReference_Type();
+	EReference getMobaBeanReference_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaPayloadFeature <em>Payload Feature</em>}'.
@@ -4447,14 +4447,14 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_CACHE__CACHE_STRATEGY_CONST = eINSTANCE.getMobaCache_CacheStrategyConst();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl <em>Dto</em>}' class.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanImpl <em>Bean</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoImpl
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDto()
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBean()
 		 * @generated
 		 */
-		EClass MOBA_DTO = eINSTANCE.getMobaDto();
+		EClass MOBA_BEAN = eINSTANCE.getMobaBean();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -4462,7 +4462,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO__NAME = eINSTANCE.getMobaDto_Name();
+		EAttribute MOBA_BEAN__NAME = eINSTANCE.getMobaBean_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
@@ -4470,7 +4470,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO__SUPER_TYPE = eINSTANCE.getMobaDto_SuperType();
+		EReference MOBA_BEAN__SUPER_TYPE = eINSTANCE.getMobaBean_SuperType();
 
 		/**
 		 * The meta object literal for the '<em><b>Cache</b></em>' containment reference feature.
@@ -4478,7 +4478,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO__CACHE = eINSTANCE.getMobaDto_Cache();
+		EReference MOBA_BEAN__CACHE = eINSTANCE.getMobaBean_Cache();
 
 		/**
 		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
@@ -4486,7 +4486,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO__FEATURES = eINSTANCE.getMobaDto_Features();
+		EReference MOBA_BEAN__FEATURES = eINSTANCE.getMobaBean_Features();
 
 		/**
 		 * The meta object literal for the '<em><b>Index</b></em>' containment reference feature.
@@ -4494,17 +4494,17 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO__INDEX = eINSTANCE.getMobaDto_Index();
+		EReference MOBA_BEAN__INDEX = eINSTANCE.getMobaBean_Index();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoIndexImpl <em>Dto Index</em>}' class.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanIndexImpl <em>Bean Index</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoIndexImpl
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoIndex()
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanIndexImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanIndex()
 		 * @generated
 		 */
-		EClass MOBA_DTO_INDEX = eINSTANCE.getMobaDtoIndex();
+		EClass MOBA_BEAN_INDEX = eINSTANCE.getMobaBeanIndex();
 
 		/**
 		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
@@ -4512,7 +4512,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO_INDEX__ATTRIBUTES = eINSTANCE.getMobaDtoIndex_Attributes();
+		EReference MOBA_BEAN_INDEX__ATTRIBUTES = eINSTANCE.getMobaBeanIndex_Attributes();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadImpl <em>Payload</em>}' class.
@@ -4647,24 +4647,24 @@ public interface MobaPackage extends EPackage {
 		EAttribute MOBA_FEATURE__NAME = eINSTANCE.getMobaFeature_Name();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl <em>Dto Feature</em>}' class.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanFeatureImpl <em>Bean Feature</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoFeature()
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanFeatureImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanFeature()
 		 * @generated
 		 */
-		EClass MOBA_DTO_FEATURE = eINSTANCE.getMobaDtoFeature();
+		EClass MOBA_BEAN_FEATURE = eINSTANCE.getMobaBeanFeature();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl <em>Dto Attribute</em>}' class.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanAttributeImpl <em>Bean Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoAttribute()
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanAttributeImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanAttribute()
 		 * @generated
 		 */
-		EClass MOBA_DTO_ATTRIBUTE = eINSTANCE.getMobaDtoAttribute();
+		EClass MOBA_BEAN_ATTRIBUTE = eINSTANCE.getMobaBeanAttribute();
 
 		/**
 		 * The meta object literal for the '<em><b>Lazy</b></em>' attribute feature.
@@ -4672,7 +4672,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_ATTRIBUTE__LAZY = eINSTANCE.getMobaDtoAttribute_Lazy();
+		EAttribute MOBA_BEAN_ATTRIBUTE__LAZY = eINSTANCE.getMobaBeanAttribute_Lazy();
 
 		/**
 		 * The meta object literal for the '<em><b>Transient</b></em>' attribute feature.
@@ -4680,7 +4680,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_ATTRIBUTE__TRANSIENT = eINSTANCE.getMobaDtoAttribute_Transient();
+		EAttribute MOBA_BEAN_ATTRIBUTE__TRANSIENT = eINSTANCE.getMobaBeanAttribute_Transient();
 
 		/**
 		 * The meta object literal for the '<em><b>Domain Key</b></em>' attribute feature.
@@ -4688,7 +4688,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_ATTRIBUTE__DOMAIN_KEY = eINSTANCE.getMobaDtoAttribute_DomainKey();
+		EAttribute MOBA_BEAN_ATTRIBUTE__DOMAIN_KEY = eINSTANCE.getMobaBeanAttribute_DomainKey();
 
 		/**
 		 * The meta object literal for the '<em><b>Domain Description</b></em>' attribute feature.
@@ -4696,7 +4696,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_ATTRIBUTE__DOMAIN_DESCRIPTION = eINSTANCE.getMobaDtoAttribute_DomainDescription();
+		EAttribute MOBA_BEAN_ATTRIBUTE__DOMAIN_DESCRIPTION = eINSTANCE.getMobaBeanAttribute_DomainDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -4704,7 +4704,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO_ATTRIBUTE__TYPE = eINSTANCE.getMobaDtoAttribute_Type();
+		EReference MOBA_BEAN_ATTRIBUTE__TYPE = eINSTANCE.getMobaBeanAttribute_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityAble <em>Multiplicity Able</em>}' class.
@@ -4725,14 +4725,14 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_MULTIPLICITY_ABLE__MULTIPLICITY = eINSTANCE.getMobaMultiplicityAble_Multiplicity();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl <em>Dto Reference</em>}' class.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl <em>Bean Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoReference()
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBeanReferenceImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBeanReference()
 		 * @generated
 		 */
-		EClass MOBA_DTO_REFERENCE = eINSTANCE.getMobaDtoReference();
+		EClass MOBA_BEAN_REFERENCE = eINSTANCE.getMobaBeanReference();
 
 		/**
 		 * The meta object literal for the '<em><b>Cascading</b></em>' attribute feature.
@@ -4740,7 +4740,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_REFERENCE__CASCADING = eINSTANCE.getMobaDtoReference_Cascading();
+		EAttribute MOBA_BEAN_REFERENCE__CASCADING = eINSTANCE.getMobaBeanReference_Cascading();
 
 		/**
 		 * The meta object literal for the '<em><b>Lazy</b></em>' attribute feature.
@@ -4748,7 +4748,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_REFERENCE__LAZY = eINSTANCE.getMobaDtoReference_Lazy();
+		EAttribute MOBA_BEAN_REFERENCE__LAZY = eINSTANCE.getMobaBeanReference_Lazy();
 
 		/**
 		 * The meta object literal for the '<em><b>Transient</b></em>' attribute feature.
@@ -4756,7 +4756,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_DTO_REFERENCE__TRANSIENT = eINSTANCE.getMobaDtoReference_Transient();
+		EAttribute MOBA_BEAN_REFERENCE__TRANSIENT = eINSTANCE.getMobaBeanReference_Transient();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -4764,7 +4764,7 @@ public interface MobaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_DTO_REFERENCE__TYPE = eINSTANCE.getMobaDtoReference_Type();
+		EReference MOBA_BEAN_REFERENCE__TYPE = eINSTANCE.getMobaBeanReference_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPayloadFeatureImpl <em>Payload Feature</em>}' class.
