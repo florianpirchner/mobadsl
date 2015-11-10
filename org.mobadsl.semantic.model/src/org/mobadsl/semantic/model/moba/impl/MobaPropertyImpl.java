@@ -325,4 +325,20 @@ public class MobaPropertyImpl extends MinimalEObjectImpl.Container implements Mo
 		return getValueString();
 	}
 
+	@Override
+	public String getKeyStringOrConstantName() {
+		if (getKeyConst() != null) {
+			return getKeyConst().getName();
+		}
+		return getKeyString();
+	}
+
+	@Override
+	public String getValueStringOrConstantName() {
+		if (getValueConst() != null) {
+			return getValueConst().getName();
+		}
+		return getValueString();
+	}
+
 } // MobaPropertyImpl

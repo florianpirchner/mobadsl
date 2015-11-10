@@ -456,4 +456,9 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 		return settings.stream().findFirst().filter(e -> e.isActive()).orElse(null);
 	}
 
+	@Override
+	public List<MobaProperty> getAllProperties() {
+		return getProperties();
+	}
+
 } // MobaApplicationImpl

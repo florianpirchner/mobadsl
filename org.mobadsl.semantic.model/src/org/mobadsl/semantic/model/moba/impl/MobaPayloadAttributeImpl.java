@@ -3,6 +3,7 @@
 package org.mobadsl.semantic.model.moba.impl;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -651,6 +652,11 @@ public class MobaPayloadAttributeImpl extends MobaPayloadFeatureImpl implements 
 		result.append(alias);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public List<MobaProperty> getAllProperties() {
+		return getProperties();
 	}
 
 } //MobaPayloadAttributeImpl

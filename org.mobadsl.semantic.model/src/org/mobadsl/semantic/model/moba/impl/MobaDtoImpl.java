@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaCache;
+import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
@@ -514,6 +515,16 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	@Override
 	public List<MobaDtoReference> getGenReferences() {
 		return collectGen(this, MobaDtoReference.class);
+	}
+	
+	@Override
+	public List<MobaProperty> getAllProperties() {
+		List<MobaDto> types = getAllSuperTypes();
+		// add this instance to the begin of the list
+		types.add(0, this);
+
+		return MobaUtil.getAllFeatures(types, MobaProperty.class,
+				MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 	}
 
 } // MobaDtoImpl

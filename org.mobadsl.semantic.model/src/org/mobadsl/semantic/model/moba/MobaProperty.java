@@ -149,5 +149,21 @@ public interface MobaProperty extends EObject {
 	 * @return
 	 */
 	String getValue();
+	
+	/**
+	 * Returns the keyString as String representation if {@link #getKeyString()} is available. Or
+	 * {@link #getKeyConst().getName()} otherwise.
+	 * 
+	 * @return
+	 */
+	String getKeyStringOrConstantName();
+
+	/**
+	 * Returns the valueString as String representation if {@link #getValueString()} is available. Or
+	 * {@link #getValueConst().getName()} otherwise.
+	 * 
+	 * @return
+	 */
+	String getValueStringOrConstantName();
 
 } // MobaProperty
