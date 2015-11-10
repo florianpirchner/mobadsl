@@ -83,7 +83,7 @@ public class ExtensionGeneratorDelegate {
 
 	/**
 	 * Extensions are being processed new for each request, since each call
-	 * needs a new instance of inferrer.
+	 * needs a new instance of processor.
 	 * 
 	 * @param grammarName
 	 * @param generatorIds
