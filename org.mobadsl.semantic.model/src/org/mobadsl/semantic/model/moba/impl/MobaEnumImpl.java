@@ -2,7 +2,6 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -10,16 +9,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.RecursionException;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -50,16 +52,6 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 	 * @ordered
 	 */
 	protected EList<MobaProperty> properties;
-
-	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getSuperType()
-	 * @generated
-	 * @ordered
-	 */
-	protected MobaEnum superType;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -129,38 +121,29 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 	 * @generated
 	 */
 	public MobaEnum getSuperType() {
-		if (superType != null && superType.eIsProxy()) {
-			InternalEObject oldSuperType = (InternalEObject) superType;
-			superType = (MobaEnum) eResolveProxy(oldSuperType);
-			if (superType != oldSuperType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_ENUM__SUPER_TYPE,
-							oldSuperType, superType));
-			}
-		}
-		return superType;
+		MobaEnum superType = basicGetSuperType();
+		return superType != null && superType.eIsProxy() ? (MobaEnum) eResolveProxy((InternalEObject) superType)
+				: superType;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
 	 */
 	public MobaEnum basicGetSuperType() {
-		return superType;
+		MobaDataType datatype = (MobaDataType) eContainer();
+		if (!datatype.isEnum() || datatype.getSuperType() == null) {
+			return null;
+		}
+
+		MobaDataType superType = datatype.getSuperType();
+		return superType.getEnumAST();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
 	 */
-	public void setSuperType(MobaEnum newSuperType) {
-		MobaEnum oldSuperType = superType;
-		superType = newSuperType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENUM__SUPER_TYPE, oldSuperType,
-					superType));
+	public boolean isSetSuperType() {
+		return basicGetSuperType() != null;
 	}
 
 	/**
@@ -248,9 +231,6 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 			getProperties().clear();
 			getProperties().addAll((Collection<? extends MobaProperty>) newValue);
 			return;
-		case MobaPackage.MOBA_ENUM__SUPER_TYPE:
-			setSuperType((MobaEnum) newValue);
-			return;
 		case MobaPackage.MOBA_ENUM__NAME:
 			setName((String) newValue);
 			return;
@@ -273,9 +253,6 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 		case MobaPackage.MOBA_ENUM__PROPERTIES:
 			getProperties().clear();
 			return;
-		case MobaPackage.MOBA_ENUM__SUPER_TYPE:
-			setSuperType((MobaEnum) null);
-			return;
 		case MobaPackage.MOBA_ENUM__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -297,7 +274,7 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 		case MobaPackage.MOBA_ENUM__PROPERTIES:
 			return properties != null && !properties.isEmpty();
 		case MobaPackage.MOBA_ENUM__SUPER_TYPE:
-			return superType != null;
+			return isSetSuperType();
 		case MobaPackage.MOBA_ENUM__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case MobaPackage.MOBA_ENUM__LITERALS:
@@ -361,32 +338,26 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 
 	@Override
 	public List<MobaEnumLiteral> getAllLiterals() {
-		List<MobaEnumLiteral> result = new ArrayList<>();
-		getAllSuperTypes().stream().forEach(e -> result.addAll(e.getLiterals()));
-		return result;
+		return collectAll(this, MobaEnumLiteral.class);
+	}
+
+	protected <T extends EObject> List<T> collectAll(MobaEnum instance, Class<T> clazz) {
+		List<MobaEnum> types = getAllSuperTypes();
+		// add this instance to the begin of the list
+		types.add(0, this);
+
+		return MobaUtil.getAllFeatures(types, clazz, MobaPackage.Literals.MOBA_ENUM__LITERALS);
 	}
 
 	@Override
 	public List<MobaEnum> getAllSuperTypes() throws RecursionException {
-		List<MobaEnum> result = new ArrayList<>();
-		doGetAllSuperTypes(this, result);
+		List<MobaEnum> result = MobaUtil.getAllSuperTypes(this, MobaPackage.Literals.MOBA_ENUM__SUPER_TYPE);
 		return result;
 	}
 
-	private void doGetAllSuperTypes(MobaEnum type, List<MobaEnum> result) {
-
-		MobaEnum superType = type.getSuperType();
-
-		if (superType == null) {
-			return;
-		}
-
-		if (result.contains(superType)) {
-			throw new RecursionException(type, superType);
-		}
-		result.add(superType);
-
-		doGetAllSuperTypes(superType, result);
+	@Override
+	public List<MobaEnumLiteral> getGenLiterals() {
+		return MobaUtil.getGenFeatures(getAllLiterals(), MobaPackage.Literals.MOBA_ENUM_LITERAL__VALUE);
 	}
 
 } // MobaEnumImpl

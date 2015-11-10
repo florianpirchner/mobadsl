@@ -200,7 +200,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterFractionConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaEnum" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesAble">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaEnum"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaEnum"
+        changeable="false" volatile="true" transient="true" unsettable="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="literals" upperBound="-1"
         eType="#//MobaEnumLiteral" containment="true"/>

@@ -14,12 +14,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaEnum#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaEnum#getName <em>Name</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaEnum#getLiterals
- * <em>Literals</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnum#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnum#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnum#getLiterals <em>Literals</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnum()
@@ -45,17 +42,14 @@ public interface MobaEnum extends MobaApplicationFeature, MobaPropertiesAble {
 	MobaEnum getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaEnum#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.MobaEnum#getSuperType <em>Super Type</em>}' reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Super Type</em>' reference is set.
 	 * @see #getSuperType()
 	 * @generated
 	 */
-	void setSuperType(MobaEnum value);
+	boolean isSetSuperType();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
@@ -75,12 +69,9 @@ public interface MobaEnum extends MobaApplicationFeature, MobaPropertiesAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaEnum#getName <em>Name</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEnum#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -110,6 +101,19 @@ public interface MobaEnum extends MobaApplicationFeature, MobaPropertiesAble {
 	 * @return
 	 */
 	List<MobaEnumLiteral> getAllLiterals();
+	
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaEnumLiteral> getGenLiterals();
 
 	/**
 	 * Returns all super types.

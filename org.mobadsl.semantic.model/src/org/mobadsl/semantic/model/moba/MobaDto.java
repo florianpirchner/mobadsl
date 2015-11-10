@@ -184,11 +184,54 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 
 	/**
 	 * Returns all supertypes for this instance.
+	 * <p>
+	 * For <code>"a" extends "b" extends "c"</code> a list in the order
+	 * <code>[a, b, c]</code> is returned. The highest super type is at the last
+	 * index of the list.
 	 * 
 	 * @return
 	 * @throws RecursionException
 	 *             if a recursion was found
 	 */
 	List<MobaDto> getAllSuperTypes() throws RecursionException;
+
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaDtoFeature> getGenFeatures();
+
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaDtoAttribute> getGenAttributes();
+
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaDtoReference> getGenReferences();
 
 } // MobaDto

@@ -12,22 +12,14 @@ import java.util.List;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getName <em>Name</em>
- * }</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isPrimitive
- * <em>Primitive</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isArray
- * <em>Array</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isDate <em>Date</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString
- * <em>Date Format String</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst
- * <em>Date Format Const</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST
- * <em>Enum AST</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isPrimitive <em>Primitive</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isArray <em>Array</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isDate <em>Date</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString <em>Date Format String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst <em>Date Format Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST <em>Enum AST</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType()
@@ -53,12 +45,9 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#getName <em>Name</em>
-	 * }' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -112,12 +101,9 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	boolean isArray();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#isArray
-	 * <em>Array</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Array</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isArray <em>Array</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Array</em>' attribute.
 	 * @see #isArray()
 	 * @generated
 	 */
@@ -141,12 +127,9 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	boolean isDate();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#isDate <em>Date</em>}
-	 * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Date</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isDate <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Date</em>' attribute.
 	 * @see #isDate()
 	 * @generated
 	 */
@@ -160,7 +143,6 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Date Format String</em>' attribute.
 	 * @see #setDateFormatString(String)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_DateFormatString()
@@ -170,13 +152,10 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	String getDateFormatString();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString
-	 * <em>Date Format String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString <em>Date Format String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Date Format String</em>' attribute.
+	 * @param value the new value of the '<em>Date Format String</em>' attribute.
 	 * @see #getDateFormatString()
 	 * @generated
 	 */
@@ -190,7 +169,6 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Date Format Const</em>' reference.
 	 * @see #setDateFormatConst(MobaConstant)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_DateFormatConst()
@@ -200,13 +178,10 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	MobaConstant getDateFormatConst();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst
-	 * <em>Date Format Const</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst <em>Date Format Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Date Format Const</em>' reference.
+	 * @param value the new value of the '<em>Date Format Const</em>' reference.
 	 * @see #getDateFormatConst()
 	 * @generated
 	 */
@@ -230,27 +205,23 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	MobaDataType getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
 	void setSuperType(MobaDataType value);
 
 	/**
-	 * Returns the value of the '<em><b>Enum AST</b></em>' containment
-	 * reference. <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Enum AST</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Enum AST</em>' containment reference isn't
 	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Enum AST</em>' containment reference.
 	 * @see #setEnumAST(MobaEnum)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_EnumAST()
@@ -260,14 +231,10 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	MobaEnum getEnumAST();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST
-	 * <em>Enum AST</em>}' containment reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST <em>Enum AST</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Enum AST</em>' containment
-	 *            reference.
+	 * @param value the new value of the '<em>Enum AST</em>' containment reference.
 	 * @see #getEnumAST()
 	 * @generated
 	 */
@@ -309,7 +276,7 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	 * @return
 	 */
 	List<MobaConstraint> getAllConstraints();
-
+	
 	/**
 	 * Returns all super types by traversing the {@link #getSuperType()}
 	 * reference to the root element.

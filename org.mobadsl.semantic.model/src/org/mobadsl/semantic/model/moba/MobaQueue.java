@@ -14,9 +14,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType
+ * <em>Super Type</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getFeatures
+ * <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaQueue()
@@ -42,9 +45,12 @@ public interface MobaQueue extends MobaData, MobaPropertiesAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -68,10 +74,13 @@ public interface MobaQueue extends MobaData, MobaPropertiesAble {
 	MobaQueue getSuperType();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType <em>Super Type</em>}' reference.
-	 * <!-- begin-user-doc --> <!--
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType
+	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @param value the new value of the '<em>Super Type</em>' reference.
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
@@ -115,6 +124,32 @@ public interface MobaQueue extends MobaData, MobaPropertiesAble {
 	 * @return
 	 */
 	List<MobaQueueReference> getAllReferences();
+
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaQueueFeature> getGenFeatures();
+
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaQueueReference> getGenReferences();
 
 	/**
 	 * Returns all supertypes for this instance.

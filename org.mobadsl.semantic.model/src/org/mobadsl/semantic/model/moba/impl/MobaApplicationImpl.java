@@ -268,24 +268,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 		return result;
 	}
 
-	// private void doGetAllTemplates(MobaApplication app, List<MobaTemplate>
-	// result) {
-	//
-	// List<MobaTemplate> templates = app.getTemplates();
-	// if (templates.isEmpty()) {
-	// return;
-	// }
-	//
-	// for (MobaTemplate template : templates) {
-	// if (result.contains(template)) {
-	// throw new RecursionException(app, template);
-	// }
-	// result.add(template);
-	//
-	// doGetAllTemplates(template.getTemplate(), result);
-	// }
-	// }
-
 	@Override
 	public List<MobaConstant> getConstants() {
 		return collect(MobaConstant.class);

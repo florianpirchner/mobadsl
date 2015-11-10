@@ -5,12 +5,12 @@ package org.mobadsl.semantic.model.moba.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -25,6 +25,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.RecursionException;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -477,54 +478,42 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 		return collectAll(this, MobaDtoReference.class);
 	}
 
-	@SuppressWarnings("unchecked")
-	protected <T> List<T> collect(Class<T> clazz) {
-		return getFeatures().stream().filter(e -> clazz.isAssignableFrom(e.getClass())).map(e -> (T) e)
-				.collect(Collectors.<T> toList());
+	protected <T extends EObject> List<T> collect(Class<T> clazz) {
+		return MobaUtil.getAllFeatures(this, clazz, MobaPackage.Literals.MOBA_DTO__FEATURES);
 	}
 
-	@SuppressWarnings("unchecked")
-	protected <T> List<T> collectAll(MobaDto instance, Class<T> clazz) {
+	protected <T extends EObject> List<T> collectAll(MobaDto instance, Class<T> clazz) {
 
-		// throws exception if recursive
-		List<MobaDto> superTypes = getAllSuperTypes();
+		List<MobaDto> types = getAllSuperTypes();
+		// add this instance to the begin of the list
+		types.add(0, this);
 
-		List<T> result = new ArrayList<>();
-		// add current
-		result.addAll(instance.getFeatures().stream().filter(e -> clazz.isAssignableFrom(e.getClass())).map(e -> (T) e)
-				.collect(Collectors.<T> toList()));
+		return MobaUtil.getAllFeatures(types, clazz, MobaPackage.Literals.MOBA_DTO__FEATURES);
+	}
 
-		// add supertypes
-		for (MobaDto superType : superTypes) {
-			result.addAll(superType.getFeatures().stream().filter(e -> clazz.isAssignableFrom(e.getClass()))
-					.map(e -> (T) e).collect(Collectors.<T> toList()));
-		}
-
-		return result;
+	protected <T extends EObject> List<T> collectGen(MobaDto instance, Class<T> clazz) {
+		return MobaUtil.getGenFeatures(collectAll(this, clazz), MobaPackage.Literals.MOBA_FEATURE__NAME);
 	}
 
 	@Override
 	public List<MobaDto> getAllSuperTypes() throws RecursionException {
-		List<MobaDto> result = new ArrayList<>();
-		doGetAllSuperTypes(this, result);
-
+		List<MobaDto> result = MobaUtil.getAllSuperTypes(this, MobaPackage.Literals.MOBA_DTO__SUPER_TYPE);
 		return result;
 	}
 
-	private void doGetAllSuperTypes(MobaDto type, List<MobaDto> result) {
-		
-		MobaDto superType = type.getSuperType();
-		
-		if (superType == null) {
-			return;
-		}
-		
-		if (result.contains(superType)) {
-			throw new RecursionException(type, superType);
-		}
-		result.add(superType);
+	@Override
+	public List<MobaDtoFeature> getGenFeatures() {
+		return collectGen(this, MobaDtoFeature.class);
+	}
 
-		doGetAllSuperTypes(superType, result);
+	@Override
+	public List<MobaDtoAttribute> getGenAttributes() {
+		return collectGen(this, MobaDtoAttribute.class);
+	}
+
+	@Override
+	public List<MobaDtoReference> getGenReferences() {
+		return collectGen(this, MobaDtoReference.class);
 	}
 
 } // MobaDtoImpl
