@@ -133,6 +133,26 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_GENERATOR_FEATURE: {
+				MobaGeneratorFeature mobaGeneratorFeature = (MobaGeneratorFeature)theEObject;
+				T result = caseMobaGeneratorFeature(mobaGeneratorFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE: {
+				MobaGeneratorMixinFeature mobaGeneratorMixinFeature = (MobaGeneratorMixinFeature)theEObject;
+				T result = caseMobaGeneratorMixinFeature(mobaGeneratorMixinFeature);
+				if (result == null) result = caseMobaGeneratorFeature(mobaGeneratorMixinFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_GENERATOR_ID_FEATURE: {
+				MobaGeneratorIDFeature mobaGeneratorIDFeature = (MobaGeneratorIDFeature)theEObject;
+				T result = caseMobaGeneratorIDFeature(mobaGeneratorIDFeature);
+				if (result == null) result = caseMobaGeneratorFeature(mobaGeneratorIDFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_DATA_TYPE: {
 				MobaDataType mobaDataType = (MobaDataType)theEObject;
 				T result = caseMobaDataType(mobaDataType);
@@ -513,6 +533,51 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaGenerator(MobaGenerator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generator Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generator Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaGeneratorFeature(MobaGeneratorFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generator Mixin Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generator Mixin Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaGeneratorMixinFeature(MobaGeneratorMixinFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generator ID Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generator ID Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaGeneratorIDFeature(MobaGeneratorIDFeature object) {
 		return null;
 	}
 

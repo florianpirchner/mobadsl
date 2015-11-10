@@ -221,7 +221,6 @@ class MobaValidator extends AbstractMobaValidator {
 			error('''Recursive supertypes for «source.name» --> «superType.name»''', payload,
 				MobaPackage.Literals.MOBA_PAYLOAD__SUPER_TYPE)
 		}
-
 	}
 
 	@Check
@@ -242,4 +241,61 @@ class MobaValidator extends AbstractMobaValidator {
 
 	}
 
+	@Check
+	def checkSettings(MobaApplication application) {
+		var activeFound = false
+		var firstIndex = -1;
+		if (application.settings.size > 1) {
+			for (setting : application.settings) {
+				if (firstIndex == -1) {
+					firstIndex = application.features.indexOf(setting)
+				}
+				if (activeFound && setting.active) {
+					val index = application.features.indexOf(
+						setting)
+					error('''You are using multiple settings. Please define the active attribute for ONLY one setting.''',
+						application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					return
+				}
+				if (!activeFound) {
+					activeFound = setting.
+						active
+				}
+			}
+
+			if (!activeFound) {
+				error('''You are using multiple settings. Please define the #active attribute for one setting.''',
+					application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, firstIndex)
+			}
+		}
+	}
+
+	@Check
+	def checkGenerators(MobaApplication application) {
+		var activeFound = false
+		var firstIndex = -1;
+		if (application.generators.size > 1) {
+			for (generator : application.generators) {
+				if (firstIndex == -1) {
+					firstIndex = application.features.indexOf(generator)
+				}
+				if (activeFound && generator.active) {
+					val index = application.features.indexOf(
+						generator)
+					error('''You are using multiple generators. Please define the active attribute for ONLY one generator.''',
+						application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+					return
+				}
+				if (!activeFound) {
+					activeFound = generator.
+						active
+				}
+			}
+
+			if (!activeFound) {
+				error('''You are using multiple generators. Please define the #active attribute for one generator.''',
+					application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, firstIndex)
+			}
+		}
+	}
 }

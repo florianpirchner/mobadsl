@@ -49,6 +49,24 @@ public interface MobaFactory extends EFactory {
 	MobaGenerator createMobaGenerator();
 
 	/**
+	 * Returns a new object of class '<em>Generator Mixin Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generator Mixin Feature</em>'.
+	 * @generated
+	 */
+	MobaGeneratorMixinFeature createMobaGeneratorMixinFeature();
+
+	/**
+	 * Returns a new object of class '<em>Generator ID Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generator ID Feature</em>'.
+	 * @generated
+	 */
+	MobaGeneratorIDFeature createMobaGeneratorIDFeature();
+
+	/**
 	 * Returns a new object of class '<em>Data Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

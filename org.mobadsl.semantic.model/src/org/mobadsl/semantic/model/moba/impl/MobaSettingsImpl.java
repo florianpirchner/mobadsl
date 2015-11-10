@@ -34,6 +34,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +84,26 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected EList<MobaSettingsFeature> features;
+
+	/**
+	 * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isActive()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ACTIVE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isActive() <em>Active</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isActive()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean active = ACTIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -178,6 +199,27 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isActive() {
+		return active;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActive(boolean newActive) {
+		boolean oldActive = active;
+		active = newActive;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS__ACTIVE, oldActive, active));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -208,6 +250,8 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 				return getName();
 			case MobaPackage.MOBA_SETTINGS__FEATURES:
 				return getFeatures();
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -234,6 +278,9 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 				getFeatures().clear();
 				getFeatures().addAll((Collection<? extends MobaSettingsFeature>)newValue);
 				return;
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				setActive((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -257,6 +304,9 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_SETTINGS__FEATURES:
 				getFeatures().clear();
 				return;
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				setActive(ACTIVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -276,6 +326,8 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MobaPackage.MOBA_SETTINGS__FEATURES:
 				return features != null && !features.isEmpty();
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -321,6 +373,8 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", active: ");
+		result.append(active);
 		result.append(')');
 		return result.toString();
 	}

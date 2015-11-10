@@ -20,43 +20,49 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 	def IScope scope_MobaConstant(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allConstants);
 	}
-	
+
 	def IScope scope_MobaDataType(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allDataTypes);
 	}
-	
+
 	def IScope scope_MobaData(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allDatas);
 	}
-	
+
 	def IScope scope_MobaDto(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allDtos);
 	}
-	
+
 	def IScope scope_MobaPayload(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allPayloads);
 	}
-	
+
 	def IScope scope_MobaQueue(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allQueues);
 	}
-	
+
 	def IScope scope_MobaSettings(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allSettings);
 	}
-	
+
 	def IScope scope_MobaService(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allServices);
 	}
-	
+
 	def IScope scope_MobaRestCrud(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allRestCruds);
 	}
-	
+
 	def IScope scope_MobaRestCustom(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allRestCustoms);
 	}
-	
-	
+
+	def IScope scope_MobaGenerator(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allGenerators);
+	}
+
+//	def IScope scope_MobaApplication_usedGenerator(MobaApplication ctx, EReference ref) {
+//		return super.getScope(ctx, ref);
+//	}
 
 }

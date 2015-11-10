@@ -37,6 +37,8 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isPrimitive <em>Primitive</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isArray <em>Array</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isDate <em>Date</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isTime <em>Time</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatString <em>Date Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getSuperType <em>Super Type</em>}</li>
@@ -136,6 +138,46 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected boolean date = DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean TIME_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean time = TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isTimestamp() <em>Timestamp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTimestamp()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean TIMESTAMP_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isTimestamp() <em>Timestamp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isTimestamp()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDateFormatString() <em>Date Format String</em>}' attribute.
@@ -430,6 +472,48 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isTime() {
+		return time;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTime(boolean newTime) {
+		boolean oldTime = time;
+		time = newTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__TIME, oldTime, time));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isTimestamp() {
+		return timestamp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTimestamp(boolean newTimestamp) {
+		boolean oldTimestamp = timestamp;
+		timestamp = newTimestamp;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__TIMESTAMP, oldTimestamp, timestamp));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -465,6 +549,10 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return isArray();
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				return isDate();
+			case MobaPackage.MOBA_DATA_TYPE__TIME:
+				return isTime();
+			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
+				return isTimestamp();
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				return getDateFormatString();
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
@@ -507,6 +595,12 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				setDate((Boolean)newValue);
 				return;
+			case MobaPackage.MOBA_DATA_TYPE__TIME:
+				setTime((Boolean)newValue);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
+				setTimestamp((Boolean)newValue);
+				return;
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				setDateFormatString((String)newValue);
 				return;
@@ -548,6 +642,12 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_DATA_TYPE__TIME:
+				setTime(TIME_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
+				setTimestamp(TIMESTAMP_EDEFAULT);
+				return;
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				setDateFormatString(DATE_FORMAT_STRING_EDEFAULT);
 				return;
@@ -583,6 +683,10 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return array != ARRAY_EDEFAULT;
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				return date != DATE_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__TIME:
+				return time != TIME_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
+				return timestamp != TIMESTAMP_EDEFAULT;
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				return DATE_FORMAT_STRING_EDEFAULT == null ? dateFormatString != null : !DATE_FORMAT_STRING_EDEFAULT.equals(dateFormatString);
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
@@ -654,6 +758,10 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		result.append(array);
 		result.append(", date: ");
 		result.append(date);
+		result.append(", time: ");
+		result.append(time);
+		result.append(", timestamp: ");
+		result.append(timestamp);
 		result.append(", dateFormatString: ");
 		result.append(dateFormatString);
 		result.append(')');

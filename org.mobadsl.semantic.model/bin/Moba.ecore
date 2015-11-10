@@ -11,14 +11,27 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="template" eType="#//MobaApplication"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaGenerator" eSuperTypes="#//MobaApplicationFeature">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//MobaGeneratorFeature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaGeneratorFeature" abstract="true"
+      interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaGeneratorMixinFeature" eSuperTypes="#//MobaGeneratorFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorRef" eType="#//MobaGenerator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaGeneratorIDFeature" eSuperTypes="#//MobaGeneratorFeature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatorConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaDataType" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesAble #//MobaConstraintable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="array" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateFormatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dateFormatConst" eType="#//MobaConstant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaDataType"/>
@@ -53,6 +66,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//MobaSettingsFeature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaCache">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheTypeString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

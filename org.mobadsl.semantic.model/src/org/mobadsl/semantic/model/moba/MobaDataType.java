@@ -16,6 +16,8 @@ import java.util.List;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isPrimitive <em>Primitive</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isArray <em>Array</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isDate <em>Date</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isTime <em>Time</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString <em>Date Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType <em>Super Type</em>}</li>
@@ -239,6 +241,58 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	 * @generated
 	 */
 	void setEnumAST(MobaEnum value);
+
+	/**
+	 * Returns the value of the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Time</em>' attribute.
+	 * @see #setTime(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_Time()
+	 * @model
+	 * @generated
+	 */
+	boolean isTime();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isTime <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Time</em>' attribute.
+	 * @see #isTime()
+	 * @generated
+	 */
+	void setTime(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Timestamp</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Timestamp</em>' attribute.
+	 * @see #setTimestamp(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_Timestamp()
+	 * @model
+	 * @generated
+	 */
+	boolean isTimestamp();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isTimestamp <em>Timestamp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Timestamp</em>' attribute.
+	 * @see #isTimestamp()
+	 * @generated
+	 */
+	void setTimestamp(boolean value);
 
 	/**
 	 * Returns the dateformat. From {@link #getDateFormatString()} or

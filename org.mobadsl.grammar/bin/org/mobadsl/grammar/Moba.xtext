@@ -18,11 +18,22 @@ MobaTemplate:
 	'use template' template=[MobaApplication];
 
 MobaGenerator:
-	'use generator' (generatorString=STRING | generatorConst=[MobaConstant]);
+	(active?='active')? 'generator' name=ID '{'
+	features+=MobaGeneratorFeature*
+	'}';
+
+MobaGeneratorFeature:
+	MobaGeneratorIDFeature | MobaGeneratorMixinFeature;
+
+MobaGeneratorIDFeature:
+	'id' '=' (generatorConst=[MobaConstant] | generatorString=STRING);
+
+MobaGeneratorMixinFeature:
+	'mixin' generatorRef=[MobaGenerator];
 
 MobaDataType:
 	'datatype' name=ID ('extends' superType=[MobaDataType])? ((primitive?='isPrimitive')? & (array?='isArray')? &
-	((date?='isDate' | date?='isTime' | date?='isTimestamp')
+	((date?='isDate' | time?='isTime' | timestamp?='isTimestamp')
 	('(' (dateFormatString=STRING | dateFormatConst=[MobaConstant]) ')')?)?
 	& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
 	& (enumAST=MobaEnum)?) MobaPropertiesAble?;
@@ -52,7 +63,7 @@ MobaData:
 
 MobaSettings:
 	{MobaSettings}
-	'settings' name=ID ('extends' superType=[MobaSettings])? MobaPropertiesAble? '{'
+	(active?='active')? 'settings' name=ID ('extends' superType=[MobaSettings])? MobaPropertiesAble? '{'
 	features+=MobaSettingsFeature*
 	'}';
 

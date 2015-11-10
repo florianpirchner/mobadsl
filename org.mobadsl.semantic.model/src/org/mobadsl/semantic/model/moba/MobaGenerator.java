@@ -2,6 +2,10 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import java.util.List;
+
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Generator</b></em>'. <!-- end-user-doc -->
@@ -10,8 +14,12 @@ package org.mobadsl.semantic.model.moba;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getGeneratorString <em>Generator String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getGeneratorConst <em>Generator Const</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName
+ * <em>Name</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getFeatures
+ * <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#isActive
+ * <em>Active</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator()
@@ -20,63 +28,116 @@ package org.mobadsl.semantic.model.moba;
  */
 public interface MobaGenerator extends MobaApplicationFeature {
 	/**
-	 * Returns the value of the '<em><b>Generator String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Generator String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generator String</em>' attribute.
-	 * @see #setGeneratorString(String)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator_GeneratorString()
+	 * 
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator_Name()
 	 * @model
 	 * @generated
 	 */
-	String getGeneratorString();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaGenerator#getGeneratorString <em>Generator String</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @param value the new value of the '<em>Generator String</em>' attribute.
-	 * @see #getGeneratorString()
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaGenerator#getName
+	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setGeneratorString(String value);
+	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Generator Const</b></em>' reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Features</b></em>' containment reference
+	 * list. The list contents are of type
+	 * {@link org.mobadsl.semantic.model.moba.MobaGeneratorFeature}. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Generator Const</em>' reference isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Features</em>' containment reference list
+	 * isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generator Const</em>' reference.
-	 * @see #setGeneratorConst(MobaConstant)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator_GeneratorConst()
+	 * 
+	 * @return the value of the '<em>Features</em>' containment reference list.
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator_Features()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MobaGeneratorFeature> getFeatures();
+
+	/**
+	 * Returns the value of the '<em><b>Active</b></em>' attribute. <!--
+	 * begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Active</em>' attribute isn't clear, there
+	 * really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * 
+	 * @return the value of the '<em>Active</em>' attribute.
+	 * @see #setActive(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator_Active()
 	 * @model
 	 * @generated
 	 */
-	MobaConstant getGeneratorConst();
+	boolean isActive();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaGenerator#getGeneratorConst <em>Generator Const</em>}' reference.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @param value the new value of the '<em>Generator Const</em>' reference.
-	 * @see #getGeneratorConst()
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaGenerator#isActive
+	 * <em>Active</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Active</em>' attribute.
+	 * @see #isActive()
 	 * @generated
 	 */
-	void setGeneratorConst(MobaConstant value);
+	void setActive(boolean value);
 
 	/**
-	 * Returns the generator ID. From {@link #getGeneratorString()} or
-	 * {@link #getGeneratorConst()}
+	 * Returns all generator features including the features of all mixins and
+	 * the mixins of mixins. But the mixing-feature itself will be not added. So
+	 * only generatorID-features are left.<br>
+	 * A mixin will only become processed once to avoid cycles.
 	 * 
 	 * @return
 	 */
-	String getGeneratorId();
+	List<MobaGeneratorIDFeature> getAllGeneratorIdFeatures();
+
+	/**
+	 * Returns all generator features including the features of all mixins and
+	 * the mixins of mixins. But the mixing-feature itself will be not added. So
+	 * only generatorID-features are left.
+	 * 
+	 * @return
+	 */
+	List<MobaGeneratorMixinFeature> getAllGeneratoMixinFeatures();
+
+	/**
+	 * Returns all generator features including the features of all mixins and
+	 * the mixins of mixins. But the mixing-feature itself will be not added. So
+	 * only generatorID-features are left.
+	 * 
+	 * @return
+	 */
+	List<MobaGeneratorFeature> getAllFeatures();
+
+	/**
+	 * Returns all generator ids from features including the features of all
+	 * mixins and the mixins of mixins.
+	 * 
+	 * @return
+	 */
+	List<String> getAllGeneratorIds();
 
 } // MobaGenerator

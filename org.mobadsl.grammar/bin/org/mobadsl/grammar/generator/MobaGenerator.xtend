@@ -4,6 +4,7 @@
 package org.mobadsl.grammar.generator
 
 import com.google.inject.Inject
+import java.util.Collections
 import java.util.List
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
@@ -37,7 +38,10 @@ class MobaGenerator extends AbstractGenerator {
 
 	def List<String> collectGeneratorIds(Resource resource) {
 		val MobaApplication application = resource.contents.get(0) as MobaApplication
-		return application.allGenerators.map[it.generatorId]
+		if (application == null) {
+			return Collections.emptyList
+		}
+		return application.activeGenerator?.allGeneratorIds
 	}
 
 }

@@ -28,6 +28,8 @@ import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
+import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
 import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
@@ -101,6 +103,12 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case MobaPackage.MOBA_GENERATOR:
 				sequence_MobaGenerator(context, (MobaGenerator) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_GENERATOR_ID_FEATURE:
+				sequence_MobaGeneratorIDFeature(context, (MobaGeneratorIDFeature) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE:
+				sequence_MobaGeneratorMixinFeature(context, (MobaGeneratorMixinFeature) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_MAX_CONSTRAINT:
 				sequence_MobaMaxConstraint(context, (MobaMaxConstraint) semanticObject); 
@@ -225,7 +233,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             (primitive?='isPrimitive' | array?='isArray' | enumAST=MobaEnum)? 
 	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 
-	 *             ((date?='isDate' | date?='isTime' | date?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
+	 *             ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
 	 *         )+ 
 	 *         (properties+=MobaProperty properties+=MobaProperty*)?
 	 *     )
@@ -359,11 +367,43 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     MobaGeneratorFeature returns MobaGeneratorIDFeature
+	 *     MobaGeneratorIDFeature returns MobaGeneratorIDFeature
+	 *
+	 * Constraint:
+	 *     (generatorConst=[MobaConstant|ID] | generatorString=STRING)
+	 */
+	protected void sequence_MobaGeneratorIDFeature(ISerializationContext context, MobaGeneratorIDFeature semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaGeneratorFeature returns MobaGeneratorMixinFeature
+	 *     MobaGeneratorMixinFeature returns MobaGeneratorMixinFeature
+	 *
+	 * Constraint:
+	 *     generatorRef=[MobaGenerator|ID]
+	 */
+	protected void sequence_MobaGeneratorMixinFeature(ISerializationContext context, MobaGeneratorMixinFeature semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MobaApplicationFeature returns MobaGenerator
 	 *     MobaGenerator returns MobaGenerator
 	 *
 	 * Constraint:
-	 *     (generatorString=STRING | generatorConst=[MobaConstant|ID])
+	 *     (active?='active'? name=ID features+=MobaGeneratorFeature*)
 	 */
 	protected void sequence_MobaGenerator(ISerializationContext context, MobaGenerator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -604,7 +644,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaSettings returns MobaSettings
 	 *
 	 * Constraint:
-	 *     (name=ID superType=[MobaSettings|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaSettingsFeature*)
+	 *     (active?='active'? name=ID superType=[MobaSettings|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaSettingsFeature*)
 	 */
 	protected void sequence_MobaPropertiesAble_MobaSettings(ISerializationContext context, MobaSettings semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

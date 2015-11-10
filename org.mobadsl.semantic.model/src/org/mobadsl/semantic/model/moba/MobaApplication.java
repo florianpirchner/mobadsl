@@ -14,8 +14,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+ * <em>Name</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
+ * <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
@@ -41,9 +43,12 @@ public interface MobaApplication extends MobaPropertiesAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -163,7 +168,6 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 */
 	List<MobaTemplate> getTemplates();
 
-	
 	// all features
 	List<MobaApplicationFeature> getAllFeatures();
 
@@ -263,6 +267,18 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 */
 	List<MobaTemplate> getAllTemplates();
 
-	
-	
+	/**
+	 * Returns the active generator.
+	 * 
+	 * @return
+	 */
+	MobaGenerator getActiveGenerator();
+
+	/**
+	 * Returns the active settings.
+	 * 
+	 * @return
+	 */
+	MobaSettings getActiveSettings();
+
 } // MobaApplication

@@ -262,42 +262,200 @@ ruleMobaGenerator returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='use generator'
+		(
+			(
+				lv_active_0_0='active'
+				{
+					newLeafNode(lv_active_0_0, grammarAccess.getMobaGeneratorAccess().getActiveActiveKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeneratorRule());
+					}
+					setWithLastConsumed($current, "active", true, "active");
+				}
+			)
+		)?
+		otherlv_1='generator'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorAccess().getUseGeneratorKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorAccess().getGeneratorKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_ID
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getMobaGeneratorAccess().getNameIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeneratorRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getMobaGeneratorAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMobaGeneratorAccess().getFeaturesMobaGeneratorFeatureParserRuleCall_4_0());
+				}
+				lv_features_4_0=ruleMobaGeneratorFeature
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMobaGeneratorRule());
+					}
+					add(
+						$current,
+						"features",
+						lv_features_4_0,
+						"org.mobadsl.grammar.Moba.MobaGeneratorFeature");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='}'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getMobaGeneratorAccess().getRightCurlyBracketKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleMobaGeneratorFeature
+entryRuleMobaGeneratorFeature returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaGeneratorFeatureRule()); }
+	iv_ruleMobaGeneratorFeature=ruleMobaGeneratorFeature
+	{ $current=$iv_ruleMobaGeneratorFeature.current; }
+	EOF;
+
+// Rule MobaGeneratorFeature
+ruleMobaGeneratorFeature returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getMobaGeneratorFeatureAccess().getMobaGeneratorIDFeatureParserRuleCall_0());
+		}
+		this_MobaGeneratorIDFeature_0=ruleMobaGeneratorIDFeature
+		{
+			$current = $this_MobaGeneratorIDFeature_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaGeneratorFeatureAccess().getMobaGeneratorMixinFeatureParserRuleCall_1());
+		}
+		this_MobaGeneratorMixinFeature_1=ruleMobaGeneratorMixinFeature
+		{
+			$current = $this_MobaGeneratorMixinFeature_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleMobaGeneratorIDFeature
+entryRuleMobaGeneratorIDFeature returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaGeneratorIDFeatureRule()); }
+	iv_ruleMobaGeneratorIDFeature=ruleMobaGeneratorIDFeature
+	{ $current=$iv_ruleMobaGeneratorIDFeature.current; }
+	EOF;
+
+// Rule MobaGeneratorIDFeature
+ruleMobaGeneratorIDFeature returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='id'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getIdKeyword_0());
+		}
+		otherlv_1='='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorIDFeatureAccess().getEqualsSignKeyword_1());
 		}
 		(
 			(
 				(
-					lv_generatorString_1_0=RULE_STRING
-					{
-						newLeafNode(lv_generatorString_1_0, grammarAccess.getMobaGeneratorAccess().getGeneratorStringSTRINGTerminalRuleCall_1_0_0());
-					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getMobaGeneratorRule());
+							$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
 						}
-						setWithLastConsumed(
-							$current,
-							"generatorString",
-							lv_generatorString_1_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+					otherlv_2=RULE_ID
+					{
+						newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorConstMobaConstantCrossReference_2_0_0());
 					}
 				)
 			)
 			    |
 			(
 				(
+					lv_generatorString_3_0=RULE_STRING
+					{
+						newLeafNode(lv_generatorString_3_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorStringSTRINGTerminalRuleCall_2_1_0());
+					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getMobaGeneratorRule());
+							$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
 						}
-					}
-					otherlv_2=RULE_ID
-					{
-						newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorAccess().getGeneratorConstMobaConstantCrossReference_1_1_0());
+						setWithLastConsumed(
+							$current,
+							"generatorString",
+							lv_generatorString_3_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaGeneratorMixinFeature
+entryRuleMobaGeneratorMixinFeature returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaGeneratorMixinFeatureRule()); }
+	iv_ruleMobaGeneratorMixinFeature=ruleMobaGeneratorMixinFeature
+	{ $current=$iv_ruleMobaGeneratorMixinFeature.current; }
+	EOF;
+
+// Rule MobaGeneratorMixinFeature
+ruleMobaGeneratorMixinFeature returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='mixin'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorMixinFeatureAccess().getMixinKeyword_0());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeneratorMixinFeatureRule());
+					}
+				}
+				otherlv_1=RULE_ID
+				{
+					newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorCrossReference_1_0());
+				}
 			)
 		)
 	)
@@ -436,30 +594,30 @@ ruleMobaDataType returns [EObject current=null]
 									    |
 									(
 										(
-											lv_date_8_0='isTime'
+											lv_time_8_0='isTime'
 											{
-												newLeafNode(lv_date_8_0, grammarAccess.getMobaDataTypeAccess().getDateIsTimeKeyword_3_2_0_1_0());
+												newLeafNode(lv_time_8_0, grammarAccess.getMobaDataTypeAccess().getTimeIsTimeKeyword_3_2_0_1_0());
 											}
 											{
 												if ($current==null) {
 													$current = createModelElement(grammarAccess.getMobaDataTypeRule());
 												}
-												setWithLastConsumed($current, "date", true, "isTime");
+												setWithLastConsumed($current, "time", true, "isTime");
 											}
 										)
 									)
 									    |
 									(
 										(
-											lv_date_9_0='isTimestamp'
+											lv_timestamp_9_0='isTimestamp'
 											{
-												newLeafNode(lv_date_9_0, grammarAccess.getMobaDataTypeAccess().getDateIsTimestampKeyword_3_2_0_2_0());
+												newLeafNode(lv_timestamp_9_0, grammarAccess.getMobaDataTypeAccess().getTimestampIsTimestampKeyword_3_2_0_2_0());
 											}
 											{
 												if ($current==null) {
 													$current = createModelElement(grammarAccess.getMobaDataTypeRule());
 												}
-												setWithLastConsumed($current, "date", true, "isTimestamp");
+												setWithLastConsumed($current, "timestamp", true, "isTimestamp");
 											}
 										)
 									)
@@ -1197,15 +1355,29 @@ ruleMobaSettings returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='settings'
+		(
+			(
+				lv_active_1_0='active'
+				{
+					newLeafNode(lv_active_1_0, grammarAccess.getMobaSettingsAccess().getActiveActiveKeyword_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaSettingsRule());
+					}
+					setWithLastConsumed($current, "active", true, "active");
+				}
+			)
+		)?
+		otherlv_2='settings'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getMobaSettingsAccess().getSettingsKeyword_1());
+			newLeafNode(otherlv_2, grammarAccess.getMobaSettingsAccess().getSettingsKeyword_2());
 		}
 		(
 			(
-				lv_name_2_0=RULE_ID
+				lv_name_3_0=RULE_ID
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getMobaSettingsAccess().getNameIDTerminalRuleCall_2_0());
+					newLeafNode(lv_name_3_0, grammarAccess.getMobaSettingsAccess().getNameIDTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -1214,15 +1386,15 @@ ruleMobaSettings returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_2_0,
+						lv_name_3_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
 		(
-			otherlv_3='extends'
+			otherlv_4='extends'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getMobaSettingsAccess().getExtendsKeyword_3_0());
+				newLeafNode(otherlv_4, grammarAccess.getMobaSettingsAccess().getExtendsKeyword_4_0());
 			}
 			(
 				(
@@ -1231,9 +1403,9 @@ ruleMobaSettings returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getMobaSettingsRule());
 						}
 					}
-					otherlv_4=RULE_ID
+					otherlv_5=RULE_ID
 					{
-						newLeafNode(otherlv_4, grammarAccess.getMobaSettingsAccess().getSuperTypeMobaSettingsCrossReference_3_1_0());
+						newLeafNode(otherlv_5, grammarAccess.getMobaSettingsAccess().getSuperTypeMobaSettingsCrossReference_4_1_0());
 					}
 				)
 			)
@@ -1243,24 +1415,24 @@ ruleMobaSettings returns [EObject current=null]
 				if ($current==null) {
 					$current = createModelElement(grammarAccess.getMobaSettingsRule());
 				}
-				newCompositeNode(grammarAccess.getMobaSettingsAccess().getMobaPropertiesAbleParserRuleCall_4());
+				newCompositeNode(grammarAccess.getMobaSettingsAccess().getMobaPropertiesAbleParserRuleCall_5());
 			}
-			this_MobaPropertiesAble_5=ruleMobaPropertiesAble[$current]
+			this_MobaPropertiesAble_6=ruleMobaPropertiesAble[$current]
 			{
-				$current = $this_MobaPropertiesAble_5.current;
+				$current = $this_MobaPropertiesAble_6.current;
 				afterParserOrEnumRuleCall();
 			}
 		)?
-		otherlv_6='{'
+		otherlv_7='{'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getMobaSettingsAccess().getLeftCurlyBracketKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getMobaSettingsAccess().getLeftCurlyBracketKeyword_6());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobaSettingsAccess().getFeaturesMobaSettingsFeatureParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getMobaSettingsAccess().getFeaturesMobaSettingsFeatureParserRuleCall_7_0());
 				}
-				lv_features_7_0=ruleMobaSettingsFeature
+				lv_features_8_0=ruleMobaSettingsFeature
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMobaSettingsRule());
@@ -1268,15 +1440,15 @@ ruleMobaSettings returns [EObject current=null]
 					add(
 						$current,
 						"features",
-						lv_features_7_0,
+						lv_features_8_0,
 						"org.mobadsl.grammar.Moba.MobaSettingsFeature");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_8='}'
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getMobaSettingsAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_9, grammarAccess.getMobaSettingsAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
 ;

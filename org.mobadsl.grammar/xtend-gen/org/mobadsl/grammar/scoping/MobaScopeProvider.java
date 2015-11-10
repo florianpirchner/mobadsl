@@ -13,6 +13,7 @@ import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaRestCrud;
@@ -76,5 +77,10 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_MobaRestCustom(final MobaApplication ctx, final EReference ref) {
     List<MobaRestCustom> _allRestCustoms = ctx.getAllRestCustoms();
     return Scopes.scopeFor(_allRestCustoms);
+  }
+  
+  public IScope scope_MobaGenerator(final MobaApplication ctx, final EReference ref) {
+    List<MobaGenerator> _allGenerators = ctx.getAllGenerators();
+    return Scopes.scopeFor(_allGenerators);
   }
 }

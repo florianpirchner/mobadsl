@@ -123,6 +123,18 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaGeneratorAdapter();
 			}
 			@Override
+			public Adapter caseMobaGeneratorFeature(MobaGeneratorFeature object) {
+				return createMobaGeneratorFeatureAdapter();
+			}
+			@Override
+			public Adapter caseMobaGeneratorMixinFeature(MobaGeneratorMixinFeature object) {
+				return createMobaGeneratorMixinFeatureAdapter();
+			}
+			@Override
+			public Adapter caseMobaGeneratorIDFeature(MobaGeneratorIDFeature object) {
+				return createMobaGeneratorIDFeatureAdapter();
+			}
+			@Override
 			public Adapter caseMobaDataType(MobaDataType object) {
 				return createMobaDataTypeAdapter();
 			}
@@ -363,6 +375,48 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaGeneratorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaGeneratorFeature <em>Generator Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorFeature
+	 * @generated
+	 */
+	public Adapter createMobaGeneratorFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature <em>Generator Mixin Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature
+	 * @generated
+	 */
+	public Adapter createMobaGeneratorMixinFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature <em>Generator ID Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
+	 * @generated
+	 */
+	public Adapter createMobaGeneratorIDFeatureAdapter() {
 		return null;
 	}
 

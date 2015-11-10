@@ -3,7 +3,9 @@
  */
 package org.mobadsl.grammar.generator;
 
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
+import java.util.Collections;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -11,8 +13,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.ListExtensions;
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 
@@ -48,10 +48,15 @@ public class MobaGenerator extends AbstractGenerator {
     EList<EObject> _contents = resource.getContents();
     EObject _get = _contents.get(0);
     final MobaApplication application = ((MobaApplication) _get);
-    List<org.mobadsl.semantic.model.moba.MobaGenerator> _allGenerators = application.getAllGenerators();
-    final Function1<org.mobadsl.semantic.model.moba.MobaGenerator, String> _function = (org.mobadsl.semantic.model.moba.MobaGenerator it) -> {
-      return it.getGeneratorId();
-    };
-    return ListExtensions.<org.mobadsl.semantic.model.moba.MobaGenerator, String>map(_allGenerators, _function);
+    boolean _equals = Objects.equal(application, null);
+    if (_equals) {
+      return Collections.<String>emptyList();
+    }
+    org.mobadsl.semantic.model.moba.MobaGenerator _activeGenerator = application.getActiveGenerator();
+    List<String> _allGeneratorIds = null;
+    if (_activeGenerator!=null) {
+      _allGeneratorIds=_activeGenerator.getAllGeneratorIds();
+    }
+    return _allGeneratorIds;
   }
 }

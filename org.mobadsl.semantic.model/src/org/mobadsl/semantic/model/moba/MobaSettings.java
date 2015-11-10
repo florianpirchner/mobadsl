@@ -14,12 +14,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#getName <em>Name</em>
- * }</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#getFeatures
- * <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettings#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaSettings()
@@ -45,13 +43,10 @@ public interface MobaSettings extends MobaApplicationFeature, MobaPropertiesAble
 	MobaSettings getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaSettings#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaSettings#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
@@ -75,12 +70,9 @@ public interface MobaSettings extends MobaApplicationFeature, MobaPropertiesAble
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaSettings#getName <em>Name</em>
-	 * }' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaSettings#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -103,6 +95,32 @@ public interface MobaSettings extends MobaApplicationFeature, MobaPropertiesAble
 	 * @generated
 	 */
 	EList<MobaSettingsFeature> getFeatures();
+
+	/**
+	 * Returns the value of the '<em><b>Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Active</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Active</em>' attribute.
+	 * @see #setActive(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaSettings_Active()
+	 * @model
+	 * @generated
+	 */
+	boolean isActive();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaSettings#isActive <em>Active</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Active</em>' attribute.
+	 * @see #isActive()
+	 * @generated
+	 */
+	void setActive(boolean value);
 
 	/**
 	 * Returns the values for the current instance. Excluding the "super types".

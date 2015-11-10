@@ -91,6 +91,8 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_APPLICATION: return createMobaApplication();
 			case MobaPackage.MOBA_TEMPLATE: return createMobaTemplate();
 			case MobaPackage.MOBA_GENERATOR: return createMobaGenerator();
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE: return createMobaGeneratorMixinFeature();
+			case MobaPackage.MOBA_GENERATOR_ID_FEATURE: return createMobaGeneratorIDFeature();
 			case MobaPackage.MOBA_DATA_TYPE: return createMobaDataType();
 			case MobaPackage.MOBA_CONSTANT: return createMobaConstant();
 			case MobaPackage.MOBA_CONSTANT_VALUE: return createMobaConstantValue();
@@ -190,6 +192,26 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaGenerator createMobaGenerator() {
 		MobaGeneratorImpl mobaGenerator = new MobaGeneratorImpl();
 		return mobaGenerator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaGeneratorMixinFeature createMobaGeneratorMixinFeature() {
+		MobaGeneratorMixinFeatureImpl mobaGeneratorMixinFeature = new MobaGeneratorMixinFeatureImpl();
+		return mobaGeneratorMixinFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaGeneratorIDFeature createMobaGeneratorIDFeature() {
+		MobaGeneratorIDFeatureImpl mobaGeneratorIDFeature = new MobaGeneratorIDFeatureImpl();
+		return mobaGeneratorIDFeature;
 	}
 
 	/**

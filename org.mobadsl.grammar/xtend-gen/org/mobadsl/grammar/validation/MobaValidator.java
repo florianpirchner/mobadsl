@@ -23,6 +23,7 @@ import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
@@ -394,6 +395,96 @@ public class MobaValidator extends AbstractMobaValidator {
           MobaPackage.Literals.MOBA_QUEUE__SUPER_TYPE);
       } else {
         throw Exceptions.sneakyThrow(_t);
+      }
+    }
+  }
+  
+  @Check
+  public void checkSettings(final MobaApplication application) {
+    boolean activeFound = false;
+    int firstIndex = (-1);
+    List<MobaSettings> _settings = application.getSettings();
+    int _size = _settings.size();
+    boolean _greaterThan = (_size > 1);
+    if (_greaterThan) {
+      List<MobaSettings> _settings_1 = application.getSettings();
+      for (final MobaSettings setting : _settings_1) {
+        {
+          if ((firstIndex == (-1))) {
+            EList<MobaApplicationFeature> _features = application.getFeatures();
+            int _indexOf = _features.indexOf(setting);
+            firstIndex = _indexOf;
+          }
+          boolean _and = false;
+          if (!activeFound) {
+            _and = false;
+          } else {
+            boolean _isActive = setting.isActive();
+            _and = _isActive;
+          }
+          if (_and) {
+            EList<MobaApplicationFeature> _features_1 = application.getFeatures();
+            final int index = _features_1.indexOf(setting);
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("You are using multiple settings. Please define the active attribute for ONLY one setting.");
+            this.error(_builder.toString(), application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            return;
+          }
+          if ((!activeFound)) {
+            boolean _isActive_1 = setting.isActive();
+            activeFound = _isActive_1;
+          }
+        }
+      }
+      if ((!activeFound)) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("You are using multiple settings. Please define the #active attribute for one setting.");
+        this.error(_builder.toString(), application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, firstIndex);
+      }
+    }
+  }
+  
+  @Check
+  public void checkGenerators(final MobaApplication application) {
+    boolean activeFound = false;
+    int firstIndex = (-1);
+    List<MobaGenerator> _generators = application.getGenerators();
+    int _size = _generators.size();
+    boolean _greaterThan = (_size > 1);
+    if (_greaterThan) {
+      List<MobaGenerator> _generators_1 = application.getGenerators();
+      for (final MobaGenerator generator : _generators_1) {
+        {
+          if ((firstIndex == (-1))) {
+            EList<MobaApplicationFeature> _features = application.getFeatures();
+            int _indexOf = _features.indexOf(generator);
+            firstIndex = _indexOf;
+          }
+          boolean _and = false;
+          if (!activeFound) {
+            _and = false;
+          } else {
+            boolean _isActive = generator.isActive();
+            _and = _isActive;
+          }
+          if (_and) {
+            EList<MobaApplicationFeature> _features_1 = application.getFeatures();
+            final int index = _features_1.indexOf(generator);
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("You are using multiple generators. Please define the active attribute for ONLY one generator.");
+            this.error(_builder.toString(), application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index);
+            return;
+          }
+          if ((!activeFound)) {
+            boolean _isActive_1 = generator.isActive();
+            activeFound = _isActive_1;
+          }
+        }
+      }
+      if ((!activeFound)) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("You are using multiple generators. Please define the #active attribute for one generator.");
+        this.error(_builder.toString(), application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, firstIndex);
       }
     }
   }
