@@ -120,7 +120,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaNullConstraintAccess().getGroup(), "rule__MobaNullConstraint__Group__0");
 					put(grammarAccess.getMobaNotNullConstraintAccess().getGroup(), "rule__MobaNotNullConstraint__Group__0");
 					put(grammarAccess.getMobaApplicationAccess().getNameAssignment_1(), "rule__MobaApplication__NameAssignment_1");
-					put(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_3(), "rule__MobaApplication__FeaturesAssignment_3");
+					put(grammarAccess.getMobaApplicationAccess().getVersionAssignment_3(), "rule__MobaApplication__VersionAssignment_3");
+					put(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_5(), "rule__MobaApplication__FeaturesAssignment_5");
 					put(grammarAccess.getMobaTemplateAccess().getTemplateAssignment_1_0(), "rule__MobaTemplate__TemplateAssignment_1_0");
 					put(grammarAccess.getMobaTemplateAccess().getDownloadTemplateAssignment_1_1(), "rule__MobaTemplate__DownloadTemplateAssignment_1_1");
 					put(grammarAccess.getMobaGeneratorAccess().getActiveAssignment_0(), "rule__MobaGenerator__ActiveAssignment_0");

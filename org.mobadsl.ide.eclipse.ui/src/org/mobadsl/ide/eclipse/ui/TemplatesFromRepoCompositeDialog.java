@@ -113,8 +113,8 @@ public class TemplatesFromRepoCompositeDialog extends Dialog {
 					return index.getName() + ":" + index.getVersion() + " - " + index.getDescription();
 				} else if (element instanceof MobaIndexEntry) {
 					MobaIndexEntry entry = (MobaIndexEntry) element;
-					return templateHelper.getFileName(entry) + ":" + entry.getVersion() + " - "
-							+ entry.getDescription();
+					return templateHelper.getFileName(entry) + ":" + entry.getTemplateVersion() + " - "
+							+ entry.getTemplateDescription();
 				} else if (element instanceof URI) {
 					return element.toString();
 				}

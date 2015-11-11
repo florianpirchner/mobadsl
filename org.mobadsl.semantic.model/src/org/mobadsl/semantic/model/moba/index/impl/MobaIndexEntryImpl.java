@@ -3,14 +3,12 @@
 package org.mobadsl.semantic.model.moba.index.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
 import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +19,10 @@ import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getRelativePath <em>Relative Path</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getTemplateId <em>Template Id</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getTemplateName <em>Template Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getTemplateDescription <em>Template Description</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl#getTemplateVersion <em>Template Version</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,64 +49,74 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	protected String relativePath = RELATIVE_PATH_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getTemplateId() <em>Template Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getTemplateId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String TEMPLATE_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getTemplateName() <em>Template Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getTemplateName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected static final String TEMPLATE_NAME_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The cached value of the '{@link #getTemplateName() <em>Template Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getTemplateName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
+	protected String templateName = TEMPLATE_NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The default value of the '{@link #getTemplateDescription() <em>Template Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getTemplateDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected String description = DESCRIPTION_EDEFAULT;
+	protected static final String TEMPLATE_DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * The cached value of the '{@link #getTemplateDescription() <em>Template Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersion()
+	 * @see #getTemplateDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VERSION_EDEFAULT = null;
+	protected String templateDescription = TEMPLATE_DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * The default value of the '{@link #getTemplateVersion() <em>Template Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersion()
+	 * @see #getTemplateVersion()
 	 * @generated
 	 * @ordered
 	 */
-	protected String version = VERSION_EDEFAULT;
+	protected static final String TEMPLATE_VERSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTemplateVersion() <em>Template Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemplateVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String templateVersion = TEMPLATE_VERSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,10 +161,17 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getTemplateId() {
+		return MobaUtil.createApplicationId(getTemplateName(), getTemplateVersion());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public boolean isSetTemplateId() {
+		return getTemplateId() != null;
 	}
 
 	/**
@@ -163,11 +179,20 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public String getTemplateName() {
+		return templateName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTemplateName(String newTemplateName) {
+		String oldTemplateName = templateName;
+		templateName = newTemplateName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX_ENTRY__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME, oldTemplateName, templateName));
 	}
 
 	/**
@@ -175,8 +200,8 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return description;
+	public String getTemplateDescription() {
+		return templateDescription;
 	}
 
 	/**
@@ -184,11 +209,11 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
+	public void setTemplateDescription(String newTemplateDescription) {
+		String oldTemplateDescription = templateDescription;
+		templateDescription = newTemplateDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX_ENTRY__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION, oldTemplateDescription, templateDescription));
 	}
 
 	/**
@@ -196,8 +221,8 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVersion() {
-		return version;
+	public String getTemplateVersion() {
+		return templateVersion;
 	}
 
 	/**
@@ -205,11 +230,11 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(String newVersion) {
-		String oldVersion = version;
-		version = newVersion;
+	public void setTemplateVersion(String newTemplateVersion) {
+		String oldTemplateVersion = templateVersion;
+		templateVersion = newTemplateVersion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX_ENTRY__VERSION, oldVersion, version));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_VERSION, oldTemplateVersion, templateVersion));
 	}
 
 	/**
@@ -222,12 +247,14 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__RELATIVE_PATH:
 				return getRelativePath();
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__NAME:
-				return getName();
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__DESCRIPTION:
-				return getDescription();
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__VERSION:
-				return getVersion();
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_ID:
+				return getTemplateId();
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME:
+				return getTemplateName();
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION:
+				return getTemplateDescription();
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_VERSION:
+				return getTemplateVersion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,14 +270,14 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__RELATIVE_PATH:
 				setRelativePath((String)newValue);
 				return;
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__NAME:
-				setName((String)newValue);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME:
+				setTemplateName((String)newValue);
 				return;
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__DESCRIPTION:
-				setDescription((String)newValue);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION:
+				setTemplateDescription((String)newValue);
 				return;
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__VERSION:
-				setVersion((String)newValue);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_VERSION:
+				setTemplateVersion((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -267,14 +294,14 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__RELATIVE_PATH:
 				setRelativePath(RELATIVE_PATH_EDEFAULT);
 				return;
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__NAME:
-				setName(NAME_EDEFAULT);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME:
+				setTemplateName(TEMPLATE_NAME_EDEFAULT);
 				return;
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION:
+				setTemplateDescription(TEMPLATE_DESCRIPTION_EDEFAULT);
 				return;
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__VERSION:
-				setVersion(VERSION_EDEFAULT);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_VERSION:
+				setTemplateVersion(TEMPLATE_VERSION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -290,12 +317,14 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__RELATIVE_PATH:
 				return RELATIVE_PATH_EDEFAULT == null ? relativePath != null : !RELATIVE_PATH_EDEFAULT.equals(relativePath);
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__VERSION:
-				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_ID:
+				return isSetTemplateId();
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME:
+				return TEMPLATE_NAME_EDEFAULT == null ? templateName != null : !TEMPLATE_NAME_EDEFAULT.equals(templateName);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION:
+				return TEMPLATE_DESCRIPTION_EDEFAULT == null ? templateDescription != null : !TEMPLATE_DESCRIPTION_EDEFAULT.equals(templateDescription);
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_VERSION:
+				return TEMPLATE_VERSION_EDEFAULT == null ? templateVersion != null : !TEMPLATE_VERSION_EDEFAULT.equals(templateVersion);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -312,12 +341,12 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (relativePath: ");
 		result.append(relativePath);
-		result.append(", name: ");
-		result.append(name);
-		result.append(", description: ");
-		result.append(description);
-		result.append(", version: ");
-		result.append(version);
+		result.append(", templateName: ");
+		result.append(templateName);
+		result.append(", templateDescription: ");
+		result.append(templateDescription);
+		result.append(", templateVersion: ");
+		result.append(templateVersion);
 		result.append(')');
 		return result.toString();
 	}

@@ -63,9 +63,10 @@ public class MobaIndexEntryItemProvider
 			super.getPropertyDescriptors(object);
 
 			addRelativePathPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
-			addVersionPropertyDescriptor(object);
+			addTemplateIdPropertyDescriptor(object);
+			addTemplateNamePropertyDescriptor(object);
+			addTemplateDescriptionPropertyDescriptor(object);
+			addTemplateVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,19 +94,41 @@ public class MobaIndexEntryItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Template Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addTemplateIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaIndexEntry_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_name_feature", "_UI_MobaIndexEntry_type"),
-				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__NAME,
+				 getString("_UI_MobaIndexEntry_templateId_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_templateId_feature", "_UI_MobaIndexEntry_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__TEMPLATE_ID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Template Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTemplateNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaIndexEntry_templateName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_templateName_feature", "_UI_MobaIndexEntry_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__TEMPLATE_NAME,
 				 true,
 				 false,
 				 false,
@@ -115,19 +138,19 @@ public class MobaIndexEntryItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Template Description feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addTemplateDescriptionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaIndexEntry_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_description_feature", "_UI_MobaIndexEntry_type"),
-				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__DESCRIPTION,
+				 getString("_UI_MobaIndexEntry_templateDescription_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_templateDescription_feature", "_UI_MobaIndexEntry_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -137,19 +160,19 @@ public class MobaIndexEntryItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Version feature.
+	 * This adds a property descriptor for the Template Version feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVersionPropertyDescriptor(Object object) {
+	protected void addTemplateVersionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaIndexEntry_version_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_version_feature", "_UI_MobaIndexEntry_type"),
-				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__VERSION,
+				 getString("_UI_MobaIndexEntry_templateVersion_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_templateVersion_feature", "_UI_MobaIndexEntry_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__TEMPLATE_VERSION,
 				 true,
 				 false,
 				 false,
@@ -177,7 +200,7 @@ public class MobaIndexEntryItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaIndexEntry)object).getName();
+		String label = ((MobaIndexEntry)object).getTemplateName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MobaIndexEntry_type") :
 			getString("_UI_MobaIndexEntry_type") + " " + label;
@@ -197,9 +220,10 @@ public class MobaIndexEntryItemProvider
 
 		switch (notification.getFeatureID(MobaIndexEntry.class)) {
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__RELATIVE_PATH:
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__NAME:
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__DESCRIPTION:
-			case MobaIndexPackage.MOBA_INDEX_ENTRY__VERSION:
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_ID:
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME:
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION:
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

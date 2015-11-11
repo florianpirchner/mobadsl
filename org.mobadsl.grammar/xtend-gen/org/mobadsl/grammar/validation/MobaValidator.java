@@ -4,6 +4,8 @@
 package org.mobadsl.grammar.validation;
 
 import com.google.common.base.Objects;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -13,12 +15,14 @@ import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.validation.Check;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
 import org.mobadsl.grammar.validation.AbstractMobaValidator;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
@@ -31,6 +35,8 @@ import org.mobadsl.semantic.model.moba.MobaEntityFeature;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaGeneratorFeature;
+import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
@@ -42,6 +48,13 @@ import org.mobadsl.semantic.model.moba.RecursionException;
 
 @SuppressWarnings("all")
 public class MobaValidator extends AbstractMobaValidator {
+  @Inject
+  private ExtensionGeneratorDelegate generatorDelegate;
+  
+  @Inject
+  @Named(Constants.LANGUAGE_NAME)
+  private String grammarName;
+  
   public final static String DUPLICATE_NAME = "duplicateName";
   
   public final static String DOWNLOAD_TEMPLATE = "downloadTemplate";
@@ -604,12 +617,69 @@ public class MobaValidator extends AbstractMobaValidator {
       _and = false;
     } else {
       String _downloadTemplate_1 = template.getDownloadTemplate();
-      boolean _startsWith = _downloadTemplate_1.startsWith("...index");
+      boolean _startsWith = _downloadTemplate_1.startsWith("index://");
       _and = _startsWith;
     }
     if (_and) {
       this.error("You need to download the template using the quickfix.", template, 
         MobaPackage.Literals.MOBA_TEMPLATE__DOWNLOAD_TEMPLATE, MobaValidator.DOWNLOAD_TEMPLATE, null);
+    }
+  }
+  
+  @Check
+  public void checkGeneratorIds(final MobaGenerator generator) {
+    boolean foundWarning = false;
+    int index = (-1);
+    final EList<MobaGeneratorFeature> features = generator.getFeatures();
+    final Function1<MobaGeneratorFeature, Boolean> _function = (MobaGeneratorFeature it) -> {
+      return Boolean.valueOf((it instanceof MobaGeneratorIDFeature));
+    };
+    Iterable<MobaGeneratorFeature> _filter = IterableExtensions.<MobaGeneratorFeature>filter(features, _function);
+    final Function1<MobaGeneratorFeature, String> _function_1 = (MobaGeneratorFeature it) -> {
+      return it.getGeneratorId();
+    };
+    Iterable<String> _map = IterableExtensions.<MobaGeneratorFeature, String>map(_filter, _function_1);
+    List<String> _list = IterableExtensions.<String>toList(_map);
+    final Map<String, ExtensionGeneratorDelegate.Metadata> generatorMap = this.generatorDelegate.readExtentionsMetadata(this.grammarName, _list);
+    EList<MobaGeneratorFeature> _features = generator.getFeatures();
+    for (final MobaGeneratorFeature feature : _features) {
+      {
+        index++;
+        if ((feature instanceof MobaGeneratorIDFeature)) {
+          String _generatorId = ((MobaGeneratorIDFeature)feature).getGeneratorId();
+          boolean _containsKey = generatorMap.containsKey(_generatorId);
+          boolean _not = (!_containsKey);
+          if (_not) {
+            foundWarning = true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("For GeneratorID ");
+            String _generatorId_1 = ((MobaGeneratorIDFeature)feature).getGeneratorId();
+            _builder.append(_generatorId_1, "");
+            _builder.append(" is not Generator-Extensions registered. Please check template...");
+            this.warning(_builder.toString(), generator, MobaPackage.Literals.MOBA_GENERATOR__FEATURES, index);
+          }
+        }
+      }
+    }
+    if ((!foundWarning)) {
+      List<String> _allGeneratorIds = generator.getAllGeneratorIds();
+      final Map<String, ExtensionGeneratorDelegate.Metadata> allGeneratorMap = this.generatorDelegate.readExtentionsMetadata(this.grammarName, _allGeneratorIds);
+      List<String> _allGeneratorIds_1 = generator.getAllGeneratorIds();
+      for (final String id : _allGeneratorIds_1) {
+        {
+          index++;
+          boolean _containsKey = allGeneratorMap.containsKey(id);
+          boolean _not = (!_containsKey);
+          if (_not) {
+            foundWarning = true;
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("A mixin uses the GeneratorID ");
+            _builder.append(id, "");
+            _builder.append(" and there is no Generator-Extensions registered. Please check template...");
+            this.warning(_builder.toString(), generator, MobaPackage.Literals.MOBA_GENERATOR__NAME);
+          }
+        }
+      }
     }
   }
 }

@@ -3,12 +3,17 @@
  */
 package org.mobadsl.grammar.ui.contentassist
 
+import com.google.inject.Inject
+import com.google.inject.name.Named
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.jface.viewers.StyledString
 import org.eclipse.xtext.Assignment
+import org.eclipse.xtext.Constants
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
 import org.mobadsl.api.template.repository.ITemplateRepositoryManager
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate.Metadata
 import org.mobadsl.semantic.model.moba.index.MobaIndex
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry
 import org.osgi.framework.FrameworkUtil
@@ -18,6 +23,9 @@ import org.osgi.framework.FrameworkUtil
  * on how to customize the content assistant.
  */
 class MobaProposalProvider extends AbstractMobaProposalProvider {
+
+	@Inject ExtensionGeneratorDelegate generatorDelegate
+	@Inject @Named(Constants.LANGUAGE_NAME) String grammarName
 
 	override void completeMobaTemplate_Template(EObject model, Assignment assignment, ContentAssistContext context,
 		ICompletionProposalAcceptor acceptor) {
@@ -29,15 +37,44 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 			manager.availableEntries.forEach [
 				val index = it.eContainer as MobaIndex
 				acceptor.accept(
-					doCreateProposal(index.createProposalValue(it),
-						new StyledString("available in repo " + index.name + ": " + it.name + ":" + it.version + " - " +
-							it.description), it.image, 0, context))
+					doCreateProposal(index.createProposalValue(it), index.createStyledString(it), it.image, 1000,
+						context))
 			]
 		}
 	}
-	
+
+	override void completeMobaGeneratorIDFeature_GeneratorConst(EObject model, Assignment assignment,
+		ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		super.completeMobaTemplate_Template(model, assignment, context, acceptor);
+
+		val allGenerators = generatorDelegate.readExtentionsMetadata(grammarName, null)
+		allGenerators.values.forEach [
+			acceptor.accept(doCreateProposal('''"«it.id»"''', it.createStyledString, model.image, 1000, context))
+		]
+	}
+
+	def StyledString createStyledString(Metadata metadata) {
+		val result = new StyledString(metadata.name)
+		if (!metadata.license.isNullOrEmpty) {
+			result.append(''' under («metadata.license»)''', StyledString.QUALIFIER_STYLER)
+		}
+
+		if (!metadata.description.isNullOrEmpty) {
+			result.append(''' - «metadata.description»''', StyledString.COUNTER_STYLER)
+		}
+
+		return result
+	}
+
+	def StyledString createStyledString(MobaIndex index, MobaIndexEntry entry) {
+		val result = new StyledString("... ")
+		result.append('''«index.id»:«entry.templateId»''')
+		result.append(''' - «entry.templateDescription»''', StyledString.COUNTER_STYLER)
+		return result
+	}
+
 	def String createProposalValue(MobaIndex index, MobaIndexEntry entry) '''
-		...index:«index.id»:«entry.name»:«entry.version»
+		index://«index.id»:«entry.templateId»»
 	'''
 
 	def ITemplateRepositoryManager getManager() {

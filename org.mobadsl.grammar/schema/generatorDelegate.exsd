@@ -46,7 +46,7 @@
 
    <element name="generatorDelegate">
       <complexType>
-         <attribute name="generatorId" type="string">
+         <attribute name="generatorId" type="string" use="required">
             <annotation>
                <documentation>
                   The Moba DSL allows to specify genertors to be used by their IDs. Use this id in the grammar to address this generator.
@@ -57,6 +57,27 @@
             <annotation>
                <documentation>
                   A string identifier defining the name of the grammar the hook should be used for.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The name of the generator. Is used for ContentAssist in MobaDSL.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="documentation" type="string">
+            <annotation>
+               <documentation>
+                  The documentation of the generator. Is used for ContentAssist in MobaDSL.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="license" type="string">
+            <annotation>
+               <documentation>
+                  The license of the generator. Is used for ContentAssist in MobaDSL.
                </documentation>
             </annotation>
          </attribute>

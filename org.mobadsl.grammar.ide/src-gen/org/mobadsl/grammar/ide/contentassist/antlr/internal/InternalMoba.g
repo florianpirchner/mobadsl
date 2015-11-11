@@ -1895,9 +1895,9 @@ rule__MobaApplication__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_2()); }
-	'{'
-	{ after(grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_2()); }
+	{ before(grammarAccess.getMobaApplicationAccess().getVersionKeyword_2()); }
+	'version'
+	{ after(grammarAccess.getMobaApplicationAccess().getVersionKeyword_2()); }
 )
 ;
 finally {
@@ -1922,9 +1922,9 @@ rule__MobaApplication__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_3()); }
-	(rule__MobaApplication__FeaturesAssignment_3)*
-	{ after(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_3()); }
+	{ before(grammarAccess.getMobaApplicationAccess().getVersionAssignment_3()); }
+	(rule__MobaApplication__VersionAssignment_3)
+	{ after(grammarAccess.getMobaApplicationAccess().getVersionAssignment_3()); }
 )
 ;
 finally {
@@ -1937,6 +1937,7 @@ rule__MobaApplication__Group__4
 	}
 :
 	rule__MobaApplication__Group__4__Impl
+	rule__MobaApplication__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1948,9 +1949,62 @@ rule__MobaApplication__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_4()); }
+	{ before(grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_4()); }
+	'{'
+	{ after(grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaApplication__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaApplication__Group__5__Impl
+	rule__MobaApplication__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaApplication__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_5()); }
+	(rule__MobaApplication__FeaturesAssignment_5)*
+	{ after(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaApplication__Group__6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaApplication__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaApplication__Group__6__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_6()); }
 	'}'
-	{ after(grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_4()); }
+	{ after(grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_6()); }
 )
 ;
 finally {
@@ -9092,15 +9146,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__MobaApplication__FeaturesAssignment_3
+rule__MobaApplication__VersionAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_3_0()); }
+		{ before(grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_3_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_3_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaApplication__FeaturesAssignment_5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_5_0()); }
 		ruleMobaApplicationFeature
-		{ after(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_3_0()); }
+		{ after(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_5_0()); }
 	)
 ;
 finally {
@@ -11122,7 +11191,7 @@ finally {
 
 RULE_INT : SUPER_INT;
 
-RULE_DOWNLOAD_TEMPLATE : '...index:' ('a'..'z'|'A'..'Z'|'_'|':'|'.') ('a'..'z'|'A'..'Z'|'_'|':'|'.'|'0'..'9')*;
+RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
 
 RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 

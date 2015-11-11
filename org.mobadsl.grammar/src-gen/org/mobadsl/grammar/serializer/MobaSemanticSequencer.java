@@ -177,7 +177,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaApplication returns MobaApplication
 	 *
 	 * Constraint:
-	 *     (name=ID features+=MobaApplicationFeature*)
+	 *     (name=ID version=STRING features+=MobaApplicationFeature*)
 	 */
 	protected void sequence_MobaApplication(ISerializationContext context, MobaApplication semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -104,13 +104,31 @@ public interface MobaPackage extends EPackage {
 	int MOBA_APPLICATION__PROPERTIES = MOBA_PROPERTIES_ABLE__PROPERTIES;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__ID = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION__NAME = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 0;
+	int MOBA_APPLICATION__NAME = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__VERSION = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -119,7 +137,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION__FEATURES = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 1;
+	int MOBA_APPLICATION__FEATURES = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -128,7 +146,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 2;
+	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationFeatureImpl <em>Application Feature</em>}' class.
@@ -2324,6 +2342,17 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaApplication();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaApplication#getId()
+	 * @see #getMobaApplication()
+	 * @generated
+	 */
+	EAttribute getMobaApplication_Id();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2333,6 +2362,17 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMobaApplication_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Version</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaApplication#getVersion()
+	 * @see #getMobaApplication()
+	 * @generated
+	 */
+	EAttribute getMobaApplication_Version();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}'.
@@ -4055,12 +4095,28 @@ public interface MobaPackage extends EPackage {
 		EClass MOBA_APPLICATION = eINSTANCE.getMobaApplication();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_APPLICATION__ID = eINSTANCE.getMobaApplication_Id();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute MOBA_APPLICATION__NAME = eINSTANCE.getMobaApplication_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_APPLICATION__VERSION = eINSTANCE.getMobaApplication_Version();
 
 		/**
 		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.

@@ -4,7 +4,9 @@
 package org.mobadsl.grammar;
 
 import org.eclipse.xtext.generator.IOutputConfigurationProvider;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.mobadsl.grammar.AbstractMobaRuntimeModule;
+import org.mobadsl.grammar.converter.MobaQualifiedNameProvider;
 import org.mobadsl.grammar.generator.DelegatingOutputConfigurationProvider;
 
 /**
@@ -14,5 +16,10 @@ import org.mobadsl.grammar.generator.DelegatingOutputConfigurationProvider;
 public class MobaRuntimeModule extends AbstractMobaRuntimeModule {
   public Class<? extends IOutputConfigurationProvider> bindIOutputConfigurationProvider() {
     return DelegatingOutputConfigurationProvider.class;
+  }
+  
+  @Override
+  public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
+    return MobaQualifiedNameProvider.class;
   }
 }

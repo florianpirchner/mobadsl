@@ -14,9 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getRelativePath <em>Relative Path</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getDescription <em>Description</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getVersion <em>Version</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId <em>Template Id</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName <em>Template Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription <em>Template Description</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion <em>Template Version</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry()
@@ -51,81 +52,107 @@ public interface MobaIndexEntry extends EObject {
 	void setRelativePath(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Template Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Template Id</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_Name()
-	 * @model required="true"
+	 * @return the value of the '<em>Template Id</em>' attribute.
+	 * @see #isSetTemplateId()
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TemplateId()
+	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	String getName();
+	String getTemplateId();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getName <em>Name</em>}' attribute.
+	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId <em>Template Id</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @return whether the value of the '<em>Template Id</em>' attribute is set.
+	 * @see #getTemplateId()
 	 * @generated
 	 */
-	void setName(String value);
+	boolean isSetTemplateId();
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Template Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Template Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_Description()
+	 * @return the value of the '<em>Template Name</em>' attribute.
+	 * @see #setTemplateName(String)
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TemplateName()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getDescription();
+	String getTemplateName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName <em>Template Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
+	 * @param value the new value of the '<em>Template Name</em>' attribute.
+	 * @see #getTemplateName()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setTemplateName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Version</b></em>' attribute.
+	 * Returns the value of the '<em><b>Template Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Version</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Template Description</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Version</em>' attribute.
-	 * @see #setVersion(String)
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_Version()
+	 * @return the value of the '<em>Template Description</em>' attribute.
+	 * @see #setTemplateDescription(String)
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TemplateDescription()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getVersion();
+	String getTemplateDescription();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getVersion <em>Version</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription <em>Template Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Version</em>' attribute.
-	 * @see #getVersion()
+	 * @param value the new value of the '<em>Template Description</em>' attribute.
+	 * @see #getTemplateDescription()
 	 * @generated
 	 */
-	void setVersion(String value);
+	void setTemplateDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Template Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Template Version</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Template Version</em>' attribute.
+	 * @see #setTemplateVersion(String)
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TemplateVersion()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getTemplateVersion();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion <em>Template Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Template Version</em>' attribute.
+	 * @see #getTemplateVersion()
+	 * @generated
+	 */
+	void setTemplateVersion(String value);
 
 } // MobaIndexEntry

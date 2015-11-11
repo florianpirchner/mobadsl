@@ -44,7 +44,9 @@ import org.mobadsl.semantic.model.moba.MobaTemplate;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  *
@@ -59,6 +61,16 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<MobaProperty> properties;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -77,6 +89,24 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VERSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
@@ -138,6 +168,25 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getVersion() {
+		return version;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
+		version = newVersion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__VERSION, oldVersion, version));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<MobaApplicationFeature> getFeatures() {
 		if (features == null) {
 			features = new EObjectContainmentEList<MobaApplicationFeature>(MobaApplicationFeature.class, this, MobaPackage.MOBA_APPLICATION__FEATURES);
@@ -169,8 +218,12 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
 				return getProperties();
+			case MobaPackage.MOBA_APPLICATION__ID:
+				return getId();
 			case MobaPackage.MOBA_APPLICATION__NAME:
 				return getName();
+			case MobaPackage.MOBA_APPLICATION__VERSION:
+				return getVersion();
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				return getFeatures();
 		}
@@ -191,6 +244,9 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case MobaPackage.MOBA_APPLICATION__NAME:
 				setName((String)newValue);
+				return;
+			case MobaPackage.MOBA_APPLICATION__VERSION:
+				setVersion((String)newValue);
 				return;
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				getFeatures().clear();
@@ -213,6 +269,9 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 			case MobaPackage.MOBA_APPLICATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_APPLICATION__VERSION:
+				setVersion(VERSION_EDEFAULT);
+				return;
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				getFeatures().clear();
 				return;
@@ -229,8 +288,12 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
 				return properties != null && !properties.isEmpty();
+			case MobaPackage.MOBA_APPLICATION__ID:
+				return isSetId();
 			case MobaPackage.MOBA_APPLICATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MobaPackage.MOBA_APPLICATION__VERSION:
+				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				return features != null && !features.isEmpty();
 		}
@@ -248,6 +311,8 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", version: ");
+		result.append(version);
 		result.append(')');
 		return result.toString();
 	}
@@ -436,10 +501,22 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	public List<MobaProperty> getAllProperties() {
 		return getProperties();
 	}
-	
+
 	@Override
 	public List<MobaProperty> getGenProperties() {
 		return getProperties();
+	}
+
+	@Override
+	public String getId() {
+		return getName() + ":" + getVersion();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 */
+	public boolean isSetId() {
+		return getId() != null;
 	}
 
 } // MobaApplicationImpl

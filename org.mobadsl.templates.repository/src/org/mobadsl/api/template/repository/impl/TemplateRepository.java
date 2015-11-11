@@ -123,7 +123,7 @@ public class TemplateRepository implements ITemplateRepository {
 		try {
 			return readString(templateURL);
 		} catch (Exception e) {
-			LOGGER.error("Error reading application {} at {} : Cause {}", entry.getName(), templateURL, e);
+			LOGGER.error("Error reading application {} at {} : Cause {}", entry.getTemplateId(), templateURL, e);
 			return null;
 		}
 	}

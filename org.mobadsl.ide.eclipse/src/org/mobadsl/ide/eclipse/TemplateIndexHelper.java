@@ -94,7 +94,7 @@ public class TemplateIndexHelper {
 	}
 
 	public String getFileName(MobaIndexEntry entry) {
-		return entry.getName() + ".moba";
+		return entry.getTemplateName() + "_" + entry.getTemplateVersion() + ".moba";
 	}
 
 	public List<MobaIndex> getIndexes() {

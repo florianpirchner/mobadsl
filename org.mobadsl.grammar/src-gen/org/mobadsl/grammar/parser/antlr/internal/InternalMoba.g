@@ -99,16 +99,38 @@ ruleMobaApplication returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_2='{'
+		otherlv_2='version'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getMobaApplicationAccess().getVersionKeyword_2());
+		}
+		(
+			(
+				lv_version_3_0=RULE_STRING
+				{
+					newLeafNode(lv_version_3_0, grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaApplicationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"version",
+						lv_version_3_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_4='{'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_4());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_5_0());
 				}
-				lv_features_3_0=ruleMobaApplicationFeature
+				lv_features_5_0=ruleMobaApplicationFeature
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMobaApplicationRule());
@@ -116,15 +138,15 @@ ruleMobaApplication returns [EObject current=null]
 					add(
 						$current,
 						"features",
-						lv_features_3_0,
+						lv_features_5_0,
 						"org.mobadsl.grammar.Moba.MobaApplicationFeature");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_4='}'
+		otherlv_6='}'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_6());
 		}
 	)
 ;
@@ -4379,7 +4401,7 @@ ruleMobaUpperBound returns [Enumerator current=null]
 
 RULE_INT : SUPER_INT;
 
-RULE_DOWNLOAD_TEMPLATE : '...index:' ('a'..'z'|'A'..'Z'|'_'|':'|'.') ('a'..'z'|'A'..'Z'|'_'|':'|'.'|'0'..'9')*;
+RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
 
 RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 

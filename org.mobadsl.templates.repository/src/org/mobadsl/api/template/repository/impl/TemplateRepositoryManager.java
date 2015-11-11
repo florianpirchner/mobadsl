@@ -8,6 +8,7 @@ import org.mobadsl.api.template.repository.ITemplateRepository;
 import org.mobadsl.api.template.repository.ITemplateRepositoryManager;
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -36,7 +37,9 @@ public class TemplateRepositoryManager implements ITemplateRepositoryManager {
 
 		for (ITemplateRepository repo : new ArrayList<>(repos)) {
 			MobaIndex index = repo.getIndex();
-			indexes.add(index);
+			if(index != null) {
+				indexes.add(index);
+			}
 		}
 
 		return indexes;
@@ -98,21 +101,22 @@ public class TemplateRepositoryManager implements ITemplateRepositoryManager {
 	public List<MobaIndexEntry> getAvailableEntries() {
 		List<MobaIndexEntry> result = new ArrayList<>();
 
-		for (MobaIndex indexes : getIndexes()) {
-			result.addAll(indexes.getEntries());
+		for (MobaIndex index : getIndexes()) {
+			result.addAll(index.getEntries());
 		}
 
 		return result;
 	}
 
 	@Override
-	public MobaIndexEntry find(String indexId, String templateName, String version) {
+	public MobaIndexEntry find(String indexId, String templateName, String templateVersion) {
+		String templateId = MobaUtil.createApplicationId(templateName, templateVersion);
 		ITemplateRepository repo = findRepo(indexId);
 		if (repo != null) {
 			MobaIndex index = repo.getIndex();
 			if (index != null) {
 				for (MobaIndexEntry entry : index.getEntries()) {
-					if (entry.getName().equals(templateName) && entry.getVersion().equals(version)) {
+					if (entry.getTemplateId().equals(templateId)) {
 						return entry;
 					}
 				}

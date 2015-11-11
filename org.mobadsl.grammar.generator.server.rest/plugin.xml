@@ -4,9 +4,12 @@
    <extension
          point="org.mobadsl.grammar.generatorDelegate">
       <generatorDelegate
+            documentation="Generates REST Services based on OSGi enRoute"
             generatorDelegateClass="org.mobadsl.grammar.generator.server.rest.RestServicesGenerator"
             generatorId="org.mobadsl.grammar.generator.server.rest"
-            grammarName="org.mobadsl.grammar.Moba">
+            grammarName="org.mobadsl.grammar.Moba"
+            license="EPL v1"
+            name="OSGi REST services">
       </generatorDelegate>
    </extension>
 

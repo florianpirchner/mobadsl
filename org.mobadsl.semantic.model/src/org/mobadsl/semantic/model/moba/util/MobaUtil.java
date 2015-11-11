@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.RecursionException;
 
@@ -133,7 +134,7 @@ public class MobaUtil {
 
 		return result;
 	}
-	
+
 	private static <T extends EObject> int indexOfFirstOccurence(List<T> result, T feature, EAttribute valueAtt) {
 		// get the value of the feature to compare
 		Object featureValue = feature.eGet(valueAtt);
@@ -141,6 +142,14 @@ public class MobaUtil {
 		T firstFeature = result.stream().filter(e -> e.eGet(valueAtt).equals(featureValue)).findFirst().orElse(null);
 		// return the index of the first feature
 		return result.indexOf(firstFeature);
+	}
+
+	public static String createApplicationId(MobaApplication mobaApplication) {
+		return createApplicationId(mobaApplication.getName(), mobaApplication.getVersion());
+	}
+
+	public static String createApplicationId(String name, String version) {
+		return name + ":" + version;
 	}
 
 }

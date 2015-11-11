@@ -34,17 +34,20 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApplicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cFeaturesMobaApplicationFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cVersionKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cVersionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cVersionSTRINGTerminalRuleCall_3_0 = (RuleCall)cVersionAssignment_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cFeaturesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cFeaturesMobaApplicationFeatureParserRuleCall_5_0 = (RuleCall)cFeaturesAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//MobaApplication:
-		//	'application' name=ID '{'
+		//	'application' name=ID 'version' version=STRING '{'
 		//	features+=MobaApplicationFeature* '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'application' name=ID '{' features+=MobaApplicationFeature* '}'
+		//'application' name=ID 'version' version=STRING '{' features+=MobaApplicationFeature* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'application'
@@ -56,17 +59,26 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
+		//'version'
+		public Keyword getVersionKeyword_2() { return cVersionKeyword_2; }
+		
+		//version=STRING
+		public Assignment getVersionAssignment_3() { return cVersionAssignment_3; }
+		
+		//STRING
+		public RuleCall getVersionSTRINGTerminalRuleCall_3_0() { return cVersionSTRINGTerminalRuleCall_3_0; }
+		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
 		//features+=MobaApplicationFeature*
-		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
+		public Assignment getFeaturesAssignment_5() { return cFeaturesAssignment_5; }
 		
 		//MobaApplicationFeature
-		public RuleCall getFeaturesMobaApplicationFeatureParserRuleCall_3_0() { return cFeaturesMobaApplicationFeatureParserRuleCall_3_0; }
+		public RuleCall getFeaturesMobaApplicationFeatureParserRuleCall_5_0() { return cFeaturesMobaApplicationFeatureParserRuleCall_5_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 	public class MobaApplicationFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaApplicationFeature");
@@ -2690,7 +2702,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//MobaApplication:
-	//	'application' name=ID '{'
+	//	'application' name=ID 'version' version=STRING '{'
 	//	features+=MobaApplicationFeature* '}';
 	public MobaApplicationElements getMobaApplicationAccess() {
 		return pMobaApplication;
@@ -3206,7 +3218,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal DOWNLOAD_TEMPLATE:
-	//	'...index:' ('a'..'z' | 'A'..'Z' | '_' | ':' | '.') ('a'..'z' | 'A'..'Z' | '_' | ':' | '.' | '0'..'9')*;
+	//	'index://' ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9')* ':' ('a'..'z' | 'A'..'Z' | '_' |
+	//	'.' | '0'..'9')* ':' ('a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9')*;
 	public TerminalRule getDOWNLOAD_TEMPLATERule() {
 		return tDOWNLOAD_TEMPLATE;
 	}

@@ -19,7 +19,7 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.core.runtime;bundle-version="3.11.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.mobadsl.grammar;x-internal:=true,
- org.mobadsl.grammar.generator;x-internal:=true,
+ org.mobadsl.grammar.generator;x-friends:="org.mobadsl.grammar.ui",
  org.mobadsl.grammar.generator.common,
  org.mobadsl.grammar.parser.antlr;x-internal:=true,
  org.mobadsl.grammar.parser.antlr.internal;x-internal:=true,

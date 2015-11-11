@@ -508,7 +508,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaApplication_Name() {
+	public EAttribute getMobaApplication_Id() {
 		return (EAttribute)mobaApplicationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -517,8 +517,26 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaApplication_Name() {
+		return (EAttribute)mobaApplicationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaApplication_Version() {
+		return (EAttribute)mobaApplicationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMobaApplication_Features() {
-		return (EReference)mobaApplicationEClass.getEStructuralFeatures().get(1);
+		return (EReference)mobaApplicationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1963,7 +1981,9 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		// Create classes and their features
 		mobaApplicationEClass = createEClass(MOBA_APPLICATION);
+		createEAttribute(mobaApplicationEClass, MOBA_APPLICATION__ID);
 		createEAttribute(mobaApplicationEClass, MOBA_APPLICATION__NAME);
+		createEAttribute(mobaApplicationEClass, MOBA_APPLICATION__VERSION);
 		createEReference(mobaApplicationEClass, MOBA_APPLICATION__FEATURES);
 
 		mobaApplicationFeatureEClass = createEClass(MOBA_APPLICATION_FEATURE);
@@ -2272,7 +2292,9 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(mobaApplicationEClass, MobaApplication.class, "MobaApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaApplication_Id(), ecorePackage.getEString(), "id", null, 0, 1, MobaApplication.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaApplication_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaApplication_Version(), ecorePackage.getEString(), "version", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaApplication_Features(), this.getMobaApplicationFeature(), null, "features", null, 0, -1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaApplicationFeatureEClass, MobaApplicationFeature.class, "MobaApplicationFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -182,7 +182,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_Name() {
+	public EAttribute getMobaIndexEntry_TemplateId() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -191,7 +191,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_Description() {
+	public EAttribute getMobaIndexEntry_TemplateName() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -200,8 +200,17 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_Version() {
+	public EAttribute getMobaIndexEntry_TemplateDescription() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaIndexEntry_TemplateVersion() {
+		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -241,9 +250,10 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 
 		mobaIndexEntryEClass = createEClass(MOBA_INDEX_ENTRY);
 		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__RELATIVE_PATH);
-		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__NAME);
-		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__DESCRIPTION);
-		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__VERSION);
+		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_ID);
+		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_NAME);
+		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION);
+		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_VERSION);
 	}
 
 	/**
@@ -285,9 +295,10 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 
 		initEClass(mobaIndexEntryEClass, MobaIndexEntry.class, "MobaIndexEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaIndexEntry_RelativePath(), ecorePackage.getEString(), "relativePath", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaIndexEntry_Name(), ecorePackage.getEString(), "name", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaIndexEntry_Description(), ecorePackage.getEString(), "description", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaIndexEntry_Version(), ecorePackage.getEString(), "version", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaIndexEntry_TemplateId(), ecorePackage.getEString(), "templateId", null, 0, 1, MobaIndexEntry.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaIndexEntry_TemplateName(), ecorePackage.getEString(), "templateName", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaIndexEntry_TemplateDescription(), ecorePackage.getEString(), "templateDescription", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaIndexEntry_TemplateVersion(), ecorePackage.getEString(), "templateVersion", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //MobaIndexPackageImpl

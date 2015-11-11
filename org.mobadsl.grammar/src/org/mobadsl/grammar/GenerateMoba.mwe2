@@ -53,8 +53,9 @@ Workflow {
 				generateStub=true
 			}
 			quickOutline = {
-				
 			}
+			qualifiedNamesProvider = auto-inject{}
+			
 			validator = {
 			// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}

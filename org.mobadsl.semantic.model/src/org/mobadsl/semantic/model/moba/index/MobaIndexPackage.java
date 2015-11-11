@@ -139,31 +139,40 @@ public interface MobaIndexPackage extends EPackage {
 	int MOBA_INDEX_ENTRY__RELATIVE_PATH = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Template Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__NAME = 1;
+	int MOBA_INDEX_ENTRY__TEMPLATE_ID = 1;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Template Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__DESCRIPTION = 2;
+	int MOBA_INDEX_ENTRY__TEMPLATE_NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * The feature id for the '<em><b>Template Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__VERSION = 3;
+	int MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Template Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_INDEX_ENTRY__TEMPLATE_VERSION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Entry</em>' class.
@@ -172,7 +181,7 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY_FEATURE_COUNT = 4;
+	int MOBA_INDEX_ENTRY_FEATURE_COUNT = 5;
 
 
 	/**
@@ -262,37 +271,48 @@ public interface MobaIndexPackage extends EPackage {
 	EAttribute getMobaIndexEntry_RelativePath();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId <em>Template Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getName()
+	 * @return the meta object for the attribute '<em>Template Id</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId()
 	 * @see #getMobaIndexEntry()
 	 * @generated
 	 */
-	EAttribute getMobaIndexEntry_Name();
+	EAttribute getMobaIndexEntry_TemplateId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName <em>Template Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getDescription()
+	 * @return the meta object for the attribute '<em>Template Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName()
 	 * @see #getMobaIndexEntry()
 	 * @generated
 	 */
-	EAttribute getMobaIndexEntry_Description();
+	EAttribute getMobaIndexEntry_TemplateName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getVersion <em>Version</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription <em>Template Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Version</em>'.
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getVersion()
+	 * @return the meta object for the attribute '<em>Template Description</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription()
 	 * @see #getMobaIndexEntry()
 	 * @generated
 	 */
-	EAttribute getMobaIndexEntry_Version();
+	EAttribute getMobaIndexEntry_TemplateDescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion <em>Template Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Template Version</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion()
+	 * @see #getMobaIndexEntry()
+	 * @generated
+	 */
+	EAttribute getMobaIndexEntry_TemplateVersion();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -385,28 +405,36 @@ public interface MobaIndexPackage extends EPackage {
 		EAttribute MOBA_INDEX_ENTRY__RELATIVE_PATH = eINSTANCE.getMobaIndexEntry_RelativePath();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Template Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_INDEX_ENTRY__NAME = eINSTANCE.getMobaIndexEntry_Name();
+		EAttribute MOBA_INDEX_ENTRY__TEMPLATE_ID = eINSTANCE.getMobaIndexEntry_TemplateId();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Template Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_INDEX_ENTRY__DESCRIPTION = eINSTANCE.getMobaIndexEntry_Description();
+		EAttribute MOBA_INDEX_ENTRY__TEMPLATE_NAME = eINSTANCE.getMobaIndexEntry_TemplateName();
 
 		/**
-		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Template Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_INDEX_ENTRY__VERSION = eINSTANCE.getMobaIndexEntry_Version();
+		EAttribute MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION = eINSTANCE.getMobaIndexEntry_TemplateDescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Template Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_INDEX_ENTRY__TEMPLATE_VERSION = eINSTANCE.getMobaIndexEntry_TemplateVersion();
 
 	}
 

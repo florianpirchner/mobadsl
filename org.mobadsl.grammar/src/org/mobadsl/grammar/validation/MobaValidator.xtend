@@ -3,23 +3,32 @@
  */
 package org.mobadsl.grammar.validation
 
+import com.google.inject.Inject
+import com.google.inject.name.Named
 import java.util.Collections
 import java.util.Set
+import org.eclipse.xtext.Constants
 import org.eclipse.xtext.validation.Check
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaConstant
 import org.mobadsl.semantic.model.moba.MobaDataType
+import org.mobadsl.semantic.model.moba.MobaDto
+import org.mobadsl.semantic.model.moba.MobaEntity
+import org.mobadsl.semantic.model.moba.MobaGenerator
+import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
 import org.mobadsl.semantic.model.moba.MobaPackage
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaRestCrud
 import org.mobadsl.semantic.model.moba.MobaRestCustom
 import org.mobadsl.semantic.model.moba.MobaSettings
-import org.mobadsl.semantic.model.moba.RecursionException
 import org.mobadsl.semantic.model.moba.MobaTemplate
-import org.mobadsl.semantic.model.moba.MobaDto
-import org.mobadsl.semantic.model.moba.MobaEntity
+import org.mobadsl.semantic.model.moba.RecursionException
 
 class MobaValidator extends AbstractMobaValidator {
+
+	@Inject ExtensionGeneratorDelegate generatorDelegate
+	@Inject @Named(Constants.LANGUAGE_NAME) String grammarName
 
 	public static val DUPLICATE_NAME = 'duplicateName'
 	public static val DOWNLOAD_TEMPLATE = 'downloadTemplate'
@@ -72,8 +81,7 @@ class MobaValidator extends AbstractMobaValidator {
 		var index = 0;
 		for (feature : payload.features) {
 			if (superFeatureMap.containsKey(feature.name)) {
-				error("Supertype contains same feature name", payload, MobaPackage.Literals.MOBA_DTO__FEATURES,
-					index)
+				error("Supertype contains same feature name", payload, MobaPackage.Literals.MOBA_DTO__FEATURES, index)
 			}
 
 			if (currentFeatures.contains(feature.name)) {
@@ -349,9 +357,47 @@ class MobaValidator extends AbstractMobaValidator {
 
 	@Check
 	def checkDownloadTemplate(MobaTemplate template) {
-		if (!template.downloadTemplate.nullOrEmpty && template.downloadTemplate.startsWith("...index")) {
+		if (!template.downloadTemplate.nullOrEmpty && template.downloadTemplate.startsWith("index://")) {
 			error("You need to download the template using the quickfix.", template,
 				MobaPackage.Literals.MOBA_TEMPLATE__DOWNLOAD_TEMPLATE, DOWNLOAD_TEMPLATE, null)
+		}
+	}
+
+	@Check
+	def checkGeneratorIds(MobaGenerator generator) {
+
+		var foundWarning = false
+
+		var index = -1
+		val features = generator.features
+		val generatorMap = generatorDelegate.readExtentionsMetadata(grammarName, features.filter [
+			it instanceof MobaGeneratorIDFeature
+		].map[it.generatorId].toList)
+
+		for (feature : generator.features) {
+			index++
+			if (feature instanceof MobaGeneratorIDFeature) {
+				if (!generatorMap.containsKey(feature.
+					generatorId)) {
+					foundWarning = true
+					warning('''For GeneratorID «feature.generatorId» is not Generator-Extensions registered. Please check template...''',
+						generator, MobaPackage.Literals.MOBA_GENERATOR__FEATURES, index)
+				}
+			}
+		}
+
+		// check if there are problems with mixins
+		if (!foundWarning) {
+			val allGeneratorMap = generatorDelegate.readExtentionsMetadata(grammarName, generator.allGeneratorIds)
+			for (id : generator.allGeneratorIds) {
+				index++
+				if (!allGeneratorMap.containsKey(
+					id)) {
+					foundWarning = true
+					warning('''A mixin uses the GeneratorID «id» and there is no Generator-Extensions registered. Please check template...''',
+						generator, MobaPackage.Literals.MOBA_GENERATOR__NAME)
+				}
+			}
 		}
 	}
 }
