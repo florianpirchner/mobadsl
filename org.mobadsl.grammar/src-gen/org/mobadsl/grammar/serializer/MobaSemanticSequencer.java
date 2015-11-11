@@ -682,7 +682,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaTemplate returns MobaTemplate
 	 *
 	 * Constraint:
-	 *     (template=[MobaApplication|ID] | downloadTemplate=DOWNLOAD_TEMPLATE)
+	 *     (template=[MobaApplication|APPLICATION_ID] | downloadTemplate=DOWNLOAD_TEMPLATE)
 	 */
 	protected void sequence_MobaTemplate(ISerializationContext context, MobaTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

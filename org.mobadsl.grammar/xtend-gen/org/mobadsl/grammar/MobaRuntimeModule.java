@@ -3,10 +3,12 @@
  */
 package org.mobadsl.grammar;
 
+import org.eclipse.xtext.conversion.IValueConverterService;
 import org.eclipse.xtext.generator.IOutputConfigurationProvider;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.mobadsl.grammar.AbstractMobaRuntimeModule;
 import org.mobadsl.grammar.converter.MobaQualifiedNameProvider;
+import org.mobadsl.grammar.converter.MobaValueConverterService;
 import org.mobadsl.grammar.generator.DelegatingOutputConfigurationProvider;
 
 /**
@@ -21,5 +23,10 @@ public class MobaRuntimeModule extends AbstractMobaRuntimeModule {
   @Override
   public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
     return MobaQualifiedNameProvider.class;
+  }
+  
+  @Override
+  public Class<? extends IValueConverterService> bindIValueConverterService() {
+    return MobaValueConverterService.class;
   }
 }

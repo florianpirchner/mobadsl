@@ -7,6 +7,8 @@ import org.eclipse.xtext.generator.IOutputConfigurationProvider
 import org.eclipse.xtext.naming.IQualifiedNameProvider
 import org.mobadsl.grammar.converter.MobaQualifiedNameProvider
 import org.mobadsl.grammar.generator.DelegatingOutputConfigurationProvider
+import org.eclipse.xtext.conversion.IValueConverterService
+import org.mobadsl.grammar.converter.MobaValueConverterService
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -19,6 +21,10 @@ class MobaRuntimeModule extends AbstractMobaRuntimeModule {
 
 	override Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
 		return MobaQualifiedNameProvider
+	}
+
+	override Class<? extends IValueConverterService> bindIValueConverterService() {
+		return MobaValueConverterService
 	}
 
 }
