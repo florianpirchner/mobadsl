@@ -35,6 +35,7 @@ public class TemplateRepository implements ITemplateRepository {
 
 	private MobaIndex index;
 
+	@SuppressWarnings("unused")
 	private Map<String, Object> properties;
 
 	@Activate
