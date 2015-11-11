@@ -4,12 +4,11 @@ package org.mobadsl.semantic.model.moba.index.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.mobadsl.semantic.model.moba.index.*;
+import org.mobadsl.semantic.model.moba.index.MobaIndex;
+import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
+import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -44,6 +44,7 @@ public class MobaTemplateImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected static final String DOWNLOAD_TEMPLATE_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getDownloadTemplate() <em>Download Template</em>}' attribute.
 	 * <!-- begin-user-doc -->

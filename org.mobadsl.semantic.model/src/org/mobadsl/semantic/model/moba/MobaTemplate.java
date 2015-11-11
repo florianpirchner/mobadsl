@@ -2,7 +2,6 @@
  */
 package org.mobadsl.semantic.model.moba;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Template</b></em>'.

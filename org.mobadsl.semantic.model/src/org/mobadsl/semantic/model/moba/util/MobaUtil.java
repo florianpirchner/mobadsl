@@ -1,6 +1,7 @@
 package org.mobadsl.semantic.model.moba.util;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -150,6 +151,64 @@ public class MobaUtil {
 
 	public static String createApplicationId(String name, String version) {
 		return name + ":" + version;
+	}
+
+	/**
+	 * Converts from <code>template:1.2.3</code> to <code>template.1.2.3</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toApplicationIdQualifiedNameString(String string) {
+		if (!string.contains(":")) {
+			return string;
+		}
+		String[] artifactTokens = string.split(":");
+		String templateId = artifactTokens[0];
+		String[] versionTokens = artifactTokens[1].split("\\.");
+
+		List<String> tokens = new ArrayList<>();
+		tokens.add(templateId);
+		tokens.addAll(Arrays.asList(versionTokens));
+
+		StringBuilder b = new StringBuilder();
+		for (String token : tokens) {
+			if (b.length() > 0) {
+				b.append(".");
+			}
+			b.append(token);
+		}
+
+		return b.toString();
+	}
+
+	/**
+	 * Converts from <code>template.1.2.3</code> to <code>template:1.2.3</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toApplicationIdCrossReferenceTerminal(String value) {
+		if (value.contains(":")) {
+			return value;
+		}
+		String[] tokens = value.split("\\.");
+		StringBuilder b = new StringBuilder();
+		int index = -1;
+		for (String token : tokens) {
+			index++;
+			if (b.length() > 0) {
+				if (index == 1) {
+					b.append(":");
+				} else {
+					b.append(".");
+				}
+			}
+			b.append(token);
+		}
+
+		return b.toString();
+
 	}
 
 }

@@ -6,13 +6,9 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.mobadsl.semantic.model.moba.MobaPackage;
-
 import org.mobadsl.semantic.model.moba.impl.MobaPackageImpl;
-
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
 import org.mobadsl.semantic.model.moba.index.MobaIndexFactory;
