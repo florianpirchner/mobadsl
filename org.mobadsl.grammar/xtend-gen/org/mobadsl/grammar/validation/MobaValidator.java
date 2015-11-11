@@ -18,6 +18,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.mobadsl.grammar.validation.AbstractMobaValidator;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
@@ -36,11 +37,14 @@ import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaRestCrud;
 import org.mobadsl.semantic.model.moba.MobaRestCustom;
 import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.RecursionException;
 
 @SuppressWarnings("all")
 public class MobaValidator extends AbstractMobaValidator {
   public final static String DUPLICATE_NAME = "duplicateName";
+  
+  public final static String DOWNLOAD_TEMPLATE = "downloadTemplate";
   
   @Check
   public void checkDuplicateFeatureName(final MobaBean dto) {
@@ -588,5 +592,24 @@ public class MobaValidator extends AbstractMobaValidator {
       }
     };
     _literals.forEach(_function_1);
+  }
+  
+  @Check
+  public void checkDownloadTemplate(final MobaTemplate template) {
+    boolean _and = false;
+    String _downloadTemplate = template.getDownloadTemplate();
+    boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(_downloadTemplate);
+    boolean _not = (!_isNullOrEmpty);
+    if (!_not) {
+      _and = false;
+    } else {
+      String _downloadTemplate_1 = template.getDownloadTemplate();
+      boolean _startsWith = _downloadTemplate_1.startsWith("...index");
+      _and = _startsWith;
+    }
+    if (_and) {
+      this.error("You need to download the template using the quickfix.", template, 
+        MobaPackage.Literals.MOBA_TEMPLATE__DOWNLOAD_TEMPLATE, MobaValidator.DOWNLOAD_TEMPLATE, null);
+    }
   }
 }

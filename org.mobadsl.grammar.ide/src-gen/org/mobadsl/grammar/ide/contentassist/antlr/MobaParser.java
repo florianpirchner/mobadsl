@@ -36,6 +36,7 @@ public class MobaParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getMobaApplicationFeatureAccess().getAlternatives(), "rule__MobaApplicationFeature__Alternatives");
+					put(grammarAccess.getMobaTemplateAccess().getAlternatives_1(), "rule__MobaTemplate__Alternatives_1");
 					put(grammarAccess.getMobaGeneratorFeatureAccess().getAlternatives(), "rule__MobaGeneratorFeature__Alternatives");
 					put(grammarAccess.getMobaGeneratorIDFeatureAccess().getAlternatives_2(), "rule__MobaGeneratorIDFeature__Alternatives_2");
 					put(grammarAccess.getMobaDataTypeAccess().getAlternatives_3_2_0(), "rule__MobaDataType__Alternatives_3_2_0");
@@ -120,7 +121,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaNotNullConstraintAccess().getGroup(), "rule__MobaNotNullConstraint__Group__0");
 					put(grammarAccess.getMobaApplicationAccess().getNameAssignment_1(), "rule__MobaApplication__NameAssignment_1");
 					put(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_3(), "rule__MobaApplication__FeaturesAssignment_3");
-					put(grammarAccess.getMobaTemplateAccess().getTemplateAssignment_1(), "rule__MobaTemplate__TemplateAssignment_1");
+					put(grammarAccess.getMobaTemplateAccess().getTemplateAssignment_1_0(), "rule__MobaTemplate__TemplateAssignment_1_0");
+					put(grammarAccess.getMobaTemplateAccess().getDownloadTemplateAssignment_1_1(), "rule__MobaTemplate__DownloadTemplateAssignment_1_1");
 					put(grammarAccess.getMobaGeneratorAccess().getActiveAssignment_0(), "rule__MobaGenerator__ActiveAssignment_0");
 					put(grammarAccess.getMobaGeneratorAccess().getNameAssignment_2(), "rule__MobaGenerator__NameAssignment_2");
 					put(grammarAccess.getMobaGeneratorAccess().getFeaturesAssignment_4(), "rule__MobaGenerator__FeaturesAssignment_4");

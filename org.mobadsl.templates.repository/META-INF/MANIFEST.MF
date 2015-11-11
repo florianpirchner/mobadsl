@@ -9,7 +9,7 @@ Import-Package: org.mobadsl.api.template.repository,
  org.slf4j
 Require-Bundle: org.eclipse.ui;bundle-version="3.107.0",
  org.mobadsl.semantic.model,
- org.apache.commons.io;bundle-version="2.2.0",
+ org.apache.commons.io;bundle-version="2.0.1",
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi
 Bundle-Version: 0.8.0

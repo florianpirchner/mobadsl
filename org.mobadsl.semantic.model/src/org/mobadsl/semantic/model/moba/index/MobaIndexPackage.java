@@ -66,13 +66,13 @@ public interface MobaIndexPackage extends EPackage {
 	int MOBA_INDEX = 0;
 
 	/**
-	 * The feature id for the '<em><b>Transient Repo ID</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX__TRANSIENT_REPO_ID = 0;
+	int MOBA_INDEX__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -186,6 +186,17 @@ public interface MobaIndexPackage extends EPackage {
 	EClass getMobaIndex();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndex#getId()
+	 * @see #getMobaIndex()
+	 * @generated
+	 */
+	EAttribute getMobaIndex_Id();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getEntries <em>Entries</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -228,17 +239,6 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMobaIndex_Version();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getTransientRepoID <em>Transient Repo ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Transient Repo ID</em>'.
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndex#getTransientRepoID()
-	 * @see #getMobaIndex()
-	 * @generated
-	 */
-	EAttribute getMobaIndex_TransientRepoID();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry <em>Entry</em>}'.
@@ -327,6 +327,14 @@ public interface MobaIndexPackage extends EPackage {
 		EClass MOBA_INDEX = eINSTANCE.getMobaIndex();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_INDEX__ID = eINSTANCE.getMobaIndex_Id();
+
+		/**
 		 * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -357,14 +365,6 @@ public interface MobaIndexPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOBA_INDEX__VERSION = eINSTANCE.getMobaIndex_Version();
-
-		/**
-		 * The meta object literal for the '<em><b>Transient Repo ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MOBA_INDEX__TRANSIENT_REPO_ID = eINSTANCE.getMobaIndex_TransientRepoID();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexEntryImpl <em>Entry</em>}' class.

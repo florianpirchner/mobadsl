@@ -119,6 +119,15 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaIndex_Id() {
+		return (EAttribute)mobaIndexEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMobaIndex_Entries() {
 		return (EReference)mobaIndexEClass.getEStructuralFeatures().get(4);
 	}
@@ -148,15 +157,6 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 */
 	public EAttribute getMobaIndex_Version() {
 		return (EAttribute)mobaIndexEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMobaIndex_TransientRepoID() {
-		return (EAttribute)mobaIndexEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -233,7 +233,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 
 		// Create classes and their features
 		mobaIndexEClass = createEClass(MOBA_INDEX);
-		createEAttribute(mobaIndexEClass, MOBA_INDEX__TRANSIENT_REPO_ID);
+		createEAttribute(mobaIndexEClass, MOBA_INDEX__ID);
 		createEAttribute(mobaIndexEClass, MOBA_INDEX__NAME);
 		createEAttribute(mobaIndexEClass, MOBA_INDEX__DESCRIPTION);
 		createEAttribute(mobaIndexEClass, MOBA_INDEX__VERSION);
@@ -277,7 +277,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(mobaIndexEClass, MobaIndex.class, "MobaIndex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobaIndex_TransientRepoID(), ecorePackage.getEString(), "transientRepoID", null, 1, 1, MobaIndex.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaIndex_Id(), ecorePackage.getEString(), "id", null, 1, 1, MobaIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndex_Name(), ecorePackage.getEString(), "name", null, 1, 1, MobaIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndex_Description(), ecorePackage.getEString(), "description", null, 1, 1, MobaIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndex_Version(), ecorePackage.getEString(), "version", null, 1, 1, MobaIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

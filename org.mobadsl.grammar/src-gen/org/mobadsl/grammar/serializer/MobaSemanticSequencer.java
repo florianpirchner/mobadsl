@@ -682,16 +682,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaTemplate returns MobaTemplate
 	 *
 	 * Constraint:
-	 *     template=[MobaApplication|ID]
+	 *     (template=[MobaApplication|ID] | downloadTemplate=DOWNLOAD_TEMPLATE)
 	 */
 	protected void sequence_MobaTemplate(ISerializationContext context, MobaTemplate semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_TEMPLATE__TEMPLATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_TEMPLATE__TEMPLATE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationIDTerminalRuleCall_1_0_1(), semanticObject.getTemplate());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

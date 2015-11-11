@@ -169,13 +169,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_TEMPLATE__TEMPLATE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Download Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TEMPLATE__DOWNLOAD_TEMPLATE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_TEMPLATE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_TEMPLATE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl <em>Generator</em>}' class.
@@ -2368,6 +2377,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaTemplate_Template();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaTemplate#getDownloadTemplate <em>Download Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Download Template</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTemplate#getDownloadTemplate()
+	 * @see #getMobaTemplate()
+	 * @generated
+	 */
+	EAttribute getMobaTemplate_DownloadTemplate();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaGenerator <em>Generator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4077,6 +4097,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_TEMPLATE__TEMPLATE = eINSTANCE.getMobaTemplate_Template();
+
+		/**
+		 * The meta object literal for the '<em><b>Download Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_TEMPLATE__DOWNLOAD_TEMPLATE = eINSTANCE.getMobaTemplate_DownloadTemplate();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl <em>Generator</em>}' class.

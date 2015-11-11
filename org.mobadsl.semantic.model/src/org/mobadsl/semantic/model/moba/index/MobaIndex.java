@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getTransientRepoID <em>Transient Repo ID</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getId <em>Id</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getVersion <em>Version</em>}</li>
@@ -27,6 +27,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface MobaIndex extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndex_Id()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Entries</b></em>' containment reference list.
 	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry}.
@@ -120,31 +146,5 @@ public interface MobaIndex extends EObject {
 	 * @generated
 	 */
 	void setVersion(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Transient Repo ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Transient Repo ID</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transient Repo ID</em>' attribute.
-	 * @see #setTransientRepoID(String)
-	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndex_TransientRepoID()
-	 * @model required="true" transient="true"
-	 * @generated
-	 */
-	String getTransientRepoID();
-
-	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndex#getTransientRepoID <em>Transient Repo ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transient Repo ID</em>' attribute.
-	 * @see #getTransientRepoID()
-	 * @generated
-	 */
-	void setTransientRepoID(String value);
 
 } // MobaIndex

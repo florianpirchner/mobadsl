@@ -3,22 +3,37 @@
  */
 package org.mobadsl.grammar.ui.quickfix
 
+import org.eclipse.core.resources.IFile
+import org.eclipse.core.resources.IProject
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider
+import org.eclipse.xtext.ui.editor.quickfix.Fix
+import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
+import org.eclipse.xtext.validation.Issue
+import org.mobadsl.grammar.validation.MobaValidator
+import org.mobadsl.ide.eclipse.TemplateIndexHelper
 
-/**
- * Custom quickfixes.
- *
- * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#quick-fixes
- */
 class MobaQuickfixProvider extends DefaultQuickfixProvider {
 
-//	@Fix(MobaValidator.INVALID_NAME)
-//	def capitalizeName(Issue issue, IssueResolutionAcceptor acceptor) {
-//		acceptor.accept(issue, 'Capitalize name', 'Capitalize the name.', 'upcase.png') [
-//			context |
-//			val xtextDocument = context.xtextDocument
-//			val firstLetter = xtextDocument.get(issue.offset, 1)
-//			xtextDocument.replace(issue.offset, 1, firstLetter.toUpperCase)
-//		]
-//	}
+	@Fix(MobaValidator.DOWNLOAD_TEMPLATE)
+	def downloadTemplate(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, 'Download template', 'Download the template from the repository.', 'index.gif') [ context |
+			val xtextDocument = context.xtextDocument
+			val value = xtextDocument.get(issue.offset, issue.length)
+			val coordinate = TemplateIndexHelper.TemplateCoordinate.parse(value)
+			if (coordinate == null) {
+				return
+			}
+
+			// replace the entry
+			xtextDocument.replace(issue.offset, issue.length, coordinate.templateID)
+
+			// download the file
+			val IFile file = xtextDocument.getAdapter(IFile)
+			val IProject project = file.project
+
+			val TemplateIndexHelper helper = new TemplateIndexHelper();
+			helper.downloadByCoordinate(project, newArrayList(coordinate))
+			helper.dispose
+		]
+	}
 }

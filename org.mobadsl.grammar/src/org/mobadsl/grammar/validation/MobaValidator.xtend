@@ -17,10 +17,12 @@ import org.mobadsl.semantic.model.moba.MobaRestCrud
 import org.mobadsl.semantic.model.moba.MobaRestCustom
 import org.mobadsl.semantic.model.moba.MobaSettings
 import org.mobadsl.semantic.model.moba.RecursionException
+import org.mobadsl.semantic.model.moba.MobaTemplate
 
 class MobaValidator extends AbstractMobaValidator {
 
 	public static val DUPLICATE_NAME = 'duplicateName'
+	public static val DOWNLOAD_TEMPLATE = 'downloadTemplate'
 
 	@Check
 	def checkDuplicateFeatureName(MobaBean dto) {
@@ -343,5 +345,13 @@ class MobaValidator extends AbstractMobaValidator {
 					MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST)
 			}
 		]
+	}
+
+	@Check
+	def checkDownloadTemplate(MobaTemplate template) {
+		if (!template.downloadTemplate.nullOrEmpty && template.downloadTemplate.startsWith("...index")) {
+			error("You need to download the template using the quickfix.", template,
+				MobaPackage.Literals.MOBA_TEMPLATE__DOWNLOAD_TEMPLATE, DOWNLOAD_TEMPLATE, null)
+		}
 	}
 }

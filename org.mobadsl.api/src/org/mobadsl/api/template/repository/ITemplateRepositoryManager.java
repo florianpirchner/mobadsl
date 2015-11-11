@@ -1,17 +1,42 @@
 package org.mobadsl.api.template.repository;
 
-import java.util.Map;
+import java.util.List;
 
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
+import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
 
 public interface ITemplateRepositoryManager {
 
 	/**
-	 * Returns all indexes grouped by its repository ID. If a repository does
-	 * not contain an ID, then a UUID will be used.
+	 * Returns all indexes.
 	 * 
 	 * @return
 	 */
-	Map<String, MobaIndex> getIndexes();
+	List<MobaIndex> getIndexes();
+
+	/**
+	 * Returns the serialized application for the given index entry.
+	 * 
+	 * @param entry
+	 * @return
+	 */
+	String getApplicationModelAsString(MobaIndexEntry entry);
+
+	/**
+	 * Returns all available entries.
+	 * 
+	 * @return
+	 */
+	List<MobaIndexEntry> getAvailableEntries();
+
+	/**
+	 * Returns the {@link MobaIndexEntry} for the given information.
+	 * 
+	 * @param indexId
+	 * @param templateId
+	 * @param version
+	 * @return
+	 */
+	MobaIndexEntry find(String indexId, String templateId, String version);
 
 }

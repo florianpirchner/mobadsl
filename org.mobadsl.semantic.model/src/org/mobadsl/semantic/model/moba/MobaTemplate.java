@@ -13,6 +13,7 @@ package org.mobadsl.semantic.model.moba;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaTemplate#getTemplate <em>Template</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaTemplate#getDownloadTemplate <em>Download Template</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaTemplate()
@@ -45,5 +46,31 @@ public interface MobaTemplate extends MobaApplicationFeature {
 	 * @generated
 	 */
 	void setTemplate(MobaApplication value);
+
+	/**
+	 * Returns the value of the '<em><b>Download Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Download Template</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Download Template</em>' attribute.
+	 * @see #setDownloadTemplate(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaTemplate_DownloadTemplate()
+	 * @model
+	 * @generated
+	 */
+	String getDownloadTemplate();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaTemplate#getDownloadTemplate <em>Download Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Download Template</em>' attribute.
+	 * @see #getDownloadTemplate()
+	 * @generated
+	 */
+	void setDownloadTemplate(String value);
 
 } // MobaTemplate

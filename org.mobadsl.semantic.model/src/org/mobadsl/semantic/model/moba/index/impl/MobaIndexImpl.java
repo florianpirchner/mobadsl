@@ -30,7 +30,7 @@ import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexImpl#getTransientRepoID <em>Transient Repo ID</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.index.impl.MobaIndexImpl#getVersion <em>Version</em>}</li>
@@ -41,24 +41,24 @@ import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
  */
 public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaIndex {
 	/**
-	 * The default value of the '{@link #getTransientRepoID() <em>Transient Repo ID</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTransientRepoID()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TRANSIENT_REPO_ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTransientRepoID() <em>Transient Repo ID</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTransientRepoID()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String transientRepoID = TRANSIENT_REPO_ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -154,6 +154,27 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<MobaIndexEntry> getEntries() {
 		if (entries == null) {
 			entries = new EObjectContainmentEList<MobaIndexEntry>(MobaIndexEntry.class, this, MobaIndexPackage.MOBA_INDEX__ENTRIES);
@@ -229,27 +250,6 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTransientRepoID() {
-		return transientRepoID;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransientRepoID(String newTransientRepoID) {
-		String oldTransientRepoID = transientRepoID;
-		transientRepoID = newTransientRepoID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaIndexPackage.MOBA_INDEX__TRANSIENT_REPO_ID, oldTransientRepoID, transientRepoID));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -267,8 +267,8 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaIndexPackage.MOBA_INDEX__TRANSIENT_REPO_ID:
-				return getTransientRepoID();
+			case MobaIndexPackage.MOBA_INDEX__ID:
+				return getId();
 			case MobaIndexPackage.MOBA_INDEX__NAME:
 				return getName();
 			case MobaIndexPackage.MOBA_INDEX__DESCRIPTION:
@@ -290,8 +290,8 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaIndexPackage.MOBA_INDEX__TRANSIENT_REPO_ID:
-				setTransientRepoID((String)newValue);
+			case MobaIndexPackage.MOBA_INDEX__ID:
+				setId((String)newValue);
 				return;
 			case MobaIndexPackage.MOBA_INDEX__NAME:
 				setName((String)newValue);
@@ -318,8 +318,8 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaIndexPackage.MOBA_INDEX__TRANSIENT_REPO_ID:
-				setTransientRepoID(TRANSIENT_REPO_ID_EDEFAULT);
+			case MobaIndexPackage.MOBA_INDEX__ID:
+				setId(ID_EDEFAULT);
 				return;
 			case MobaIndexPackage.MOBA_INDEX__NAME:
 				setName(NAME_EDEFAULT);
@@ -345,8 +345,8 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaIndexPackage.MOBA_INDEX__TRANSIENT_REPO_ID:
-				return TRANSIENT_REPO_ID_EDEFAULT == null ? transientRepoID != null : !TRANSIENT_REPO_ID_EDEFAULT.equals(transientRepoID);
+			case MobaIndexPackage.MOBA_INDEX__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case MobaIndexPackage.MOBA_INDEX__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MobaIndexPackage.MOBA_INDEX__DESCRIPTION:
@@ -369,8 +369,8 @@ public class MobaIndexImpl extends MinimalEObjectImpl.Container implements MobaI
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (transientRepoID: ");
-		result.append(transientRepoID);
+		result.append(" (id: ");
+		result.append(id);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", description: ");

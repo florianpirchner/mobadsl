@@ -11,11 +11,11 @@ MobaApplication:
 MobaApplicationFeature:
 	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaService | MobaGenerator;
 
-	/**
+/**
  * Will import a Moba-Application.
  */
 MobaTemplate:
-	'use template' template=[MobaApplication];
+	'use template' (template=[MobaApplication] | downloadTemplate=DOWNLOAD_TEMPLATE);
 
 MobaGenerator:
 	(active?='active')? 'generator' name=ID '{'
@@ -200,6 +200,10 @@ enum MobaUpperBound:
 terminal INT returns ecore::EInt:
 	super::INT;
 	
+terminal DOWNLOAD_TEMPLATE:
+	'...index:' ('a'..'z'|'A'..'Z'|'_'|':'|'.') ('a'..'z'|'A'..'Z'|'_'|':'|'.'|'0'..'9')*
+;
+
 terminal DOUBLE returns ecore::EDouble:
 	('+'|'-')? INT ('.' INT)?;
 

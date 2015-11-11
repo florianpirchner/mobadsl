@@ -232,15 +232,36 @@ ruleMobaTemplate returns [EObject current=null]
 		}
 		(
 			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getMobaTemplateRule());
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMobaTemplateRule());
+						}
 					}
-				}
-				otherlv_1=RULE_ID
-				{
-					newLeafNode(otherlv_1, grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationCrossReference_1_0());
-				}
+					otherlv_1=RULE_ID
+					{
+						newLeafNode(otherlv_1, grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationCrossReference_1_0_0());
+					}
+				)
+			)
+			    |
+			(
+				(
+					lv_downloadTemplate_2_0=RULE_DOWNLOAD_TEMPLATE
+					{
+						newLeafNode(lv_downloadTemplate_2_0, grammarAccess.getMobaTemplateAccess().getDownloadTemplateDOWNLOAD_TEMPLATETerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMobaTemplateRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"downloadTemplate",
+							lv_downloadTemplate_2_0,
+							"org.mobadsl.grammar.Moba.DOWNLOAD_TEMPLATE");
+					}
+				)
 			)
 		)
 	)
@@ -4357,6 +4378,8 @@ ruleMobaUpperBound returns [Enumerator current=null]
 ;
 
 RULE_INT : SUPER_INT;
+
+RULE_DOWNLOAD_TEMPLATE : '...index:' ('a'..'z'|'A'..'Z'|'_'|':'|'.') ('a'..'z'|'A'..'Z'|'_'|':'|'.'|'0'..'9')*;
 
 RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 

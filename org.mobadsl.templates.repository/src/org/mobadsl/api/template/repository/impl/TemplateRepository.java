@@ -55,16 +55,10 @@ public class TemplateRepository implements ITemplateRepository {
 				try {
 					Resource resource = readResource(INDEX_URL);
 					index = (MobaIndex) resource.getContents().get(0);
-					resource.unload();
-
-					// set the id of the repository to the index. So clients
-					// may find the repo later easily
-					index.setTransientRepoID((String) properties.get(ITemplateRepository.ID));
-
 					return EcoreUtil.copy(index);
 				} catch (Exception e) {
 					LOGGER.error("Error reading repository at {} : Cause {}", INDEX_URL, e);
-					return null;
+					return index;
 				}
 			}
 		}

@@ -3,10 +3,53 @@
  */
 package org.mobadsl.grammar.ui.contentassist
 
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.jface.viewers.StyledString
+import org.eclipse.xtext.Assignment
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
+import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
+import org.mobadsl.api.template.repository.ITemplateRepositoryManager
+import org.mobadsl.semantic.model.moba.index.MobaIndex
+import org.mobadsl.semantic.model.moba.index.MobaIndexEntry
+import org.osgi.framework.FrameworkUtil
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
  */
 class MobaProposalProvider extends AbstractMobaProposalProvider {
+
+	override void completeMobaTemplate_Template(EObject model, Assignment assignment, ContentAssistContext context,
+		ICompletionProposalAcceptor acceptor) {
+		super.completeMobaTemplate_Template(model, assignment, context, acceptor);
+
+		// complete with web access
+		val manager = getManager
+		if (manager != null) {
+			manager.availableEntries.forEach [
+				val index = it.eContainer as MobaIndex
+				acceptor.accept(
+					doCreateProposal(index.createProposalValue(it),
+						new StyledString("available in repo " + index.name + ": " + it.name + ":" + it.version + " - " +
+							it.description), it.image, 0, context))
+			]
+		}
+	}
+	
+	def String createProposalValue(MobaIndex index, MobaIndexEntry entry) '''
+		...index:«index.id»:«entry.name»:«entry.version»
+	'''
+
+	def ITemplateRepositoryManager getManager() {
+		val bc = FrameworkUtil.getBundle(MobaProposalProvider).bundleContext
+
+		val ref = bc.getServiceReference(ITemplateRepositoryManager)
+		if (ref != null) {
+			val manager = bc.getService(ref)
+			return manager
+		}
+
+		return null
+	}
+
 }

@@ -65,9 +65,34 @@ public class MobaIndexItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
+			addVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaIndex_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndex_id_feature", "_UI_MobaIndex_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -84,6 +109,50 @@ public class MobaIndexItemProvider
 				 getString("_UI_MobaIndex_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndex_name_feature", "_UI_MobaIndex_type"),
 				 MobaIndexPackage.Literals.MOBA_INDEX__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaIndex_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndex_description_feature", "_UI_MobaIndex_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Version feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVersionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaIndex_version_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndex_version_feature", "_UI_MobaIndex_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX__VERSION,
 				 true,
 				 false,
 				 false,
@@ -160,7 +229,10 @@ public class MobaIndexItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaIndex.class)) {
+			case MobaIndexPackage.MOBA_INDEX__ID:
 			case MobaIndexPackage.MOBA_INDEX__NAME:
+			case MobaIndexPackage.MOBA_INDEX__DESCRIPTION:
+			case MobaIndexPackage.MOBA_INDEX__VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaIndexPackage.MOBA_INDEX__ENTRIES:

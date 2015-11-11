@@ -553,6 +553,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaTemplate_DownloadTemplate() {
+		return (EAttribute)mobaTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaGenerator() {
 		return mobaGeneratorEClass;
 	}
@@ -1961,6 +1970,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		mobaTemplateEClass = createEClass(MOBA_TEMPLATE);
 		createEReference(mobaTemplateEClass, MOBA_TEMPLATE__TEMPLATE);
+		createEAttribute(mobaTemplateEClass, MOBA_TEMPLATE__DOWNLOAD_TEMPLATE);
 
 		mobaGeneratorEClass = createEClass(MOBA_GENERATOR);
 		createEAttribute(mobaGeneratorEClass, MOBA_GENERATOR__NAME);
@@ -2269,6 +2279,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		initEClass(mobaTemplateEClass, MobaTemplate.class, "MobaTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaTemplate_Template(), this.getMobaApplication(), null, "template", null, 0, 1, MobaTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaTemplate_DownloadTemplate(), ecorePackage.getEString(), "downloadTemplate", null, 0, 1, MobaTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaGeneratorEClass, MobaGenerator.class, "MobaGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaGenerator_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

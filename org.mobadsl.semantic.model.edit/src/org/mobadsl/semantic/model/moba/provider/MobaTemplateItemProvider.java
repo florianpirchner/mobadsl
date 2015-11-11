@@ -12,7 +12,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaTemplate;
 
 /**
  * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaTemplate} object.
@@ -43,6 +46,7 @@ public class MobaTemplateItemProvider extends MobaApplicationFeatureItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTemplatePropertyDescriptor(object);
+			addDownloadTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -70,6 +74,28 @@ public class MobaTemplateItemProvider extends MobaApplicationFeatureItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Download Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDownloadTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaTemplate_downloadTemplate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaTemplate_downloadTemplate_feature", "_UI_MobaTemplate_type"),
+				 MobaPackage.Literals.MOBA_TEMPLATE__DOWNLOAD_TEMPLATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MobaTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,7 +114,10 @@ public class MobaTemplateItemProvider extends MobaApplicationFeatureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MobaTemplate_type");
+		String label = ((MobaTemplate)object).getDownloadTemplate();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MobaTemplate_type") :
+			getString("_UI_MobaTemplate_type") + " " + label;
 	}
 	
 
@@ -102,6 +131,12 @@ public class MobaTemplateItemProvider extends MobaApplicationFeatureItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(MobaTemplate.class)) {
+			case MobaPackage.MOBA_TEMPLATE__DOWNLOAD_TEMPLATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

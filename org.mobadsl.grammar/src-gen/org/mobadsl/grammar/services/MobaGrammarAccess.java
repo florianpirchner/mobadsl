@@ -111,30 +111,42 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaTemplate");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUseTemplateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTemplateAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cTemplateMobaApplicationCrossReference_1_0 = (CrossReference)cTemplateAssignment_1.eContents().get(0);
-		private final RuleCall cTemplateMobaApplicationIDTerminalRuleCall_1_0_1 = (RuleCall)cTemplateMobaApplicationCrossReference_1_0.eContents().get(1);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cTemplateAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final CrossReference cTemplateMobaApplicationCrossReference_1_0_0 = (CrossReference)cTemplateAssignment_1_0.eContents().get(0);
+		private final RuleCall cTemplateMobaApplicationIDTerminalRuleCall_1_0_0_1 = (RuleCall)cTemplateMobaApplicationCrossReference_1_0_0.eContents().get(1);
+		private final Assignment cDownloadTemplateAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cDownloadTemplateDOWNLOAD_TEMPLATETerminalRuleCall_1_1_0 = (RuleCall)cDownloadTemplateAssignment_1_1.eContents().get(0);
 		
 		/// **
 		// * Will import a Moba-Application.
 		// * / MobaTemplate:
-		//	'use template' template=[MobaApplication];
+		//	'use template' (template=[MobaApplication] | downloadTemplate=DOWNLOAD_TEMPLATE);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'use template' template=[MobaApplication]
+		//'use template' (template=[MobaApplication] | downloadTemplate=DOWNLOAD_TEMPLATE)
 		public Group getGroup() { return cGroup; }
 		
 		//'use template'
 		public Keyword getUseTemplateKeyword_0() { return cUseTemplateKeyword_0; }
 		
+		//(template=[MobaApplication] | downloadTemplate=DOWNLOAD_TEMPLATE)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		
 		//template=[MobaApplication]
-		public Assignment getTemplateAssignment_1() { return cTemplateAssignment_1; }
+		public Assignment getTemplateAssignment_1_0() { return cTemplateAssignment_1_0; }
 		
 		//[MobaApplication]
-		public CrossReference getTemplateMobaApplicationCrossReference_1_0() { return cTemplateMobaApplicationCrossReference_1_0; }
+		public CrossReference getTemplateMobaApplicationCrossReference_1_0_0() { return cTemplateMobaApplicationCrossReference_1_0_0; }
 		
 		//ID
-		public RuleCall getTemplateMobaApplicationIDTerminalRuleCall_1_0_1() { return cTemplateMobaApplicationIDTerminalRuleCall_1_0_1; }
+		public RuleCall getTemplateMobaApplicationIDTerminalRuleCall_1_0_0_1() { return cTemplateMobaApplicationIDTerminalRuleCall_1_0_0_1; }
+		
+		//downloadTemplate=DOWNLOAD_TEMPLATE
+		public Assignment getDownloadTemplateAssignment_1_1() { return cDownloadTemplateAssignment_1_1; }
+		
+		//DOWNLOAD_TEMPLATE
+		public RuleCall getDownloadTemplateDOWNLOAD_TEMPLATETerminalRuleCall_1_1_0() { return cDownloadTemplateDOWNLOAD_TEMPLATETerminalRuleCall_1_1_0; }
 	}
 	public class MobaGeneratorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaGenerator");
@@ -2584,6 +2596,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	private final MobaLowerBoundElements eMobaLowerBound;
 	private final MobaUpperBoundElements eMobaUpperBound;
 	private final TerminalRule tINT;
+	private final TerminalRule tDOWNLOAD_TEMPLATE;
 	private final TerminalRule tDOUBLE;
 	private final TerminalRule tFLOAT;
 	
@@ -2644,6 +2657,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		this.eMobaLowerBound = new MobaLowerBoundElements();
 		this.eMobaUpperBound = new MobaUpperBoundElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.INT");
+		this.tDOWNLOAD_TEMPLATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOWNLOAD_TEMPLATE");
 		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOUBLE");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.FLOAT");
 	}
@@ -2699,7 +2713,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	/// **
 	// * Will import a Moba-Application.
 	// * / MobaTemplate:
-	//	'use template' template=[MobaApplication];
+	//	'use template' (template=[MobaApplication] | downloadTemplate=DOWNLOAD_TEMPLATE);
 	public MobaTemplateElements getMobaTemplateAccess() {
 		return pMobaTemplate;
 	}
@@ -3189,6 +3203,12 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	//	super::INT;
 	public TerminalRule getINTRule() {
 		return tINT;
+	}
+	
+	//terminal DOWNLOAD_TEMPLATE:
+	//	'...index:' ('a'..'z' | 'A'..'Z' | '_' | ':' | '.') ('a'..'z' | 'A'..'Z' | '_' | ':' | '.' | '0'..'9')*;
+	public TerminalRule getDOWNLOAD_TEMPLATERule() {
+		return tDOWNLOAD_TEMPLATE;
 	}
 	
 	//terminal DOUBLE returns ecore::EDouble:

@@ -8,9 +8,6 @@ import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
@@ -48,12 +45,7 @@ public class AddTemplateFormRepoDialogAction implements IObjectActionDelegate {
 	}
 
 	public void addTemplateByDialog(IProject project) {
-		Dialog dialog = new org.eclipse.jface.dialogs.Dialog(Display.getCurrent().getActiveShell()) {
-			@Override
-			protected Control createDialogArea(Composite parent) {
-				return new TemplatesFromRepoComposite(parent, SWT.NONE);
-			}
-		};
+		Dialog dialog = new TemplatesFromRepoCompositeDialog(project, Display.getCurrent().getActiveShell());
 		dialog.open();
 	}
 
