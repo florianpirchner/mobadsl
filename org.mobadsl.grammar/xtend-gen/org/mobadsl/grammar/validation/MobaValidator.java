@@ -5,9 +5,11 @@ package org.mobadsl.grammar.validation;
 
 import com.google.common.base.Objects;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -23,6 +25,8 @@ import org.mobadsl.semantic.model.moba.MobaBean;
 import org.mobadsl.semantic.model.moba.MobaBeanFeature;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaEnum;
+import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPayload;
@@ -487,5 +491,102 @@ public class MobaValidator extends AbstractMobaValidator {
         this.error(_builder.toString(), application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES, firstIndex);
       }
     }
+  }
+  
+  @Check
+  public void checkEnumExtendsNotEnum(final MobaDataType datatype) {
+    final MobaDataType superType = datatype.getSuperType();
+    boolean _or = false;
+    boolean _isEnum = datatype.isEnum();
+    boolean _not = (!_isEnum);
+    if (_not) {
+      _or = true;
+    } else {
+      boolean _equals = Objects.equal(superType, null);
+      _or = _equals;
+    }
+    if (_or) {
+      return;
+    }
+    boolean _isEnum_1 = superType.isEnum();
+    boolean _not_1 = (!_isEnum_1);
+    if (_not_1) {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("SuperType ");
+      String _name = superType.getName();
+      _builder.append(_name, "");
+      _builder.append(" is not an Enum");
+      this.error(_builder.toString(), datatype, 
+        MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
+    }
+  }
+  
+  @Check
+  public void checkEnumExtendsDuplicates(final MobaDataType datatype) {
+    final MobaDataType superType = datatype.getSuperType();
+    boolean _or = false;
+    boolean _isEnum = datatype.isEnum();
+    boolean _not = (!_isEnum);
+    if (_not) {
+      _or = true;
+    } else {
+      boolean _equals = Objects.equal(superType, null);
+      _or = _equals;
+    }
+    if (_or) {
+      return;
+    }
+    final HashSet<String> names = CollectionLiterals.<String>newHashSet();
+    final HashSet<String> literals = CollectionLiterals.<String>newHashSet();
+    final HashSet<Integer> values = CollectionLiterals.<Integer>newHashSet();
+    MobaEnum _enumAST = superType.getEnumAST();
+    List<MobaEnumLiteral> _allLiterals = _enumAST.getAllLiterals();
+    final Consumer<MobaEnumLiteral> _function = (MobaEnumLiteral it) -> {
+      String _name = it.getName();
+      names.add(_name);
+      String _literal = it.getLiteral();
+      literals.add(_literal);
+      int _value = it.getValue();
+      values.add(Integer.valueOf(_value));
+    };
+    _allLiterals.forEach(_function);
+    MobaEnum _enumAST_1 = datatype.getEnumAST();
+    EList<MobaEnumLiteral> _literals = _enumAST_1.getLiterals();
+    final Consumer<MobaEnumLiteral> _function_1 = (MobaEnumLiteral it) -> {
+      String _name = it.getName();
+      boolean _contains = names.contains(_name);
+      if (_contains) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("Duplicate name \"");
+        String _name_1 = it.getName();
+        _builder.append(_name_1, "");
+        _builder.append(".\" Check super type.");
+        this.error(_builder.toString(), datatype, 
+          MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
+      }
+      String _literal = it.getLiteral();
+      boolean _contains_1 = literals.contains(_literal);
+      if (_contains_1) {
+        StringConcatenation _builder_1 = new StringConcatenation();
+        _builder_1.append("Duplicate literal \"");
+        String _literal_1 = it.getLiteral();
+        _builder_1.append(_literal_1, "");
+        _builder_1.append(".\" Check super type.");
+        this.error(_builder_1.toString(), datatype, 
+          MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
+      }
+      int _value = it.getValue();
+      boolean _contains_2 = values.contains(Integer.valueOf(_value));
+      if (_contains_2) {
+        StringConcatenation _builder_2 = new StringConcatenation();
+        _builder_2.append("You are redefinging enum literal with value\"");
+        int _value_1 = it.getValue();
+        _builder_2.append(_value_1, "");
+        _builder_2.append(".\" Check super type.");
+        this.warning(_builder_2.toString(), datatype, 
+          MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
+      }
+    };
+    _literals.forEach(_function_1);
   }
 }

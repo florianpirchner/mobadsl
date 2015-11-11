@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.documentation.impl.MultiLineCommentDocumentationProvider;
 import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature;
@@ -40,7 +41,32 @@ public class MobaHoverDocumentationProvider extends MultiLineCommentDocumentatio
     _builder.append("<p>@value = <code>");
     String _value = object.getValue();
     _builder.append(_value, "");
-    _builder.append("</code></p>");
+    _builder.append("</code><br>");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("@valueType = ");
+    MobaConstantValue.ValueType _xifexpression = null;
+    boolean _and = false;
+    MobaConstantValue _valueAST = object.getValueAST();
+    boolean _notEquals = (!Objects.equal(_valueAST, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      MobaConstantValue _valueAST_1 = object.getValueAST();
+      MobaConstantValue _tail = _valueAST_1.getTail();
+      boolean _equals = Objects.equal(_tail, null);
+      _and = _equals;
+    }
+    if (_and) {
+      MobaConstantValue _valueAST_2 = object.getValueAST();
+      _xifexpression = _valueAST_2.getValueType();
+    } else {
+      _xifexpression = MobaConstantValue.ValueType.STRING;
+    }
+    _builder.append(_xifexpression, "\t\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("</p>");
     return (value + _builder);
   }
   

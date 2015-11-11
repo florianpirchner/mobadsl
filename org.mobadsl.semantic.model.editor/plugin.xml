@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Moba -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.mobadsl.semantic.model.moba.presentation.MobaModelWizardID"
+            name="%_UI_MobaModelWizard_label"
+            class="org.mobadsl.semantic.model.moba.presentation.MobaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MobaModelFile.gif">
+         <description>%_UI_MobaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Moba -->
+      <editor
+            id="org.mobadsl.semantic.model.moba.presentation.MobaEditorID"
+            name="%_UI_MobaEditor_label"
+            icon="icons/full/obj16/MobaModelFile.gif"
+            extensions="moba"
+            class="org.mobadsl.semantic.model.moba.presentation.MobaEditor"
+            contributorClass="org.mobadsl.semantic.model.moba.presentation.MobaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Moba -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.mobadsl.semantic.model.moba.index.presentation.MobaIndexModelWizardID"
+            name="%_UI_MobaIndexModelWizard_label"
+            class="org.mobadsl.semantic.model.moba.index.presentation.MobaIndexModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MobaIndexModelFile.gif">
+         <description>%_UI_MobaIndexModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Moba -->
+      <editor
+            id="org.mobadsl.semantic.model.moba.index.presentation.MobaIndexEditorID"
+            name="%_UI_MobaIndexEditor_label"
+            icon="icons/full/obj16/MobaIndexModelFile.gif"
+            extensions="mobaindex"
+            class="org.mobadsl.semantic.model.moba.index.presentation.MobaIndexEditor"
+            contributorClass="org.mobadsl.semantic.model.moba.index.presentation.MobaIndexActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

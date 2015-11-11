@@ -22,6 +22,8 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl#getValueConst <em>Value Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl#getTail <em>Tail</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl#getValueInt <em>Value Int</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl#getValueDouble <em>Value Double</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,6 +64,42 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected MobaConstantValue tail;
+
+	/**
+	 * The default value of the '{@link #getValueInt() <em>Value Int</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getValueInt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer VALUE_INT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getValueInt() <em>Value Int</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getValueInt()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer valueInt = VALUE_INT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getValueDouble() <em>Value Double</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getValueDouble()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Double VALUE_DOUBLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getValueDouble() <em>Value Double</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getValueDouble()
+	 * @generated
+	 * @ordered
+	 */
+	protected Double valueDouble = VALUE_DOUBLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -178,6 +216,44 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Integer getValueInt() {
+		return valueInt;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValueInt(Integer newValueInt) {
+		Integer oldValueInt = valueInt;
+		valueInt = newValueInt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_CONSTANT_VALUE__VALUE_INT, oldValueInt, valueInt));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Double getValueDouble() {
+		return valueDouble;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValueDouble(Double newValueDouble) {
+		Double oldValueDouble = valueDouble;
+		valueDouble = newValueDouble;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_CONSTANT_VALUE__VALUE_DOUBLE, oldValueDouble, valueDouble));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -201,6 +277,10 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 				return basicGetValueConst();
 			case MobaPackage.MOBA_CONSTANT_VALUE__TAIL:
 				return getTail();
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_INT:
+				return getValueInt();
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_DOUBLE:
+				return getValueDouble();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -220,6 +300,12 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 				return;
 			case MobaPackage.MOBA_CONSTANT_VALUE__TAIL:
 				setTail((MobaConstantValue)newValue);
+				return;
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_INT:
+				setValueInt((Integer)newValue);
+				return;
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_DOUBLE:
+				setValueDouble((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,6 +327,12 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 			case MobaPackage.MOBA_CONSTANT_VALUE__TAIL:
 				setTail((MobaConstantValue)null);
 				return;
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_INT:
+				setValueInt(VALUE_INT_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_DOUBLE:
+				setValueDouble(VALUE_DOUBLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -258,6 +350,10 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 				return valueConst != null;
 			case MobaPackage.MOBA_CONSTANT_VALUE__TAIL:
 				return tail != null;
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_INT:
+				return VALUE_INT_EDEFAULT == null ? valueInt != null : !VALUE_INT_EDEFAULT.equals(valueInt);
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_DOUBLE:
+				return VALUE_DOUBLE_EDEFAULT == null ? valueDouble != null : !VALUE_DOUBLE_EDEFAULT.equals(valueDouble);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -273,6 +369,10 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (valueString: ");
 		result.append(valueString);
+		result.append(", valueInt: ");
+		result.append(valueInt);
+		result.append(", valueDouble: ");
+		result.append(valueDouble);
 		result.append(')');
 		return result.toString();
 	}
@@ -282,6 +382,10 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 		StringBuilder b = new StringBuilder();
 		if (getValueConst() != null) {
 			b.append(getValueConst().getValue());
+		} else if (getValueInt() != null) {
+			b.append(Integer.toString(getValueInt()));
+		} else if (getValueDouble() != null) {
+			b.append(Double.toString(getValueDouble()));
 		} else {
 			b.append(getValueString());
 		}
@@ -291,6 +395,19 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 		}
 
 		return b.toString();
+	}
+
+	@Override
+	public ValueType getValueType() {
+		if (getValueConst() != null) {
+			return ValueType.CONSTANT;
+		} else if (getValueInt() != null) {
+			return ValueType.INT;
+		} else if (getValueDouble() != null) {
+			return ValueType.DOUBLE;
+		} else {
+			return ValueType.STRING;
+		}
 	}
 
 } // MobaConstantValueImpl

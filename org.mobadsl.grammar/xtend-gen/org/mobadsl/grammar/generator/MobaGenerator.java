@@ -29,18 +29,30 @@ public class MobaGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     final List<String> generatorIds = this.collectGeneratorIds(input);
+    boolean _equals = Objects.equal(generatorIds, null);
+    if (_equals) {
+      return;
+    }
     this.generatorDelegate.generate(input, fsa, context, generatorIds);
   }
   
   @Override
   public void beforeGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     final List<String> generatorIds = this.collectGeneratorIds(input);
+    boolean _equals = Objects.equal(generatorIds, null);
+    if (_equals) {
+      return;
+    }
     this.generatorDelegate.beforeGenerate(input, fsa, context, generatorIds);
   }
   
   @Override
   public void afterGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     final List<String> generatorIds = this.collectGeneratorIds(input);
+    boolean _equals = Objects.equal(generatorIds, null);
+    if (_equals) {
+      return;
+    }
     this.generatorDelegate.afterGenerate(input, fsa, context, generatorIds);
   }
   

@@ -1091,29 +1091,67 @@ ruleMobaConstantValue returns [EObject current=null]
 			    |
 			(
 				(
+					lv_valueInt_1_0=RULE_INT
+					{
+						newLeafNode(lv_valueInt_1_0, grammarAccess.getMobaConstantValueAccess().getValueIntINTTerminalRuleCall_0_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMobaConstantValueRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"valueInt",
+							lv_valueInt_1_0,
+							"org.mobadsl.grammar.Moba.INT");
+					}
+				)
+			)
+			    |
+			(
+				(
+					lv_valueDouble_2_0=RULE_DOUBLE
+					{
+						newLeafNode(lv_valueDouble_2_0, grammarAccess.getMobaConstantValueAccess().getValueDoubleDOUBLETerminalRuleCall_0_2_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMobaConstantValueRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"valueDouble",
+							lv_valueDouble_2_0,
+							"org.mobadsl.grammar.Moba.DOUBLE");
+					}
+				)
+			)
+			    |
+			(
+				(
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getMobaConstantValueRule());
 						}
 					}
-					otherlv_1=RULE_ID
+					otherlv_3=RULE_ID
 					{
-						newLeafNode(otherlv_1, grammarAccess.getMobaConstantValueAccess().getValueConstMobaConstantCrossReference_0_1_0());
+						newLeafNode(otherlv_3, grammarAccess.getMobaConstantValueAccess().getValueConstMobaConstantCrossReference_0_3_0());
 					}
 				)
 			)
 		)
 		(
-			otherlv_2='+'
+			otherlv_4='+'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getMobaConstantValueAccess().getPlusSignKeyword_1_0());
+				newLeafNode(otherlv_4, grammarAccess.getMobaConstantValueAccess().getPlusSignKeyword_1_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getMobaConstantValueAccess().getTailMobaConstantValueParserRuleCall_1_1_0());
 					}
-					lv_tail_3_0=ruleMobaConstantValue
+					lv_tail_5_0=ruleMobaConstantValue
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMobaConstantValueRule());
@@ -1121,7 +1159,7 @@ ruleMobaConstantValue returns [EObject current=null]
 						set(
 							$current,
 							"tail",
-							lv_tail_3_0,
+							lv_tail_5_0,
 							"org.mobadsl.grammar.Moba.MobaConstantValue");
 						afterParserOrEnumRuleCall();
 					}
@@ -3860,9 +3898,9 @@ ruleMobaMinConstraint returns [EObject current=null]
 		(
 			(
 				(
-					lv_filterValue_2_0=RULE_FLOAT
+					lv_filterValue_2_0=RULE_DOUBLE
 					{
-						newLeafNode(lv_filterValue_2_0, grammarAccess.getMobaMinConstraintAccess().getFilterValueFLOATTerminalRuleCall_2_0_0());
+						newLeafNode(lv_filterValue_2_0, grammarAccess.getMobaMinConstraintAccess().getFilterValueDOUBLETerminalRuleCall_2_0_0());
 					}
 					{
 						if ($current==null) {
@@ -3872,7 +3910,7 @@ ruleMobaMinConstraint returns [EObject current=null]
 							$current,
 							"filterValue",
 							lv_filterValue_2_0,
-							"org.mobadsl.grammar.Moba.FLOAT");
+							"org.mobadsl.grammar.Moba.DOUBLE");
 					}
 				)
 			)
@@ -3921,9 +3959,9 @@ ruleMobaMaxConstraint returns [EObject current=null]
 		(
 			(
 				(
-					lv_filterValue_2_0=RULE_FLOAT
+					lv_filterValue_2_0=RULE_DOUBLE
 					{
-						newLeafNode(lv_filterValue_2_0, grammarAccess.getMobaMaxConstraintAccess().getFilterValueFLOATTerminalRuleCall_2_0_0());
+						newLeafNode(lv_filterValue_2_0, grammarAccess.getMobaMaxConstraintAccess().getFilterValueDOUBLETerminalRuleCall_2_0_0());
 					}
 					{
 						if ($current==null) {
@@ -3933,7 +3971,7 @@ ruleMobaMaxConstraint returns [EObject current=null]
 							$current,
 							"filterValue",
 							lv_filterValue_2_0,
-							"org.mobadsl.grammar.Moba.FLOAT");
+							"org.mobadsl.grammar.Moba.DOUBLE");
 					}
 				)
 			)
@@ -4319,6 +4357,8 @@ ruleMobaUpperBound returns [Enumerator current=null]
 ;
 
 RULE_INT : SUPER_INT;
+
+RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 
 RULE_FLOAT : RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)? (('b'|'B') ('i'|'I'|'d'|'D')|('l'|'L'|'d'|'D'|'f'|'F'))?;
 

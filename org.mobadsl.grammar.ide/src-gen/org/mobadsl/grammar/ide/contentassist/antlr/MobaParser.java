@@ -148,7 +148,9 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaConstantAccess().getNameAssignment_1(), "rule__MobaConstant__NameAssignment_1");
 					put(grammarAccess.getMobaConstantAccess().getValueASTAssignment_3(), "rule__MobaConstant__ValueASTAssignment_3");
 					put(grammarAccess.getMobaConstantValueAccess().getValueStringAssignment_0_0(), "rule__MobaConstantValue__ValueStringAssignment_0_0");
-					put(grammarAccess.getMobaConstantValueAccess().getValueConstAssignment_0_1(), "rule__MobaConstantValue__ValueConstAssignment_0_1");
+					put(grammarAccess.getMobaConstantValueAccess().getValueIntAssignment_0_1(), "rule__MobaConstantValue__ValueIntAssignment_0_1");
+					put(grammarAccess.getMobaConstantValueAccess().getValueDoubleAssignment_0_2(), "rule__MobaConstantValue__ValueDoubleAssignment_0_2");
+					put(grammarAccess.getMobaConstantValueAccess().getValueConstAssignment_0_3(), "rule__MobaConstantValue__ValueConstAssignment_0_3");
 					put(grammarAccess.getMobaConstantValueAccess().getTailAssignment_1_1(), "rule__MobaConstantValue__TailAssignment_1_1");
 					put(grammarAccess.getMobaPropertiesAbleAccess().getPropertiesAssignment_1(), "rule__MobaPropertiesAble__PropertiesAssignment_1");
 					put(grammarAccess.getMobaPropertiesAbleAccess().getPropertiesAssignment_2_1(), "rule__MobaPropertiesAble__PropertiesAssignment_2_1");

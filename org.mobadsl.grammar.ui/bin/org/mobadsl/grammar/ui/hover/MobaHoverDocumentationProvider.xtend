@@ -3,11 +3,12 @@ package org.mobadsl.grammar.ui.hover
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtext.documentation.impl.MultiLineCommentDocumentationProvider
 import org.mobadsl.semantic.model.moba.MobaConstant
+import org.mobadsl.semantic.model.moba.MobaConstantValue
+import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaGenerator
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature
-import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble
 import org.mobadsl.semantic.model.moba.MobaProperty
 
@@ -28,7 +29,10 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	}
 
 	def dispatch String getDocu(MobaConstant object, String value) {
-		return value + '''<p>@value = <code>«object.value»</code></p>'''
+		return value +
+			'''<p>@value = <code>«object.value»</code><br>
+		@valueType = «if(object.valueAST != null && object.valueAST.tail == null) object.valueAST.valueType else MobaConstantValue.ValueType.STRING»
+		</p>'''
 	}
 
 	def dispatch String getDocu(MobaGenerator object, String value) {
@@ -41,7 +45,7 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 		</ul>
 		'''
 	}
-	
+
 	def dispatch String getDocu(MobaDataType object, String value) {
 		return value + '''<p>
 		Datatype <b>«object.name»</b>:<br>
@@ -57,7 +61,7 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 
 	def String getToPropertiesDocu(MobaPropertiesAble type) {
 		val allProps = type.genProperties
-		if(allProps.empty) {
+		if (allProps.empty) {
 			return ""
 		}
 		val StringBuilder b = new StringBuilder

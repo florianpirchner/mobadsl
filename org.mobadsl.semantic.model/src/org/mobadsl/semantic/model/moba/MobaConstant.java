@@ -77,6 +77,5 @@ public interface MobaConstant extends MobaApplicationFeature, MobaPropertiesAble
 	 * @return
 	 */
 	String getValue();
-
 	
 } // MobaConstant

@@ -518,13 +518,31 @@ public interface MobaPackage extends EPackage {
 	int MOBA_CONSTANT_VALUE__TAIL = 2;
 
 	/**
+	 * The feature id for the '<em><b>Value Int</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CONSTANT_VALUE__VALUE_INT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Value Double</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CONSTANT_VALUE__VALUE_DOUBLE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Constant Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_VALUE_FEATURE_COUNT = 3;
+	int MOBA_CONSTANT_VALUE_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl <em>Property</em>}' class.
@@ -2651,6 +2669,28 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaConstantValue_Tail();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueInt <em>Value Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value Int</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValue#getValueInt()
+	 * @see #getMobaConstantValue()
+	 * @generated
+	 */
+	EAttribute getMobaConstantValue_ValueInt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueDouble <em>Value Double</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value Double</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValue#getValueDouble()
+	 * @see #getMobaConstantValue()
+	 * @generated
+	 */
+	EAttribute getMobaConstantValue_ValueDouble();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble <em>Properties Able</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4275,6 +4315,22 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_CONSTANT_VALUE__TAIL = eINSTANCE.getMobaConstantValue_Tail();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Int</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_CONSTANT_VALUE__VALUE_INT = eINSTANCE.getMobaConstantValue_ValueInt();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Double</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_CONSTANT_VALUE__VALUE_DOUBLE = eINSTANCE.getMobaConstantValue_ValueDouble();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble <em>Properties Able</em>}' class.

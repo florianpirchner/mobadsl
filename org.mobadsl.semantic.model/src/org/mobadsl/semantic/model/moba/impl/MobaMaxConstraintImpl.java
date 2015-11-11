@@ -36,7 +36,7 @@ public class MobaMaxConstraintImpl extends MobaConstraintImpl implements MobaMax
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float FILTER_VALUE_EDEFAULT = 0.0F;
+	protected static final double FILTER_VALUE_EDEFAULT = 0.0;
 	/**
 	 * The cached value of the '{@link #getFilterValue() <em>Filter Value</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -44,7 +44,7 @@ public class MobaMaxConstraintImpl extends MobaConstraintImpl implements MobaMax
 	 * @generated
 	 * @ordered
 	 */
-	protected float filterValue = FILTER_VALUE_EDEFAULT;
+	protected double filterValue = FILTER_VALUE_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getFilterConst() <em>Filter Const</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -75,16 +75,17 @@ public class MobaMaxConstraintImpl extends MobaConstraintImpl implements MobaMax
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getFilterValue() {
+	public double getFilterValue() {
 		return filterValue;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilterValue(float newFilterValue) {
-		float oldFilterValue = filterValue;
+	public void setFilterValue(double newFilterValue) {
+		double oldFilterValue = filterValue;
 		filterValue = newFilterValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_MAX_CONSTRAINT__FILTER_VALUE, oldFilterValue, filterValue));
@@ -149,7 +150,7 @@ public class MobaMaxConstraintImpl extends MobaConstraintImpl implements MobaMax
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MobaPackage.MOBA_MAX_CONSTRAINT__FILTER_VALUE:
-				setFilterValue((Float)newValue);
+				setFilterValue((Double)newValue);
 				return;
 			case MobaPackage.MOBA_MAX_CONSTRAINT__FILTER_CONST:
 				setFilterConst((MobaConstant)newValue);
@@ -206,13 +207,13 @@ public class MobaMaxConstraintImpl extends MobaConstraintImpl implements MobaMax
 	}
 
 	@Override
-	public float getFilter() {
+	public double getFilter() {
 		if (getFilterConst() != null) {
 			try {
-				return Float.valueOf(getFilterConst().getValue());
+				return Double.valueOf(getFilterConst().getValue());
 			} catch (Exception ex) {
-				LOGGER.error(String.format("Can not parse %s to float", getFilterConst().getValue()));
-				throw new IllegalStateException(String.format("Can not parse %s to float", getFilterConst().getValue()));
+				LOGGER.error(String.format("Can not parse %s to double", getFilterConst().getValue()));
+				throw new IllegalStateException(String.format("Can not parse %s to double", getFilterConst().getValue()));
 			}
 		}
 		return getFilterValue();

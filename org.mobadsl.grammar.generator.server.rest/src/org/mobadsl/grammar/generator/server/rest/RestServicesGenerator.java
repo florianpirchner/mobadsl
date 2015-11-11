@@ -8,6 +8,8 @@ import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.generator.OutputConfiguration;
 import org.mobadsl.grammar.generator.common.IGeneratorDelegate;
+import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaConstant;
 
 public class RestServicesGenerator implements IGeneratorDelegate {
 
@@ -26,6 +28,11 @@ public class RestServicesGenerator implements IGeneratorDelegate {
 	@Override
 	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context, PropertiesMap properties) {
 		fsa.generateFile("Foo", "server-rest", "Heyho");
+		
+		MobaApplication app = (MobaApplication) input.getContents().get(0);
+		for(MobaConstant consts : app.getConstants()) {
+			System.out.println(consts.getValue());
+		}
 	}
 
 	@Override

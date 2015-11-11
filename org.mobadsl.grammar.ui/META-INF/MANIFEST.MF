@@ -18,7 +18,7 @@ Require-Bundle: org.mobadsl.grammar,
  org.eclipse.xtend.lib;resolution:=optional,
  org.eclipse.xtext.xbase.lib
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.mobadsl.grammar.ui.quickfix,
  org.mobadsl.grammar.ui.contentassist,
  org.mobadsl.grammar.ui.internal

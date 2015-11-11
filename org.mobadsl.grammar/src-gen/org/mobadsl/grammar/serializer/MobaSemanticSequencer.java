@@ -274,7 +274,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaConstantValue returns MobaConstantValue
 	 *
 	 * Constraint:
-	 *     ((valueString=STRING | valueConst=[MobaConstant|ID]) tail=MobaConstantValue?)
+	 *     ((valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|ID]) tail=MobaConstantValue?)
 	 */
 	protected void sequence_MobaConstantValue(ISerializationContext context, MobaConstantValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -304,13 +304,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         superType=[MobaDataType|ID]? 
 	 *         (
-	 *             (
-	 *                 primitive?='isPrimitive' | 
-	 *                 array?='isArray' | 
-	 *                 ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') dateFormatConst=[MobaConstant|ID]? dateFormatString=STRING?) | 
-	 *                 enumAST=MobaEnum
-	 *             )? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
+	 *             (primitive?='isPrimitive' | array?='isArray' | enumAST=MobaEnum)? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 
+	 *             ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
 	 *         )+ 
 	 *         (properties+=MobaProperty properties+=MobaProperty*)?
 	 *     )
@@ -420,7 +416,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaMaxConstraint returns MobaMaxConstraint
 	 *
 	 * Constraint:
-	 *     (filterValue=FLOAT | filterConst=[MobaConstant|ID])
+	 *     (filterValue=DOUBLE | filterConst=[MobaConstant|ID])
 	 */
 	protected void sequence_MobaMaxConstraint(ISerializationContext context, MobaMaxConstraint semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -446,7 +442,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaMinConstraint returns MobaMinConstraint
 	 *
 	 * Constraint:
-	 *     (filterValue=FLOAT | filterConst=[MobaConstant|ID])
+	 *     (filterValue=DOUBLE | filterConst=[MobaConstant|ID])
 	 */
 	protected void sequence_MobaMinConstraint(ISerializationContext context, MobaMinConstraint semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

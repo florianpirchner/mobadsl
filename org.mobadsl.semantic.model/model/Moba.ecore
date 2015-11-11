@@ -48,6 +48,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueConst" eType="#//MobaConstant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#//MobaConstantValue"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueInt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueDouble" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaPropertiesAble" abstract="true"
       interface="true">
@@ -192,11 +194,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaMinConstraint" eSuperTypes="#//MobaConstraint">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filterValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filterValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaMaxConstraint" eSuperTypes="#//MobaConstraint">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filterValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filterValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filterConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaFutureConstraint" eSuperTypes="#//MobaConstraint"/>
@@ -229,4 +231,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eSubpackages name="index" nsURI="http://www.mobadsl.org/template/repository/Index"
+      nsPrefix="index">
+    <eClassifiers xsi:type="ecore:EClass" name="MobaIndex">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="transientRepoID" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
+          eType="#//index/MobaIndexEntry" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MobaIndexEntry">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativePath" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+  </eSubpackages>
 </ecore:EPackage>

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Model
+Bundle-SymbolicName: org.mobadsl.api
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Version: 0.8.0
+Require-Bundle: org.mobadsl.semantic.model
+Export-Package: org.mobadsl.api.template.repository

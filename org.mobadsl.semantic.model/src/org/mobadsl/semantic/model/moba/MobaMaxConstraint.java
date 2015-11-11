@@ -35,17 +35,17 @@ public interface MobaMaxConstraint extends MobaConstraint {
 	 * @model
 	 * @generated
 	 */
-	float getFilterValue();
+	double getFilterValue();
 
 	/**
 	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaMaxConstraint#getFilterValue <em>Filter Value</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Filter Value</em>' attribute.
 	 * @see #getFilterValue()
 	 * @generated
 	 */
-	void setFilterValue(float value);
+	void setFilterValue(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Filter Const</b></em>' reference. <!--
@@ -85,6 +85,6 @@ public interface MobaMaxConstraint extends MobaConstraint {
 	 * @throws IllegalStateException
 	 *             if the constant value is not convertible to float.
 	 */
-	float getFilter();
+	double getFilter();
 
 } // MobaMaxConstraint

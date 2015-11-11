@@ -23,16 +23,25 @@ class MobaGenerator extends AbstractGenerator {
 
 	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
+		if(generatorIds == null) {
+			return
+		}
 		generatorDelegate.generate(input, fsa, context, generatorIds);
 	}
 
 	override beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
+		if(generatorIds == null) {
+			return
+		}
 		generatorDelegate.beforeGenerate(input, fsa, context, generatorIds);
 	}
 
 	override afterGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
+		if(generatorIds == null) {
+			return
+		}
 		generatorDelegate.afterGenerate(input, fsa, context, generatorIds);
 	}
 

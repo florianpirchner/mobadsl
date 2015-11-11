@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" immediate="true" name="org.mobadsl.api.template.repository.impl.TemplateRepositoryManager">
+   <service>
+      <provide interface="org.mobadsl.api.template.repository.ITemplateRepositoryManager"/>
+   </service>
+   <reference bind="addRepo" cardinality="0..n" interface="org.mobadsl.api.template.repository.ITemplateRepository" name="Repo" policy="dynamic" unbind="removeRepo"/>
+   <implementation class="org.mobadsl.api.template.repository.impl.TemplateRepositoryManager"/>
+</scr:component>

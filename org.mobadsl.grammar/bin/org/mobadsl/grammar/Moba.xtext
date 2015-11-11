@@ -50,7 +50,7 @@ MobaConstant:
 	'const' name=ID '=' valueAST=MobaConstantValue MobaPropertiesAble?;
 
 MobaConstantValue:
-	(valueString=STRING | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
+	(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
 
 fragment MobaPropertiesAble:
 	'[' properties+=MobaProperty (',' properties+=MobaProperty)* ']';
@@ -167,10 +167,10 @@ MobaRegexpConstraint:
 	'regexp' '=' (filterString=STRING | filterConst=[MobaConstant]);
 
 MobaMinConstraint:
-	'min' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+	'min' '=' (filterValue=DOUBLE | filterConst=[MobaConstant]);
 
 MobaMaxConstraint:
-	'max' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+	'max' '=' (filterValue=DOUBLE | filterConst=[MobaConstant]);
 
 MobaMinLengthConstraint:
 	'minLength' '=' (filterValue=INT | filterConst=[MobaConstant]);
@@ -199,6 +199,9 @@ enum MobaUpperBound:
 	// if this is removed, antlr detects an error. INT and FLOAT can not become created since the are not unique definitions. 
 terminal INT returns ecore::EInt:
 	super::INT;
+	
+terminal DOUBLE returns ecore::EDouble:
+	('+'|'-')? INT ('.' INT)?;
 
 terminal FLOAT returns ecore::EFloat:
 	INT

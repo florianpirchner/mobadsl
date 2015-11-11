@@ -624,22 +624,26 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Assignment cValueStringAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
 		private final RuleCall cValueStringSTRINGTerminalRuleCall_0_0_0 = (RuleCall)cValueStringAssignment_0_0.eContents().get(0);
-		private final Assignment cValueConstAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
-		private final CrossReference cValueConstMobaConstantCrossReference_0_1_0 = (CrossReference)cValueConstAssignment_0_1.eContents().get(0);
-		private final RuleCall cValueConstMobaConstantIDTerminalRuleCall_0_1_0_1 = (RuleCall)cValueConstMobaConstantCrossReference_0_1_0.eContents().get(1);
+		private final Assignment cValueIntAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cValueIntINTTerminalRuleCall_0_1_0 = (RuleCall)cValueIntAssignment_0_1.eContents().get(0);
+		private final Assignment cValueDoubleAssignment_0_2 = (Assignment)cAlternatives_0.eContents().get(2);
+		private final RuleCall cValueDoubleDOUBLETerminalRuleCall_0_2_0 = (RuleCall)cValueDoubleAssignment_0_2.eContents().get(0);
+		private final Assignment cValueConstAssignment_0_3 = (Assignment)cAlternatives_0.eContents().get(3);
+		private final CrossReference cValueConstMobaConstantCrossReference_0_3_0 = (CrossReference)cValueConstAssignment_0_3.eContents().get(0);
+		private final RuleCall cValueConstMobaConstantIDTerminalRuleCall_0_3_0_1 = (RuleCall)cValueConstMobaConstantCrossReference_0_3_0.eContents().get(1);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cPlusSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cTailAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cTailMobaConstantValueParserRuleCall_1_1_0 = (RuleCall)cTailAssignment_1_1.eContents().get(0);
 		
 		//MobaConstantValue:
-		//	(valueString=STRING | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
+		//	(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(valueString=STRING | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?
+		//(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?
 		public Group getGroup() { return cGroup; }
 		
-		//(valueString=STRING | valueConst=[MobaConstant])
+		//(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant])
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
 		//valueString=STRING
@@ -648,14 +652,26 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getValueStringSTRINGTerminalRuleCall_0_0_0() { return cValueStringSTRINGTerminalRuleCall_0_0_0; }
 		
+		//valueInt=INT
+		public Assignment getValueIntAssignment_0_1() { return cValueIntAssignment_0_1; }
+		
+		//INT
+		public RuleCall getValueIntINTTerminalRuleCall_0_1_0() { return cValueIntINTTerminalRuleCall_0_1_0; }
+		
+		//valueDouble=DOUBLE
+		public Assignment getValueDoubleAssignment_0_2() { return cValueDoubleAssignment_0_2; }
+		
+		//DOUBLE
+		public RuleCall getValueDoubleDOUBLETerminalRuleCall_0_2_0() { return cValueDoubleDOUBLETerminalRuleCall_0_2_0; }
+		
 		//valueConst=[MobaConstant]
-		public Assignment getValueConstAssignment_0_1() { return cValueConstAssignment_0_1; }
+		public Assignment getValueConstAssignment_0_3() { return cValueConstAssignment_0_3; }
 		
 		//[MobaConstant]
-		public CrossReference getValueConstMobaConstantCrossReference_0_1_0() { return cValueConstMobaConstantCrossReference_0_1_0; }
+		public CrossReference getValueConstMobaConstantCrossReference_0_3_0() { return cValueConstMobaConstantCrossReference_0_3_0; }
 		
 		//ID
-		public RuleCall getValueConstMobaConstantIDTerminalRuleCall_0_1_0_1() { return cValueConstMobaConstantIDTerminalRuleCall_0_1_0_1; }
+		public RuleCall getValueConstMobaConstantIDTerminalRuleCall_0_3_0_1() { return cValueConstMobaConstantIDTerminalRuleCall_0_3_0_1; }
 		
 		//('+' tail=MobaConstantValue)?
 		public Group getGroup_1() { return cGroup_1; }
@@ -2158,16 +2174,16 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
 		private final Assignment cFilterValueAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cFilterValueFLOATTerminalRuleCall_2_0_0 = (RuleCall)cFilterValueAssignment_2_0.eContents().get(0);
+		private final RuleCall cFilterValueDOUBLETerminalRuleCall_2_0_0 = (RuleCall)cFilterValueAssignment_2_0.eContents().get(0);
 		private final Assignment cFilterConstAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
 		private final CrossReference cFilterConstMobaConstantCrossReference_2_1_0 = (CrossReference)cFilterConstAssignment_2_1.eContents().get(0);
 		private final RuleCall cFilterConstMobaConstantIDTerminalRuleCall_2_1_0_1 = (RuleCall)cFilterConstMobaConstantCrossReference_2_1_0.eContents().get(1);
 		
 		//MobaMinConstraint:
-		//	'min' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+		//	'min' '=' (filterValue=DOUBLE | filterConst=[MobaConstant]);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'min' '=' (filterValue=FLOAT | filterConst=[MobaConstant])
+		//'min' '=' (filterValue=DOUBLE | filterConst=[MobaConstant])
 		public Group getGroup() { return cGroup; }
 		
 		//'min'
@@ -2176,14 +2192,14 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 		
-		//(filterValue=FLOAT | filterConst=[MobaConstant])
+		//(filterValue=DOUBLE | filterConst=[MobaConstant])
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//filterValue=FLOAT
+		//filterValue=DOUBLE
 		public Assignment getFilterValueAssignment_2_0() { return cFilterValueAssignment_2_0; }
 		
-		//FLOAT
-		public RuleCall getFilterValueFLOATTerminalRuleCall_2_0_0() { return cFilterValueFLOATTerminalRuleCall_2_0_0; }
+		//DOUBLE
+		public RuleCall getFilterValueDOUBLETerminalRuleCall_2_0_0() { return cFilterValueDOUBLETerminalRuleCall_2_0_0; }
 		
 		//filterConst=[MobaConstant]
 		public Assignment getFilterConstAssignment_2_1() { return cFilterConstAssignment_2_1; }
@@ -2201,16 +2217,16 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
 		private final Assignment cFilterValueAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cFilterValueFLOATTerminalRuleCall_2_0_0 = (RuleCall)cFilterValueAssignment_2_0.eContents().get(0);
+		private final RuleCall cFilterValueDOUBLETerminalRuleCall_2_0_0 = (RuleCall)cFilterValueAssignment_2_0.eContents().get(0);
 		private final Assignment cFilterConstAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
 		private final CrossReference cFilterConstMobaConstantCrossReference_2_1_0 = (CrossReference)cFilterConstAssignment_2_1.eContents().get(0);
 		private final RuleCall cFilterConstMobaConstantIDTerminalRuleCall_2_1_0_1 = (RuleCall)cFilterConstMobaConstantCrossReference_2_1_0.eContents().get(1);
 		
 		//MobaMaxConstraint:
-		//	'max' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+		//	'max' '=' (filterValue=DOUBLE | filterConst=[MobaConstant]);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'max' '=' (filterValue=FLOAT | filterConst=[MobaConstant])
+		//'max' '=' (filterValue=DOUBLE | filterConst=[MobaConstant])
 		public Group getGroup() { return cGroup; }
 		
 		//'max'
@@ -2219,14 +2235,14 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 		
-		//(filterValue=FLOAT | filterConst=[MobaConstant])
+		//(filterValue=DOUBLE | filterConst=[MobaConstant])
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//filterValue=FLOAT
+		//filterValue=DOUBLE
 		public Assignment getFilterValueAssignment_2_0() { return cFilterValueAssignment_2_0; }
 		
-		//FLOAT
-		public RuleCall getFilterValueFLOATTerminalRuleCall_2_0_0() { return cFilterValueFLOATTerminalRuleCall_2_0_0; }
+		//DOUBLE
+		public RuleCall getFilterValueDOUBLETerminalRuleCall_2_0_0() { return cFilterValueDOUBLETerminalRuleCall_2_0_0; }
 		
 		//filterConst=[MobaConstant]
 		public Assignment getFilterConstAssignment_2_1() { return cFilterConstAssignment_2_1; }
@@ -2568,6 +2584,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	private final MobaLowerBoundElements eMobaLowerBound;
 	private final MobaUpperBoundElements eMobaUpperBound;
 	private final TerminalRule tINT;
+	private final TerminalRule tDOUBLE;
 	private final TerminalRule tFLOAT;
 	
 	private final Grammar grammar;
@@ -2627,6 +2644,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		this.eMobaLowerBound = new MobaLowerBoundElements();
 		this.eMobaUpperBound = new MobaUpperBoundElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.INT");
+		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOUBLE");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.FLOAT");
 	}
 	
@@ -2779,7 +2797,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaConstantValue:
-	//	(valueString=STRING | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
+	//	(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant]) ('+' tail=MobaConstantValue)?;
 	public MobaConstantValueElements getMobaConstantValueAccess() {
 		return pMobaConstantValue;
 	}
@@ -3075,7 +3093,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaMinConstraint:
-	//	'min' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+	//	'min' '=' (filterValue=DOUBLE | filterConst=[MobaConstant]);
 	public MobaMinConstraintElements getMobaMinConstraintAccess() {
 		return pMobaMinConstraint;
 	}
@@ -3085,7 +3103,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaMaxConstraint:
-	//	'max' '=' (filterValue=FLOAT | filterConst=[MobaConstant]);
+	//	'max' '=' (filterValue=DOUBLE | filterConst=[MobaConstant]);
 	public MobaMaxConstraintElements getMobaMaxConstraintAccess() {
 		return pMobaMaxConstraint;
 	}
@@ -3171,6 +3189,12 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	//	super::INT;
 	public TerminalRule getINTRule() {
 		return tINT;
+	}
+	
+	//terminal DOUBLE returns ecore::EDouble:
+	//	('+' | '-')? INT ('.' INT)?;
+	public TerminalRule getDOUBLERule() {
+		return tDOUBLE;
 	}
 	
 	//terminal FLOAT returns ecore::EFloat:

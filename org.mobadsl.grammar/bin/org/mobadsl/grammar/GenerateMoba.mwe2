@@ -55,7 +55,6 @@ Workflow {
 			quickOutline = {
 				
 			}
-			
 			validator = {
 			// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}

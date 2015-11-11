@@ -296,4 +296,52 @@ class MobaValidator extends AbstractMobaValidator {
 			}
 		}
 	}
+
+	@Check
+	def checkEnumExtendsNotEnum(MobaDataType datatype) {
+		val superType = datatype.superType
+		if (!datatype.isEnum || superType == null) {
+			return
+		}
+
+		if (!superType.isEnum) {
+			error('''SuperType «superType.name» is not an Enum''', datatype,
+				MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST)
+		}
+
+	}
+
+	@Check
+	def checkEnumExtendsDuplicates(MobaDataType datatype) {
+		val superType = datatype.superType
+		if (!datatype.isEnum || superType == null) {
+			return
+		}
+		val names = newHashSet()
+		val literals = newHashSet()
+		val values = newHashSet()
+		superType.enumAST.allLiterals.forEach [
+			{
+				names += it.name
+				literals += it.literal
+				values += it.value
+			}
+		]
+
+		datatype.enumAST.literals.forEach [
+			if (names.contains(it.name)) {
+				error('''Duplicate name "«it.name»." Check super type.''', datatype,
+					MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST)
+			}
+			if (literals.contains(it.literal)) {
+				error('''Duplicate literal "«it.literal»." Check super type.''', datatype,
+					MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST)
+			}
+
+			if (values.contains(it.value)) {
+				warning('''You are redefinging enum literal with value"«it.value»." Check super type.''', datatype,
+					MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST)
+			}
+		]
+	}
 }

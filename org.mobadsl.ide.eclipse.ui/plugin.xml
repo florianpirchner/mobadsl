@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+ <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="org.mobadsl.ide.eclipse.ui.nature.addNature"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="org.mobadsl.ide.eclipse.ui.nature.ToggleMobaNatureAction"
+               icon="icons/moba.png"
+               id="org.mobadsl.ide.eclipse.ui.nature.AddMobaNatureAction"
+               label="Convert to Moba project"
+               menubarPath="org.eclipse.ui.projectConfigure/additions">
+         </action>
+         <visibility>
+         	<not>
+	            <objectState
+    	              name="nature"
+        	          value="org.mobadsl.ide.eclipse.ui.MobaNature">
+            	</objectState>
+            </not>
+         </visibility>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.mobadsl.ide.eclipse.ui.nature.removeNature"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="org.mobadsl.ide.eclipse.ui.nature.ToggleMobaNatureAction"
+               icon="icons/moba.png"
+               id="org.mobadsl.ide.eclipse.ui.nature.RemoveMobaNatureAction"
+               label="Remove Moba Nature"
+               menubarPath="org.eclipse.ui.projectConfigure/additions">
+         </action>
+         <visibility>
+               <objectState
+    	              name="nature"
+        	          value="org.mobadsl.ide.eclipse.ui.MobaNature">
+            	</objectState>
+         </visibility>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.mobadsl.ide.eclipse.ui.nature.addTemplate"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="org.mobadsl.ide.eclipse.ui.AddTemplateFormRepoDialogAction"
+               icon="icons/moba.png"
+               id="org.mobadsl.ide.eclipse.ui.AddTemplateFormRepoDialogAction"
+               label="Add template..."
+               menubarPath="org.eclipse.ui.projectConfigure/additions">
+         </action>
+         <visibility>
+               <objectState
+    	              name="nature"
+        	          value="org.mobadsl.ide.eclipse.ui.MobaNature">
+            	</objectState>
+         </visibility>
+      </objectContribution>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="true"
+            icon="icons/nature_overlay.png"
+            id="org.moba.ide.ui.nature.overlay"
+            label="Moba Nature"
+            lightweight="true"
+            location="TOP_LEFT"
+            state="true">
+         <enablement>
+         	<and>
+		     	<objectClass
+		              name="org.eclipse.core.resources.IProject"/>
+		        <objectState
+		              name="nature"
+		              value="org.mobadsl.ide.eclipse.ui.MobaNature">
+		        </objectState>
+            </and>
+         </enablement>
+      </decorator>
+   </extension>
+   <extension
+         id="MobaNature"
+         point="org.eclipse.core.resources.natures">
+   	 <runtime>
+         <run
+               class="org.mobadsl.ide.eclipse.ui.nature.MobaNature">
+         </run>
+      </runtime>
+   </extension>
+</plugin>

@@ -61,6 +61,8 @@ import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaUpperBound;
+import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
+import org.mobadsl.semantic.model.moba.index.impl.MobaIndexPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -472,11 +474,16 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		MobaIndexPackageImpl theMobaIndexPackage = (MobaIndexPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MobaIndexPackage.eNS_URI) instanceof MobaIndexPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MobaIndexPackage.eNS_URI) : MobaIndexPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theMobaPackage.createPackageContents();
+		theMobaIndexPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theMobaPackage.initializePackageContents();
+		theMobaIndexPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theMobaPackage.freeze();
@@ -791,6 +798,24 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EReference getMobaConstantValue_Tail() {
 		return (EReference)mobaConstantValueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaConstantValue_ValueInt() {
+		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaConstantValue_ValueDouble() {
+		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1971,6 +1996,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_STRING);
 		createEReference(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_CONST);
 		createEReference(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__TAIL);
+		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_INT);
+		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_DOUBLE);
 
 		mobaPropertiesAbleEClass = createEClass(MOBA_PROPERTIES_ABLE);
 		createEReference(mobaPropertiesAbleEClass, MOBA_PROPERTIES_ABLE__PROPERTIES);
@@ -2160,6 +2187,12 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		MobaIndexPackage theMobaIndexPackage = (MobaIndexPackage)EPackage.Registry.INSTANCE.getEPackage(MobaIndexPackage.eNS_URI);
+
+		// Add subpackages
+		getESubpackages().add(theMobaIndexPackage);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -2271,6 +2304,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaConstantValue_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaConstantValue_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaConstantValue_Tail(), this.getMobaConstantValue(), null, "tail", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaConstantValue_ValueInt(), ecorePackage.getEIntegerObject(), "valueInt", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaConstantValue_ValueDouble(), ecorePackage.getEDoubleObject(), "valueDouble", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaPropertiesAbleEClass, MobaPropertiesAble.class, "MobaPropertiesAble", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaPropertiesAble_Properties(), this.getMobaProperty(), null, "properties", null, 0, -1, MobaPropertiesAble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2393,11 +2428,11 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaRegexpConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaRegexpConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaMinConstraintEClass, MobaMinConstraint.class, "MobaMinConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobaMinConstraint_FilterValue(), ecorePackage.getEFloat(), "filterValue", null, 0, 1, MobaMinConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaMinConstraint_FilterValue(), ecorePackage.getEDouble(), "filterValue", null, 0, 1, MobaMinConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaMinConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaMinConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaMaxConstraintEClass, MobaMaxConstraint.class, "MobaMaxConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobaMaxConstraint_FilterValue(), ecorePackage.getEFloat(), "filterValue", null, 0, 1, MobaMaxConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaMaxConstraint_FilterValue(), ecorePackage.getEDouble(), "filterValue", null, 0, 1, MobaMaxConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaMaxConstraint_FilterConst(), this.getMobaConstant(), null, "filterConst", null, 0, 1, MobaMaxConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaFutureConstraintEClass, MobaFutureConstraint.class, "MobaFutureConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

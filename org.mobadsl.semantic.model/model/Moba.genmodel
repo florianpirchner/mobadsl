@@ -28,33 +28,58 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaTemplate/template"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaGenerator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaGenerator/generatorString"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaGenerator/generatorConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaGenerator/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaGenerator/features"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaGenerator/active"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaGeneratorFeature"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaGeneratorMixinFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaGeneratorMixinFeature/generatorRef"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaGeneratorIDFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaGeneratorIDFeature/generatorConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaGeneratorIDFeature/generatorString"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaDataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/primitive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/array"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/timestamp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDataType/dateFormatString"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDataType/dateFormatConstant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDataType/dateFormatConst"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDataType/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDataType/enumAST"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaConstant">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaConstant/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaConstant/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaConstant/valueAST"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="Moba.ecore#//MobaPropertiesProvider">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaPropertiesProvider/properties"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaConstantValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaConstantValue/valueString"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaConstantValue/valueConst"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaConstantValue/tail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaConstantValue/valueInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaConstantValue/valueDouble"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaPropertiesAble">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaPropertiesAble/properties"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaProperty">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaProperty/keyString"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaProperty/keyConst"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaProperty/valueString"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaProperty/valueConst"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaProperty/key"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaProperty/value"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaData"/>
     <genClasses ecoreClass="Moba.ecore#//MobaSettings">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaSettings/superType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaSettings/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaSettings/features"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaSettings/active"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaCache">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaCache/cacheTypeString"/>
@@ -62,15 +87,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaCache/cacheStrategyString"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaCache/cacheStrategyConst"/>
     </genClasses>
-    <genClasses ecoreClass="Moba.ecore#//MobaDto">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDto/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDto/superType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDto/cache"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDto/features"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDto/index"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaBean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBean/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBean/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBean/cache"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBean/features"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBean/index"/>
     </genClasses>
-    <genClasses ecoreClass="Moba.ecore#//MobaDtoIndex">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDtoIndex/attributes"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaBeanIndex">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBeanIndex/attributes"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaPayload">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayload/name"/>
@@ -89,24 +114,25 @@
     <genClasses ecoreClass="Moba.ecore#//MobaRestCrud">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaRestCrud/name"/>
     </genClasses>
-    <genClasses ecoreClass="Moba.ecore#//MobaDtoFeature"/>
-    <genClasses ecoreClass="Moba.ecore#//MobaDtoAttribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoAttribute/lazy"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoAttribute/transient"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoAttribute/domainKey"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoAttribute/domainDescription"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDtoAttribute/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoAttribute/name"/>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaFeature/name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="Moba.ecore#//MobaMultiplicityProvider">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaMultiplicityProvider/multiplicity"/>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaBeanFeature"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaBeanAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanAttribute/lazy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanAttribute/transient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanAttribute/domainKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanAttribute/domainDescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBeanAttribute/type"/>
     </genClasses>
-    <genClasses ecoreClass="Moba.ecore#//MobaDtoReference">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoReference/cascading"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoReference/lazy"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoReference/transient"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDtoReference/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDtoReference/name"/>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaMultiplicityAble">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaMultiplicityAble/multiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaBeanReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanReference/cascading"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanReference/lazy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaBeanReference/transient"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaBeanReference/type"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaPayloadFeature"/>
     <genClasses ecoreClass="Moba.ecore#//MobaPayloadAttribute">
@@ -116,14 +142,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadAttribute/domainDescription"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadAttribute/alias"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaPayloadAttribute/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadAttribute/name"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaPayloadReference">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadReference/cascading"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadReference/lazy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadReference/transient"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaPayloadReference/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaPayloadReference/name"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaQueueFeature"/>
     <genClasses ecoreClass="Moba.ecore#//MobaQueueReference">
@@ -131,11 +155,74 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaQueueReference/lazy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaQueueReference/transient"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaQueueReference/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaQueueReference/name"/>
     </genClasses>
     <genClasses ecoreClass="Moba.ecore#//MobaMuliplicity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaMuliplicity/lower"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaMuliplicity/upper"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaSettingsFeature"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaSettingsAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaSettingsAttribute/lazy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaSettingsAttribute/transient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaSettingsAttribute/domainKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaSettingsAttribute/domainDescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaSettingsAttribute/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaConstraintable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaConstraintable/constraints"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Moba.ecore#//MobaConstraint"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaRegexpConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaRegexpConstraint/filterString"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaRegexpConstraint/filterConst"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaMinConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaMinConstraint/filterValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaMinConstraint/filterConst"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaMaxConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaMaxConstraint/filterValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaMaxConstraint/filterConst"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaFutureConstraint"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaPastConstraint"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaNotNullConstraint"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaNullConstraint"/>
+    <genClasses ecoreClass="Moba.ecore#//MobaMinLengthConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaMinLengthConstraint/filterValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaMinLengthConstraint/filterConst"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaMaxLengthConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaMaxLengthConstraint/filterValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaMaxLengthConstraint/filterConst"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaDigitsConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDigitsConstraint/filterIntegerValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDigitsConstraint/filterIntegerConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaDigitsConstraint/filterFractionValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaDigitsConstraint/filterFractionConst"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaEnum">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference Moba.ecore#//MobaEnum/superType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaEnum/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//MobaEnum/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="Moba.ecore#//MobaEnumLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaEnumLiteral/literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaEnumLiteral/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//MobaEnumLiteral/value"/>
+    </genClasses>
+    <nestedGenPackages prefix="MobaIndex" disposableProviderFactory="true" ecorePackage="Moba.ecore#//index">
+      <genClasses ecoreClass="Moba.ecore#//index/MobaIndex">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Moba.ecore#//index/MobaIndex/entries"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//index/MobaIndex/name"/>
+      </genClasses>
+      <genClasses ecoreClass="Moba.ecore#//index/MobaIndexEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//index/MobaIndexEntry/relativePath"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//index/MobaIndexEntry/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//index/MobaIndexEntry/description"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Moba.ecore#//index/MobaIndexEntry/version"/>
+      </genClasses>
+    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

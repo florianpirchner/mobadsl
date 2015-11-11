@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueConst <em>Value Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getTail <em>Tail</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueInt <em>Value Int</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueDouble <em>Value Double</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaConstantValue()
@@ -103,10 +105,88 @@ public interface MobaConstantValue extends EObject {
 	void setTail(MobaConstantValue value);
 
 	/**
+	 * Returns the value of the '<em><b>Value Int</b></em>' attribute. <!--
+	 * begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Int</em>' attribute isn't clear, there
+	 * really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * 
+	 * @return the value of the '<em>Value Int</em>' attribute.
+	 * @see #setValueInt(Integer)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaConstantValue_ValueInt()
+	 * @model
+	 * @generated
+	 */
+	Integer getValueInt();
+
+	/**
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueInt
+	 * <em>Value Int</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Value Int</em>' attribute.
+	 * @see #getValueInt()
+	 * @generated
+	 */
+	void setValueInt(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Value Double</b></em>' attribute. <!--
+	 * begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Double</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * 
+	 * @return the value of the '<em>Value Double</em>' attribute.
+	 * @see #setValueDouble(Double)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaConstantValue_ValueDouble()
+	 * @model
+	 * @generated
+	 */
+	Double getValueDouble();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueDouble <em>Value Double</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @param value the new value of the '<em>Value Double</em>' attribute.
+	 * @see #getValueDouble()
+	 * @generated
+	 */
+	void setValueDouble(Double value);
+
+	/**
 	 * Returns the string representation of this constant value and it's tail.
 	 * 
 	 * @return
 	 */
 	String getValue();
+
+	/**
+	 * Returns the {@link ValueType} of the set value.
+	 * 
+	 * @return
+	 */
+	ValueType getValueType();
+
+	/**
+	 * The type of value contained in the constant value.
+	 * <ul>
+	 * <li>{@link #CONSTANT} means {@link MobaConstantValue#getValueConst()}
+	 * </li>
+	 * <li>{@link #STRING} means {@link MobaConstantValue#getValueString()}</li>
+	 * <li>{@link #INT} means {@link MobaConstantValue#getValueInt()}</li>
+	 * <li>{@link #DOUBLE} means {@link MobaConstantValue#getValueDouble()}</li>
+	 * </ul>
+	 */
+	public enum ValueType {
+		CONSTANT, STRING, INT, DOUBLE
+	}
 
 } // MobaConstantValue
