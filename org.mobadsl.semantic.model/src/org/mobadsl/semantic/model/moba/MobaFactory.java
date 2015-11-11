@@ -121,31 +121,31 @@ public interface MobaFactory extends EFactory {
 	MobaCache createMobaCache();
 
 	/**
-	 * Returns a new object of class '<em>Bean</em>'.
+	 * Returns a new object of class '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bean</em>'.
+	 * @return a new object of class '<em>Entity</em>'.
 	 * @generated
 	 */
-	MobaBean createMobaBean();
+	MobaEntity createMobaEntity();
 
 	/**
-	 * Returns a new object of class '<em>Bean Index</em>'.
+	 * Returns a new object of class '<em>Entity Index</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bean Index</em>'.
+	 * @return a new object of class '<em>Entity Index</em>'.
 	 * @generated
 	 */
-	MobaBeanIndex createMobaBeanIndex();
+	MobaEntityIndex createMobaEntityIndex();
 
 	/**
-	 * Returns a new object of class '<em>Payload</em>'.
+	 * Returns a new object of class '<em>Dto</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Payload</em>'.
+	 * @return a new object of class '<em>Dto</em>'.
 	 * @generated
 	 */
-	MobaPayload createMobaPayload();
+	MobaDto createMobaDto();
 
 	/**
 	 * Returns a new object of class '<em>Queue</em>'.
@@ -184,40 +184,40 @@ public interface MobaFactory extends EFactory {
 	MobaRestCrud createMobaRestCrud();
 
 	/**
-	 * Returns a new object of class '<em>Bean Attribute</em>'.
+	 * Returns a new object of class '<em>Entity Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bean Attribute</em>'.
+	 * @return a new object of class '<em>Entity Attribute</em>'.
 	 * @generated
 	 */
-	MobaBeanAttribute createMobaBeanAttribute();
+	MobaEntityAttribute createMobaEntityAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Bean Reference</em>'.
+	 * Returns a new object of class '<em>Entity Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bean Reference</em>'.
+	 * @return a new object of class '<em>Entity Reference</em>'.
 	 * @generated
 	 */
-	MobaBeanReference createMobaBeanReference();
+	MobaEntityReference createMobaEntityReference();
 
 	/**
-	 * Returns a new object of class '<em>Payload Attribute</em>'.
+	 * Returns a new object of class '<em>Dto Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Payload Attribute</em>'.
+	 * @return a new object of class '<em>Dto Attribute</em>'.
 	 * @generated
 	 */
-	MobaPayloadAttribute createMobaPayloadAttribute();
+	MobaDtoAttribute createMobaDtoAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Payload Reference</em>'.
+	 * Returns a new object of class '<em>Dto Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Payload Reference</em>'.
+	 * @return a new object of class '<em>Dto Reference</em>'.
 	 * @generated
 	 */
-	MobaPayloadReference createMobaPayloadReference();
+	MobaDtoReference createMobaDtoReference();
 
 	/**
 	 * Returns a new object of class '<em>Queue Reference</em>'.

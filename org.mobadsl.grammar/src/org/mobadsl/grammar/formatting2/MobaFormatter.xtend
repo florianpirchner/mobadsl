@@ -10,14 +10,14 @@ import org.mobadsl.grammar.services.MobaGrammarAccess
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble
-import org.mobadsl.semantic.model.moba.MobaPayload
-import org.mobadsl.semantic.model.moba.MobaPayloadFeature
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble
 import org.mobadsl.semantic.model.moba.MobaProperty
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaQueueFeature
-import org.mobadsl.semantic.model.moba.MobaBean
-import org.mobadsl.semantic.model.moba.MobaBeanFeature
+import org.mobadsl.semantic.model.moba.MobaDto
+import org.mobadsl.semantic.model.moba.MobaDtoFeature
+import org.mobadsl.semantic.model.moba.MobaEntity
+import org.mobadsl.semantic.model.moba.MobaEntityFeature
 
 class MobaFormatter extends AbstractFormatter2 {
 	
@@ -35,16 +35,16 @@ class MobaFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(MobaBean mobaDto, extension IFormattableDocument document) {
+	def dispatch void format(MobaEntity mobaDto, extension IFormattableDocument document) {
 		format(mobaDto.getCache(), document);
-		for (MobaBeanFeature features : mobaDto.getFeatures()) {
+		for (MobaEntityFeature features : mobaDto.getFeatures()) {
 			format(features, document);
 		}
 		format(mobaDto.getIndex(), document);
 	}
 
-	def dispatch void format(MobaPayload mobaPayload, extension IFormattableDocument document) {
-		for (MobaPayloadFeature features : mobaPayload.getFeatures()) {
+	def dispatch void format(MobaDto mobaPayload, extension IFormattableDocument document) {
+		for (MobaDtoFeature features : mobaPayload.getFeatures()) {
 			format(features, document);
 		}
 	}

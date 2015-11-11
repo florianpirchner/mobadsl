@@ -214,12 +214,12 @@ public class MobaApplicationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaBean()));
+				 MobaFactory.eINSTANCE.createMobaEntity()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaPayload()));
+				 MobaFactory.eINSTANCE.createMobaDto()));
 
 		newChildDescriptors.add
 			(createChildParameter

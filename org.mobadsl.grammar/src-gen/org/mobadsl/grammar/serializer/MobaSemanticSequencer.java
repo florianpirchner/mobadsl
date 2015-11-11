@@ -16,15 +16,18 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.mobadsl.grammar.services.MobaGrammarAccess;
 import org.mobadsl.semantic.model.moba.MobaApplication;
-import org.mobadsl.semantic.model.moba.MobaBean;
-import org.mobadsl.semantic.model.moba.MobaBeanAttribute;
-import org.mobadsl.semantic.model.moba.MobaBeanIndex;
-import org.mobadsl.semantic.model.moba.MobaBeanReference;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityIndex;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
@@ -38,9 +41,6 @@ import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPayload;
-import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
-import org.mobadsl.semantic.model.moba.MobaPayloadReference;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
@@ -68,18 +68,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case MobaPackage.MOBA_APPLICATION:
 				sequence_MobaApplication(context, (MobaApplication) semanticObject); 
 				return; 
-			case MobaPackage.MOBA_BEAN:
-				sequence_MobaBean_MobaPropertiesAble(context, (MobaBean) semanticObject); 
-				return; 
-			case MobaPackage.MOBA_BEAN_ATTRIBUTE:
-				sequence_MobaBeanAttribute_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaBeanAttribute) semanticObject); 
-				return; 
-			case MobaPackage.MOBA_BEAN_INDEX:
-				sequence_MobaBeanIndex(context, (MobaBeanIndex) semanticObject); 
-				return; 
-			case MobaPackage.MOBA_BEAN_REFERENCE:
-				sequence_MobaBeanReference_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaBeanReference) semanticObject); 
-				return; 
 			case MobaPackage.MOBA_CACHE:
 				sequence_MobaCache(context, (MobaCache) semanticObject); 
 				return; 
@@ -94,6 +82,27 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case MobaPackage.MOBA_DIGITS_CONSTRAINT:
 				sequence_MobaDigitsConstraint(context, (MobaDigitsConstraint) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_DTO:
+				sequence_MobaDto_MobaPropertiesAble(context, (MobaDto) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_DTO_ATTRIBUTE:
+				sequence_MobaDtoAttribute_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaDtoAttribute) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_DTO_REFERENCE:
+				sequence_MobaDtoReference_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaDtoReference) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_ENTITY:
+				sequence_MobaEntity_MobaPropertiesAble(context, (MobaEntity) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_ENTITY_ATTRIBUTE:
+				sequence_MobaEntityAttribute_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaEntityAttribute) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_ENTITY_INDEX:
+				sequence_MobaEntityIndex(context, (MobaEntityIndex) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_ENTITY_REFERENCE:
+				sequence_MobaEntityReference_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaEntityReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_ENUM:
 				sequence_MobaEnum(context, (MobaEnum) semanticObject); 
@@ -130,15 +139,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case MobaPackage.MOBA_NULL_CONSTRAINT:
 				sequence_MobaNullConstraint(context, (MobaNullConstraint) semanticObject); 
-				return; 
-			case MobaPackage.MOBA_PAYLOAD:
-				sequence_MobaPayload_MobaPropertiesAble(context, (MobaPayload) semanticObject); 
-				return; 
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE:
-				sequence_MobaMultiplicityAble_MobaPayloadAttribute_MobaPropertiesAble(context, (MobaPayloadAttribute) semanticObject); 
-				return; 
-			case MobaPackage.MOBA_PAYLOAD_REFERENCE:
-				sequence_MobaMultiplicityAble_MobaPayloadReference_MobaPropertiesAble(context, (MobaPayloadReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_PROPERTY:
 				sequence_MobaProperty(context, (MobaProperty) semanticObject); 
@@ -180,79 +180,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (name=ID features+=MobaApplicationFeature*)
 	 */
 	protected void sequence_MobaApplication(ISerializationContext context, MobaApplication semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaBeanFeature returns MobaBeanAttribute
-	 *     MobaBeanAttribute returns MobaBeanAttribute
-	 *
-	 * Constraint:
-	 *     (
-	 *         (
-	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
-	 *         )+ 
-	 *         type=[MobaDataType|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
-	 *     )
-	 */
-	protected void sequence_MobaBeanAttribute_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaBeanAttribute semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaBeanIndex returns MobaBeanIndex
-	 *
-	 * Constraint:
-	 *     (attributes+=[MobaBeanAttribute|ID] attributes+=[MobaBeanAttribute|ID]*)
-	 */
-	protected void sequence_MobaBeanIndex(ISerializationContext context, MobaBeanIndex semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaBeanFeature returns MobaBeanReference
-	 *     MobaBeanReference returns MobaBeanReference
-	 *
-	 * Constraint:
-	 *     (
-	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
-	 *         type=[MobaBean|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
-	 *     )
-	 */
-	protected void sequence_MobaBeanReference_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaBeanReference semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaBean
-	 *     MobaData returns MobaBean
-	 *     MobaBean returns MobaBean
-	 *
-	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         (superType=[MobaBean|ID] | cache=MobaCache)* 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)? 
-	 *         features+=MobaBeanFeature* 
-	 *         index=MobaBeanIndex?
-	 *     )
-	 */
-	protected void sequence_MobaBean_MobaPropertiesAble(ISerializationContext context, MobaBean semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -325,6 +252,134 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ((filterIntegerValue=INT | filterIntegerConst=[MobaConstant|ID]) (filterFractionValue=INT | filterFractionConst=[MobaConstant|ID]))
 	 */
 	protected void sequence_MobaDigitsConstraint(ISerializationContext context, MobaDigitsConstraint semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaDtoFeature returns MobaDtoAttribute
+	 *     MobaDtoAttribute returns MobaDtoAttribute
+	 *
+	 * Constraint:
+	 *     (
+	 *         (
+	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription' | alias=ID)? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
+	 *         )+ 
+	 *         type=[MobaDataType|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *     )
+	 */
+	protected void sequence_MobaDtoAttribute_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaDtoAttribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaDtoFeature returns MobaDtoReference
+	 *     MobaDtoReference returns MobaDtoReference
+	 *
+	 * Constraint:
+	 *     (
+	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
+	 *         type=[MobaDto|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *     )
+	 */
+	protected void sequence_MobaDtoReference_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaDtoReference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaDto
+	 *     MobaData returns MobaDto
+	 *     MobaDto returns MobaDto
+	 *
+	 * Constraint:
+	 *     (name=ID superType=[MobaDto|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaDtoFeature*)
+	 */
+	protected void sequence_MobaDto_MobaPropertiesAble(ISerializationContext context, MobaDto semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaEntityFeature returns MobaEntityAttribute
+	 *     MobaEntityAttribute returns MobaEntityAttribute
+	 *
+	 * Constraint:
+	 *     (
+	 *         (
+	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
+	 *         )+ 
+	 *         type=[MobaDataType|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *     )
+	 */
+	protected void sequence_MobaEntityAttribute_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaEntityAttribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaEntityIndex returns MobaEntityIndex
+	 *
+	 * Constraint:
+	 *     (attributes+=[MobaEntityAttribute|ID] attributes+=[MobaEntityAttribute|ID]*)
+	 */
+	protected void sequence_MobaEntityIndex(ISerializationContext context, MobaEntityIndex semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaEntityFeature returns MobaEntityReference
+	 *     MobaEntityReference returns MobaEntityReference
+	 *
+	 * Constraint:
+	 *     (
+	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
+	 *         type=[MobaEntity|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *     )
+	 */
+	protected void sequence_MobaEntityReference_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaEntityReference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaEntity
+	 *     MobaData returns MobaEntity
+	 *     MobaEntity returns MobaEntity
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         (superType=[MobaEntity|ID] | cache=MobaCache)* 
+	 *         (properties+=MobaProperty properties+=MobaProperty*)? 
+	 *         features+=MobaEntityFeature* 
+	 *         index=MobaEntityIndex?
+	 *     )
+	 */
+	protected void sequence_MobaEntity_MobaPropertiesAble(ISerializationContext context, MobaEntity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -476,47 +531,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     MobaPayloadFeature returns MobaPayloadAttribute
-	 *     MobaPayloadAttribute returns MobaPayloadAttribute
-	 *
-	 * Constraint:
-	 *     (
-	 *         (
-	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription' | alias=ID)? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
-	 *         )+ 
-	 *         type=[MobaDataType|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
-	 *     )
-	 */
-	protected void sequence_MobaMultiplicityAble_MobaPayloadAttribute_MobaPropertiesAble(ISerializationContext context, MobaPayloadAttribute semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaPayloadFeature returns MobaPayloadReference
-	 *     MobaPayloadReference returns MobaPayloadReference
-	 *
-	 * Constraint:
-	 *     (
-	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
-	 *         type=[MobaPayload|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
-	 *     )
-	 */
-	protected void sequence_MobaMultiplicityAble_MobaPayloadReference_MobaPropertiesAble(ISerializationContext context, MobaPayloadReference semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     MobaQueueFeature returns MobaQueueReference
 	 *     MobaQueueReference returns MobaQueueReference
 	 *
@@ -578,20 +592,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     {MobaNullConstraint}
 	 */
 	protected void sequence_MobaNullConstraint(ISerializationContext context, MobaNullConstraint semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaPayload
-	 *     MobaData returns MobaPayload
-	 *     MobaPayload returns MobaPayload
-	 *
-	 * Constraint:
-	 *     (name=ID superType=[MobaPayload|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaPayloadFeature*)
-	 */
-	protected void sequence_MobaPayload_MobaPropertiesAble(ISerializationContext context, MobaPayload semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

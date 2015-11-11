@@ -24,10 +24,10 @@ import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaBean;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPayload;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaRestCrud;
@@ -290,13 +290,13 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaBean> getDtos() {
-		return collect(MobaBean.class);
+	public List<MobaEntity> getDtos() {
+		return collect(MobaEntity.class);
 	}
 
 	@Override
-	public List<MobaPayload> getPayloads() {
-		return collect(MobaPayload.class);
+	public List<MobaDto> getPayloads() {
+		return collect(MobaDto.class);
 	}
 
 	@Override
@@ -355,13 +355,13 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaBean> getAllDtos() {
-		return collectAll(this, MobaBean.class);
+	public List<MobaEntity> getAllDtos() {
+		return collectAll(this, MobaEntity.class);
 	}
 
 	@Override
-	public List<MobaPayload> getAllPayloads() {
-		return collectAll(this, MobaPayload.class);
+	public List<MobaDto> getAllPayloads() {
+		return collectAll(this, MobaDto.class);
 	}
 
 	@Override

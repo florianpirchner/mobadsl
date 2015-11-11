@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMobaParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_DOWNLOAD_TEMPLATE", "RULE_STRING", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'*'", "'0'", "'?'", "'+'", "'1'", "'application'", "'{'", "'}'", "'use template'", "'generator'", "'id'", "'='", "'mixin'", "'datatype'", "'extends'", "'('", "')'", "'constraints'", "','", "'enum'", "'lit'", "'const'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'bean'", "'index'", "'payload'", "'queue'", "'rest'", "'restCrud'", "'var'", "'ref'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'active'", "'isPrimitive'", "'isArray'", "'isDate'", "'isTime'", "'isTimestamp'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'cascading'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_DOWNLOAD_TEMPLATE", "RULE_STRING", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'*'", "'0'", "'?'", "'+'", "'1'", "'application'", "'{'", "'}'", "'use template'", "'generator'", "'id'", "'='", "'mixin'", "'datatype'", "'extends'", "'('", "')'", "'constraints'", "','", "'enum'", "'lit'", "'const'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'index'", "'dto'", "'queue'", "'rest'", "'restCrud'", "'var'", "'ref'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'active'", "'isPrimitive'", "'isArray'", "'isDate'", "'isTime'", "'isTimestamp'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'cascading'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -1408,20 +1408,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleMobaCache"
 
 
-    // $ANTLR start "entryRuleMobaBean"
-    // InternalMoba.g:470:1: entryRuleMobaBean : ruleMobaBean EOF ;
-    public final void entryRuleMobaBean() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaEntity"
+    // InternalMoba.g:470:1: entryRuleMobaEntity : ruleMobaEntity EOF ;
+    public final void entryRuleMobaEntity() throws RecognitionException {
         try {
-            // InternalMoba.g:471:1: ( ruleMobaBean EOF )
-            // InternalMoba.g:472:1: ruleMobaBean EOF
+            // InternalMoba.g:471:1: ( ruleMobaEntity EOF )
+            // InternalMoba.g:472:1: ruleMobaEntity EOF
             {
-             before(grammarAccess.getMobaBeanRule()); 
+             before(grammarAccess.getMobaEntityRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaBean();
+            ruleMobaEntity();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanRule()); 
+             after(grammarAccess.getMobaEntityRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1435,35 +1435,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaBean"
+    // $ANTLR end "entryRuleMobaEntity"
 
 
-    // $ANTLR start "ruleMobaBean"
-    // InternalMoba.g:479:1: ruleMobaBean : ( ( rule__MobaBean__Group__0 ) ) ;
-    public final void ruleMobaBean() throws RecognitionException {
+    // $ANTLR start "ruleMobaEntity"
+    // InternalMoba.g:479:1: ruleMobaEntity : ( ( rule__MobaEntity__Group__0 ) ) ;
+    public final void ruleMobaEntity() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:483:2: ( ( ( rule__MobaBean__Group__0 ) ) )
-            // InternalMoba.g:484:2: ( ( rule__MobaBean__Group__0 ) )
+            // InternalMoba.g:483:2: ( ( ( rule__MobaEntity__Group__0 ) ) )
+            // InternalMoba.g:484:2: ( ( rule__MobaEntity__Group__0 ) )
             {
-            // InternalMoba.g:484:2: ( ( rule__MobaBean__Group__0 ) )
-            // InternalMoba.g:485:3: ( rule__MobaBean__Group__0 )
+            // InternalMoba.g:484:2: ( ( rule__MobaEntity__Group__0 ) )
+            // InternalMoba.g:485:3: ( rule__MobaEntity__Group__0 )
             {
-             before(grammarAccess.getMobaBeanAccess().getGroup()); 
-            // InternalMoba.g:486:3: ( rule__MobaBean__Group__0 )
-            // InternalMoba.g:486:4: rule__MobaBean__Group__0
+             before(grammarAccess.getMobaEntityAccess().getGroup()); 
+            // InternalMoba.g:486:3: ( rule__MobaEntity__Group__0 )
+            // InternalMoba.g:486:4: rule__MobaEntity__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__0();
+            rule__MobaEntity__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getGroup()); 
+             after(grammarAccess.getMobaEntityAccess().getGroup()); 
 
             }
 
@@ -1482,23 +1482,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaBean"
+    // $ANTLR end "ruleMobaEntity"
 
 
-    // $ANTLR start "entryRuleMobaBeanIndex"
-    // InternalMoba.g:495:1: entryRuleMobaBeanIndex : ruleMobaBeanIndex EOF ;
-    public final void entryRuleMobaBeanIndex() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaEntityIndex"
+    // InternalMoba.g:495:1: entryRuleMobaEntityIndex : ruleMobaEntityIndex EOF ;
+    public final void entryRuleMobaEntityIndex() throws RecognitionException {
         try {
-            // InternalMoba.g:496:1: ( ruleMobaBeanIndex EOF )
-            // InternalMoba.g:497:1: ruleMobaBeanIndex EOF
+            // InternalMoba.g:496:1: ( ruleMobaEntityIndex EOF )
+            // InternalMoba.g:497:1: ruleMobaEntityIndex EOF
             {
-             before(grammarAccess.getMobaBeanIndexRule()); 
+             before(grammarAccess.getMobaEntityIndexRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaBeanIndex();
+            ruleMobaEntityIndex();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanIndexRule()); 
+             after(grammarAccess.getMobaEntityIndexRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1512,35 +1512,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaBeanIndex"
+    // $ANTLR end "entryRuleMobaEntityIndex"
 
 
-    // $ANTLR start "ruleMobaBeanIndex"
-    // InternalMoba.g:504:1: ruleMobaBeanIndex : ( ( rule__MobaBeanIndex__Group__0 ) ) ;
-    public final void ruleMobaBeanIndex() throws RecognitionException {
+    // $ANTLR start "ruleMobaEntityIndex"
+    // InternalMoba.g:504:1: ruleMobaEntityIndex : ( ( rule__MobaEntityIndex__Group__0 ) ) ;
+    public final void ruleMobaEntityIndex() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:508:2: ( ( ( rule__MobaBeanIndex__Group__0 ) ) )
-            // InternalMoba.g:509:2: ( ( rule__MobaBeanIndex__Group__0 ) )
+            // InternalMoba.g:508:2: ( ( ( rule__MobaEntityIndex__Group__0 ) ) )
+            // InternalMoba.g:509:2: ( ( rule__MobaEntityIndex__Group__0 ) )
             {
-            // InternalMoba.g:509:2: ( ( rule__MobaBeanIndex__Group__0 ) )
-            // InternalMoba.g:510:3: ( rule__MobaBeanIndex__Group__0 )
+            // InternalMoba.g:509:2: ( ( rule__MobaEntityIndex__Group__0 ) )
+            // InternalMoba.g:510:3: ( rule__MobaEntityIndex__Group__0 )
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getGroup()); 
-            // InternalMoba.g:511:3: ( rule__MobaBeanIndex__Group__0 )
-            // InternalMoba.g:511:4: rule__MobaBeanIndex__Group__0
+             before(grammarAccess.getMobaEntityIndexAccess().getGroup()); 
+            // InternalMoba.g:511:3: ( rule__MobaEntityIndex__Group__0 )
+            // InternalMoba.g:511:4: rule__MobaEntityIndex__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group__0();
+            rule__MobaEntityIndex__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanIndexAccess().getGroup()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getGroup()); 
 
             }
 
@@ -1559,23 +1559,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaBeanIndex"
+    // $ANTLR end "ruleMobaEntityIndex"
 
 
-    // $ANTLR start "entryRuleMobaPayload"
-    // InternalMoba.g:520:1: entryRuleMobaPayload : ruleMobaPayload EOF ;
-    public final void entryRuleMobaPayload() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaDto"
+    // InternalMoba.g:520:1: entryRuleMobaDto : ruleMobaDto EOF ;
+    public final void entryRuleMobaDto() throws RecognitionException {
         try {
-            // InternalMoba.g:521:1: ( ruleMobaPayload EOF )
-            // InternalMoba.g:522:1: ruleMobaPayload EOF
+            // InternalMoba.g:521:1: ( ruleMobaDto EOF )
+            // InternalMoba.g:522:1: ruleMobaDto EOF
             {
-             before(grammarAccess.getMobaPayloadRule()); 
+             before(grammarAccess.getMobaDtoRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaPayload();
+            ruleMobaDto();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadRule()); 
+             after(grammarAccess.getMobaDtoRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1589,35 +1589,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaPayload"
+    // $ANTLR end "entryRuleMobaDto"
 
 
-    // $ANTLR start "ruleMobaPayload"
-    // InternalMoba.g:529:1: ruleMobaPayload : ( ( rule__MobaPayload__Group__0 ) ) ;
-    public final void ruleMobaPayload() throws RecognitionException {
+    // $ANTLR start "ruleMobaDto"
+    // InternalMoba.g:529:1: ruleMobaDto : ( ( rule__MobaDto__Group__0 ) ) ;
+    public final void ruleMobaDto() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:533:2: ( ( ( rule__MobaPayload__Group__0 ) ) )
-            // InternalMoba.g:534:2: ( ( rule__MobaPayload__Group__0 ) )
+            // InternalMoba.g:533:2: ( ( ( rule__MobaDto__Group__0 ) ) )
+            // InternalMoba.g:534:2: ( ( rule__MobaDto__Group__0 ) )
             {
-            // InternalMoba.g:534:2: ( ( rule__MobaPayload__Group__0 ) )
-            // InternalMoba.g:535:3: ( rule__MobaPayload__Group__0 )
+            // InternalMoba.g:534:2: ( ( rule__MobaDto__Group__0 ) )
+            // InternalMoba.g:535:3: ( rule__MobaDto__Group__0 )
             {
-             before(grammarAccess.getMobaPayloadAccess().getGroup()); 
-            // InternalMoba.g:536:3: ( rule__MobaPayload__Group__0 )
-            // InternalMoba.g:536:4: rule__MobaPayload__Group__0
+             before(grammarAccess.getMobaDtoAccess().getGroup()); 
+            // InternalMoba.g:536:3: ( rule__MobaDto__Group__0 )
+            // InternalMoba.g:536:4: rule__MobaDto__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__0();
+            rule__MobaDto__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getGroup()); 
+             after(grammarAccess.getMobaDtoAccess().getGroup()); 
 
             }
 
@@ -1636,7 +1636,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaPayload"
+    // $ANTLR end "ruleMobaDto"
 
 
     // $ANTLR start "entryRuleMobaQueue"
@@ -1947,20 +1947,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleMobaRestCrud"
 
 
-    // $ANTLR start "entryRuleMobaBeanFeature"
-    // InternalMoba.g:645:1: entryRuleMobaBeanFeature : ruleMobaBeanFeature EOF ;
-    public final void entryRuleMobaBeanFeature() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaEntityFeature"
+    // InternalMoba.g:645:1: entryRuleMobaEntityFeature : ruleMobaEntityFeature EOF ;
+    public final void entryRuleMobaEntityFeature() throws RecognitionException {
         try {
-            // InternalMoba.g:646:1: ( ruleMobaBeanFeature EOF )
-            // InternalMoba.g:647:1: ruleMobaBeanFeature EOF
+            // InternalMoba.g:646:1: ( ruleMobaEntityFeature EOF )
+            // InternalMoba.g:647:1: ruleMobaEntityFeature EOF
             {
-             before(grammarAccess.getMobaBeanFeatureRule()); 
+             before(grammarAccess.getMobaEntityFeatureRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaBeanFeature();
+            ruleMobaEntityFeature();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanFeatureRule()); 
+             after(grammarAccess.getMobaEntityFeatureRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1974,35 +1974,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaBeanFeature"
+    // $ANTLR end "entryRuleMobaEntityFeature"
 
 
-    // $ANTLR start "ruleMobaBeanFeature"
-    // InternalMoba.g:654:1: ruleMobaBeanFeature : ( ( rule__MobaBeanFeature__Alternatives ) ) ;
-    public final void ruleMobaBeanFeature() throws RecognitionException {
+    // $ANTLR start "ruleMobaEntityFeature"
+    // InternalMoba.g:654:1: ruleMobaEntityFeature : ( ( rule__MobaEntityFeature__Alternatives ) ) ;
+    public final void ruleMobaEntityFeature() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:658:2: ( ( ( rule__MobaBeanFeature__Alternatives ) ) )
-            // InternalMoba.g:659:2: ( ( rule__MobaBeanFeature__Alternatives ) )
+            // InternalMoba.g:658:2: ( ( ( rule__MobaEntityFeature__Alternatives ) ) )
+            // InternalMoba.g:659:2: ( ( rule__MobaEntityFeature__Alternatives ) )
             {
-            // InternalMoba.g:659:2: ( ( rule__MobaBeanFeature__Alternatives ) )
-            // InternalMoba.g:660:3: ( rule__MobaBeanFeature__Alternatives )
+            // InternalMoba.g:659:2: ( ( rule__MobaEntityFeature__Alternatives ) )
+            // InternalMoba.g:660:3: ( rule__MobaEntityFeature__Alternatives )
             {
-             before(grammarAccess.getMobaBeanFeatureAccess().getAlternatives()); 
-            // InternalMoba.g:661:3: ( rule__MobaBeanFeature__Alternatives )
-            // InternalMoba.g:661:4: rule__MobaBeanFeature__Alternatives
+             before(grammarAccess.getMobaEntityFeatureAccess().getAlternatives()); 
+            // InternalMoba.g:661:3: ( rule__MobaEntityFeature__Alternatives )
+            // InternalMoba.g:661:4: rule__MobaEntityFeature__Alternatives
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanFeature__Alternatives();
+            rule__MobaEntityFeature__Alternatives();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanFeatureAccess().getAlternatives()); 
+             after(grammarAccess.getMobaEntityFeatureAccess().getAlternatives()); 
 
             }
 
@@ -2021,23 +2021,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaBeanFeature"
+    // $ANTLR end "ruleMobaEntityFeature"
 
 
-    // $ANTLR start "entryRuleMobaBeanAttribute"
-    // InternalMoba.g:670:1: entryRuleMobaBeanAttribute : ruleMobaBeanAttribute EOF ;
-    public final void entryRuleMobaBeanAttribute() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaEntityAttribute"
+    // InternalMoba.g:670:1: entryRuleMobaEntityAttribute : ruleMobaEntityAttribute EOF ;
+    public final void entryRuleMobaEntityAttribute() throws RecognitionException {
         try {
-            // InternalMoba.g:671:1: ( ruleMobaBeanAttribute EOF )
-            // InternalMoba.g:672:1: ruleMobaBeanAttribute EOF
+            // InternalMoba.g:671:1: ( ruleMobaEntityAttribute EOF )
+            // InternalMoba.g:672:1: ruleMobaEntityAttribute EOF
             {
-             before(grammarAccess.getMobaBeanAttributeRule()); 
+             before(grammarAccess.getMobaEntityAttributeRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaBeanAttribute();
+            ruleMobaEntityAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAttributeRule()); 
+             after(grammarAccess.getMobaEntityAttributeRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2051,35 +2051,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaBeanAttribute"
+    // $ANTLR end "entryRuleMobaEntityAttribute"
 
 
-    // $ANTLR start "ruleMobaBeanAttribute"
-    // InternalMoba.g:679:1: ruleMobaBeanAttribute : ( ( rule__MobaBeanAttribute__Group__0 ) ) ;
-    public final void ruleMobaBeanAttribute() throws RecognitionException {
+    // $ANTLR start "ruleMobaEntityAttribute"
+    // InternalMoba.g:679:1: ruleMobaEntityAttribute : ( ( rule__MobaEntityAttribute__Group__0 ) ) ;
+    public final void ruleMobaEntityAttribute() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:683:2: ( ( ( rule__MobaBeanAttribute__Group__0 ) ) )
-            // InternalMoba.g:684:2: ( ( rule__MobaBeanAttribute__Group__0 ) )
+            // InternalMoba.g:683:2: ( ( ( rule__MobaEntityAttribute__Group__0 ) ) )
+            // InternalMoba.g:684:2: ( ( rule__MobaEntityAttribute__Group__0 ) )
             {
-            // InternalMoba.g:684:2: ( ( rule__MobaBeanAttribute__Group__0 ) )
-            // InternalMoba.g:685:3: ( rule__MobaBeanAttribute__Group__0 )
+            // InternalMoba.g:684:2: ( ( rule__MobaEntityAttribute__Group__0 ) )
+            // InternalMoba.g:685:3: ( rule__MobaEntityAttribute__Group__0 )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getGroup()); 
-            // InternalMoba.g:686:3: ( rule__MobaBeanAttribute__Group__0 )
-            // InternalMoba.g:686:4: rule__MobaBeanAttribute__Group__0
+             before(grammarAccess.getMobaEntityAttributeAccess().getGroup()); 
+            // InternalMoba.g:686:3: ( rule__MobaEntityAttribute__Group__0 )
+            // InternalMoba.g:686:4: rule__MobaEntityAttribute__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__0();
+            rule__MobaEntityAttribute__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getGroup()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getGroup()); 
 
             }
 
@@ -2098,7 +2098,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaBeanAttribute"
+    // $ANTLR end "ruleMobaEntityAttribute"
 
 
     // $ANTLR start "entryRuleMobaSettingsFeature"
@@ -2307,20 +2307,20 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleMobaMultiplicityAble"
 
 
-    // $ANTLR start "entryRuleMobaBeanReference"
-    // InternalMoba.g:762:1: entryRuleMobaBeanReference : ruleMobaBeanReference EOF ;
-    public final void entryRuleMobaBeanReference() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaEntityReference"
+    // InternalMoba.g:762:1: entryRuleMobaEntityReference : ruleMobaEntityReference EOF ;
+    public final void entryRuleMobaEntityReference() throws RecognitionException {
         try {
-            // InternalMoba.g:763:1: ( ruleMobaBeanReference EOF )
-            // InternalMoba.g:764:1: ruleMobaBeanReference EOF
+            // InternalMoba.g:763:1: ( ruleMobaEntityReference EOF )
+            // InternalMoba.g:764:1: ruleMobaEntityReference EOF
             {
-             before(grammarAccess.getMobaBeanReferenceRule()); 
+             before(grammarAccess.getMobaEntityReferenceRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaBeanReference();
+            ruleMobaEntityReference();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanReferenceRule()); 
+             after(grammarAccess.getMobaEntityReferenceRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2334,35 +2334,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaBeanReference"
+    // $ANTLR end "entryRuleMobaEntityReference"
 
 
-    // $ANTLR start "ruleMobaBeanReference"
-    // InternalMoba.g:771:1: ruleMobaBeanReference : ( ( rule__MobaBeanReference__Group__0 ) ) ;
-    public final void ruleMobaBeanReference() throws RecognitionException {
+    // $ANTLR start "ruleMobaEntityReference"
+    // InternalMoba.g:771:1: ruleMobaEntityReference : ( ( rule__MobaEntityReference__Group__0 ) ) ;
+    public final void ruleMobaEntityReference() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:775:2: ( ( ( rule__MobaBeanReference__Group__0 ) ) )
-            // InternalMoba.g:776:2: ( ( rule__MobaBeanReference__Group__0 ) )
+            // InternalMoba.g:775:2: ( ( ( rule__MobaEntityReference__Group__0 ) ) )
+            // InternalMoba.g:776:2: ( ( rule__MobaEntityReference__Group__0 ) )
             {
-            // InternalMoba.g:776:2: ( ( rule__MobaBeanReference__Group__0 ) )
-            // InternalMoba.g:777:3: ( rule__MobaBeanReference__Group__0 )
+            // InternalMoba.g:776:2: ( ( rule__MobaEntityReference__Group__0 ) )
+            // InternalMoba.g:777:3: ( rule__MobaEntityReference__Group__0 )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getGroup()); 
-            // InternalMoba.g:778:3: ( rule__MobaBeanReference__Group__0 )
-            // InternalMoba.g:778:4: rule__MobaBeanReference__Group__0
+             before(grammarAccess.getMobaEntityReferenceAccess().getGroup()); 
+            // InternalMoba.g:778:3: ( rule__MobaEntityReference__Group__0 )
+            // InternalMoba.g:778:4: rule__MobaEntityReference__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__0();
+            rule__MobaEntityReference__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getGroup()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getGroup()); 
 
             }
 
@@ -2381,23 +2381,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaBeanReference"
+    // $ANTLR end "ruleMobaEntityReference"
 
 
-    // $ANTLR start "entryRuleMobaPayloadFeature"
-    // InternalMoba.g:787:1: entryRuleMobaPayloadFeature : ruleMobaPayloadFeature EOF ;
-    public final void entryRuleMobaPayloadFeature() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaDtoFeature"
+    // InternalMoba.g:787:1: entryRuleMobaDtoFeature : ruleMobaDtoFeature EOF ;
+    public final void entryRuleMobaDtoFeature() throws RecognitionException {
         try {
-            // InternalMoba.g:788:1: ( ruleMobaPayloadFeature EOF )
-            // InternalMoba.g:789:1: ruleMobaPayloadFeature EOF
+            // InternalMoba.g:788:1: ( ruleMobaDtoFeature EOF )
+            // InternalMoba.g:789:1: ruleMobaDtoFeature EOF
             {
-             before(grammarAccess.getMobaPayloadFeatureRule()); 
+             before(grammarAccess.getMobaDtoFeatureRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaPayloadFeature();
+            ruleMobaDtoFeature();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadFeatureRule()); 
+             after(grammarAccess.getMobaDtoFeatureRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2411,35 +2411,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaPayloadFeature"
+    // $ANTLR end "entryRuleMobaDtoFeature"
 
 
-    // $ANTLR start "ruleMobaPayloadFeature"
-    // InternalMoba.g:796:1: ruleMobaPayloadFeature : ( ( rule__MobaPayloadFeature__Alternatives ) ) ;
-    public final void ruleMobaPayloadFeature() throws RecognitionException {
+    // $ANTLR start "ruleMobaDtoFeature"
+    // InternalMoba.g:796:1: ruleMobaDtoFeature : ( ( rule__MobaDtoFeature__Alternatives ) ) ;
+    public final void ruleMobaDtoFeature() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:800:2: ( ( ( rule__MobaPayloadFeature__Alternatives ) ) )
-            // InternalMoba.g:801:2: ( ( rule__MobaPayloadFeature__Alternatives ) )
+            // InternalMoba.g:800:2: ( ( ( rule__MobaDtoFeature__Alternatives ) ) )
+            // InternalMoba.g:801:2: ( ( rule__MobaDtoFeature__Alternatives ) )
             {
-            // InternalMoba.g:801:2: ( ( rule__MobaPayloadFeature__Alternatives ) )
-            // InternalMoba.g:802:3: ( rule__MobaPayloadFeature__Alternatives )
+            // InternalMoba.g:801:2: ( ( rule__MobaDtoFeature__Alternatives ) )
+            // InternalMoba.g:802:3: ( rule__MobaDtoFeature__Alternatives )
             {
-             before(grammarAccess.getMobaPayloadFeatureAccess().getAlternatives()); 
-            // InternalMoba.g:803:3: ( rule__MobaPayloadFeature__Alternatives )
-            // InternalMoba.g:803:4: rule__MobaPayloadFeature__Alternatives
+             before(grammarAccess.getMobaDtoFeatureAccess().getAlternatives()); 
+            // InternalMoba.g:803:3: ( rule__MobaDtoFeature__Alternatives )
+            // InternalMoba.g:803:4: rule__MobaDtoFeature__Alternatives
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadFeature__Alternatives();
+            rule__MobaDtoFeature__Alternatives();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadFeatureAccess().getAlternatives()); 
+             after(grammarAccess.getMobaDtoFeatureAccess().getAlternatives()); 
 
             }
 
@@ -2458,23 +2458,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaPayloadFeature"
+    // $ANTLR end "ruleMobaDtoFeature"
 
 
-    // $ANTLR start "entryRuleMobaPayloadAttribute"
-    // InternalMoba.g:812:1: entryRuleMobaPayloadAttribute : ruleMobaPayloadAttribute EOF ;
-    public final void entryRuleMobaPayloadAttribute() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaDtoAttribute"
+    // InternalMoba.g:812:1: entryRuleMobaDtoAttribute : ruleMobaDtoAttribute EOF ;
+    public final void entryRuleMobaDtoAttribute() throws RecognitionException {
         try {
-            // InternalMoba.g:813:1: ( ruleMobaPayloadAttribute EOF )
-            // InternalMoba.g:814:1: ruleMobaPayloadAttribute EOF
+            // InternalMoba.g:813:1: ( ruleMobaDtoAttribute EOF )
+            // InternalMoba.g:814:1: ruleMobaDtoAttribute EOF
             {
-             before(grammarAccess.getMobaPayloadAttributeRule()); 
+             before(grammarAccess.getMobaDtoAttributeRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaPayloadAttribute();
+            ruleMobaDtoAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadAttributeRule()); 
+             after(grammarAccess.getMobaDtoAttributeRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2488,35 +2488,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaPayloadAttribute"
+    // $ANTLR end "entryRuleMobaDtoAttribute"
 
 
-    // $ANTLR start "ruleMobaPayloadAttribute"
-    // InternalMoba.g:821:1: ruleMobaPayloadAttribute : ( ( rule__MobaPayloadAttribute__Group__0 ) ) ;
-    public final void ruleMobaPayloadAttribute() throws RecognitionException {
+    // $ANTLR start "ruleMobaDtoAttribute"
+    // InternalMoba.g:821:1: ruleMobaDtoAttribute : ( ( rule__MobaDtoAttribute__Group__0 ) ) ;
+    public final void ruleMobaDtoAttribute() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:825:2: ( ( ( rule__MobaPayloadAttribute__Group__0 ) ) )
-            // InternalMoba.g:826:2: ( ( rule__MobaPayloadAttribute__Group__0 ) )
+            // InternalMoba.g:825:2: ( ( ( rule__MobaDtoAttribute__Group__0 ) ) )
+            // InternalMoba.g:826:2: ( ( rule__MobaDtoAttribute__Group__0 ) )
             {
-            // InternalMoba.g:826:2: ( ( rule__MobaPayloadAttribute__Group__0 ) )
-            // InternalMoba.g:827:3: ( rule__MobaPayloadAttribute__Group__0 )
+            // InternalMoba.g:826:2: ( ( rule__MobaDtoAttribute__Group__0 ) )
+            // InternalMoba.g:827:3: ( rule__MobaDtoAttribute__Group__0 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getGroup()); 
-            // InternalMoba.g:828:3: ( rule__MobaPayloadAttribute__Group__0 )
-            // InternalMoba.g:828:4: rule__MobaPayloadAttribute__Group__0
+             before(grammarAccess.getMobaDtoAttributeAccess().getGroup()); 
+            // InternalMoba.g:828:3: ( rule__MobaDtoAttribute__Group__0 )
+            // InternalMoba.g:828:4: rule__MobaDtoAttribute__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__0();
+            rule__MobaDtoAttribute__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getGroup()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getGroup()); 
 
             }
 
@@ -2535,23 +2535,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaPayloadAttribute"
+    // $ANTLR end "ruleMobaDtoAttribute"
 
 
-    // $ANTLR start "entryRuleMobaPayloadReference"
-    // InternalMoba.g:837:1: entryRuleMobaPayloadReference : ruleMobaPayloadReference EOF ;
-    public final void entryRuleMobaPayloadReference() throws RecognitionException {
+    // $ANTLR start "entryRuleMobaDtoReference"
+    // InternalMoba.g:837:1: entryRuleMobaDtoReference : ruleMobaDtoReference EOF ;
+    public final void entryRuleMobaDtoReference() throws RecognitionException {
         try {
-            // InternalMoba.g:838:1: ( ruleMobaPayloadReference EOF )
-            // InternalMoba.g:839:1: ruleMobaPayloadReference EOF
+            // InternalMoba.g:838:1: ( ruleMobaDtoReference EOF )
+            // InternalMoba.g:839:1: ruleMobaDtoReference EOF
             {
-             before(grammarAccess.getMobaPayloadReferenceRule()); 
+             before(grammarAccess.getMobaDtoReferenceRule()); 
             pushFollow(FOLLOW_1);
-            ruleMobaPayloadReference();
+            ruleMobaDtoReference();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadReferenceRule()); 
+             after(grammarAccess.getMobaDtoReferenceRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2565,35 +2565,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleMobaPayloadReference"
+    // $ANTLR end "entryRuleMobaDtoReference"
 
 
-    // $ANTLR start "ruleMobaPayloadReference"
-    // InternalMoba.g:846:1: ruleMobaPayloadReference : ( ( rule__MobaPayloadReference__Group__0 ) ) ;
-    public final void ruleMobaPayloadReference() throws RecognitionException {
+    // $ANTLR start "ruleMobaDtoReference"
+    // InternalMoba.g:846:1: ruleMobaDtoReference : ( ( rule__MobaDtoReference__Group__0 ) ) ;
+    public final void ruleMobaDtoReference() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:850:2: ( ( ( rule__MobaPayloadReference__Group__0 ) ) )
-            // InternalMoba.g:851:2: ( ( rule__MobaPayloadReference__Group__0 ) )
+            // InternalMoba.g:850:2: ( ( ( rule__MobaDtoReference__Group__0 ) ) )
+            // InternalMoba.g:851:2: ( ( rule__MobaDtoReference__Group__0 ) )
             {
-            // InternalMoba.g:851:2: ( ( rule__MobaPayloadReference__Group__0 ) )
-            // InternalMoba.g:852:3: ( rule__MobaPayloadReference__Group__0 )
+            // InternalMoba.g:851:2: ( ( rule__MobaDtoReference__Group__0 ) )
+            // InternalMoba.g:852:3: ( rule__MobaDtoReference__Group__0 )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getGroup()); 
-            // InternalMoba.g:853:3: ( rule__MobaPayloadReference__Group__0 )
-            // InternalMoba.g:853:4: rule__MobaPayloadReference__Group__0
+             before(grammarAccess.getMobaDtoReferenceAccess().getGroup()); 
+            // InternalMoba.g:853:3: ( rule__MobaDtoReference__Group__0 )
+            // InternalMoba.g:853:4: rule__MobaDtoReference__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__0();
+            rule__MobaDtoReference__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getGroup()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getGroup()); 
 
             }
 
@@ -2612,7 +2612,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleMobaPayloadReference"
+    // $ANTLR end "ruleMobaDtoReference"
 
 
     // $ANTLR start "entryRuleMobaQueueFeature"
@@ -4666,13 +4666,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaData__Alternatives"
-    // InternalMoba.g:1430:1: rule__MobaData__Alternatives : ( ( ruleMobaBean ) | ( ruleMobaPayload ) | ( ruleMobaQueue ) );
+    // InternalMoba.g:1430:1: rule__MobaData__Alternatives : ( ( ruleMobaEntity ) | ( ruleMobaDto ) | ( ruleMobaQueue ) );
     public final void rule__MobaData__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1434:1: ( ( ruleMobaBean ) | ( ruleMobaPayload ) | ( ruleMobaQueue ) )
+            // InternalMoba.g:1434:1: ( ( ruleMobaEntity ) | ( ruleMobaDto ) | ( ruleMobaQueue ) )
             int alt11=3;
             switch ( input.LA(1) ) {
             case 43:
@@ -4699,18 +4699,18 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             switch (alt11) {
                 case 1 :
-                    // InternalMoba.g:1435:2: ( ruleMobaBean )
+                    // InternalMoba.g:1435:2: ( ruleMobaEntity )
                     {
-                    // InternalMoba.g:1435:2: ( ruleMobaBean )
-                    // InternalMoba.g:1436:3: ruleMobaBean
+                    // InternalMoba.g:1435:2: ( ruleMobaEntity )
+                    // InternalMoba.g:1436:3: ruleMobaEntity
                     {
-                     before(grammarAccess.getMobaDataAccess().getMobaBeanParserRuleCall_0()); 
+                     before(grammarAccess.getMobaDataAccess().getMobaEntityParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    ruleMobaBean();
+                    ruleMobaEntity();
 
                     state._fsp--;
 
-                     after(grammarAccess.getMobaDataAccess().getMobaBeanParserRuleCall_0()); 
+                     after(grammarAccess.getMobaDataAccess().getMobaEntityParserRuleCall_0()); 
 
                     }
 
@@ -4718,18 +4718,18 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:1441:2: ( ruleMobaPayload )
+                    // InternalMoba.g:1441:2: ( ruleMobaDto )
                     {
-                    // InternalMoba.g:1441:2: ( ruleMobaPayload )
-                    // InternalMoba.g:1442:3: ruleMobaPayload
+                    // InternalMoba.g:1441:2: ( ruleMobaDto )
+                    // InternalMoba.g:1442:3: ruleMobaDto
                     {
-                     before(grammarAccess.getMobaDataAccess().getMobaPayloadParserRuleCall_1()); 
+                     before(grammarAccess.getMobaDataAccess().getMobaDtoParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
-                    ruleMobaPayload();
+                    ruleMobaDto();
 
                     state._fsp--;
 
-                     after(grammarAccess.getMobaDataAccess().getMobaPayloadParserRuleCall_1()); 
+                     after(grammarAccess.getMobaDataAccess().getMobaDtoParserRuleCall_1()); 
 
                     }
 
@@ -5033,14 +5033,14 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaService__Alternatives"
 
 
-    // $ANTLR start "rule__MobaBeanFeature__Alternatives"
-    // InternalMoba.g:1520:1: rule__MobaBeanFeature__Alternatives : ( ( ruleMobaBeanAttribute ) | ( ruleMobaBeanReference ) );
-    public final void rule__MobaBeanFeature__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityFeature__Alternatives"
+    // InternalMoba.g:1520:1: rule__MobaEntityFeature__Alternatives : ( ( ruleMobaEntityAttribute ) | ( ruleMobaEntityReference ) );
+    public final void rule__MobaEntityFeature__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1524:1: ( ( ruleMobaBeanAttribute ) | ( ruleMobaBeanReference ) )
+            // InternalMoba.g:1524:1: ( ( ruleMobaEntityAttribute ) | ( ruleMobaEntityReference ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -5058,18 +5058,18 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalMoba.g:1525:2: ( ruleMobaBeanAttribute )
+                    // InternalMoba.g:1525:2: ( ruleMobaEntityAttribute )
                     {
-                    // InternalMoba.g:1525:2: ( ruleMobaBeanAttribute )
-                    // InternalMoba.g:1526:3: ruleMobaBeanAttribute
+                    // InternalMoba.g:1525:2: ( ruleMobaEntityAttribute )
+                    // InternalMoba.g:1526:3: ruleMobaEntityAttribute
                     {
-                     before(grammarAccess.getMobaBeanFeatureAccess().getMobaBeanAttributeParserRuleCall_0()); 
+                     before(grammarAccess.getMobaEntityFeatureAccess().getMobaEntityAttributeParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    ruleMobaBeanAttribute();
+                    ruleMobaEntityAttribute();
 
                     state._fsp--;
 
-                     after(grammarAccess.getMobaBeanFeatureAccess().getMobaBeanAttributeParserRuleCall_0()); 
+                     after(grammarAccess.getMobaEntityFeatureAccess().getMobaEntityAttributeParserRuleCall_0()); 
 
                     }
 
@@ -5077,18 +5077,18 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:1531:2: ( ruleMobaBeanReference )
+                    // InternalMoba.g:1531:2: ( ruleMobaEntityReference )
                     {
-                    // InternalMoba.g:1531:2: ( ruleMobaBeanReference )
-                    // InternalMoba.g:1532:3: ruleMobaBeanReference
+                    // InternalMoba.g:1531:2: ( ruleMobaEntityReference )
+                    // InternalMoba.g:1532:3: ruleMobaEntityReference
                     {
-                     before(grammarAccess.getMobaBeanFeatureAccess().getMobaBeanReferenceParserRuleCall_1()); 
+                     before(grammarAccess.getMobaEntityFeatureAccess().getMobaEntityReferenceParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
-                    ruleMobaBeanReference();
+                    ruleMobaEntityReference();
 
                     state._fsp--;
 
-                     after(grammarAccess.getMobaBeanFeatureAccess().getMobaBeanReferenceParserRuleCall_1()); 
+                     after(grammarAccess.getMobaEntityFeatureAccess().getMobaEntityReferenceParserRuleCall_1()); 
 
                     }
 
@@ -5109,17 +5109,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanFeature__Alternatives"
+    // $ANTLR end "rule__MobaEntityFeature__Alternatives"
 
 
-    // $ANTLR start "rule__MobaPayloadFeature__Alternatives"
-    // InternalMoba.g:1541:1: rule__MobaPayloadFeature__Alternatives : ( ( ruleMobaPayloadAttribute ) | ( ruleMobaPayloadReference ) );
-    public final void rule__MobaPayloadFeature__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoFeature__Alternatives"
+    // InternalMoba.g:1541:1: rule__MobaDtoFeature__Alternatives : ( ( ruleMobaDtoAttribute ) | ( ruleMobaDtoReference ) );
+    public final void rule__MobaDtoFeature__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:1545:1: ( ( ruleMobaPayloadAttribute ) | ( ruleMobaPayloadReference ) )
+            // InternalMoba.g:1545:1: ( ( ruleMobaDtoAttribute ) | ( ruleMobaDtoReference ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -5137,18 +5137,18 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalMoba.g:1546:2: ( ruleMobaPayloadAttribute )
+                    // InternalMoba.g:1546:2: ( ruleMobaDtoAttribute )
                     {
-                    // InternalMoba.g:1546:2: ( ruleMobaPayloadAttribute )
-                    // InternalMoba.g:1547:3: ruleMobaPayloadAttribute
+                    // InternalMoba.g:1546:2: ( ruleMobaDtoAttribute )
+                    // InternalMoba.g:1547:3: ruleMobaDtoAttribute
                     {
-                     before(grammarAccess.getMobaPayloadFeatureAccess().getMobaPayloadAttributeParserRuleCall_0()); 
+                     before(grammarAccess.getMobaDtoFeatureAccess().getMobaDtoAttributeParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    ruleMobaPayloadAttribute();
+                    ruleMobaDtoAttribute();
 
                     state._fsp--;
 
-                     after(grammarAccess.getMobaPayloadFeatureAccess().getMobaPayloadAttributeParserRuleCall_0()); 
+                     after(grammarAccess.getMobaDtoFeatureAccess().getMobaDtoAttributeParserRuleCall_0()); 
 
                     }
 
@@ -5156,18 +5156,18 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:1552:2: ( ruleMobaPayloadReference )
+                    // InternalMoba.g:1552:2: ( ruleMobaDtoReference )
                     {
-                    // InternalMoba.g:1552:2: ( ruleMobaPayloadReference )
-                    // InternalMoba.g:1553:3: ruleMobaPayloadReference
+                    // InternalMoba.g:1552:2: ( ruleMobaDtoReference )
+                    // InternalMoba.g:1553:3: ruleMobaDtoReference
                     {
-                     before(grammarAccess.getMobaPayloadFeatureAccess().getMobaPayloadReferenceParserRuleCall_1()); 
+                     before(grammarAccess.getMobaDtoFeatureAccess().getMobaDtoReferenceParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
-                    ruleMobaPayloadReference();
+                    ruleMobaDtoReference();
 
                     state._fsp--;
 
-                     after(grammarAccess.getMobaPayloadFeatureAccess().getMobaPayloadReferenceParserRuleCall_1()); 
+                     after(grammarAccess.getMobaDtoFeatureAccess().getMobaDtoReferenceParserRuleCall_1()); 
 
                     }
 
@@ -5188,7 +5188,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadFeature__Alternatives"
+    // $ANTLR end "rule__MobaDtoFeature__Alternatives"
 
 
     // $ANTLR start "rule__MobaConstraint__Alternatives"
@@ -13911,23 +13911,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaCache__Group_2_1_1__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__0"
-    // InternalMoba.g:4364:1: rule__MobaBean__Group__0 : rule__MobaBean__Group__0__Impl rule__MobaBean__Group__1 ;
-    public final void rule__MobaBean__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__0"
+    // InternalMoba.g:4364:1: rule__MobaEntity__Group__0 : rule__MobaEntity__Group__0__Impl rule__MobaEntity__Group__1 ;
+    public final void rule__MobaEntity__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4368:1: ( rule__MobaBean__Group__0__Impl rule__MobaBean__Group__1 )
-            // InternalMoba.g:4369:2: rule__MobaBean__Group__0__Impl rule__MobaBean__Group__1
+            // InternalMoba.g:4368:1: ( rule__MobaEntity__Group__0__Impl rule__MobaEntity__Group__1 )
+            // InternalMoba.g:4369:2: rule__MobaEntity__Group__0__Impl rule__MobaEntity__Group__1
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBean__Group__0__Impl();
+            rule__MobaEntity__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__1();
+            rule__MobaEntity__Group__1();
 
             state._fsp--;
 
@@ -13946,25 +13946,25 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__0"
+    // $ANTLR end "rule__MobaEntity__Group__0"
 
 
-    // $ANTLR start "rule__MobaBean__Group__0__Impl"
-    // InternalMoba.g:4376:1: rule__MobaBean__Group__0__Impl : ( 'bean' ) ;
-    public final void rule__MobaBean__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__0__Impl"
+    // InternalMoba.g:4376:1: rule__MobaEntity__Group__0__Impl : ( 'entity' ) ;
+    public final void rule__MobaEntity__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4380:1: ( ( 'bean' ) )
-            // InternalMoba.g:4381:1: ( 'bean' )
+            // InternalMoba.g:4380:1: ( ( 'entity' ) )
+            // InternalMoba.g:4381:1: ( 'entity' )
             {
-            // InternalMoba.g:4381:1: ( 'bean' )
-            // InternalMoba.g:4382:2: 'bean'
+            // InternalMoba.g:4381:1: ( 'entity' )
+            // InternalMoba.g:4382:2: 'entity'
             {
-             before(grammarAccess.getMobaBeanAccess().getBeanKeyword_0()); 
+             before(grammarAccess.getMobaEntityAccess().getEntityKeyword_0()); 
             match(input,43,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAccess().getBeanKeyword_0()); 
+             after(grammarAccess.getMobaEntityAccess().getEntityKeyword_0()); 
 
             }
 
@@ -13983,26 +13983,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__0__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__1"
-    // InternalMoba.g:4391:1: rule__MobaBean__Group__1 : rule__MobaBean__Group__1__Impl rule__MobaBean__Group__2 ;
-    public final void rule__MobaBean__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__1"
+    // InternalMoba.g:4391:1: rule__MobaEntity__Group__1 : rule__MobaEntity__Group__1__Impl rule__MobaEntity__Group__2 ;
+    public final void rule__MobaEntity__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4395:1: ( rule__MobaBean__Group__1__Impl rule__MobaBean__Group__2 )
-            // InternalMoba.g:4396:2: rule__MobaBean__Group__1__Impl rule__MobaBean__Group__2
+            // InternalMoba.g:4395:1: ( rule__MobaEntity__Group__1__Impl rule__MobaEntity__Group__2 )
+            // InternalMoba.g:4396:2: rule__MobaEntity__Group__1__Impl rule__MobaEntity__Group__2
             {
             pushFollow(FOLLOW_34);
-            rule__MobaBean__Group__1__Impl();
+            rule__MobaEntity__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__2();
+            rule__MobaEntity__Group__2();
 
             state._fsp--;
 
@@ -14021,35 +14021,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__1"
+    // $ANTLR end "rule__MobaEntity__Group__1"
 
 
-    // $ANTLR start "rule__MobaBean__Group__1__Impl"
-    // InternalMoba.g:4403:1: rule__MobaBean__Group__1__Impl : ( ( rule__MobaBean__NameAssignment_1 ) ) ;
-    public final void rule__MobaBean__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__1__Impl"
+    // InternalMoba.g:4403:1: rule__MobaEntity__Group__1__Impl : ( ( rule__MobaEntity__NameAssignment_1 ) ) ;
+    public final void rule__MobaEntity__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4407:1: ( ( ( rule__MobaBean__NameAssignment_1 ) ) )
-            // InternalMoba.g:4408:1: ( ( rule__MobaBean__NameAssignment_1 ) )
+            // InternalMoba.g:4407:1: ( ( ( rule__MobaEntity__NameAssignment_1 ) ) )
+            // InternalMoba.g:4408:1: ( ( rule__MobaEntity__NameAssignment_1 ) )
             {
-            // InternalMoba.g:4408:1: ( ( rule__MobaBean__NameAssignment_1 ) )
-            // InternalMoba.g:4409:2: ( rule__MobaBean__NameAssignment_1 )
+            // InternalMoba.g:4408:1: ( ( rule__MobaEntity__NameAssignment_1 ) )
+            // InternalMoba.g:4409:2: ( rule__MobaEntity__NameAssignment_1 )
             {
-             before(grammarAccess.getMobaBeanAccess().getNameAssignment_1()); 
-            // InternalMoba.g:4410:2: ( rule__MobaBean__NameAssignment_1 )
-            // InternalMoba.g:4410:3: rule__MobaBean__NameAssignment_1
+             before(grammarAccess.getMobaEntityAccess().getNameAssignment_1()); 
+            // InternalMoba.g:4410:2: ( rule__MobaEntity__NameAssignment_1 )
+            // InternalMoba.g:4410:3: rule__MobaEntity__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__NameAssignment_1();
+            rule__MobaEntity__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getNameAssignment_1()); 
+             after(grammarAccess.getMobaEntityAccess().getNameAssignment_1()); 
 
             }
 
@@ -14068,26 +14068,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__1__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__2"
-    // InternalMoba.g:4418:1: rule__MobaBean__Group__2 : rule__MobaBean__Group__2__Impl rule__MobaBean__Group__3 ;
-    public final void rule__MobaBean__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__2"
+    // InternalMoba.g:4418:1: rule__MobaEntity__Group__2 : rule__MobaEntity__Group__2__Impl rule__MobaEntity__Group__3 ;
+    public final void rule__MobaEntity__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4422:1: ( rule__MobaBean__Group__2__Impl rule__MobaBean__Group__3 )
-            // InternalMoba.g:4423:2: rule__MobaBean__Group__2__Impl rule__MobaBean__Group__3
+            // InternalMoba.g:4422:1: ( rule__MobaEntity__Group__2__Impl rule__MobaEntity__Group__3 )
+            // InternalMoba.g:4423:2: rule__MobaEntity__Group__2__Impl rule__MobaEntity__Group__3
             {
             pushFollow(FOLLOW_35);
-            rule__MobaBean__Group__2__Impl();
+            rule__MobaEntity__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__3();
+            rule__MobaEntity__Group__3();
 
             state._fsp--;
 
@@ -14106,35 +14106,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__2"
+    // $ANTLR end "rule__MobaEntity__Group__2"
 
 
-    // $ANTLR start "rule__MobaBean__Group__2__Impl"
-    // InternalMoba.g:4430:1: rule__MobaBean__Group__2__Impl : ( ( rule__MobaBean__UnorderedGroup_2 ) ) ;
-    public final void rule__MobaBean__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__2__Impl"
+    // InternalMoba.g:4430:1: rule__MobaEntity__Group__2__Impl : ( ( rule__MobaEntity__UnorderedGroup_2 ) ) ;
+    public final void rule__MobaEntity__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4434:1: ( ( ( rule__MobaBean__UnorderedGroup_2 ) ) )
-            // InternalMoba.g:4435:1: ( ( rule__MobaBean__UnorderedGroup_2 ) )
+            // InternalMoba.g:4434:1: ( ( ( rule__MobaEntity__UnorderedGroup_2 ) ) )
+            // InternalMoba.g:4435:1: ( ( rule__MobaEntity__UnorderedGroup_2 ) )
             {
-            // InternalMoba.g:4435:1: ( ( rule__MobaBean__UnorderedGroup_2 ) )
-            // InternalMoba.g:4436:2: ( rule__MobaBean__UnorderedGroup_2 )
+            // InternalMoba.g:4435:1: ( ( rule__MobaEntity__UnorderedGroup_2 ) )
+            // InternalMoba.g:4436:2: ( rule__MobaEntity__UnorderedGroup_2 )
             {
-             before(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2()); 
-            // InternalMoba.g:4437:2: ( rule__MobaBean__UnorderedGroup_2 )
-            // InternalMoba.g:4437:3: rule__MobaBean__UnorderedGroup_2
+             before(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2()); 
+            // InternalMoba.g:4437:2: ( rule__MobaEntity__UnorderedGroup_2 )
+            // InternalMoba.g:4437:3: rule__MobaEntity__UnorderedGroup_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__UnorderedGroup_2();
+            rule__MobaEntity__UnorderedGroup_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2()); 
+             after(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2()); 
 
             }
 
@@ -14153,26 +14153,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__2__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__3"
-    // InternalMoba.g:4445:1: rule__MobaBean__Group__3 : rule__MobaBean__Group__3__Impl rule__MobaBean__Group__4 ;
-    public final void rule__MobaBean__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__3"
+    // InternalMoba.g:4445:1: rule__MobaEntity__Group__3 : rule__MobaEntity__Group__3__Impl rule__MobaEntity__Group__4 ;
+    public final void rule__MobaEntity__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4449:1: ( rule__MobaBean__Group__3__Impl rule__MobaBean__Group__4 )
-            // InternalMoba.g:4450:2: rule__MobaBean__Group__3__Impl rule__MobaBean__Group__4
+            // InternalMoba.g:4449:1: ( rule__MobaEntity__Group__3__Impl rule__MobaEntity__Group__4 )
+            // InternalMoba.g:4450:2: rule__MobaEntity__Group__3__Impl rule__MobaEntity__Group__4
             {
             pushFollow(FOLLOW_35);
-            rule__MobaBean__Group__3__Impl();
+            rule__MobaEntity__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__4();
+            rule__MobaEntity__Group__4();
 
             state._fsp--;
 
@@ -14191,12 +14191,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__3"
+    // $ANTLR end "rule__MobaEntity__Group__3"
 
 
-    // $ANTLR start "rule__MobaBean__Group__3__Impl"
-    // InternalMoba.g:4457:1: rule__MobaBean__Group__3__Impl : ( ( ruleMobaPropertiesAble )? ) ;
-    public final void rule__MobaBean__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__3__Impl"
+    // InternalMoba.g:4457:1: rule__MobaEntity__Group__3__Impl : ( ( ruleMobaPropertiesAble )? ) ;
+    public final void rule__MobaEntity__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14207,7 +14207,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4462:1: ( ( ruleMobaPropertiesAble )? )
             // InternalMoba.g:4463:2: ( ruleMobaPropertiesAble )?
             {
-             before(grammarAccess.getMobaBeanAccess().getMobaPropertiesAbleParserRuleCall_3()); 
+             before(grammarAccess.getMobaEntityAccess().getMobaPropertiesAbleParserRuleCall_3()); 
             // InternalMoba.g:4464:2: ( ruleMobaPropertiesAble )?
             int alt43=2;
             int LA43_0 = input.LA(1);
@@ -14230,7 +14230,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getMobaPropertiesAbleParserRuleCall_3()); 
+             after(grammarAccess.getMobaEntityAccess().getMobaPropertiesAbleParserRuleCall_3()); 
 
             }
 
@@ -14249,26 +14249,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__3__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__4"
-    // InternalMoba.g:4472:1: rule__MobaBean__Group__4 : rule__MobaBean__Group__4__Impl rule__MobaBean__Group__5 ;
-    public final void rule__MobaBean__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__4"
+    // InternalMoba.g:4472:1: rule__MobaEntity__Group__4 : rule__MobaEntity__Group__4__Impl rule__MobaEntity__Group__5 ;
+    public final void rule__MobaEntity__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4476:1: ( rule__MobaBean__Group__4__Impl rule__MobaBean__Group__5 )
-            // InternalMoba.g:4477:2: rule__MobaBean__Group__4__Impl rule__MobaBean__Group__5
+            // InternalMoba.g:4476:1: ( rule__MobaEntity__Group__4__Impl rule__MobaEntity__Group__5 )
+            // InternalMoba.g:4477:2: rule__MobaEntity__Group__4__Impl rule__MobaEntity__Group__5
             {
             pushFollow(FOLLOW_36);
-            rule__MobaBean__Group__4__Impl();
+            rule__MobaEntity__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__5();
+            rule__MobaEntity__Group__5();
 
             state._fsp--;
 
@@ -14287,12 +14287,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__4"
+    // $ANTLR end "rule__MobaEntity__Group__4"
 
 
-    // $ANTLR start "rule__MobaBean__Group__4__Impl"
-    // InternalMoba.g:4484:1: rule__MobaBean__Group__4__Impl : ( '{' ) ;
-    public final void rule__MobaBean__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__4__Impl"
+    // InternalMoba.g:4484:1: rule__MobaEntity__Group__4__Impl : ( '{' ) ;
+    public final void rule__MobaEntity__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14303,9 +14303,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4489:1: ( '{' )
             // InternalMoba.g:4490:2: '{'
             {
-             before(grammarAccess.getMobaBeanAccess().getLeftCurlyBracketKeyword_4()); 
+             before(grammarAccess.getMobaEntityAccess().getLeftCurlyBracketKeyword_4()); 
             match(input,21,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAccess().getLeftCurlyBracketKeyword_4()); 
+             after(grammarAccess.getMobaEntityAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
 
@@ -14324,26 +14324,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__4__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__5"
-    // InternalMoba.g:4499:1: rule__MobaBean__Group__5 : rule__MobaBean__Group__5__Impl rule__MobaBean__Group__6 ;
-    public final void rule__MobaBean__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__5"
+    // InternalMoba.g:4499:1: rule__MobaEntity__Group__5 : rule__MobaEntity__Group__5__Impl rule__MobaEntity__Group__6 ;
+    public final void rule__MobaEntity__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4503:1: ( rule__MobaBean__Group__5__Impl rule__MobaBean__Group__6 )
-            // InternalMoba.g:4504:2: rule__MobaBean__Group__5__Impl rule__MobaBean__Group__6
+            // InternalMoba.g:4503:1: ( rule__MobaEntity__Group__5__Impl rule__MobaEntity__Group__6 )
+            // InternalMoba.g:4504:2: rule__MobaEntity__Group__5__Impl rule__MobaEntity__Group__6
             {
             pushFollow(FOLLOW_36);
-            rule__MobaBean__Group__5__Impl();
+            rule__MobaEntity__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__6();
+            rule__MobaEntity__Group__6();
 
             state._fsp--;
 
@@ -14362,24 +14362,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__5"
+    // $ANTLR end "rule__MobaEntity__Group__5"
 
 
-    // $ANTLR start "rule__MobaBean__Group__5__Impl"
-    // InternalMoba.g:4511:1: rule__MobaBean__Group__5__Impl : ( ( rule__MobaBean__FeaturesAssignment_5 )* ) ;
-    public final void rule__MobaBean__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__5__Impl"
+    // InternalMoba.g:4511:1: rule__MobaEntity__Group__5__Impl : ( ( rule__MobaEntity__FeaturesAssignment_5 )* ) ;
+    public final void rule__MobaEntity__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4515:1: ( ( ( rule__MobaBean__FeaturesAssignment_5 )* ) )
-            // InternalMoba.g:4516:1: ( ( rule__MobaBean__FeaturesAssignment_5 )* )
+            // InternalMoba.g:4515:1: ( ( ( rule__MobaEntity__FeaturesAssignment_5 )* ) )
+            // InternalMoba.g:4516:1: ( ( rule__MobaEntity__FeaturesAssignment_5 )* )
             {
-            // InternalMoba.g:4516:1: ( ( rule__MobaBean__FeaturesAssignment_5 )* )
-            // InternalMoba.g:4517:2: ( rule__MobaBean__FeaturesAssignment_5 )*
+            // InternalMoba.g:4516:1: ( ( rule__MobaEntity__FeaturesAssignment_5 )* )
+            // InternalMoba.g:4517:2: ( rule__MobaEntity__FeaturesAssignment_5 )*
             {
-             before(grammarAccess.getMobaBeanAccess().getFeaturesAssignment_5()); 
-            // InternalMoba.g:4518:2: ( rule__MobaBean__FeaturesAssignment_5 )*
+             before(grammarAccess.getMobaEntityAccess().getFeaturesAssignment_5()); 
+            // InternalMoba.g:4518:2: ( rule__MobaEntity__FeaturesAssignment_5 )*
             loop44:
             do {
                 int alt44=2;
@@ -14392,10 +14392,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
                 switch (alt44) {
             	case 1 :
-            	    // InternalMoba.g:4518:3: rule__MobaBean__FeaturesAssignment_5
+            	    // InternalMoba.g:4518:3: rule__MobaEntity__FeaturesAssignment_5
             	    {
             	    pushFollow(FOLLOW_37);
-            	    rule__MobaBean__FeaturesAssignment_5();
+            	    rule__MobaEntity__FeaturesAssignment_5();
 
             	    state._fsp--;
 
@@ -14408,7 +14408,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getMobaBeanAccess().getFeaturesAssignment_5()); 
+             after(grammarAccess.getMobaEntityAccess().getFeaturesAssignment_5()); 
 
             }
 
@@ -14427,26 +14427,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__5__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__5__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__6"
-    // InternalMoba.g:4526:1: rule__MobaBean__Group__6 : rule__MobaBean__Group__6__Impl rule__MobaBean__Group__7 ;
-    public final void rule__MobaBean__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__6"
+    // InternalMoba.g:4526:1: rule__MobaEntity__Group__6 : rule__MobaEntity__Group__6__Impl rule__MobaEntity__Group__7 ;
+    public final void rule__MobaEntity__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4530:1: ( rule__MobaBean__Group__6__Impl rule__MobaBean__Group__7 )
-            // InternalMoba.g:4531:2: rule__MobaBean__Group__6__Impl rule__MobaBean__Group__7
+            // InternalMoba.g:4530:1: ( rule__MobaEntity__Group__6__Impl rule__MobaEntity__Group__7 )
+            // InternalMoba.g:4531:2: rule__MobaEntity__Group__6__Impl rule__MobaEntity__Group__7
             {
             pushFollow(FOLLOW_36);
-            rule__MobaBean__Group__6__Impl();
+            rule__MobaEntity__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__7();
+            rule__MobaEntity__Group__7();
 
             state._fsp--;
 
@@ -14465,24 +14465,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__6"
+    // $ANTLR end "rule__MobaEntity__Group__6"
 
 
-    // $ANTLR start "rule__MobaBean__Group__6__Impl"
-    // InternalMoba.g:4538:1: rule__MobaBean__Group__6__Impl : ( ( rule__MobaBean__IndexAssignment_6 )? ) ;
-    public final void rule__MobaBean__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__6__Impl"
+    // InternalMoba.g:4538:1: rule__MobaEntity__Group__6__Impl : ( ( rule__MobaEntity__IndexAssignment_6 )? ) ;
+    public final void rule__MobaEntity__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4542:1: ( ( ( rule__MobaBean__IndexAssignment_6 )? ) )
-            // InternalMoba.g:4543:1: ( ( rule__MobaBean__IndexAssignment_6 )? )
+            // InternalMoba.g:4542:1: ( ( ( rule__MobaEntity__IndexAssignment_6 )? ) )
+            // InternalMoba.g:4543:1: ( ( rule__MobaEntity__IndexAssignment_6 )? )
             {
-            // InternalMoba.g:4543:1: ( ( rule__MobaBean__IndexAssignment_6 )? )
-            // InternalMoba.g:4544:2: ( rule__MobaBean__IndexAssignment_6 )?
+            // InternalMoba.g:4543:1: ( ( rule__MobaEntity__IndexAssignment_6 )? )
+            // InternalMoba.g:4544:2: ( rule__MobaEntity__IndexAssignment_6 )?
             {
-             before(grammarAccess.getMobaBeanAccess().getIndexAssignment_6()); 
-            // InternalMoba.g:4545:2: ( rule__MobaBean__IndexAssignment_6 )?
+             before(grammarAccess.getMobaEntityAccess().getIndexAssignment_6()); 
+            // InternalMoba.g:4545:2: ( rule__MobaEntity__IndexAssignment_6 )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -14491,10 +14491,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt45) {
                 case 1 :
-                    // InternalMoba.g:4545:3: rule__MobaBean__IndexAssignment_6
+                    // InternalMoba.g:4545:3: rule__MobaEntity__IndexAssignment_6
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBean__IndexAssignment_6();
+                    rule__MobaEntity__IndexAssignment_6();
 
                     state._fsp--;
 
@@ -14504,7 +14504,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getIndexAssignment_6()); 
+             after(grammarAccess.getMobaEntityAccess().getIndexAssignment_6()); 
 
             }
 
@@ -14523,21 +14523,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__6__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__6__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group__7"
-    // InternalMoba.g:4553:1: rule__MobaBean__Group__7 : rule__MobaBean__Group__7__Impl ;
-    public final void rule__MobaBean__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__7"
+    // InternalMoba.g:4553:1: rule__MobaEntity__Group__7 : rule__MobaEntity__Group__7__Impl ;
+    public final void rule__MobaEntity__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4557:1: ( rule__MobaBean__Group__7__Impl )
-            // InternalMoba.g:4558:2: rule__MobaBean__Group__7__Impl
+            // InternalMoba.g:4557:1: ( rule__MobaEntity__Group__7__Impl )
+            // InternalMoba.g:4558:2: rule__MobaEntity__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group__7__Impl();
+            rule__MobaEntity__Group__7__Impl();
 
             state._fsp--;
 
@@ -14556,12 +14556,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__7"
+    // $ANTLR end "rule__MobaEntity__Group__7"
 
 
-    // $ANTLR start "rule__MobaBean__Group__7__Impl"
-    // InternalMoba.g:4564:1: rule__MobaBean__Group__7__Impl : ( '}' ) ;
-    public final void rule__MobaBean__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group__7__Impl"
+    // InternalMoba.g:4564:1: rule__MobaEntity__Group__7__Impl : ( '}' ) ;
+    public final void rule__MobaEntity__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14572,9 +14572,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4569:1: ( '}' )
             // InternalMoba.g:4570:2: '}'
             {
-             before(grammarAccess.getMobaBeanAccess().getRightCurlyBracketKeyword_7()); 
+             before(grammarAccess.getMobaEntityAccess().getRightCurlyBracketKeyword_7()); 
             match(input,22,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAccess().getRightCurlyBracketKeyword_7()); 
+             after(grammarAccess.getMobaEntityAccess().getRightCurlyBracketKeyword_7()); 
 
             }
 
@@ -14593,26 +14593,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group__7__Impl"
+    // $ANTLR end "rule__MobaEntity__Group__7__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group_2_0__0"
-    // InternalMoba.g:4580:1: rule__MobaBean__Group_2_0__0 : rule__MobaBean__Group_2_0__0__Impl rule__MobaBean__Group_2_0__1 ;
-    public final void rule__MobaBean__Group_2_0__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group_2_0__0"
+    // InternalMoba.g:4580:1: rule__MobaEntity__Group_2_0__0 : rule__MobaEntity__Group_2_0__0__Impl rule__MobaEntity__Group_2_0__1 ;
+    public final void rule__MobaEntity__Group_2_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4584:1: ( rule__MobaBean__Group_2_0__0__Impl rule__MobaBean__Group_2_0__1 )
-            // InternalMoba.g:4585:2: rule__MobaBean__Group_2_0__0__Impl rule__MobaBean__Group_2_0__1
+            // InternalMoba.g:4584:1: ( rule__MobaEntity__Group_2_0__0__Impl rule__MobaEntity__Group_2_0__1 )
+            // InternalMoba.g:4585:2: rule__MobaEntity__Group_2_0__0__Impl rule__MobaEntity__Group_2_0__1
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBean__Group_2_0__0__Impl();
+            rule__MobaEntity__Group_2_0__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group_2_0__1();
+            rule__MobaEntity__Group_2_0__1();
 
             state._fsp--;
 
@@ -14631,12 +14631,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group_2_0__0"
+    // $ANTLR end "rule__MobaEntity__Group_2_0__0"
 
 
-    // $ANTLR start "rule__MobaBean__Group_2_0__0__Impl"
-    // InternalMoba.g:4592:1: rule__MobaBean__Group_2_0__0__Impl : ( 'extends' ) ;
-    public final void rule__MobaBean__Group_2_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group_2_0__0__Impl"
+    // InternalMoba.g:4592:1: rule__MobaEntity__Group_2_0__0__Impl : ( 'extends' ) ;
+    public final void rule__MobaEntity__Group_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14647,9 +14647,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4597:1: ( 'extends' )
             // InternalMoba.g:4598:2: 'extends'
             {
-             before(grammarAccess.getMobaBeanAccess().getExtendsKeyword_2_0_0()); 
+             before(grammarAccess.getMobaEntityAccess().getExtendsKeyword_2_0_0()); 
             match(input,29,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAccess().getExtendsKeyword_2_0_0()); 
+             after(grammarAccess.getMobaEntityAccess().getExtendsKeyword_2_0_0()); 
 
             }
 
@@ -14668,21 +14668,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group_2_0__0__Impl"
+    // $ANTLR end "rule__MobaEntity__Group_2_0__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__Group_2_0__1"
-    // InternalMoba.g:4607:1: rule__MobaBean__Group_2_0__1 : rule__MobaBean__Group_2_0__1__Impl ;
-    public final void rule__MobaBean__Group_2_0__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group_2_0__1"
+    // InternalMoba.g:4607:1: rule__MobaEntity__Group_2_0__1 : rule__MobaEntity__Group_2_0__1__Impl ;
+    public final void rule__MobaEntity__Group_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4611:1: ( rule__MobaBean__Group_2_0__1__Impl )
-            // InternalMoba.g:4612:2: rule__MobaBean__Group_2_0__1__Impl
+            // InternalMoba.g:4611:1: ( rule__MobaEntity__Group_2_0__1__Impl )
+            // InternalMoba.g:4612:2: rule__MobaEntity__Group_2_0__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__Group_2_0__1__Impl();
+            rule__MobaEntity__Group_2_0__1__Impl();
 
             state._fsp--;
 
@@ -14701,35 +14701,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group_2_0__1"
+    // $ANTLR end "rule__MobaEntity__Group_2_0__1"
 
 
-    // $ANTLR start "rule__MobaBean__Group_2_0__1__Impl"
-    // InternalMoba.g:4618:1: rule__MobaBean__Group_2_0__1__Impl : ( ( rule__MobaBean__SuperTypeAssignment_2_0_1 ) ) ;
-    public final void rule__MobaBean__Group_2_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__Group_2_0__1__Impl"
+    // InternalMoba.g:4618:1: rule__MobaEntity__Group_2_0__1__Impl : ( ( rule__MobaEntity__SuperTypeAssignment_2_0_1 ) ) ;
+    public final void rule__MobaEntity__Group_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4622:1: ( ( ( rule__MobaBean__SuperTypeAssignment_2_0_1 ) ) )
-            // InternalMoba.g:4623:1: ( ( rule__MobaBean__SuperTypeAssignment_2_0_1 ) )
+            // InternalMoba.g:4622:1: ( ( ( rule__MobaEntity__SuperTypeAssignment_2_0_1 ) ) )
+            // InternalMoba.g:4623:1: ( ( rule__MobaEntity__SuperTypeAssignment_2_0_1 ) )
             {
-            // InternalMoba.g:4623:1: ( ( rule__MobaBean__SuperTypeAssignment_2_0_1 ) )
-            // InternalMoba.g:4624:2: ( rule__MobaBean__SuperTypeAssignment_2_0_1 )
+            // InternalMoba.g:4623:1: ( ( rule__MobaEntity__SuperTypeAssignment_2_0_1 ) )
+            // InternalMoba.g:4624:2: ( rule__MobaEntity__SuperTypeAssignment_2_0_1 )
             {
-             before(grammarAccess.getMobaBeanAccess().getSuperTypeAssignment_2_0_1()); 
-            // InternalMoba.g:4625:2: ( rule__MobaBean__SuperTypeAssignment_2_0_1 )
-            // InternalMoba.g:4625:3: rule__MobaBean__SuperTypeAssignment_2_0_1
+             before(grammarAccess.getMobaEntityAccess().getSuperTypeAssignment_2_0_1()); 
+            // InternalMoba.g:4625:2: ( rule__MobaEntity__SuperTypeAssignment_2_0_1 )
+            // InternalMoba.g:4625:3: rule__MobaEntity__SuperTypeAssignment_2_0_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__SuperTypeAssignment_2_0_1();
+            rule__MobaEntity__SuperTypeAssignment_2_0_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getSuperTypeAssignment_2_0_1()); 
+             after(grammarAccess.getMobaEntityAccess().getSuperTypeAssignment_2_0_1()); 
 
             }
 
@@ -14748,26 +14748,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__Group_2_0__1__Impl"
+    // $ANTLR end "rule__MobaEntity__Group_2_0__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group__0"
-    // InternalMoba.g:4634:1: rule__MobaBeanIndex__Group__0 : rule__MobaBeanIndex__Group__0__Impl rule__MobaBeanIndex__Group__1 ;
-    public final void rule__MobaBeanIndex__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group__0"
+    // InternalMoba.g:4634:1: rule__MobaEntityIndex__Group__0 : rule__MobaEntityIndex__Group__0__Impl rule__MobaEntityIndex__Group__1 ;
+    public final void rule__MobaEntityIndex__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4638:1: ( rule__MobaBeanIndex__Group__0__Impl rule__MobaBeanIndex__Group__1 )
-            // InternalMoba.g:4639:2: rule__MobaBeanIndex__Group__0__Impl rule__MobaBeanIndex__Group__1
+            // InternalMoba.g:4638:1: ( rule__MobaEntityIndex__Group__0__Impl rule__MobaEntityIndex__Group__1 )
+            // InternalMoba.g:4639:2: rule__MobaEntityIndex__Group__0__Impl rule__MobaEntityIndex__Group__1
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBeanIndex__Group__0__Impl();
+            rule__MobaEntityIndex__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group__1();
+            rule__MobaEntityIndex__Group__1();
 
             state._fsp--;
 
@@ -14786,12 +14786,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group__0"
+    // $ANTLR end "rule__MobaEntityIndex__Group__0"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group__0__Impl"
-    // InternalMoba.g:4646:1: rule__MobaBeanIndex__Group__0__Impl : ( 'index' ) ;
-    public final void rule__MobaBeanIndex__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group__0__Impl"
+    // InternalMoba.g:4646:1: rule__MobaEntityIndex__Group__0__Impl : ( 'index' ) ;
+    public final void rule__MobaEntityIndex__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -14802,9 +14802,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4651:1: ( 'index' )
             // InternalMoba.g:4652:2: 'index'
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getIndexKeyword_0()); 
+             before(grammarAccess.getMobaEntityIndexAccess().getIndexKeyword_0()); 
             match(input,44,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanIndexAccess().getIndexKeyword_0()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getIndexKeyword_0()); 
 
             }
 
@@ -14823,26 +14823,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group__0__Impl"
+    // $ANTLR end "rule__MobaEntityIndex__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group__1"
-    // InternalMoba.g:4661:1: rule__MobaBeanIndex__Group__1 : rule__MobaBeanIndex__Group__1__Impl rule__MobaBeanIndex__Group__2 ;
-    public final void rule__MobaBeanIndex__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group__1"
+    // InternalMoba.g:4661:1: rule__MobaEntityIndex__Group__1 : rule__MobaEntityIndex__Group__1__Impl rule__MobaEntityIndex__Group__2 ;
+    public final void rule__MobaEntityIndex__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4665:1: ( rule__MobaBeanIndex__Group__1__Impl rule__MobaBeanIndex__Group__2 )
-            // InternalMoba.g:4666:2: rule__MobaBeanIndex__Group__1__Impl rule__MobaBeanIndex__Group__2
+            // InternalMoba.g:4665:1: ( rule__MobaEntityIndex__Group__1__Impl rule__MobaEntityIndex__Group__2 )
+            // InternalMoba.g:4666:2: rule__MobaEntityIndex__Group__1__Impl rule__MobaEntityIndex__Group__2
             {
             pushFollow(FOLLOW_23);
-            rule__MobaBeanIndex__Group__1__Impl();
+            rule__MobaEntityIndex__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group__2();
+            rule__MobaEntityIndex__Group__2();
 
             state._fsp--;
 
@@ -14861,35 +14861,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group__1"
+    // $ANTLR end "rule__MobaEntityIndex__Group__1"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group__1__Impl"
-    // InternalMoba.g:4673:1: rule__MobaBeanIndex__Group__1__Impl : ( ( rule__MobaBeanIndex__AttributesAssignment_1 ) ) ;
-    public final void rule__MobaBeanIndex__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group__1__Impl"
+    // InternalMoba.g:4673:1: rule__MobaEntityIndex__Group__1__Impl : ( ( rule__MobaEntityIndex__AttributesAssignment_1 ) ) ;
+    public final void rule__MobaEntityIndex__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4677:1: ( ( ( rule__MobaBeanIndex__AttributesAssignment_1 ) ) )
-            // InternalMoba.g:4678:1: ( ( rule__MobaBeanIndex__AttributesAssignment_1 ) )
+            // InternalMoba.g:4677:1: ( ( ( rule__MobaEntityIndex__AttributesAssignment_1 ) ) )
+            // InternalMoba.g:4678:1: ( ( rule__MobaEntityIndex__AttributesAssignment_1 ) )
             {
-            // InternalMoba.g:4678:1: ( ( rule__MobaBeanIndex__AttributesAssignment_1 ) )
-            // InternalMoba.g:4679:2: ( rule__MobaBeanIndex__AttributesAssignment_1 )
+            // InternalMoba.g:4678:1: ( ( rule__MobaEntityIndex__AttributesAssignment_1 ) )
+            // InternalMoba.g:4679:2: ( rule__MobaEntityIndex__AttributesAssignment_1 )
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getAttributesAssignment_1()); 
-            // InternalMoba.g:4680:2: ( rule__MobaBeanIndex__AttributesAssignment_1 )
-            // InternalMoba.g:4680:3: rule__MobaBeanIndex__AttributesAssignment_1
+             before(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_1()); 
+            // InternalMoba.g:4680:2: ( rule__MobaEntityIndex__AttributesAssignment_1 )
+            // InternalMoba.g:4680:3: rule__MobaEntityIndex__AttributesAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__AttributesAssignment_1();
+            rule__MobaEntityIndex__AttributesAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanIndexAccess().getAttributesAssignment_1()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_1()); 
 
             }
 
@@ -14908,21 +14908,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group__1__Impl"
+    // $ANTLR end "rule__MobaEntityIndex__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group__2"
-    // InternalMoba.g:4688:1: rule__MobaBeanIndex__Group__2 : rule__MobaBeanIndex__Group__2__Impl ;
-    public final void rule__MobaBeanIndex__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group__2"
+    // InternalMoba.g:4688:1: rule__MobaEntityIndex__Group__2 : rule__MobaEntityIndex__Group__2__Impl ;
+    public final void rule__MobaEntityIndex__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4692:1: ( rule__MobaBeanIndex__Group__2__Impl )
-            // InternalMoba.g:4693:2: rule__MobaBeanIndex__Group__2__Impl
+            // InternalMoba.g:4692:1: ( rule__MobaEntityIndex__Group__2__Impl )
+            // InternalMoba.g:4693:2: rule__MobaEntityIndex__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group__2__Impl();
+            rule__MobaEntityIndex__Group__2__Impl();
 
             state._fsp--;
 
@@ -14941,35 +14941,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group__2"
+    // $ANTLR end "rule__MobaEntityIndex__Group__2"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group__2__Impl"
-    // InternalMoba.g:4699:1: rule__MobaBeanIndex__Group__2__Impl : ( ( rule__MobaBeanIndex__Group_2__0 ) ) ;
-    public final void rule__MobaBeanIndex__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group__2__Impl"
+    // InternalMoba.g:4699:1: rule__MobaEntityIndex__Group__2__Impl : ( ( rule__MobaEntityIndex__Group_2__0 ) ) ;
+    public final void rule__MobaEntityIndex__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4703:1: ( ( ( rule__MobaBeanIndex__Group_2__0 ) ) )
-            // InternalMoba.g:4704:1: ( ( rule__MobaBeanIndex__Group_2__0 ) )
+            // InternalMoba.g:4703:1: ( ( ( rule__MobaEntityIndex__Group_2__0 ) ) )
+            // InternalMoba.g:4704:1: ( ( rule__MobaEntityIndex__Group_2__0 ) )
             {
-            // InternalMoba.g:4704:1: ( ( rule__MobaBeanIndex__Group_2__0 ) )
-            // InternalMoba.g:4705:2: ( rule__MobaBeanIndex__Group_2__0 )
+            // InternalMoba.g:4704:1: ( ( rule__MobaEntityIndex__Group_2__0 ) )
+            // InternalMoba.g:4705:2: ( rule__MobaEntityIndex__Group_2__0 )
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getGroup_2()); 
-            // InternalMoba.g:4706:2: ( rule__MobaBeanIndex__Group_2__0 )
-            // InternalMoba.g:4706:3: rule__MobaBeanIndex__Group_2__0
+             before(grammarAccess.getMobaEntityIndexAccess().getGroup_2()); 
+            // InternalMoba.g:4706:2: ( rule__MobaEntityIndex__Group_2__0 )
+            // InternalMoba.g:4706:3: rule__MobaEntityIndex__Group_2__0
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group_2__0();
+            rule__MobaEntityIndex__Group_2__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanIndexAccess().getGroup_2()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getGroup_2()); 
 
             }
 
@@ -14988,26 +14988,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group__2__Impl"
+    // $ANTLR end "rule__MobaEntityIndex__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group_2__0"
-    // InternalMoba.g:4715:1: rule__MobaBeanIndex__Group_2__0 : rule__MobaBeanIndex__Group_2__0__Impl rule__MobaBeanIndex__Group_2__1 ;
-    public final void rule__MobaBeanIndex__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group_2__0"
+    // InternalMoba.g:4715:1: rule__MobaEntityIndex__Group_2__0 : rule__MobaEntityIndex__Group_2__0__Impl rule__MobaEntityIndex__Group_2__1 ;
+    public final void rule__MobaEntityIndex__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4719:1: ( rule__MobaBeanIndex__Group_2__0__Impl rule__MobaBeanIndex__Group_2__1 )
-            // InternalMoba.g:4720:2: rule__MobaBeanIndex__Group_2__0__Impl rule__MobaBeanIndex__Group_2__1
+            // InternalMoba.g:4719:1: ( rule__MobaEntityIndex__Group_2__0__Impl rule__MobaEntityIndex__Group_2__1 )
+            // InternalMoba.g:4720:2: rule__MobaEntityIndex__Group_2__0__Impl rule__MobaEntityIndex__Group_2__1
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBeanIndex__Group_2__0__Impl();
+            rule__MobaEntityIndex__Group_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group_2__1();
+            rule__MobaEntityIndex__Group_2__1();
 
             state._fsp--;
 
@@ -15026,12 +15026,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group_2__0"
+    // $ANTLR end "rule__MobaEntityIndex__Group_2__0"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group_2__0__Impl"
-    // InternalMoba.g:4727:1: rule__MobaBeanIndex__Group_2__0__Impl : ( ',' ) ;
-    public final void rule__MobaBeanIndex__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group_2__0__Impl"
+    // InternalMoba.g:4727:1: rule__MobaEntityIndex__Group_2__0__Impl : ( ',' ) ;
+    public final void rule__MobaEntityIndex__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15042,9 +15042,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4732:1: ( ',' )
             // InternalMoba.g:4733:2: ','
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getCommaKeyword_2_0()); 
+             before(grammarAccess.getMobaEntityIndexAccess().getCommaKeyword_2_0()); 
             match(input,33,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanIndexAccess().getCommaKeyword_2_0()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getCommaKeyword_2_0()); 
 
             }
 
@@ -15063,21 +15063,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group_2__0__Impl"
+    // $ANTLR end "rule__MobaEntityIndex__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group_2__1"
-    // InternalMoba.g:4742:1: rule__MobaBeanIndex__Group_2__1 : rule__MobaBeanIndex__Group_2__1__Impl ;
-    public final void rule__MobaBeanIndex__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group_2__1"
+    // InternalMoba.g:4742:1: rule__MobaEntityIndex__Group_2__1 : rule__MobaEntityIndex__Group_2__1__Impl ;
+    public final void rule__MobaEntityIndex__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4746:1: ( rule__MobaBeanIndex__Group_2__1__Impl )
-            // InternalMoba.g:4747:2: rule__MobaBeanIndex__Group_2__1__Impl
+            // InternalMoba.g:4746:1: ( rule__MobaEntityIndex__Group_2__1__Impl )
+            // InternalMoba.g:4747:2: rule__MobaEntityIndex__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanIndex__Group_2__1__Impl();
+            rule__MobaEntityIndex__Group_2__1__Impl();
 
             state._fsp--;
 
@@ -15096,24 +15096,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group_2__1"
+    // $ANTLR end "rule__MobaEntityIndex__Group_2__1"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__Group_2__1__Impl"
-    // InternalMoba.g:4753:1: rule__MobaBeanIndex__Group_2__1__Impl : ( ( rule__MobaBeanIndex__AttributesAssignment_2_1 )* ) ;
-    public final void rule__MobaBeanIndex__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__Group_2__1__Impl"
+    // InternalMoba.g:4753:1: rule__MobaEntityIndex__Group_2__1__Impl : ( ( rule__MobaEntityIndex__AttributesAssignment_2_1 )* ) ;
+    public final void rule__MobaEntityIndex__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4757:1: ( ( ( rule__MobaBeanIndex__AttributesAssignment_2_1 )* ) )
-            // InternalMoba.g:4758:1: ( ( rule__MobaBeanIndex__AttributesAssignment_2_1 )* )
+            // InternalMoba.g:4757:1: ( ( ( rule__MobaEntityIndex__AttributesAssignment_2_1 )* ) )
+            // InternalMoba.g:4758:1: ( ( rule__MobaEntityIndex__AttributesAssignment_2_1 )* )
             {
-            // InternalMoba.g:4758:1: ( ( rule__MobaBeanIndex__AttributesAssignment_2_1 )* )
-            // InternalMoba.g:4759:2: ( rule__MobaBeanIndex__AttributesAssignment_2_1 )*
+            // InternalMoba.g:4758:1: ( ( rule__MobaEntityIndex__AttributesAssignment_2_1 )* )
+            // InternalMoba.g:4759:2: ( rule__MobaEntityIndex__AttributesAssignment_2_1 )*
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getAttributesAssignment_2_1()); 
-            // InternalMoba.g:4760:2: ( rule__MobaBeanIndex__AttributesAssignment_2_1 )*
+             before(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_2_1()); 
+            // InternalMoba.g:4760:2: ( rule__MobaEntityIndex__AttributesAssignment_2_1 )*
             loop46:
             do {
                 int alt46=2;
@@ -15126,10 +15126,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalMoba.g:4760:3: rule__MobaBeanIndex__AttributesAssignment_2_1
+            	    // InternalMoba.g:4760:3: rule__MobaEntityIndex__AttributesAssignment_2_1
             	    {
             	    pushFollow(FOLLOW_38);
-            	    rule__MobaBeanIndex__AttributesAssignment_2_1();
+            	    rule__MobaEntityIndex__AttributesAssignment_2_1();
 
             	    state._fsp--;
 
@@ -15142,7 +15142,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getMobaBeanIndexAccess().getAttributesAssignment_2_1()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_2_1()); 
 
             }
 
@@ -15161,26 +15161,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__Group_2__1__Impl"
+    // $ANTLR end "rule__MobaEntityIndex__Group_2__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__0"
-    // InternalMoba.g:4769:1: rule__MobaPayload__Group__0 : rule__MobaPayload__Group__0__Impl rule__MobaPayload__Group__1 ;
-    public final void rule__MobaPayload__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__0"
+    // InternalMoba.g:4769:1: rule__MobaDto__Group__0 : rule__MobaDto__Group__0__Impl rule__MobaDto__Group__1 ;
+    public final void rule__MobaDto__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4773:1: ( rule__MobaPayload__Group__0__Impl rule__MobaPayload__Group__1 )
-            // InternalMoba.g:4774:2: rule__MobaPayload__Group__0__Impl rule__MobaPayload__Group__1
+            // InternalMoba.g:4773:1: ( rule__MobaDto__Group__0__Impl rule__MobaDto__Group__1 )
+            // InternalMoba.g:4774:2: rule__MobaDto__Group__0__Impl rule__MobaDto__Group__1
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayload__Group__0__Impl();
+            rule__MobaDto__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__1();
+            rule__MobaDto__Group__1();
 
             state._fsp--;
 
@@ -15199,25 +15199,25 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__0"
+    // $ANTLR end "rule__MobaDto__Group__0"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__0__Impl"
-    // InternalMoba.g:4781:1: rule__MobaPayload__Group__0__Impl : ( 'payload' ) ;
-    public final void rule__MobaPayload__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__0__Impl"
+    // InternalMoba.g:4781:1: rule__MobaDto__Group__0__Impl : ( 'dto' ) ;
+    public final void rule__MobaDto__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4785:1: ( ( 'payload' ) )
-            // InternalMoba.g:4786:1: ( 'payload' )
+            // InternalMoba.g:4785:1: ( ( 'dto' ) )
+            // InternalMoba.g:4786:1: ( 'dto' )
             {
-            // InternalMoba.g:4786:1: ( 'payload' )
-            // InternalMoba.g:4787:2: 'payload'
+            // InternalMoba.g:4786:1: ( 'dto' )
+            // InternalMoba.g:4787:2: 'dto'
             {
-             before(grammarAccess.getMobaPayloadAccess().getPayloadKeyword_0()); 
+             before(grammarAccess.getMobaDtoAccess().getDtoKeyword_0()); 
             match(input,45,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAccess().getPayloadKeyword_0()); 
+             after(grammarAccess.getMobaDtoAccess().getDtoKeyword_0()); 
 
             }
 
@@ -15236,26 +15236,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__0__Impl"
+    // $ANTLR end "rule__MobaDto__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__1"
-    // InternalMoba.g:4796:1: rule__MobaPayload__Group__1 : rule__MobaPayload__Group__1__Impl rule__MobaPayload__Group__2 ;
-    public final void rule__MobaPayload__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__1"
+    // InternalMoba.g:4796:1: rule__MobaDto__Group__1 : rule__MobaDto__Group__1__Impl rule__MobaDto__Group__2 ;
+    public final void rule__MobaDto__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4800:1: ( rule__MobaPayload__Group__1__Impl rule__MobaPayload__Group__2 )
-            // InternalMoba.g:4801:2: rule__MobaPayload__Group__1__Impl rule__MobaPayload__Group__2
+            // InternalMoba.g:4800:1: ( rule__MobaDto__Group__1__Impl rule__MobaDto__Group__2 )
+            // InternalMoba.g:4801:2: rule__MobaDto__Group__1__Impl rule__MobaDto__Group__2
             {
             pushFollow(FOLLOW_29);
-            rule__MobaPayload__Group__1__Impl();
+            rule__MobaDto__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__2();
+            rule__MobaDto__Group__2();
 
             state._fsp--;
 
@@ -15274,35 +15274,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__1"
+    // $ANTLR end "rule__MobaDto__Group__1"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__1__Impl"
-    // InternalMoba.g:4808:1: rule__MobaPayload__Group__1__Impl : ( ( rule__MobaPayload__NameAssignment_1 ) ) ;
-    public final void rule__MobaPayload__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__1__Impl"
+    // InternalMoba.g:4808:1: rule__MobaDto__Group__1__Impl : ( ( rule__MobaDto__NameAssignment_1 ) ) ;
+    public final void rule__MobaDto__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4812:1: ( ( ( rule__MobaPayload__NameAssignment_1 ) ) )
-            // InternalMoba.g:4813:1: ( ( rule__MobaPayload__NameAssignment_1 ) )
+            // InternalMoba.g:4812:1: ( ( ( rule__MobaDto__NameAssignment_1 ) ) )
+            // InternalMoba.g:4813:1: ( ( rule__MobaDto__NameAssignment_1 ) )
             {
-            // InternalMoba.g:4813:1: ( ( rule__MobaPayload__NameAssignment_1 ) )
-            // InternalMoba.g:4814:2: ( rule__MobaPayload__NameAssignment_1 )
+            // InternalMoba.g:4813:1: ( ( rule__MobaDto__NameAssignment_1 ) )
+            // InternalMoba.g:4814:2: ( rule__MobaDto__NameAssignment_1 )
             {
-             before(grammarAccess.getMobaPayloadAccess().getNameAssignment_1()); 
-            // InternalMoba.g:4815:2: ( rule__MobaPayload__NameAssignment_1 )
-            // InternalMoba.g:4815:3: rule__MobaPayload__NameAssignment_1
+             before(grammarAccess.getMobaDtoAccess().getNameAssignment_1()); 
+            // InternalMoba.g:4815:2: ( rule__MobaDto__NameAssignment_1 )
+            // InternalMoba.g:4815:3: rule__MobaDto__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__NameAssignment_1();
+            rule__MobaDto__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getNameAssignment_1()); 
+             after(grammarAccess.getMobaDtoAccess().getNameAssignment_1()); 
 
             }
 
@@ -15321,26 +15321,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__1__Impl"
+    // $ANTLR end "rule__MobaDto__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__2"
-    // InternalMoba.g:4823:1: rule__MobaPayload__Group__2 : rule__MobaPayload__Group__2__Impl rule__MobaPayload__Group__3 ;
-    public final void rule__MobaPayload__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__2"
+    // InternalMoba.g:4823:1: rule__MobaDto__Group__2 : rule__MobaDto__Group__2__Impl rule__MobaDto__Group__3 ;
+    public final void rule__MobaDto__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4827:1: ( rule__MobaPayload__Group__2__Impl rule__MobaPayload__Group__3 )
-            // InternalMoba.g:4828:2: rule__MobaPayload__Group__2__Impl rule__MobaPayload__Group__3
+            // InternalMoba.g:4827:1: ( rule__MobaDto__Group__2__Impl rule__MobaDto__Group__3 )
+            // InternalMoba.g:4828:2: rule__MobaDto__Group__2__Impl rule__MobaDto__Group__3
             {
             pushFollow(FOLLOW_29);
-            rule__MobaPayload__Group__2__Impl();
+            rule__MobaDto__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__3();
+            rule__MobaDto__Group__3();
 
             state._fsp--;
 
@@ -15359,24 +15359,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__2"
+    // $ANTLR end "rule__MobaDto__Group__2"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__2__Impl"
-    // InternalMoba.g:4835:1: rule__MobaPayload__Group__2__Impl : ( ( rule__MobaPayload__Group_2__0 )? ) ;
-    public final void rule__MobaPayload__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__2__Impl"
+    // InternalMoba.g:4835:1: rule__MobaDto__Group__2__Impl : ( ( rule__MobaDto__Group_2__0 )? ) ;
+    public final void rule__MobaDto__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4839:1: ( ( ( rule__MobaPayload__Group_2__0 )? ) )
-            // InternalMoba.g:4840:1: ( ( rule__MobaPayload__Group_2__0 )? )
+            // InternalMoba.g:4839:1: ( ( ( rule__MobaDto__Group_2__0 )? ) )
+            // InternalMoba.g:4840:1: ( ( rule__MobaDto__Group_2__0 )? )
             {
-            // InternalMoba.g:4840:1: ( ( rule__MobaPayload__Group_2__0 )? )
-            // InternalMoba.g:4841:2: ( rule__MobaPayload__Group_2__0 )?
+            // InternalMoba.g:4840:1: ( ( rule__MobaDto__Group_2__0 )? )
+            // InternalMoba.g:4841:2: ( rule__MobaDto__Group_2__0 )?
             {
-             before(grammarAccess.getMobaPayloadAccess().getGroup_2()); 
-            // InternalMoba.g:4842:2: ( rule__MobaPayload__Group_2__0 )?
+             before(grammarAccess.getMobaDtoAccess().getGroup_2()); 
+            // InternalMoba.g:4842:2: ( rule__MobaDto__Group_2__0 )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -15385,10 +15385,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt47) {
                 case 1 :
-                    // InternalMoba.g:4842:3: rule__MobaPayload__Group_2__0
+                    // InternalMoba.g:4842:3: rule__MobaDto__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayload__Group_2__0();
+                    rule__MobaDto__Group_2__0();
 
                     state._fsp--;
 
@@ -15398,7 +15398,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getGroup_2()); 
+             after(grammarAccess.getMobaDtoAccess().getGroup_2()); 
 
             }
 
@@ -15417,26 +15417,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__2__Impl"
+    // $ANTLR end "rule__MobaDto__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__3"
-    // InternalMoba.g:4850:1: rule__MobaPayload__Group__3 : rule__MobaPayload__Group__3__Impl rule__MobaPayload__Group__4 ;
-    public final void rule__MobaPayload__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__3"
+    // InternalMoba.g:4850:1: rule__MobaDto__Group__3 : rule__MobaDto__Group__3__Impl rule__MobaDto__Group__4 ;
+    public final void rule__MobaDto__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4854:1: ( rule__MobaPayload__Group__3__Impl rule__MobaPayload__Group__4 )
-            // InternalMoba.g:4855:2: rule__MobaPayload__Group__3__Impl rule__MobaPayload__Group__4
+            // InternalMoba.g:4854:1: ( rule__MobaDto__Group__3__Impl rule__MobaDto__Group__4 )
+            // InternalMoba.g:4855:2: rule__MobaDto__Group__3__Impl rule__MobaDto__Group__4
             {
             pushFollow(FOLLOW_29);
-            rule__MobaPayload__Group__3__Impl();
+            rule__MobaDto__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__4();
+            rule__MobaDto__Group__4();
 
             state._fsp--;
 
@@ -15455,12 +15455,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__3"
+    // $ANTLR end "rule__MobaDto__Group__3"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__3__Impl"
-    // InternalMoba.g:4862:1: rule__MobaPayload__Group__3__Impl : ( ( ruleMobaPropertiesAble )? ) ;
-    public final void rule__MobaPayload__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__3__Impl"
+    // InternalMoba.g:4862:1: rule__MobaDto__Group__3__Impl : ( ( ruleMobaPropertiesAble )? ) ;
+    public final void rule__MobaDto__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15471,7 +15471,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4867:1: ( ( ruleMobaPropertiesAble )? )
             // InternalMoba.g:4868:2: ( ruleMobaPropertiesAble )?
             {
-             before(grammarAccess.getMobaPayloadAccess().getMobaPropertiesAbleParserRuleCall_3()); 
+             before(grammarAccess.getMobaDtoAccess().getMobaPropertiesAbleParserRuleCall_3()); 
             // InternalMoba.g:4869:2: ( ruleMobaPropertiesAble )?
             int alt48=2;
             int LA48_0 = input.LA(1);
@@ -15494,7 +15494,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getMobaPropertiesAbleParserRuleCall_3()); 
+             after(grammarAccess.getMobaDtoAccess().getMobaPropertiesAbleParserRuleCall_3()); 
 
             }
 
@@ -15513,26 +15513,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__3__Impl"
+    // $ANTLR end "rule__MobaDto__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__4"
-    // InternalMoba.g:4877:1: rule__MobaPayload__Group__4 : rule__MobaPayload__Group__4__Impl rule__MobaPayload__Group__5 ;
-    public final void rule__MobaPayload__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__4"
+    // InternalMoba.g:4877:1: rule__MobaDto__Group__4 : rule__MobaDto__Group__4__Impl rule__MobaDto__Group__5 ;
+    public final void rule__MobaDto__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4881:1: ( rule__MobaPayload__Group__4__Impl rule__MobaPayload__Group__5 )
-            // InternalMoba.g:4882:2: rule__MobaPayload__Group__4__Impl rule__MobaPayload__Group__5
+            // InternalMoba.g:4881:1: ( rule__MobaDto__Group__4__Impl rule__MobaDto__Group__5 )
+            // InternalMoba.g:4882:2: rule__MobaDto__Group__4__Impl rule__MobaDto__Group__5
             {
             pushFollow(FOLLOW_39);
-            rule__MobaPayload__Group__4__Impl();
+            rule__MobaDto__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__5();
+            rule__MobaDto__Group__5();
 
             state._fsp--;
 
@@ -15551,12 +15551,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__4"
+    // $ANTLR end "rule__MobaDto__Group__4"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__4__Impl"
-    // InternalMoba.g:4889:1: rule__MobaPayload__Group__4__Impl : ( '{' ) ;
-    public final void rule__MobaPayload__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__4__Impl"
+    // InternalMoba.g:4889:1: rule__MobaDto__Group__4__Impl : ( '{' ) ;
+    public final void rule__MobaDto__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15567,9 +15567,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4894:1: ( '{' )
             // InternalMoba.g:4895:2: '{'
             {
-             before(grammarAccess.getMobaPayloadAccess().getLeftCurlyBracketKeyword_4()); 
+             before(grammarAccess.getMobaDtoAccess().getLeftCurlyBracketKeyword_4()); 
             match(input,21,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAccess().getLeftCurlyBracketKeyword_4()); 
+             after(grammarAccess.getMobaDtoAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
 
@@ -15588,26 +15588,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__4__Impl"
+    // $ANTLR end "rule__MobaDto__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__5"
-    // InternalMoba.g:4904:1: rule__MobaPayload__Group__5 : rule__MobaPayload__Group__5__Impl rule__MobaPayload__Group__6 ;
-    public final void rule__MobaPayload__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__5"
+    // InternalMoba.g:4904:1: rule__MobaDto__Group__5 : rule__MobaDto__Group__5__Impl rule__MobaDto__Group__6 ;
+    public final void rule__MobaDto__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4908:1: ( rule__MobaPayload__Group__5__Impl rule__MobaPayload__Group__6 )
-            // InternalMoba.g:4909:2: rule__MobaPayload__Group__5__Impl rule__MobaPayload__Group__6
+            // InternalMoba.g:4908:1: ( rule__MobaDto__Group__5__Impl rule__MobaDto__Group__6 )
+            // InternalMoba.g:4909:2: rule__MobaDto__Group__5__Impl rule__MobaDto__Group__6
             {
             pushFollow(FOLLOW_39);
-            rule__MobaPayload__Group__5__Impl();
+            rule__MobaDto__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__6();
+            rule__MobaDto__Group__6();
 
             state._fsp--;
 
@@ -15626,24 +15626,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__5"
+    // $ANTLR end "rule__MobaDto__Group__5"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__5__Impl"
-    // InternalMoba.g:4916:1: rule__MobaPayload__Group__5__Impl : ( ( rule__MobaPayload__FeaturesAssignment_5 )* ) ;
-    public final void rule__MobaPayload__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__5__Impl"
+    // InternalMoba.g:4916:1: rule__MobaDto__Group__5__Impl : ( ( rule__MobaDto__FeaturesAssignment_5 )* ) ;
+    public final void rule__MobaDto__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4920:1: ( ( ( rule__MobaPayload__FeaturesAssignment_5 )* ) )
-            // InternalMoba.g:4921:1: ( ( rule__MobaPayload__FeaturesAssignment_5 )* )
+            // InternalMoba.g:4920:1: ( ( ( rule__MobaDto__FeaturesAssignment_5 )* ) )
+            // InternalMoba.g:4921:1: ( ( rule__MobaDto__FeaturesAssignment_5 )* )
             {
-            // InternalMoba.g:4921:1: ( ( rule__MobaPayload__FeaturesAssignment_5 )* )
-            // InternalMoba.g:4922:2: ( rule__MobaPayload__FeaturesAssignment_5 )*
+            // InternalMoba.g:4921:1: ( ( rule__MobaDto__FeaturesAssignment_5 )* )
+            // InternalMoba.g:4922:2: ( rule__MobaDto__FeaturesAssignment_5 )*
             {
-             before(grammarAccess.getMobaPayloadAccess().getFeaturesAssignment_5()); 
-            // InternalMoba.g:4923:2: ( rule__MobaPayload__FeaturesAssignment_5 )*
+             before(grammarAccess.getMobaDtoAccess().getFeaturesAssignment_5()); 
+            // InternalMoba.g:4923:2: ( rule__MobaDto__FeaturesAssignment_5 )*
             loop49:
             do {
                 int alt49=2;
@@ -15656,10 +15656,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // InternalMoba.g:4923:3: rule__MobaPayload__FeaturesAssignment_5
+            	    // InternalMoba.g:4923:3: rule__MobaDto__FeaturesAssignment_5
             	    {
             	    pushFollow(FOLLOW_37);
-            	    rule__MobaPayload__FeaturesAssignment_5();
+            	    rule__MobaDto__FeaturesAssignment_5();
 
             	    state._fsp--;
 
@@ -15672,7 +15672,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getMobaPayloadAccess().getFeaturesAssignment_5()); 
+             after(grammarAccess.getMobaDtoAccess().getFeaturesAssignment_5()); 
 
             }
 
@@ -15691,21 +15691,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__5__Impl"
+    // $ANTLR end "rule__MobaDto__Group__5__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__6"
-    // InternalMoba.g:4931:1: rule__MobaPayload__Group__6 : rule__MobaPayload__Group__6__Impl ;
-    public final void rule__MobaPayload__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__6"
+    // InternalMoba.g:4931:1: rule__MobaDto__Group__6 : rule__MobaDto__Group__6__Impl ;
+    public final void rule__MobaDto__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4935:1: ( rule__MobaPayload__Group__6__Impl )
-            // InternalMoba.g:4936:2: rule__MobaPayload__Group__6__Impl
+            // InternalMoba.g:4935:1: ( rule__MobaDto__Group__6__Impl )
+            // InternalMoba.g:4936:2: rule__MobaDto__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group__6__Impl();
+            rule__MobaDto__Group__6__Impl();
 
             state._fsp--;
 
@@ -15724,12 +15724,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__6"
+    // $ANTLR end "rule__MobaDto__Group__6"
 
 
-    // $ANTLR start "rule__MobaPayload__Group__6__Impl"
-    // InternalMoba.g:4942:1: rule__MobaPayload__Group__6__Impl : ( '}' ) ;
-    public final void rule__MobaPayload__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group__6__Impl"
+    // InternalMoba.g:4942:1: rule__MobaDto__Group__6__Impl : ( '}' ) ;
+    public final void rule__MobaDto__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15740,9 +15740,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4947:1: ( '}' )
             // InternalMoba.g:4948:2: '}'
             {
-             before(grammarAccess.getMobaPayloadAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getMobaDtoAccess().getRightCurlyBracketKeyword_6()); 
             match(input,22,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAccess().getRightCurlyBracketKeyword_6()); 
+             after(grammarAccess.getMobaDtoAccess().getRightCurlyBracketKeyword_6()); 
 
             }
 
@@ -15761,26 +15761,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group__6__Impl"
+    // $ANTLR end "rule__MobaDto__Group__6__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group_2__0"
-    // InternalMoba.g:4958:1: rule__MobaPayload__Group_2__0 : rule__MobaPayload__Group_2__0__Impl rule__MobaPayload__Group_2__1 ;
-    public final void rule__MobaPayload__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group_2__0"
+    // InternalMoba.g:4958:1: rule__MobaDto__Group_2__0 : rule__MobaDto__Group_2__0__Impl rule__MobaDto__Group_2__1 ;
+    public final void rule__MobaDto__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4962:1: ( rule__MobaPayload__Group_2__0__Impl rule__MobaPayload__Group_2__1 )
-            // InternalMoba.g:4963:2: rule__MobaPayload__Group_2__0__Impl rule__MobaPayload__Group_2__1
+            // InternalMoba.g:4962:1: ( rule__MobaDto__Group_2__0__Impl rule__MobaDto__Group_2__1 )
+            // InternalMoba.g:4963:2: rule__MobaDto__Group_2__0__Impl rule__MobaDto__Group_2__1
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayload__Group_2__0__Impl();
+            rule__MobaDto__Group_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group_2__1();
+            rule__MobaDto__Group_2__1();
 
             state._fsp--;
 
@@ -15799,12 +15799,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group_2__0"
+    // $ANTLR end "rule__MobaDto__Group_2__0"
 
 
-    // $ANTLR start "rule__MobaPayload__Group_2__0__Impl"
-    // InternalMoba.g:4970:1: rule__MobaPayload__Group_2__0__Impl : ( 'extends' ) ;
-    public final void rule__MobaPayload__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group_2__0__Impl"
+    // InternalMoba.g:4970:1: rule__MobaDto__Group_2__0__Impl : ( 'extends' ) ;
+    public final void rule__MobaDto__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -15815,9 +15815,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:4975:1: ( 'extends' )
             // InternalMoba.g:4976:2: 'extends'
             {
-             before(grammarAccess.getMobaPayloadAccess().getExtendsKeyword_2_0()); 
+             before(grammarAccess.getMobaDtoAccess().getExtendsKeyword_2_0()); 
             match(input,29,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAccess().getExtendsKeyword_2_0()); 
+             after(grammarAccess.getMobaDtoAccess().getExtendsKeyword_2_0()); 
 
             }
 
@@ -15836,21 +15836,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group_2__0__Impl"
+    // $ANTLR end "rule__MobaDto__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayload__Group_2__1"
-    // InternalMoba.g:4985:1: rule__MobaPayload__Group_2__1 : rule__MobaPayload__Group_2__1__Impl ;
-    public final void rule__MobaPayload__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group_2__1"
+    // InternalMoba.g:4985:1: rule__MobaDto__Group_2__1 : rule__MobaDto__Group_2__1__Impl ;
+    public final void rule__MobaDto__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:4989:1: ( rule__MobaPayload__Group_2__1__Impl )
-            // InternalMoba.g:4990:2: rule__MobaPayload__Group_2__1__Impl
+            // InternalMoba.g:4989:1: ( rule__MobaDto__Group_2__1__Impl )
+            // InternalMoba.g:4990:2: rule__MobaDto__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__Group_2__1__Impl();
+            rule__MobaDto__Group_2__1__Impl();
 
             state._fsp--;
 
@@ -15869,35 +15869,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group_2__1"
+    // $ANTLR end "rule__MobaDto__Group_2__1"
 
 
-    // $ANTLR start "rule__MobaPayload__Group_2__1__Impl"
-    // InternalMoba.g:4996:1: rule__MobaPayload__Group_2__1__Impl : ( ( rule__MobaPayload__SuperTypeAssignment_2_1 ) ) ;
-    public final void rule__MobaPayload__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__Group_2__1__Impl"
+    // InternalMoba.g:4996:1: rule__MobaDto__Group_2__1__Impl : ( ( rule__MobaDto__SuperTypeAssignment_2_1 ) ) ;
+    public final void rule__MobaDto__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5000:1: ( ( ( rule__MobaPayload__SuperTypeAssignment_2_1 ) ) )
-            // InternalMoba.g:5001:1: ( ( rule__MobaPayload__SuperTypeAssignment_2_1 ) )
+            // InternalMoba.g:5000:1: ( ( ( rule__MobaDto__SuperTypeAssignment_2_1 ) ) )
+            // InternalMoba.g:5001:1: ( ( rule__MobaDto__SuperTypeAssignment_2_1 ) )
             {
-            // InternalMoba.g:5001:1: ( ( rule__MobaPayload__SuperTypeAssignment_2_1 ) )
-            // InternalMoba.g:5002:2: ( rule__MobaPayload__SuperTypeAssignment_2_1 )
+            // InternalMoba.g:5001:1: ( ( rule__MobaDto__SuperTypeAssignment_2_1 ) )
+            // InternalMoba.g:5002:2: ( rule__MobaDto__SuperTypeAssignment_2_1 )
             {
-             before(grammarAccess.getMobaPayloadAccess().getSuperTypeAssignment_2_1()); 
-            // InternalMoba.g:5003:2: ( rule__MobaPayload__SuperTypeAssignment_2_1 )
-            // InternalMoba.g:5003:3: rule__MobaPayload__SuperTypeAssignment_2_1
+             before(grammarAccess.getMobaDtoAccess().getSuperTypeAssignment_2_1()); 
+            // InternalMoba.g:5003:2: ( rule__MobaDto__SuperTypeAssignment_2_1 )
+            // InternalMoba.g:5003:3: rule__MobaDto__SuperTypeAssignment_2_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayload__SuperTypeAssignment_2_1();
+            rule__MobaDto__SuperTypeAssignment_2_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getSuperTypeAssignment_2_1()); 
+             after(grammarAccess.getMobaDtoAccess().getSuperTypeAssignment_2_1()); 
 
             }
 
@@ -15916,7 +15916,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__Group_2__1__Impl"
+    // $ANTLR end "rule__MobaDto__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__MobaQueue__Group__0"
@@ -17176,23 +17176,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaRestCrud__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__0"
-    // InternalMoba.g:5417:1: rule__MobaBeanAttribute__Group__0 : rule__MobaBeanAttribute__Group__0__Impl rule__MobaBeanAttribute__Group__1 ;
-    public final void rule__MobaBeanAttribute__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__0"
+    // InternalMoba.g:5417:1: rule__MobaEntityAttribute__Group__0 : rule__MobaEntityAttribute__Group__0__Impl rule__MobaEntityAttribute__Group__1 ;
+    public final void rule__MobaEntityAttribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5421:1: ( rule__MobaBeanAttribute__Group__0__Impl rule__MobaBeanAttribute__Group__1 )
-            // InternalMoba.g:5422:2: rule__MobaBeanAttribute__Group__0__Impl rule__MobaBeanAttribute__Group__1
+            // InternalMoba.g:5421:1: ( rule__MobaEntityAttribute__Group__0__Impl rule__MobaEntityAttribute__Group__1 )
+            // InternalMoba.g:5422:2: rule__MobaEntityAttribute__Group__0__Impl rule__MobaEntityAttribute__Group__1
             {
             pushFollow(FOLLOW_42);
-            rule__MobaBeanAttribute__Group__0__Impl();
+            rule__MobaEntityAttribute__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__1();
+            rule__MobaEntityAttribute__Group__1();
 
             state._fsp--;
 
@@ -17211,12 +17211,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__0"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__0"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__0__Impl"
-    // InternalMoba.g:5429:1: rule__MobaBeanAttribute__Group__0__Impl : ( 'var' ) ;
-    public final void rule__MobaBeanAttribute__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__0__Impl"
+    // InternalMoba.g:5429:1: rule__MobaEntityAttribute__Group__0__Impl : ( 'var' ) ;
+    public final void rule__MobaEntityAttribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17227,9 +17227,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5434:1: ( 'var' )
             // InternalMoba.g:5435:2: 'var'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getVarKeyword_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getVarKeyword_0()); 
             match(input,49,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getVarKeyword_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getVarKeyword_0()); 
 
             }
 
@@ -17248,26 +17248,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__0__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__1"
-    // InternalMoba.g:5444:1: rule__MobaBeanAttribute__Group__1 : rule__MobaBeanAttribute__Group__1__Impl rule__MobaBeanAttribute__Group__2 ;
-    public final void rule__MobaBeanAttribute__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__1"
+    // InternalMoba.g:5444:1: rule__MobaEntityAttribute__Group__1 : rule__MobaEntityAttribute__Group__1__Impl rule__MobaEntityAttribute__Group__2 ;
+    public final void rule__MobaEntityAttribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5448:1: ( rule__MobaBeanAttribute__Group__1__Impl rule__MobaBeanAttribute__Group__2 )
-            // InternalMoba.g:5449:2: rule__MobaBeanAttribute__Group__1__Impl rule__MobaBeanAttribute__Group__2
+            // InternalMoba.g:5448:1: ( rule__MobaEntityAttribute__Group__1__Impl rule__MobaEntityAttribute__Group__2 )
+            // InternalMoba.g:5449:2: rule__MobaEntityAttribute__Group__1__Impl rule__MobaEntityAttribute__Group__2
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBeanAttribute__Group__1__Impl();
+            rule__MobaEntityAttribute__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__2();
+            rule__MobaEntityAttribute__Group__2();
 
             state._fsp--;
 
@@ -17286,35 +17286,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__1"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__1__Impl"
-    // InternalMoba.g:5456:1: rule__MobaBeanAttribute__Group__1__Impl : ( ( rule__MobaBeanAttribute__UnorderedGroup_1 ) ) ;
-    public final void rule__MobaBeanAttribute__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__1__Impl"
+    // InternalMoba.g:5456:1: rule__MobaEntityAttribute__Group__1__Impl : ( ( rule__MobaEntityAttribute__UnorderedGroup_1 ) ) ;
+    public final void rule__MobaEntityAttribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5460:1: ( ( ( rule__MobaBeanAttribute__UnorderedGroup_1 ) ) )
-            // InternalMoba.g:5461:1: ( ( rule__MobaBeanAttribute__UnorderedGroup_1 ) )
+            // InternalMoba.g:5460:1: ( ( ( rule__MobaEntityAttribute__UnorderedGroup_1 ) ) )
+            // InternalMoba.g:5461:1: ( ( rule__MobaEntityAttribute__UnorderedGroup_1 ) )
             {
-            // InternalMoba.g:5461:1: ( ( rule__MobaBeanAttribute__UnorderedGroup_1 ) )
-            // InternalMoba.g:5462:2: ( rule__MobaBeanAttribute__UnorderedGroup_1 )
+            // InternalMoba.g:5461:1: ( ( rule__MobaEntityAttribute__UnorderedGroup_1 ) )
+            // InternalMoba.g:5462:2: ( rule__MobaEntityAttribute__UnorderedGroup_1 )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1()); 
-            // InternalMoba.g:5463:2: ( rule__MobaBeanAttribute__UnorderedGroup_1 )
-            // InternalMoba.g:5463:3: rule__MobaBeanAttribute__UnorderedGroup_1
+             before(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1()); 
+            // InternalMoba.g:5463:2: ( rule__MobaEntityAttribute__UnorderedGroup_1 )
+            // InternalMoba.g:5463:3: rule__MobaEntityAttribute__UnorderedGroup_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__UnorderedGroup_1();
+            rule__MobaEntityAttribute__UnorderedGroup_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1()); 
 
             }
 
@@ -17333,26 +17333,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__1__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__2"
-    // InternalMoba.g:5471:1: rule__MobaBeanAttribute__Group__2 : rule__MobaBeanAttribute__Group__2__Impl rule__MobaBeanAttribute__Group__3 ;
-    public final void rule__MobaBeanAttribute__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__2"
+    // InternalMoba.g:5471:1: rule__MobaEntityAttribute__Group__2 : rule__MobaEntityAttribute__Group__2__Impl rule__MobaEntityAttribute__Group__3 ;
+    public final void rule__MobaEntityAttribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5475:1: ( rule__MobaBeanAttribute__Group__2__Impl rule__MobaBeanAttribute__Group__3 )
-            // InternalMoba.g:5476:2: rule__MobaBeanAttribute__Group__2__Impl rule__MobaBeanAttribute__Group__3
+            // InternalMoba.g:5475:1: ( rule__MobaEntityAttribute__Group__2__Impl rule__MobaEntityAttribute__Group__3 )
+            // InternalMoba.g:5476:2: rule__MobaEntityAttribute__Group__2__Impl rule__MobaEntityAttribute__Group__3
             {
             pushFollow(FOLLOW_14);
-            rule__MobaBeanAttribute__Group__2__Impl();
+            rule__MobaEntityAttribute__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__3();
+            rule__MobaEntityAttribute__Group__3();
 
             state._fsp--;
 
@@ -17371,35 +17371,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__2"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__2"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__2__Impl"
-    // InternalMoba.g:5483:1: rule__MobaBeanAttribute__Group__2__Impl : ( ( rule__MobaBeanAttribute__TypeAssignment_2 ) ) ;
-    public final void rule__MobaBeanAttribute__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__2__Impl"
+    // InternalMoba.g:5483:1: rule__MobaEntityAttribute__Group__2__Impl : ( ( rule__MobaEntityAttribute__TypeAssignment_2 ) ) ;
+    public final void rule__MobaEntityAttribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5487:1: ( ( ( rule__MobaBeanAttribute__TypeAssignment_2 ) ) )
-            // InternalMoba.g:5488:1: ( ( rule__MobaBeanAttribute__TypeAssignment_2 ) )
+            // InternalMoba.g:5487:1: ( ( ( rule__MobaEntityAttribute__TypeAssignment_2 ) ) )
+            // InternalMoba.g:5488:1: ( ( rule__MobaEntityAttribute__TypeAssignment_2 ) )
             {
-            // InternalMoba.g:5488:1: ( ( rule__MobaBeanAttribute__TypeAssignment_2 ) )
-            // InternalMoba.g:5489:2: ( rule__MobaBeanAttribute__TypeAssignment_2 )
+            // InternalMoba.g:5488:1: ( ( rule__MobaEntityAttribute__TypeAssignment_2 ) )
+            // InternalMoba.g:5489:2: ( rule__MobaEntityAttribute__TypeAssignment_2 )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getTypeAssignment_2()); 
-            // InternalMoba.g:5490:2: ( rule__MobaBeanAttribute__TypeAssignment_2 )
-            // InternalMoba.g:5490:3: rule__MobaBeanAttribute__TypeAssignment_2
+             before(grammarAccess.getMobaEntityAttributeAccess().getTypeAssignment_2()); 
+            // InternalMoba.g:5490:2: ( rule__MobaEntityAttribute__TypeAssignment_2 )
+            // InternalMoba.g:5490:3: rule__MobaEntityAttribute__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__TypeAssignment_2();
+            rule__MobaEntityAttribute__TypeAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getTypeAssignment_2()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getTypeAssignment_2()); 
 
             }
 
@@ -17418,26 +17418,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__2__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__3"
-    // InternalMoba.g:5498:1: rule__MobaBeanAttribute__Group__3 : rule__MobaBeanAttribute__Group__3__Impl rule__MobaBeanAttribute__Group__4 ;
-    public final void rule__MobaBeanAttribute__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__3"
+    // InternalMoba.g:5498:1: rule__MobaEntityAttribute__Group__3 : rule__MobaEntityAttribute__Group__3__Impl rule__MobaEntityAttribute__Group__4 ;
+    public final void rule__MobaEntityAttribute__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5502:1: ( rule__MobaBeanAttribute__Group__3__Impl rule__MobaBeanAttribute__Group__4 )
-            // InternalMoba.g:5503:2: rule__MobaBeanAttribute__Group__3__Impl rule__MobaBeanAttribute__Group__4
+            // InternalMoba.g:5502:1: ( rule__MobaEntityAttribute__Group__3__Impl rule__MobaEntityAttribute__Group__4 )
+            // InternalMoba.g:5503:2: rule__MobaEntityAttribute__Group__3__Impl rule__MobaEntityAttribute__Group__4
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBeanAttribute__Group__3__Impl();
+            rule__MobaEntityAttribute__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__4();
+            rule__MobaEntityAttribute__Group__4();
 
             state._fsp--;
 
@@ -17456,12 +17456,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__3"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__3"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__3__Impl"
-    // InternalMoba.g:5510:1: rule__MobaBeanAttribute__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
-    public final void rule__MobaBeanAttribute__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__3__Impl"
+    // InternalMoba.g:5510:1: rule__MobaEntityAttribute__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
+    public final void rule__MobaEntityAttribute__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17472,13 +17472,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5515:1: ( ruleMobaMultiplicityAble )
             // InternalMoba.g:5516:2: ruleMobaMultiplicityAble
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
             pushFollow(FOLLOW_2);
             ruleMobaMultiplicityAble();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
 
             }
 
@@ -17497,26 +17497,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__3__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__4"
-    // InternalMoba.g:5525:1: rule__MobaBeanAttribute__Group__4 : rule__MobaBeanAttribute__Group__4__Impl rule__MobaBeanAttribute__Group__5 ;
-    public final void rule__MobaBeanAttribute__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__4"
+    // InternalMoba.g:5525:1: rule__MobaEntityAttribute__Group__4 : rule__MobaEntityAttribute__Group__4__Impl rule__MobaEntityAttribute__Group__5 ;
+    public final void rule__MobaEntityAttribute__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5529:1: ( rule__MobaBeanAttribute__Group__4__Impl rule__MobaBeanAttribute__Group__5 )
-            // InternalMoba.g:5530:2: rule__MobaBeanAttribute__Group__4__Impl rule__MobaBeanAttribute__Group__5
+            // InternalMoba.g:5529:1: ( rule__MobaEntityAttribute__Group__4__Impl rule__MobaEntityAttribute__Group__5 )
+            // InternalMoba.g:5530:2: rule__MobaEntityAttribute__Group__4__Impl rule__MobaEntityAttribute__Group__5
             {
             pushFollow(FOLLOW_14);
-            rule__MobaBeanAttribute__Group__4__Impl();
+            rule__MobaEntityAttribute__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__5();
+            rule__MobaEntityAttribute__Group__5();
 
             state._fsp--;
 
@@ -17535,35 +17535,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__4"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__4"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__4__Impl"
-    // InternalMoba.g:5537:1: rule__MobaBeanAttribute__Group__4__Impl : ( ( rule__MobaBeanAttribute__NameAssignment_4 ) ) ;
-    public final void rule__MobaBeanAttribute__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__4__Impl"
+    // InternalMoba.g:5537:1: rule__MobaEntityAttribute__Group__4__Impl : ( ( rule__MobaEntityAttribute__NameAssignment_4 ) ) ;
+    public final void rule__MobaEntityAttribute__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5541:1: ( ( ( rule__MobaBeanAttribute__NameAssignment_4 ) ) )
-            // InternalMoba.g:5542:1: ( ( rule__MobaBeanAttribute__NameAssignment_4 ) )
+            // InternalMoba.g:5541:1: ( ( ( rule__MobaEntityAttribute__NameAssignment_4 ) ) )
+            // InternalMoba.g:5542:1: ( ( rule__MobaEntityAttribute__NameAssignment_4 ) )
             {
-            // InternalMoba.g:5542:1: ( ( rule__MobaBeanAttribute__NameAssignment_4 ) )
-            // InternalMoba.g:5543:2: ( rule__MobaBeanAttribute__NameAssignment_4 )
+            // InternalMoba.g:5542:1: ( ( rule__MobaEntityAttribute__NameAssignment_4 ) )
+            // InternalMoba.g:5543:2: ( rule__MobaEntityAttribute__NameAssignment_4 )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getNameAssignment_4()); 
-            // InternalMoba.g:5544:2: ( rule__MobaBeanAttribute__NameAssignment_4 )
-            // InternalMoba.g:5544:3: rule__MobaBeanAttribute__NameAssignment_4
+             before(grammarAccess.getMobaEntityAttributeAccess().getNameAssignment_4()); 
+            // InternalMoba.g:5544:2: ( rule__MobaEntityAttribute__NameAssignment_4 )
+            // InternalMoba.g:5544:3: rule__MobaEntityAttribute__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__NameAssignment_4();
+            rule__MobaEntityAttribute__NameAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getNameAssignment_4()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getNameAssignment_4()); 
 
             }
 
@@ -17582,21 +17582,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__4__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__5"
-    // InternalMoba.g:5552:1: rule__MobaBeanAttribute__Group__5 : rule__MobaBeanAttribute__Group__5__Impl ;
-    public final void rule__MobaBeanAttribute__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__5"
+    // InternalMoba.g:5552:1: rule__MobaEntityAttribute__Group__5 : rule__MobaEntityAttribute__Group__5__Impl ;
+    public final void rule__MobaEntityAttribute__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5556:1: ( rule__MobaBeanAttribute__Group__5__Impl )
-            // InternalMoba.g:5557:2: rule__MobaBeanAttribute__Group__5__Impl
+            // InternalMoba.g:5556:1: ( rule__MobaEntityAttribute__Group__5__Impl )
+            // InternalMoba.g:5557:2: rule__MobaEntityAttribute__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group__5__Impl();
+            rule__MobaEntityAttribute__Group__5__Impl();
 
             state._fsp--;
 
@@ -17615,12 +17615,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__5"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__5"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group__5__Impl"
-    // InternalMoba.g:5563:1: rule__MobaBeanAttribute__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
-    public final void rule__MobaBeanAttribute__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group__5__Impl"
+    // InternalMoba.g:5563:1: rule__MobaEntityAttribute__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
+    public final void rule__MobaEntityAttribute__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17631,7 +17631,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5568:1: ( ( ruleMobaPropertiesAble )? )
             // InternalMoba.g:5569:2: ( ruleMobaPropertiesAble )?
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
             // InternalMoba.g:5570:2: ( ruleMobaPropertiesAble )?
             int alt55=2;
             int LA55_0 = input.LA(1);
@@ -17654,7 +17654,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
 
             }
 
@@ -17673,26 +17673,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group__5__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group__5__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__0"
-    // InternalMoba.g:5579:1: rule__MobaBeanAttribute__Group_1_4__0 : rule__MobaBeanAttribute__Group_1_4__0__Impl rule__MobaBeanAttribute__Group_1_4__1 ;
-    public final void rule__MobaBeanAttribute__Group_1_4__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__0"
+    // InternalMoba.g:5579:1: rule__MobaEntityAttribute__Group_1_4__0 : rule__MobaEntityAttribute__Group_1_4__0__Impl rule__MobaEntityAttribute__Group_1_4__1 ;
+    public final void rule__MobaEntityAttribute__Group_1_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5583:1: ( rule__MobaBeanAttribute__Group_1_4__0__Impl rule__MobaBeanAttribute__Group_1_4__1 )
-            // InternalMoba.g:5584:2: rule__MobaBeanAttribute__Group_1_4__0__Impl rule__MobaBeanAttribute__Group_1_4__1
+            // InternalMoba.g:5583:1: ( rule__MobaEntityAttribute__Group_1_4__0__Impl rule__MobaEntityAttribute__Group_1_4__1 )
+            // InternalMoba.g:5584:2: rule__MobaEntityAttribute__Group_1_4__0__Impl rule__MobaEntityAttribute__Group_1_4__1
             {
             pushFollow(FOLLOW_15);
-            rule__MobaBeanAttribute__Group_1_4__0__Impl();
+            rule__MobaEntityAttribute__Group_1_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4__1();
+            rule__MobaEntityAttribute__Group_1_4__1();
 
             state._fsp--;
 
@@ -17711,12 +17711,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__0"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__0"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__0__Impl"
-    // InternalMoba.g:5591:1: rule__MobaBeanAttribute__Group_1_4__0__Impl : ( 'constraints' ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__0__Impl"
+    // InternalMoba.g:5591:1: rule__MobaEntityAttribute__Group_1_4__0__Impl : ( 'constraints' ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17727,9 +17727,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5596:1: ( 'constraints' )
             // InternalMoba.g:5597:2: 'constraints'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getConstraintsKeyword_1_4_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getConstraintsKeyword_1_4_0()); 
             match(input,32,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getConstraintsKeyword_1_4_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getConstraintsKeyword_1_4_0()); 
 
             }
 
@@ -17748,26 +17748,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__0__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__1"
-    // InternalMoba.g:5606:1: rule__MobaBeanAttribute__Group_1_4__1 : rule__MobaBeanAttribute__Group_1_4__1__Impl rule__MobaBeanAttribute__Group_1_4__2 ;
-    public final void rule__MobaBeanAttribute__Group_1_4__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__1"
+    // InternalMoba.g:5606:1: rule__MobaEntityAttribute__Group_1_4__1 : rule__MobaEntityAttribute__Group_1_4__1__Impl rule__MobaEntityAttribute__Group_1_4__2 ;
+    public final void rule__MobaEntityAttribute__Group_1_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5610:1: ( rule__MobaBeanAttribute__Group_1_4__1__Impl rule__MobaBeanAttribute__Group_1_4__2 )
-            // InternalMoba.g:5611:2: rule__MobaBeanAttribute__Group_1_4__1__Impl rule__MobaBeanAttribute__Group_1_4__2
+            // InternalMoba.g:5610:1: ( rule__MobaEntityAttribute__Group_1_4__1__Impl rule__MobaEntityAttribute__Group_1_4__2 )
+            // InternalMoba.g:5611:2: rule__MobaEntityAttribute__Group_1_4__1__Impl rule__MobaEntityAttribute__Group_1_4__2
             {
             pushFollow(FOLLOW_17);
-            rule__MobaBeanAttribute__Group_1_4__1__Impl();
+            rule__MobaEntityAttribute__Group_1_4__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4__2();
+            rule__MobaEntityAttribute__Group_1_4__2();
 
             state._fsp--;
 
@@ -17786,12 +17786,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__1"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__1__Impl"
-    // InternalMoba.g:5618:1: rule__MobaBeanAttribute__Group_1_4__1__Impl : ( '(' ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__1__Impl"
+    // InternalMoba.g:5618:1: rule__MobaEntityAttribute__Group_1_4__1__Impl : ( '(' ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17802,9 +17802,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5623:1: ( '(' )
             // InternalMoba.g:5624:2: '('
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
             match(input,30,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
 
             }
 
@@ -17823,26 +17823,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__1__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__2"
-    // InternalMoba.g:5633:1: rule__MobaBeanAttribute__Group_1_4__2 : rule__MobaBeanAttribute__Group_1_4__2__Impl rule__MobaBeanAttribute__Group_1_4__3 ;
-    public final void rule__MobaBeanAttribute__Group_1_4__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__2"
+    // InternalMoba.g:5633:1: rule__MobaEntityAttribute__Group_1_4__2 : rule__MobaEntityAttribute__Group_1_4__2__Impl rule__MobaEntityAttribute__Group_1_4__3 ;
+    public final void rule__MobaEntityAttribute__Group_1_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5637:1: ( rule__MobaBeanAttribute__Group_1_4__2__Impl rule__MobaBeanAttribute__Group_1_4__3 )
-            // InternalMoba.g:5638:2: rule__MobaBeanAttribute__Group_1_4__2__Impl rule__MobaBeanAttribute__Group_1_4__3
+            // InternalMoba.g:5637:1: ( rule__MobaEntityAttribute__Group_1_4__2__Impl rule__MobaEntityAttribute__Group_1_4__3 )
+            // InternalMoba.g:5638:2: rule__MobaEntityAttribute__Group_1_4__2__Impl rule__MobaEntityAttribute__Group_1_4__3
             {
             pushFollow(FOLLOW_18);
-            rule__MobaBeanAttribute__Group_1_4__2__Impl();
+            rule__MobaEntityAttribute__Group_1_4__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4__3();
+            rule__MobaEntityAttribute__Group_1_4__3();
 
             state._fsp--;
 
@@ -17861,35 +17861,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__2"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__2"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__2__Impl"
-    // InternalMoba.g:5645:1: rule__MobaBeanAttribute__Group_1_4__2__Impl : ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 ) ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__2__Impl"
+    // InternalMoba.g:5645:1: rule__MobaEntityAttribute__Group_1_4__2__Impl : ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 ) ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5649:1: ( ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 ) ) )
-            // InternalMoba.g:5650:1: ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 ) )
+            // InternalMoba.g:5649:1: ( ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 ) ) )
+            // InternalMoba.g:5650:1: ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 ) )
             {
-            // InternalMoba.g:5650:1: ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 ) )
-            // InternalMoba.g:5651:2: ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 )
+            // InternalMoba.g:5650:1: ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 ) )
+            // InternalMoba.g:5651:2: ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getConstraintsAssignment_1_4_2()); 
-            // InternalMoba.g:5652:2: ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 )
-            // InternalMoba.g:5652:3: rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2
+             before(grammarAccess.getMobaEntityAttributeAccess().getConstraintsAssignment_1_4_2()); 
+            // InternalMoba.g:5652:2: ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 )
+            // InternalMoba.g:5652:3: rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2();
+            rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getConstraintsAssignment_1_4_2()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getConstraintsAssignment_1_4_2()); 
 
             }
 
@@ -17908,26 +17908,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__2__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__3"
-    // InternalMoba.g:5660:1: rule__MobaBeanAttribute__Group_1_4__3 : rule__MobaBeanAttribute__Group_1_4__3__Impl rule__MobaBeanAttribute__Group_1_4__4 ;
-    public final void rule__MobaBeanAttribute__Group_1_4__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__3"
+    // InternalMoba.g:5660:1: rule__MobaEntityAttribute__Group_1_4__3 : rule__MobaEntityAttribute__Group_1_4__3__Impl rule__MobaEntityAttribute__Group_1_4__4 ;
+    public final void rule__MobaEntityAttribute__Group_1_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5664:1: ( rule__MobaBeanAttribute__Group_1_4__3__Impl rule__MobaBeanAttribute__Group_1_4__4 )
-            // InternalMoba.g:5665:2: rule__MobaBeanAttribute__Group_1_4__3__Impl rule__MobaBeanAttribute__Group_1_4__4
+            // InternalMoba.g:5664:1: ( rule__MobaEntityAttribute__Group_1_4__3__Impl rule__MobaEntityAttribute__Group_1_4__4 )
+            // InternalMoba.g:5665:2: rule__MobaEntityAttribute__Group_1_4__3__Impl rule__MobaEntityAttribute__Group_1_4__4
             {
             pushFollow(FOLLOW_18);
-            rule__MobaBeanAttribute__Group_1_4__3__Impl();
+            rule__MobaEntityAttribute__Group_1_4__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4__4();
+            rule__MobaEntityAttribute__Group_1_4__4();
 
             state._fsp--;
 
@@ -17946,24 +17946,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__3"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__3"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__3__Impl"
-    // InternalMoba.g:5672:1: rule__MobaBeanAttribute__Group_1_4__3__Impl : ( ( rule__MobaBeanAttribute__Group_1_4_3__0 )* ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__3__Impl"
+    // InternalMoba.g:5672:1: rule__MobaEntityAttribute__Group_1_4__3__Impl : ( ( rule__MobaEntityAttribute__Group_1_4_3__0 )* ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5676:1: ( ( ( rule__MobaBeanAttribute__Group_1_4_3__0 )* ) )
-            // InternalMoba.g:5677:1: ( ( rule__MobaBeanAttribute__Group_1_4_3__0 )* )
+            // InternalMoba.g:5676:1: ( ( ( rule__MobaEntityAttribute__Group_1_4_3__0 )* ) )
+            // InternalMoba.g:5677:1: ( ( rule__MobaEntityAttribute__Group_1_4_3__0 )* )
             {
-            // InternalMoba.g:5677:1: ( ( rule__MobaBeanAttribute__Group_1_4_3__0 )* )
-            // InternalMoba.g:5678:2: ( rule__MobaBeanAttribute__Group_1_4_3__0 )*
+            // InternalMoba.g:5677:1: ( ( rule__MobaEntityAttribute__Group_1_4_3__0 )* )
+            // InternalMoba.g:5678:2: ( rule__MobaEntityAttribute__Group_1_4_3__0 )*
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getGroup_1_4_3()); 
-            // InternalMoba.g:5679:2: ( rule__MobaBeanAttribute__Group_1_4_3__0 )*
+             before(grammarAccess.getMobaEntityAttributeAccess().getGroup_1_4_3()); 
+            // InternalMoba.g:5679:2: ( rule__MobaEntityAttribute__Group_1_4_3__0 )*
             loop56:
             do {
                 int alt56=2;
@@ -17976,10 +17976,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
                 switch (alt56) {
             	case 1 :
-            	    // InternalMoba.g:5679:3: rule__MobaBeanAttribute__Group_1_4_3__0
+            	    // InternalMoba.g:5679:3: rule__MobaEntityAttribute__Group_1_4_3__0
             	    {
             	    pushFollow(FOLLOW_19);
-            	    rule__MobaBeanAttribute__Group_1_4_3__0();
+            	    rule__MobaEntityAttribute__Group_1_4_3__0();
 
             	    state._fsp--;
 
@@ -17992,7 +17992,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getGroup_1_4_3()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getGroup_1_4_3()); 
 
             }
 
@@ -18011,21 +18011,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__3__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__3__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__4"
-    // InternalMoba.g:5687:1: rule__MobaBeanAttribute__Group_1_4__4 : rule__MobaBeanAttribute__Group_1_4__4__Impl ;
-    public final void rule__MobaBeanAttribute__Group_1_4__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__4"
+    // InternalMoba.g:5687:1: rule__MobaEntityAttribute__Group_1_4__4 : rule__MobaEntityAttribute__Group_1_4__4__Impl ;
+    public final void rule__MobaEntityAttribute__Group_1_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5691:1: ( rule__MobaBeanAttribute__Group_1_4__4__Impl )
-            // InternalMoba.g:5692:2: rule__MobaBeanAttribute__Group_1_4__4__Impl
+            // InternalMoba.g:5691:1: ( rule__MobaEntityAttribute__Group_1_4__4__Impl )
+            // InternalMoba.g:5692:2: rule__MobaEntityAttribute__Group_1_4__4__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4__4__Impl();
+            rule__MobaEntityAttribute__Group_1_4__4__Impl();
 
             state._fsp--;
 
@@ -18044,12 +18044,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__4"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__4"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4__4__Impl"
-    // InternalMoba.g:5698:1: rule__MobaBeanAttribute__Group_1_4__4__Impl : ( ')' ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4__4__Impl"
+    // InternalMoba.g:5698:1: rule__MobaEntityAttribute__Group_1_4__4__Impl : ( ')' ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18060,9 +18060,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5703:1: ( ')' )
             // InternalMoba.g:5704:2: ')'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
             match(input,31,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
 
             }
 
@@ -18081,26 +18081,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4__4__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4__4__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4_3__0"
-    // InternalMoba.g:5714:1: rule__MobaBeanAttribute__Group_1_4_3__0 : rule__MobaBeanAttribute__Group_1_4_3__0__Impl rule__MobaBeanAttribute__Group_1_4_3__1 ;
-    public final void rule__MobaBeanAttribute__Group_1_4_3__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4_3__0"
+    // InternalMoba.g:5714:1: rule__MobaEntityAttribute__Group_1_4_3__0 : rule__MobaEntityAttribute__Group_1_4_3__0__Impl rule__MobaEntityAttribute__Group_1_4_3__1 ;
+    public final void rule__MobaEntityAttribute__Group_1_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5718:1: ( rule__MobaBeanAttribute__Group_1_4_3__0__Impl rule__MobaBeanAttribute__Group_1_4_3__1 )
-            // InternalMoba.g:5719:2: rule__MobaBeanAttribute__Group_1_4_3__0__Impl rule__MobaBeanAttribute__Group_1_4_3__1
+            // InternalMoba.g:5718:1: ( rule__MobaEntityAttribute__Group_1_4_3__0__Impl rule__MobaEntityAttribute__Group_1_4_3__1 )
+            // InternalMoba.g:5719:2: rule__MobaEntityAttribute__Group_1_4_3__0__Impl rule__MobaEntityAttribute__Group_1_4_3__1
             {
             pushFollow(FOLLOW_17);
-            rule__MobaBeanAttribute__Group_1_4_3__0__Impl();
+            rule__MobaEntityAttribute__Group_1_4_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4_3__1();
+            rule__MobaEntityAttribute__Group_1_4_3__1();
 
             state._fsp--;
 
@@ -18119,12 +18119,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4_3__0"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4_3__0"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4_3__0__Impl"
-    // InternalMoba.g:5726:1: rule__MobaBeanAttribute__Group_1_4_3__0__Impl : ( ',' ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4_3__0__Impl"
+    // InternalMoba.g:5726:1: rule__MobaEntityAttribute__Group_1_4_3__0__Impl : ( ',' ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18135,9 +18135,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:5731:1: ( ',' )
             // InternalMoba.g:5732:2: ','
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getCommaKeyword_1_4_3_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getCommaKeyword_1_4_3_0()); 
             match(input,33,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getCommaKeyword_1_4_3_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getCommaKeyword_1_4_3_0()); 
 
             }
 
@@ -18156,21 +18156,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4_3__0__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4_3__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4_3__1"
-    // InternalMoba.g:5741:1: rule__MobaBeanAttribute__Group_1_4_3__1 : rule__MobaBeanAttribute__Group_1_4_3__1__Impl ;
-    public final void rule__MobaBeanAttribute__Group_1_4_3__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4_3__1"
+    // InternalMoba.g:5741:1: rule__MobaEntityAttribute__Group_1_4_3__1 : rule__MobaEntityAttribute__Group_1_4_3__1__Impl ;
+    public final void rule__MobaEntityAttribute__Group_1_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5745:1: ( rule__MobaBeanAttribute__Group_1_4_3__1__Impl )
-            // InternalMoba.g:5746:2: rule__MobaBeanAttribute__Group_1_4_3__1__Impl
+            // InternalMoba.g:5745:1: ( rule__MobaEntityAttribute__Group_1_4_3__1__Impl )
+            // InternalMoba.g:5746:2: rule__MobaEntityAttribute__Group_1_4_3__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__Group_1_4_3__1__Impl();
+            rule__MobaEntityAttribute__Group_1_4_3__1__Impl();
 
             state._fsp--;
 
@@ -18189,35 +18189,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4_3__1"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4_3__1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__Group_1_4_3__1__Impl"
-    // InternalMoba.g:5752:1: rule__MobaBeanAttribute__Group_1_4_3__1__Impl : ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 ) ) ;
-    public final void rule__MobaBeanAttribute__Group_1_4_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__Group_1_4_3__1__Impl"
+    // InternalMoba.g:5752:1: rule__MobaEntityAttribute__Group_1_4_3__1__Impl : ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 ) ) ;
+    public final void rule__MobaEntityAttribute__Group_1_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:5756:1: ( ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 ) ) )
-            // InternalMoba.g:5757:1: ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 ) )
+            // InternalMoba.g:5756:1: ( ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 ) ) )
+            // InternalMoba.g:5757:1: ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 ) )
             {
-            // InternalMoba.g:5757:1: ( ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 ) )
-            // InternalMoba.g:5758:2: ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 )
+            // InternalMoba.g:5757:1: ( ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 ) )
+            // InternalMoba.g:5758:2: ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
-            // InternalMoba.g:5759:2: ( rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 )
-            // InternalMoba.g:5759:3: rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1
+             before(grammarAccess.getMobaEntityAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
+            // InternalMoba.g:5759:2: ( rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 )
+            // InternalMoba.g:5759:3: rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1();
+            rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
 
             }
 
@@ -18236,7 +18236,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__Group_1_4_3__1__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__Group_1_4_3__1__Impl"
 
 
     // $ANTLR start "rule__MobaSettingsAttribute__Group__0"
@@ -19302,23 +19302,23 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaSettingsAttribute__Group_1_4_3__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__0"
-    // InternalMoba.g:6119:1: rule__MobaBeanReference__Group__0 : rule__MobaBeanReference__Group__0__Impl rule__MobaBeanReference__Group__1 ;
-    public final void rule__MobaBeanReference__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__0"
+    // InternalMoba.g:6119:1: rule__MobaEntityReference__Group__0 : rule__MobaEntityReference__Group__0__Impl rule__MobaEntityReference__Group__1 ;
+    public final void rule__MobaEntityReference__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6123:1: ( rule__MobaBeanReference__Group__0__Impl rule__MobaBeanReference__Group__1 )
-            // InternalMoba.g:6124:2: rule__MobaBeanReference__Group__0__Impl rule__MobaBeanReference__Group__1
+            // InternalMoba.g:6123:1: ( rule__MobaEntityReference__Group__0__Impl rule__MobaEntityReference__Group__1 )
+            // InternalMoba.g:6124:2: rule__MobaEntityReference__Group__0__Impl rule__MobaEntityReference__Group__1
             {
             pushFollow(FOLLOW_43);
-            rule__MobaBeanReference__Group__0__Impl();
+            rule__MobaEntityReference__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__1();
+            rule__MobaEntityReference__Group__1();
 
             state._fsp--;
 
@@ -19337,12 +19337,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__0"
+    // $ANTLR end "rule__MobaEntityReference__Group__0"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__0__Impl"
-    // InternalMoba.g:6131:1: rule__MobaBeanReference__Group__0__Impl : ( 'ref' ) ;
-    public final void rule__MobaBeanReference__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__0__Impl"
+    // InternalMoba.g:6131:1: rule__MobaEntityReference__Group__0__Impl : ( 'ref' ) ;
+    public final void rule__MobaEntityReference__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -19353,9 +19353,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6136:1: ( 'ref' )
             // InternalMoba.g:6137:2: 'ref'
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getRefKeyword_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getRefKeyword_0()); 
             match(input,50,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanReferenceAccess().getRefKeyword_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getRefKeyword_0()); 
 
             }
 
@@ -19374,26 +19374,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__0__Impl"
+    // $ANTLR end "rule__MobaEntityReference__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__1"
-    // InternalMoba.g:6146:1: rule__MobaBeanReference__Group__1 : rule__MobaBeanReference__Group__1__Impl rule__MobaBeanReference__Group__2 ;
-    public final void rule__MobaBeanReference__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__1"
+    // InternalMoba.g:6146:1: rule__MobaEntityReference__Group__1 : rule__MobaEntityReference__Group__1__Impl rule__MobaEntityReference__Group__2 ;
+    public final void rule__MobaEntityReference__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6150:1: ( rule__MobaBeanReference__Group__1__Impl rule__MobaBeanReference__Group__2 )
-            // InternalMoba.g:6151:2: rule__MobaBeanReference__Group__1__Impl rule__MobaBeanReference__Group__2
+            // InternalMoba.g:6150:1: ( rule__MobaEntityReference__Group__1__Impl rule__MobaEntityReference__Group__2 )
+            // InternalMoba.g:6151:2: rule__MobaEntityReference__Group__1__Impl rule__MobaEntityReference__Group__2
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBeanReference__Group__1__Impl();
+            rule__MobaEntityReference__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__2();
+            rule__MobaEntityReference__Group__2();
 
             state._fsp--;
 
@@ -19412,35 +19412,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__1"
+    // $ANTLR end "rule__MobaEntityReference__Group__1"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__1__Impl"
-    // InternalMoba.g:6158:1: rule__MobaBeanReference__Group__1__Impl : ( ( rule__MobaBeanReference__UnorderedGroup_1 ) ) ;
-    public final void rule__MobaBeanReference__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__1__Impl"
+    // InternalMoba.g:6158:1: rule__MobaEntityReference__Group__1__Impl : ( ( rule__MobaEntityReference__UnorderedGroup_1 ) ) ;
+    public final void rule__MobaEntityReference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6162:1: ( ( ( rule__MobaBeanReference__UnorderedGroup_1 ) ) )
-            // InternalMoba.g:6163:1: ( ( rule__MobaBeanReference__UnorderedGroup_1 ) )
+            // InternalMoba.g:6162:1: ( ( ( rule__MobaEntityReference__UnorderedGroup_1 ) ) )
+            // InternalMoba.g:6163:1: ( ( rule__MobaEntityReference__UnorderedGroup_1 ) )
             {
-            // InternalMoba.g:6163:1: ( ( rule__MobaBeanReference__UnorderedGroup_1 ) )
-            // InternalMoba.g:6164:2: ( rule__MobaBeanReference__UnorderedGroup_1 )
+            // InternalMoba.g:6163:1: ( ( rule__MobaEntityReference__UnorderedGroup_1 ) )
+            // InternalMoba.g:6164:2: ( rule__MobaEntityReference__UnorderedGroup_1 )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1()); 
-            // InternalMoba.g:6165:2: ( rule__MobaBeanReference__UnorderedGroup_1 )
-            // InternalMoba.g:6165:3: rule__MobaBeanReference__UnorderedGroup_1
+             before(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1()); 
+            // InternalMoba.g:6165:2: ( rule__MobaEntityReference__UnorderedGroup_1 )
+            // InternalMoba.g:6165:3: rule__MobaEntityReference__UnorderedGroup_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__UnorderedGroup_1();
+            rule__MobaEntityReference__UnorderedGroup_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1()); 
 
             }
 
@@ -19459,26 +19459,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__1__Impl"
+    // $ANTLR end "rule__MobaEntityReference__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__2"
-    // InternalMoba.g:6173:1: rule__MobaBeanReference__Group__2 : rule__MobaBeanReference__Group__2__Impl rule__MobaBeanReference__Group__3 ;
-    public final void rule__MobaBeanReference__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__2"
+    // InternalMoba.g:6173:1: rule__MobaEntityReference__Group__2 : rule__MobaEntityReference__Group__2__Impl rule__MobaEntityReference__Group__3 ;
+    public final void rule__MobaEntityReference__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6177:1: ( rule__MobaBeanReference__Group__2__Impl rule__MobaBeanReference__Group__3 )
-            // InternalMoba.g:6178:2: rule__MobaBeanReference__Group__2__Impl rule__MobaBeanReference__Group__3
+            // InternalMoba.g:6177:1: ( rule__MobaEntityReference__Group__2__Impl rule__MobaEntityReference__Group__3 )
+            // InternalMoba.g:6178:2: rule__MobaEntityReference__Group__2__Impl rule__MobaEntityReference__Group__3
             {
             pushFollow(FOLLOW_14);
-            rule__MobaBeanReference__Group__2__Impl();
+            rule__MobaEntityReference__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__3();
+            rule__MobaEntityReference__Group__3();
 
             state._fsp--;
 
@@ -19497,35 +19497,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__2"
+    // $ANTLR end "rule__MobaEntityReference__Group__2"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__2__Impl"
-    // InternalMoba.g:6185:1: rule__MobaBeanReference__Group__2__Impl : ( ( rule__MobaBeanReference__TypeAssignment_2 ) ) ;
-    public final void rule__MobaBeanReference__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__2__Impl"
+    // InternalMoba.g:6185:1: rule__MobaEntityReference__Group__2__Impl : ( ( rule__MobaEntityReference__TypeAssignment_2 ) ) ;
+    public final void rule__MobaEntityReference__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6189:1: ( ( ( rule__MobaBeanReference__TypeAssignment_2 ) ) )
-            // InternalMoba.g:6190:1: ( ( rule__MobaBeanReference__TypeAssignment_2 ) )
+            // InternalMoba.g:6189:1: ( ( ( rule__MobaEntityReference__TypeAssignment_2 ) ) )
+            // InternalMoba.g:6190:1: ( ( rule__MobaEntityReference__TypeAssignment_2 ) )
             {
-            // InternalMoba.g:6190:1: ( ( rule__MobaBeanReference__TypeAssignment_2 ) )
-            // InternalMoba.g:6191:2: ( rule__MobaBeanReference__TypeAssignment_2 )
+            // InternalMoba.g:6190:1: ( ( rule__MobaEntityReference__TypeAssignment_2 ) )
+            // InternalMoba.g:6191:2: ( rule__MobaEntityReference__TypeAssignment_2 )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getTypeAssignment_2()); 
-            // InternalMoba.g:6192:2: ( rule__MobaBeanReference__TypeAssignment_2 )
-            // InternalMoba.g:6192:3: rule__MobaBeanReference__TypeAssignment_2
+             before(grammarAccess.getMobaEntityReferenceAccess().getTypeAssignment_2()); 
+            // InternalMoba.g:6192:2: ( rule__MobaEntityReference__TypeAssignment_2 )
+            // InternalMoba.g:6192:3: rule__MobaEntityReference__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__TypeAssignment_2();
+            rule__MobaEntityReference__TypeAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getTypeAssignment_2()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getTypeAssignment_2()); 
 
             }
 
@@ -19544,26 +19544,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__2__Impl"
+    // $ANTLR end "rule__MobaEntityReference__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__3"
-    // InternalMoba.g:6200:1: rule__MobaBeanReference__Group__3 : rule__MobaBeanReference__Group__3__Impl rule__MobaBeanReference__Group__4 ;
-    public final void rule__MobaBeanReference__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__3"
+    // InternalMoba.g:6200:1: rule__MobaEntityReference__Group__3 : rule__MobaEntityReference__Group__3__Impl rule__MobaEntityReference__Group__4 ;
+    public final void rule__MobaEntityReference__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6204:1: ( rule__MobaBeanReference__Group__3__Impl rule__MobaBeanReference__Group__4 )
-            // InternalMoba.g:6205:2: rule__MobaBeanReference__Group__3__Impl rule__MobaBeanReference__Group__4
+            // InternalMoba.g:6204:1: ( rule__MobaEntityReference__Group__3__Impl rule__MobaEntityReference__Group__4 )
+            // InternalMoba.g:6205:2: rule__MobaEntityReference__Group__3__Impl rule__MobaEntityReference__Group__4
             {
             pushFollow(FOLLOW_3);
-            rule__MobaBeanReference__Group__3__Impl();
+            rule__MobaEntityReference__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__4();
+            rule__MobaEntityReference__Group__4();
 
             state._fsp--;
 
@@ -19582,12 +19582,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__3"
+    // $ANTLR end "rule__MobaEntityReference__Group__3"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__3__Impl"
-    // InternalMoba.g:6212:1: rule__MobaBeanReference__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
-    public final void rule__MobaBeanReference__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__3__Impl"
+    // InternalMoba.g:6212:1: rule__MobaEntityReference__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
+    public final void rule__MobaEntityReference__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -19598,13 +19598,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6217:1: ( ruleMobaMultiplicityAble )
             // InternalMoba.g:6218:2: ruleMobaMultiplicityAble
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
             pushFollow(FOLLOW_2);
             ruleMobaMultiplicityAble();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
 
             }
 
@@ -19623,26 +19623,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__3__Impl"
+    // $ANTLR end "rule__MobaEntityReference__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__4"
-    // InternalMoba.g:6227:1: rule__MobaBeanReference__Group__4 : rule__MobaBeanReference__Group__4__Impl rule__MobaBeanReference__Group__5 ;
-    public final void rule__MobaBeanReference__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__4"
+    // InternalMoba.g:6227:1: rule__MobaEntityReference__Group__4 : rule__MobaEntityReference__Group__4__Impl rule__MobaEntityReference__Group__5 ;
+    public final void rule__MobaEntityReference__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6231:1: ( rule__MobaBeanReference__Group__4__Impl rule__MobaBeanReference__Group__5 )
-            // InternalMoba.g:6232:2: rule__MobaBeanReference__Group__4__Impl rule__MobaBeanReference__Group__5
+            // InternalMoba.g:6231:1: ( rule__MobaEntityReference__Group__4__Impl rule__MobaEntityReference__Group__5 )
+            // InternalMoba.g:6232:2: rule__MobaEntityReference__Group__4__Impl rule__MobaEntityReference__Group__5
             {
             pushFollow(FOLLOW_14);
-            rule__MobaBeanReference__Group__4__Impl();
+            rule__MobaEntityReference__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__5();
+            rule__MobaEntityReference__Group__5();
 
             state._fsp--;
 
@@ -19661,35 +19661,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__4"
+    // $ANTLR end "rule__MobaEntityReference__Group__4"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__4__Impl"
-    // InternalMoba.g:6239:1: rule__MobaBeanReference__Group__4__Impl : ( ( rule__MobaBeanReference__NameAssignment_4 ) ) ;
-    public final void rule__MobaBeanReference__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__4__Impl"
+    // InternalMoba.g:6239:1: rule__MobaEntityReference__Group__4__Impl : ( ( rule__MobaEntityReference__NameAssignment_4 ) ) ;
+    public final void rule__MobaEntityReference__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6243:1: ( ( ( rule__MobaBeanReference__NameAssignment_4 ) ) )
-            // InternalMoba.g:6244:1: ( ( rule__MobaBeanReference__NameAssignment_4 ) )
+            // InternalMoba.g:6243:1: ( ( ( rule__MobaEntityReference__NameAssignment_4 ) ) )
+            // InternalMoba.g:6244:1: ( ( rule__MobaEntityReference__NameAssignment_4 ) )
             {
-            // InternalMoba.g:6244:1: ( ( rule__MobaBeanReference__NameAssignment_4 ) )
-            // InternalMoba.g:6245:2: ( rule__MobaBeanReference__NameAssignment_4 )
+            // InternalMoba.g:6244:1: ( ( rule__MobaEntityReference__NameAssignment_4 ) )
+            // InternalMoba.g:6245:2: ( rule__MobaEntityReference__NameAssignment_4 )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getNameAssignment_4()); 
-            // InternalMoba.g:6246:2: ( rule__MobaBeanReference__NameAssignment_4 )
-            // InternalMoba.g:6246:3: rule__MobaBeanReference__NameAssignment_4
+             before(grammarAccess.getMobaEntityReferenceAccess().getNameAssignment_4()); 
+            // InternalMoba.g:6246:2: ( rule__MobaEntityReference__NameAssignment_4 )
+            // InternalMoba.g:6246:3: rule__MobaEntityReference__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__NameAssignment_4();
+            rule__MobaEntityReference__NameAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getNameAssignment_4()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getNameAssignment_4()); 
 
             }
 
@@ -19708,21 +19708,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__4__Impl"
+    // $ANTLR end "rule__MobaEntityReference__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__5"
-    // InternalMoba.g:6254:1: rule__MobaBeanReference__Group__5 : rule__MobaBeanReference__Group__5__Impl ;
-    public final void rule__MobaBeanReference__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__5"
+    // InternalMoba.g:6254:1: rule__MobaEntityReference__Group__5 : rule__MobaEntityReference__Group__5__Impl ;
+    public final void rule__MobaEntityReference__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6258:1: ( rule__MobaBeanReference__Group__5__Impl )
-            // InternalMoba.g:6259:2: rule__MobaBeanReference__Group__5__Impl
+            // InternalMoba.g:6258:1: ( rule__MobaEntityReference__Group__5__Impl )
+            // InternalMoba.g:6259:2: rule__MobaEntityReference__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__Group__5__Impl();
+            rule__MobaEntityReference__Group__5__Impl();
 
             state._fsp--;
 
@@ -19741,12 +19741,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__5"
+    // $ANTLR end "rule__MobaEntityReference__Group__5"
 
 
-    // $ANTLR start "rule__MobaBeanReference__Group__5__Impl"
-    // InternalMoba.g:6265:1: rule__MobaBeanReference__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
-    public final void rule__MobaBeanReference__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__Group__5__Impl"
+    // InternalMoba.g:6265:1: rule__MobaEntityReference__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
+    public final void rule__MobaEntityReference__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -19757,7 +19757,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6270:1: ( ( ruleMobaPropertiesAble )? )
             // InternalMoba.g:6271:2: ( ruleMobaPropertiesAble )?
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
             // InternalMoba.g:6272:2: ( ruleMobaPropertiesAble )?
             int alt59=2;
             int LA59_0 = input.LA(1);
@@ -19780,7 +19780,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
 
             }
 
@@ -19799,26 +19799,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__Group__5__Impl"
+    // $ANTLR end "rule__MobaEntityReference__Group__5__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__0"
-    // InternalMoba.g:6281:1: rule__MobaPayloadAttribute__Group__0 : rule__MobaPayloadAttribute__Group__0__Impl rule__MobaPayloadAttribute__Group__1 ;
-    public final void rule__MobaPayloadAttribute__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__0"
+    // InternalMoba.g:6281:1: rule__MobaDtoAttribute__Group__0 : rule__MobaDtoAttribute__Group__0__Impl rule__MobaDtoAttribute__Group__1 ;
+    public final void rule__MobaDtoAttribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6285:1: ( rule__MobaPayloadAttribute__Group__0__Impl rule__MobaPayloadAttribute__Group__1 )
-            // InternalMoba.g:6286:2: rule__MobaPayloadAttribute__Group__0__Impl rule__MobaPayloadAttribute__Group__1
+            // InternalMoba.g:6285:1: ( rule__MobaDtoAttribute__Group__0__Impl rule__MobaDtoAttribute__Group__1 )
+            // InternalMoba.g:6286:2: rule__MobaDtoAttribute__Group__0__Impl rule__MobaDtoAttribute__Group__1
             {
             pushFollow(FOLLOW_44);
-            rule__MobaPayloadAttribute__Group__0__Impl();
+            rule__MobaDtoAttribute__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__1();
+            rule__MobaDtoAttribute__Group__1();
 
             state._fsp--;
 
@@ -19837,12 +19837,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__0"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__0"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__0__Impl"
-    // InternalMoba.g:6293:1: rule__MobaPayloadAttribute__Group__0__Impl : ( 'var' ) ;
-    public final void rule__MobaPayloadAttribute__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__0__Impl"
+    // InternalMoba.g:6293:1: rule__MobaDtoAttribute__Group__0__Impl : ( 'var' ) ;
+    public final void rule__MobaDtoAttribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -19853,9 +19853,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6298:1: ( 'var' )
             // InternalMoba.g:6299:2: 'var'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getVarKeyword_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getVarKeyword_0()); 
             match(input,49,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getVarKeyword_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getVarKeyword_0()); 
 
             }
 
@@ -19874,26 +19874,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__0__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__1"
-    // InternalMoba.g:6308:1: rule__MobaPayloadAttribute__Group__1 : rule__MobaPayloadAttribute__Group__1__Impl rule__MobaPayloadAttribute__Group__2 ;
-    public final void rule__MobaPayloadAttribute__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__1"
+    // InternalMoba.g:6308:1: rule__MobaDtoAttribute__Group__1 : rule__MobaDtoAttribute__Group__1__Impl rule__MobaDtoAttribute__Group__2 ;
+    public final void rule__MobaDtoAttribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6312:1: ( rule__MobaPayloadAttribute__Group__1__Impl rule__MobaPayloadAttribute__Group__2 )
-            // InternalMoba.g:6313:2: rule__MobaPayloadAttribute__Group__1__Impl rule__MobaPayloadAttribute__Group__2
+            // InternalMoba.g:6312:1: ( rule__MobaDtoAttribute__Group__1__Impl rule__MobaDtoAttribute__Group__2 )
+            // InternalMoba.g:6313:2: rule__MobaDtoAttribute__Group__1__Impl rule__MobaDtoAttribute__Group__2
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayloadAttribute__Group__1__Impl();
+            rule__MobaDtoAttribute__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__2();
+            rule__MobaDtoAttribute__Group__2();
 
             state._fsp--;
 
@@ -19912,35 +19912,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__1"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__1__Impl"
-    // InternalMoba.g:6320:1: rule__MobaPayloadAttribute__Group__1__Impl : ( ( rule__MobaPayloadAttribute__UnorderedGroup_1 ) ) ;
-    public final void rule__MobaPayloadAttribute__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__1__Impl"
+    // InternalMoba.g:6320:1: rule__MobaDtoAttribute__Group__1__Impl : ( ( rule__MobaDtoAttribute__UnorderedGroup_1 ) ) ;
+    public final void rule__MobaDtoAttribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6324:1: ( ( ( rule__MobaPayloadAttribute__UnorderedGroup_1 ) ) )
-            // InternalMoba.g:6325:1: ( ( rule__MobaPayloadAttribute__UnorderedGroup_1 ) )
+            // InternalMoba.g:6324:1: ( ( ( rule__MobaDtoAttribute__UnorderedGroup_1 ) ) )
+            // InternalMoba.g:6325:1: ( ( rule__MobaDtoAttribute__UnorderedGroup_1 ) )
             {
-            // InternalMoba.g:6325:1: ( ( rule__MobaPayloadAttribute__UnorderedGroup_1 ) )
-            // InternalMoba.g:6326:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1 )
+            // InternalMoba.g:6325:1: ( ( rule__MobaDtoAttribute__UnorderedGroup_1 ) )
+            // InternalMoba.g:6326:2: ( rule__MobaDtoAttribute__UnorderedGroup_1 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1()); 
-            // InternalMoba.g:6327:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1 )
-            // InternalMoba.g:6327:3: rule__MobaPayloadAttribute__UnorderedGroup_1
+             before(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1()); 
+            // InternalMoba.g:6327:2: ( rule__MobaDtoAttribute__UnorderedGroup_1 )
+            // InternalMoba.g:6327:3: rule__MobaDtoAttribute__UnorderedGroup_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__UnorderedGroup_1();
+            rule__MobaDtoAttribute__UnorderedGroup_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1()); 
 
             }
 
@@ -19959,26 +19959,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__1__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__2"
-    // InternalMoba.g:6335:1: rule__MobaPayloadAttribute__Group__2 : rule__MobaPayloadAttribute__Group__2__Impl rule__MobaPayloadAttribute__Group__3 ;
-    public final void rule__MobaPayloadAttribute__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__2"
+    // InternalMoba.g:6335:1: rule__MobaDtoAttribute__Group__2 : rule__MobaDtoAttribute__Group__2__Impl rule__MobaDtoAttribute__Group__3 ;
+    public final void rule__MobaDtoAttribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6339:1: ( rule__MobaPayloadAttribute__Group__2__Impl rule__MobaPayloadAttribute__Group__3 )
-            // InternalMoba.g:6340:2: rule__MobaPayloadAttribute__Group__2__Impl rule__MobaPayloadAttribute__Group__3
+            // InternalMoba.g:6339:1: ( rule__MobaDtoAttribute__Group__2__Impl rule__MobaDtoAttribute__Group__3 )
+            // InternalMoba.g:6340:2: rule__MobaDtoAttribute__Group__2__Impl rule__MobaDtoAttribute__Group__3
             {
             pushFollow(FOLLOW_14);
-            rule__MobaPayloadAttribute__Group__2__Impl();
+            rule__MobaDtoAttribute__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__3();
+            rule__MobaDtoAttribute__Group__3();
 
             state._fsp--;
 
@@ -19997,35 +19997,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__2"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__2__Impl"
-    // InternalMoba.g:6347:1: rule__MobaPayloadAttribute__Group__2__Impl : ( ( rule__MobaPayloadAttribute__TypeAssignment_2 ) ) ;
-    public final void rule__MobaPayloadAttribute__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__2__Impl"
+    // InternalMoba.g:6347:1: rule__MobaDtoAttribute__Group__2__Impl : ( ( rule__MobaDtoAttribute__TypeAssignment_2 ) ) ;
+    public final void rule__MobaDtoAttribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6351:1: ( ( ( rule__MobaPayloadAttribute__TypeAssignment_2 ) ) )
-            // InternalMoba.g:6352:1: ( ( rule__MobaPayloadAttribute__TypeAssignment_2 ) )
+            // InternalMoba.g:6351:1: ( ( ( rule__MobaDtoAttribute__TypeAssignment_2 ) ) )
+            // InternalMoba.g:6352:1: ( ( rule__MobaDtoAttribute__TypeAssignment_2 ) )
             {
-            // InternalMoba.g:6352:1: ( ( rule__MobaPayloadAttribute__TypeAssignment_2 ) )
-            // InternalMoba.g:6353:2: ( rule__MobaPayloadAttribute__TypeAssignment_2 )
+            // InternalMoba.g:6352:1: ( ( rule__MobaDtoAttribute__TypeAssignment_2 ) )
+            // InternalMoba.g:6353:2: ( rule__MobaDtoAttribute__TypeAssignment_2 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getTypeAssignment_2()); 
-            // InternalMoba.g:6354:2: ( rule__MobaPayloadAttribute__TypeAssignment_2 )
-            // InternalMoba.g:6354:3: rule__MobaPayloadAttribute__TypeAssignment_2
+             before(grammarAccess.getMobaDtoAttributeAccess().getTypeAssignment_2()); 
+            // InternalMoba.g:6354:2: ( rule__MobaDtoAttribute__TypeAssignment_2 )
+            // InternalMoba.g:6354:3: rule__MobaDtoAttribute__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__TypeAssignment_2();
+            rule__MobaDtoAttribute__TypeAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getTypeAssignment_2()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getTypeAssignment_2()); 
 
             }
 
@@ -20044,26 +20044,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__2__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__3"
-    // InternalMoba.g:6362:1: rule__MobaPayloadAttribute__Group__3 : rule__MobaPayloadAttribute__Group__3__Impl rule__MobaPayloadAttribute__Group__4 ;
-    public final void rule__MobaPayloadAttribute__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__3"
+    // InternalMoba.g:6362:1: rule__MobaDtoAttribute__Group__3 : rule__MobaDtoAttribute__Group__3__Impl rule__MobaDtoAttribute__Group__4 ;
+    public final void rule__MobaDtoAttribute__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6366:1: ( rule__MobaPayloadAttribute__Group__3__Impl rule__MobaPayloadAttribute__Group__4 )
-            // InternalMoba.g:6367:2: rule__MobaPayloadAttribute__Group__3__Impl rule__MobaPayloadAttribute__Group__4
+            // InternalMoba.g:6366:1: ( rule__MobaDtoAttribute__Group__3__Impl rule__MobaDtoAttribute__Group__4 )
+            // InternalMoba.g:6367:2: rule__MobaDtoAttribute__Group__3__Impl rule__MobaDtoAttribute__Group__4
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayloadAttribute__Group__3__Impl();
+            rule__MobaDtoAttribute__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__4();
+            rule__MobaDtoAttribute__Group__4();
 
             state._fsp--;
 
@@ -20082,12 +20082,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__3"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__3"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__3__Impl"
-    // InternalMoba.g:6374:1: rule__MobaPayloadAttribute__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
-    public final void rule__MobaPayloadAttribute__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__3__Impl"
+    // InternalMoba.g:6374:1: rule__MobaDtoAttribute__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
+    public final void rule__MobaDtoAttribute__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20098,13 +20098,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6379:1: ( ruleMobaMultiplicityAble )
             // InternalMoba.g:6380:2: ruleMobaMultiplicityAble
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
             pushFollow(FOLLOW_2);
             ruleMobaMultiplicityAble();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
 
             }
 
@@ -20123,26 +20123,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__3__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__4"
-    // InternalMoba.g:6389:1: rule__MobaPayloadAttribute__Group__4 : rule__MobaPayloadAttribute__Group__4__Impl rule__MobaPayloadAttribute__Group__5 ;
-    public final void rule__MobaPayloadAttribute__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__4"
+    // InternalMoba.g:6389:1: rule__MobaDtoAttribute__Group__4 : rule__MobaDtoAttribute__Group__4__Impl rule__MobaDtoAttribute__Group__5 ;
+    public final void rule__MobaDtoAttribute__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6393:1: ( rule__MobaPayloadAttribute__Group__4__Impl rule__MobaPayloadAttribute__Group__5 )
-            // InternalMoba.g:6394:2: rule__MobaPayloadAttribute__Group__4__Impl rule__MobaPayloadAttribute__Group__5
+            // InternalMoba.g:6393:1: ( rule__MobaDtoAttribute__Group__4__Impl rule__MobaDtoAttribute__Group__5 )
+            // InternalMoba.g:6394:2: rule__MobaDtoAttribute__Group__4__Impl rule__MobaDtoAttribute__Group__5
             {
             pushFollow(FOLLOW_14);
-            rule__MobaPayloadAttribute__Group__4__Impl();
+            rule__MobaDtoAttribute__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__5();
+            rule__MobaDtoAttribute__Group__5();
 
             state._fsp--;
 
@@ -20161,35 +20161,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__4"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__4"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__4__Impl"
-    // InternalMoba.g:6401:1: rule__MobaPayloadAttribute__Group__4__Impl : ( ( rule__MobaPayloadAttribute__NameAssignment_4 ) ) ;
-    public final void rule__MobaPayloadAttribute__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__4__Impl"
+    // InternalMoba.g:6401:1: rule__MobaDtoAttribute__Group__4__Impl : ( ( rule__MobaDtoAttribute__NameAssignment_4 ) ) ;
+    public final void rule__MobaDtoAttribute__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6405:1: ( ( ( rule__MobaPayloadAttribute__NameAssignment_4 ) ) )
-            // InternalMoba.g:6406:1: ( ( rule__MobaPayloadAttribute__NameAssignment_4 ) )
+            // InternalMoba.g:6405:1: ( ( ( rule__MobaDtoAttribute__NameAssignment_4 ) ) )
+            // InternalMoba.g:6406:1: ( ( rule__MobaDtoAttribute__NameAssignment_4 ) )
             {
-            // InternalMoba.g:6406:1: ( ( rule__MobaPayloadAttribute__NameAssignment_4 ) )
-            // InternalMoba.g:6407:2: ( rule__MobaPayloadAttribute__NameAssignment_4 )
+            // InternalMoba.g:6406:1: ( ( rule__MobaDtoAttribute__NameAssignment_4 ) )
+            // InternalMoba.g:6407:2: ( rule__MobaDtoAttribute__NameAssignment_4 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getNameAssignment_4()); 
-            // InternalMoba.g:6408:2: ( rule__MobaPayloadAttribute__NameAssignment_4 )
-            // InternalMoba.g:6408:3: rule__MobaPayloadAttribute__NameAssignment_4
+             before(grammarAccess.getMobaDtoAttributeAccess().getNameAssignment_4()); 
+            // InternalMoba.g:6408:2: ( rule__MobaDtoAttribute__NameAssignment_4 )
+            // InternalMoba.g:6408:3: rule__MobaDtoAttribute__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__NameAssignment_4();
+            rule__MobaDtoAttribute__NameAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getNameAssignment_4()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getNameAssignment_4()); 
 
             }
 
@@ -20208,21 +20208,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__4__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__5"
-    // InternalMoba.g:6416:1: rule__MobaPayloadAttribute__Group__5 : rule__MobaPayloadAttribute__Group__5__Impl ;
-    public final void rule__MobaPayloadAttribute__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__5"
+    // InternalMoba.g:6416:1: rule__MobaDtoAttribute__Group__5 : rule__MobaDtoAttribute__Group__5__Impl ;
+    public final void rule__MobaDtoAttribute__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6420:1: ( rule__MobaPayloadAttribute__Group__5__Impl )
-            // InternalMoba.g:6421:2: rule__MobaPayloadAttribute__Group__5__Impl
+            // InternalMoba.g:6420:1: ( rule__MobaDtoAttribute__Group__5__Impl )
+            // InternalMoba.g:6421:2: rule__MobaDtoAttribute__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group__5__Impl();
+            rule__MobaDtoAttribute__Group__5__Impl();
 
             state._fsp--;
 
@@ -20241,12 +20241,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__5"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__5"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group__5__Impl"
-    // InternalMoba.g:6427:1: rule__MobaPayloadAttribute__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
-    public final void rule__MobaPayloadAttribute__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group__5__Impl"
+    // InternalMoba.g:6427:1: rule__MobaDtoAttribute__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
+    public final void rule__MobaDtoAttribute__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20257,7 +20257,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6432:1: ( ( ruleMobaPropertiesAble )? )
             // InternalMoba.g:6433:2: ( ruleMobaPropertiesAble )?
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
             // InternalMoba.g:6434:2: ( ruleMobaPropertiesAble )?
             int alt60=2;
             int LA60_0 = input.LA(1);
@@ -20280,7 +20280,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getMobaPropertiesAbleParserRuleCall_5()); 
 
             }
 
@@ -20299,26 +20299,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group__5__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group__5__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__0"
-    // InternalMoba.g:6443:1: rule__MobaPayloadAttribute__Group_1_4__0 : rule__MobaPayloadAttribute__Group_1_4__0__Impl rule__MobaPayloadAttribute__Group_1_4__1 ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__0"
+    // InternalMoba.g:6443:1: rule__MobaDtoAttribute__Group_1_4__0 : rule__MobaDtoAttribute__Group_1_4__0__Impl rule__MobaDtoAttribute__Group_1_4__1 ;
+    public final void rule__MobaDtoAttribute__Group_1_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6447:1: ( rule__MobaPayloadAttribute__Group_1_4__0__Impl rule__MobaPayloadAttribute__Group_1_4__1 )
-            // InternalMoba.g:6448:2: rule__MobaPayloadAttribute__Group_1_4__0__Impl rule__MobaPayloadAttribute__Group_1_4__1
+            // InternalMoba.g:6447:1: ( rule__MobaDtoAttribute__Group_1_4__0__Impl rule__MobaDtoAttribute__Group_1_4__1 )
+            // InternalMoba.g:6448:2: rule__MobaDtoAttribute__Group_1_4__0__Impl rule__MobaDtoAttribute__Group_1_4__1
             {
             pushFollow(FOLLOW_15);
-            rule__MobaPayloadAttribute__Group_1_4__0__Impl();
+            rule__MobaDtoAttribute__Group_1_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4__1();
+            rule__MobaDtoAttribute__Group_1_4__1();
 
             state._fsp--;
 
@@ -20337,12 +20337,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__0"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__0"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__0__Impl"
-    // InternalMoba.g:6455:1: rule__MobaPayloadAttribute__Group_1_4__0__Impl : ( 'constraints' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__0__Impl"
+    // InternalMoba.g:6455:1: rule__MobaDtoAttribute__Group_1_4__0__Impl : ( 'constraints' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20353,9 +20353,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6460:1: ( 'constraints' )
             // InternalMoba.g:6461:2: 'constraints'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsKeyword_1_4_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getConstraintsKeyword_1_4_0()); 
             match(input,32,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsKeyword_1_4_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getConstraintsKeyword_1_4_0()); 
 
             }
 
@@ -20374,26 +20374,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__0__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__1"
-    // InternalMoba.g:6470:1: rule__MobaPayloadAttribute__Group_1_4__1 : rule__MobaPayloadAttribute__Group_1_4__1__Impl rule__MobaPayloadAttribute__Group_1_4__2 ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__1"
+    // InternalMoba.g:6470:1: rule__MobaDtoAttribute__Group_1_4__1 : rule__MobaDtoAttribute__Group_1_4__1__Impl rule__MobaDtoAttribute__Group_1_4__2 ;
+    public final void rule__MobaDtoAttribute__Group_1_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6474:1: ( rule__MobaPayloadAttribute__Group_1_4__1__Impl rule__MobaPayloadAttribute__Group_1_4__2 )
-            // InternalMoba.g:6475:2: rule__MobaPayloadAttribute__Group_1_4__1__Impl rule__MobaPayloadAttribute__Group_1_4__2
+            // InternalMoba.g:6474:1: ( rule__MobaDtoAttribute__Group_1_4__1__Impl rule__MobaDtoAttribute__Group_1_4__2 )
+            // InternalMoba.g:6475:2: rule__MobaDtoAttribute__Group_1_4__1__Impl rule__MobaDtoAttribute__Group_1_4__2
             {
             pushFollow(FOLLOW_17);
-            rule__MobaPayloadAttribute__Group_1_4__1__Impl();
+            rule__MobaDtoAttribute__Group_1_4__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4__2();
+            rule__MobaDtoAttribute__Group_1_4__2();
 
             state._fsp--;
 
@@ -20412,12 +20412,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__1"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__1__Impl"
-    // InternalMoba.g:6482:1: rule__MobaPayloadAttribute__Group_1_4__1__Impl : ( '(' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__1__Impl"
+    // InternalMoba.g:6482:1: rule__MobaDtoAttribute__Group_1_4__1__Impl : ( '(' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20428,9 +20428,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6487:1: ( '(' )
             // InternalMoba.g:6488:2: '('
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
             match(input,30,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_4_1()); 
 
             }
 
@@ -20449,26 +20449,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__1__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__2"
-    // InternalMoba.g:6497:1: rule__MobaPayloadAttribute__Group_1_4__2 : rule__MobaPayloadAttribute__Group_1_4__2__Impl rule__MobaPayloadAttribute__Group_1_4__3 ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__2"
+    // InternalMoba.g:6497:1: rule__MobaDtoAttribute__Group_1_4__2 : rule__MobaDtoAttribute__Group_1_4__2__Impl rule__MobaDtoAttribute__Group_1_4__3 ;
+    public final void rule__MobaDtoAttribute__Group_1_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6501:1: ( rule__MobaPayloadAttribute__Group_1_4__2__Impl rule__MobaPayloadAttribute__Group_1_4__3 )
-            // InternalMoba.g:6502:2: rule__MobaPayloadAttribute__Group_1_4__2__Impl rule__MobaPayloadAttribute__Group_1_4__3
+            // InternalMoba.g:6501:1: ( rule__MobaDtoAttribute__Group_1_4__2__Impl rule__MobaDtoAttribute__Group_1_4__3 )
+            // InternalMoba.g:6502:2: rule__MobaDtoAttribute__Group_1_4__2__Impl rule__MobaDtoAttribute__Group_1_4__3
             {
             pushFollow(FOLLOW_18);
-            rule__MobaPayloadAttribute__Group_1_4__2__Impl();
+            rule__MobaDtoAttribute__Group_1_4__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4__3();
+            rule__MobaDtoAttribute__Group_1_4__3();
 
             state._fsp--;
 
@@ -20487,35 +20487,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__2"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__2__Impl"
-    // InternalMoba.g:6509:1: rule__MobaPayloadAttribute__Group_1_4__2__Impl : ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 ) ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__2__Impl"
+    // InternalMoba.g:6509:1: rule__MobaDtoAttribute__Group_1_4__2__Impl : ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 ) ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6513:1: ( ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 ) ) )
-            // InternalMoba.g:6514:1: ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 ) )
+            // InternalMoba.g:6513:1: ( ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 ) ) )
+            // InternalMoba.g:6514:1: ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 ) )
             {
-            // InternalMoba.g:6514:1: ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 ) )
-            // InternalMoba.g:6515:2: ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 )
+            // InternalMoba.g:6514:1: ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 ) )
+            // InternalMoba.g:6515:2: ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsAssignment_1_4_2()); 
-            // InternalMoba.g:6516:2: ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 )
-            // InternalMoba.g:6516:3: rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2
+             before(grammarAccess.getMobaDtoAttributeAccess().getConstraintsAssignment_1_4_2()); 
+            // InternalMoba.g:6516:2: ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 )
+            // InternalMoba.g:6516:3: rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2();
+            rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsAssignment_1_4_2()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getConstraintsAssignment_1_4_2()); 
 
             }
 
@@ -20534,26 +20534,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__2__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__2__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__3"
-    // InternalMoba.g:6524:1: rule__MobaPayloadAttribute__Group_1_4__3 : rule__MobaPayloadAttribute__Group_1_4__3__Impl rule__MobaPayloadAttribute__Group_1_4__4 ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__3"
+    // InternalMoba.g:6524:1: rule__MobaDtoAttribute__Group_1_4__3 : rule__MobaDtoAttribute__Group_1_4__3__Impl rule__MobaDtoAttribute__Group_1_4__4 ;
+    public final void rule__MobaDtoAttribute__Group_1_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6528:1: ( rule__MobaPayloadAttribute__Group_1_4__3__Impl rule__MobaPayloadAttribute__Group_1_4__4 )
-            // InternalMoba.g:6529:2: rule__MobaPayloadAttribute__Group_1_4__3__Impl rule__MobaPayloadAttribute__Group_1_4__4
+            // InternalMoba.g:6528:1: ( rule__MobaDtoAttribute__Group_1_4__3__Impl rule__MobaDtoAttribute__Group_1_4__4 )
+            // InternalMoba.g:6529:2: rule__MobaDtoAttribute__Group_1_4__3__Impl rule__MobaDtoAttribute__Group_1_4__4
             {
             pushFollow(FOLLOW_18);
-            rule__MobaPayloadAttribute__Group_1_4__3__Impl();
+            rule__MobaDtoAttribute__Group_1_4__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4__4();
+            rule__MobaDtoAttribute__Group_1_4__4();
 
             state._fsp--;
 
@@ -20572,24 +20572,24 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__3"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__3"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__3__Impl"
-    // InternalMoba.g:6536:1: rule__MobaPayloadAttribute__Group_1_4__3__Impl : ( ( rule__MobaPayloadAttribute__Group_1_4_3__0 )* ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__3__Impl"
+    // InternalMoba.g:6536:1: rule__MobaDtoAttribute__Group_1_4__3__Impl : ( ( rule__MobaDtoAttribute__Group_1_4_3__0 )* ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6540:1: ( ( ( rule__MobaPayloadAttribute__Group_1_4_3__0 )* ) )
-            // InternalMoba.g:6541:1: ( ( rule__MobaPayloadAttribute__Group_1_4_3__0 )* )
+            // InternalMoba.g:6540:1: ( ( ( rule__MobaDtoAttribute__Group_1_4_3__0 )* ) )
+            // InternalMoba.g:6541:1: ( ( rule__MobaDtoAttribute__Group_1_4_3__0 )* )
             {
-            // InternalMoba.g:6541:1: ( ( rule__MobaPayloadAttribute__Group_1_4_3__0 )* )
-            // InternalMoba.g:6542:2: ( rule__MobaPayloadAttribute__Group_1_4_3__0 )*
+            // InternalMoba.g:6541:1: ( ( rule__MobaDtoAttribute__Group_1_4_3__0 )* )
+            // InternalMoba.g:6542:2: ( rule__MobaDtoAttribute__Group_1_4_3__0 )*
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getGroup_1_4_3()); 
-            // InternalMoba.g:6543:2: ( rule__MobaPayloadAttribute__Group_1_4_3__0 )*
+             before(grammarAccess.getMobaDtoAttributeAccess().getGroup_1_4_3()); 
+            // InternalMoba.g:6543:2: ( rule__MobaDtoAttribute__Group_1_4_3__0 )*
             loop61:
             do {
                 int alt61=2;
@@ -20602,10 +20602,10 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
                 switch (alt61) {
             	case 1 :
-            	    // InternalMoba.g:6543:3: rule__MobaPayloadAttribute__Group_1_4_3__0
+            	    // InternalMoba.g:6543:3: rule__MobaDtoAttribute__Group_1_4_3__0
             	    {
             	    pushFollow(FOLLOW_19);
-            	    rule__MobaPayloadAttribute__Group_1_4_3__0();
+            	    rule__MobaDtoAttribute__Group_1_4_3__0();
 
             	    state._fsp--;
 
@@ -20618,7 +20618,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getGroup_1_4_3()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getGroup_1_4_3()); 
 
             }
 
@@ -20637,21 +20637,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__3__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__3__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__4"
-    // InternalMoba.g:6551:1: rule__MobaPayloadAttribute__Group_1_4__4 : rule__MobaPayloadAttribute__Group_1_4__4__Impl ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__4"
+    // InternalMoba.g:6551:1: rule__MobaDtoAttribute__Group_1_4__4 : rule__MobaDtoAttribute__Group_1_4__4__Impl ;
+    public final void rule__MobaDtoAttribute__Group_1_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6555:1: ( rule__MobaPayloadAttribute__Group_1_4__4__Impl )
-            // InternalMoba.g:6556:2: rule__MobaPayloadAttribute__Group_1_4__4__Impl
+            // InternalMoba.g:6555:1: ( rule__MobaDtoAttribute__Group_1_4__4__Impl )
+            // InternalMoba.g:6556:2: rule__MobaDtoAttribute__Group_1_4__4__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4__4__Impl();
+            rule__MobaDtoAttribute__Group_1_4__4__Impl();
 
             state._fsp--;
 
@@ -20670,12 +20670,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__4"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__4"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4__4__Impl"
-    // InternalMoba.g:6562:1: rule__MobaPayloadAttribute__Group_1_4__4__Impl : ( ')' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4__4__Impl"
+    // InternalMoba.g:6562:1: rule__MobaDtoAttribute__Group_1_4__4__Impl : ( ')' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20686,9 +20686,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6567:1: ( ')' )
             // InternalMoba.g:6568:2: ')'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
             match(input,31,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_4_4()); 
 
             }
 
@@ -20707,26 +20707,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4__4__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4__4__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4_3__0"
-    // InternalMoba.g:6578:1: rule__MobaPayloadAttribute__Group_1_4_3__0 : rule__MobaPayloadAttribute__Group_1_4_3__0__Impl rule__MobaPayloadAttribute__Group_1_4_3__1 ;
-    public final void rule__MobaPayloadAttribute__Group_1_4_3__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4_3__0"
+    // InternalMoba.g:6578:1: rule__MobaDtoAttribute__Group_1_4_3__0 : rule__MobaDtoAttribute__Group_1_4_3__0__Impl rule__MobaDtoAttribute__Group_1_4_3__1 ;
+    public final void rule__MobaDtoAttribute__Group_1_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6582:1: ( rule__MobaPayloadAttribute__Group_1_4_3__0__Impl rule__MobaPayloadAttribute__Group_1_4_3__1 )
-            // InternalMoba.g:6583:2: rule__MobaPayloadAttribute__Group_1_4_3__0__Impl rule__MobaPayloadAttribute__Group_1_4_3__1
+            // InternalMoba.g:6582:1: ( rule__MobaDtoAttribute__Group_1_4_3__0__Impl rule__MobaDtoAttribute__Group_1_4_3__1 )
+            // InternalMoba.g:6583:2: rule__MobaDtoAttribute__Group_1_4_3__0__Impl rule__MobaDtoAttribute__Group_1_4_3__1
             {
             pushFollow(FOLLOW_17);
-            rule__MobaPayloadAttribute__Group_1_4_3__0__Impl();
+            rule__MobaDtoAttribute__Group_1_4_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4_3__1();
+            rule__MobaDtoAttribute__Group_1_4_3__1();
 
             state._fsp--;
 
@@ -20745,12 +20745,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4_3__0"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4_3__0"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4_3__0__Impl"
-    // InternalMoba.g:6590:1: rule__MobaPayloadAttribute__Group_1_4_3__0__Impl : ( ',' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4_3__0__Impl"
+    // InternalMoba.g:6590:1: rule__MobaDtoAttribute__Group_1_4_3__0__Impl : ( ',' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20761,9 +20761,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6595:1: ( ',' )
             // InternalMoba.g:6596:2: ','
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getCommaKeyword_1_4_3_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getCommaKeyword_1_4_3_0()); 
             match(input,33,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getCommaKeyword_1_4_3_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getCommaKeyword_1_4_3_0()); 
 
             }
 
@@ -20782,21 +20782,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4_3__0__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4_3__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4_3__1"
-    // InternalMoba.g:6605:1: rule__MobaPayloadAttribute__Group_1_4_3__1 : rule__MobaPayloadAttribute__Group_1_4_3__1__Impl ;
-    public final void rule__MobaPayloadAttribute__Group_1_4_3__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4_3__1"
+    // InternalMoba.g:6605:1: rule__MobaDtoAttribute__Group_1_4_3__1 : rule__MobaDtoAttribute__Group_1_4_3__1__Impl ;
+    public final void rule__MobaDtoAttribute__Group_1_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6609:1: ( rule__MobaPayloadAttribute__Group_1_4_3__1__Impl )
-            // InternalMoba.g:6610:2: rule__MobaPayloadAttribute__Group_1_4_3__1__Impl
+            // InternalMoba.g:6609:1: ( rule__MobaDtoAttribute__Group_1_4_3__1__Impl )
+            // InternalMoba.g:6610:2: rule__MobaDtoAttribute__Group_1_4_3__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_4_3__1__Impl();
+            rule__MobaDtoAttribute__Group_1_4_3__1__Impl();
 
             state._fsp--;
 
@@ -20815,35 +20815,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4_3__1"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4_3__1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_4_3__1__Impl"
-    // InternalMoba.g:6616:1: rule__MobaPayloadAttribute__Group_1_4_3__1__Impl : ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 ) ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_4_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_4_3__1__Impl"
+    // InternalMoba.g:6616:1: rule__MobaDtoAttribute__Group_1_4_3__1__Impl : ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 ) ) ;
+    public final void rule__MobaDtoAttribute__Group_1_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6620:1: ( ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 ) ) )
-            // InternalMoba.g:6621:1: ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 ) )
+            // InternalMoba.g:6620:1: ( ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 ) ) )
+            // InternalMoba.g:6621:1: ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 ) )
             {
-            // InternalMoba.g:6621:1: ( ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 ) )
-            // InternalMoba.g:6622:2: ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 )
+            // InternalMoba.g:6621:1: ( ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 ) )
+            // InternalMoba.g:6622:2: ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
-            // InternalMoba.g:6623:2: ( rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 )
-            // InternalMoba.g:6623:3: rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1
+             before(grammarAccess.getMobaDtoAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
+            // InternalMoba.g:6623:2: ( rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 )
+            // InternalMoba.g:6623:3: rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1();
+            rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getConstraintsAssignment_1_4_3_1()); 
 
             }
 
@@ -20862,26 +20862,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_4_3__1__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_4_3__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__0"
-    // InternalMoba.g:6632:1: rule__MobaPayloadAttribute__Group_1_5__0 : rule__MobaPayloadAttribute__Group_1_5__0__Impl rule__MobaPayloadAttribute__Group_1_5__1 ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__0"
+    // InternalMoba.g:6632:1: rule__MobaDtoAttribute__Group_1_5__0 : rule__MobaDtoAttribute__Group_1_5__0__Impl rule__MobaDtoAttribute__Group_1_5__1 ;
+    public final void rule__MobaDtoAttribute__Group_1_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6636:1: ( rule__MobaPayloadAttribute__Group_1_5__0__Impl rule__MobaPayloadAttribute__Group_1_5__1 )
-            // InternalMoba.g:6637:2: rule__MobaPayloadAttribute__Group_1_5__0__Impl rule__MobaPayloadAttribute__Group_1_5__1
+            // InternalMoba.g:6636:1: ( rule__MobaDtoAttribute__Group_1_5__0__Impl rule__MobaDtoAttribute__Group_1_5__1 )
+            // InternalMoba.g:6637:2: rule__MobaDtoAttribute__Group_1_5__0__Impl rule__MobaDtoAttribute__Group_1_5__1
             {
             pushFollow(FOLLOW_15);
-            rule__MobaPayloadAttribute__Group_1_5__0__Impl();
+            rule__MobaDtoAttribute__Group_1_5__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_5__1();
+            rule__MobaDtoAttribute__Group_1_5__1();
 
             state._fsp--;
 
@@ -20900,12 +20900,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__0"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__0"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__0__Impl"
-    // InternalMoba.g:6644:1: rule__MobaPayloadAttribute__Group_1_5__0__Impl : ( 'alias' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__0__Impl"
+    // InternalMoba.g:6644:1: rule__MobaDtoAttribute__Group_1_5__0__Impl : ( 'alias' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20916,9 +20916,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6649:1: ( 'alias' )
             // InternalMoba.g:6650:2: 'alias'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getAliasKeyword_1_5_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getAliasKeyword_1_5_0()); 
             match(input,51,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getAliasKeyword_1_5_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getAliasKeyword_1_5_0()); 
 
             }
 
@@ -20937,26 +20937,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__0__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__1"
-    // InternalMoba.g:6659:1: rule__MobaPayloadAttribute__Group_1_5__1 : rule__MobaPayloadAttribute__Group_1_5__1__Impl rule__MobaPayloadAttribute__Group_1_5__2 ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__1"
+    // InternalMoba.g:6659:1: rule__MobaDtoAttribute__Group_1_5__1 : rule__MobaDtoAttribute__Group_1_5__1__Impl rule__MobaDtoAttribute__Group_1_5__2 ;
+    public final void rule__MobaDtoAttribute__Group_1_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6663:1: ( rule__MobaPayloadAttribute__Group_1_5__1__Impl rule__MobaPayloadAttribute__Group_1_5__2 )
-            // InternalMoba.g:6664:2: rule__MobaPayloadAttribute__Group_1_5__1__Impl rule__MobaPayloadAttribute__Group_1_5__2
+            // InternalMoba.g:6663:1: ( rule__MobaDtoAttribute__Group_1_5__1__Impl rule__MobaDtoAttribute__Group_1_5__2 )
+            // InternalMoba.g:6664:2: rule__MobaDtoAttribute__Group_1_5__1__Impl rule__MobaDtoAttribute__Group_1_5__2
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayloadAttribute__Group_1_5__1__Impl();
+            rule__MobaDtoAttribute__Group_1_5__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_5__2();
+            rule__MobaDtoAttribute__Group_1_5__2();
 
             state._fsp--;
 
@@ -20975,12 +20975,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__1"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__1__Impl"
-    // InternalMoba.g:6671:1: rule__MobaPayloadAttribute__Group_1_5__1__Impl : ( '(' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__1__Impl"
+    // InternalMoba.g:6671:1: rule__MobaDtoAttribute__Group_1_5__1__Impl : ( '(' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -20991,9 +20991,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6676:1: ( '(' )
             // InternalMoba.g:6677:2: '('
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getLeftParenthesisKeyword_1_5_1()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_5_1()); 
             match(input,30,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getLeftParenthesisKeyword_1_5_1()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_5_1()); 
 
             }
 
@@ -21012,26 +21012,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__1__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__2"
-    // InternalMoba.g:6686:1: rule__MobaPayloadAttribute__Group_1_5__2 : rule__MobaPayloadAttribute__Group_1_5__2__Impl rule__MobaPayloadAttribute__Group_1_5__3 ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__2"
+    // InternalMoba.g:6686:1: rule__MobaDtoAttribute__Group_1_5__2 : rule__MobaDtoAttribute__Group_1_5__2__Impl rule__MobaDtoAttribute__Group_1_5__3 ;
+    public final void rule__MobaDtoAttribute__Group_1_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6690:1: ( rule__MobaPayloadAttribute__Group_1_5__2__Impl rule__MobaPayloadAttribute__Group_1_5__3 )
-            // InternalMoba.g:6691:2: rule__MobaPayloadAttribute__Group_1_5__2__Impl rule__MobaPayloadAttribute__Group_1_5__3
+            // InternalMoba.g:6690:1: ( rule__MobaDtoAttribute__Group_1_5__2__Impl rule__MobaDtoAttribute__Group_1_5__3 )
+            // InternalMoba.g:6691:2: rule__MobaDtoAttribute__Group_1_5__2__Impl rule__MobaDtoAttribute__Group_1_5__3
             {
             pushFollow(FOLLOW_16);
-            rule__MobaPayloadAttribute__Group_1_5__2__Impl();
+            rule__MobaDtoAttribute__Group_1_5__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_5__3();
+            rule__MobaDtoAttribute__Group_1_5__3();
 
             state._fsp--;
 
@@ -21050,35 +21050,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__2"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__2__Impl"
-    // InternalMoba.g:6698:1: rule__MobaPayloadAttribute__Group_1_5__2__Impl : ( ( rule__MobaPayloadAttribute__AliasAssignment_1_5_2 ) ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__2__Impl"
+    // InternalMoba.g:6698:1: rule__MobaDtoAttribute__Group_1_5__2__Impl : ( ( rule__MobaDtoAttribute__AliasAssignment_1_5_2 ) ) ;
+    public final void rule__MobaDtoAttribute__Group_1_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6702:1: ( ( ( rule__MobaPayloadAttribute__AliasAssignment_1_5_2 ) ) )
-            // InternalMoba.g:6703:1: ( ( rule__MobaPayloadAttribute__AliasAssignment_1_5_2 ) )
+            // InternalMoba.g:6702:1: ( ( ( rule__MobaDtoAttribute__AliasAssignment_1_5_2 ) ) )
+            // InternalMoba.g:6703:1: ( ( rule__MobaDtoAttribute__AliasAssignment_1_5_2 ) )
             {
-            // InternalMoba.g:6703:1: ( ( rule__MobaPayloadAttribute__AliasAssignment_1_5_2 ) )
-            // InternalMoba.g:6704:2: ( rule__MobaPayloadAttribute__AliasAssignment_1_5_2 )
+            // InternalMoba.g:6703:1: ( ( rule__MobaDtoAttribute__AliasAssignment_1_5_2 ) )
+            // InternalMoba.g:6704:2: ( rule__MobaDtoAttribute__AliasAssignment_1_5_2 )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getAliasAssignment_1_5_2()); 
-            // InternalMoba.g:6705:2: ( rule__MobaPayloadAttribute__AliasAssignment_1_5_2 )
-            // InternalMoba.g:6705:3: rule__MobaPayloadAttribute__AliasAssignment_1_5_2
+             before(grammarAccess.getMobaDtoAttributeAccess().getAliasAssignment_1_5_2()); 
+            // InternalMoba.g:6705:2: ( rule__MobaDtoAttribute__AliasAssignment_1_5_2 )
+            // InternalMoba.g:6705:3: rule__MobaDtoAttribute__AliasAssignment_1_5_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__AliasAssignment_1_5_2();
+            rule__MobaDtoAttribute__AliasAssignment_1_5_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getAliasAssignment_1_5_2()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getAliasAssignment_1_5_2()); 
 
             }
 
@@ -21097,21 +21097,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__2__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__2__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__3"
-    // InternalMoba.g:6713:1: rule__MobaPayloadAttribute__Group_1_5__3 : rule__MobaPayloadAttribute__Group_1_5__3__Impl ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__3"
+    // InternalMoba.g:6713:1: rule__MobaDtoAttribute__Group_1_5__3 : rule__MobaDtoAttribute__Group_1_5__3__Impl ;
+    public final void rule__MobaDtoAttribute__Group_1_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6717:1: ( rule__MobaPayloadAttribute__Group_1_5__3__Impl )
-            // InternalMoba.g:6718:2: rule__MobaPayloadAttribute__Group_1_5__3__Impl
+            // InternalMoba.g:6717:1: ( rule__MobaDtoAttribute__Group_1_5__3__Impl )
+            // InternalMoba.g:6718:2: rule__MobaDtoAttribute__Group_1_5__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__Group_1_5__3__Impl();
+            rule__MobaDtoAttribute__Group_1_5__3__Impl();
 
             state._fsp--;
 
@@ -21130,12 +21130,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__3"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__3"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__Group_1_5__3__Impl"
-    // InternalMoba.g:6724:1: rule__MobaPayloadAttribute__Group_1_5__3__Impl : ( ')' ) ;
-    public final void rule__MobaPayloadAttribute__Group_1_5__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__Group_1_5__3__Impl"
+    // InternalMoba.g:6724:1: rule__MobaDtoAttribute__Group_1_5__3__Impl : ( ')' ) ;
+    public final void rule__MobaDtoAttribute__Group_1_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -21146,9 +21146,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6729:1: ( ')' )
             // InternalMoba.g:6730:2: ')'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getRightParenthesisKeyword_1_5_3()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_5_3()); 
             match(input,31,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getRightParenthesisKeyword_1_5_3()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_5_3()); 
 
             }
 
@@ -21167,26 +21167,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__Group_1_5__3__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__Group_1_5__3__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__0"
-    // InternalMoba.g:6740:1: rule__MobaPayloadReference__Group__0 : rule__MobaPayloadReference__Group__0__Impl rule__MobaPayloadReference__Group__1 ;
-    public final void rule__MobaPayloadReference__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__0"
+    // InternalMoba.g:6740:1: rule__MobaDtoReference__Group__0 : rule__MobaDtoReference__Group__0__Impl rule__MobaDtoReference__Group__1 ;
+    public final void rule__MobaDtoReference__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6744:1: ( rule__MobaPayloadReference__Group__0__Impl rule__MobaPayloadReference__Group__1 )
-            // InternalMoba.g:6745:2: rule__MobaPayloadReference__Group__0__Impl rule__MobaPayloadReference__Group__1
+            // InternalMoba.g:6744:1: ( rule__MobaDtoReference__Group__0__Impl rule__MobaDtoReference__Group__1 )
+            // InternalMoba.g:6745:2: rule__MobaDtoReference__Group__0__Impl rule__MobaDtoReference__Group__1
             {
             pushFollow(FOLLOW_43);
-            rule__MobaPayloadReference__Group__0__Impl();
+            rule__MobaDtoReference__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__1();
+            rule__MobaDtoReference__Group__1();
 
             state._fsp--;
 
@@ -21205,12 +21205,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__0"
+    // $ANTLR end "rule__MobaDtoReference__Group__0"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__0__Impl"
-    // InternalMoba.g:6752:1: rule__MobaPayloadReference__Group__0__Impl : ( 'ref' ) ;
-    public final void rule__MobaPayloadReference__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__0__Impl"
+    // InternalMoba.g:6752:1: rule__MobaDtoReference__Group__0__Impl : ( 'ref' ) ;
+    public final void rule__MobaDtoReference__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -21221,9 +21221,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6757:1: ( 'ref' )
             // InternalMoba.g:6758:2: 'ref'
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getRefKeyword_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getRefKeyword_0()); 
             match(input,50,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getRefKeyword_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getRefKeyword_0()); 
 
             }
 
@@ -21242,26 +21242,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__0__Impl"
+    // $ANTLR end "rule__MobaDtoReference__Group__0__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__1"
-    // InternalMoba.g:6767:1: rule__MobaPayloadReference__Group__1 : rule__MobaPayloadReference__Group__1__Impl rule__MobaPayloadReference__Group__2 ;
-    public final void rule__MobaPayloadReference__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__1"
+    // InternalMoba.g:6767:1: rule__MobaDtoReference__Group__1 : rule__MobaDtoReference__Group__1__Impl rule__MobaDtoReference__Group__2 ;
+    public final void rule__MobaDtoReference__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6771:1: ( rule__MobaPayloadReference__Group__1__Impl rule__MobaPayloadReference__Group__2 )
-            // InternalMoba.g:6772:2: rule__MobaPayloadReference__Group__1__Impl rule__MobaPayloadReference__Group__2
+            // InternalMoba.g:6771:1: ( rule__MobaDtoReference__Group__1__Impl rule__MobaDtoReference__Group__2 )
+            // InternalMoba.g:6772:2: rule__MobaDtoReference__Group__1__Impl rule__MobaDtoReference__Group__2
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayloadReference__Group__1__Impl();
+            rule__MobaDtoReference__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__2();
+            rule__MobaDtoReference__Group__2();
 
             state._fsp--;
 
@@ -21280,35 +21280,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__1"
+    // $ANTLR end "rule__MobaDtoReference__Group__1"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__1__Impl"
-    // InternalMoba.g:6779:1: rule__MobaPayloadReference__Group__1__Impl : ( ( rule__MobaPayloadReference__UnorderedGroup_1 ) ) ;
-    public final void rule__MobaPayloadReference__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__1__Impl"
+    // InternalMoba.g:6779:1: rule__MobaDtoReference__Group__1__Impl : ( ( rule__MobaDtoReference__UnorderedGroup_1 ) ) ;
+    public final void rule__MobaDtoReference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6783:1: ( ( ( rule__MobaPayloadReference__UnorderedGroup_1 ) ) )
-            // InternalMoba.g:6784:1: ( ( rule__MobaPayloadReference__UnorderedGroup_1 ) )
+            // InternalMoba.g:6783:1: ( ( ( rule__MobaDtoReference__UnorderedGroup_1 ) ) )
+            // InternalMoba.g:6784:1: ( ( rule__MobaDtoReference__UnorderedGroup_1 ) )
             {
-            // InternalMoba.g:6784:1: ( ( rule__MobaPayloadReference__UnorderedGroup_1 ) )
-            // InternalMoba.g:6785:2: ( rule__MobaPayloadReference__UnorderedGroup_1 )
+            // InternalMoba.g:6784:1: ( ( rule__MobaDtoReference__UnorderedGroup_1 ) )
+            // InternalMoba.g:6785:2: ( rule__MobaDtoReference__UnorderedGroup_1 )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1()); 
-            // InternalMoba.g:6786:2: ( rule__MobaPayloadReference__UnorderedGroup_1 )
-            // InternalMoba.g:6786:3: rule__MobaPayloadReference__UnorderedGroup_1
+             before(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1()); 
+            // InternalMoba.g:6786:2: ( rule__MobaDtoReference__UnorderedGroup_1 )
+            // InternalMoba.g:6786:3: rule__MobaDtoReference__UnorderedGroup_1
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__UnorderedGroup_1();
+            rule__MobaDtoReference__UnorderedGroup_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1()); 
 
             }
 
@@ -21327,26 +21327,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__1__Impl"
+    // $ANTLR end "rule__MobaDtoReference__Group__1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__2"
-    // InternalMoba.g:6794:1: rule__MobaPayloadReference__Group__2 : rule__MobaPayloadReference__Group__2__Impl rule__MobaPayloadReference__Group__3 ;
-    public final void rule__MobaPayloadReference__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__2"
+    // InternalMoba.g:6794:1: rule__MobaDtoReference__Group__2 : rule__MobaDtoReference__Group__2__Impl rule__MobaDtoReference__Group__3 ;
+    public final void rule__MobaDtoReference__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6798:1: ( rule__MobaPayloadReference__Group__2__Impl rule__MobaPayloadReference__Group__3 )
-            // InternalMoba.g:6799:2: rule__MobaPayloadReference__Group__2__Impl rule__MobaPayloadReference__Group__3
+            // InternalMoba.g:6798:1: ( rule__MobaDtoReference__Group__2__Impl rule__MobaDtoReference__Group__3 )
+            // InternalMoba.g:6799:2: rule__MobaDtoReference__Group__2__Impl rule__MobaDtoReference__Group__3
             {
             pushFollow(FOLLOW_14);
-            rule__MobaPayloadReference__Group__2__Impl();
+            rule__MobaDtoReference__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__3();
+            rule__MobaDtoReference__Group__3();
 
             state._fsp--;
 
@@ -21365,35 +21365,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__2"
+    // $ANTLR end "rule__MobaDtoReference__Group__2"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__2__Impl"
-    // InternalMoba.g:6806:1: rule__MobaPayloadReference__Group__2__Impl : ( ( rule__MobaPayloadReference__TypeAssignment_2 ) ) ;
-    public final void rule__MobaPayloadReference__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__2__Impl"
+    // InternalMoba.g:6806:1: rule__MobaDtoReference__Group__2__Impl : ( ( rule__MobaDtoReference__TypeAssignment_2 ) ) ;
+    public final void rule__MobaDtoReference__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6810:1: ( ( ( rule__MobaPayloadReference__TypeAssignment_2 ) ) )
-            // InternalMoba.g:6811:1: ( ( rule__MobaPayloadReference__TypeAssignment_2 ) )
+            // InternalMoba.g:6810:1: ( ( ( rule__MobaDtoReference__TypeAssignment_2 ) ) )
+            // InternalMoba.g:6811:1: ( ( rule__MobaDtoReference__TypeAssignment_2 ) )
             {
-            // InternalMoba.g:6811:1: ( ( rule__MobaPayloadReference__TypeAssignment_2 ) )
-            // InternalMoba.g:6812:2: ( rule__MobaPayloadReference__TypeAssignment_2 )
+            // InternalMoba.g:6811:1: ( ( rule__MobaDtoReference__TypeAssignment_2 ) )
+            // InternalMoba.g:6812:2: ( rule__MobaDtoReference__TypeAssignment_2 )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getTypeAssignment_2()); 
-            // InternalMoba.g:6813:2: ( rule__MobaPayloadReference__TypeAssignment_2 )
-            // InternalMoba.g:6813:3: rule__MobaPayloadReference__TypeAssignment_2
+             before(grammarAccess.getMobaDtoReferenceAccess().getTypeAssignment_2()); 
+            // InternalMoba.g:6813:2: ( rule__MobaDtoReference__TypeAssignment_2 )
+            // InternalMoba.g:6813:3: rule__MobaDtoReference__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__TypeAssignment_2();
+            rule__MobaDtoReference__TypeAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getTypeAssignment_2()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getTypeAssignment_2()); 
 
             }
 
@@ -21412,26 +21412,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__2__Impl"
+    // $ANTLR end "rule__MobaDtoReference__Group__2__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__3"
-    // InternalMoba.g:6821:1: rule__MobaPayloadReference__Group__3 : rule__MobaPayloadReference__Group__3__Impl rule__MobaPayloadReference__Group__4 ;
-    public final void rule__MobaPayloadReference__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__3"
+    // InternalMoba.g:6821:1: rule__MobaDtoReference__Group__3 : rule__MobaDtoReference__Group__3__Impl rule__MobaDtoReference__Group__4 ;
+    public final void rule__MobaDtoReference__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6825:1: ( rule__MobaPayloadReference__Group__3__Impl rule__MobaPayloadReference__Group__4 )
-            // InternalMoba.g:6826:2: rule__MobaPayloadReference__Group__3__Impl rule__MobaPayloadReference__Group__4
+            // InternalMoba.g:6825:1: ( rule__MobaDtoReference__Group__3__Impl rule__MobaDtoReference__Group__4 )
+            // InternalMoba.g:6826:2: rule__MobaDtoReference__Group__3__Impl rule__MobaDtoReference__Group__4
             {
             pushFollow(FOLLOW_3);
-            rule__MobaPayloadReference__Group__3__Impl();
+            rule__MobaDtoReference__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__4();
+            rule__MobaDtoReference__Group__4();
 
             state._fsp--;
 
@@ -21450,12 +21450,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__3"
+    // $ANTLR end "rule__MobaDtoReference__Group__3"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__3__Impl"
-    // InternalMoba.g:6833:1: rule__MobaPayloadReference__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
-    public final void rule__MobaPayloadReference__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__3__Impl"
+    // InternalMoba.g:6833:1: rule__MobaDtoReference__Group__3__Impl : ( ruleMobaMultiplicityAble ) ;
+    public final void rule__MobaDtoReference__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -21466,13 +21466,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6838:1: ( ruleMobaMultiplicityAble )
             // InternalMoba.g:6839:2: ruleMobaMultiplicityAble
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
             pushFollow(FOLLOW_2);
             ruleMobaMultiplicityAble();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); 
 
             }
 
@@ -21491,26 +21491,26 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__3__Impl"
+    // $ANTLR end "rule__MobaDtoReference__Group__3__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__4"
-    // InternalMoba.g:6848:1: rule__MobaPayloadReference__Group__4 : rule__MobaPayloadReference__Group__4__Impl rule__MobaPayloadReference__Group__5 ;
-    public final void rule__MobaPayloadReference__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__4"
+    // InternalMoba.g:6848:1: rule__MobaDtoReference__Group__4 : rule__MobaDtoReference__Group__4__Impl rule__MobaDtoReference__Group__5 ;
+    public final void rule__MobaDtoReference__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6852:1: ( rule__MobaPayloadReference__Group__4__Impl rule__MobaPayloadReference__Group__5 )
-            // InternalMoba.g:6853:2: rule__MobaPayloadReference__Group__4__Impl rule__MobaPayloadReference__Group__5
+            // InternalMoba.g:6852:1: ( rule__MobaDtoReference__Group__4__Impl rule__MobaDtoReference__Group__5 )
+            // InternalMoba.g:6853:2: rule__MobaDtoReference__Group__4__Impl rule__MobaDtoReference__Group__5
             {
             pushFollow(FOLLOW_14);
-            rule__MobaPayloadReference__Group__4__Impl();
+            rule__MobaDtoReference__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__5();
+            rule__MobaDtoReference__Group__5();
 
             state._fsp--;
 
@@ -21529,35 +21529,35 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__4"
+    // $ANTLR end "rule__MobaDtoReference__Group__4"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__4__Impl"
-    // InternalMoba.g:6860:1: rule__MobaPayloadReference__Group__4__Impl : ( ( rule__MobaPayloadReference__NameAssignment_4 ) ) ;
-    public final void rule__MobaPayloadReference__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__4__Impl"
+    // InternalMoba.g:6860:1: rule__MobaDtoReference__Group__4__Impl : ( ( rule__MobaDtoReference__NameAssignment_4 ) ) ;
+    public final void rule__MobaDtoReference__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6864:1: ( ( ( rule__MobaPayloadReference__NameAssignment_4 ) ) )
-            // InternalMoba.g:6865:1: ( ( rule__MobaPayloadReference__NameAssignment_4 ) )
+            // InternalMoba.g:6864:1: ( ( ( rule__MobaDtoReference__NameAssignment_4 ) ) )
+            // InternalMoba.g:6865:1: ( ( rule__MobaDtoReference__NameAssignment_4 ) )
             {
-            // InternalMoba.g:6865:1: ( ( rule__MobaPayloadReference__NameAssignment_4 ) )
-            // InternalMoba.g:6866:2: ( rule__MobaPayloadReference__NameAssignment_4 )
+            // InternalMoba.g:6865:1: ( ( rule__MobaDtoReference__NameAssignment_4 ) )
+            // InternalMoba.g:6866:2: ( rule__MobaDtoReference__NameAssignment_4 )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getNameAssignment_4()); 
-            // InternalMoba.g:6867:2: ( rule__MobaPayloadReference__NameAssignment_4 )
-            // InternalMoba.g:6867:3: rule__MobaPayloadReference__NameAssignment_4
+             before(grammarAccess.getMobaDtoReferenceAccess().getNameAssignment_4()); 
+            // InternalMoba.g:6867:2: ( rule__MobaDtoReference__NameAssignment_4 )
+            // InternalMoba.g:6867:3: rule__MobaDtoReference__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__NameAssignment_4();
+            rule__MobaDtoReference__NameAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getNameAssignment_4()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getNameAssignment_4()); 
 
             }
 
@@ -21576,21 +21576,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__4__Impl"
+    // $ANTLR end "rule__MobaDtoReference__Group__4__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__5"
-    // InternalMoba.g:6875:1: rule__MobaPayloadReference__Group__5 : rule__MobaPayloadReference__Group__5__Impl ;
-    public final void rule__MobaPayloadReference__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__5"
+    // InternalMoba.g:6875:1: rule__MobaDtoReference__Group__5 : rule__MobaDtoReference__Group__5__Impl ;
+    public final void rule__MobaDtoReference__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:6879:1: ( rule__MobaPayloadReference__Group__5__Impl )
-            // InternalMoba.g:6880:2: rule__MobaPayloadReference__Group__5__Impl
+            // InternalMoba.g:6879:1: ( rule__MobaDtoReference__Group__5__Impl )
+            // InternalMoba.g:6880:2: rule__MobaDtoReference__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__Group__5__Impl();
+            rule__MobaDtoReference__Group__5__Impl();
 
             state._fsp--;
 
@@ -21609,12 +21609,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__5"
+    // $ANTLR end "rule__MobaDtoReference__Group__5"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__Group__5__Impl"
-    // InternalMoba.g:6886:1: rule__MobaPayloadReference__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
-    public final void rule__MobaPayloadReference__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__Group__5__Impl"
+    // InternalMoba.g:6886:1: rule__MobaDtoReference__Group__5__Impl : ( ( ruleMobaPropertiesAble )? ) ;
+    public final void rule__MobaDtoReference__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -21625,7 +21625,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:6891:1: ( ( ruleMobaPropertiesAble )? )
             // InternalMoba.g:6892:2: ( ruleMobaPropertiesAble )?
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
             // InternalMoba.g:6893:2: ( ruleMobaPropertiesAble )?
             int alt62=2;
             int LA62_0 = input.LA(1);
@@ -21648,7 +21648,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getMobaPropertiesAbleParserRuleCall_5()); 
 
             }
 
@@ -21667,7 +21667,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__Group__5__Impl"
+    // $ANTLR end "rule__MobaDtoReference__Group__5__Impl"
 
 
     // $ANTLR start "rule__MobaQueueReference__Group__0"
@@ -25500,33 +25500,33 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaCache__UnorderedGroup_2_1__1"
 
 
-    // $ANTLR start "rule__MobaBean__UnorderedGroup_2"
-    // InternalMoba.g:8148:1: rule__MobaBean__UnorderedGroup_2 : ( rule__MobaBean__UnorderedGroup_2__0 )? ;
-    public final void rule__MobaBean__UnorderedGroup_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__UnorderedGroup_2"
+    // InternalMoba.g:8148:1: rule__MobaEntity__UnorderedGroup_2 : ( rule__MobaEntity__UnorderedGroup_2__0 )? ;
+    public final void rule__MobaEntity__UnorderedGroup_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2());
+        		getUnorderedGroupHelper().enter(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2());
         	
         try {
-            // InternalMoba.g:8153:1: ( ( rule__MobaBean__UnorderedGroup_2__0 )? )
-            // InternalMoba.g:8154:2: ( rule__MobaBean__UnorderedGroup_2__0 )?
+            // InternalMoba.g:8153:1: ( ( rule__MobaEntity__UnorderedGroup_2__0 )? )
+            // InternalMoba.g:8154:2: ( rule__MobaEntity__UnorderedGroup_2__0 )?
             {
-            // InternalMoba.g:8154:2: ( rule__MobaBean__UnorderedGroup_2__0 )?
+            // InternalMoba.g:8154:2: ( rule__MobaEntity__UnorderedGroup_2__0 )?
             int alt74=2;
             int LA74_0 = input.LA(1);
 
-            if ( LA74_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 0) ) {
+            if ( LA74_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0) ) {
                 alt74=1;
             }
-            else if ( LA74_0 == 40 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 1) ) {
+            else if ( LA74_0 == 40 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1) ) {
                 alt74=1;
             }
             switch (alt74) {
                 case 1 :
-                    // InternalMoba.g:8154:2: rule__MobaBean__UnorderedGroup_2__0
+                    // InternalMoba.g:8154:2: rule__MobaEntity__UnorderedGroup_2__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBean__UnorderedGroup_2__0();
+                    rule__MobaEntity__UnorderedGroup_2__0();
 
                     state._fsp--;
 
@@ -25546,34 +25546,34 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         finally {
 
-            	getUnorderedGroupHelper().leave(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2());
+            	getUnorderedGroupHelper().leave(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__UnorderedGroup_2"
+    // $ANTLR end "rule__MobaEntity__UnorderedGroup_2"
 
 
-    // $ANTLR start "rule__MobaBean__UnorderedGroup_2__Impl"
-    // InternalMoba.g:8162:1: rule__MobaBean__UnorderedGroup_2__Impl : ( ({...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) ) ) ) ;
-    public final void rule__MobaBean__UnorderedGroup_2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__UnorderedGroup_2__Impl"
+    // InternalMoba.g:8162:1: rule__MobaEntity__UnorderedGroup_2__Impl : ( ({...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) ) ) ) ;
+    public final void rule__MobaEntity__UnorderedGroup_2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalMoba.g:8167:1: ( ( ({...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) ) ) ) )
-            // InternalMoba.g:8168:3: ( ({...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) ) ) )
+            // InternalMoba.g:8167:1: ( ( ({...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) ) ) ) )
+            // InternalMoba.g:8168:3: ( ({...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) ) ) )
             {
-            // InternalMoba.g:8168:3: ( ({...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) ) ) )
+            // InternalMoba.g:8168:3: ( ({...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) ) ) )
             int alt75=2;
             int LA75_0 = input.LA(1);
 
-            if ( LA75_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 0) ) {
+            if ( LA75_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0) ) {
                 alt75=1;
             }
-            else if ( LA75_0 == 40 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 1) ) {
+            else if ( LA75_0 == 40 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1) ) {
                 alt75=2;
             }
             else {
@@ -25584,39 +25584,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt75) {
                 case 1 :
-                    // InternalMoba.g:8169:3: ({...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) ) )
+                    // InternalMoba.g:8169:3: ({...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) ) )
                     {
-                    // InternalMoba.g:8169:3: ({...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) ) )
-                    // InternalMoba.g:8170:4: {...}? => ( ( ( rule__MobaBean__Group_2_0__0 ) ) )
+                    // InternalMoba.g:8169:3: ({...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) ) )
+                    // InternalMoba.g:8170:4: {...}? => ( ( ( rule__MobaEntity__Group_2_0__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBean__UnorderedGroup_2__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 0)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntity__UnorderedGroup_2__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0)");
                     }
-                    // InternalMoba.g:8170:104: ( ( ( rule__MobaBean__Group_2_0__0 ) ) )
-                    // InternalMoba.g:8171:5: ( ( rule__MobaBean__Group_2_0__0 ) )
+                    // InternalMoba.g:8170:106: ( ( ( rule__MobaEntity__Group_2_0__0 ) ) )
+                    // InternalMoba.g:8171:5: ( ( rule__MobaEntity__Group_2_0__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 0);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8177:5: ( ( rule__MobaBean__Group_2_0__0 ) )
-                    // InternalMoba.g:8178:6: ( rule__MobaBean__Group_2_0__0 )
+                    // InternalMoba.g:8177:5: ( ( rule__MobaEntity__Group_2_0__0 ) )
+                    // InternalMoba.g:8178:6: ( rule__MobaEntity__Group_2_0__0 )
                     {
-                     before(grammarAccess.getMobaBeanAccess().getGroup_2_0()); 
-                    // InternalMoba.g:8179:6: ( rule__MobaBean__Group_2_0__0 )
-                    // InternalMoba.g:8179:7: rule__MobaBean__Group_2_0__0
+                     before(grammarAccess.getMobaEntityAccess().getGroup_2_0()); 
+                    // InternalMoba.g:8179:6: ( rule__MobaEntity__Group_2_0__0 )
+                    // InternalMoba.g:8179:7: rule__MobaEntity__Group_2_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBean__Group_2_0__0();
+                    rule__MobaEntity__Group_2_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAccess().getGroup_2_0()); 
+                     after(grammarAccess.getMobaEntityAccess().getGroup_2_0()); 
 
                     }
 
@@ -25630,39 +25630,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:8184:3: ({...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) ) )
+                    // InternalMoba.g:8184:3: ({...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) ) )
                     {
-                    // InternalMoba.g:8184:3: ({...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) ) )
-                    // InternalMoba.g:8185:4: {...}? => ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) )
+                    // InternalMoba.g:8184:3: ({...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) ) )
+                    // InternalMoba.g:8185:4: {...}? => ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBean__UnorderedGroup_2__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 1)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntity__UnorderedGroup_2__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1)");
                     }
-                    // InternalMoba.g:8185:104: ( ( ( rule__MobaBean__CacheAssignment_2_1 ) ) )
-                    // InternalMoba.g:8186:5: ( ( rule__MobaBean__CacheAssignment_2_1 ) )
+                    // InternalMoba.g:8185:106: ( ( ( rule__MobaEntity__CacheAssignment_2_1 ) ) )
+                    // InternalMoba.g:8186:5: ( ( rule__MobaEntity__CacheAssignment_2_1 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 1);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8192:5: ( ( rule__MobaBean__CacheAssignment_2_1 ) )
-                    // InternalMoba.g:8193:6: ( rule__MobaBean__CacheAssignment_2_1 )
+                    // InternalMoba.g:8192:5: ( ( rule__MobaEntity__CacheAssignment_2_1 ) )
+                    // InternalMoba.g:8193:6: ( rule__MobaEntity__CacheAssignment_2_1 )
                     {
-                     before(grammarAccess.getMobaBeanAccess().getCacheAssignment_2_1()); 
-                    // InternalMoba.g:8194:6: ( rule__MobaBean__CacheAssignment_2_1 )
-                    // InternalMoba.g:8194:7: rule__MobaBean__CacheAssignment_2_1
+                     before(grammarAccess.getMobaEntityAccess().getCacheAssignment_2_1()); 
+                    // InternalMoba.g:8194:6: ( rule__MobaEntity__CacheAssignment_2_1 )
+                    // InternalMoba.g:8194:7: rule__MobaEntity__CacheAssignment_2_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBean__CacheAssignment_2_1();
+                    rule__MobaEntity__CacheAssignment_2_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAccess().getCacheAssignment_2_1()); 
+                     after(grammarAccess.getMobaEntityAccess().getCacheAssignment_2_1()); 
 
                     }
 
@@ -25689,46 +25689,46 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         finally {
 
             	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2());
+            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__UnorderedGroup_2__Impl"
+    // $ANTLR end "rule__MobaEntity__UnorderedGroup_2__Impl"
 
 
-    // $ANTLR start "rule__MobaBean__UnorderedGroup_2__0"
-    // InternalMoba.g:8207:1: rule__MobaBean__UnorderedGroup_2__0 : rule__MobaBean__UnorderedGroup_2__Impl ( rule__MobaBean__UnorderedGroup_2__1 )? ;
-    public final void rule__MobaBean__UnorderedGroup_2__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__UnorderedGroup_2__0"
+    // InternalMoba.g:8207:1: rule__MobaEntity__UnorderedGroup_2__0 : rule__MobaEntity__UnorderedGroup_2__Impl ( rule__MobaEntity__UnorderedGroup_2__1 )? ;
+    public final void rule__MobaEntity__UnorderedGroup_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8211:1: ( rule__MobaBean__UnorderedGroup_2__Impl ( rule__MobaBean__UnorderedGroup_2__1 )? )
-            // InternalMoba.g:8212:2: rule__MobaBean__UnorderedGroup_2__Impl ( rule__MobaBean__UnorderedGroup_2__1 )?
+            // InternalMoba.g:8211:1: ( rule__MobaEntity__UnorderedGroup_2__Impl ( rule__MobaEntity__UnorderedGroup_2__1 )? )
+            // InternalMoba.g:8212:2: rule__MobaEntity__UnorderedGroup_2__Impl ( rule__MobaEntity__UnorderedGroup_2__1 )?
             {
             pushFollow(FOLLOW_53);
-            rule__MobaBean__UnorderedGroup_2__Impl();
+            rule__MobaEntity__UnorderedGroup_2__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8213:2: ( rule__MobaBean__UnorderedGroup_2__1 )?
+            // InternalMoba.g:8213:2: ( rule__MobaEntity__UnorderedGroup_2__1 )?
             int alt76=2;
             int LA76_0 = input.LA(1);
 
-            if ( LA76_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 0) ) {
+            if ( LA76_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0) ) {
                 alt76=1;
             }
-            else if ( LA76_0 == 40 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAccess().getUnorderedGroup_2(), 1) ) {
+            else if ( LA76_0 == 40 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1) ) {
                 alt76=1;
             }
             switch (alt76) {
                 case 1 :
-                    // InternalMoba.g:8213:2: rule__MobaBean__UnorderedGroup_2__1
+                    // InternalMoba.g:8213:2: rule__MobaEntity__UnorderedGroup_2__1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBean__UnorderedGroup_2__1();
+                    rule__MobaEntity__UnorderedGroup_2__1();
 
                     state._fsp--;
 
@@ -25753,21 +25753,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__UnorderedGroup_2__0"
+    // $ANTLR end "rule__MobaEntity__UnorderedGroup_2__0"
 
 
-    // $ANTLR start "rule__MobaBean__UnorderedGroup_2__1"
-    // InternalMoba.g:8219:1: rule__MobaBean__UnorderedGroup_2__1 : rule__MobaBean__UnorderedGroup_2__Impl ;
-    public final void rule__MobaBean__UnorderedGroup_2__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__UnorderedGroup_2__1"
+    // InternalMoba.g:8219:1: rule__MobaEntity__UnorderedGroup_2__1 : rule__MobaEntity__UnorderedGroup_2__Impl ;
+    public final void rule__MobaEntity__UnorderedGroup_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8223:1: ( rule__MobaBean__UnorderedGroup_2__Impl )
-            // InternalMoba.g:8224:2: rule__MobaBean__UnorderedGroup_2__Impl
+            // InternalMoba.g:8223:1: ( rule__MobaEntity__UnorderedGroup_2__Impl )
+            // InternalMoba.g:8224:2: rule__MobaEntity__UnorderedGroup_2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBean__UnorderedGroup_2__Impl();
+            rule__MobaEntity__UnorderedGroup_2__Impl();
 
             state._fsp--;
 
@@ -25786,45 +25786,45 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__UnorderedGroup_2__1"
+    // $ANTLR end "rule__MobaEntity__UnorderedGroup_2__1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1"
-    // InternalMoba.g:8231:1: rule__MobaBeanAttribute__UnorderedGroup_1 : ( rule__MobaBeanAttribute__UnorderedGroup_1__0 )? ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1"
+    // InternalMoba.g:8231:1: rule__MobaEntityAttribute__UnorderedGroup_1 : ( rule__MobaEntityAttribute__UnorderedGroup_1__0 )? ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1());
+        		getUnorderedGroupHelper().enter(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalMoba.g:8236:1: ( ( rule__MobaBeanAttribute__UnorderedGroup_1__0 )? )
-            // InternalMoba.g:8237:2: ( rule__MobaBeanAttribute__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8236:1: ( ( rule__MobaEntityAttribute__UnorderedGroup_1__0 )? )
+            // InternalMoba.g:8237:2: ( rule__MobaEntityAttribute__UnorderedGroup_1__0 )?
             {
-            // InternalMoba.g:8237:2: ( rule__MobaBeanAttribute__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8237:2: ( rule__MobaEntityAttribute__UnorderedGroup_1__0 )?
             int alt77=2;
             int LA77_0 = input.LA(1);
 
-            if ( LA77_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA77_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt77=1;
             }
-            else if ( LA77_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA77_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt77=1;
             }
-            else if ( LA77_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA77_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt77=1;
             }
-            else if ( LA77_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA77_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt77=1;
             }
-            else if ( LA77_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA77_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt77=1;
             }
             switch (alt77) {
                 case 1 :
-                    // InternalMoba.g:8237:2: rule__MobaBeanAttribute__UnorderedGroup_1__0
+                    // InternalMoba.g:8237:2: rule__MobaEntityAttribute__UnorderedGroup_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__UnorderedGroup_1__0();
+                    rule__MobaEntityAttribute__UnorderedGroup_1__0();
 
                     state._fsp--;
 
@@ -25844,43 +25844,43 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         finally {
 
-            	getUnorderedGroupHelper().leave(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1());
+            	getUnorderedGroupHelper().leave(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1__Impl"
-    // InternalMoba.g:8245:1: rule__MobaBeanAttribute__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) ) ) ) ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1__Impl"
+    // InternalMoba.g:8245:1: rule__MobaEntityAttribute__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) ) ) ) ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalMoba.g:8250:1: ( ( ({...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) ) ) ) )
-            // InternalMoba.g:8251:3: ( ({...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) ) ) )
+            // InternalMoba.g:8250:1: ( ( ({...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) ) ) ) )
+            // InternalMoba.g:8251:3: ( ({...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) ) ) )
             {
-            // InternalMoba.g:8251:3: ( ({...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) ) ) )
+            // InternalMoba.g:8251:3: ( ({...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) ) ) )
             int alt78=5;
             int LA78_0 = input.LA(1);
 
-            if ( LA78_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA78_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt78=1;
             }
-            else if ( LA78_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA78_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt78=2;
             }
-            else if ( LA78_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA78_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt78=3;
             }
-            else if ( LA78_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA78_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt78=4;
             }
-            else if ( LA78_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA78_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt78=5;
             }
             else {
@@ -25891,39 +25891,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt78) {
                 case 1 :
-                    // InternalMoba.g:8252:3: ({...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8252:3: ({...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) ) )
                     {
-                    // InternalMoba.g:8252:3: ({...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) ) )
-                    // InternalMoba.g:8253:4: {...}? => ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) )
+                    // InternalMoba.g:8252:3: ({...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8253:4: {...}? => ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalMoba.g:8253:113: ( ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) ) )
-                    // InternalMoba.g:8254:5: ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) )
+                    // InternalMoba.g:8253:115: ( ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) ) )
+                    // InternalMoba.g:8254:5: ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8260:5: ( ( rule__MobaBeanAttribute__LazyAssignment_1_0 ) )
-                    // InternalMoba.g:8261:6: ( rule__MobaBeanAttribute__LazyAssignment_1_0 )
+                    // InternalMoba.g:8260:5: ( ( rule__MobaEntityAttribute__LazyAssignment_1_0 ) )
+                    // InternalMoba.g:8261:6: ( rule__MobaEntityAttribute__LazyAssignment_1_0 )
                     {
-                     before(grammarAccess.getMobaBeanAttributeAccess().getLazyAssignment_1_0()); 
-                    // InternalMoba.g:8262:6: ( rule__MobaBeanAttribute__LazyAssignment_1_0 )
-                    // InternalMoba.g:8262:7: rule__MobaBeanAttribute__LazyAssignment_1_0
+                     before(grammarAccess.getMobaEntityAttributeAccess().getLazyAssignment_1_0()); 
+                    // InternalMoba.g:8262:6: ( rule__MobaEntityAttribute__LazyAssignment_1_0 )
+                    // InternalMoba.g:8262:7: rule__MobaEntityAttribute__LazyAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__LazyAssignment_1_0();
+                    rule__MobaEntityAttribute__LazyAssignment_1_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAttributeAccess().getLazyAssignment_1_0()); 
+                     after(grammarAccess.getMobaEntityAttributeAccess().getLazyAssignment_1_0()); 
 
                     }
 
@@ -25937,39 +25937,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:8267:3: ({...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8267:3: ({...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) ) )
                     {
-                    // InternalMoba.g:8267:3: ({...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) ) )
-                    // InternalMoba.g:8268:4: {...}? => ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) )
+                    // InternalMoba.g:8267:3: ({...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8268:4: {...}? => ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalMoba.g:8268:113: ( ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) ) )
-                    // InternalMoba.g:8269:5: ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) )
+                    // InternalMoba.g:8268:115: ( ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) ) )
+                    // InternalMoba.g:8269:5: ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8275:5: ( ( rule__MobaBeanAttribute__TransientAssignment_1_1 ) )
-                    // InternalMoba.g:8276:6: ( rule__MobaBeanAttribute__TransientAssignment_1_1 )
+                    // InternalMoba.g:8275:5: ( ( rule__MobaEntityAttribute__TransientAssignment_1_1 ) )
+                    // InternalMoba.g:8276:6: ( rule__MobaEntityAttribute__TransientAssignment_1_1 )
                     {
-                     before(grammarAccess.getMobaBeanAttributeAccess().getTransientAssignment_1_1()); 
-                    // InternalMoba.g:8277:6: ( rule__MobaBeanAttribute__TransientAssignment_1_1 )
-                    // InternalMoba.g:8277:7: rule__MobaBeanAttribute__TransientAssignment_1_1
+                     before(grammarAccess.getMobaEntityAttributeAccess().getTransientAssignment_1_1()); 
+                    // InternalMoba.g:8277:6: ( rule__MobaEntityAttribute__TransientAssignment_1_1 )
+                    // InternalMoba.g:8277:7: rule__MobaEntityAttribute__TransientAssignment_1_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__TransientAssignment_1_1();
+                    rule__MobaEntityAttribute__TransientAssignment_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAttributeAccess().getTransientAssignment_1_1()); 
+                     after(grammarAccess.getMobaEntityAttributeAccess().getTransientAssignment_1_1()); 
 
                     }
 
@@ -25983,39 +25983,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:8282:3: ({...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8282:3: ({...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) ) )
                     {
-                    // InternalMoba.g:8282:3: ({...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) ) )
-                    // InternalMoba.g:8283:4: {...}? => ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) )
+                    // InternalMoba.g:8282:3: ({...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8283:4: {...}? => ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalMoba.g:8283:113: ( ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) ) )
-                    // InternalMoba.g:8284:5: ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) )
+                    // InternalMoba.g:8283:115: ( ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) ) )
+                    // InternalMoba.g:8284:5: ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8290:5: ( ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 ) )
-                    // InternalMoba.g:8291:6: ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 )
+                    // InternalMoba.g:8290:5: ( ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 ) )
+                    // InternalMoba.g:8291:6: ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 )
                     {
-                     before(grammarAccess.getMobaBeanAttributeAccess().getDomainKeyAssignment_1_2()); 
-                    // InternalMoba.g:8292:6: ( rule__MobaBeanAttribute__DomainKeyAssignment_1_2 )
-                    // InternalMoba.g:8292:7: rule__MobaBeanAttribute__DomainKeyAssignment_1_2
+                     before(grammarAccess.getMobaEntityAttributeAccess().getDomainKeyAssignment_1_2()); 
+                    // InternalMoba.g:8292:6: ( rule__MobaEntityAttribute__DomainKeyAssignment_1_2 )
+                    // InternalMoba.g:8292:7: rule__MobaEntityAttribute__DomainKeyAssignment_1_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__DomainKeyAssignment_1_2();
+                    rule__MobaEntityAttribute__DomainKeyAssignment_1_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAttributeAccess().getDomainKeyAssignment_1_2()); 
+                     after(grammarAccess.getMobaEntityAttributeAccess().getDomainKeyAssignment_1_2()); 
 
                     }
 
@@ -26029,39 +26029,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:8297:3: ({...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
+                    // InternalMoba.g:8297:3: ({...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
                     {
-                    // InternalMoba.g:8297:3: ({...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
-                    // InternalMoba.g:8298:4: {...}? => ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) )
+                    // InternalMoba.g:8297:3: ({...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
+                    // InternalMoba.g:8298:4: {...}? => ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3)");
                     }
-                    // InternalMoba.g:8298:113: ( ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) ) )
-                    // InternalMoba.g:8299:5: ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) )
+                    // InternalMoba.g:8298:115: ( ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) ) )
+                    // InternalMoba.g:8299:5: ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8305:5: ( ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 ) )
-                    // InternalMoba.g:8306:6: ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 )
+                    // InternalMoba.g:8305:5: ( ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 ) )
+                    // InternalMoba.g:8306:6: ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 )
                     {
-                     before(grammarAccess.getMobaBeanAttributeAccess().getDomainDescriptionAssignment_1_3()); 
-                    // InternalMoba.g:8307:6: ( rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 )
-                    // InternalMoba.g:8307:7: rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3
+                     before(grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionAssignment_1_3()); 
+                    // InternalMoba.g:8307:6: ( rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 )
+                    // InternalMoba.g:8307:7: rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3();
+                    rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAttributeAccess().getDomainDescriptionAssignment_1_3()); 
+                     after(grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionAssignment_1_3()); 
 
                     }
 
@@ -26075,39 +26075,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalMoba.g:8312:3: ({...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) ) )
+                    // InternalMoba.g:8312:3: ({...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) ) )
                     {
-                    // InternalMoba.g:8312:3: ({...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) ) )
-                    // InternalMoba.g:8313:4: {...}? => ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) )
+                    // InternalMoba.g:8312:3: ({...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) ) )
+                    // InternalMoba.g:8313:4: {...}? => ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4)");
                     }
-                    // InternalMoba.g:8313:113: ( ( ( rule__MobaBeanAttribute__Group_1_4__0 ) ) )
-                    // InternalMoba.g:8314:5: ( ( rule__MobaBeanAttribute__Group_1_4__0 ) )
+                    // InternalMoba.g:8313:115: ( ( ( rule__MobaEntityAttribute__Group_1_4__0 ) ) )
+                    // InternalMoba.g:8314:5: ( ( rule__MobaEntityAttribute__Group_1_4__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8320:5: ( ( rule__MobaBeanAttribute__Group_1_4__0 ) )
-                    // InternalMoba.g:8321:6: ( rule__MobaBeanAttribute__Group_1_4__0 )
+                    // InternalMoba.g:8320:5: ( ( rule__MobaEntityAttribute__Group_1_4__0 ) )
+                    // InternalMoba.g:8321:6: ( rule__MobaEntityAttribute__Group_1_4__0 )
                     {
-                     before(grammarAccess.getMobaBeanAttributeAccess().getGroup_1_4()); 
-                    // InternalMoba.g:8322:6: ( rule__MobaBeanAttribute__Group_1_4__0 )
-                    // InternalMoba.g:8322:7: rule__MobaBeanAttribute__Group_1_4__0
+                     before(grammarAccess.getMobaEntityAttributeAccess().getGroup_1_4()); 
+                    // InternalMoba.g:8322:6: ( rule__MobaEntityAttribute__Group_1_4__0 )
+                    // InternalMoba.g:8322:7: rule__MobaEntityAttribute__Group_1_4__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__Group_1_4__0();
+                    rule__MobaEntityAttribute__Group_1_4__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanAttributeAccess().getGroup_1_4()); 
+                     after(grammarAccess.getMobaEntityAttributeAccess().getGroup_1_4()); 
 
                     }
 
@@ -26134,55 +26134,55 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         finally {
 
             	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1());
+            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1__Impl"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1__0"
-    // InternalMoba.g:8335:1: rule__MobaBeanAttribute__UnorderedGroup_1__0 : rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__1 )? ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1__0"
+    // InternalMoba.g:8335:1: rule__MobaEntityAttribute__UnorderedGroup_1__0 : rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__1 )? ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8339:1: ( rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__1 )? )
-            // InternalMoba.g:8340:2: rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8339:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__1 )? )
+            // InternalMoba.g:8340:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__1 )?
             {
             pushFollow(FOLLOW_54);
-            rule__MobaBeanAttribute__UnorderedGroup_1__Impl();
+            rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8341:2: ( rule__MobaBeanAttribute__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8341:2: ( rule__MobaEntityAttribute__UnorderedGroup_1__1 )?
             int alt79=2;
             int LA79_0 = input.LA(1);
 
-            if ( LA79_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA79_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt79=1;
             }
-            else if ( LA79_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA79_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt79=1;
             }
-            else if ( LA79_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA79_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt79=1;
             }
-            else if ( LA79_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA79_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt79=1;
             }
-            else if ( LA79_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA79_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt79=1;
             }
             switch (alt79) {
                 case 1 :
-                    // InternalMoba.g:8341:2: rule__MobaBeanAttribute__UnorderedGroup_1__1
+                    // InternalMoba.g:8341:2: rule__MobaEntityAttribute__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__UnorderedGroup_1__1();
+                    rule__MobaEntityAttribute__UnorderedGroup_1__1();
 
                     state._fsp--;
 
@@ -26207,49 +26207,49 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1__0"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1__0"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1__1"
-    // InternalMoba.g:8347:1: rule__MobaBeanAttribute__UnorderedGroup_1__1 : rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__2 )? ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1__1"
+    // InternalMoba.g:8347:1: rule__MobaEntityAttribute__UnorderedGroup_1__1 : rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__2 )? ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8351:1: ( rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__2 )? )
-            // InternalMoba.g:8352:2: rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8351:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__2 )? )
+            // InternalMoba.g:8352:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__2 )?
             {
             pushFollow(FOLLOW_54);
-            rule__MobaBeanAttribute__UnorderedGroup_1__Impl();
+            rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8353:2: ( rule__MobaBeanAttribute__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8353:2: ( rule__MobaEntityAttribute__UnorderedGroup_1__2 )?
             int alt80=2;
             int LA80_0 = input.LA(1);
 
-            if ( LA80_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA80_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt80=1;
             }
-            else if ( LA80_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA80_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt80=1;
             }
-            else if ( LA80_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA80_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt80=1;
             }
-            else if ( LA80_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA80_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt80=1;
             }
-            else if ( LA80_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA80_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt80=1;
             }
             switch (alt80) {
                 case 1 :
-                    // InternalMoba.g:8353:2: rule__MobaBeanAttribute__UnorderedGroup_1__2
+                    // InternalMoba.g:8353:2: rule__MobaEntityAttribute__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__UnorderedGroup_1__2();
+                    rule__MobaEntityAttribute__UnorderedGroup_1__2();
 
                     state._fsp--;
 
@@ -26274,49 +26274,49 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1__1"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1__1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1__2"
-    // InternalMoba.g:8359:1: rule__MobaBeanAttribute__UnorderedGroup_1__2 : rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__3 )? ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1__2"
+    // InternalMoba.g:8359:1: rule__MobaEntityAttribute__UnorderedGroup_1__2 : rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__3 )? ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8363:1: ( rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__3 )? )
-            // InternalMoba.g:8364:2: rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__3 )?
+            // InternalMoba.g:8363:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__3 )? )
+            // InternalMoba.g:8364:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__3 )?
             {
             pushFollow(FOLLOW_54);
-            rule__MobaBeanAttribute__UnorderedGroup_1__Impl();
+            rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8365:2: ( rule__MobaBeanAttribute__UnorderedGroup_1__3 )?
+            // InternalMoba.g:8365:2: ( rule__MobaEntityAttribute__UnorderedGroup_1__3 )?
             int alt81=2;
             int LA81_0 = input.LA(1);
 
-            if ( LA81_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA81_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt81=1;
             }
-            else if ( LA81_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA81_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt81=1;
             }
-            else if ( LA81_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA81_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt81=1;
             }
-            else if ( LA81_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA81_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt81=1;
             }
-            else if ( LA81_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA81_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt81=1;
             }
             switch (alt81) {
                 case 1 :
-                    // InternalMoba.g:8365:2: rule__MobaBeanAttribute__UnorderedGroup_1__3
+                    // InternalMoba.g:8365:2: rule__MobaEntityAttribute__UnorderedGroup_1__3
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__UnorderedGroup_1__3();
+                    rule__MobaEntityAttribute__UnorderedGroup_1__3();
 
                     state._fsp--;
 
@@ -26341,49 +26341,49 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1__2"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1__2"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1__3"
-    // InternalMoba.g:8371:1: rule__MobaBeanAttribute__UnorderedGroup_1__3 : rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__4 )? ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1__3"
+    // InternalMoba.g:8371:1: rule__MobaEntityAttribute__UnorderedGroup_1__3 : rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__4 )? ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8375:1: ( rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__4 )? )
-            // InternalMoba.g:8376:2: rule__MobaBeanAttribute__UnorderedGroup_1__Impl ( rule__MobaBeanAttribute__UnorderedGroup_1__4 )?
+            // InternalMoba.g:8375:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__4 )? )
+            // InternalMoba.g:8376:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__4 )?
             {
             pushFollow(FOLLOW_54);
-            rule__MobaBeanAttribute__UnorderedGroup_1__Impl();
+            rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8377:2: ( rule__MobaBeanAttribute__UnorderedGroup_1__4 )?
+            // InternalMoba.g:8377:2: ( rule__MobaEntityAttribute__UnorderedGroup_1__4 )?
             int alt82=2;
             int LA82_0 = input.LA(1);
 
-            if ( LA82_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA82_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt82=1;
             }
-            else if ( LA82_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA82_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt82=1;
             }
-            else if ( LA82_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA82_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt82=1;
             }
-            else if ( LA82_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA82_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt82=1;
             }
-            else if ( LA82_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA82_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt82=1;
             }
             switch (alt82) {
                 case 1 :
-                    // InternalMoba.g:8377:2: rule__MobaBeanAttribute__UnorderedGroup_1__4
+                    // InternalMoba.g:8377:2: rule__MobaEntityAttribute__UnorderedGroup_1__4
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanAttribute__UnorderedGroup_1__4();
+                    rule__MobaEntityAttribute__UnorderedGroup_1__4();
 
                     state._fsp--;
 
@@ -26408,21 +26408,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1__3"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1__3"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__UnorderedGroup_1__4"
-    // InternalMoba.g:8383:1: rule__MobaBeanAttribute__UnorderedGroup_1__4 : rule__MobaBeanAttribute__UnorderedGroup_1__Impl ;
-    public final void rule__MobaBeanAttribute__UnorderedGroup_1__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__UnorderedGroup_1__4"
+    // InternalMoba.g:8383:1: rule__MobaEntityAttribute__UnorderedGroup_1__4 : rule__MobaEntityAttribute__UnorderedGroup_1__Impl ;
+    public final void rule__MobaEntityAttribute__UnorderedGroup_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8387:1: ( rule__MobaBeanAttribute__UnorderedGroup_1__Impl )
-            // InternalMoba.g:8388:2: rule__MobaBeanAttribute__UnorderedGroup_1__Impl
+            // InternalMoba.g:8387:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl )
+            // InternalMoba.g:8388:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanAttribute__UnorderedGroup_1__Impl();
+            rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
@@ -26441,7 +26441,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__UnorderedGroup_1__4"
+    // $ANTLR end "rule__MobaEntityAttribute__UnorderedGroup_1__4"
 
 
     // $ANTLR start "rule__MobaSettingsAttribute__UnorderedGroup_1"
@@ -27099,36 +27099,36 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaSettingsAttribute__UnorderedGroup_1__4"
 
 
-    // $ANTLR start "rule__MobaBeanReference__UnorderedGroup_1"
-    // InternalMoba.g:8559:1: rule__MobaBeanReference__UnorderedGroup_1 : ( rule__MobaBeanReference__UnorderedGroup_1__0 )? ;
-    public final void rule__MobaBeanReference__UnorderedGroup_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__UnorderedGroup_1"
+    // InternalMoba.g:8559:1: rule__MobaEntityReference__UnorderedGroup_1 : ( rule__MobaEntityReference__UnorderedGroup_1__0 )? ;
+    public final void rule__MobaEntityReference__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1());
+        		getUnorderedGroupHelper().enter(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalMoba.g:8564:1: ( ( rule__MobaBeanReference__UnorderedGroup_1__0 )? )
-            // InternalMoba.g:8565:2: ( rule__MobaBeanReference__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8564:1: ( ( rule__MobaEntityReference__UnorderedGroup_1__0 )? )
+            // InternalMoba.g:8565:2: ( rule__MobaEntityReference__UnorderedGroup_1__0 )?
             {
-            // InternalMoba.g:8565:2: ( rule__MobaBeanReference__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8565:2: ( rule__MobaEntityReference__UnorderedGroup_1__0 )?
             int alt89=2;
             int LA89_0 = input.LA(1);
 
-            if ( LA89_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA89_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt89=1;
             }
-            else if ( LA89_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA89_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt89=1;
             }
-            else if ( LA89_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA89_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt89=1;
             }
             switch (alt89) {
                 case 1 :
-                    // InternalMoba.g:8565:2: rule__MobaBeanReference__UnorderedGroup_1__0
+                    // InternalMoba.g:8565:2: rule__MobaEntityReference__UnorderedGroup_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanReference__UnorderedGroup_1__0();
+                    rule__MobaEntityReference__UnorderedGroup_1__0();
 
                     state._fsp--;
 
@@ -27148,37 +27148,37 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         finally {
 
-            	getUnorderedGroupHelper().leave(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1());
+            	getUnorderedGroupHelper().leave(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__UnorderedGroup_1"
+    // $ANTLR end "rule__MobaEntityReference__UnorderedGroup_1"
 
 
-    // $ANTLR start "rule__MobaBeanReference__UnorderedGroup_1__Impl"
-    // InternalMoba.g:8573:1: rule__MobaBeanReference__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) ) ) ) ;
-    public final void rule__MobaBeanReference__UnorderedGroup_1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__UnorderedGroup_1__Impl"
+    // InternalMoba.g:8573:1: rule__MobaEntityReference__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) ) ) ) ;
+    public final void rule__MobaEntityReference__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalMoba.g:8578:1: ( ( ({...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) ) ) ) )
-            // InternalMoba.g:8579:3: ( ({...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) ) ) )
+            // InternalMoba.g:8578:1: ( ( ({...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) ) ) ) )
+            // InternalMoba.g:8579:3: ( ({...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) ) ) )
             {
-            // InternalMoba.g:8579:3: ( ({...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) ) ) )
+            // InternalMoba.g:8579:3: ( ({...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) ) ) )
             int alt90=3;
             int LA90_0 = input.LA(1);
 
-            if ( LA90_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA90_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt90=1;
             }
-            else if ( LA90_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA90_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt90=2;
             }
-            else if ( LA90_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA90_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt90=3;
             }
             else {
@@ -27189,39 +27189,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt90) {
                 case 1 :
-                    // InternalMoba.g:8580:3: ({...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8580:3: ({...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) ) )
                     {
-                    // InternalMoba.g:8580:3: ({...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) ) )
-                    // InternalMoba.g:8581:4: {...}? => ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) )
+                    // InternalMoba.g:8580:3: ({...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8581:4: {...}? => ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalMoba.g:8581:113: ( ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) ) )
-                    // InternalMoba.g:8582:5: ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) )
+                    // InternalMoba.g:8581:115: ( ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) ) )
+                    // InternalMoba.g:8582:5: ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8588:5: ( ( rule__MobaBeanReference__CascadingAssignment_1_0 ) )
-                    // InternalMoba.g:8589:6: ( rule__MobaBeanReference__CascadingAssignment_1_0 )
+                    // InternalMoba.g:8588:5: ( ( rule__MobaEntityReference__CascadingAssignment_1_0 ) )
+                    // InternalMoba.g:8589:6: ( rule__MobaEntityReference__CascadingAssignment_1_0 )
                     {
-                     before(grammarAccess.getMobaBeanReferenceAccess().getCascadingAssignment_1_0()); 
-                    // InternalMoba.g:8590:6: ( rule__MobaBeanReference__CascadingAssignment_1_0 )
-                    // InternalMoba.g:8590:7: rule__MobaBeanReference__CascadingAssignment_1_0
+                     before(grammarAccess.getMobaEntityReferenceAccess().getCascadingAssignment_1_0()); 
+                    // InternalMoba.g:8590:6: ( rule__MobaEntityReference__CascadingAssignment_1_0 )
+                    // InternalMoba.g:8590:7: rule__MobaEntityReference__CascadingAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanReference__CascadingAssignment_1_0();
+                    rule__MobaEntityReference__CascadingAssignment_1_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanReferenceAccess().getCascadingAssignment_1_0()); 
+                     after(grammarAccess.getMobaEntityReferenceAccess().getCascadingAssignment_1_0()); 
 
                     }
 
@@ -27235,39 +27235,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:8595:3: ({...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8595:3: ({...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) ) )
                     {
-                    // InternalMoba.g:8595:3: ({...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) ) )
-                    // InternalMoba.g:8596:4: {...}? => ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) )
+                    // InternalMoba.g:8595:3: ({...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8596:4: {...}? => ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalMoba.g:8596:113: ( ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) ) )
-                    // InternalMoba.g:8597:5: ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) )
+                    // InternalMoba.g:8596:115: ( ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) ) )
+                    // InternalMoba.g:8597:5: ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8603:5: ( ( rule__MobaBeanReference__LazyAssignment_1_1 ) )
-                    // InternalMoba.g:8604:6: ( rule__MobaBeanReference__LazyAssignment_1_1 )
+                    // InternalMoba.g:8603:5: ( ( rule__MobaEntityReference__LazyAssignment_1_1 ) )
+                    // InternalMoba.g:8604:6: ( rule__MobaEntityReference__LazyAssignment_1_1 )
                     {
-                     before(grammarAccess.getMobaBeanReferenceAccess().getLazyAssignment_1_1()); 
-                    // InternalMoba.g:8605:6: ( rule__MobaBeanReference__LazyAssignment_1_1 )
-                    // InternalMoba.g:8605:7: rule__MobaBeanReference__LazyAssignment_1_1
+                     before(grammarAccess.getMobaEntityReferenceAccess().getLazyAssignment_1_1()); 
+                    // InternalMoba.g:8605:6: ( rule__MobaEntityReference__LazyAssignment_1_1 )
+                    // InternalMoba.g:8605:7: rule__MobaEntityReference__LazyAssignment_1_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanReference__LazyAssignment_1_1();
+                    rule__MobaEntityReference__LazyAssignment_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanReferenceAccess().getLazyAssignment_1_1()); 
+                     after(grammarAccess.getMobaEntityReferenceAccess().getLazyAssignment_1_1()); 
 
                     }
 
@@ -27281,39 +27281,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:8610:3: ({...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8610:3: ({...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) ) )
                     {
-                    // InternalMoba.g:8610:3: ({...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) ) )
-                    // InternalMoba.g:8611:4: {...}? => ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) )
+                    // InternalMoba.g:8610:3: ({...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8611:4: {...}? => ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2) ) {
-                        throw new FailedPredicateException(input, "rule__MobaBeanReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                        throw new FailedPredicateException(input, "rule__MobaEntityReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalMoba.g:8611:113: ( ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) ) )
-                    // InternalMoba.g:8612:5: ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) )
+                    // InternalMoba.g:8611:115: ( ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) ) )
+                    // InternalMoba.g:8612:5: ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8618:5: ( ( rule__MobaBeanReference__TransientAssignment_1_2 ) )
-                    // InternalMoba.g:8619:6: ( rule__MobaBeanReference__TransientAssignment_1_2 )
+                    // InternalMoba.g:8618:5: ( ( rule__MobaEntityReference__TransientAssignment_1_2 ) )
+                    // InternalMoba.g:8619:6: ( rule__MobaEntityReference__TransientAssignment_1_2 )
                     {
-                     before(grammarAccess.getMobaBeanReferenceAccess().getTransientAssignment_1_2()); 
-                    // InternalMoba.g:8620:6: ( rule__MobaBeanReference__TransientAssignment_1_2 )
-                    // InternalMoba.g:8620:7: rule__MobaBeanReference__TransientAssignment_1_2
+                     before(grammarAccess.getMobaEntityReferenceAccess().getTransientAssignment_1_2()); 
+                    // InternalMoba.g:8620:6: ( rule__MobaEntityReference__TransientAssignment_1_2 )
+                    // InternalMoba.g:8620:7: rule__MobaEntityReference__TransientAssignment_1_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanReference__TransientAssignment_1_2();
+                    rule__MobaEntityReference__TransientAssignment_1_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaBeanReferenceAccess().getTransientAssignment_1_2()); 
+                     after(grammarAccess.getMobaEntityReferenceAccess().getTransientAssignment_1_2()); 
 
                     }
 
@@ -27340,49 +27340,49 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         finally {
 
             	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1());
+            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__UnorderedGroup_1__Impl"
+    // $ANTLR end "rule__MobaEntityReference__UnorderedGroup_1__Impl"
 
 
-    // $ANTLR start "rule__MobaBeanReference__UnorderedGroup_1__0"
-    // InternalMoba.g:8633:1: rule__MobaBeanReference__UnorderedGroup_1__0 : rule__MobaBeanReference__UnorderedGroup_1__Impl ( rule__MobaBeanReference__UnorderedGroup_1__1 )? ;
-    public final void rule__MobaBeanReference__UnorderedGroup_1__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__UnorderedGroup_1__0"
+    // InternalMoba.g:8633:1: rule__MobaEntityReference__UnorderedGroup_1__0 : rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__1 )? ;
+    public final void rule__MobaEntityReference__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8637:1: ( rule__MobaBeanReference__UnorderedGroup_1__Impl ( rule__MobaBeanReference__UnorderedGroup_1__1 )? )
-            // InternalMoba.g:8638:2: rule__MobaBeanReference__UnorderedGroup_1__Impl ( rule__MobaBeanReference__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8637:1: ( rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__1 )? )
+            // InternalMoba.g:8638:2: rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__1 )?
             {
             pushFollow(FOLLOW_55);
-            rule__MobaBeanReference__UnorderedGroup_1__Impl();
+            rule__MobaEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8639:2: ( rule__MobaBeanReference__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8639:2: ( rule__MobaEntityReference__UnorderedGroup_1__1 )?
             int alt91=2;
             int LA91_0 = input.LA(1);
 
-            if ( LA91_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA91_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt91=1;
             }
-            else if ( LA91_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA91_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt91=1;
             }
-            else if ( LA91_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA91_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt91=1;
             }
             switch (alt91) {
                 case 1 :
-                    // InternalMoba.g:8639:2: rule__MobaBeanReference__UnorderedGroup_1__1
+                    // InternalMoba.g:8639:2: rule__MobaEntityReference__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanReference__UnorderedGroup_1__1();
+                    rule__MobaEntityReference__UnorderedGroup_1__1();
 
                     state._fsp--;
 
@@ -27407,43 +27407,43 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__UnorderedGroup_1__0"
+    // $ANTLR end "rule__MobaEntityReference__UnorderedGroup_1__0"
 
 
-    // $ANTLR start "rule__MobaBeanReference__UnorderedGroup_1__1"
-    // InternalMoba.g:8645:1: rule__MobaBeanReference__UnorderedGroup_1__1 : rule__MobaBeanReference__UnorderedGroup_1__Impl ( rule__MobaBeanReference__UnorderedGroup_1__2 )? ;
-    public final void rule__MobaBeanReference__UnorderedGroup_1__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__UnorderedGroup_1__1"
+    // InternalMoba.g:8645:1: rule__MobaEntityReference__UnorderedGroup_1__1 : rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__2 )? ;
+    public final void rule__MobaEntityReference__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8649:1: ( rule__MobaBeanReference__UnorderedGroup_1__Impl ( rule__MobaBeanReference__UnorderedGroup_1__2 )? )
-            // InternalMoba.g:8650:2: rule__MobaBeanReference__UnorderedGroup_1__Impl ( rule__MobaBeanReference__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8649:1: ( rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__2 )? )
+            // InternalMoba.g:8650:2: rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__2 )?
             {
             pushFollow(FOLLOW_55);
-            rule__MobaBeanReference__UnorderedGroup_1__Impl();
+            rule__MobaEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8651:2: ( rule__MobaBeanReference__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8651:2: ( rule__MobaEntityReference__UnorderedGroup_1__2 )?
             int alt92=2;
             int LA92_0 = input.LA(1);
 
-            if ( LA92_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA92_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt92=1;
             }
-            else if ( LA92_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA92_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt92=1;
             }
-            else if ( LA92_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaBeanReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA92_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt92=1;
             }
             switch (alt92) {
                 case 1 :
-                    // InternalMoba.g:8651:2: rule__MobaBeanReference__UnorderedGroup_1__2
+                    // InternalMoba.g:8651:2: rule__MobaEntityReference__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaBeanReference__UnorderedGroup_1__2();
+                    rule__MobaEntityReference__UnorderedGroup_1__2();
 
                     state._fsp--;
 
@@ -27468,21 +27468,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__UnorderedGroup_1__1"
+    // $ANTLR end "rule__MobaEntityReference__UnorderedGroup_1__1"
 
 
-    // $ANTLR start "rule__MobaBeanReference__UnorderedGroup_1__2"
-    // InternalMoba.g:8657:1: rule__MobaBeanReference__UnorderedGroup_1__2 : rule__MobaBeanReference__UnorderedGroup_1__Impl ;
-    public final void rule__MobaBeanReference__UnorderedGroup_1__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__UnorderedGroup_1__2"
+    // InternalMoba.g:8657:1: rule__MobaEntityReference__UnorderedGroup_1__2 : rule__MobaEntityReference__UnorderedGroup_1__Impl ;
+    public final void rule__MobaEntityReference__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8661:1: ( rule__MobaBeanReference__UnorderedGroup_1__Impl )
-            // InternalMoba.g:8662:2: rule__MobaBeanReference__UnorderedGroup_1__Impl
+            // InternalMoba.g:8661:1: ( rule__MobaEntityReference__UnorderedGroup_1__Impl )
+            // InternalMoba.g:8662:2: rule__MobaEntityReference__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaBeanReference__UnorderedGroup_1__Impl();
+            rule__MobaEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
@@ -27501,48 +27501,48 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__UnorderedGroup_1__2"
+    // $ANTLR end "rule__MobaEntityReference__UnorderedGroup_1__2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1"
-    // InternalMoba.g:8669:1: rule__MobaPayloadAttribute__UnorderedGroup_1 : ( rule__MobaPayloadAttribute__UnorderedGroup_1__0 )? ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1"
+    // InternalMoba.g:8669:1: rule__MobaDtoAttribute__UnorderedGroup_1 : ( rule__MobaDtoAttribute__UnorderedGroup_1__0 )? ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1());
+        		getUnorderedGroupHelper().enter(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalMoba.g:8674:1: ( ( rule__MobaPayloadAttribute__UnorderedGroup_1__0 )? )
-            // InternalMoba.g:8675:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8674:1: ( ( rule__MobaDtoAttribute__UnorderedGroup_1__0 )? )
+            // InternalMoba.g:8675:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__0 )?
             {
-            // InternalMoba.g:8675:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8675:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__0 )?
             int alt93=2;
             int LA93_0 = input.LA(1);
 
-            if ( LA93_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA93_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt93=1;
             }
-            else if ( LA93_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA93_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt93=1;
             }
-            else if ( LA93_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA93_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt93=1;
             }
-            else if ( LA93_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA93_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt93=1;
             }
-            else if ( LA93_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA93_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt93=1;
             }
-            else if ( LA93_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA93_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt93=1;
             }
             switch (alt93) {
                 case 1 :
-                    // InternalMoba.g:8675:2: rule__MobaPayloadAttribute__UnorderedGroup_1__0
+                    // InternalMoba.g:8675:2: rule__MobaDtoAttribute__UnorderedGroup_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__UnorderedGroup_1__0();
+                    rule__MobaDtoAttribute__UnorderedGroup_1__0();
 
                     state._fsp--;
 
@@ -27562,46 +27562,46 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         finally {
 
-            	getUnorderedGroupHelper().leave(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1());
+            	getUnorderedGroupHelper().leave(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl"
-    // InternalMoba.g:8683:1: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) ) ) ) ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__Impl"
+    // InternalMoba.g:8683:1: rule__MobaDtoAttribute__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) ) ) ) ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalMoba.g:8688:1: ( ( ({...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) ) ) ) )
-            // InternalMoba.g:8689:3: ( ({...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) ) ) )
+            // InternalMoba.g:8688:1: ( ( ({...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) ) ) ) )
+            // InternalMoba.g:8689:3: ( ({...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) ) ) )
             {
-            // InternalMoba.g:8689:3: ( ({...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) ) ) )
+            // InternalMoba.g:8689:3: ( ({...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) ) ) )
             int alt94=6;
             int LA94_0 = input.LA(1);
 
-            if ( LA94_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA94_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt94=1;
             }
-            else if ( LA94_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA94_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt94=2;
             }
-            else if ( LA94_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA94_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt94=3;
             }
-            else if ( LA94_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA94_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt94=4;
             }
-            else if ( LA94_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA94_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt94=5;
             }
-            else if ( LA94_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA94_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt94=6;
             }
             else {
@@ -27612,39 +27612,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt94) {
                 case 1 :
-                    // InternalMoba.g:8690:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8690:3: ({...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) ) )
                     {
-                    // InternalMoba.g:8690:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) ) )
-                    // InternalMoba.g:8691:4: {...}? => ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) )
+                    // InternalMoba.g:8690:3: ({...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8691:4: {...}? => ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalMoba.g:8691:116: ( ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) ) )
-                    // InternalMoba.g:8692:5: ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) )
+                    // InternalMoba.g:8691:112: ( ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) ) )
+                    // InternalMoba.g:8692:5: ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8698:5: ( ( rule__MobaPayloadAttribute__LazyAssignment_1_0 ) )
-                    // InternalMoba.g:8699:6: ( rule__MobaPayloadAttribute__LazyAssignment_1_0 )
+                    // InternalMoba.g:8698:5: ( ( rule__MobaDtoAttribute__LazyAssignment_1_0 ) )
+                    // InternalMoba.g:8699:6: ( rule__MobaDtoAttribute__LazyAssignment_1_0 )
                     {
-                     before(grammarAccess.getMobaPayloadAttributeAccess().getLazyAssignment_1_0()); 
-                    // InternalMoba.g:8700:6: ( rule__MobaPayloadAttribute__LazyAssignment_1_0 )
-                    // InternalMoba.g:8700:7: rule__MobaPayloadAttribute__LazyAssignment_1_0
+                     before(grammarAccess.getMobaDtoAttributeAccess().getLazyAssignment_1_0()); 
+                    // InternalMoba.g:8700:6: ( rule__MobaDtoAttribute__LazyAssignment_1_0 )
+                    // InternalMoba.g:8700:7: rule__MobaDtoAttribute__LazyAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__LazyAssignment_1_0();
+                    rule__MobaDtoAttribute__LazyAssignment_1_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadAttributeAccess().getLazyAssignment_1_0()); 
+                     after(grammarAccess.getMobaDtoAttributeAccess().getLazyAssignment_1_0()); 
 
                     }
 
@@ -27658,39 +27658,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:8705:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8705:3: ({...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) ) )
                     {
-                    // InternalMoba.g:8705:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) ) )
-                    // InternalMoba.g:8706:4: {...}? => ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) )
+                    // InternalMoba.g:8705:3: ({...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8706:4: {...}? => ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalMoba.g:8706:116: ( ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) ) )
-                    // InternalMoba.g:8707:5: ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) )
+                    // InternalMoba.g:8706:112: ( ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) ) )
+                    // InternalMoba.g:8707:5: ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8713:5: ( ( rule__MobaPayloadAttribute__TransientAssignment_1_1 ) )
-                    // InternalMoba.g:8714:6: ( rule__MobaPayloadAttribute__TransientAssignment_1_1 )
+                    // InternalMoba.g:8713:5: ( ( rule__MobaDtoAttribute__TransientAssignment_1_1 ) )
+                    // InternalMoba.g:8714:6: ( rule__MobaDtoAttribute__TransientAssignment_1_1 )
                     {
-                     before(grammarAccess.getMobaPayloadAttributeAccess().getTransientAssignment_1_1()); 
-                    // InternalMoba.g:8715:6: ( rule__MobaPayloadAttribute__TransientAssignment_1_1 )
-                    // InternalMoba.g:8715:7: rule__MobaPayloadAttribute__TransientAssignment_1_1
+                     before(grammarAccess.getMobaDtoAttributeAccess().getTransientAssignment_1_1()); 
+                    // InternalMoba.g:8715:6: ( rule__MobaDtoAttribute__TransientAssignment_1_1 )
+                    // InternalMoba.g:8715:7: rule__MobaDtoAttribute__TransientAssignment_1_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__TransientAssignment_1_1();
+                    rule__MobaDtoAttribute__TransientAssignment_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadAttributeAccess().getTransientAssignment_1_1()); 
+                     after(grammarAccess.getMobaDtoAttributeAccess().getTransientAssignment_1_1()); 
 
                     }
 
@@ -27704,39 +27704,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:8720:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8720:3: ({...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) ) )
                     {
-                    // InternalMoba.g:8720:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) ) )
-                    // InternalMoba.g:8721:4: {...}? => ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) )
+                    // InternalMoba.g:8720:3: ({...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8721:4: {...}? => ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalMoba.g:8721:116: ( ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) ) )
-                    // InternalMoba.g:8722:5: ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) )
+                    // InternalMoba.g:8721:112: ( ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) ) )
+                    // InternalMoba.g:8722:5: ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8728:5: ( ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 ) )
-                    // InternalMoba.g:8729:6: ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 )
+                    // InternalMoba.g:8728:5: ( ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 ) )
+                    // InternalMoba.g:8729:6: ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 )
                     {
-                     before(grammarAccess.getMobaPayloadAttributeAccess().getDomainKeyAssignment_1_2()); 
-                    // InternalMoba.g:8730:6: ( rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 )
-                    // InternalMoba.g:8730:7: rule__MobaPayloadAttribute__DomainKeyAssignment_1_2
+                     before(grammarAccess.getMobaDtoAttributeAccess().getDomainKeyAssignment_1_2()); 
+                    // InternalMoba.g:8730:6: ( rule__MobaDtoAttribute__DomainKeyAssignment_1_2 )
+                    // InternalMoba.g:8730:7: rule__MobaDtoAttribute__DomainKeyAssignment_1_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__DomainKeyAssignment_1_2();
+                    rule__MobaDtoAttribute__DomainKeyAssignment_1_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadAttributeAccess().getDomainKeyAssignment_1_2()); 
+                     after(grammarAccess.getMobaDtoAttributeAccess().getDomainKeyAssignment_1_2()); 
 
                     }
 
@@ -27750,39 +27750,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:8735:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
+                    // InternalMoba.g:8735:3: ({...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
                     {
-                    // InternalMoba.g:8735:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
-                    // InternalMoba.g:8736:4: {...}? => ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) )
+                    // InternalMoba.g:8735:3: ({...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) ) )
+                    // InternalMoba.g:8736:4: {...}? => ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3)");
                     }
-                    // InternalMoba.g:8736:116: ( ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) ) )
-                    // InternalMoba.g:8737:5: ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) )
+                    // InternalMoba.g:8736:112: ( ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) ) )
+                    // InternalMoba.g:8737:5: ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8743:5: ( ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 ) )
-                    // InternalMoba.g:8744:6: ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 )
+                    // InternalMoba.g:8743:5: ( ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 ) )
+                    // InternalMoba.g:8744:6: ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 )
                     {
-                     before(grammarAccess.getMobaPayloadAttributeAccess().getDomainDescriptionAssignment_1_3()); 
-                    // InternalMoba.g:8745:6: ( rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 )
-                    // InternalMoba.g:8745:7: rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3
+                     before(grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionAssignment_1_3()); 
+                    // InternalMoba.g:8745:6: ( rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 )
+                    // InternalMoba.g:8745:7: rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3();
+                    rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadAttributeAccess().getDomainDescriptionAssignment_1_3()); 
+                     after(grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionAssignment_1_3()); 
 
                     }
 
@@ -27796,39 +27796,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalMoba.g:8750:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) ) )
+                    // InternalMoba.g:8750:3: ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) ) )
                     {
-                    // InternalMoba.g:8750:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) ) )
-                    // InternalMoba.g:8751:4: {...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) )
+                    // InternalMoba.g:8750:3: ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) ) )
+                    // InternalMoba.g:8751:4: {...}? => ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4)");
                     }
-                    // InternalMoba.g:8751:116: ( ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) ) )
-                    // InternalMoba.g:8752:5: ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) )
+                    // InternalMoba.g:8751:112: ( ( ( rule__MobaDtoAttribute__Group_1_4__0 ) ) )
+                    // InternalMoba.g:8752:5: ( ( rule__MobaDtoAttribute__Group_1_4__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8758:5: ( ( rule__MobaPayloadAttribute__Group_1_4__0 ) )
-                    // InternalMoba.g:8759:6: ( rule__MobaPayloadAttribute__Group_1_4__0 )
+                    // InternalMoba.g:8758:5: ( ( rule__MobaDtoAttribute__Group_1_4__0 ) )
+                    // InternalMoba.g:8759:6: ( rule__MobaDtoAttribute__Group_1_4__0 )
                     {
-                     before(grammarAccess.getMobaPayloadAttributeAccess().getGroup_1_4()); 
-                    // InternalMoba.g:8760:6: ( rule__MobaPayloadAttribute__Group_1_4__0 )
-                    // InternalMoba.g:8760:7: rule__MobaPayloadAttribute__Group_1_4__0
+                     before(grammarAccess.getMobaDtoAttributeAccess().getGroup_1_4()); 
+                    // InternalMoba.g:8760:6: ( rule__MobaDtoAttribute__Group_1_4__0 )
+                    // InternalMoba.g:8760:7: rule__MobaDtoAttribute__Group_1_4__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__Group_1_4__0();
+                    rule__MobaDtoAttribute__Group_1_4__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadAttributeAccess().getGroup_1_4()); 
+                     after(grammarAccess.getMobaDtoAttributeAccess().getGroup_1_4()); 
 
                     }
 
@@ -27842,39 +27842,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalMoba.g:8765:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) ) )
+                    // InternalMoba.g:8765:3: ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) ) )
                     {
-                    // InternalMoba.g:8765:3: ({...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) ) )
-                    // InternalMoba.g:8766:4: {...}? => ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) )
+                    // InternalMoba.g:8765:3: ({...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) ) )
+                    // InternalMoba.g:8766:4: {...}? => ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoAttribute__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5)");
                     }
-                    // InternalMoba.g:8766:116: ( ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) ) )
-                    // InternalMoba.g:8767:5: ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) )
+                    // InternalMoba.g:8766:112: ( ( ( rule__MobaDtoAttribute__Group_1_5__0 ) ) )
+                    // InternalMoba.g:8767:5: ( ( rule__MobaDtoAttribute__Group_1_5__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8773:5: ( ( rule__MobaPayloadAttribute__Group_1_5__0 ) )
-                    // InternalMoba.g:8774:6: ( rule__MobaPayloadAttribute__Group_1_5__0 )
+                    // InternalMoba.g:8773:5: ( ( rule__MobaDtoAttribute__Group_1_5__0 ) )
+                    // InternalMoba.g:8774:6: ( rule__MobaDtoAttribute__Group_1_5__0 )
                     {
-                     before(grammarAccess.getMobaPayloadAttributeAccess().getGroup_1_5()); 
-                    // InternalMoba.g:8775:6: ( rule__MobaPayloadAttribute__Group_1_5__0 )
-                    // InternalMoba.g:8775:7: rule__MobaPayloadAttribute__Group_1_5__0
+                     before(grammarAccess.getMobaDtoAttributeAccess().getGroup_1_5()); 
+                    // InternalMoba.g:8775:6: ( rule__MobaDtoAttribute__Group_1_5__0 )
+                    // InternalMoba.g:8775:7: rule__MobaDtoAttribute__Group_1_5__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__Group_1_5__0();
+                    rule__MobaDtoAttribute__Group_1_5__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadAttributeAccess().getGroup_1_5()); 
+                     after(grammarAccess.getMobaDtoAttributeAccess().getGroup_1_5()); 
 
                     }
 
@@ -27901,58 +27901,58 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         finally {
 
             	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1());
+            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__Impl"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__0"
-    // InternalMoba.g:8788:1: rule__MobaPayloadAttribute__UnorderedGroup_1__0 : rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__1 )? ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__0"
+    // InternalMoba.g:8788:1: rule__MobaDtoAttribute__UnorderedGroup_1__0 : rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__1 )? ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8792:1: ( rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__1 )? )
-            // InternalMoba.g:8793:2: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8792:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__1 )? )
+            // InternalMoba.g:8793:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__1 )?
             {
             pushFollow(FOLLOW_56);
-            rule__MobaPayloadAttribute__UnorderedGroup_1__Impl();
+            rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8794:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8794:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__1 )?
             int alt95=2;
             int LA95_0 = input.LA(1);
 
-            if ( LA95_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA95_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt95=1;
             }
-            else if ( LA95_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA95_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt95=1;
             }
-            else if ( LA95_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA95_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt95=1;
             }
-            else if ( LA95_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA95_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt95=1;
             }
-            else if ( LA95_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA95_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt95=1;
             }
-            else if ( LA95_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA95_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt95=1;
             }
             switch (alt95) {
                 case 1 :
-                    // InternalMoba.g:8794:2: rule__MobaPayloadAttribute__UnorderedGroup_1__1
+                    // InternalMoba.g:8794:2: rule__MobaDtoAttribute__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__UnorderedGroup_1__1();
+                    rule__MobaDtoAttribute__UnorderedGroup_1__1();
 
                     state._fsp--;
 
@@ -27977,52 +27977,52 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__0"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__0"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__1"
-    // InternalMoba.g:8800:1: rule__MobaPayloadAttribute__UnorderedGroup_1__1 : rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__2 )? ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__1"
+    // InternalMoba.g:8800:1: rule__MobaDtoAttribute__UnorderedGroup_1__1 : rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__2 )? ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8804:1: ( rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__2 )? )
-            // InternalMoba.g:8805:2: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8804:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__2 )? )
+            // InternalMoba.g:8805:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__2 )?
             {
             pushFollow(FOLLOW_56);
-            rule__MobaPayloadAttribute__UnorderedGroup_1__Impl();
+            rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8806:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8806:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__2 )?
             int alt96=2;
             int LA96_0 = input.LA(1);
 
-            if ( LA96_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA96_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt96=1;
             }
-            else if ( LA96_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA96_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt96=1;
             }
-            else if ( LA96_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA96_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt96=1;
             }
-            else if ( LA96_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA96_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt96=1;
             }
-            else if ( LA96_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA96_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt96=1;
             }
-            else if ( LA96_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA96_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt96=1;
             }
             switch (alt96) {
                 case 1 :
-                    // InternalMoba.g:8806:2: rule__MobaPayloadAttribute__UnorderedGroup_1__2
+                    // InternalMoba.g:8806:2: rule__MobaDtoAttribute__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__UnorderedGroup_1__2();
+                    rule__MobaDtoAttribute__UnorderedGroup_1__2();
 
                     state._fsp--;
 
@@ -28047,52 +28047,52 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__1"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__2"
-    // InternalMoba.g:8812:1: rule__MobaPayloadAttribute__UnorderedGroup_1__2 : rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__3 )? ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__2"
+    // InternalMoba.g:8812:1: rule__MobaDtoAttribute__UnorderedGroup_1__2 : rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__3 )? ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8816:1: ( rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__3 )? )
-            // InternalMoba.g:8817:2: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__3 )?
+            // InternalMoba.g:8816:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__3 )? )
+            // InternalMoba.g:8817:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__3 )?
             {
             pushFollow(FOLLOW_56);
-            rule__MobaPayloadAttribute__UnorderedGroup_1__Impl();
+            rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8818:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__3 )?
+            // InternalMoba.g:8818:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__3 )?
             int alt97=2;
             int LA97_0 = input.LA(1);
 
-            if ( LA97_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA97_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt97=1;
             }
-            else if ( LA97_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA97_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt97=1;
             }
-            else if ( LA97_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA97_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt97=1;
             }
-            else if ( LA97_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA97_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt97=1;
             }
-            else if ( LA97_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA97_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt97=1;
             }
-            else if ( LA97_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA97_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt97=1;
             }
             switch (alt97) {
                 case 1 :
-                    // InternalMoba.g:8818:2: rule__MobaPayloadAttribute__UnorderedGroup_1__3
+                    // InternalMoba.g:8818:2: rule__MobaDtoAttribute__UnorderedGroup_1__3
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__UnorderedGroup_1__3();
+                    rule__MobaDtoAttribute__UnorderedGroup_1__3();
 
                     state._fsp--;
 
@@ -28117,52 +28117,52 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__2"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__3"
-    // InternalMoba.g:8824:1: rule__MobaPayloadAttribute__UnorderedGroup_1__3 : rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__4 )? ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__3"
+    // InternalMoba.g:8824:1: rule__MobaDtoAttribute__UnorderedGroup_1__3 : rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__4 )? ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8828:1: ( rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__4 )? )
-            // InternalMoba.g:8829:2: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__4 )?
+            // InternalMoba.g:8828:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__4 )? )
+            // InternalMoba.g:8829:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__4 )?
             {
             pushFollow(FOLLOW_56);
-            rule__MobaPayloadAttribute__UnorderedGroup_1__Impl();
+            rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8830:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__4 )?
+            // InternalMoba.g:8830:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__4 )?
             int alt98=2;
             int LA98_0 = input.LA(1);
 
-            if ( LA98_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA98_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt98=1;
             }
-            else if ( LA98_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA98_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt98=1;
             }
-            else if ( LA98_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA98_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt98=1;
             }
-            else if ( LA98_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA98_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt98=1;
             }
-            else if ( LA98_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA98_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt98=1;
             }
-            else if ( LA98_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA98_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt98=1;
             }
             switch (alt98) {
                 case 1 :
-                    // InternalMoba.g:8830:2: rule__MobaPayloadAttribute__UnorderedGroup_1__4
+                    // InternalMoba.g:8830:2: rule__MobaDtoAttribute__UnorderedGroup_1__4
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__UnorderedGroup_1__4();
+                    rule__MobaDtoAttribute__UnorderedGroup_1__4();
 
                     state._fsp--;
 
@@ -28187,52 +28187,52 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__3"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__3"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__4"
-    // InternalMoba.g:8836:1: rule__MobaPayloadAttribute__UnorderedGroup_1__4 : rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__5 )? ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__4"
+    // InternalMoba.g:8836:1: rule__MobaDtoAttribute__UnorderedGroup_1__4 : rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__5 )? ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8840:1: ( rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__5 )? )
-            // InternalMoba.g:8841:2: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ( rule__MobaPayloadAttribute__UnorderedGroup_1__5 )?
+            // InternalMoba.g:8840:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__5 )? )
+            // InternalMoba.g:8841:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__5 )?
             {
             pushFollow(FOLLOW_56);
-            rule__MobaPayloadAttribute__UnorderedGroup_1__Impl();
+            rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8842:2: ( rule__MobaPayloadAttribute__UnorderedGroup_1__5 )?
+            // InternalMoba.g:8842:2: ( rule__MobaDtoAttribute__UnorderedGroup_1__5 )?
             int alt99=2;
             int LA99_0 = input.LA(1);
 
-            if ( LA99_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA99_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                 alt99=1;
             }
-            else if ( LA99_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA99_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                 alt99=1;
             }
-            else if ( LA99_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA99_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                 alt99=1;
             }
-            else if ( LA99_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 3) ) {
+            else if ( LA99_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                 alt99=1;
             }
-            else if ( LA99_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 4) ) {
+            else if ( LA99_0 == 32 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                 alt99=1;
             }
-            else if ( LA99_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadAttributeAccess().getUnorderedGroup_1(), 5) ) {
+            else if ( LA99_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                 alt99=1;
             }
             switch (alt99) {
                 case 1 :
-                    // InternalMoba.g:8842:2: rule__MobaPayloadAttribute__UnorderedGroup_1__5
+                    // InternalMoba.g:8842:2: rule__MobaDtoAttribute__UnorderedGroup_1__5
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadAttribute__UnorderedGroup_1__5();
+                    rule__MobaDtoAttribute__UnorderedGroup_1__5();
 
                     state._fsp--;
 
@@ -28257,21 +28257,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__4"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__4"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__UnorderedGroup_1__5"
-    // InternalMoba.g:8848:1: rule__MobaPayloadAttribute__UnorderedGroup_1__5 : rule__MobaPayloadAttribute__UnorderedGroup_1__Impl ;
-    public final void rule__MobaPayloadAttribute__UnorderedGroup_1__5() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__UnorderedGroup_1__5"
+    // InternalMoba.g:8848:1: rule__MobaDtoAttribute__UnorderedGroup_1__5 : rule__MobaDtoAttribute__UnorderedGroup_1__Impl ;
+    public final void rule__MobaDtoAttribute__UnorderedGroup_1__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8852:1: ( rule__MobaPayloadAttribute__UnorderedGroup_1__Impl )
-            // InternalMoba.g:8853:2: rule__MobaPayloadAttribute__UnorderedGroup_1__Impl
+            // InternalMoba.g:8852:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl )
+            // InternalMoba.g:8853:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadAttribute__UnorderedGroup_1__Impl();
+            rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
@@ -28290,39 +28290,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__UnorderedGroup_1__5"
+    // $ANTLR end "rule__MobaDtoAttribute__UnorderedGroup_1__5"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__UnorderedGroup_1"
-    // InternalMoba.g:8860:1: rule__MobaPayloadReference__UnorderedGroup_1 : ( rule__MobaPayloadReference__UnorderedGroup_1__0 )? ;
-    public final void rule__MobaPayloadReference__UnorderedGroup_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__UnorderedGroup_1"
+    // InternalMoba.g:8860:1: rule__MobaDtoReference__UnorderedGroup_1 : ( rule__MobaDtoReference__UnorderedGroup_1__0 )? ;
+    public final void rule__MobaDtoReference__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1());
+        		getUnorderedGroupHelper().enter(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalMoba.g:8865:1: ( ( rule__MobaPayloadReference__UnorderedGroup_1__0 )? )
-            // InternalMoba.g:8866:2: ( rule__MobaPayloadReference__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8865:1: ( ( rule__MobaDtoReference__UnorderedGroup_1__0 )? )
+            // InternalMoba.g:8866:2: ( rule__MobaDtoReference__UnorderedGroup_1__0 )?
             {
-            // InternalMoba.g:8866:2: ( rule__MobaPayloadReference__UnorderedGroup_1__0 )?
+            // InternalMoba.g:8866:2: ( rule__MobaDtoReference__UnorderedGroup_1__0 )?
             int alt100=2;
             int LA100_0 = input.LA(1);
 
-            if ( LA100_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA100_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt100=1;
             }
-            else if ( LA100_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA100_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt100=1;
             }
-            else if ( LA100_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA100_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt100=1;
             }
             switch (alt100) {
                 case 1 :
-                    // InternalMoba.g:8866:2: rule__MobaPayloadReference__UnorderedGroup_1__0
+                    // InternalMoba.g:8866:2: rule__MobaDtoReference__UnorderedGroup_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadReference__UnorderedGroup_1__0();
+                    rule__MobaDtoReference__UnorderedGroup_1__0();
 
                     state._fsp--;
 
@@ -28342,37 +28342,37 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         finally {
 
-            	getUnorderedGroupHelper().leave(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1());
+            	getUnorderedGroupHelper().leave(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__UnorderedGroup_1"
+    // $ANTLR end "rule__MobaDtoReference__UnorderedGroup_1"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__UnorderedGroup_1__Impl"
-    // InternalMoba.g:8874:1: rule__MobaPayloadReference__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) ) ) ) ;
-    public final void rule__MobaPayloadReference__UnorderedGroup_1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__UnorderedGroup_1__Impl"
+    // InternalMoba.g:8874:1: rule__MobaDtoReference__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) ) ) ) ;
+    public final void rule__MobaDtoReference__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalMoba.g:8879:1: ( ( ({...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) ) ) ) )
-            // InternalMoba.g:8880:3: ( ({...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) ) ) )
+            // InternalMoba.g:8879:1: ( ( ({...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) ) ) ) )
+            // InternalMoba.g:8880:3: ( ({...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) ) ) )
             {
-            // InternalMoba.g:8880:3: ( ({...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) ) ) )
+            // InternalMoba.g:8880:3: ( ({...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) ) ) | ({...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) ) ) )
             int alt101=3;
             int LA101_0 = input.LA(1);
 
-            if ( LA101_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA101_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt101=1;
             }
-            else if ( LA101_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA101_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt101=2;
             }
-            else if ( LA101_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA101_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt101=3;
             }
             else {
@@ -28383,39 +28383,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             }
             switch (alt101) {
                 case 1 :
-                    // InternalMoba.g:8881:3: ({...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8881:3: ({...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) ) )
                     {
-                    // InternalMoba.g:8881:3: ({...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) ) )
-                    // InternalMoba.g:8882:4: {...}? => ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) )
+                    // InternalMoba.g:8881:3: ({...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) ) )
+                    // InternalMoba.g:8882:4: {...}? => ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalMoba.g:8882:116: ( ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) ) )
-                    // InternalMoba.g:8883:5: ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) )
+                    // InternalMoba.g:8882:112: ( ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) ) )
+                    // InternalMoba.g:8883:5: ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8889:5: ( ( rule__MobaPayloadReference__CascadingAssignment_1_0 ) )
-                    // InternalMoba.g:8890:6: ( rule__MobaPayloadReference__CascadingAssignment_1_0 )
+                    // InternalMoba.g:8889:5: ( ( rule__MobaDtoReference__CascadingAssignment_1_0 ) )
+                    // InternalMoba.g:8890:6: ( rule__MobaDtoReference__CascadingAssignment_1_0 )
                     {
-                     before(grammarAccess.getMobaPayloadReferenceAccess().getCascadingAssignment_1_0()); 
-                    // InternalMoba.g:8891:6: ( rule__MobaPayloadReference__CascadingAssignment_1_0 )
-                    // InternalMoba.g:8891:7: rule__MobaPayloadReference__CascadingAssignment_1_0
+                     before(grammarAccess.getMobaDtoReferenceAccess().getCascadingAssignment_1_0()); 
+                    // InternalMoba.g:8891:6: ( rule__MobaDtoReference__CascadingAssignment_1_0 )
+                    // InternalMoba.g:8891:7: rule__MobaDtoReference__CascadingAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadReference__CascadingAssignment_1_0();
+                    rule__MobaDtoReference__CascadingAssignment_1_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadReferenceAccess().getCascadingAssignment_1_0()); 
+                     after(grammarAccess.getMobaDtoReferenceAccess().getCascadingAssignment_1_0()); 
 
                     }
 
@@ -28429,39 +28429,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:8896:3: ({...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8896:3: ({...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) ) )
                     {
-                    // InternalMoba.g:8896:3: ({...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) ) )
-                    // InternalMoba.g:8897:4: {...}? => ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) )
+                    // InternalMoba.g:8896:3: ({...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) ) )
+                    // InternalMoba.g:8897:4: {...}? => ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalMoba.g:8897:116: ( ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) ) )
-                    // InternalMoba.g:8898:5: ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) )
+                    // InternalMoba.g:8897:112: ( ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) ) )
+                    // InternalMoba.g:8898:5: ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8904:5: ( ( rule__MobaPayloadReference__LazyAssignment_1_1 ) )
-                    // InternalMoba.g:8905:6: ( rule__MobaPayloadReference__LazyAssignment_1_1 )
+                    // InternalMoba.g:8904:5: ( ( rule__MobaDtoReference__LazyAssignment_1_1 ) )
+                    // InternalMoba.g:8905:6: ( rule__MobaDtoReference__LazyAssignment_1_1 )
                     {
-                     before(grammarAccess.getMobaPayloadReferenceAccess().getLazyAssignment_1_1()); 
-                    // InternalMoba.g:8906:6: ( rule__MobaPayloadReference__LazyAssignment_1_1 )
-                    // InternalMoba.g:8906:7: rule__MobaPayloadReference__LazyAssignment_1_1
+                     before(grammarAccess.getMobaDtoReferenceAccess().getLazyAssignment_1_1()); 
+                    // InternalMoba.g:8906:6: ( rule__MobaDtoReference__LazyAssignment_1_1 )
+                    // InternalMoba.g:8906:7: rule__MobaDtoReference__LazyAssignment_1_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadReference__LazyAssignment_1_1();
+                    rule__MobaDtoReference__LazyAssignment_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadReferenceAccess().getLazyAssignment_1_1()); 
+                     after(grammarAccess.getMobaDtoReferenceAccess().getLazyAssignment_1_1()); 
 
                     }
 
@@ -28475,39 +28475,39 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:8911:3: ({...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8911:3: ({...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) ) )
                     {
-                    // InternalMoba.g:8911:3: ({...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) ) )
-                    // InternalMoba.g:8912:4: {...}? => ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) )
+                    // InternalMoba.g:8911:3: ({...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) ) )
+                    // InternalMoba.g:8912:4: {...}? => ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2) ) {
-                        throw new FailedPredicateException(input, "rule__MobaPayloadReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                        throw new FailedPredicateException(input, "rule__MobaDtoReference__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalMoba.g:8912:116: ( ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) ) )
-                    // InternalMoba.g:8913:5: ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) )
+                    // InternalMoba.g:8912:112: ( ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) ) )
+                    // InternalMoba.g:8913:5: ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2);
+                    					getUnorderedGroupHelper().select(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2);
                     				
 
                     					selected = true;
                     				
-                    // InternalMoba.g:8919:5: ( ( rule__MobaPayloadReference__TransientAssignment_1_2 ) )
-                    // InternalMoba.g:8920:6: ( rule__MobaPayloadReference__TransientAssignment_1_2 )
+                    // InternalMoba.g:8919:5: ( ( rule__MobaDtoReference__TransientAssignment_1_2 ) )
+                    // InternalMoba.g:8920:6: ( rule__MobaDtoReference__TransientAssignment_1_2 )
                     {
-                     before(grammarAccess.getMobaPayloadReferenceAccess().getTransientAssignment_1_2()); 
-                    // InternalMoba.g:8921:6: ( rule__MobaPayloadReference__TransientAssignment_1_2 )
-                    // InternalMoba.g:8921:7: rule__MobaPayloadReference__TransientAssignment_1_2
+                     before(grammarAccess.getMobaDtoReferenceAccess().getTransientAssignment_1_2()); 
+                    // InternalMoba.g:8921:6: ( rule__MobaDtoReference__TransientAssignment_1_2 )
+                    // InternalMoba.g:8921:7: rule__MobaDtoReference__TransientAssignment_1_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadReference__TransientAssignment_1_2();
+                    rule__MobaDtoReference__TransientAssignment_1_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getMobaPayloadReferenceAccess().getTransientAssignment_1_2()); 
+                     after(grammarAccess.getMobaDtoReferenceAccess().getTransientAssignment_1_2()); 
 
                     }
 
@@ -28534,49 +28534,49 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         finally {
 
             	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1());
+            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__UnorderedGroup_1__Impl"
+    // $ANTLR end "rule__MobaDtoReference__UnorderedGroup_1__Impl"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__UnorderedGroup_1__0"
-    // InternalMoba.g:8934:1: rule__MobaPayloadReference__UnorderedGroup_1__0 : rule__MobaPayloadReference__UnorderedGroup_1__Impl ( rule__MobaPayloadReference__UnorderedGroup_1__1 )? ;
-    public final void rule__MobaPayloadReference__UnorderedGroup_1__0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__UnorderedGroup_1__0"
+    // InternalMoba.g:8934:1: rule__MobaDtoReference__UnorderedGroup_1__0 : rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__1 )? ;
+    public final void rule__MobaDtoReference__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8938:1: ( rule__MobaPayloadReference__UnorderedGroup_1__Impl ( rule__MobaPayloadReference__UnorderedGroup_1__1 )? )
-            // InternalMoba.g:8939:2: rule__MobaPayloadReference__UnorderedGroup_1__Impl ( rule__MobaPayloadReference__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8938:1: ( rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__1 )? )
+            // InternalMoba.g:8939:2: rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__1 )?
             {
             pushFollow(FOLLOW_55);
-            rule__MobaPayloadReference__UnorderedGroup_1__Impl();
+            rule__MobaDtoReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8940:2: ( rule__MobaPayloadReference__UnorderedGroup_1__1 )?
+            // InternalMoba.g:8940:2: ( rule__MobaDtoReference__UnorderedGroup_1__1 )?
             int alt102=2;
             int LA102_0 = input.LA(1);
 
-            if ( LA102_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA102_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt102=1;
             }
-            else if ( LA102_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA102_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt102=1;
             }
-            else if ( LA102_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA102_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt102=1;
             }
             switch (alt102) {
                 case 1 :
-                    // InternalMoba.g:8940:2: rule__MobaPayloadReference__UnorderedGroup_1__1
+                    // InternalMoba.g:8940:2: rule__MobaDtoReference__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadReference__UnorderedGroup_1__1();
+                    rule__MobaDtoReference__UnorderedGroup_1__1();
 
                     state._fsp--;
 
@@ -28601,43 +28601,43 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__UnorderedGroup_1__0"
+    // $ANTLR end "rule__MobaDtoReference__UnorderedGroup_1__0"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__UnorderedGroup_1__1"
-    // InternalMoba.g:8946:1: rule__MobaPayloadReference__UnorderedGroup_1__1 : rule__MobaPayloadReference__UnorderedGroup_1__Impl ( rule__MobaPayloadReference__UnorderedGroup_1__2 )? ;
-    public final void rule__MobaPayloadReference__UnorderedGroup_1__1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__UnorderedGroup_1__1"
+    // InternalMoba.g:8946:1: rule__MobaDtoReference__UnorderedGroup_1__1 : rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__2 )? ;
+    public final void rule__MobaDtoReference__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8950:1: ( rule__MobaPayloadReference__UnorderedGroup_1__Impl ( rule__MobaPayloadReference__UnorderedGroup_1__2 )? )
-            // InternalMoba.g:8951:2: rule__MobaPayloadReference__UnorderedGroup_1__Impl ( rule__MobaPayloadReference__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8950:1: ( rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__2 )? )
+            // InternalMoba.g:8951:2: rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__2 )?
             {
             pushFollow(FOLLOW_55);
-            rule__MobaPayloadReference__UnorderedGroup_1__Impl();
+            rule__MobaDtoReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalMoba.g:8952:2: ( rule__MobaPayloadReference__UnorderedGroup_1__2 )?
+            // InternalMoba.g:8952:2: ( rule__MobaDtoReference__UnorderedGroup_1__2 )?
             int alt103=2;
             int LA103_0 = input.LA(1);
 
-            if ( LA103_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 0) ) {
+            if ( LA103_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
                 alt103=1;
             }
-            else if ( LA103_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 1) ) {
+            else if ( LA103_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
                 alt103=1;
             }
-            else if ( LA103_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaPayloadReferenceAccess().getUnorderedGroup_1(), 2) ) {
+            else if ( LA103_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
                 alt103=1;
             }
             switch (alt103) {
                 case 1 :
-                    // InternalMoba.g:8952:2: rule__MobaPayloadReference__UnorderedGroup_1__2
+                    // InternalMoba.g:8952:2: rule__MobaDtoReference__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__MobaPayloadReference__UnorderedGroup_1__2();
+                    rule__MobaDtoReference__UnorderedGroup_1__2();
 
                     state._fsp--;
 
@@ -28662,21 +28662,21 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__UnorderedGroup_1__1"
+    // $ANTLR end "rule__MobaDtoReference__UnorderedGroup_1__1"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__UnorderedGroup_1__2"
-    // InternalMoba.g:8958:1: rule__MobaPayloadReference__UnorderedGroup_1__2 : rule__MobaPayloadReference__UnorderedGroup_1__Impl ;
-    public final void rule__MobaPayloadReference__UnorderedGroup_1__2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__UnorderedGroup_1__2"
+    // InternalMoba.g:8958:1: rule__MobaDtoReference__UnorderedGroup_1__2 : rule__MobaDtoReference__UnorderedGroup_1__Impl ;
+    public final void rule__MobaDtoReference__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:8962:1: ( rule__MobaPayloadReference__UnorderedGroup_1__Impl )
-            // InternalMoba.g:8963:2: rule__MobaPayloadReference__UnorderedGroup_1__Impl
+            // InternalMoba.g:8962:1: ( rule__MobaDtoReference__UnorderedGroup_1__Impl )
+            // InternalMoba.g:8963:2: rule__MobaDtoReference__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__MobaPayloadReference__UnorderedGroup_1__Impl();
+            rule__MobaDtoReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
@@ -28695,7 +28695,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__UnorderedGroup_1__2"
+    // $ANTLR end "rule__MobaDtoReference__UnorderedGroup_1__2"
 
 
     // $ANTLR start "rule__MobaQueueReference__UnorderedGroup_1"
@@ -31108,9 +31108,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaCache__CacheStrategyConstAssignment_2_1_1_2_1"
 
 
-    // $ANTLR start "rule__MobaBean__NameAssignment_1"
-    // InternalMoba.g:9887:1: rule__MobaBean__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__MobaBean__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__NameAssignment_1"
+    // InternalMoba.g:9887:1: rule__MobaEntity__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__MobaEntity__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31121,9 +31121,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9892:2: ( RULE_ID )
             // InternalMoba.g:9893:3: RULE_ID
             {
-             before(grammarAccess.getMobaBeanAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getMobaEntityAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAccess().getNameIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getMobaEntityAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -31142,12 +31142,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__NameAssignment_1"
+    // $ANTLR end "rule__MobaEntity__NameAssignment_1"
 
 
-    // $ANTLR start "rule__MobaBean__SuperTypeAssignment_2_0_1"
-    // InternalMoba.g:9902:1: rule__MobaBean__SuperTypeAssignment_2_0_1 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaBean__SuperTypeAssignment_2_0_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__SuperTypeAssignment_2_0_1"
+    // InternalMoba.g:9902:1: rule__MobaEntity__SuperTypeAssignment_2_0_1 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaEntity__SuperTypeAssignment_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31158,17 +31158,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9907:2: ( ( RULE_ID ) )
             // InternalMoba.g:9908:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaBeanAccess().getSuperTypeMobaBeanCrossReference_2_0_1_0()); 
+             before(grammarAccess.getMobaEntityAccess().getSuperTypeMobaEntityCrossReference_2_0_1_0()); 
             // InternalMoba.g:9909:3: ( RULE_ID )
             // InternalMoba.g:9910:4: RULE_ID
             {
-             before(grammarAccess.getMobaBeanAccess().getSuperTypeMobaBeanIDTerminalRuleCall_2_0_1_0_1()); 
+             before(grammarAccess.getMobaEntityAccess().getSuperTypeMobaEntityIDTerminalRuleCall_2_0_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAccess().getSuperTypeMobaBeanIDTerminalRuleCall_2_0_1_0_1()); 
+             after(grammarAccess.getMobaEntityAccess().getSuperTypeMobaEntityIDTerminalRuleCall_2_0_1_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaBeanAccess().getSuperTypeMobaBeanCrossReference_2_0_1_0()); 
+             after(grammarAccess.getMobaEntityAccess().getSuperTypeMobaEntityCrossReference_2_0_1_0()); 
 
             }
 
@@ -31187,12 +31187,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__SuperTypeAssignment_2_0_1"
+    // $ANTLR end "rule__MobaEntity__SuperTypeAssignment_2_0_1"
 
 
-    // $ANTLR start "rule__MobaBean__CacheAssignment_2_1"
-    // InternalMoba.g:9921:1: rule__MobaBean__CacheAssignment_2_1 : ( ruleMobaCache ) ;
-    public final void rule__MobaBean__CacheAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__CacheAssignment_2_1"
+    // InternalMoba.g:9921:1: rule__MobaEntity__CacheAssignment_2_1 : ( ruleMobaCache ) ;
+    public final void rule__MobaEntity__CacheAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31203,13 +31203,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9926:2: ( ruleMobaCache )
             // InternalMoba.g:9927:3: ruleMobaCache
             {
-             before(grammarAccess.getMobaBeanAccess().getCacheMobaCacheParserRuleCall_2_1_0()); 
+             before(grammarAccess.getMobaEntityAccess().getCacheMobaCacheParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaCache();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAccess().getCacheMobaCacheParserRuleCall_2_1_0()); 
+             after(grammarAccess.getMobaEntityAccess().getCacheMobaCacheParserRuleCall_2_1_0()); 
 
             }
 
@@ -31228,29 +31228,29 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__CacheAssignment_2_1"
+    // $ANTLR end "rule__MobaEntity__CacheAssignment_2_1"
 
 
-    // $ANTLR start "rule__MobaBean__FeaturesAssignment_5"
-    // InternalMoba.g:9936:1: rule__MobaBean__FeaturesAssignment_5 : ( ruleMobaBeanFeature ) ;
-    public final void rule__MobaBean__FeaturesAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__FeaturesAssignment_5"
+    // InternalMoba.g:9936:1: rule__MobaEntity__FeaturesAssignment_5 : ( ruleMobaEntityFeature ) ;
+    public final void rule__MobaEntity__FeaturesAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:9940:1: ( ( ruleMobaBeanFeature ) )
-            // InternalMoba.g:9941:2: ( ruleMobaBeanFeature )
+            // InternalMoba.g:9940:1: ( ( ruleMobaEntityFeature ) )
+            // InternalMoba.g:9941:2: ( ruleMobaEntityFeature )
             {
-            // InternalMoba.g:9941:2: ( ruleMobaBeanFeature )
-            // InternalMoba.g:9942:3: ruleMobaBeanFeature
+            // InternalMoba.g:9941:2: ( ruleMobaEntityFeature )
+            // InternalMoba.g:9942:3: ruleMobaEntityFeature
             {
-             before(grammarAccess.getMobaBeanAccess().getFeaturesMobaBeanFeatureParserRuleCall_5_0()); 
+             before(grammarAccess.getMobaEntityAccess().getFeaturesMobaEntityFeatureParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
-            ruleMobaBeanFeature();
+            ruleMobaEntityFeature();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAccess().getFeaturesMobaBeanFeatureParserRuleCall_5_0()); 
+             after(grammarAccess.getMobaEntityAccess().getFeaturesMobaEntityFeatureParserRuleCall_5_0()); 
 
             }
 
@@ -31269,29 +31269,29 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__FeaturesAssignment_5"
+    // $ANTLR end "rule__MobaEntity__FeaturesAssignment_5"
 
 
-    // $ANTLR start "rule__MobaBean__IndexAssignment_6"
-    // InternalMoba.g:9951:1: rule__MobaBean__IndexAssignment_6 : ( ruleMobaBeanIndex ) ;
-    public final void rule__MobaBean__IndexAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntity__IndexAssignment_6"
+    // InternalMoba.g:9951:1: rule__MobaEntity__IndexAssignment_6 : ( ruleMobaEntityIndex ) ;
+    public final void rule__MobaEntity__IndexAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:9955:1: ( ( ruleMobaBeanIndex ) )
-            // InternalMoba.g:9956:2: ( ruleMobaBeanIndex )
+            // InternalMoba.g:9955:1: ( ( ruleMobaEntityIndex ) )
+            // InternalMoba.g:9956:2: ( ruleMobaEntityIndex )
             {
-            // InternalMoba.g:9956:2: ( ruleMobaBeanIndex )
-            // InternalMoba.g:9957:3: ruleMobaBeanIndex
+            // InternalMoba.g:9956:2: ( ruleMobaEntityIndex )
+            // InternalMoba.g:9957:3: ruleMobaEntityIndex
             {
-             before(grammarAccess.getMobaBeanAccess().getIndexMobaBeanIndexParserRuleCall_6_0()); 
+             before(grammarAccess.getMobaEntityAccess().getIndexMobaEntityIndexParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
-            ruleMobaBeanIndex();
+            ruleMobaEntityIndex();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAccess().getIndexMobaBeanIndexParserRuleCall_6_0()); 
+             after(grammarAccess.getMobaEntityAccess().getIndexMobaEntityIndexParserRuleCall_6_0()); 
 
             }
 
@@ -31310,12 +31310,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBean__IndexAssignment_6"
+    // $ANTLR end "rule__MobaEntity__IndexAssignment_6"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__AttributesAssignment_1"
-    // InternalMoba.g:9966:1: rule__MobaBeanIndex__AttributesAssignment_1 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaBeanIndex__AttributesAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__AttributesAssignment_1"
+    // InternalMoba.g:9966:1: rule__MobaEntityIndex__AttributesAssignment_1 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaEntityIndex__AttributesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31326,17 +31326,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9971:2: ( ( RULE_ID ) )
             // InternalMoba.g:9972:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeCrossReference_1_0()); 
+             before(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_1_0()); 
             // InternalMoba.g:9973:3: ( RULE_ID )
             // InternalMoba.g:9974:4: RULE_ID
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeIDTerminalRuleCall_1_0_1()); 
+             before(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeIDTerminalRuleCall_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeIDTerminalRuleCall_1_0_1()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeIDTerminalRuleCall_1_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeCrossReference_1_0()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_1_0()); 
 
             }
 
@@ -31355,12 +31355,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__AttributesAssignment_1"
+    // $ANTLR end "rule__MobaEntityIndex__AttributesAssignment_1"
 
 
-    // $ANTLR start "rule__MobaBeanIndex__AttributesAssignment_2_1"
-    // InternalMoba.g:9985:1: rule__MobaBeanIndex__AttributesAssignment_2_1 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaBeanIndex__AttributesAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityIndex__AttributesAssignment_2_1"
+    // InternalMoba.g:9985:1: rule__MobaEntityIndex__AttributesAssignment_2_1 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaEntityIndex__AttributesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31371,17 +31371,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9990:2: ( ( RULE_ID ) )
             // InternalMoba.g:9991:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeCrossReference_2_1_0()); 
+             before(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_2_1_0()); 
             // InternalMoba.g:9992:3: ( RULE_ID )
             // InternalMoba.g:9993:4: RULE_ID
             {
-             before(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeIDTerminalRuleCall_2_1_0_1()); 
+             before(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeIDTerminalRuleCall_2_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeIDTerminalRuleCall_2_1_0_1()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeIDTerminalRuleCall_2_1_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaBeanIndexAccess().getAttributesMobaBeanAttributeCrossReference_2_1_0()); 
+             after(grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_2_1_0()); 
 
             }
 
@@ -31400,12 +31400,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanIndex__AttributesAssignment_2_1"
+    // $ANTLR end "rule__MobaEntityIndex__AttributesAssignment_2_1"
 
 
-    // $ANTLR start "rule__MobaPayload__NameAssignment_1"
-    // InternalMoba.g:10004:1: rule__MobaPayload__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__MobaPayload__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__NameAssignment_1"
+    // InternalMoba.g:10004:1: rule__MobaDto__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__MobaDto__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31416,9 +31416,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10009:2: ( RULE_ID )
             // InternalMoba.g:10010:3: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getMobaDtoAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAccess().getNameIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getMobaDtoAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -31437,12 +31437,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__NameAssignment_1"
+    // $ANTLR end "rule__MobaDto__NameAssignment_1"
 
 
-    // $ANTLR start "rule__MobaPayload__SuperTypeAssignment_2_1"
-    // InternalMoba.g:10019:1: rule__MobaPayload__SuperTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaPayload__SuperTypeAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__SuperTypeAssignment_2_1"
+    // InternalMoba.g:10019:1: rule__MobaDto__SuperTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaDto__SuperTypeAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31453,17 +31453,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10024:2: ( ( RULE_ID ) )
             // InternalMoba.g:10025:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaPayloadAccess().getSuperTypeMobaPayloadCrossReference_2_1_0()); 
+             before(grammarAccess.getMobaDtoAccess().getSuperTypeMobaDtoCrossReference_2_1_0()); 
             // InternalMoba.g:10026:3: ( RULE_ID )
             // InternalMoba.g:10027:4: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadAccess().getSuperTypeMobaPayloadIDTerminalRuleCall_2_1_0_1()); 
+             before(grammarAccess.getMobaDtoAccess().getSuperTypeMobaDtoIDTerminalRuleCall_2_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAccess().getSuperTypeMobaPayloadIDTerminalRuleCall_2_1_0_1()); 
+             after(grammarAccess.getMobaDtoAccess().getSuperTypeMobaDtoIDTerminalRuleCall_2_1_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadAccess().getSuperTypeMobaPayloadCrossReference_2_1_0()); 
+             after(grammarAccess.getMobaDtoAccess().getSuperTypeMobaDtoCrossReference_2_1_0()); 
 
             }
 
@@ -31482,29 +31482,29 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__SuperTypeAssignment_2_1"
+    // $ANTLR end "rule__MobaDto__SuperTypeAssignment_2_1"
 
 
-    // $ANTLR start "rule__MobaPayload__FeaturesAssignment_5"
-    // InternalMoba.g:10038:1: rule__MobaPayload__FeaturesAssignment_5 : ( ruleMobaPayloadFeature ) ;
-    public final void rule__MobaPayload__FeaturesAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__MobaDto__FeaturesAssignment_5"
+    // InternalMoba.g:10038:1: rule__MobaDto__FeaturesAssignment_5 : ( ruleMobaDtoFeature ) ;
+    public final void rule__MobaDto__FeaturesAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:10042:1: ( ( ruleMobaPayloadFeature ) )
-            // InternalMoba.g:10043:2: ( ruleMobaPayloadFeature )
+            // InternalMoba.g:10042:1: ( ( ruleMobaDtoFeature ) )
+            // InternalMoba.g:10043:2: ( ruleMobaDtoFeature )
             {
-            // InternalMoba.g:10043:2: ( ruleMobaPayloadFeature )
-            // InternalMoba.g:10044:3: ruleMobaPayloadFeature
+            // InternalMoba.g:10043:2: ( ruleMobaDtoFeature )
+            // InternalMoba.g:10044:3: ruleMobaDtoFeature
             {
-             before(grammarAccess.getMobaPayloadAccess().getFeaturesMobaPayloadFeatureParserRuleCall_5_0()); 
+             before(grammarAccess.getMobaDtoAccess().getFeaturesMobaDtoFeatureParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
-            ruleMobaPayloadFeature();
+            ruleMobaDtoFeature();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadAccess().getFeaturesMobaPayloadFeatureParserRuleCall_5_0()); 
+             after(grammarAccess.getMobaDtoAccess().getFeaturesMobaDtoFeatureParserRuleCall_5_0()); 
 
             }
 
@@ -31523,7 +31523,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayload__FeaturesAssignment_5"
+    // $ANTLR end "rule__MobaDto__FeaturesAssignment_5"
 
 
     // $ANTLR start "rule__MobaQueue__NameAssignment_1"
@@ -31723,9 +31723,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaRestCrud__NameAssignment_1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__LazyAssignment_1_0"
-    // InternalMoba.g:10132:1: rule__MobaBeanAttribute__LazyAssignment_1_0 : ( ( 'lazy' ) ) ;
-    public final void rule__MobaBeanAttribute__LazyAssignment_1_0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__LazyAssignment_1_0"
+    // InternalMoba.g:10132:1: rule__MobaEntityAttribute__LazyAssignment_1_0 : ( ( 'lazy' ) ) ;
+    public final void rule__MobaEntityAttribute__LazyAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31736,17 +31736,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10137:2: ( ( 'lazy' ) )
             // InternalMoba.g:10138:3: ( 'lazy' )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getLazyLazyKeyword_1_0_0()); 
             // InternalMoba.g:10139:3: ( 'lazy' )
             // InternalMoba.g:10140:4: 'lazy'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getLazyLazyKeyword_1_0_0()); 
             match(input,67,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getLazyLazyKeyword_1_0_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getLazyLazyKeyword_1_0_0()); 
 
             }
 
@@ -31765,12 +31765,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__LazyAssignment_1_0"
+    // $ANTLR end "rule__MobaEntityAttribute__LazyAssignment_1_0"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__TransientAssignment_1_1"
-    // InternalMoba.g:10151:1: rule__MobaBeanAttribute__TransientAssignment_1_1 : ( ( 'transient' ) ) ;
-    public final void rule__MobaBeanAttribute__TransientAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__TransientAssignment_1_1"
+    // InternalMoba.g:10151:1: rule__MobaEntityAttribute__TransientAssignment_1_1 : ( ( 'transient' ) ) ;
+    public final void rule__MobaEntityAttribute__TransientAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31781,17 +31781,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10156:2: ( ( 'transient' ) )
             // InternalMoba.g:10157:3: ( 'transient' )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getTransientTransientKeyword_1_1_0()); 
             // InternalMoba.g:10158:3: ( 'transient' )
             // InternalMoba.g:10159:4: 'transient'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getTransientTransientKeyword_1_1_0()); 
             match(input,68,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getTransientTransientKeyword_1_1_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getTransientTransientKeyword_1_1_0()); 
 
             }
 
@@ -31810,12 +31810,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__TransientAssignment_1_1"
+    // $ANTLR end "rule__MobaEntityAttribute__TransientAssignment_1_1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__DomainKeyAssignment_1_2"
-    // InternalMoba.g:10170:1: rule__MobaBeanAttribute__DomainKeyAssignment_1_2 : ( ( 'domainKey' ) ) ;
-    public final void rule__MobaBeanAttribute__DomainKeyAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__DomainKeyAssignment_1_2"
+    // InternalMoba.g:10170:1: rule__MobaEntityAttribute__DomainKeyAssignment_1_2 : ( ( 'domainKey' ) ) ;
+    public final void rule__MobaEntityAttribute__DomainKeyAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31826,17 +31826,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10175:2: ( ( 'domainKey' ) )
             // InternalMoba.g:10176:3: ( 'domainKey' )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
             // InternalMoba.g:10177:3: ( 'domainKey' )
             // InternalMoba.g:10178:4: 'domainKey'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
             match(input,69,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
 
             }
 
@@ -31855,12 +31855,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__DomainKeyAssignment_1_2"
+    // $ANTLR end "rule__MobaEntityAttribute__DomainKeyAssignment_1_2"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3"
-    // InternalMoba.g:10189:1: rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3 : ( ( 'domainDescription' ) ) ;
-    public final void rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3"
+    // InternalMoba.g:10189:1: rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3 : ( ( 'domainDescription' ) ) ;
+    public final void rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31871,17 +31871,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10194:2: ( ( 'domainDescription' ) )
             // InternalMoba.g:10195:3: ( 'domainDescription' )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
             // InternalMoba.g:10196:3: ( 'domainDescription' )
             // InternalMoba.g:10197:4: 'domainDescription'
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
             match(input,70,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
 
             }
 
@@ -31900,12 +31900,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__DomainDescriptionAssignment_1_3"
+    // $ANTLR end "rule__MobaEntityAttribute__DomainDescriptionAssignment_1_3"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2"
-    // InternalMoba.g:10208:1: rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2 : ( ruleMobaConstraint ) ;
-    public final void rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2"
+    // InternalMoba.g:10208:1: rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2 : ( ruleMobaConstraint ) ;
+    public final void rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31916,13 +31916,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10213:2: ( ruleMobaConstraint )
             // InternalMoba.g:10214:3: ruleMobaConstraint
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaConstraint();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
 
             }
 
@@ -31941,12 +31941,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__ConstraintsAssignment_1_4_2"
+    // $ANTLR end "rule__MobaEntityAttribute__ConstraintsAssignment_1_4_2"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1"
-    // InternalMoba.g:10223:1: rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1 : ( ruleMobaConstraint ) ;
-    public final void rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1"
+    // InternalMoba.g:10223:1: rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1 : ( ruleMobaConstraint ) ;
+    public final void rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31957,13 +31957,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10228:2: ( ruleMobaConstraint )
             // InternalMoba.g:10229:3: ruleMobaConstraint
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaConstraint();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
 
             }
 
@@ -31982,12 +31982,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__ConstraintsAssignment_1_4_3_1"
+    // $ANTLR end "rule__MobaEntityAttribute__ConstraintsAssignment_1_4_3_1"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__TypeAssignment_2"
-    // InternalMoba.g:10238:1: rule__MobaBeanAttribute__TypeAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaBeanAttribute__TypeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__TypeAssignment_2"
+    // InternalMoba.g:10238:1: rule__MobaEntityAttribute__TypeAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaEntityAttribute__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -31998,17 +31998,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10243:2: ( ( RULE_ID ) )
             // InternalMoba.g:10244:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
             // InternalMoba.g:10245:3: ( RULE_ID )
             // InternalMoba.g:10246:4: RULE_ID
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaBeanAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
 
             }
 
@@ -32027,12 +32027,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__TypeAssignment_2"
+    // $ANTLR end "rule__MobaEntityAttribute__TypeAssignment_2"
 
 
-    // $ANTLR start "rule__MobaBeanAttribute__NameAssignment_4"
-    // InternalMoba.g:10257:1: rule__MobaBeanAttribute__NameAssignment_4 : ( RULE_ID ) ;
-    public final void rule__MobaBeanAttribute__NameAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityAttribute__NameAssignment_4"
+    // InternalMoba.g:10257:1: rule__MobaEntityAttribute__NameAssignment_4 : ( RULE_ID ) ;
+    public final void rule__MobaEntityAttribute__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32043,9 +32043,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10262:2: ( RULE_ID )
             // InternalMoba.g:10263:3: RULE_ID
             {
-             before(grammarAccess.getMobaBeanAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
+             before(grammarAccess.getMobaEntityAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
+             after(grammarAccess.getMobaEntityAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
 
             }
 
@@ -32064,7 +32064,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanAttribute__NameAssignment_4"
+    // $ANTLR end "rule__MobaEntityAttribute__NameAssignment_4"
 
 
     // $ANTLR start "rule__MobaSettingsAttribute__LazyAssignment_1_0"
@@ -32452,9 +32452,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MobaMultiplicityAble__MultiplicityAssignment"
 
 
-    // $ANTLR start "rule__MobaBeanReference__CascadingAssignment_1_0"
-    // InternalMoba.g:10427:1: rule__MobaBeanReference__CascadingAssignment_1_0 : ( ( 'cascading' ) ) ;
-    public final void rule__MobaBeanReference__CascadingAssignment_1_0() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__CascadingAssignment_1_0"
+    // InternalMoba.g:10427:1: rule__MobaEntityReference__CascadingAssignment_1_0 : ( ( 'cascading' ) ) ;
+    public final void rule__MobaEntityReference__CascadingAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32465,17 +32465,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10432:2: ( ( 'cascading' ) )
             // InternalMoba.g:10433:3: ( 'cascading' )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
             // InternalMoba.g:10434:3: ( 'cascading' )
             // InternalMoba.g:10435:4: 'cascading'
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
             match(input,71,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
 
             }
 
@@ -32494,12 +32494,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__CascadingAssignment_1_0"
+    // $ANTLR end "rule__MobaEntityReference__CascadingAssignment_1_0"
 
 
-    // $ANTLR start "rule__MobaBeanReference__LazyAssignment_1_1"
-    // InternalMoba.g:10446:1: rule__MobaBeanReference__LazyAssignment_1_1 : ( ( 'lazy' ) ) ;
-    public final void rule__MobaBeanReference__LazyAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__LazyAssignment_1_1"
+    // InternalMoba.g:10446:1: rule__MobaEntityReference__LazyAssignment_1_1 : ( ( 'lazy' ) ) ;
+    public final void rule__MobaEntityReference__LazyAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32510,17 +32510,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10451:2: ( ( 'lazy' ) )
             // InternalMoba.g:10452:3: ( 'lazy' )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); 
             // InternalMoba.g:10453:3: ( 'lazy' )
             // InternalMoba.g:10454:4: 'lazy'
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); 
             match(input,67,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); 
 
             }
 
@@ -32539,12 +32539,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__LazyAssignment_1_1"
+    // $ANTLR end "rule__MobaEntityReference__LazyAssignment_1_1"
 
 
-    // $ANTLR start "rule__MobaBeanReference__TransientAssignment_1_2"
-    // InternalMoba.g:10465:1: rule__MobaBeanReference__TransientAssignment_1_2 : ( ( 'transient' ) ) ;
-    public final void rule__MobaBeanReference__TransientAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__TransientAssignment_1_2"
+    // InternalMoba.g:10465:1: rule__MobaEntityReference__TransientAssignment_1_2 : ( ( 'transient' ) ) ;
+    public final void rule__MobaEntityReference__TransientAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32555,17 +32555,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10470:2: ( ( 'transient' ) )
             // InternalMoba.g:10471:3: ( 'transient' )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); 
             // InternalMoba.g:10472:3: ( 'transient' )
             // InternalMoba.g:10473:4: 'transient'
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); 
             match(input,68,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); 
 
             }
 
@@ -32584,12 +32584,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__TransientAssignment_1_2"
+    // $ANTLR end "rule__MobaEntityReference__TransientAssignment_1_2"
 
 
-    // $ANTLR start "rule__MobaBeanReference__TypeAssignment_2"
-    // InternalMoba.g:10484:1: rule__MobaBeanReference__TypeAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaBeanReference__TypeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__TypeAssignment_2"
+    // InternalMoba.g:10484:1: rule__MobaEntityReference__TypeAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaEntityReference__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32600,17 +32600,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10489:2: ( ( RULE_ID ) )
             // InternalMoba.g:10490:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getTypeMobaBeanCrossReference_2_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getTypeMobaEntityCrossReference_2_0()); 
             // InternalMoba.g:10491:3: ( RULE_ID )
             // InternalMoba.g:10492:4: RULE_ID
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getTypeMobaBeanIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getTypeMobaEntityIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanReferenceAccess().getTypeMobaBeanIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getTypeMobaEntityIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaBeanReferenceAccess().getTypeMobaBeanCrossReference_2_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getTypeMobaEntityCrossReference_2_0()); 
 
             }
 
@@ -32629,12 +32629,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__TypeAssignment_2"
+    // $ANTLR end "rule__MobaEntityReference__TypeAssignment_2"
 
 
-    // $ANTLR start "rule__MobaBeanReference__NameAssignment_4"
-    // InternalMoba.g:10503:1: rule__MobaBeanReference__NameAssignment_4 : ( RULE_ID ) ;
-    public final void rule__MobaBeanReference__NameAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__MobaEntityReference__NameAssignment_4"
+    // InternalMoba.g:10503:1: rule__MobaEntityReference__NameAssignment_4 : ( RULE_ID ) ;
+    public final void rule__MobaEntityReference__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32645,9 +32645,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10508:2: ( RULE_ID )
             // InternalMoba.g:10509:3: RULE_ID
             {
-             before(grammarAccess.getMobaBeanReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
+             before(grammarAccess.getMobaEntityReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaBeanReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
+             after(grammarAccess.getMobaEntityReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
 
             }
 
@@ -32666,12 +32666,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaBeanReference__NameAssignment_4"
+    // $ANTLR end "rule__MobaEntityReference__NameAssignment_4"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__LazyAssignment_1_0"
-    // InternalMoba.g:10518:1: rule__MobaPayloadAttribute__LazyAssignment_1_0 : ( ( 'lazy' ) ) ;
-    public final void rule__MobaPayloadAttribute__LazyAssignment_1_0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__LazyAssignment_1_0"
+    // InternalMoba.g:10518:1: rule__MobaDtoAttribute__LazyAssignment_1_0 : ( ( 'lazy' ) ) ;
+    public final void rule__MobaDtoAttribute__LazyAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32682,17 +32682,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10523:2: ( ( 'lazy' ) )
             // InternalMoba.g:10524:3: ( 'lazy' )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getLazyLazyKeyword_1_0_0()); 
             // InternalMoba.g:10525:3: ( 'lazy' )
             // InternalMoba.g:10526:4: 'lazy'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getLazyLazyKeyword_1_0_0()); 
             match(input,67,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getLazyLazyKeyword_1_0_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getLazyLazyKeyword_1_0_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getLazyLazyKeyword_1_0_0()); 
 
             }
 
@@ -32711,12 +32711,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__LazyAssignment_1_0"
+    // $ANTLR end "rule__MobaDtoAttribute__LazyAssignment_1_0"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__TransientAssignment_1_1"
-    // InternalMoba.g:10537:1: rule__MobaPayloadAttribute__TransientAssignment_1_1 : ( ( 'transient' ) ) ;
-    public final void rule__MobaPayloadAttribute__TransientAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__TransientAssignment_1_1"
+    // InternalMoba.g:10537:1: rule__MobaDtoAttribute__TransientAssignment_1_1 : ( ( 'transient' ) ) ;
+    public final void rule__MobaDtoAttribute__TransientAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32727,17 +32727,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10542:2: ( ( 'transient' ) )
             // InternalMoba.g:10543:3: ( 'transient' )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getTransientTransientKeyword_1_1_0()); 
             // InternalMoba.g:10544:3: ( 'transient' )
             // InternalMoba.g:10545:4: 'transient'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getTransientTransientKeyword_1_1_0()); 
             match(input,68,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getTransientTransientKeyword_1_1_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getTransientTransientKeyword_1_1_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getTransientTransientKeyword_1_1_0()); 
 
             }
 
@@ -32756,12 +32756,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__TransientAssignment_1_1"
+    // $ANTLR end "rule__MobaDtoAttribute__TransientAssignment_1_1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__DomainKeyAssignment_1_2"
-    // InternalMoba.g:10556:1: rule__MobaPayloadAttribute__DomainKeyAssignment_1_2 : ( ( 'domainKey' ) ) ;
-    public final void rule__MobaPayloadAttribute__DomainKeyAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__DomainKeyAssignment_1_2"
+    // InternalMoba.g:10556:1: rule__MobaDtoAttribute__DomainKeyAssignment_1_2 : ( ( 'domainKey' ) ) ;
+    public final void rule__MobaDtoAttribute__DomainKeyAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32772,17 +32772,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10561:2: ( ( 'domainKey' ) )
             // InternalMoba.g:10562:3: ( 'domainKey' )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
             // InternalMoba.g:10563:3: ( 'domainKey' )
             // InternalMoba.g:10564:4: 'domainKey'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
             match(input,69,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0()); 
 
             }
 
@@ -32801,12 +32801,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__DomainKeyAssignment_1_2"
+    // $ANTLR end "rule__MobaDtoAttribute__DomainKeyAssignment_1_2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3"
-    // InternalMoba.g:10575:1: rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3 : ( ( 'domainDescription' ) ) ;
-    public final void rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3"
+    // InternalMoba.g:10575:1: rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3 : ( ( 'domainDescription' ) ) ;
+    public final void rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32817,17 +32817,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10580:2: ( ( 'domainDescription' ) )
             // InternalMoba.g:10581:3: ( 'domainDescription' )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
             // InternalMoba.g:10582:3: ( 'domainDescription' )
             // InternalMoba.g:10583:4: 'domainDescription'
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
             match(input,70,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0()); 
 
             }
 
@@ -32846,12 +32846,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__DomainDescriptionAssignment_1_3"
+    // $ANTLR end "rule__MobaDtoAttribute__DomainDescriptionAssignment_1_3"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2"
-    // InternalMoba.g:10594:1: rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2 : ( ruleMobaConstraint ) ;
-    public final void rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2"
+    // InternalMoba.g:10594:1: rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2 : ( ruleMobaConstraint ) ;
+    public final void rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32862,13 +32862,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10599:2: ( ruleMobaConstraint )
             // InternalMoba.g:10600:3: ruleMobaConstraint
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaConstraint();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0()); 
 
             }
 
@@ -32887,12 +32887,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_2"
+    // $ANTLR end "rule__MobaDtoAttribute__ConstraintsAssignment_1_4_2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1"
-    // InternalMoba.g:10609:1: rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1 : ( ruleMobaConstraint ) ;
-    public final void rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1"
+    // InternalMoba.g:10609:1: rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1 : ( ruleMobaConstraint ) ;
+    public final void rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32903,13 +32903,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10614:2: ( ruleMobaConstraint )
             // InternalMoba.g:10615:3: ruleMobaConstraint
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleMobaConstraint();
 
             state._fsp--;
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0()); 
 
             }
 
@@ -32928,12 +32928,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__ConstraintsAssignment_1_4_3_1"
+    // $ANTLR end "rule__MobaDtoAttribute__ConstraintsAssignment_1_4_3_1"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__AliasAssignment_1_5_2"
-    // InternalMoba.g:10624:1: rule__MobaPayloadAttribute__AliasAssignment_1_5_2 : ( RULE_ID ) ;
-    public final void rule__MobaPayloadAttribute__AliasAssignment_1_5_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__AliasAssignment_1_5_2"
+    // InternalMoba.g:10624:1: rule__MobaDtoAttribute__AliasAssignment_1_5_2 : ( RULE_ID ) ;
+    public final void rule__MobaDtoAttribute__AliasAssignment_1_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32944,9 +32944,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10629:2: ( RULE_ID )
             // InternalMoba.g:10630:3: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getAliasIDTerminalRuleCall_1_5_2_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getAliasIDTerminalRuleCall_1_5_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getAliasIDTerminalRuleCall_1_5_2_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getAliasIDTerminalRuleCall_1_5_2_0()); 
 
             }
 
@@ -32965,12 +32965,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__AliasAssignment_1_5_2"
+    // $ANTLR end "rule__MobaDtoAttribute__AliasAssignment_1_5_2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__TypeAssignment_2"
-    // InternalMoba.g:10639:1: rule__MobaPayloadAttribute__TypeAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaPayloadAttribute__TypeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__TypeAssignment_2"
+    // InternalMoba.g:10639:1: rule__MobaDtoAttribute__TypeAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaDtoAttribute__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -32981,17 +32981,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10644:2: ( ( RULE_ID ) )
             // InternalMoba.g:10645:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
             // InternalMoba.g:10646:3: ( RULE_ID )
             // InternalMoba.g:10647:4: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeCrossReference_2_0()); 
 
             }
 
@@ -33010,12 +33010,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__TypeAssignment_2"
+    // $ANTLR end "rule__MobaDtoAttribute__TypeAssignment_2"
 
 
-    // $ANTLR start "rule__MobaPayloadAttribute__NameAssignment_4"
-    // InternalMoba.g:10658:1: rule__MobaPayloadAttribute__NameAssignment_4 : ( RULE_ID ) ;
-    public final void rule__MobaPayloadAttribute__NameAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoAttribute__NameAssignment_4"
+    // InternalMoba.g:10658:1: rule__MobaDtoAttribute__NameAssignment_4 : ( RULE_ID ) ;
+    public final void rule__MobaDtoAttribute__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -33026,9 +33026,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10663:2: ( RULE_ID )
             // InternalMoba.g:10664:3: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
+             before(grammarAccess.getMobaDtoAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
+             after(grammarAccess.getMobaDtoAttributeAccess().getNameIDTerminalRuleCall_4_0()); 
 
             }
 
@@ -33047,12 +33047,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadAttribute__NameAssignment_4"
+    // $ANTLR end "rule__MobaDtoAttribute__NameAssignment_4"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__CascadingAssignment_1_0"
-    // InternalMoba.g:10673:1: rule__MobaPayloadReference__CascadingAssignment_1_0 : ( ( 'cascading' ) ) ;
-    public final void rule__MobaPayloadReference__CascadingAssignment_1_0() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__CascadingAssignment_1_0"
+    // InternalMoba.g:10673:1: rule__MobaDtoReference__CascadingAssignment_1_0 : ( ( 'cascading' ) ) ;
+    public final void rule__MobaDtoReference__CascadingAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -33063,17 +33063,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10678:2: ( ( 'cascading' ) )
             // InternalMoba.g:10679:3: ( 'cascading' )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
             // InternalMoba.g:10680:3: ( 'cascading' )
             // InternalMoba.g:10681:4: 'cascading'
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
             match(input,71,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getCascadingCascadingKeyword_1_0_0()); 
 
             }
 
@@ -33092,12 +33092,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__CascadingAssignment_1_0"
+    // $ANTLR end "rule__MobaDtoReference__CascadingAssignment_1_0"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__LazyAssignment_1_1"
-    // InternalMoba.g:10692:1: rule__MobaPayloadReference__LazyAssignment_1_1 : ( ( 'lazy' ) ) ;
-    public final void rule__MobaPayloadReference__LazyAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__LazyAssignment_1_1"
+    // InternalMoba.g:10692:1: rule__MobaDtoReference__LazyAssignment_1_1 : ( ( 'lazy' ) ) ;
+    public final void rule__MobaDtoReference__LazyAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -33108,17 +33108,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10697:2: ( ( 'lazy' ) )
             // InternalMoba.g:10698:3: ( 'lazy' )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getLazyLazyKeyword_1_1_0()); 
             // InternalMoba.g:10699:3: ( 'lazy' )
             // InternalMoba.g:10700:4: 'lazy'
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getLazyLazyKeyword_1_1_0()); 
             match(input,67,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getLazyLazyKeyword_1_1_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getLazyLazyKeyword_1_1_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getLazyLazyKeyword_1_1_0()); 
 
             }
 
@@ -33137,12 +33137,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__LazyAssignment_1_1"
+    // $ANTLR end "rule__MobaDtoReference__LazyAssignment_1_1"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__TransientAssignment_1_2"
-    // InternalMoba.g:10711:1: rule__MobaPayloadReference__TransientAssignment_1_2 : ( ( 'transient' ) ) ;
-    public final void rule__MobaPayloadReference__TransientAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__TransientAssignment_1_2"
+    // InternalMoba.g:10711:1: rule__MobaDtoReference__TransientAssignment_1_2 : ( ( 'transient' ) ) ;
+    public final void rule__MobaDtoReference__TransientAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -33153,17 +33153,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10716:2: ( ( 'transient' ) )
             // InternalMoba.g:10717:3: ( 'transient' )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getTransientTransientKeyword_1_2_0()); 
             // InternalMoba.g:10718:3: ( 'transient' )
             // InternalMoba.g:10719:4: 'transient'
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getTransientTransientKeyword_1_2_0()); 
             match(input,68,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getTransientTransientKeyword_1_2_0()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getTransientTransientKeyword_1_2_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getTransientTransientKeyword_1_2_0()); 
 
             }
 
@@ -33182,12 +33182,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__TransientAssignment_1_2"
+    // $ANTLR end "rule__MobaDtoReference__TransientAssignment_1_2"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__TypeAssignment_2"
-    // InternalMoba.g:10730:1: rule__MobaPayloadReference__TypeAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__MobaPayloadReference__TypeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__TypeAssignment_2"
+    // InternalMoba.g:10730:1: rule__MobaDtoReference__TypeAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__MobaDtoReference__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -33198,17 +33198,17 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10735:2: ( ( RULE_ID ) )
             // InternalMoba.g:10736:3: ( RULE_ID )
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getTypeMobaPayloadCrossReference_2_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getTypeMobaDtoCrossReference_2_0()); 
             // InternalMoba.g:10737:3: ( RULE_ID )
             // InternalMoba.g:10738:4: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getTypeMobaPayloadIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getTypeMobaDtoIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getTypeMobaPayloadIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getTypeMobaDtoIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getTypeMobaPayloadCrossReference_2_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getTypeMobaDtoCrossReference_2_0()); 
 
             }
 
@@ -33227,12 +33227,12 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__TypeAssignment_2"
+    // $ANTLR end "rule__MobaDtoReference__TypeAssignment_2"
 
 
-    // $ANTLR start "rule__MobaPayloadReference__NameAssignment_4"
-    // InternalMoba.g:10749:1: rule__MobaPayloadReference__NameAssignment_4 : ( RULE_ID ) ;
-    public final void rule__MobaPayloadReference__NameAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__MobaDtoReference__NameAssignment_4"
+    // InternalMoba.g:10749:1: rule__MobaDtoReference__NameAssignment_4 : ( RULE_ID ) ;
+    public final void rule__MobaDtoReference__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -33243,9 +33243,9 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10754:2: ( RULE_ID )
             // InternalMoba.g:10755:3: RULE_ID
             {
-             before(grammarAccess.getMobaPayloadReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
+             before(grammarAccess.getMobaDtoReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getMobaPayloadReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
+             after(grammarAccess.getMobaDtoReferenceAccess().getNameIDTerminalRuleCall_4_0()); 
 
             }
 
@@ -33264,7 +33264,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__MobaPayloadReference__NameAssignment_4"
+    // $ANTLR end "rule__MobaDtoReference__NameAssignment_4"
 
 
     // $ANTLR start "rule__MobaQueueReference__CascadingAssignment_1_0"

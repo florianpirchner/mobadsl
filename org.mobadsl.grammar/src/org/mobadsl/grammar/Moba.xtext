@@ -59,7 +59,7 @@ MobaProperty:
 	(keyString=STRING | keyConst=[MobaConstant]) '=' (valueString=STRING | valueConst=[MobaConstant]);
 
 MobaData:
-	MobaBean | MobaPayload | MobaQueue;
+	MobaEntity | MobaDto | MobaQueue;
 
 MobaSettings:
 	{MobaSettings}
@@ -79,18 +79,18 @@ MobaCache:
 	& ('strategy' '=' (cacheStrategyString=STRING |
 	cacheStrategyConst=[MobaConstant]))?) ')')?;
 
-MobaBean:
-	'bean' name=ID (('extends' superType=[MobaBean])? & (cache=MobaCache)?) MobaPropertiesAble? '{'
-	features+=MobaBeanFeature*
-	(index=MobaBeanIndex)?
+MobaEntity:
+	'entity' name=ID (('extends' superType=[MobaEntity])? & (cache=MobaCache)?) MobaPropertiesAble? '{'
+	features+=MobaEntityFeature*
+	(index=MobaEntityIndex)?
 	'}';
 
-MobaBeanIndex:
-	'index' attributes+=[MobaBeanAttribute] (',' attributes+=[MobaBeanAttribute]*);
+MobaEntityIndex:
+	'index' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute]*);
 
-MobaPayload:
-	'payload' name=ID ('extends' superType=[MobaPayload])? MobaPropertiesAble? '{'
-	features+=MobaPayloadFeature*
+MobaDto:
+	'dto' name=ID ('extends' superType=[MobaDto])? MobaPropertiesAble? '{'
+	features+=MobaDtoFeature*
 	'}';
 
 MobaQueue:
@@ -107,10 +107,10 @@ MobaRestCustom:
 MobaRestCrud:
 	'restCrud' name=ID MobaPropertiesAble?;
 
-MobaBeanFeature:
-	MobaBeanAttribute | MobaBeanReference;
+MobaEntityFeature:
+	MobaEntityAttribute | MobaEntityReference;
 
-MobaBeanAttribute:
+MobaEntityAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
 	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
@@ -128,22 +128,22 @@ MobaSettingsAttribute:
 fragment MobaMultiplicityAble:
 	(multiplicity=MobaMuliplicity)?;
 
-MobaBeanReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaBean] MobaMultiplicityAble
+MobaEntityReference:
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity] MobaMultiplicityAble
 	name=ID
 	MobaPropertiesAble?;
 
-MobaPayloadFeature:
-	MobaPayloadAttribute | MobaPayloadReference;
+MobaDtoFeature:
+	MobaDtoAttribute | MobaDtoReference;
 
-MobaPayloadAttribute:
+MobaDtoAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
 	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')? & ('alias' '(' alias=ID ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
 
-MobaPayloadReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaPayload]
+MobaDtoReference:
+	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto]
 	MobaMultiplicityAble
 	name=ID
 	MobaPropertiesAble?;

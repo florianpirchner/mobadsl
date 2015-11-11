@@ -13,7 +13,6 @@
 'active'=61
 'alias'=51
 'application'=20
-'bean'=43
 'cache'=40
 'cascading'=71
 'const'=36
@@ -22,6 +21,8 @@
 'digits'=58
 'domainDescription'=70
 'domainKey'=69
+'dto'=45
+'entity'=43
 'enum'=34
 'extends'=29
 'generator'=24
@@ -41,7 +42,6 @@
 'min'=54
 'minLength'=56
 'mixin'=27
-'payload'=45
 'queue'=46
 'ref'=50
 'regexp'=53

@@ -8,30 +8,36 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.mobadsl.semantic.model.moba.*;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaBean;
-import org.mobadsl.semantic.model.moba.MobaBeanAttribute;
-import org.mobadsl.semantic.model.moba.MobaBeanIndex;
-import org.mobadsl.semantic.model.moba.MobaBeanReference;
+import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityIndex;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
+import org.mobadsl.semantic.model.moba.MobaEnum;
+import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
+import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
 import org.mobadsl.semantic.model.moba.MobaLowerBound;
 import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
+import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
+import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
-import org.mobadsl.semantic.model.moba.MobaPayload;
-import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
-import org.mobadsl.semantic.model.moba.MobaPayloadReference;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
@@ -99,17 +105,17 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_PROPERTY: return createMobaProperty();
 			case MobaPackage.MOBA_SETTINGS: return createMobaSettings();
 			case MobaPackage.MOBA_CACHE: return createMobaCache();
-			case MobaPackage.MOBA_BEAN: return createMobaBean();
-			case MobaPackage.MOBA_BEAN_INDEX: return createMobaBeanIndex();
-			case MobaPackage.MOBA_PAYLOAD: return createMobaPayload();
+			case MobaPackage.MOBA_ENTITY: return createMobaEntity();
+			case MobaPackage.MOBA_ENTITY_INDEX: return createMobaEntityIndex();
+			case MobaPackage.MOBA_DTO: return createMobaDto();
 			case MobaPackage.MOBA_QUEUE: return createMobaQueue();
 			case MobaPackage.MOBA_SERVICE: return createMobaService();
 			case MobaPackage.MOBA_REST_CUSTOM: return createMobaRestCustom();
 			case MobaPackage.MOBA_REST_CRUD: return createMobaRestCrud();
-			case MobaPackage.MOBA_BEAN_ATTRIBUTE: return createMobaBeanAttribute();
-			case MobaPackage.MOBA_BEAN_REFERENCE: return createMobaBeanReference();
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE: return createMobaPayloadAttribute();
-			case MobaPackage.MOBA_PAYLOAD_REFERENCE: return createMobaPayloadReference();
+			case MobaPackage.MOBA_ENTITY_ATTRIBUTE: return createMobaEntityAttribute();
+			case MobaPackage.MOBA_ENTITY_REFERENCE: return createMobaEntityReference();
+			case MobaPackage.MOBA_DTO_ATTRIBUTE: return createMobaDtoAttribute();
+			case MobaPackage.MOBA_DTO_REFERENCE: return createMobaDtoReference();
 			case MobaPackage.MOBA_QUEUE_REFERENCE: return createMobaQueueReference();
 			case MobaPackage.MOBA_MULIPLICITY: return createMobaMuliplicity();
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: return createMobaSettingsAttribute();
@@ -279,9 +285,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaBean createMobaBean() {
-		MobaBeanImpl mobaBean = new MobaBeanImpl();
-		return mobaBean;
+	public MobaEntity createMobaEntity() {
+		MobaEntityImpl mobaEntity = new MobaEntityImpl();
+		return mobaEntity;
 	}
 
 	/**
@@ -289,9 +295,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaBeanIndex createMobaBeanIndex() {
-		MobaBeanIndexImpl mobaBeanIndex = new MobaBeanIndexImpl();
-		return mobaBeanIndex;
+	public MobaEntityIndex createMobaEntityIndex() {
+		MobaEntityIndexImpl mobaEntityIndex = new MobaEntityIndexImpl();
+		return mobaEntityIndex;
 	}
 
 	/**
@@ -299,9 +305,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaPayload createMobaPayload() {
-		MobaPayloadImpl mobaPayload = new MobaPayloadImpl();
-		return mobaPayload;
+	public MobaDto createMobaDto() {
+		MobaDtoImpl mobaDto = new MobaDtoImpl();
+		return mobaDto;
 	}
 
 	/**
@@ -349,9 +355,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaBeanAttribute createMobaBeanAttribute() {
-		MobaBeanAttributeImpl mobaBeanAttribute = new MobaBeanAttributeImpl();
-		return mobaBeanAttribute;
+	public MobaEntityAttribute createMobaEntityAttribute() {
+		MobaEntityAttributeImpl mobaEntityAttribute = new MobaEntityAttributeImpl();
+		return mobaEntityAttribute;
 	}
 
 	/**
@@ -359,9 +365,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaBeanReference createMobaBeanReference() {
-		MobaBeanReferenceImpl mobaBeanReference = new MobaBeanReferenceImpl();
-		return mobaBeanReference;
+	public MobaEntityReference createMobaEntityReference() {
+		MobaEntityReferenceImpl mobaEntityReference = new MobaEntityReferenceImpl();
+		return mobaEntityReference;
 	}
 
 	/**
@@ -369,9 +375,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaPayloadAttribute createMobaPayloadAttribute() {
-		MobaPayloadAttributeImpl mobaPayloadAttribute = new MobaPayloadAttributeImpl();
-		return mobaPayloadAttribute;
+	public MobaDtoAttribute createMobaDtoAttribute() {
+		MobaDtoAttributeImpl mobaDtoAttribute = new MobaDtoAttributeImpl();
+		return mobaDtoAttribute;
 	}
 
 	/**
@@ -379,9 +385,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaPayloadReference createMobaPayloadReference() {
-		MobaPayloadReferenceImpl mobaPayloadReference = new MobaPayloadReferenceImpl();
-		return mobaPayloadReference;
+	public MobaDtoReference createMobaDtoReference() {
+		MobaDtoReferenceImpl mobaDtoReference = new MobaDtoReferenceImpl();
+		return mobaDtoReference;
 	}
 
 	/**

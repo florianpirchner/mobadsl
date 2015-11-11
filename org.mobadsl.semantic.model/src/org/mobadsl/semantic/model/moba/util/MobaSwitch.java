@@ -15,11 +15,11 @@ import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaBean;
-import org.mobadsl.semantic.model.moba.MobaBeanAttribute;
-import org.mobadsl.semantic.model.moba.MobaBeanFeature;
-import org.mobadsl.semantic.model.moba.MobaBeanIndex;
-import org.mobadsl.semantic.model.moba.MobaBeanReference;
+import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityFeature;
+import org.mobadsl.semantic.model.moba.MobaEntityIndex;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaFeature;
 import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
@@ -31,10 +31,10 @@ import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
-import org.mobadsl.semantic.model.moba.MobaPayload;
-import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
-import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
-import org.mobadsl.semantic.model.moba.MobaPayloadReference;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
@@ -209,27 +209,27 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_BEAN: {
-				MobaBean mobaBean = (MobaBean)theEObject;
-				T result = caseMobaBean(mobaBean);
-				if (result == null) result = caseMobaData(mobaBean);
-				if (result == null) result = caseMobaPropertiesAble(mobaBean);
-				if (result == null) result = caseMobaApplicationFeature(mobaBean);
+			case MobaPackage.MOBA_ENTITY: {
+				MobaEntity mobaEntity = (MobaEntity)theEObject;
+				T result = caseMobaEntity(mobaEntity);
+				if (result == null) result = caseMobaData(mobaEntity);
+				if (result == null) result = caseMobaPropertiesAble(mobaEntity);
+				if (result == null) result = caseMobaApplicationFeature(mobaEntity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_BEAN_INDEX: {
-				MobaBeanIndex mobaBeanIndex = (MobaBeanIndex)theEObject;
-				T result = caseMobaBeanIndex(mobaBeanIndex);
+			case MobaPackage.MOBA_ENTITY_INDEX: {
+				MobaEntityIndex mobaEntityIndex = (MobaEntityIndex)theEObject;
+				T result = caseMobaEntityIndex(mobaEntityIndex);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_PAYLOAD: {
-				MobaPayload mobaPayload = (MobaPayload)theEObject;
-				T result = caseMobaPayload(mobaPayload);
-				if (result == null) result = caseMobaData(mobaPayload);
-				if (result == null) result = caseMobaPropertiesAble(mobaPayload);
-				if (result == null) result = caseMobaApplicationFeature(mobaPayload);
+			case MobaPackage.MOBA_DTO: {
+				MobaDto mobaDto = (MobaDto)theEObject;
+				T result = caseMobaDto(mobaDto);
+				if (result == null) result = caseMobaData(mobaDto);
+				if (result == null) result = caseMobaPropertiesAble(mobaDto);
+				if (result == null) result = caseMobaApplicationFeature(mobaDto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -273,21 +273,21 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_BEAN_FEATURE: {
-				MobaBeanFeature mobaBeanFeature = (MobaBeanFeature)theEObject;
-				T result = caseMobaBeanFeature(mobaBeanFeature);
-				if (result == null) result = caseMobaFeature(mobaBeanFeature);
+			case MobaPackage.MOBA_ENTITY_FEATURE: {
+				MobaEntityFeature mobaEntityFeature = (MobaEntityFeature)theEObject;
+				T result = caseMobaEntityFeature(mobaEntityFeature);
+				if (result == null) result = caseMobaFeature(mobaEntityFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_BEAN_ATTRIBUTE: {
-				MobaBeanAttribute mobaBeanAttribute = (MobaBeanAttribute)theEObject;
-				T result = caseMobaBeanAttribute(mobaBeanAttribute);
-				if (result == null) result = caseMobaBeanFeature(mobaBeanAttribute);
-				if (result == null) result = caseMobaMultiplicityAble(mobaBeanAttribute);
-				if (result == null) result = caseMobaPropertiesAble(mobaBeanAttribute);
-				if (result == null) result = caseMobaConstraintable(mobaBeanAttribute);
-				if (result == null) result = caseMobaFeature(mobaBeanAttribute);
+			case MobaPackage.MOBA_ENTITY_ATTRIBUTE: {
+				MobaEntityAttribute mobaEntityAttribute = (MobaEntityAttribute)theEObject;
+				T result = caseMobaEntityAttribute(mobaEntityAttribute);
+				if (result == null) result = caseMobaEntityFeature(mobaEntityAttribute);
+				if (result == null) result = caseMobaMultiplicityAble(mobaEntityAttribute);
+				if (result == null) result = caseMobaPropertiesAble(mobaEntityAttribute);
+				if (result == null) result = caseMobaConstraintable(mobaEntityAttribute);
+				if (result == null) result = caseMobaFeature(mobaEntityAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -297,41 +297,41 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_BEAN_REFERENCE: {
-				MobaBeanReference mobaBeanReference = (MobaBeanReference)theEObject;
-				T result = caseMobaBeanReference(mobaBeanReference);
-				if (result == null) result = caseMobaBeanFeature(mobaBeanReference);
-				if (result == null) result = caseMobaMultiplicityAble(mobaBeanReference);
-				if (result == null) result = caseMobaPropertiesAble(mobaBeanReference);
-				if (result == null) result = caseMobaFeature(mobaBeanReference);
+			case MobaPackage.MOBA_ENTITY_REFERENCE: {
+				MobaEntityReference mobaEntityReference = (MobaEntityReference)theEObject;
+				T result = caseMobaEntityReference(mobaEntityReference);
+				if (result == null) result = caseMobaEntityFeature(mobaEntityReference);
+				if (result == null) result = caseMobaMultiplicityAble(mobaEntityReference);
+				if (result == null) result = caseMobaPropertiesAble(mobaEntityReference);
+				if (result == null) result = caseMobaFeature(mobaEntityReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_PAYLOAD_FEATURE: {
-				MobaPayloadFeature mobaPayloadFeature = (MobaPayloadFeature)theEObject;
-				T result = caseMobaPayloadFeature(mobaPayloadFeature);
-				if (result == null) result = caseMobaFeature(mobaPayloadFeature);
+			case MobaPackage.MOBA_DTO_FEATURE: {
+				MobaDtoFeature mobaDtoFeature = (MobaDtoFeature)theEObject;
+				T result = caseMobaDtoFeature(mobaDtoFeature);
+				if (result == null) result = caseMobaFeature(mobaDtoFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_PAYLOAD_ATTRIBUTE: {
-				MobaPayloadAttribute mobaPayloadAttribute = (MobaPayloadAttribute)theEObject;
-				T result = caseMobaPayloadAttribute(mobaPayloadAttribute);
-				if (result == null) result = caseMobaPayloadFeature(mobaPayloadAttribute);
-				if (result == null) result = caseMobaMultiplicityAble(mobaPayloadAttribute);
-				if (result == null) result = caseMobaPropertiesAble(mobaPayloadAttribute);
-				if (result == null) result = caseMobaConstraintable(mobaPayloadAttribute);
-				if (result == null) result = caseMobaFeature(mobaPayloadAttribute);
+			case MobaPackage.MOBA_DTO_ATTRIBUTE: {
+				MobaDtoAttribute mobaDtoAttribute = (MobaDtoAttribute)theEObject;
+				T result = caseMobaDtoAttribute(mobaDtoAttribute);
+				if (result == null) result = caseMobaDtoFeature(mobaDtoAttribute);
+				if (result == null) result = caseMobaMultiplicityAble(mobaDtoAttribute);
+				if (result == null) result = caseMobaPropertiesAble(mobaDtoAttribute);
+				if (result == null) result = caseMobaConstraintable(mobaDtoAttribute);
+				if (result == null) result = caseMobaFeature(mobaDtoAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_PAYLOAD_REFERENCE: {
-				MobaPayloadReference mobaPayloadReference = (MobaPayloadReference)theEObject;
-				T result = caseMobaPayloadReference(mobaPayloadReference);
-				if (result == null) result = caseMobaPayloadFeature(mobaPayloadReference);
-				if (result == null) result = caseMobaMultiplicityAble(mobaPayloadReference);
-				if (result == null) result = caseMobaPropertiesAble(mobaPayloadReference);
-				if (result == null) result = caseMobaFeature(mobaPayloadReference);
+			case MobaPackage.MOBA_DTO_REFERENCE: {
+				MobaDtoReference mobaDtoReference = (MobaDtoReference)theEObject;
+				T result = caseMobaDtoReference(mobaDtoReference);
+				if (result == null) result = caseMobaDtoFeature(mobaDtoReference);
+				if (result == null) result = caseMobaMultiplicityAble(mobaDtoReference);
+				if (result == null) result = caseMobaPropertiesAble(mobaDtoReference);
+				if (result == null) result = caseMobaFeature(mobaDtoReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -702,47 +702,47 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bean</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bean</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaBean(MobaBean object) {
+	public T caseMobaEntity(MobaEntity object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bean Index</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Index</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bean Index</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Index</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaBeanIndex(MobaBeanIndex object) {
+	public T caseMobaEntityIndex(MobaEntityIndex object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Payload</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dto</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Payload</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dto</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaPayload(MobaPayload object) {
+	public T caseMobaDto(MobaDto object) {
 		return null;
 	}
 
@@ -822,32 +822,32 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bean Feature</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Feature</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bean Feature</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Feature</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaBeanFeature(MobaBeanFeature object) {
+	public T caseMobaEntityFeature(MobaEntityFeature object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bean Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bean Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaBeanAttribute(MobaBeanAttribute object) {
+	public T caseMobaEntityAttribute(MobaEntityAttribute object) {
 		return null;
 	}
 
@@ -867,62 +867,62 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bean Reference</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bean Reference</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Reference</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaBeanReference(MobaBeanReference object) {
+	public T caseMobaEntityReference(MobaEntityReference object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Payload Feature</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dto Feature</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Payload Feature</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dto Feature</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaPayloadFeature(MobaPayloadFeature object) {
+	public T caseMobaDtoFeature(MobaDtoFeature object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Payload Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dto Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Payload Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dto Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaPayloadAttribute(MobaPayloadAttribute object) {
+	public T caseMobaDtoAttribute(MobaDtoAttribute object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Payload Reference</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dto Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Payload Reference</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dto Reference</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaPayloadReference(MobaPayloadReference object) {
+	public T caseMobaDtoReference(MobaDtoReference object) {
 		return null;
 	}
 

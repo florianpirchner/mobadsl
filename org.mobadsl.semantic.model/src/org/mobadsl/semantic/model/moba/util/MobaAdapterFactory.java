@@ -16,11 +16,11 @@ import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
-import org.mobadsl.semantic.model.moba.MobaBean;
-import org.mobadsl.semantic.model.moba.MobaBeanAttribute;
-import org.mobadsl.semantic.model.moba.MobaBeanFeature;
-import org.mobadsl.semantic.model.moba.MobaBeanIndex;
-import org.mobadsl.semantic.model.moba.MobaBeanReference;
+import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityFeature;
+import org.mobadsl.semantic.model.moba.MobaEntityIndex;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaFeature;
 import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
@@ -32,10 +32,10 @@ import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
-import org.mobadsl.semantic.model.moba.MobaPayload;
-import org.mobadsl.semantic.model.moba.MobaPayloadAttribute;
-import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
-import org.mobadsl.semantic.model.moba.MobaPayloadReference;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
@@ -167,16 +167,16 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaCacheAdapter();
 			}
 			@Override
-			public Adapter caseMobaBean(MobaBean object) {
-				return createMobaBeanAdapter();
+			public Adapter caseMobaEntity(MobaEntity object) {
+				return createMobaEntityAdapter();
 			}
 			@Override
-			public Adapter caseMobaBeanIndex(MobaBeanIndex object) {
-				return createMobaBeanIndexAdapter();
+			public Adapter caseMobaEntityIndex(MobaEntityIndex object) {
+				return createMobaEntityIndexAdapter();
 			}
 			@Override
-			public Adapter caseMobaPayload(MobaPayload object) {
-				return createMobaPayloadAdapter();
+			public Adapter caseMobaDto(MobaDto object) {
+				return createMobaDtoAdapter();
 			}
 			@Override
 			public Adapter caseMobaQueue(MobaQueue object) {
@@ -199,32 +199,32 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaFeatureAdapter();
 			}
 			@Override
-			public Adapter caseMobaBeanFeature(MobaBeanFeature object) {
-				return createMobaBeanFeatureAdapter();
+			public Adapter caseMobaEntityFeature(MobaEntityFeature object) {
+				return createMobaEntityFeatureAdapter();
 			}
 			@Override
-			public Adapter caseMobaBeanAttribute(MobaBeanAttribute object) {
-				return createMobaBeanAttributeAdapter();
+			public Adapter caseMobaEntityAttribute(MobaEntityAttribute object) {
+				return createMobaEntityAttributeAdapter();
 			}
 			@Override
 			public Adapter caseMobaMultiplicityAble(MobaMultiplicityAble object) {
 				return createMobaMultiplicityAbleAdapter();
 			}
 			@Override
-			public Adapter caseMobaBeanReference(MobaBeanReference object) {
-				return createMobaBeanReferenceAdapter();
+			public Adapter caseMobaEntityReference(MobaEntityReference object) {
+				return createMobaEntityReferenceAdapter();
 			}
 			@Override
-			public Adapter caseMobaPayloadFeature(MobaPayloadFeature object) {
-				return createMobaPayloadFeatureAdapter();
+			public Adapter caseMobaDtoFeature(MobaDtoFeature object) {
+				return createMobaDtoFeatureAdapter();
 			}
 			@Override
-			public Adapter caseMobaPayloadAttribute(MobaPayloadAttribute object) {
-				return createMobaPayloadAttributeAdapter();
+			public Adapter caseMobaDtoAttribute(MobaDtoAttribute object) {
+				return createMobaDtoAttributeAdapter();
 			}
 			@Override
-			public Adapter caseMobaPayloadReference(MobaPayloadReference object) {
-				return createMobaPayloadReferenceAdapter();
+			public Adapter caseMobaDtoReference(MobaDtoReference object) {
+				return createMobaDtoReferenceAdapter();
 			}
 			@Override
 			public Adapter caseMobaQueueFeature(MobaQueueFeature object) {
@@ -533,44 +533,44 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBean <em>Bean</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEntity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaBean
+	 * @see org.mobadsl.semantic.model.moba.MobaEntity
 	 * @generated
 	 */
-	public Adapter createMobaBeanAdapter() {
+	public Adapter createMobaEntityAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBeanIndex <em>Bean Index</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEntityIndex <em>Entity Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaBeanIndex
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityIndex
 	 * @generated
 	 */
-	public Adapter createMobaBeanIndexAdapter() {
+	public Adapter createMobaEntityIndexAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPayload <em>Payload</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDto <em>Dto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaPayload
+	 * @see org.mobadsl.semantic.model.moba.MobaDto
 	 * @generated
 	 */
-	public Adapter createMobaPayloadAdapter() {
+	public Adapter createMobaDtoAdapter() {
 		return null;
 	}
 
@@ -645,30 +645,30 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBeanFeature <em>Bean Feature</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEntityFeature <em>Entity Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaBeanFeature
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityFeature
 	 * @generated
 	 */
-	public Adapter createMobaBeanFeatureAdapter() {
+	public Adapter createMobaEntityFeatureAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBeanAttribute <em>Bean Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEntityAttribute <em>Entity Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaBeanAttribute
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityAttribute
 	 * @generated
 	 */
-	public Adapter createMobaBeanAttributeAdapter() {
+	public Adapter createMobaEntityAttributeAdapter() {
 		return null;
 	}
 
@@ -687,58 +687,58 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBeanReference <em>Bean Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEntityReference <em>Entity Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaBeanReference
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityReference
 	 * @generated
 	 */
-	public Adapter createMobaBeanReferenceAdapter() {
+	public Adapter createMobaEntityReferenceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPayloadFeature <em>Payload Feature</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDtoFeature <em>Dto Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaPayloadFeature
+	 * @see org.mobadsl.semantic.model.moba.MobaDtoFeature
 	 * @generated
 	 */
-	public Adapter createMobaPayloadFeatureAdapter() {
+	public Adapter createMobaDtoFeatureAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPayloadAttribute <em>Payload Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDtoAttribute <em>Dto Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaPayloadAttribute
+	 * @see org.mobadsl.semantic.model.moba.MobaDtoAttribute
 	 * @generated
 	 */
-	public Adapter createMobaPayloadAttributeAdapter() {
+	public Adapter createMobaDtoAttributeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPayloadReference <em>Payload Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDtoReference <em>Dto Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaPayloadReference
+	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference
 	 * @generated
 	 */
-	public Adapter createMobaPayloadReferenceAdapter() {
+	public Adapter createMobaDtoReferenceAdapter() {
 		return null;
 	}
 

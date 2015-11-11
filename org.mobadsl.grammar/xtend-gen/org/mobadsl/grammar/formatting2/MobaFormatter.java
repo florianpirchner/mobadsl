@@ -13,14 +13,14 @@ import org.eclipse.xtext.xbase.lib.Extension;
 import org.mobadsl.grammar.services.MobaGrammarAccess;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
-import org.mobadsl.semantic.model.moba.MobaBean;
-import org.mobadsl.semantic.model.moba.MobaBeanFeature;
-import org.mobadsl.semantic.model.moba.MobaBeanIndex;
 import org.mobadsl.semantic.model.moba.MobaCache;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityFeature;
+import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
-import org.mobadsl.semantic.model.moba.MobaPayload;
-import org.mobadsl.semantic.model.moba.MobaPayloadFeature;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
@@ -46,20 +46,20 @@ public class MobaFormatter extends AbstractFormatter2 {
     }
   }
   
-  protected void _format(final MobaBean mobaDto, @Extension final IFormattableDocument document) {
+  protected void _format(final MobaEntity mobaDto, @Extension final IFormattableDocument document) {
     MobaCache _cache = mobaDto.getCache();
     this.format(_cache, document);
-    EList<MobaBeanFeature> _features = mobaDto.getFeatures();
-    for (final MobaBeanFeature features : _features) {
+    EList<MobaEntityFeature> _features = mobaDto.getFeatures();
+    for (final MobaEntityFeature features : _features) {
       this.format(features, document);
     }
-    MobaBeanIndex _index = mobaDto.getIndex();
+    MobaEntityIndex _index = mobaDto.getIndex();
     this.format(_index, document);
   }
   
-  protected void _format(final MobaPayload mobaPayload, @Extension final IFormattableDocument document) {
-    EList<MobaPayloadFeature> _features = mobaPayload.getFeatures();
-    for (final MobaPayloadFeature features : _features) {
+  protected void _format(final MobaDto mobaPayload, @Extension final IFormattableDocument document) {
+    EList<MobaDtoFeature> _features = mobaPayload.getFeatures();
+    for (final MobaDtoFeature features : _features) {
       this.format(features, document);
     }
   }
@@ -76,37 +76,37 @@ public class MobaFormatter extends AbstractFormatter2 {
     this.format(_multiplicity, document);
   }
   
-  public void format(final Object mobaDto, final IFormattableDocument document) {
-    if (mobaDto instanceof XtextResource) {
-      _format((XtextResource)mobaDto, document);
+  public void format(final Object mobaPayload, final IFormattableDocument document) {
+    if (mobaPayload instanceof XtextResource) {
+      _format((XtextResource)mobaPayload, document);
       return;
-    } else if (mobaDto instanceof MobaBean) {
-      _format((MobaBean)mobaDto, document);
+    } else if (mobaPayload instanceof MobaDto) {
+      _format((MobaDto)mobaPayload, document);
       return;
-    } else if (mobaDto instanceof MobaPayload) {
-      _format((MobaPayload)mobaDto, document);
+    } else if (mobaPayload instanceof MobaEntity) {
+      _format((MobaEntity)mobaPayload, document);
       return;
-    } else if (mobaDto instanceof MobaQueue) {
-      _format((MobaQueue)mobaDto, document);
+    } else if (mobaPayload instanceof MobaQueue) {
+      _format((MobaQueue)mobaPayload, document);
       return;
-    } else if (mobaDto instanceof MobaApplication) {
-      _format((MobaApplication)mobaDto, document);
+    } else if (mobaPayload instanceof MobaApplication) {
+      _format((MobaApplication)mobaPayload, document);
       return;
-    } else if (mobaDto instanceof MobaMultiplicityAble) {
-      _format((MobaMultiplicityAble)mobaDto, document);
+    } else if (mobaPayload instanceof MobaMultiplicityAble) {
+      _format((MobaMultiplicityAble)mobaPayload, document);
       return;
-    } else if (mobaDto instanceof MobaPropertiesAble) {
-      _format((MobaPropertiesAble)mobaDto, document);
+    } else if (mobaPayload instanceof MobaPropertiesAble) {
+      _format((MobaPropertiesAble)mobaPayload, document);
       return;
-    } else if (mobaDto == null) {
+    } else if (mobaPayload == null) {
       _format((Void)null, document);
       return;
-    } else if (mobaDto != null) {
-      _format(mobaDto, document);
+    } else if (mobaPayload != null) {
+      _format(mobaPayload, document);
       return;
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(mobaDto, document).toString());
+        Arrays.<Object>asList(mobaPayload, document).toString());
     }
   }
 }

@@ -9,12 +9,12 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.mobadsl.semantic.model.moba.MobaApplication;
-import org.mobadsl.semantic.model.moba.MobaBean;
+import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
-import org.mobadsl.semantic.model.moba.MobaPayload;
+import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaRestCrud;
 import org.mobadsl.semantic.model.moba.MobaRestCustom;
@@ -45,12 +45,12 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_MobaDto(final MobaApplication ctx, final EReference ref) {
-    List<MobaBean> _allDtos = ctx.getAllDtos();
+    List<MobaEntity> _allDtos = ctx.getAllDtos();
     return Scopes.scopeFor(_allDtos);
   }
   
   public IScope scope_MobaPayload(final MobaApplication ctx, final EReference ref) {
-    List<MobaPayload> _allPayloads = ctx.getAllPayloads();
+    List<MobaDto> _allPayloads = ctx.getAllPayloads();
     return Scopes.scopeFor(_allPayloads);
   }
   

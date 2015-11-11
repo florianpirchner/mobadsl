@@ -325,72 +325,72 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaBean} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaEntity} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaBeanItemProvider mobaBeanItemProvider;
+	protected MobaEntityItemProvider mobaEntityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaBean}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaBeanAdapter() {
-		if (mobaBeanItemProvider == null) {
-			mobaBeanItemProvider = new MobaBeanItemProvider(this);
+	public Adapter createMobaEntityAdapter() {
+		if (mobaEntityItemProvider == null) {
+			mobaEntityItemProvider = new MobaEntityItemProvider(this);
 		}
 
-		return mobaBeanItemProvider;
+		return mobaEntityItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaBeanIndex} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaEntityIndex} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaBeanIndexItemProvider mobaBeanIndexItemProvider;
+	protected MobaEntityIndexItemProvider mobaEntityIndexItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaBeanIndex}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaEntityIndex}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaBeanIndexAdapter() {
-		if (mobaBeanIndexItemProvider == null) {
-			mobaBeanIndexItemProvider = new MobaBeanIndexItemProvider(this);
+	public Adapter createMobaEntityIndexAdapter() {
+		if (mobaEntityIndexItemProvider == null) {
+			mobaEntityIndexItemProvider = new MobaEntityIndexItemProvider(this);
 		}
 
-		return mobaBeanIndexItemProvider;
+		return mobaEntityIndexItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaPayload} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaDto} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaPayloadItemProvider mobaPayloadItemProvider;
+	protected MobaDtoItemProvider mobaDtoItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaPayload}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaDto}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaPayloadAdapter() {
-		if (mobaPayloadItemProvider == null) {
-			mobaPayloadItemProvider = new MobaPayloadItemProvider(this);
+	public Adapter createMobaDtoAdapter() {
+		if (mobaDtoItemProvider == null) {
+			mobaDtoItemProvider = new MobaDtoItemProvider(this);
 		}
 
-		return mobaPayloadItemProvider;
+		return mobaDtoItemProvider;
 	}
 
 	/**
@@ -486,95 +486,95 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaBeanAttribute} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaEntityAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaBeanAttributeItemProvider mobaBeanAttributeItemProvider;
+	protected MobaEntityAttributeItemProvider mobaEntityAttributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaBeanAttribute}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaEntityAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaBeanAttributeAdapter() {
-		if (mobaBeanAttributeItemProvider == null) {
-			mobaBeanAttributeItemProvider = new MobaBeanAttributeItemProvider(this);
+	public Adapter createMobaEntityAttributeAdapter() {
+		if (mobaEntityAttributeItemProvider == null) {
+			mobaEntityAttributeItemProvider = new MobaEntityAttributeItemProvider(this);
 		}
 
-		return mobaBeanAttributeItemProvider;
+		return mobaEntityAttributeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaBeanReference} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaEntityReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaBeanReferenceItemProvider mobaBeanReferenceItemProvider;
+	protected MobaEntityReferenceItemProvider mobaEntityReferenceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaBeanReference}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaEntityReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaBeanReferenceAdapter() {
-		if (mobaBeanReferenceItemProvider == null) {
-			mobaBeanReferenceItemProvider = new MobaBeanReferenceItemProvider(this);
+	public Adapter createMobaEntityReferenceAdapter() {
+		if (mobaEntityReferenceItemProvider == null) {
+			mobaEntityReferenceItemProvider = new MobaEntityReferenceItemProvider(this);
 		}
 
-		return mobaBeanReferenceItemProvider;
+		return mobaEntityReferenceItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaPayloadAttribute} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaDtoAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaPayloadAttributeItemProvider mobaPayloadAttributeItemProvider;
+	protected MobaDtoAttributeItemProvider mobaDtoAttributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaPayloadAttribute}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaDtoAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaPayloadAttributeAdapter() {
-		if (mobaPayloadAttributeItemProvider == null) {
-			mobaPayloadAttributeItemProvider = new MobaPayloadAttributeItemProvider(this);
+	public Adapter createMobaDtoAttributeAdapter() {
+		if (mobaDtoAttributeItemProvider == null) {
+			mobaDtoAttributeItemProvider = new MobaDtoAttributeItemProvider(this);
 		}
 
-		return mobaPayloadAttributeItemProvider;
+		return mobaDtoAttributeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaPayloadReference} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaDtoReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaPayloadReferenceItemProvider mobaPayloadReferenceItemProvider;
+	protected MobaDtoReferenceItemProvider mobaDtoReferenceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaPayloadReference}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaDtoReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaPayloadReferenceAdapter() {
-		if (mobaPayloadReferenceItemProvider == null) {
-			mobaPayloadReferenceItemProvider = new MobaPayloadReferenceItemProvider(this);
+	public Adapter createMobaDtoReferenceAdapter() {
+		if (mobaDtoReferenceItemProvider == null) {
+			mobaDtoReferenceItemProvider = new MobaDtoReferenceItemProvider(this);
 		}
 
-		return mobaPayloadReferenceItemProvider;
+		return mobaDtoReferenceItemProvider;
 	}
 
 	/**
@@ -1032,17 +1032,17 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaPropertyItemProvider != null) mobaPropertyItemProvider.dispose();
 		if (mobaSettingsItemProvider != null) mobaSettingsItemProvider.dispose();
 		if (mobaCacheItemProvider != null) mobaCacheItemProvider.dispose();
-		if (mobaBeanItemProvider != null) mobaBeanItemProvider.dispose();
-		if (mobaBeanIndexItemProvider != null) mobaBeanIndexItemProvider.dispose();
-		if (mobaPayloadItemProvider != null) mobaPayloadItemProvider.dispose();
+		if (mobaEntityItemProvider != null) mobaEntityItemProvider.dispose();
+		if (mobaEntityIndexItemProvider != null) mobaEntityIndexItemProvider.dispose();
+		if (mobaDtoItemProvider != null) mobaDtoItemProvider.dispose();
 		if (mobaQueueItemProvider != null) mobaQueueItemProvider.dispose();
 		if (mobaServiceItemProvider != null) mobaServiceItemProvider.dispose();
 		if (mobaRestCustomItemProvider != null) mobaRestCustomItemProvider.dispose();
 		if (mobaRestCrudItemProvider != null) mobaRestCrudItemProvider.dispose();
-		if (mobaBeanAttributeItemProvider != null) mobaBeanAttributeItemProvider.dispose();
-		if (mobaBeanReferenceItemProvider != null) mobaBeanReferenceItemProvider.dispose();
-		if (mobaPayloadAttributeItemProvider != null) mobaPayloadAttributeItemProvider.dispose();
-		if (mobaPayloadReferenceItemProvider != null) mobaPayloadReferenceItemProvider.dispose();
+		if (mobaEntityAttributeItemProvider != null) mobaEntityAttributeItemProvider.dispose();
+		if (mobaEntityReferenceItemProvider != null) mobaEntityReferenceItemProvider.dispose();
+		if (mobaDtoAttributeItemProvider != null) mobaDtoAttributeItemProvider.dispose();
+		if (mobaDtoReferenceItemProvider != null) mobaDtoReferenceItemProvider.dispose();
 		if (mobaQueueReferenceItemProvider != null) mobaQueueReferenceItemProvider.dispose();
 		if (mobaMuliplicityItemProvider != null) mobaMuliplicityItemProvider.dispose();
 		if (mobaSettingsAttributeItemProvider != null) mobaSettingsAttributeItemProvider.dispose();

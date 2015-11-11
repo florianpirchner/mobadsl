@@ -7,17 +7,17 @@ import java.util.Collections
 import java.util.Set
 import org.eclipse.xtext.validation.Check
 import org.mobadsl.semantic.model.moba.MobaApplication
-import org.mobadsl.semantic.model.moba.MobaBean
 import org.mobadsl.semantic.model.moba.MobaConstant
 import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaPackage
-import org.mobadsl.semantic.model.moba.MobaPayload
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaRestCrud
 import org.mobadsl.semantic.model.moba.MobaRestCustom
 import org.mobadsl.semantic.model.moba.MobaSettings
 import org.mobadsl.semantic.model.moba.RecursionException
 import org.mobadsl.semantic.model.moba.MobaTemplate
+import org.mobadsl.semantic.model.moba.MobaDto
+import org.mobadsl.semantic.model.moba.MobaEntity
 
 class MobaValidator extends AbstractMobaValidator {
 
@@ -25,7 +25,7 @@ class MobaValidator extends AbstractMobaValidator {
 	public static val DOWNLOAD_TEMPLATE = 'downloadTemplate'
 
 	@Check
-	def checkDuplicateFeatureName(MobaBean dto) {
+	def checkDuplicateFeatureName(MobaEntity dto) {
 		// all super type features 
 		val superFeatureMap = if (dto.getSuperType != null)
 				try {
@@ -42,11 +42,11 @@ class MobaValidator extends AbstractMobaValidator {
 		var index = 0;
 		for (feature : dto.features) {
 			if (superFeatureMap.containsKey(feature.name)) {
-				error("Supertype contains same feature name", dto, MobaPackage.Literals.MOBA_BEAN__FEATURES, index)
+				error("Supertype contains same feature name", dto, MobaPackage.Literals.MOBA_ENTITY__FEATURES, index)
 			}
 
 			if (currentFeatures.contains(feature.name)) {
-				error("Feature name must be unique", dto, MobaPackage.Literals.MOBA_BEAN__FEATURES, index)
+				error("Feature name must be unique", dto, MobaPackage.Literals.MOBA_ENTITY__FEATURES, index)
 			}
 			currentFeatures.add(feature.name)
 			index++;
@@ -55,11 +55,11 @@ class MobaValidator extends AbstractMobaValidator {
 	}
 
 	@Check
-	def checkDuplicateFeatureName(MobaPayload payload) {
+	def checkDuplicateFeatureName(MobaDto payload) {
 		// all super type features 
-		val superFeatureMap = if (payload.superType != null)
+		val superFeatureMap = if (payload.getSuperType != null)
 				try {
-					payload.superType.allFeatures.toMap [
+					payload.getSuperType.allFeatures.toMap [
 						it.name
 					]
 				} catch (RecursionException ex) {
@@ -72,12 +72,12 @@ class MobaValidator extends AbstractMobaValidator {
 		var index = 0;
 		for (feature : payload.features) {
 			if (superFeatureMap.containsKey(feature.name)) {
-				error("Supertype contains same feature name", payload, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES,
+				error("Supertype contains same feature name", payload, MobaPackage.Literals.MOBA_DTO__FEATURES,
 					index)
 			}
 
 			if (currentFeatures.contains(feature.name)) {
-				error("Feature name must be unique", payload, MobaPackage.Literals.MOBA_PAYLOAD__FEATURES, index)
+				error("Feature name must be unique", payload, MobaPackage.Literals.MOBA_DTO__FEATURES, index)
 			}
 			currentFeatures.add(feature.name)
 			index++;
@@ -142,19 +142,19 @@ class MobaValidator extends AbstractMobaValidator {
 					}
 					tempDtFeatures.add(feature.name)
 				}
-				MobaBean: {
+				MobaEntity: {
 					if (tempDataFeatures.contains(feature.getName)) {
 						error("Name must be unique", application,
 							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
 					}
 					tempDataFeatures.add(feature.getName)
 				}
-				MobaPayload: {
-					if (tempDataFeatures.contains(feature.name)) {
+				MobaDto: {
+					if (tempDataFeatures.contains(feature.getName)) {
 						error("Name must be unique", application,
 							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
 					}
-					tempDataFeatures.add(feature.name)
+					tempDataFeatures.add(feature.getName)
 				}
 				MobaQueue: {
 					if (tempDataFeatures.contains(feature.name)) {
@@ -191,7 +191,7 @@ class MobaValidator extends AbstractMobaValidator {
 	}
 
 	@Check
-	def checkSuperType(MobaBean dto) {
+	def checkSuperType(MobaEntity dto) {
 		if (dto.getSuperType == null) {
 			return
 		}
@@ -199,29 +199,29 @@ class MobaValidator extends AbstractMobaValidator {
 		try {
 			dto.allSuperTypes
 		} catch (RecursionException ex) {
-			val MobaBean source = ex.source as MobaBean
-			val MobaBean superType = ex.superType as MobaBean
+			val MobaEntity source = ex.source as MobaEntity
+			val MobaEntity superType = ex.superType as MobaEntity
 
 			error('''Recursive supertypes for «source.getName» --> «superType.getName»''', dto,
-				MobaPackage.Literals.MOBA_BEAN__SUPER_TYPE)
+				MobaPackage.Literals.MOBA_ENTITY__SUPER_TYPE)
 		}
 
 	}
 
 	@Check
-	def checkSuperType(MobaPayload payload) {
-		if (payload.superType == null) {
+	def checkSuperType(MobaDto payload) {
+		if (payload.getSuperType == null) {
 			return
 		}
 
 		try {
 			payload.allSuperTypes
 		} catch (RecursionException ex) {
-			val MobaPayload source = ex.source as MobaPayload
-			val MobaPayload superType = ex.superType as MobaPayload
+			val MobaDto source = ex.source as MobaDto
+			val MobaDto superType = ex.superType as MobaDto
 
-			error('''Recursive supertypes for «source.name» --> «superType.name»''', payload,
-				MobaPackage.Literals.MOBA_PAYLOAD__SUPER_TYPE)
+			error('''Recursive supertypes for «source.getName» --> «superType.getName»''', payload,
+				MobaPackage.Literals.MOBA_DTO__SUPER_TYPE)
 		}
 	}
 
