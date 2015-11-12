@@ -129,10 +129,6 @@ public class TemplateRepository implements ITemplateRepository {
 	}
 
 	private String getTemplateURL(MobaIndexEntry entry) {
-		String path = entry.getRelativePath();
-		if (!path.startsWith("/")) {
-			path = "/" + path;
-		}
-		return BASE_TEMPLATE_URL + path;
+		return BASE_TEMPLATE_URL + entry.getRelativeFilePath();
 	}
 }

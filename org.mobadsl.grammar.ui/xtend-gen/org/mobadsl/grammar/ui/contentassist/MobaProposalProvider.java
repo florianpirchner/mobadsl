@@ -11,11 +11,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Constants;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.ui.editor.contentassist.ConfigurableCompletionProposal;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
@@ -23,6 +26,7 @@ import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.mobadsl.api.template.repository.ITemplateRepositoryManager;
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
 import org.mobadsl.grammar.ui.contentassist.AbstractMobaProposalProvider;
+import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
 import org.osgi.framework.Bundle;
@@ -112,7 +116,7 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
   }
   
   public StyledString createStyledString(final MobaIndex index, final MobaIndexEntry entry) {
-    final StyledString result = new StyledString("... ");
+    final StyledString result = new StyledString("index://");
     StringConcatenation _builder = new StringConcatenation();
     String _id = index.getId();
     _builder.append(_id, "");
@@ -151,5 +155,37 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
       return manager;
     }
     return null;
+  }
+  
+  @Override
+  public String getDisplayString(final EObject element, final String givenQualifiedNameAsString, final String shortName) {
+    String qualifiedNameAsString = givenQualifiedNameAsString;
+    boolean _equals = Objects.equal(qualifiedNameAsString, null);
+    if (_equals) {
+      qualifiedNameAsString = shortName;
+    }
+    boolean _equals_1 = Objects.equal(qualifiedNameAsString, null);
+    if (_equals_1) {
+      boolean _notEquals = (!Objects.equal(element, null));
+      if (_notEquals) {
+        ILabelProvider _labelProvider = this.getLabelProvider();
+        String _text = _labelProvider.getText(element);
+        qualifiedNameAsString = _text;
+      } else {
+        return null;
+      }
+    }
+    if ((!(element instanceof MobaApplication))) {
+      IQualifiedNameConverter _qualifiedNameConverter = this.getQualifiedNameConverter();
+      final QualifiedName qualifiedName = _qualifiedNameConverter.toQualifiedName(qualifiedNameAsString);
+      int _segmentCount = qualifiedName.getSegmentCount();
+      boolean _greaterThan = (_segmentCount > 1);
+      if (_greaterThan) {
+        String _lastSegment = qualifiedName.getLastSegment();
+        String _plus = (_lastSegment + " - ");
+        return (_plus + qualifiedNameAsString);
+      }
+    }
+    return qualifiedNameAsString;
   }
 }

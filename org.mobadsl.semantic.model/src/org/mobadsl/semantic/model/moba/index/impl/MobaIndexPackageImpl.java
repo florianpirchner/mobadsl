@@ -178,7 +178,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_TemplateId() {
+	public EAttribute getMobaIndexEntry_Filename() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -187,7 +187,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_TemplateName() {
+	public EAttribute getMobaIndexEntry_TemplateId() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -196,7 +196,7 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_TemplateDescription() {
+	public EAttribute getMobaIndexEntry_TemplateName() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -205,8 +205,26 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaIndexEntry_TemplateVersion() {
+	public EAttribute getMobaIndexEntry_TemplateDescription() {
 		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaIndexEntry_TemplateVersion() {
+		return (EAttribute)mobaIndexEntryEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaIndexEntry_TransientTemplate() {
+		return (EReference)mobaIndexEntryEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -246,10 +264,12 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 
 		mobaIndexEntryEClass = createEClass(MOBA_INDEX_ENTRY);
 		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__RELATIVE_PATH);
+		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__FILENAME);
 		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_ID);
 		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_NAME);
 		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION);
 		createEAttribute(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TEMPLATE_VERSION);
+		createEReference(mobaIndexEntryEClass, MOBA_INDEX_ENTRY__TRANSIENT_TEMPLATE);
 	}
 
 	/**
@@ -275,6 +295,9 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		MobaPackage theMobaPackage = (MobaPackage)EPackage.Registry.INSTANCE.getEPackage(MobaPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -291,10 +314,12 @@ public class MobaIndexPackageImpl extends EPackageImpl implements MobaIndexPacka
 
 		initEClass(mobaIndexEntryEClass, MobaIndexEntry.class, "MobaIndexEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaIndexEntry_RelativePath(), ecorePackage.getEString(), "relativePath", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaIndexEntry_Filename(), ecorePackage.getEString(), "filename", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndexEntry_TemplateId(), ecorePackage.getEString(), "templateId", null, 0, 1, MobaIndexEntry.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndexEntry_TemplateName(), ecorePackage.getEString(), "templateName", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndexEntry_TemplateDescription(), ecorePackage.getEString(), "templateDescription", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaIndexEntry_TemplateVersion(), ecorePackage.getEString(), "templateVersion", null, 1, 1, MobaIndexEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaIndexEntry_TransientTemplate(), theMobaPackage.getMobaApplication(), null, "transientTemplate", null, 0, 1, MobaIndexEntry.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 	}
 
 } //MobaIndexPackageImpl

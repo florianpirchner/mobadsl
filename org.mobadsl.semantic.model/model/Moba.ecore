@@ -250,6 +250,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="MobaIndexEntry">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativePath" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           changeable="false" volatile="true" transient="true" unsettable="true" derived="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateName" lowerBound="1"
@@ -258,6 +260,8 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateVersion" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transientTemplate" eType="#//MobaApplication"
+          transient="true" derived="true"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

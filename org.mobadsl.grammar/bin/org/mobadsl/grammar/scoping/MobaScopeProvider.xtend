@@ -71,9 +71,6 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 		return Scopes.scopeFor(ctx.allGenerators);
 	}
 
-//	def IScope scope_MobaApplication_usedGenerator(MobaApplication ctx, EReference ref) {
-//		return super.getScope(ctx, ref);
-//	}
 	def IScope scope_MobaApplication(MobaApplication ctx, EReference ref) {
 
 		val ctxDesciption = resourceDescriptions.getResourceDescription(ctx.eResource.URI)

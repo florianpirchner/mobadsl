@@ -63,10 +63,12 @@ public class MobaIndexEntryItemProvider
 			super.getPropertyDescriptors(object);
 
 			addRelativePathPropertyDescriptor(object);
+			addFilenamePropertyDescriptor(object);
 			addTemplateIdPropertyDescriptor(object);
 			addTemplateNamePropertyDescriptor(object);
 			addTemplateDescriptionPropertyDescriptor(object);
 			addTemplateVersionPropertyDescriptor(object);
+			addTransientTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,6 +87,28 @@ public class MobaIndexEntryItemProvider
 				 getString("_UI_MobaIndexEntry_relativePath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_relativePath_feature", "_UI_MobaIndexEntry_type"),
 				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__RELATIVE_PATH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Filename feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFilenamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaIndexEntry_filename_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_filename_feature", "_UI_MobaIndexEntry_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__FILENAME,
 				 true,
 				 false,
 				 false,
@@ -182,6 +206,28 @@ public class MobaIndexEntryItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Transient Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTransientTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaIndexEntry_transientTemplate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaIndexEntry_transientTemplate_feature", "_UI_MobaIndexEntry_type"),
+				 MobaIndexPackage.Literals.MOBA_INDEX_ENTRY__TRANSIENT_TEMPLATE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MobaIndexEntry.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,7 +246,7 @@ public class MobaIndexEntryItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaIndexEntry)object).getTemplateName();
+		String label = ((MobaIndexEntry)object).getFilename();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MobaIndexEntry_type") :
 			getString("_UI_MobaIndexEntry_type") + " " + label;
@@ -220,6 +266,7 @@ public class MobaIndexEntryItemProvider
 
 		switch (notification.getFeatureID(MobaIndexEntry.class)) {
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__RELATIVE_PATH:
+			case MobaIndexPackage.MOBA_INDEX_ENTRY__FILENAME:
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_ID:
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_NAME:
 			case MobaIndexPackage.MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION:

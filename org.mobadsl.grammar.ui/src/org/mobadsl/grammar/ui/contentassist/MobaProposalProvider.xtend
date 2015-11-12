@@ -9,11 +9,13 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.jface.viewers.StyledString
 import org.eclipse.xtext.Assignment
 import org.eclipse.xtext.Constants
+import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor
 import org.mobadsl.api.template.repository.ITemplateRepositoryManager
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate.Metadata
+import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.index.MobaIndex
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry
 import org.osgi.framework.FrameworkUtil
@@ -67,7 +69,7 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 	}
 
 	def StyledString createStyledString(MobaIndex index, MobaIndexEntry entry) {
-		val result = new StyledString("... ")
+		val result = new StyledString("index://")
 		result.append('''«index.id»:«entry.templateId»''')
 		result.append(''' - «entry.templateDescription»''', StyledString.COUNTER_STYLER)
 		return result
@@ -87,6 +89,27 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		}
 
 		return null
+	}
+
+	override String getDisplayString(EObject element, String givenQualifiedNameAsString, String shortName) {
+		var qualifiedNameAsString = givenQualifiedNameAsString;
+		if (qualifiedNameAsString == null)
+			qualifiedNameAsString = shortName;
+		if (qualifiedNameAsString == null) {
+			if (element != null) {
+				qualifiedNameAsString = labelProvider.getText(element)
+			} else
+				return null
+		}
+
+		if (!(element instanceof MobaApplication)) {
+			// do not add the version of application to the value
+			val QualifiedName qualifiedName = qualifiedNameConverter.toQualifiedName(qualifiedNameAsString);
+			if (qualifiedName.getSegmentCount() > 1) {
+				return qualifiedName.getLastSegment() + " - " + qualifiedNameAsString;
+			}
+		}
+		return qualifiedNameAsString;
 	}
 
 }

@@ -139,13 +139,22 @@ public interface MobaIndexPackage extends EPackage {
 	int MOBA_INDEX_ENTRY__RELATIVE_PATH = 0;
 
 	/**
+	 * The feature id for the '<em><b>Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_INDEX_ENTRY__FILENAME = 1;
+
+	/**
 	 * The feature id for the '<em><b>Template Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__TEMPLATE_ID = 1;
+	int MOBA_INDEX_ENTRY__TEMPLATE_ID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Template Name</b></em>' attribute.
@@ -154,7 +163,7 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__TEMPLATE_NAME = 2;
+	int MOBA_INDEX_ENTRY__TEMPLATE_NAME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Template Description</b></em>' attribute.
@@ -163,7 +172,7 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION = 3;
+	int MOBA_INDEX_ENTRY__TEMPLATE_DESCRIPTION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Template Version</b></em>' attribute.
@@ -172,7 +181,16 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY__TEMPLATE_VERSION = 4;
+	int MOBA_INDEX_ENTRY__TEMPLATE_VERSION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Transient Template</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_INDEX_ENTRY__TRANSIENT_TEMPLATE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Entry</em>' class.
@@ -181,7 +199,7 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_INDEX_ENTRY_FEATURE_COUNT = 5;
+	int MOBA_INDEX_ENTRY_FEATURE_COUNT = 7;
 
 
 	/**
@@ -271,6 +289,17 @@ public interface MobaIndexPackage extends EPackage {
 	EAttribute getMobaIndexEntry_RelativePath();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getFilename <em>Filename</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filename</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getFilename()
+	 * @see #getMobaIndexEntry()
+	 * @generated
+	 */
+	EAttribute getMobaIndexEntry_Filename();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId <em>Template Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,6 +342,17 @@ public interface MobaIndexPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMobaIndexEntry_TemplateVersion();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTransientTemplate <em>Transient Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Transient Template</em>'.
+	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTransientTemplate()
+	 * @see #getMobaIndexEntry()
+	 * @generated
+	 */
+	EReference getMobaIndexEntry_TransientTemplate();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -405,6 +445,14 @@ public interface MobaIndexPackage extends EPackage {
 		EAttribute MOBA_INDEX_ENTRY__RELATIVE_PATH = eINSTANCE.getMobaIndexEntry_RelativePath();
 
 		/**
+		 * The meta object literal for the '<em><b>Filename</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_INDEX_ENTRY__FILENAME = eINSTANCE.getMobaIndexEntry_Filename();
+
+		/**
 		 * The meta object literal for the '<em><b>Template Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -435,6 +483,14 @@ public interface MobaIndexPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOBA_INDEX_ENTRY__TEMPLATE_VERSION = eINSTANCE.getMobaIndexEntry_TemplateVersion();
+
+		/**
+		 * The meta object literal for the '<em><b>Transient Template</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_INDEX_ENTRY__TRANSIENT_TEMPLATE = eINSTANCE.getMobaIndexEntry_TransientTemplate();
 
 	}
 
