@@ -443,7 +443,7 @@ ruleMobaGeneratorIDFeature returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
 						}
 					}
-					otherlv_2=RULE_ID
+					otherlv_2=RULE_GENERATOR_ID
 					{
 						newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorConstMobaConstantCrossReference_2_0_0());
 					}
@@ -499,7 +499,7 @@ ruleMobaGeneratorMixinFeature returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getMobaGeneratorMixinFeatureRule());
 					}
 				}
-				otherlv_1=RULE_ID
+				otherlv_1=RULE_GENERATOR_ID
 				{
 					newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorCrossReference_1_0());
 				}
@@ -4405,15 +4405,19 @@ ruleMobaUpperBound returns [Enumerator current=null]
 
 RULE_INT : SUPER_INT;
 
+RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
+
 RULE_ID : SUPER_ID;
 
-RULE_VERSION : ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
+RULE_VERSION : RULE_INT '.' RULE_INT '.' RULE_INT ('-' ('SNAPSHOT'|'RELEASE'))?;
+
+fragment RULE_FQN : RULE_ID ('.' RULE_ID)*;
 
 RULE_APPLICATION_ID : RULE_ID ':' RULE_VERSION;
 
-RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_APPLICATION_ID;
+RULE_GENERATOR_ID : RULE_FQN ':' RULE_VERSION;
 
-RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
+RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_APPLICATION_ID;
 
 RULE_FLOAT : RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)? (('b'|'B') ('i'|'I'|'d'|'D')|('l'|'L'|'d'|'D'|'f'|'F'))?;
 

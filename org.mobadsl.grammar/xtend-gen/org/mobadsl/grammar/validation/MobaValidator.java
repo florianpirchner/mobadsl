@@ -636,7 +636,7 @@ public class MobaValidator extends AbstractMobaValidator {
     };
     Iterable<MobaGeneratorFeature> _filter = IterableExtensions.<MobaGeneratorFeature>filter(features, _function);
     final Function1<MobaGeneratorFeature, String> _function_1 = (MobaGeneratorFeature it) -> {
-      return it.getGeneratorId();
+      return it.getGeneratorVersionedId();
     };
     Iterable<String> _map = IterableExtensions.<MobaGeneratorFeature, String>map(_filter, _function_1);
     List<String> _list = IterableExtensions.<String>toList(_map);
@@ -646,15 +646,15 @@ public class MobaValidator extends AbstractMobaValidator {
       {
         index++;
         if ((feature instanceof MobaGeneratorIDFeature)) {
-          String _generatorId = ((MobaGeneratorIDFeature)feature).getGeneratorId();
-          boolean _containsKey = generatorMap.containsKey(_generatorId);
+          String _generatorVersionedId = ((MobaGeneratorIDFeature)feature).getGeneratorVersionedId();
+          boolean _containsKey = generatorMap.containsKey(_generatorVersionedId);
           boolean _not = (!_containsKey);
           if (_not) {
             foundWarning = true;
             StringConcatenation _builder = new StringConcatenation();
             _builder.append("For GeneratorID ");
-            String _generatorId_1 = ((MobaGeneratorIDFeature)feature).getGeneratorId();
-            _builder.append(_generatorId_1, "");
+            String _generatorVersionedId_1 = ((MobaGeneratorIDFeature)feature).getGeneratorVersionedId();
+            _builder.append(_generatorVersionedId_1, "");
             _builder.append(" is not Generator-Extensions registered. Please check template...");
             this.warning(_builder.toString(), generator, MobaPackage.Literals.MOBA_GENERATOR__FEATURES, index);
           }
@@ -662,10 +662,10 @@ public class MobaValidator extends AbstractMobaValidator {
       }
     }
     if ((!foundWarning)) {
-      List<String> _allGeneratorIds = generator.getAllGeneratorIds();
-      final Map<String, ExtensionGeneratorDelegate.Metadata> allGeneratorMap = this.generatorDelegate.readExtentionsMetadata(this.grammarName, _allGeneratorIds);
-      List<String> _allGeneratorIds_1 = generator.getAllGeneratorIds();
-      for (final String id : _allGeneratorIds_1) {
+      List<String> _allGeneratorVersionedIds = generator.getAllGeneratorVersionedIds();
+      final Map<String, ExtensionGeneratorDelegate.Metadata> allGeneratorMap = this.generatorDelegate.readExtentionsMetadata(this.grammarName, _allGeneratorVersionedIds);
+      List<String> _allGeneratorVersionedIds_1 = generator.getAllGeneratorVersionedIds();
+      for (final String id : _allGeneratorVersionedIds_1) {
         {
           index++;
           boolean _containsKey = allGeneratorMap.containsKey(id);

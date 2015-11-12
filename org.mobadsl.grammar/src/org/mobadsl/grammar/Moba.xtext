@@ -26,10 +26,10 @@ MobaGeneratorFeature:
 	MobaGeneratorIDFeature | MobaGeneratorMixinFeature;
 
 MobaGeneratorIDFeature:
-	'id' '=' (generatorConst=[MobaConstant] | generatorString=STRING);
+	'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING);
 
 MobaGeneratorMixinFeature:
-	'mixin' generatorRef=[MobaGenerator];
+	'mixin' generatorRef=[MobaGenerator|GENERATOR_ID];
 
 MobaDataType:
 	'datatype' name=ID ('extends' superType=[MobaDataType])? ((primitive?='isPrimitive')? & (array?='isArray')? &
@@ -200,24 +200,32 @@ enum MobaUpperBound:
 terminal INT returns ecore::EInt:
 	super::INT;
 
+terminal DOUBLE returns ecore::EDouble:
+	('+'|'-')? INT ('.' INT)?;
+
 terminal ID:
 	super::ID
 ;
 
 terminal VERSION:
-	('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*
+	INT '.' INT '.' INT ('-' ('SNAPSHOT' | 'RELEASE'))?
+;
+
+terminal FQN:
+	ID ('.' ID)*
 ;
 
 terminal APPLICATION_ID:
 	ID ":" VERSION
 ;
 
+terminal GENERATOR_ID:
+	FQN ':' VERSION
+;
+
 terminal DOWNLOAD_TEMPLATE:
 	'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':'APPLICATION_ID
 ;
-
-terminal DOUBLE returns ecore::EDouble:
-	('+'|'-')? INT ('.' INT)?;
 
 terminal FLOAT returns ecore::EFloat:
 	INT

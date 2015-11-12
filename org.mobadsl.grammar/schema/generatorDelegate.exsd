@@ -67,6 +67,13 @@
                </documentation>
             </annotation>
          </attribute>
+         <attribute name="version" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The version of the generator. Is used for ContentAssist in MobaDSL.
+               </documentation>
+            </annotation>
+         </attribute>
          <attribute name="documentation" type="string">
             <annotation>
                <documentation>

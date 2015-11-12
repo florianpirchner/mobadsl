@@ -15,11 +15,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MobaGeneratorFeature extends EObject {
 	/**
-	 * Returns the generator ID. From {@link #getGeneratorString()} or
+	 * Returns the generator versioned ID. It follows the pattern
+	 * {FQN}:{VERSION}. From {@link #getGeneratorString()} or
 	 * {@link #getGeneratorConst()}
 	 * 
 	 * @return
 	 */
-	String getGeneratorId();
+	String getGeneratorVersionedId();
+
+	/**
+	 * Returns the version of the generator.
+	 * 
+	 * @return
+	 */
+	String getVersion();
+
+	/**
+	 * Returns the id of the generator.
+	 * 
+	 * @return
+	 */
+	String getId();
 
 } // MobaGeneratorFeature

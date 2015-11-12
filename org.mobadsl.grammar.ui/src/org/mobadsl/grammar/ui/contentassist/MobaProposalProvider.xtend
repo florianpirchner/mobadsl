@@ -51,14 +51,17 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 
 		val allGenerators = generatorDelegate.readExtentionsMetadata(grammarName, null)
 		allGenerators.values.forEach [
-			acceptor.accept(doCreateProposal('''"«it.id»"''', it.createStyledString, model.image, 1000, context))
+			acceptor.accept(doCreateProposal('''«it.versionedId»''', it.createStyledString, model.image, 1000, context))
 		]
 	}
 
 	def StyledString createStyledString(Metadata metadata) {
 		val result = new StyledString(metadata.name)
+		if (!metadata.version.isNullOrEmpty) {
+			result.append(''' version «metadata.version»''', StyledString.QUALIFIER_STYLER)
+		}
 		if (!metadata.license.isNullOrEmpty) {
-			result.append(''' under («metadata.license»)''', StyledString.QUALIFIER_STYLER)
+			result.append(''' under «metadata.license»''', StyledString.QUALIFIER_STYLER)
 		}
 
 		if (!metadata.description.isNullOrEmpty) {

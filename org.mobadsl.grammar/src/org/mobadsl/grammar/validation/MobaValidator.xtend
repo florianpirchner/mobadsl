@@ -372,15 +372,15 @@ class MobaValidator extends AbstractMobaValidator {
 		val features = generator.features
 		val generatorMap = generatorDelegate.readExtentionsMetadata(grammarName, features.filter [
 			it instanceof MobaGeneratorIDFeature
-		].map[it.generatorId].toList)
+		].map[it.generatorVersionedId].toList)
 
 		for (feature : generator.features) {
 			index++
 			if (feature instanceof MobaGeneratorIDFeature) {
 				if (!generatorMap.containsKey(feature.
-					generatorId)) {
+					generatorVersionedId)) {
 					foundWarning = true
-					warning('''For GeneratorID «feature.generatorId» is not Generator-Extensions registered. Please check template...''',
+					warning('''For GeneratorID «feature.generatorVersionedId» is not Generator-Extensions registered. Please check template...''',
 						generator, MobaPackage.Literals.MOBA_GENERATOR__FEATURES, index)
 				}
 			}
@@ -388,8 +388,8 @@ class MobaValidator extends AbstractMobaValidator {
 
 		// check if there are problems with mixins
 		if (!foundWarning) {
-			val allGeneratorMap = generatorDelegate.readExtentionsMetadata(grammarName, generator.allGeneratorIds)
-			for (id : generator.allGeneratorIds) {
+			val allGeneratorMap = generatorDelegate.readExtentionsMetadata(grammarName, generator.allGeneratorVersionedIds)
+			for (id : generator.allGeneratorVersionedIds) {
 				index++
 				if (!allGeneratorMap.containsKey(
 					id)) {

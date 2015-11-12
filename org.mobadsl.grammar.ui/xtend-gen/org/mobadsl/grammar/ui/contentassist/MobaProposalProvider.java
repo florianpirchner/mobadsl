@@ -74,10 +74,8 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     Collection<ExtensionGeneratorDelegate.Metadata> _values = allGenerators.values();
     final Consumer<ExtensionGeneratorDelegate.Metadata> _function = (ExtensionGeneratorDelegate.Metadata it) -> {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("\"");
-      String _id = it.getId();
-      _builder.append(_id, "");
-      _builder.append("\"");
+      String _versionedId = it.getVersionedId();
+      _builder.append(_versionedId, "");
       StyledString _createStyledString = this.createStyledString(it);
       Image _image = this.getImage(model);
       ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_builder.toString(), _createStyledString, _image, 1000, context);
@@ -89,28 +87,38 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
   public StyledString createStyledString(final ExtensionGeneratorDelegate.Metadata metadata) {
     String _name = metadata.getName();
     final StyledString result = new StyledString(_name);
-    String _license = metadata.getLicense();
-    boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(_license);
+    String _version = metadata.getVersion();
+    boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(_version);
     boolean _not = (!_isNullOrEmpty);
     if (_not) {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append(" ");
-      _builder.append("under (");
-      String _license_1 = metadata.getLicense();
-      _builder.append(_license_1, " ");
-      _builder.append(")");
+      _builder.append("version ");
+      String _version_1 = metadata.getVersion();
+      _builder.append(_version_1, " ");
       result.append(_builder.toString(), StyledString.QUALIFIER_STYLER);
     }
-    String _description = metadata.getDescription();
-    boolean _isNullOrEmpty_1 = StringExtensions.isNullOrEmpty(_description);
+    String _license = metadata.getLicense();
+    boolean _isNullOrEmpty_1 = StringExtensions.isNullOrEmpty(_license);
     boolean _not_1 = (!_isNullOrEmpty_1);
     if (_not_1) {
       StringConcatenation _builder_1 = new StringConcatenation();
       _builder_1.append(" ");
-      _builder_1.append("- ");
+      _builder_1.append("under ");
+      String _license_1 = metadata.getLicense();
+      _builder_1.append(_license_1, " ");
+      result.append(_builder_1.toString(), StyledString.QUALIFIER_STYLER);
+    }
+    String _description = metadata.getDescription();
+    boolean _isNullOrEmpty_2 = StringExtensions.isNullOrEmpty(_description);
+    boolean _not_2 = (!_isNullOrEmpty_2);
+    if (_not_2) {
+      StringConcatenation _builder_2 = new StringConcatenation();
+      _builder_2.append(" ");
+      _builder_2.append("- ");
       String _description_1 = metadata.getDescription();
-      _builder_1.append(_description_1, " ");
-      result.append(_builder_1.toString(), StyledString.COUNTER_STYLER);
+      _builder_2.append(_description_1, " ");
+      result.append(_builder_2.toString(), StyledString.COUNTER_STYLER);
     }
     return result;
   }

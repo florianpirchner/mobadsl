@@ -2,18 +2,20 @@
  */
 package org.mobadsl.semantic.model.moba;
 
-
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Generator ID Feature</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '
+ * <em><b>Generator ID Feature</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorConst <em>Generator Const</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorString <em>Generator String</em>}</li>
+ * <li>
+ * {@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorConst
+ * <em>Generator Const</em>}</li>
+ * <li>
+ * {@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorString
+ * <em>Generator String</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGeneratorIDFeature()
@@ -29,6 +31,7 @@ public interface MobaGeneratorIDFeature extends MobaGeneratorFeature {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Generator Const</em>' reference.
 	 * @see #setGeneratorConst(MobaConstant)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGeneratorIDFeature_GeneratorConst()
@@ -38,10 +41,13 @@ public interface MobaGeneratorIDFeature extends MobaGeneratorFeature {
 	MobaConstant getGeneratorConst();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorConst <em>Generator Const</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Generator Const</em>' reference.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorConst
+	 * <em>Generator Const</em>}' reference. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Generator Const</em>' reference.
 	 * @see #getGeneratorConst()
 	 * @generated
 	 */
@@ -55,6 +61,7 @@ public interface MobaGeneratorIDFeature extends MobaGeneratorFeature {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Generator String</em>' attribute.
 	 * @see #setGeneratorString(String)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGeneratorIDFeature_GeneratorString()
@@ -64,10 +71,13 @@ public interface MobaGeneratorIDFeature extends MobaGeneratorFeature {
 	String getGeneratorString();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorString <em>Generator String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Generator String</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorString
+	 * <em>Generator String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Generator String</em>' attribute.
 	 * @see #getGeneratorString()
 	 * @generated
 	 */

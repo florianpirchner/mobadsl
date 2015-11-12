@@ -240,15 +240,15 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
 		private final Assignment cGeneratorConstAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
 		private final CrossReference cGeneratorConstMobaConstantCrossReference_2_0_0 = (CrossReference)cGeneratorConstAssignment_2_0.eContents().get(0);
-		private final RuleCall cGeneratorConstMobaConstantIDTerminalRuleCall_2_0_0_1 = (RuleCall)cGeneratorConstMobaConstantCrossReference_2_0_0.eContents().get(1);
+		private final RuleCall cGeneratorConstMobaConstantGENERATOR_IDTerminalRuleCall_2_0_0_1 = (RuleCall)cGeneratorConstMobaConstantCrossReference_2_0_0.eContents().get(1);
 		private final Assignment cGeneratorStringAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
 		private final RuleCall cGeneratorStringSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cGeneratorStringAssignment_2_1.eContents().get(0);
 		
 		//MobaGeneratorIDFeature:
-		//	'id' '=' (generatorConst=[MobaConstant] | generatorString=STRING);
+		//	'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'id' '=' (generatorConst=[MobaConstant] | generatorString=STRING)
+		//'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING)
 		public Group getGroup() { return cGroup; }
 		
 		//'id'
@@ -257,17 +257,17 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 		
-		//(generatorConst=[MobaConstant] | generatorString=STRING)
+		//(generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING)
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//generatorConst=[MobaConstant]
+		//generatorConst=[MobaConstant|GENERATOR_ID]
 		public Assignment getGeneratorConstAssignment_2_0() { return cGeneratorConstAssignment_2_0; }
 		
-		//[MobaConstant]
+		//[MobaConstant|GENERATOR_ID]
 		public CrossReference getGeneratorConstMobaConstantCrossReference_2_0_0() { return cGeneratorConstMobaConstantCrossReference_2_0_0; }
 		
-		//ID
-		public RuleCall getGeneratorConstMobaConstantIDTerminalRuleCall_2_0_0_1() { return cGeneratorConstMobaConstantIDTerminalRuleCall_2_0_0_1; }
+		//GENERATOR_ID
+		public RuleCall getGeneratorConstMobaConstantGENERATOR_IDTerminalRuleCall_2_0_0_1() { return cGeneratorConstMobaConstantGENERATOR_IDTerminalRuleCall_2_0_0_1; }
 		
 		//generatorString=STRING
 		public Assignment getGeneratorStringAssignment_2_1() { return cGeneratorStringAssignment_2_1; }
@@ -281,26 +281,26 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cMixinKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cGeneratorRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cGeneratorRefMobaGeneratorCrossReference_1_0 = (CrossReference)cGeneratorRefAssignment_1.eContents().get(0);
-		private final RuleCall cGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1 = (RuleCall)cGeneratorRefMobaGeneratorCrossReference_1_0.eContents().get(1);
+		private final RuleCall cGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1 = (RuleCall)cGeneratorRefMobaGeneratorCrossReference_1_0.eContents().get(1);
 		
 		//MobaGeneratorMixinFeature:
-		//	'mixin' generatorRef=[MobaGenerator];
+		//	'mixin' generatorRef=[MobaGenerator|GENERATOR_ID];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'mixin' generatorRef=[MobaGenerator]
+		//'mixin' generatorRef=[MobaGenerator|GENERATOR_ID]
 		public Group getGroup() { return cGroup; }
 		
 		//'mixin'
 		public Keyword getMixinKeyword_0() { return cMixinKeyword_0; }
 		
-		//generatorRef=[MobaGenerator]
+		//generatorRef=[MobaGenerator|GENERATOR_ID]
 		public Assignment getGeneratorRefAssignment_1() { return cGeneratorRefAssignment_1; }
 		
-		//[MobaGenerator]
+		//[MobaGenerator|GENERATOR_ID]
 		public CrossReference getGeneratorRefMobaGeneratorCrossReference_1_0() { return cGeneratorRefMobaGeneratorCrossReference_1_0; }
 		
-		//ID
-		public RuleCall getGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1() { return cGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1; }
+		//GENERATOR_ID
+		public RuleCall getGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1() { return cGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1; }
 	}
 	public class MobaDataTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaDataType");
@@ -2612,11 +2612,13 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	private final MobaLowerBoundElements eMobaLowerBound;
 	private final MobaUpperBoundElements eMobaUpperBound;
 	private final TerminalRule tINT;
+	private final TerminalRule tDOUBLE;
 	private final TerminalRule tID;
 	private final TerminalRule tVERSION;
+	private final TerminalRule tFQN;
 	private final TerminalRule tAPPLICATION_ID;
+	private final TerminalRule tGENERATOR_ID;
 	private final TerminalRule tDOWNLOAD_TEMPLATE;
-	private final TerminalRule tDOUBLE;
 	private final TerminalRule tFLOAT;
 	
 	private final Grammar grammar;
@@ -2676,11 +2678,13 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		this.eMobaLowerBound = new MobaLowerBoundElements();
 		this.eMobaUpperBound = new MobaUpperBoundElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.INT");
+		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOUBLE");
 		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.ID");
 		this.tVERSION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.VERSION");
+		this.tFQN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.FQN");
 		this.tAPPLICATION_ID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.APPLICATION_ID");
+		this.tGENERATOR_ID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.GENERATOR_ID");
 		this.tDOWNLOAD_TEMPLATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOWNLOAD_TEMPLATE");
-		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOUBLE");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.FLOAT");
 	}
 	
@@ -2767,7 +2771,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaGeneratorIDFeature:
-	//	'id' '=' (generatorConst=[MobaConstant] | generatorString=STRING);
+	//	'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING);
 	public MobaGeneratorIDFeatureElements getMobaGeneratorIDFeatureAccess() {
 		return pMobaGeneratorIDFeature;
 	}
@@ -2777,7 +2781,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaGeneratorMixinFeature:
-	//	'mixin' generatorRef=[MobaGenerator];
+	//	'mixin' generatorRef=[MobaGenerator|GENERATOR_ID];
 	public MobaGeneratorMixinFeatureElements getMobaGeneratorMixinFeatureAccess() {
 		return pMobaGeneratorMixinFeature;
 	}
@@ -3227,6 +3231,12 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		return tINT;
 	}
 	
+	//terminal DOUBLE returns ecore::EDouble:
+	//	('+' | '-')? INT ('.' INT)?;
+	public TerminalRule getDOUBLERule() {
+		return tDOUBLE;
+	}
+	
 	//terminal ID:
 	//	super::ID;
 	public TerminalRule getIDRule() {
@@ -3234,9 +3244,15 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal VERSION:
-	//	'a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9'*;
+	//	INT '.' INT '.' INT ('-' ('SNAPSHOT' | 'RELEASE'))?;
 	public TerminalRule getVERSIONRule() {
 		return tVERSION;
+	}
+	
+	//terminal FQN:
+	//	ID ('.' ID)*;
+	public TerminalRule getFQNRule() {
+		return tFQN;
 	}
 	
 	//terminal APPLICATION_ID:
@@ -3245,16 +3261,16 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		return tAPPLICATION_ID;
 	}
 	
+	//terminal GENERATOR_ID:
+	//	FQN ':' VERSION;
+	public TerminalRule getGENERATOR_IDRule() {
+		return tGENERATOR_ID;
+	}
+	
 	//terminal DOWNLOAD_TEMPLATE:
 	//	'index://' ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9')* ':' APPLICATION_ID;
 	public TerminalRule getDOWNLOAD_TEMPLATERule() {
 		return tDOWNLOAD_TEMPLATE;
-	}
-	
-	//terminal DOUBLE returns ecore::EDouble:
-	//	('+' | '-')? INT ('.' INT)?;
-	public TerminalRule getDOUBLERule() {
-		return tDOUBLE;
 	}
 	
 	//terminal FLOAT returns ecore::EFloat:

@@ -65,10 +65,10 @@ public class MobaGenerator extends AbstractGenerator {
       return Collections.<String>emptyList();
     }
     org.mobadsl.semantic.model.moba.MobaGenerator _activeGenerator = application.getActiveGenerator();
-    List<String> _allGeneratorIds = null;
+    List<String> _allGeneratorVersionedIds = null;
     if (_activeGenerator!=null) {
-      _allGeneratorIds=_activeGenerator.getAllGeneratorIds();
+      _allGeneratorVersionedIds=_activeGenerator.getAllGeneratorVersionedIds();
     }
-    return _allGeneratorIds;
+    return _allGeneratorVersionedIds;
   }
 }

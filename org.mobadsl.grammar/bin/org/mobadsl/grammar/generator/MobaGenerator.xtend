@@ -50,7 +50,7 @@ class MobaGenerator extends AbstractGenerator {
 		if (application == null) {
 			return Collections.emptyList
 		}
-		return application.activeGenerator?.allGeneratorIds
+		return application.activeGenerator?.allGeneratorVersionedIds
 	}
 
 }

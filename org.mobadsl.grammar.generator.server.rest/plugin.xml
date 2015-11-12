@@ -9,7 +9,8 @@
             generatorId="org.mobadsl.grammar.generator.server.rest"
             grammarName="org.mobadsl.grammar.Moba"
             license="EPL v1"
-            name="OSGi REST services">
+            name="OSGi REST services"
+            version="0.8.9-SNAPSHOT">
       </generatorDelegate>
    </extension>
 

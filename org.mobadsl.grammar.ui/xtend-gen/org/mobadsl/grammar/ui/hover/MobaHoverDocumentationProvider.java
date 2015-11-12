@@ -181,11 +181,11 @@ public class MobaHoverDocumentationProvider extends MultiLineCommentDocumentatio
   protected String _toDocu(final MobaGeneratorIDFeature feature) {
     String _xblockexpression = null;
     {
-      String _generatorId = feature.getGeneratorId();
-      List<String> _singletonList = Collections.<String>singletonList(_generatorId);
+      String _generatorVersionedId = feature.getGeneratorVersionedId();
+      List<String> _singletonList = Collections.<String>singletonList(_generatorVersionedId);
       Map<String, ExtensionGeneratorDelegate.Metadata> _readExtentionsMetadata = this.generatorDelegate.readExtentionsMetadata(this.grammarName, _singletonList);
-      String _generatorId_1 = feature.getGeneratorId();
-      final ExtensionGeneratorDelegate.Metadata metadata = _readExtentionsMetadata.get(_generatorId_1);
+      String _generatorVersionedId_1 = feature.getGeneratorVersionedId();
+      final ExtensionGeneratorDelegate.Metadata metadata = _readExtentionsMetadata.get(_generatorVersionedId_1);
       String _xifexpression = null;
       boolean _notEquals = (!Objects.equal(metadata, null));
       if (_notEquals) {
@@ -208,15 +208,15 @@ public class MobaHoverDocumentationProvider extends MultiLineCommentDocumentatio
         String _description = metadata.getDescription();
         _builder.append(_description, "");
         _builder.append(": <code>");
-        String _generatorId_2 = feature.getGeneratorId();
-        _builder.append(_generatorId_2, "");
+        String _generatorVersionedId_2 = feature.getGeneratorVersionedId();
+        _builder.append(_generatorVersionedId_2, "");
         _builder.append("</code>");
         _xifexpression = _builder.toString();
       } else {
         StringConcatenation _builder_1 = new StringConcatenation();
         _builder_1.append("<code>");
-        String _generatorId_3 = feature.getGeneratorId();
-        _builder_1.append(_generatorId_3, "");
+        String _generatorVersionedId_3 = feature.getGeneratorVersionedId();
+        _builder_1.append(_generatorVersionedId_3, "");
         _builder_1.append("</code>");
         _xifexpression = _builder_1.toString();
       }
@@ -228,8 +228,8 @@ public class MobaHoverDocumentationProvider extends MultiLineCommentDocumentatio
   protected String _toDocu(final MobaGeneratorMixinFeature feature) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("mixin <code>");
-    String _generatorId = feature.getGeneratorId();
-    _builder.append(_generatorId, "");
+    String _generatorVersionedId = feature.getGeneratorVersionedId();
+    _builder.append(_generatorVersionedId, "");
     _builder.append("</code>");
     _builder.newLineIfNotEmpty();
     return _builder.toString();

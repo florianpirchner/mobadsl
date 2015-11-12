@@ -90,17 +90,17 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	'''
 
 	def dispatch String toDocu(MobaGeneratorIDFeature feature) {
-		val metadata = generatorDelegate.readExtentionsMetadata(grammarName, Collections.singletonList(feature.generatorId)).get(feature.generatorId)
+		val metadata = generatorDelegate.readExtentionsMetadata(grammarName, Collections.singletonList(feature.generatorVersionedId)).get(feature.generatorVersionedId)
 		if(metadata != null) {
-			'''<b>«metadata.name»</b> «IF !metadata.license.nullOrEmpty» <i>under («metadata.license»«ENDIF»</i>) - «metadata.description»: <code>«feature.generatorId»</code>'''
+			'''<b>«metadata.name»</b> «IF !metadata.license.nullOrEmpty» <i>under («metadata.license»«ENDIF»</i>) - «metadata.description»: <code>«feature.generatorVersionedId»</code>'''
 		}else{
-			'''<code>«feature.generatorId»</code>'''
+			'''<code>«feature.generatorVersionedId»</code>'''
 		}
 	}
 	
 
 	def dispatch String toDocu(MobaGeneratorMixinFeature feature) '''
-		mixin <code>«feature.generatorId»</code>
+		mixin <code>«feature.generatorVersionedId»</code>
 	'''
 
 }

@@ -231,13 +231,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         superType=[MobaDataType|ID]? 
 	 *         (
-	 *             (
-	 *                 primitive?='isPrimitive' | 
-	 *                 array?='isArray' | 
-	 *                 ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') dateFormatConst=[MobaConstant|ID]? dateFormatString=STRING?) | 
-	 *                 enumAST=MobaEnum
-	 *             )? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
+	 *             (primitive?='isPrimitive' | array?='isArray' | enumAST=MobaEnum)? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 
+	 *             ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
 	 *         )+ 
 	 *         (properties+=MobaProperty properties+=MobaProperty*)?
 	 *     )
@@ -430,7 +426,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaGeneratorIDFeature returns MobaGeneratorIDFeature
 	 *
 	 * Constraint:
-	 *     (generatorConst=[MobaConstant|ID] | generatorString=STRING)
+	 *     (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING)
 	 */
 	protected void sequence_MobaGeneratorIDFeature(ISerializationContext context, MobaGeneratorIDFeature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -443,7 +439,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaGeneratorMixinFeature returns MobaGeneratorMixinFeature
 	 *
 	 * Constraint:
-	 *     generatorRef=[MobaGenerator|ID]
+	 *     generatorRef=[MobaGenerator|GENERATOR_ID]
 	 */
 	protected void sequence_MobaGeneratorMixinFeature(ISerializationContext context, MobaGeneratorMixinFeature semanticObject) {
 		if (errorAcceptor != null) {
@@ -451,7 +447,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
+		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
 		feeder.finish();
 	}
 	

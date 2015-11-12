@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -220,11 +221,21 @@ public class MobaGeneratorIDFeatureImpl extends MinimalEObjectImpl.Container imp
 	}
 
 	@Override
-	public String getGeneratorId() {
+	public String getGeneratorVersionedId() {
 		if(getGeneratorConst() != null) {
 			return getGeneratorConst().getValue();
 		}
 		return getGeneratorString();
+	}
+
+	@Override
+	public String getVersion() {
+		return MobaUtil.toGeneratorVersion(getGeneratorVersionedId());
+	}
+
+	@Override
+	public String getId() {
+		return MobaUtil.toGeneratorId(getGeneratorVersionedId());
 	}
 
 } //MobaGeneratorIDFeatureImpl

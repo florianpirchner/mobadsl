@@ -14,9 +14,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getFeatures <em>Features</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#isActive <em>Active</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName
+ * <em>Name</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#getFeatures
+ * <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaGenerator#isActive
+ * <em>Active</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaGenerator()
@@ -42,9 +45,12 @@ public interface MobaGenerator extends MobaApplicationFeature {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaGenerator#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaGenerator#getName
+	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -127,11 +133,21 @@ public interface MobaGenerator extends MobaApplicationFeature {
 	List<MobaGeneratorFeature> getAllFeatures();
 
 	/**
-	 * Returns all generator ids from features including the features of all
-	 * mixins and the mixins of mixins.
+	 * Returns all generator ids with version (org.my.generator:0.8.1.qualifier)
+	 * from features including the features of all mixins and the mixins of
+	 * mixins.
 	 * 
 	 * @return
 	 */
-	List<String> getAllGeneratorIds();
+	List<String> getAllGeneratorVersionedIds();
+
+	/**
+	 * Returns the generator versioned ID. It follows the pattern
+	 * {FQN}:{VERSION} like "MyGenator:0.8.1.qualifier". From
+	 * {@link #getGeneratorString()} or {@link #getGeneratorConst()}
+	 * 
+	 * @return
+	 */
+	String getVersionedId();
 
 } // MobaGenerator

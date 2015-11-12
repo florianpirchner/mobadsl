@@ -159,7 +159,7 @@ public class MobaUtil {
 	 * @param string
 	 * @return
 	 */
-	public static String toApplicationIdQualifiedNameString(String string) {
+	public static String toApplicationVersionedIdModelValue(String string) {
 		if (!string.contains(":")) {
 			return string;
 		}
@@ -188,7 +188,7 @@ public class MobaUtil {
 	 * @param string
 	 * @return
 	 */
-	public static String toApplicationIdCrossReferenceTerminal(String value) {
+	public static String toApplicationVersionedIdUiValue(String value) {
 		if (value.contains(":")) {
 			return value;
 		}
@@ -208,6 +208,85 @@ public class MobaUtil {
 		}
 
 		return b.toString();
+
+	}
+
+	/**
+	 * Converts from <code>org.my.generator:1.2.3-SNAPSHOT</code> to
+	 * <code>org.my.generator.1.2.3-SNAPSHOT</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toGeneratorVersionedIdModelValue(String string) {
+		if (!string.contains(":")) {
+			return string;
+		}
+		return string.replaceFirst(":", ".");
+	}
+
+	/**
+	 * Converts from <code>org.my.generator.1.2.3-SNAPSHOT</code> to
+	 * <code>org.my.generator:1.2.3-SNAPSHOT</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toGeneratorVersionedIdUiValue(String value) {
+		if (value.contains(":")) {
+			return value;
+		}
+		int versionQualifierIndex = value.lastIndexOf(".");
+		int versionMinIndex = value.lastIndexOf(".", versionQualifierIndex - 1);
+		int versionMaxIndex = value.lastIndexOf(".", versionMinIndex - 1);
+
+		String generatorId = value.substring(0, versionMaxIndex);
+		String version = value.substring(versionMaxIndex, value.length() + 1);
+
+		return generatorId + ":" + version;
+	}
+
+	/**
+	 * Converts from <code>org.my.generator:0.8.1-SNAPSHOT</code> to
+	 * <code>org.my.generator</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toGeneratorId(String terminalString) {
+		if (terminalString == null || !terminalString.contains(":")) {
+			return "";
+		}
+		String[] tokens = terminalString.split(":");
+		return tokens[0];
+
+	}
+
+	/**
+	 * Converts from <code>org.my.generator:0.8.1-SNAPSHOT</code> to
+	 * <code>0.8.1-SNAPSHOT</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toGeneratorVersion(String terminalString) {
+		if (terminalString == null || !terminalString.contains(":")) {
+			return "";
+		}
+		String[] tokens = terminalString.split(":");
+		return tokens[1];
+	}
+
+	/**
+	 * Converts from <code>org.my.generator</code> and
+	 * <code>0.8.1-SNAPSHOT</code> to
+	 * <code>org.my.generator:0.8.1-SNAPSHOT</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toGeneratorVersionedId(String id, String version) {
+		return id + ":" + version;
 
 	}
 
