@@ -95,7 +95,7 @@ ruleMobaApplication returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -109,9 +109,9 @@ ruleMobaApplication returns [EObject current=null]
 		}
 		(
 			(
-				lv_version_4_0=RULE_STRING
+				lv_version_4_0=RULE_VERSION
 				{
-					newLeafNode(lv_version_4_0, grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_version_4_0, grammarAccess.getMobaApplicationAccess().getVersionVERSIONTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -121,7 +121,7 @@ ruleMobaApplication returns [EObject current=null]
 						$current,
 						"version",
 						lv_version_4_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"org.mobadsl.grammar.Moba.VERSION");
 				}
 			)
 		)
@@ -341,7 +341,7 @@ ruleMobaGenerator returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_2_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -542,7 +542,7 @@ ruleMobaDataType returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -871,7 +871,7 @@ ruleMobaEnum returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -964,7 +964,7 @@ ruleMobaEnumLiteral returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -1057,7 +1057,7 @@ ruleMobaConstant returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -1472,7 +1472,7 @@ ruleMobaSettings returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_3_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -1732,7 +1732,7 @@ ruleMobaEntity returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -1957,7 +1957,7 @@ ruleMobaDto returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -2057,7 +2057,7 @@ ruleMobaQueue returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -2193,7 +2193,7 @@ ruleMobaRestCustom returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -2247,7 +2247,7 @@ ruleMobaRestCrud returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -2534,7 +2534,7 @@ ruleMobaEntityAttribute returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_14_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -2810,7 +2810,7 @@ ruleMobaSettingsAttribute returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_14_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -3001,7 +3001,7 @@ ruleMobaEntityReference returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_7_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -3270,7 +3270,7 @@ ruleMobaDtoAttribute returns [EObject current=null]
 												$current,
 												"alias",
 												lv_alias_14_0,
-												"org.eclipse.xtext.common.Terminals.ID");
+												"org.mobadsl.grammar.Moba.ID");
 										}
 									)
 								)
@@ -3329,7 +3329,7 @@ ruleMobaDtoAttribute returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_18_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -3490,7 +3490,7 @@ ruleMobaDtoReference returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_7_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -3676,7 +3676,7 @@ ruleMobaQueueReference returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_7_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.mobadsl.grammar.Moba.ID");
 				}
 			)
 		)
@@ -4405,17 +4405,19 @@ ruleMobaUpperBound returns [Enumerator current=null]
 
 RULE_INT : SUPER_INT;
 
-fragment RULE_VERSION : ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
+RULE_ID : SUPER_ID;
 
-RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_VERSION;
+RULE_VERSION : ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
 
 RULE_APPLICATION_ID : RULE_ID ':' RULE_VERSION;
+
+RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_APPLICATION_ID;
 
 RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 
 RULE_FLOAT : RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)? (('b'|'B') ('i'|'I'|'d'|'D')|('l'|'L'|'d'|'D'|'f'|'F'))?;
 
-RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+fragment SUPER_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 fragment SUPER_INT : ('0'..'9')+;
 

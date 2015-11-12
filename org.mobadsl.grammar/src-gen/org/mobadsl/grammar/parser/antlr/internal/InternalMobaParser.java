@@ -22,13 +22,13 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_APPLICATION_ID", "RULE_DOWNLOAD_TEMPLATE", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "RULE_VERSION", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'application'", "'version'", "'='", "'{'", "'}'", "'use template'", "'active'", "'generator'", "'id'", "'mixin'", "'datatype'", "'extends'", "'isPrimitive'", "'isArray'", "'isDate'", "'isTime'", "'isTimestamp'", "'('", "')'", "'constraints'", "','", "'enum'", "'lit'", "'const'", "'+'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'index'", "'dto'", "'queue'", "'rest'", "'restCrud'", "'var'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'ref'", "'cascading'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'*'", "'0'", "'?'", "'1'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VERSION", "RULE_APPLICATION_ID", "RULE_DOWNLOAD_TEMPLATE", "RULE_STRING", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "SUPER_ID", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'application'", "'version'", "'='", "'{'", "'}'", "'use template'", "'active'", "'generator'", "'id'", "'mixin'", "'datatype'", "'extends'", "'isPrimitive'", "'isArray'", "'isDate'", "'isTime'", "'isTimestamp'", "'('", "')'", "'constraints'", "','", "'enum'", "'lit'", "'const'", "'+'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'index'", "'dto'", "'queue'", "'rest'", "'restCrud'", "'var'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'ref'", "'cascading'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'*'", "'0'", "'?'", "'1'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
-    public static final int RULE_VERSION=11;
+    public static final int RULE_VERSION=5;
     public static final int T__59=59;
-    public static final int T__17=17;
+    public static final int SUPER_ID=12;
     public static final int T__18=18;
     public static final int T__55=55;
     public static final int T__56=56;
@@ -44,11 +44,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=8;
+    public static final int RULE_INT=9;
     public static final int T__29=29;
     public static final int T__22=22;
     public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=13;
+    public static final int RULE_ML_COMMENT=14;
     public static final int T__23=23;
     public static final int T__67=67;
     public static final int T__24=24;
@@ -61,14 +61,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final int T__64=64;
     public static final int T__21=21;
     public static final int T__65=65;
-    public static final int SUPER_INT=10;
+    public static final int SUPER_INT=11;
     public static final int T__70=70;
     public static final int T__71=71;
     public static final int T__72=72;
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=14;
+    public static final int RULE_STRING=8;
+    public static final int RULE_SL_COMMENT=15;
     public static final int T__37=37;
-    public static final int RULE_DOUBLE=9;
+    public static final int RULE_DOUBLE=10;
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int RULE_APPLICATION_ID=6;
@@ -82,14 +82,15 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final int T__30=30;
     public static final int T__74=74;
     public static final int T__31=31;
+    public static final int T__75=75;
     public static final int T__32=32;
-    public static final int RULE_WS=15;
-    public static final int RULE_ANY_OTHER=16;
+    public static final int RULE_WS=16;
+    public static final int RULE_ANY_OTHER=17;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
     public static final int T__45=45;
-    public static final int RULE_FLOAT=12;
+    public static final int RULE_FLOAT=13;
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -173,7 +174,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaApplication"
-    // InternalMoba.g:72:1: ruleMobaApplication returns [EObject current=null] : (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_STRING ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' ) ;
+    // InternalMoba.g:72:1: ruleMobaApplication returns [EObject current=null] : (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_VERSION ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' ) ;
     public final EObject ruleMobaApplication() throws RecognitionException {
         EObject current = null;
 
@@ -191,13 +192,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:78:2: ( (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_STRING ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' ) )
-            // InternalMoba.g:79:2: (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_STRING ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' )
+            // InternalMoba.g:78:2: ( (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_VERSION ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' ) )
+            // InternalMoba.g:79:2: (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_VERSION ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' )
             {
-            // InternalMoba.g:79:2: (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_STRING ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' )
-            // InternalMoba.g:80:3: otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_STRING ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}'
+            // InternalMoba.g:79:2: (otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_VERSION ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}' )
+            // InternalMoba.g:80:3: otherlv_0= 'application' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'version' otherlv_3= '=' ( (lv_version_4_0= RULE_VERSION ) ) otherlv_5= '{' ( (lv_features_6_0= ruleMobaApplicationFeature ) )* otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_3); 
+            otherlv_0=(Token)match(input,18,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaApplicationAccess().getApplicationKeyword_0());
             		
@@ -219,7 +220,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -227,23 +228,23 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,18,FOLLOW_5); 
+            otherlv_2=(Token)match(input,19,FOLLOW_5); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMobaApplicationAccess().getVersionKeyword_2());
             		
-            otherlv_3=(Token)match(input,19,FOLLOW_6); 
+            otherlv_3=(Token)match(input,20,FOLLOW_6); 
 
             			newLeafNode(otherlv_3, grammarAccess.getMobaApplicationAccess().getEqualsSignKeyword_3());
             		
-            // InternalMoba.g:110:3: ( (lv_version_4_0= RULE_STRING ) )
-            // InternalMoba.g:111:4: (lv_version_4_0= RULE_STRING )
+            // InternalMoba.g:110:3: ( (lv_version_4_0= RULE_VERSION ) )
+            // InternalMoba.g:111:4: (lv_version_4_0= RULE_VERSION )
             {
-            // InternalMoba.g:111:4: (lv_version_4_0= RULE_STRING )
-            // InternalMoba.g:112:5: lv_version_4_0= RULE_STRING
+            // InternalMoba.g:111:4: (lv_version_4_0= RULE_VERSION )
+            // InternalMoba.g:112:5: lv_version_4_0= RULE_VERSION
             {
-            lv_version_4_0=(Token)match(input,RULE_STRING,FOLLOW_7); 
+            lv_version_4_0=(Token)match(input,RULE_VERSION,FOLLOW_7); 
 
-            					newLeafNode(lv_version_4_0, grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_4_0());
+            					newLeafNode(lv_version_4_0, grammarAccess.getMobaApplicationAccess().getVersionVERSIONTerminalRuleCall_4_0());
             				
 
             					if (current==null) {
@@ -253,7 +254,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"version",
             						lv_version_4_0,
-            						"org.eclipse.xtext.common.Terminals.STRING");
+            						"org.mobadsl.grammar.Moba.VERSION");
             				
 
             }
@@ -261,7 +262,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,20,FOLLOW_8); 
+            otherlv_5=(Token)match(input,21,FOLLOW_8); 
 
             			newLeafNode(otherlv_5, grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_5());
             		
@@ -271,7 +272,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=22 && LA1_0<=24)||LA1_0==27||LA1_0==40||LA1_0==44||LA1_0==48||(LA1_0>=50 && LA1_0<=53)) ) {
+                if ( ((LA1_0>=23 && LA1_0<=25)||LA1_0==28||LA1_0==41||LA1_0==45||LA1_0==49||(LA1_0>=51 && LA1_0<=54)) ) {
                     alt1=1;
                 }
 
@@ -314,7 +315,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,21,FOLLOW_2); 
+            otherlv_7=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_7());
             		
@@ -406,29 +407,29 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:173:2: (this_MobaDataType_0= ruleMobaDataType | this_MobaTemplate_1= ruleMobaTemplate | this_MobaConstant_2= ruleMobaConstant | this_MobaSettings_3= ruleMobaSettings | this_MobaData_4= ruleMobaData | this_MobaService_5= ruleMobaService | this_MobaGenerator_6= ruleMobaGenerator )
             int alt2=7;
             switch ( input.LA(1) ) {
-            case 27:
+            case 28:
                 {
                 alt2=1;
                 }
                 break;
-            case 22:
+            case 23:
                 {
                 alt2=2;
                 }
                 break;
-            case 40:
+            case 41:
                 {
                 alt2=3;
                 }
                 break;
-            case 23:
+            case 24:
                 {
                 int LA2_4 = input.LA(2);
 
-                if ( (LA2_4==44) ) {
+                if ( (LA2_4==45) ) {
                     alt2=4;
                 }
-                else if ( (LA2_4==24) ) {
+                else if ( (LA2_4==25) ) {
                     alt2=7;
                 }
                 else {
@@ -439,25 +440,25 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 44:
+            case 45:
                 {
                 alt2=4;
                 }
                 break;
-            case 48:
-            case 50:
+            case 49:
             case 51:
+            case 52:
                 {
                 alt2=5;
                 }
                 break;
-            case 52:
             case 53:
+            case 54:
                 {
                 alt2=6;
                 }
                 break;
-            case 24:
+            case 25:
                 {
                 alt2=7;
                 }
@@ -673,7 +674,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:254:2: (otherlv_0= 'use template' ( ( (otherlv_1= RULE_APPLICATION_ID ) ) | ( (lv_downloadTemplate_2_0= RULE_DOWNLOAD_TEMPLATE ) ) ) )
             // InternalMoba.g:255:3: otherlv_0= 'use template' ( ( (otherlv_1= RULE_APPLICATION_ID ) ) | ( (lv_downloadTemplate_2_0= RULE_DOWNLOAD_TEMPLATE ) ) )
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_9); 
+            otherlv_0=(Token)match(input,23,FOLLOW_9); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaTemplateAccess().getUseTemplateKeyword_0());
             		
@@ -841,7 +842,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==23) ) {
+            if ( (LA4_0==24) ) {
                 alt4=1;
             }
             switch (alt4) {
@@ -851,7 +852,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:313:4: (lv_active_0_0= 'active' )
                     // InternalMoba.g:314:5: lv_active_0_0= 'active'
                     {
-                    lv_active_0_0=(Token)match(input,23,FOLLOW_10); 
+                    lv_active_0_0=(Token)match(input,24,FOLLOW_10); 
 
                     					newLeafNode(lv_active_0_0, grammarAccess.getMobaGeneratorAccess().getActiveActiveKeyword_0_0());
                     				
@@ -870,7 +871,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_3); 
+            otherlv_1=(Token)match(input,25,FOLLOW_3); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorAccess().getGeneratorKeyword_1());
             		
@@ -892,7 +893,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_2_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -900,7 +901,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_11); 
+            otherlv_3=(Token)match(input,21,FOLLOW_11); 
 
             			newLeafNode(otherlv_3, grammarAccess.getMobaGeneratorAccess().getLeftCurlyBracketKeyword_3());
             		
@@ -910,7 +911,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( ((LA5_0>=25 && LA5_0<=26)) ) {
+                if ( ((LA5_0>=26 && LA5_0<=27)) ) {
                     alt5=1;
                 }
 
@@ -953,7 +954,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,21,FOLLOW_2); 
+            otherlv_5=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_5, grammarAccess.getMobaGeneratorAccess().getRightCurlyBracketKeyword_5());
             		
@@ -1036,10 +1037,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==25) ) {
+            if ( (LA6_0==26) ) {
                 alt6=1;
             }
-            else if ( (LA6_0==26) ) {
+            else if ( (LA6_0==27) ) {
                 alt6=2;
             }
             else {
@@ -1163,11 +1164,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:429:2: (otherlv_0= 'id' otherlv_1= '=' ( ( (otherlv_2= RULE_ID ) ) | ( (lv_generatorString_3_0= RULE_STRING ) ) ) )
             // InternalMoba.g:430:3: otherlv_0= 'id' otherlv_1= '=' ( ( (otherlv_2= RULE_ID ) ) | ( (lv_generatorString_3_0= RULE_STRING ) ) )
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_5); 
+            otherlv_0=(Token)match(input,26,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getIdKeyword_0());
             		
-            otherlv_1=(Token)match(input,19,FOLLOW_12); 
+            otherlv_1=(Token)match(input,20,FOLLOW_12); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorIDFeatureAccess().getEqualsSignKeyword_1());
             		
@@ -1326,7 +1327,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:490:2: (otherlv_0= 'mixin' ( (otherlv_1= RULE_ID ) ) )
             // InternalMoba.g:491:3: otherlv_0= 'mixin' ( (otherlv_1= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_3); 
+            otherlv_0=(Token)match(input,27,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorMixinFeatureAccess().getMixinKeyword_0());
             		
@@ -1450,7 +1451,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:526:2: (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_primitive_5_0= 'isPrimitive' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_array_6_0= 'isArray' ) ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_date_7_0= 'isDate' ) ) | ( (lv_time_8_0= 'isTime' ) ) | ( (lv_timestamp_9_0= 'isTimestamp' ) ) ) (otherlv_10= '(' ( ( (lv_dateFormatString_11_0= RULE_STRING ) ) | ( (otherlv_12= RULE_ID ) ) ) otherlv_13= ')' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= 'constraints' otherlv_15= '(' ( (lv_constraints_16_0= ruleMobaConstraint ) ) (otherlv_17= ',' ( (lv_constraints_18_0= ruleMobaConstraint ) ) )* otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_enumAST_20_0= ruleMobaEnum ) ) ) ) ) )* ) ) ) (this_MobaPropertiesAble_21= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:527:3: otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_primitive_5_0= 'isPrimitive' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_array_6_0= 'isArray' ) ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_date_7_0= 'isDate' ) ) | ( (lv_time_8_0= 'isTime' ) ) | ( (lv_timestamp_9_0= 'isTimestamp' ) ) ) (otherlv_10= '(' ( ( (lv_dateFormatString_11_0= RULE_STRING ) ) | ( (otherlv_12= RULE_ID ) ) ) otherlv_13= ')' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= 'constraints' otherlv_15= '(' ( (lv_constraints_16_0= ruleMobaConstraint ) ) (otherlv_17= ',' ( (lv_constraints_18_0= ruleMobaConstraint ) ) )* otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_enumAST_20_0= ruleMobaEnum ) ) ) ) ) )* ) ) ) (this_MobaPropertiesAble_21= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,27,FOLLOW_3); 
+            otherlv_0=(Token)match(input,28,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaDataTypeAccess().getDatatypeKeyword_0());
             		
@@ -1472,7 +1473,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -1484,14 +1485,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==28) ) {
+            if ( (LA8_0==29) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
                     // InternalMoba.g:550:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,28,FOLLOW_3); 
+                    otherlv_2=(Token)match(input,29,FOLLOW_3); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getMobaDataTypeAccess().getExtendsKeyword_2_0());
                     			
@@ -1540,19 +1541,19 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt13=6;
                 int LA13_0 = input.LA(1);
 
-                if ( LA13_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 0) ) {
+                if ( LA13_0 == 30 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 0) ) {
                     alt13=1;
                 }
-                else if ( LA13_0 == 30 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 1) ) {
+                else if ( LA13_0 == 31 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 1) ) {
                     alt13=2;
                 }
-                else if ( LA13_0 >= 31 && LA13_0 <= 33 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 2) ) {
+                else if ( LA13_0 >= 32 && LA13_0 <= 34 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 2) ) {
                     alt13=3;
                 }
-                else if ( LA13_0 == 36 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 3) ) {
+                else if ( LA13_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 3) ) {
                     alt13=4;
                 }
-                else if ( LA13_0 == 38 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 4) ) {
+                else if ( LA13_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), 4) ) {
                     alt13=5;
                 }
 
@@ -1585,7 +1586,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:580:20: (lv_primitive_5_0= 'isPrimitive' )
             	    // InternalMoba.g:581:10: lv_primitive_5_0= 'isPrimitive'
             	    {
-            	    lv_primitive_5_0=(Token)match(input,29,FOLLOW_14); 
+            	    lv_primitive_5_0=(Token)match(input,30,FOLLOW_14); 
 
             	    										newLeafNode(lv_primitive_5_0, grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_0_0());
             	    									
@@ -1643,7 +1644,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:603:20: (lv_array_6_0= 'isArray' )
             	    // InternalMoba.g:604:10: lv_array_6_0= 'isArray'
             	    {
-            	    lv_array_6_0=(Token)match(input,30,FOLLOW_14); 
+            	    lv_array_6_0=(Token)match(input,31,FOLLOW_14); 
 
             	    										newLeafNode(lv_array_6_0, grammarAccess.getMobaDataTypeAccess().getArrayIsArrayKeyword_3_1_0());
             	    									
@@ -1701,17 +1702,17 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:626:20: ( ( (lv_date_7_0= 'isDate' ) ) | ( (lv_time_8_0= 'isTime' ) ) | ( (lv_timestamp_9_0= 'isTimestamp' ) ) )
             	    int alt9=3;
             	    switch ( input.LA(1) ) {
-            	    case 31:
+            	    case 32:
             	        {
             	        alt9=1;
             	        }
             	        break;
-            	    case 32:
+            	    case 33:
             	        {
             	        alt9=2;
             	        }
             	        break;
-            	    case 33:
+            	    case 34:
             	        {
             	        alt9=3;
             	        }
@@ -1733,7 +1734,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	            // InternalMoba.g:628:11: (lv_date_7_0= 'isDate' )
             	            // InternalMoba.g:629:12: lv_date_7_0= 'isDate'
             	            {
-            	            lv_date_7_0=(Token)match(input,31,FOLLOW_15); 
+            	            lv_date_7_0=(Token)match(input,32,FOLLOW_15); 
 
             	            												newLeafNode(lv_date_7_0, grammarAccess.getMobaDataTypeAccess().getDateIsDateKeyword_3_2_0_0_0());
             	            											
@@ -1761,7 +1762,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	            // InternalMoba.g:643:11: (lv_time_8_0= 'isTime' )
             	            // InternalMoba.g:644:12: lv_time_8_0= 'isTime'
             	            {
-            	            lv_time_8_0=(Token)match(input,32,FOLLOW_15); 
+            	            lv_time_8_0=(Token)match(input,33,FOLLOW_15); 
 
             	            												newLeafNode(lv_time_8_0, grammarAccess.getMobaDataTypeAccess().getTimeIsTimeKeyword_3_2_0_1_0());
             	            											
@@ -1789,7 +1790,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	            // InternalMoba.g:658:11: (lv_timestamp_9_0= 'isTimestamp' )
             	            // InternalMoba.g:659:12: lv_timestamp_9_0= 'isTimestamp'
             	            {
-            	            lv_timestamp_9_0=(Token)match(input,33,FOLLOW_15); 
+            	            lv_timestamp_9_0=(Token)match(input,34,FOLLOW_15); 
 
             	            												newLeafNode(lv_timestamp_9_0, grammarAccess.getMobaDataTypeAccess().getTimestampIsTimestampKeyword_3_2_0_2_0());
             	            											
@@ -1815,14 +1816,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    int alt11=2;
             	    int LA11_0 = input.LA(1);
 
-            	    if ( (LA11_0==34) ) {
+            	    if ( (LA11_0==35) ) {
             	        alt11=1;
             	    }
             	    switch (alt11) {
             	        case 1 :
             	            // InternalMoba.g:673:10: otherlv_10= '(' ( ( (lv_dateFormatString_11_0= RULE_STRING ) ) | ( (otherlv_12= RULE_ID ) ) ) otherlv_13= ')'
             	            {
-            	            otherlv_10=(Token)match(input,34,FOLLOW_12); 
+            	            otherlv_10=(Token)match(input,35,FOLLOW_12); 
 
             	            										newLeafNode(otherlv_10, grammarAccess.getMobaDataTypeAccess().getLeftParenthesisKeyword_3_2_1_0());
             	            									
@@ -1905,7 +1906,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            otherlv_13=(Token)match(input,35,FOLLOW_14); 
+            	            otherlv_13=(Token)match(input,36,FOLLOW_14); 
 
             	            										newLeafNode(otherlv_13, grammarAccess.getMobaDataTypeAccess().getRightParenthesisKeyword_3_2_1_2());
             	            									
@@ -1957,11 +1958,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:727:19: (otherlv_14= 'constraints' otherlv_15= '(' ( (lv_constraints_16_0= ruleMobaConstraint ) ) (otherlv_17= ',' ( (lv_constraints_18_0= ruleMobaConstraint ) ) )* otherlv_19= ')' )
             	    // InternalMoba.g:727:20: otherlv_14= 'constraints' otherlv_15= '(' ( (lv_constraints_16_0= ruleMobaConstraint ) ) (otherlv_17= ',' ( (lv_constraints_18_0= ruleMobaConstraint ) ) )* otherlv_19= ')'
             	    {
-            	    otherlv_14=(Token)match(input,36,FOLLOW_17); 
+            	    otherlv_14=(Token)match(input,37,FOLLOW_17); 
 
             	    									newLeafNode(otherlv_14, grammarAccess.getMobaDataTypeAccess().getConstraintsKeyword_3_3_0());
             	    								
-            	    otherlv_15=(Token)match(input,34,FOLLOW_18); 
+            	    otherlv_15=(Token)match(input,35,FOLLOW_18); 
 
             	    									newLeafNode(otherlv_15, grammarAccess.getMobaDataTypeAccess().getLeftParenthesisKeyword_3_3_1());
             	    								
@@ -2002,7 +2003,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        int alt12=2;
             	        int LA12_0 = input.LA(1);
 
-            	        if ( (LA12_0==37) ) {
+            	        if ( (LA12_0==38) ) {
             	            alt12=1;
             	        }
 
@@ -2011,7 +2012,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	case 1 :
             	    	    // InternalMoba.g:755:10: otherlv_17= ',' ( (lv_constraints_18_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_17=(Token)match(input,37,FOLLOW_18); 
+            	    	    otherlv_17=(Token)match(input,38,FOLLOW_18); 
 
             	    	    										newLeafNode(otherlv_17, grammarAccess.getMobaDataTypeAccess().getCommaKeyword_3_3_3_0());
             	    	    									
@@ -2055,7 +2056,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        }
             	    } while (true);
 
-            	    otherlv_19=(Token)match(input,35,FOLLOW_14); 
+            	    otherlv_19=(Token)match(input,36,FOLLOW_14); 
 
             	    									newLeafNode(otherlv_19, grammarAccess.getMobaDataTypeAccess().getRightParenthesisKeyword_3_3_4());
             	    								
@@ -2166,7 +2167,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt14=2;
             int LA14_0 = input.LA(1);
 
-            if ( (LA14_0==42) ) {
+            if ( (LA14_0==43) ) {
                 alt14=1;
             }
             switch (alt14) {
@@ -2277,7 +2278,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:855:2: (otherlv_0= 'enum' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_literals_3_0= ruleMobaEnumLiteral ) ) (otherlv_4= ',' ( (lv_literals_5_0= ruleMobaEnumLiteral ) ) )* otherlv_6= '}' )
             // InternalMoba.g:856:3: otherlv_0= 'enum' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_literals_3_0= ruleMobaEnumLiteral ) ) (otherlv_4= ',' ( (lv_literals_5_0= ruleMobaEnumLiteral ) ) )* otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_3); 
+            otherlv_0=(Token)match(input,39,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaEnumAccess().getEnumKeyword_0());
             		
@@ -2299,7 +2300,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -2307,7 +2308,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,20,FOLLOW_20); 
+            otherlv_2=(Token)match(input,21,FOLLOW_20); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMobaEnumAccess().getLeftCurlyBracketKeyword_2());
             		
@@ -2348,7 +2349,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==37) ) {
+                if ( (LA15_0==38) ) {
                     alt15=1;
                 }
 
@@ -2357,7 +2358,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalMoba.g:902:4: otherlv_4= ',' ( (lv_literals_5_0= ruleMobaEnumLiteral ) )
             	    {
-            	    otherlv_4=(Token)match(input,37,FOLLOW_20); 
+            	    otherlv_4=(Token)match(input,38,FOLLOW_20); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getMobaEnumAccess().getCommaKeyword_4_0());
             	    			
@@ -2401,7 +2402,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,21,FOLLOW_2); 
+            otherlv_6=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_6, grammarAccess.getMobaEnumAccess().getRightCurlyBracketKeyword_5());
             		
@@ -2487,7 +2488,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:948:2: (otherlv_0= 'lit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' otherlv_3= '(' ( (lv_literal_4_0= RULE_STRING ) ) otherlv_5= ',' ( (lv_value_6_0= RULE_INT ) ) otherlv_7= ')' )
             // InternalMoba.g:949:3: otherlv_0= 'lit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' otherlv_3= '(' ( (lv_literal_4_0= RULE_STRING ) ) otherlv_5= ',' ( (lv_value_6_0= RULE_INT ) ) otherlv_7= ')'
             {
-            otherlv_0=(Token)match(input,39,FOLLOW_3); 
+            otherlv_0=(Token)match(input,40,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaEnumLiteralAccess().getLitKeyword_0());
             		
@@ -2509,7 +2510,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -2517,11 +2518,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_17); 
+            otherlv_2=(Token)match(input,20,FOLLOW_17); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMobaEnumLiteralAccess().getEqualsSignKeyword_2());
             		
-            otherlv_3=(Token)match(input,34,FOLLOW_6); 
+            otherlv_3=(Token)match(input,35,FOLLOW_22); 
 
             			newLeafNode(otherlv_3, grammarAccess.getMobaEnumLiteralAccess().getLeftParenthesisKeyword_3());
             		
@@ -2531,7 +2532,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:980:4: (lv_literal_4_0= RULE_STRING )
             // InternalMoba.g:981:5: lv_literal_4_0= RULE_STRING
             {
-            lv_literal_4_0=(Token)match(input,RULE_STRING,FOLLOW_22); 
+            lv_literal_4_0=(Token)match(input,RULE_STRING,FOLLOW_23); 
 
             					newLeafNode(lv_literal_4_0, grammarAccess.getMobaEnumLiteralAccess().getLiteralSTRINGTerminalRuleCall_4_0());
             				
@@ -2551,7 +2552,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,37,FOLLOW_23); 
+            otherlv_5=(Token)match(input,38,FOLLOW_24); 
 
             			newLeafNode(otherlv_5, grammarAccess.getMobaEnumLiteralAccess().getCommaKeyword_5());
             		
@@ -2581,7 +2582,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,35,FOLLOW_2); 
+            otherlv_7=(Token)match(input,36,FOLLOW_2); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaEnumLiteralAccess().getRightParenthesisKeyword_7());
             		
@@ -2666,7 +2667,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1041:2: (otherlv_0= 'const' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_valueAST_3_0= ruleMobaConstantValue ) ) (this_MobaPropertiesAble_4= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:1042:3: otherlv_0= 'const' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_valueAST_3_0= ruleMobaConstantValue ) ) (this_MobaPropertiesAble_4= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_3); 
+            otherlv_0=(Token)match(input,41,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaConstantAccess().getConstKeyword_0());
             		
@@ -2688,7 +2689,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -2696,7 +2697,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_24); 
+            otherlv_2=(Token)match(input,20,FOLLOW_25); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMobaConstantAccess().getEqualsSignKeyword_2());
             		
@@ -2709,7 +2710,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMobaConstantAccess().getValueASTMobaConstantValueParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             lv_valueAST_3_0=ruleMobaConstantValue();
 
             state._fsp--;
@@ -2735,7 +2736,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==42) ) {
+            if ( (LA16_0==43) ) {
                 alt16=1;
             }
             switch (alt16) {
@@ -2884,7 +2885,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:1121:5: (lv_valueString_0_0= RULE_STRING )
                     // InternalMoba.g:1122:6: lv_valueString_0_0= RULE_STRING
                     {
-                    lv_valueString_0_0=(Token)match(input,RULE_STRING,FOLLOW_26); 
+                    lv_valueString_0_0=(Token)match(input,RULE_STRING,FOLLOW_27); 
 
                     						newLeafNode(lv_valueString_0_0, grammarAccess.getMobaConstantValueAccess().getValueStringSTRINGTerminalRuleCall_0_0_0());
                     					
@@ -2916,7 +2917,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:1140:5: (lv_valueInt_1_0= RULE_INT )
                     // InternalMoba.g:1141:6: lv_valueInt_1_0= RULE_INT
                     {
-                    lv_valueInt_1_0=(Token)match(input,RULE_INT,FOLLOW_26); 
+                    lv_valueInt_1_0=(Token)match(input,RULE_INT,FOLLOW_27); 
 
                     						newLeafNode(lv_valueInt_1_0, grammarAccess.getMobaConstantValueAccess().getValueIntINTTerminalRuleCall_0_1_0());
                     					
@@ -2948,7 +2949,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:1159:5: (lv_valueDouble_2_0= RULE_DOUBLE )
                     // InternalMoba.g:1160:6: lv_valueDouble_2_0= RULE_DOUBLE
                     {
-                    lv_valueDouble_2_0=(Token)match(input,RULE_DOUBLE,FOLLOW_26); 
+                    lv_valueDouble_2_0=(Token)match(input,RULE_DOUBLE,FOLLOW_27); 
 
                     						newLeafNode(lv_valueDouble_2_0, grammarAccess.getMobaConstantValueAccess().getValueDoubleDOUBLETerminalRuleCall_0_2_0());
                     					
@@ -2985,7 +2986,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     							current = createModelElement(grammarAccess.getMobaConstantValueRule());
                     						}
                     					
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_26); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_27); 
 
                     						newLeafNode(otherlv_3, grammarAccess.getMobaConstantValueAccess().getValueConstMobaConstantCrossReference_0_3_0());
                     					
@@ -3005,14 +3006,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==41) ) {
+            if ( (LA18_0==42) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
                     // InternalMoba.g:1192:4: otherlv_4= '+' ( (lv_tail_5_0= ruleMobaConstantValue ) )
                     {
-                    otherlv_4=(Token)match(input,41,FOLLOW_24); 
+                    otherlv_4=(Token)match(input,42,FOLLOW_25); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getMobaConstantValueAccess().getPlusSignKeyword_1_0());
                     			
@@ -3098,7 +3099,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1228:2: (otherlv_0= '[' ( (lv_properties_1_0= ruleMobaProperty ) ) (otherlv_2= ',' ( (lv_properties_3_0= ruleMobaProperty ) ) )* otherlv_4= ']' )
             // InternalMoba.g:1229:3: otherlv_0= '[' ( (lv_properties_1_0= ruleMobaProperty ) ) (otherlv_2= ',' ( (lv_properties_3_0= ruleMobaProperty ) ) )* otherlv_4= ']'
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_12); 
+            otherlv_0=(Token)match(input,43,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaPropertiesAbleAccess().getLeftSquareBracketKeyword_0());
             		
@@ -3111,7 +3112,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMobaPropertiesAbleAccess().getPropertiesMobaPropertyParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             lv_properties_1_0=ruleMobaProperty();
 
             state._fsp--;
@@ -3139,7 +3140,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt19=2;
                 int LA19_0 = input.LA(1);
 
-                if ( (LA19_0==37) ) {
+                if ( (LA19_0==38) ) {
                     alt19=1;
                 }
 
@@ -3148,7 +3149,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalMoba.g:1253:4: otherlv_2= ',' ( (lv_properties_3_0= ruleMobaProperty ) )
             	    {
-            	    otherlv_2=(Token)match(input,37,FOLLOW_12); 
+            	    otherlv_2=(Token)match(input,38,FOLLOW_12); 
 
             	    				newLeafNode(otherlv_2, grammarAccess.getMobaPropertiesAbleAccess().getCommaKeyword_2_0());
             	    			
@@ -3161,7 +3162,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    						newCompositeNode(grammarAccess.getMobaPropertiesAbleAccess().getPropertiesMobaPropertyParserRuleCall_2_1_0());
             	    					
-            	    pushFollow(FOLLOW_27);
+            	    pushFollow(FOLLOW_28);
             	    lv_properties_3_0=ruleMobaProperty();
 
             	    state._fsp--;
@@ -3192,7 +3193,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,43,FOLLOW_2); 
+            otherlv_4=(Token)match(input,44,FOLLOW_2); 
 
             			newLeafNode(otherlv_4, grammarAccess.getMobaPropertiesAbleAccess().getRightSquareBracketKeyword_3());
             		
@@ -3354,7 +3355,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_12); 
+            otherlv_2=(Token)match(input,20,FOLLOW_12); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMobaPropertyAccess().getEqualsSignKeyword_1());
             		
@@ -3517,17 +3518,17 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1390:2: (this_MobaEntity_0= ruleMobaEntity | this_MobaDto_1= ruleMobaDto | this_MobaQueue_2= ruleMobaQueue )
             int alt22=3;
             switch ( input.LA(1) ) {
-            case 48:
+            case 49:
                 {
                 alt22=1;
                 }
                 break;
-            case 50:
+            case 51:
                 {
                 alt22=2;
                 }
                 break;
-            case 51:
+            case 52:
                 {
                 alt22=3;
                 }
@@ -3694,7 +3695,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( (LA23_0==23) ) {
+            if ( (LA23_0==24) ) {
                 alt23=1;
             }
             switch (alt23) {
@@ -3704,7 +3705,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:1444:4: (lv_active_1_0= 'active' )
                     // InternalMoba.g:1445:5: lv_active_1_0= 'active'
                     {
-                    lv_active_1_0=(Token)match(input,23,FOLLOW_28); 
+                    lv_active_1_0=(Token)match(input,24,FOLLOW_29); 
 
                     					newLeafNode(lv_active_1_0, grammarAccess.getMobaSettingsAccess().getActiveActiveKeyword_1_0());
                     				
@@ -3723,7 +3724,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,44,FOLLOW_3); 
+            otherlv_2=(Token)match(input,45,FOLLOW_3); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMobaSettingsAccess().getSettingsKeyword_2());
             		
@@ -3733,7 +3734,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1462:4: (lv_name_3_0= RULE_ID )
             // InternalMoba.g:1463:5: lv_name_3_0= RULE_ID
             {
-            lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_29); 
+            lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_30); 
 
             					newLeafNode(lv_name_3_0, grammarAccess.getMobaSettingsAccess().getNameIDTerminalRuleCall_3_0());
             				
@@ -3745,7 +3746,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_3_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -3757,14 +3758,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt24=2;
             int LA24_0 = input.LA(1);
 
-            if ( (LA24_0==28) ) {
+            if ( (LA24_0==29) ) {
                 alt24=1;
             }
             switch (alt24) {
                 case 1 :
                     // InternalMoba.g:1480:4: otherlv_4= 'extends' ( (otherlv_5= RULE_ID ) )
                     {
-                    otherlv_4=(Token)match(input,28,FOLLOW_3); 
+                    otherlv_4=(Token)match(input,29,FOLLOW_3); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getMobaSettingsAccess().getExtendsKeyword_4_0());
                     			
@@ -3779,7 +3780,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     							current = createModelElement(grammarAccess.getMobaSettingsRule());
                     						}
                     					
-                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_30); 
+                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_31); 
 
                     						newLeafNode(otherlv_5, grammarAccess.getMobaSettingsAccess().getSuperTypeMobaSettingsCrossReference_4_1_0());
                     					
@@ -3799,7 +3800,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt25=2;
             int LA25_0 = input.LA(1);
 
-            if ( (LA25_0==42) ) {
+            if ( (LA25_0==43) ) {
                 alt25=1;
             }
             switch (alt25) {
@@ -3827,7 +3828,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,20,FOLLOW_31); 
+            otherlv_7=(Token)match(input,21,FOLLOW_32); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaSettingsAccess().getLeftCurlyBracketKeyword_6());
             		
@@ -3837,7 +3838,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt26=2;
                 int LA26_0 = input.LA(1);
 
-                if ( (LA26_0==54) ) {
+                if ( (LA26_0==55) ) {
                     alt26=1;
                 }
 
@@ -3852,7 +3853,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    					newCompositeNode(grammarAccess.getMobaSettingsAccess().getFeaturesMobaSettingsFeatureParserRuleCall_7_0());
             	    				
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_32);
             	    lv_features_8_0=ruleMobaSettingsFeature();
 
             	    state._fsp--;
@@ -3880,7 +3881,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,21,FOLLOW_2); 
+            otherlv_9=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_9, grammarAccess.getMobaSettingsAccess().getRightCurlyBracketKeyword_8());
             		
@@ -3980,7 +3981,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,45,FOLLOW_32); 
+            otherlv_1=(Token)match(input,46,FOLLOW_33); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaCacheAccess().getCacheKeyword_1());
             		
@@ -3988,14 +3989,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==34) ) {
+            if ( (LA30_0==35) ) {
                 alt30=1;
             }
             switch (alt30) {
                 case 1 :
                     // InternalMoba.g:1569:4: otherlv_2= '(' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'type' otherlv_5= '=' ( ( (lv_cacheTypeString_6_0= RULE_STRING ) ) | ( (otherlv_7= RULE_ID ) ) ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'strategy' otherlv_9= '=' ( ( (lv_cacheStrategyString_10_0= RULE_STRING ) ) | ( (otherlv_11= RULE_ID ) ) ) ) ) ) ) )* ) ) ) otherlv_12= ')'
                     {
-                    otherlv_2=(Token)match(input,34,FOLLOW_33); 
+                    otherlv_2=(Token)match(input,35,FOLLOW_34); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getMobaCacheAccess().getLeftParenthesisKeyword_2_0());
                     			
@@ -4017,10 +4018,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                         int alt29=3;
                         int LA29_0 = input.LA(1);
 
-                        if ( LA29_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1(), 0) ) {
+                        if ( LA29_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1(), 0) ) {
                             alt29=1;
                         }
-                        else if ( LA29_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1(), 1) ) {
+                        else if ( LA29_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1(), 1) ) {
                             alt29=2;
                         }
 
@@ -4050,11 +4051,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     	    // InternalMoba.g:1585:20: (otherlv_4= 'type' otherlv_5= '=' ( ( (lv_cacheTypeString_6_0= RULE_STRING ) ) | ( (otherlv_7= RULE_ID ) ) ) )
                     	    // InternalMoba.g:1585:21: otherlv_4= 'type' otherlv_5= '=' ( ( (lv_cacheTypeString_6_0= RULE_STRING ) ) | ( (otherlv_7= RULE_ID ) ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,46,FOLLOW_5); 
+                    	    otherlv_4=(Token)match(input,47,FOLLOW_5); 
 
                     	    										newLeafNode(otherlv_4, grammarAccess.getMobaCacheAccess().getTypeKeyword_2_1_0_0());
                     	    									
-                    	    otherlv_5=(Token)match(input,19,FOLLOW_12); 
+                    	    otherlv_5=(Token)match(input,20,FOLLOW_12); 
 
                     	    										newLeafNode(otherlv_5, grammarAccess.getMobaCacheAccess().getEqualsSignKeyword_2_1_0_1());
                     	    									
@@ -4084,7 +4085,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     	            // InternalMoba.g:1595:12: (lv_cacheTypeString_6_0= RULE_STRING )
                     	            // InternalMoba.g:1596:13: lv_cacheTypeString_6_0= RULE_STRING
                     	            {
-                    	            lv_cacheTypeString_6_0=(Token)match(input,RULE_STRING,FOLLOW_33); 
+                    	            lv_cacheTypeString_6_0=(Token)match(input,RULE_STRING,FOLLOW_34); 
 
                     	            													newLeafNode(lv_cacheTypeString_6_0, grammarAccess.getMobaCacheAccess().getCacheTypeStringSTRINGTerminalRuleCall_2_1_0_2_0_0());
                     	            												
@@ -4121,7 +4122,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     	            														current = createModelElement(grammarAccess.getMobaCacheRule());
                     	            													}
                     	            												
-                    	            otherlv_7=(Token)match(input,RULE_ID,FOLLOW_33); 
+                    	            otherlv_7=(Token)match(input,RULE_ID,FOLLOW_34); 
 
                     	            													newLeafNode(otherlv_7, grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0());
                     	            												
@@ -4179,11 +4180,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     	    // InternalMoba.g:1638:20: (otherlv_8= 'strategy' otherlv_9= '=' ( ( (lv_cacheStrategyString_10_0= RULE_STRING ) ) | ( (otherlv_11= RULE_ID ) ) ) )
                     	    // InternalMoba.g:1638:21: otherlv_8= 'strategy' otherlv_9= '=' ( ( (lv_cacheStrategyString_10_0= RULE_STRING ) ) | ( (otherlv_11= RULE_ID ) ) )
                     	    {
-                    	    otherlv_8=(Token)match(input,47,FOLLOW_5); 
+                    	    otherlv_8=(Token)match(input,48,FOLLOW_5); 
 
                     	    										newLeafNode(otherlv_8, grammarAccess.getMobaCacheAccess().getStrategyKeyword_2_1_1_0());
                     	    									
-                    	    otherlv_9=(Token)match(input,19,FOLLOW_12); 
+                    	    otherlv_9=(Token)match(input,20,FOLLOW_12); 
 
                     	    										newLeafNode(otherlv_9, grammarAccess.getMobaCacheAccess().getEqualsSignKeyword_2_1_1_1());
                     	    									
@@ -4213,7 +4214,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     	            // InternalMoba.g:1648:12: (lv_cacheStrategyString_10_0= RULE_STRING )
                     	            // InternalMoba.g:1649:13: lv_cacheStrategyString_10_0= RULE_STRING
                     	            {
-                    	            lv_cacheStrategyString_10_0=(Token)match(input,RULE_STRING,FOLLOW_33); 
+                    	            lv_cacheStrategyString_10_0=(Token)match(input,RULE_STRING,FOLLOW_34); 
 
                     	            													newLeafNode(lv_cacheStrategyString_10_0, grammarAccess.getMobaCacheAccess().getCacheStrategyStringSTRINGTerminalRuleCall_2_1_1_2_0_0());
                     	            												
@@ -4250,7 +4251,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     	            														current = createModelElement(grammarAccess.getMobaCacheRule());
                     	            													}
                     	            												
-                    	            otherlv_11=(Token)match(input,RULE_ID,FOLLOW_33); 
+                    	            otherlv_11=(Token)match(input,RULE_ID,FOLLOW_34); 
 
                     	            													newLeafNode(otherlv_11, grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0());
                     	            												
@@ -4302,7 +4303,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,35,FOLLOW_2); 
+                    otherlv_12=(Token)match(input,36,FOLLOW_2); 
 
                     				newLeafNode(otherlv_12, grammarAccess.getMobaCacheAccess().getRightParenthesisKeyword_2_2());
                     			
@@ -4400,7 +4401,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1716:2: (otherlv_0= 'entity' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_3= 'extends' ( (otherlv_4= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_cache_5_0= ruleMobaCache ) ) ) ) ) )* ) ) ) (this_MobaPropertiesAble_6= ruleMobaPropertiesAble[$current] )? otherlv_7= '{' ( (lv_features_8_0= ruleMobaEntityFeature ) )* ( (lv_index_9_0= ruleMobaEntityIndex ) )? otherlv_10= '}' )
             // InternalMoba.g:1717:3: otherlv_0= 'entity' ( (lv_name_1_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_3= 'extends' ( (otherlv_4= RULE_ID ) ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_cache_5_0= ruleMobaCache ) ) ) ) ) )* ) ) ) (this_MobaPropertiesAble_6= ruleMobaPropertiesAble[$current] )? otherlv_7= '{' ( (lv_features_8_0= ruleMobaEntityFeature ) )* ( (lv_index_9_0= ruleMobaEntityIndex ) )? otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,48,FOLLOW_3); 
+            otherlv_0=(Token)match(input,49,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaEntityAccess().getEntityKeyword_0());
             		
@@ -4410,7 +4411,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1722:4: (lv_name_1_0= RULE_ID )
             // InternalMoba.g:1723:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_34); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_35); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getMobaEntityAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -4422,7 +4423,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -4448,10 +4449,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt31=3;
                 int LA31_0 = input.LA(1);
 
-                if ( LA31_0 == 28 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0) ) {
+                if ( LA31_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 0) ) {
                     alt31=1;
                 }
-                else if ( LA31_0 == 45 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1) ) {
+                else if ( LA31_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAccess().getUnorderedGroup_2(), 1) ) {
                     alt31=2;
                 }
 
@@ -4481,7 +4482,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:1751:19: (otherlv_3= 'extends' ( (otherlv_4= RULE_ID ) ) )
             	    // InternalMoba.g:1751:20: otherlv_3= 'extends' ( (otherlv_4= RULE_ID ) )
             	    {
-            	    otherlv_3=(Token)match(input,28,FOLLOW_3); 
+            	    otherlv_3=(Token)match(input,29,FOLLOW_3); 
 
             	    									newLeafNode(otherlv_3, grammarAccess.getMobaEntityAccess().getExtendsKeyword_2_0_0());
             	    								
@@ -4496,7 +4497,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    												current = createModelElement(grammarAccess.getMobaEntityRule());
             	    											}
             	    										
-            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_34); 
+            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_35); 
 
             	    											newLeafNode(otherlv_4, grammarAccess.getMobaEntityAccess().getSuperTypeMobaEntityCrossReference_2_0_1_0());
             	    										
@@ -4554,7 +4555,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    										newCompositeNode(grammarAccess.getMobaEntityAccess().getCacheMobaCacheParserRuleCall_2_1_0());
             	    									
-            	    pushFollow(FOLLOW_34);
+            	    pushFollow(FOLLOW_35);
             	    lv_cache_5_0=ruleMobaCache();
 
             	    state._fsp--;
@@ -4613,7 +4614,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt32=2;
             int LA32_0 = input.LA(1);
 
-            if ( (LA32_0==42) ) {
+            if ( (LA32_0==43) ) {
                 alt32=1;
             }
             switch (alt32) {
@@ -4641,7 +4642,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,20,FOLLOW_35); 
+            otherlv_7=(Token)match(input,21,FOLLOW_36); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaEntityAccess().getLeftCurlyBracketKeyword_4());
             		
@@ -4651,7 +4652,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt33=2;
                 int LA33_0 = input.LA(1);
 
-                if ( (LA33_0==54||LA33_0==59) ) {
+                if ( (LA33_0==55||LA33_0==60) ) {
                     alt33=1;
                 }
 
@@ -4666,7 +4667,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    					newCompositeNode(grammarAccess.getMobaEntityAccess().getFeaturesMobaEntityFeatureParserRuleCall_5_0());
             	    				
-            	    pushFollow(FOLLOW_35);
+            	    pushFollow(FOLLOW_36);
             	    lv_features_8_0=ruleMobaEntityFeature();
 
             	    state._fsp--;
@@ -4698,7 +4699,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt34=2;
             int LA34_0 = input.LA(1);
 
-            if ( (LA34_0==49) ) {
+            if ( (LA34_0==50) ) {
                 alt34=1;
             }
             switch (alt34) {
@@ -4711,7 +4712,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
                     					newCompositeNode(grammarAccess.getMobaEntityAccess().getIndexMobaEntityIndexParserRuleCall_6_0());
                     				
-                    pushFollow(FOLLOW_36);
+                    pushFollow(FOLLOW_37);
                     lv_index_9_0=ruleMobaEntityIndex();
 
                     state._fsp--;
@@ -4736,7 +4737,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,21,FOLLOW_2); 
+            otherlv_10=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_10, grammarAccess.getMobaEntityAccess().getRightCurlyBracketKeyword_7());
             		
@@ -4818,7 +4819,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1886:2: (otherlv_0= 'index' ( (otherlv_1= RULE_ID ) ) (otherlv_2= ',' ( (otherlv_3= RULE_ID ) )* ) )
             // InternalMoba.g:1887:3: otherlv_0= 'index' ( (otherlv_1= RULE_ID ) ) (otherlv_2= ',' ( (otherlv_3= RULE_ID ) )* )
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_3); 
+            otherlv_0=(Token)match(input,50,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaEntityIndexAccess().getIndexKeyword_0());
             		
@@ -4833,7 +4834,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaEntityIndexRule());
             					}
             				
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_22); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_23); 
 
             					newLeafNode(otherlv_1, grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_1_0());
             				
@@ -4846,7 +4847,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1904:3: (otherlv_2= ',' ( (otherlv_3= RULE_ID ) )* )
             // InternalMoba.g:1905:4: otherlv_2= ',' ( (otherlv_3= RULE_ID ) )*
             {
-            otherlv_2=(Token)match(input,37,FOLLOW_37); 
+            otherlv_2=(Token)match(input,38,FOLLOW_38); 
 
             				newLeafNode(otherlv_2, grammarAccess.getMobaEntityIndexAccess().getCommaKeyword_2_0());
             			
@@ -4873,7 +4874,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    							current = createModelElement(grammarAccess.getMobaEntityIndexRule());
             	    						}
             	    					
-            	    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_37); 
+            	    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_38); 
 
             	    						newLeafNode(otherlv_3, grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_2_1_0());
             	    					
@@ -4976,7 +4977,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1941:2: (otherlv_0= 'dto' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (this_MobaPropertiesAble_4= ruleMobaPropertiesAble[$current] )? otherlv_5= '{' ( (lv_features_6_0= ruleMobaDtoFeature ) )* otherlv_7= '}' )
             // InternalMoba.g:1942:3: otherlv_0= 'dto' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (this_MobaPropertiesAble_4= ruleMobaPropertiesAble[$current] )? otherlv_5= '{' ( (lv_features_6_0= ruleMobaDtoFeature ) )* otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,50,FOLLOW_3); 
+            otherlv_0=(Token)match(input,51,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaDtoAccess().getDtoKeyword_0());
             		
@@ -4986,7 +4987,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:1947:4: (lv_name_1_0= RULE_ID )
             // InternalMoba.g:1948:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_29); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_30); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getMobaDtoAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -4998,7 +4999,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -5010,14 +5011,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt36=2;
             int LA36_0 = input.LA(1);
 
-            if ( (LA36_0==28) ) {
+            if ( (LA36_0==29) ) {
                 alt36=1;
             }
             switch (alt36) {
                 case 1 :
                     // InternalMoba.g:1965:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,28,FOLLOW_3); 
+                    otherlv_2=(Token)match(input,29,FOLLOW_3); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getMobaDtoAccess().getExtendsKeyword_2_0());
                     			
@@ -5032,7 +5033,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     							current = createModelElement(grammarAccess.getMobaDtoRule());
                     						}
                     					
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_30); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_31); 
 
                     						newLeafNode(otherlv_3, grammarAccess.getMobaDtoAccess().getSuperTypeMobaDtoCrossReference_2_1_0());
                     					
@@ -5052,7 +5053,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt37=2;
             int LA37_0 = input.LA(1);
 
-            if ( (LA37_0==42) ) {
+            if ( (LA37_0==43) ) {
                 alt37=1;
             }
             switch (alt37) {
@@ -5080,7 +5081,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,20,FOLLOW_38); 
+            otherlv_5=(Token)match(input,21,FOLLOW_39); 
 
             			newLeafNode(otherlv_5, grammarAccess.getMobaDtoAccess().getLeftCurlyBracketKeyword_4());
             		
@@ -5090,7 +5091,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt38=2;
                 int LA38_0 = input.LA(1);
 
-                if ( (LA38_0==54||LA38_0==59) ) {
+                if ( (LA38_0==55||LA38_0==60) ) {
                     alt38=1;
                 }
 
@@ -5105,7 +5106,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    					newCompositeNode(grammarAccess.getMobaDtoAccess().getFeaturesMobaDtoFeatureParserRuleCall_5_0());
             	    				
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_39);
             	    lv_features_6_0=ruleMobaDtoFeature();
 
             	    state._fsp--;
@@ -5133,7 +5134,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,21,FOLLOW_2); 
+            otherlv_7=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaDtoAccess().getRightCurlyBracketKeyword_6());
             		
@@ -5221,7 +5222,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2041:2: (otherlv_0= 'queue' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (this_MobaPropertiesAble_4= ruleMobaPropertiesAble[$current] )? otherlv_5= '{' ( (lv_features_6_0= ruleMobaQueueFeature ) )* otherlv_7= '}' )
             // InternalMoba.g:2042:3: otherlv_0= 'queue' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (this_MobaPropertiesAble_4= ruleMobaPropertiesAble[$current] )? otherlv_5= '{' ( (lv_features_6_0= ruleMobaQueueFeature ) )* otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,51,FOLLOW_3); 
+            otherlv_0=(Token)match(input,52,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaQueueAccess().getQueueKeyword_0());
             		
@@ -5231,7 +5232,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2047:4: (lv_name_1_0= RULE_ID )
             // InternalMoba.g:2048:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_29); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_30); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getMobaQueueAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -5243,7 +5244,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -5255,14 +5256,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt39=2;
             int LA39_0 = input.LA(1);
 
-            if ( (LA39_0==28) ) {
+            if ( (LA39_0==29) ) {
                 alt39=1;
             }
             switch (alt39) {
                 case 1 :
                     // InternalMoba.g:2065:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,28,FOLLOW_3); 
+                    otherlv_2=(Token)match(input,29,FOLLOW_3); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getMobaQueueAccess().getExtendsKeyword_2_0());
                     			
@@ -5277,7 +5278,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     							current = createModelElement(grammarAccess.getMobaQueueRule());
                     						}
                     					
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_30); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_31); 
 
                     						newLeafNode(otherlv_3, grammarAccess.getMobaQueueAccess().getSuperTypeMobaQueueCrossReference_2_1_0());
                     					
@@ -5297,7 +5298,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt40=2;
             int LA40_0 = input.LA(1);
 
-            if ( (LA40_0==42) ) {
+            if ( (LA40_0==43) ) {
                 alt40=1;
             }
             switch (alt40) {
@@ -5325,7 +5326,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,20,FOLLOW_39); 
+            otherlv_5=(Token)match(input,21,FOLLOW_40); 
 
             			newLeafNode(otherlv_5, grammarAccess.getMobaQueueAccess().getLeftCurlyBracketKeyword_4());
             		
@@ -5335,7 +5336,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt41=2;
                 int LA41_0 = input.LA(1);
 
-                if ( (LA41_0==59) ) {
+                if ( (LA41_0==60) ) {
                     alt41=1;
                 }
 
@@ -5350,7 +5351,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    					newCompositeNode(grammarAccess.getMobaQueueAccess().getFeaturesMobaQueueFeatureParserRuleCall_5_0());
             	    				
-            	    pushFollow(FOLLOW_39);
+            	    pushFollow(FOLLOW_40);
             	    lv_features_6_0=ruleMobaQueueFeature();
 
             	    state._fsp--;
@@ -5378,7 +5379,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,21,FOLLOW_2); 
+            otherlv_7=(Token)match(input,22,FOLLOW_2); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaQueueAccess().getRightCurlyBracketKeyword_6());
             		
@@ -5461,10 +5462,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt42=2;
             int LA42_0 = input.LA(1);
 
-            if ( (LA42_0==52) ) {
+            if ( (LA42_0==53) ) {
                 alt42=1;
             }
-            else if ( (LA42_0==53) ) {
+            else if ( (LA42_0==54) ) {
                 alt42=2;
             }
             else {
@@ -5588,7 +5589,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2177:2: (otherlv_0= 'rest' ( (lv_name_1_0= RULE_ID ) ) (this_MobaPropertiesAble_2= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:2178:3: otherlv_0= 'rest' ( (lv_name_1_0= RULE_ID ) ) (this_MobaPropertiesAble_2= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_3); 
+            otherlv_0=(Token)match(input,53,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaRestCustomAccess().getRestKeyword_0());
             		
@@ -5598,7 +5599,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2183:4: (lv_name_1_0= RULE_ID )
             // InternalMoba.g:2184:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getMobaRestCustomAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -5610,7 +5611,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -5622,7 +5623,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt43=2;
             int LA43_0 = input.LA(1);
 
-            if ( (LA43_0==42) ) {
+            if ( (LA43_0==43) ) {
                 alt43=1;
             }
             switch (alt43) {
@@ -5728,7 +5729,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2231:2: (otherlv_0= 'restCrud' ( (lv_name_1_0= RULE_ID ) ) (this_MobaPropertiesAble_2= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:2232:3: otherlv_0= 'restCrud' ( (lv_name_1_0= RULE_ID ) ) (this_MobaPropertiesAble_2= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_3); 
+            otherlv_0=(Token)match(input,54,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaRestCrudAccess().getRestCrudKeyword_0());
             		
@@ -5738,7 +5739,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2237:4: (lv_name_1_0= RULE_ID )
             // InternalMoba.g:2238:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getMobaRestCrudAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -5750,7 +5751,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -5762,7 +5763,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt44=2;
             int LA44_0 = input.LA(1);
 
-            if ( (LA44_0==42) ) {
+            if ( (LA44_0==43) ) {
                 alt44=1;
             }
             switch (alt44) {
@@ -5869,10 +5870,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt45=2;
             int LA45_0 = input.LA(1);
 
-            if ( (LA45_0==54) ) {
+            if ( (LA45_0==55) ) {
                 alt45=1;
             }
-            else if ( (LA45_0==59) ) {
+            else if ( (LA45_0==60) ) {
                 alt45=2;
             }
             else {
@@ -6011,7 +6012,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2321:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (this_MobaPropertiesAble_15= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:2322:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (this_MobaPropertiesAble_15= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_40); 
+            otherlv_0=(Token)match(input,55,FOLLOW_41); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaEntityAttributeAccess().getVarKeyword_0());
             		
@@ -6033,19 +6034,19 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt47=6;
                 int LA47_0 = input.LA(1);
 
-                if ( LA47_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                if ( LA47_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
                     alt47=1;
                 }
-                else if ( LA47_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                else if ( LA47_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
                     alt47=2;
                 }
-                else if ( LA47_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                else if ( LA47_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
                     alt47=3;
                 }
-                else if ( LA47_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                else if ( LA47_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
                     alt47=4;
                 }
-                else if ( LA47_0 == 36 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                else if ( LA47_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
                     alt47=5;
                 }
 
@@ -6078,7 +6079,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2338:20: (lv_lazy_2_0= 'lazy' )
             	    // InternalMoba.g:2339:10: lv_lazy_2_0= 'lazy'
             	    {
-            	    lv_lazy_2_0=(Token)match(input,55,FOLLOW_40); 
+            	    lv_lazy_2_0=(Token)match(input,56,FOLLOW_41); 
 
             	    										newLeafNode(lv_lazy_2_0, grammarAccess.getMobaEntityAttributeAccess().getLazyLazyKeyword_1_0_0());
             	    									
@@ -6136,7 +6137,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2361:20: (lv_transient_3_0= 'transient' )
             	    // InternalMoba.g:2362:10: lv_transient_3_0= 'transient'
             	    {
-            	    lv_transient_3_0=(Token)match(input,56,FOLLOW_40); 
+            	    lv_transient_3_0=(Token)match(input,57,FOLLOW_41); 
 
             	    										newLeafNode(lv_transient_3_0, grammarAccess.getMobaEntityAttributeAccess().getTransientTransientKeyword_1_1_0());
             	    									
@@ -6194,7 +6195,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2384:20: (lv_domainKey_4_0= 'domainKey' )
             	    // InternalMoba.g:2385:10: lv_domainKey_4_0= 'domainKey'
             	    {
-            	    lv_domainKey_4_0=(Token)match(input,57,FOLLOW_40); 
+            	    lv_domainKey_4_0=(Token)match(input,58,FOLLOW_41); 
 
             	    										newLeafNode(lv_domainKey_4_0, grammarAccess.getMobaEntityAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0());
             	    									
@@ -6252,7 +6253,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2407:20: (lv_domainDescription_5_0= 'domainDescription' )
             	    // InternalMoba.g:2408:10: lv_domainDescription_5_0= 'domainDescription'
             	    {
-            	    lv_domainDescription_5_0=(Token)match(input,58,FOLLOW_40); 
+            	    lv_domainDescription_5_0=(Token)match(input,59,FOLLOW_41); 
 
             	    										newLeafNode(lv_domainDescription_5_0, grammarAccess.getMobaEntityAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0());
             	    									
@@ -6307,11 +6308,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2430:19: (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
             	    // InternalMoba.g:2430:20: otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')'
             	    {
-            	    otherlv_6=(Token)match(input,36,FOLLOW_17); 
+            	    otherlv_6=(Token)match(input,37,FOLLOW_17); 
 
             	    									newLeafNode(otherlv_6, grammarAccess.getMobaEntityAttributeAccess().getConstraintsKeyword_1_4_0());
             	    								
-            	    otherlv_7=(Token)match(input,34,FOLLOW_18); 
+            	    otherlv_7=(Token)match(input,35,FOLLOW_18); 
 
             	    									newLeafNode(otherlv_7, grammarAccess.getMobaEntityAttributeAccess().getLeftParenthesisKeyword_1_4_1());
             	    								
@@ -6352,7 +6353,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        int alt46=2;
             	        int LA46_0 = input.LA(1);
 
-            	        if ( (LA46_0==37) ) {
+            	        if ( (LA46_0==38) ) {
             	            alt46=1;
             	        }
 
@@ -6361,7 +6362,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	case 1 :
             	    	    // InternalMoba.g:2458:10: otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_9=(Token)match(input,37,FOLLOW_18); 
+            	    	    otherlv_9=(Token)match(input,38,FOLLOW_18); 
 
             	    	    										newLeafNode(otherlv_9, grammarAccess.getMobaEntityAttributeAccess().getCommaKeyword_1_4_3_0());
             	    	    									
@@ -6405,7 +6406,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        }
             	    } while (true);
 
-            	    otherlv_11=(Token)match(input,35,FOLLOW_40); 
+            	    otherlv_11=(Token)match(input,36,FOLLOW_41); 
 
             	    									newLeafNode(otherlv_11, grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_1_4_4());
             	    								
@@ -6456,7 +6457,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaEntityAttributeRule());
             					}
             				
-            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_41); 
+            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_42); 
 
             					newLeafNode(otherlv_12, grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
             				
@@ -6487,7 +6488,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2524:4: (lv_name_14_0= RULE_ID )
             // InternalMoba.g:2525:5: lv_name_14_0= RULE_ID
             {
-            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_14_0, grammarAccess.getMobaEntityAttributeAccess().getNameIDTerminalRuleCall_4_0());
             				
@@ -6499,7 +6500,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_14_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -6511,7 +6512,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt48=2;
             int LA48_0 = input.LA(1);
 
-            if ( (LA48_0==42) ) {
+            if ( (LA48_0==43) ) {
                 alt48=1;
             }
             switch (alt48) {
@@ -6714,7 +6715,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2597:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (this_MobaPropertiesAble_15= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:2598:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (this_MobaPropertiesAble_15= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_40); 
+            otherlv_0=(Token)match(input,55,FOLLOW_41); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaSettingsAttributeAccess().getVarKeyword_0());
             		
@@ -6736,19 +6737,19 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt50=6;
                 int LA50_0 = input.LA(1);
 
-                if ( LA50_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                if ( LA50_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 0) ) {
                     alt50=1;
                 }
-                else if ( LA50_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                else if ( LA50_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 1) ) {
                     alt50=2;
                 }
-                else if ( LA50_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                else if ( LA50_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 2) ) {
                     alt50=3;
                 }
-                else if ( LA50_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                else if ( LA50_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 3) ) {
                     alt50=4;
                 }
-                else if ( LA50_0 == 36 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                else if ( LA50_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4) ) {
                     alt50=5;
                 }
 
@@ -6781,7 +6782,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2614:20: (lv_lazy_2_0= 'lazy' )
             	    // InternalMoba.g:2615:10: lv_lazy_2_0= 'lazy'
             	    {
-            	    lv_lazy_2_0=(Token)match(input,55,FOLLOW_40); 
+            	    lv_lazy_2_0=(Token)match(input,56,FOLLOW_41); 
 
             	    										newLeafNode(lv_lazy_2_0, grammarAccess.getMobaSettingsAttributeAccess().getLazyLazyKeyword_1_0_0());
             	    									
@@ -6839,7 +6840,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2637:20: (lv_transient_3_0= 'transient' )
             	    // InternalMoba.g:2638:10: lv_transient_3_0= 'transient'
             	    {
-            	    lv_transient_3_0=(Token)match(input,56,FOLLOW_40); 
+            	    lv_transient_3_0=(Token)match(input,57,FOLLOW_41); 
 
             	    										newLeafNode(lv_transient_3_0, grammarAccess.getMobaSettingsAttributeAccess().getTransientTransientKeyword_1_1_0());
             	    									
@@ -6897,7 +6898,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2660:20: (lv_domainKey_4_0= 'domainKey' )
             	    // InternalMoba.g:2661:10: lv_domainKey_4_0= 'domainKey'
             	    {
-            	    lv_domainKey_4_0=(Token)match(input,57,FOLLOW_40); 
+            	    lv_domainKey_4_0=(Token)match(input,58,FOLLOW_41); 
 
             	    										newLeafNode(lv_domainKey_4_0, grammarAccess.getMobaSettingsAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0());
             	    									
@@ -6955,7 +6956,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2683:20: (lv_domainDescription_5_0= 'domainDescription' )
             	    // InternalMoba.g:2684:10: lv_domainDescription_5_0= 'domainDescription'
             	    {
-            	    lv_domainDescription_5_0=(Token)match(input,58,FOLLOW_40); 
+            	    lv_domainDescription_5_0=(Token)match(input,59,FOLLOW_41); 
 
             	    										newLeafNode(lv_domainDescription_5_0, grammarAccess.getMobaSettingsAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0());
             	    									
@@ -7010,11 +7011,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2706:19: (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
             	    // InternalMoba.g:2706:20: otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')'
             	    {
-            	    otherlv_6=(Token)match(input,36,FOLLOW_17); 
+            	    otherlv_6=(Token)match(input,37,FOLLOW_17); 
 
             	    									newLeafNode(otherlv_6, grammarAccess.getMobaSettingsAttributeAccess().getConstraintsKeyword_1_4_0());
             	    								
-            	    otherlv_7=(Token)match(input,34,FOLLOW_18); 
+            	    otherlv_7=(Token)match(input,35,FOLLOW_18); 
 
             	    									newLeafNode(otherlv_7, grammarAccess.getMobaSettingsAttributeAccess().getLeftParenthesisKeyword_1_4_1());
             	    								
@@ -7055,7 +7056,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        int alt49=2;
             	        int LA49_0 = input.LA(1);
 
-            	        if ( (LA49_0==37) ) {
+            	        if ( (LA49_0==38) ) {
             	            alt49=1;
             	        }
 
@@ -7064,7 +7065,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	case 1 :
             	    	    // InternalMoba.g:2734:10: otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_9=(Token)match(input,37,FOLLOW_18); 
+            	    	    otherlv_9=(Token)match(input,38,FOLLOW_18); 
 
             	    	    										newLeafNode(otherlv_9, grammarAccess.getMobaSettingsAttributeAccess().getCommaKeyword_1_4_3_0());
             	    	    									
@@ -7108,7 +7109,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        }
             	    } while (true);
 
-            	    otherlv_11=(Token)match(input,35,FOLLOW_40); 
+            	    otherlv_11=(Token)match(input,36,FOLLOW_41); 
 
             	    									newLeafNode(otherlv_11, grammarAccess.getMobaSettingsAttributeAccess().getRightParenthesisKeyword_1_4_4());
             	    								
@@ -7159,7 +7160,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaSettingsAttributeRule());
             					}
             				
-            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_41); 
+            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_42); 
 
             					newLeafNode(otherlv_12, grammarAccess.getMobaSettingsAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
             				
@@ -7190,7 +7191,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2800:4: (lv_name_14_0= RULE_ID )
             // InternalMoba.g:2801:5: lv_name_14_0= RULE_ID
             {
-            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_14_0, grammarAccess.getMobaSettingsAttributeAccess().getNameIDTerminalRuleCall_4_0());
             				
@@ -7202,7 +7203,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_14_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -7214,7 +7215,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt51=2;
             int LA51_0 = input.LA(1);
 
-            if ( (LA51_0==42) ) {
+            if ( (LA51_0==43) ) {
                 alt51=1;
             }
             switch (alt51) {
@@ -7283,7 +7284,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt52=2;
             int LA52_0 = input.LA(1);
 
-            if ( (LA52_0==42) ) {
+            if ( (LA52_0==43) ) {
                 alt52=1;
             }
             switch (alt52) {
@@ -7402,7 +7403,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2878:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (this_MobaPropertiesAble_8= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:2879:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (this_MobaPropertiesAble_8= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,59,FOLLOW_42); 
+            otherlv_0=(Token)match(input,60,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaEntityReferenceAccess().getRefKeyword_0());
             		
@@ -7424,13 +7425,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt53=4;
                 int LA53_0 = input.LA(1);
 
-                if ( LA53_0 == 60 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                if ( LA53_0 == 61 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
                     alt53=1;
                 }
-                else if ( LA53_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                else if ( LA53_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
                     alt53=2;
                 }
-                else if ( LA53_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                else if ( LA53_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
                     alt53=3;
                 }
 
@@ -7463,7 +7464,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2895:20: (lv_cascading_2_0= 'cascading' )
             	    // InternalMoba.g:2896:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,60,FOLLOW_42); 
+            	    lv_cascading_2_0=(Token)match(input,61,FOLLOW_43); 
 
             	    										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0());
             	    									
@@ -7521,7 +7522,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2918:20: (lv_lazy_3_0= 'lazy' )
             	    // InternalMoba.g:2919:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,55,FOLLOW_42); 
+            	    lv_lazy_3_0=(Token)match(input,56,FOLLOW_43); 
 
             	    										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaEntityReferenceAccess().getLazyLazyKeyword_1_1_0());
             	    									
@@ -7579,7 +7580,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:2941:20: (lv_transient_4_0= 'transient' )
             	    // InternalMoba.g:2942:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,56,FOLLOW_42); 
+            	    lv_transient_4_0=(Token)match(input,57,FOLLOW_43); 
 
             	    										newLeafNode(lv_transient_4_0, grammarAccess.getMobaEntityReferenceAccess().getTransientTransientKeyword_1_2_0());
             	    									
@@ -7639,7 +7640,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaEntityReferenceRule());
             					}
             				
-            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_41); 
+            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_42); 
 
             					newLeafNode(otherlv_5, grammarAccess.getMobaEntityReferenceAccess().getTypeMobaEntityCrossReference_2_0());
             				
@@ -7670,7 +7671,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:2991:4: (lv_name_7_0= RULE_ID )
             // InternalMoba.g:2992:5: lv_name_7_0= RULE_ID
             {
-            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_7_0, grammarAccess.getMobaEntityReferenceAccess().getNameIDTerminalRuleCall_4_0());
             				
@@ -7682,7 +7683,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_7_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -7694,7 +7695,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt54=2;
             int LA54_0 = input.LA(1);
 
-            if ( (LA54_0==42) ) {
+            if ( (LA54_0==43) ) {
                 alt54=1;
             }
             switch (alt54) {
@@ -7801,10 +7802,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt55=2;
             int LA55_0 = input.LA(1);
 
-            if ( (LA55_0==54) ) {
+            if ( (LA55_0==55) ) {
                 alt55=1;
             }
-            else if ( (LA55_0==59) ) {
+            else if ( (LA55_0==60) ) {
                 alt55=2;
             }
             else {
@@ -7947,7 +7948,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3075:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'alias' otherlv_13= '(' ( (lv_alias_14_0= RULE_ID ) ) otherlv_15= ')' ) ) ) ) )* ) ) ) ( (otherlv_16= RULE_ID ) ) this_MobaMultiplicityAble_17= ruleMobaMultiplicityAble[$current] ( (lv_name_18_0= RULE_ID ) ) (this_MobaPropertiesAble_19= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:3076:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'alias' otherlv_13= '(' ( (lv_alias_14_0= RULE_ID ) ) otherlv_15= ')' ) ) ) ) )* ) ) ) ( (otherlv_16= RULE_ID ) ) this_MobaMultiplicityAble_17= ruleMobaMultiplicityAble[$current] ( (lv_name_18_0= RULE_ID ) ) (this_MobaPropertiesAble_19= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_43); 
+            otherlv_0=(Token)match(input,55,FOLLOW_44); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaDtoAttributeAccess().getVarKeyword_0());
             		
@@ -7969,22 +7970,22 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt57=7;
                 int LA57_0 = input.LA(1);
 
-                if ( LA57_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                if ( LA57_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
                     alt57=1;
                 }
-                else if ( LA57_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                else if ( LA57_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
                     alt57=2;
                 }
-                else if ( LA57_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                else if ( LA57_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
                     alt57=3;
                 }
-                else if ( LA57_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                else if ( LA57_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
                     alt57=4;
                 }
-                else if ( LA57_0 == 36 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                else if ( LA57_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
                     alt57=5;
                 }
-                else if ( LA57_0 == 61 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
+                else if ( LA57_0 == 62 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
                     alt57=6;
                 }
 
@@ -8017,7 +8018,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3092:20: (lv_lazy_2_0= 'lazy' )
             	    // InternalMoba.g:3093:10: lv_lazy_2_0= 'lazy'
             	    {
-            	    lv_lazy_2_0=(Token)match(input,55,FOLLOW_43); 
+            	    lv_lazy_2_0=(Token)match(input,56,FOLLOW_44); 
 
             	    										newLeafNode(lv_lazy_2_0, grammarAccess.getMobaDtoAttributeAccess().getLazyLazyKeyword_1_0_0());
             	    									
@@ -8075,7 +8076,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3115:20: (lv_transient_3_0= 'transient' )
             	    // InternalMoba.g:3116:10: lv_transient_3_0= 'transient'
             	    {
-            	    lv_transient_3_0=(Token)match(input,56,FOLLOW_43); 
+            	    lv_transient_3_0=(Token)match(input,57,FOLLOW_44); 
 
             	    										newLeafNode(lv_transient_3_0, grammarAccess.getMobaDtoAttributeAccess().getTransientTransientKeyword_1_1_0());
             	    									
@@ -8133,7 +8134,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3138:20: (lv_domainKey_4_0= 'domainKey' )
             	    // InternalMoba.g:3139:10: lv_domainKey_4_0= 'domainKey'
             	    {
-            	    lv_domainKey_4_0=(Token)match(input,57,FOLLOW_43); 
+            	    lv_domainKey_4_0=(Token)match(input,58,FOLLOW_44); 
 
             	    										newLeafNode(lv_domainKey_4_0, grammarAccess.getMobaDtoAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0());
             	    									
@@ -8191,7 +8192,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3161:20: (lv_domainDescription_5_0= 'domainDescription' )
             	    // InternalMoba.g:3162:10: lv_domainDescription_5_0= 'domainDescription'
             	    {
-            	    lv_domainDescription_5_0=(Token)match(input,58,FOLLOW_43); 
+            	    lv_domainDescription_5_0=(Token)match(input,59,FOLLOW_44); 
 
             	    										newLeafNode(lv_domainDescription_5_0, grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0());
             	    									
@@ -8246,11 +8247,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3184:19: (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
             	    // InternalMoba.g:3184:20: otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')'
             	    {
-            	    otherlv_6=(Token)match(input,36,FOLLOW_17); 
+            	    otherlv_6=(Token)match(input,37,FOLLOW_17); 
 
             	    									newLeafNode(otherlv_6, grammarAccess.getMobaDtoAttributeAccess().getConstraintsKeyword_1_4_0());
             	    								
-            	    otherlv_7=(Token)match(input,34,FOLLOW_18); 
+            	    otherlv_7=(Token)match(input,35,FOLLOW_18); 
 
             	    									newLeafNode(otherlv_7, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_4_1());
             	    								
@@ -8291,7 +8292,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        int alt56=2;
             	        int LA56_0 = input.LA(1);
 
-            	        if ( (LA56_0==37) ) {
+            	        if ( (LA56_0==38) ) {
             	            alt56=1;
             	        }
 
@@ -8300,7 +8301,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	case 1 :
             	    	    // InternalMoba.g:3212:10: otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_9=(Token)match(input,37,FOLLOW_18); 
+            	    	    otherlv_9=(Token)match(input,38,FOLLOW_18); 
 
             	    	    										newLeafNode(otherlv_9, grammarAccess.getMobaDtoAttributeAccess().getCommaKeyword_1_4_3_0());
             	    	    									
@@ -8344,7 +8345,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        }
             	    } while (true);
 
-            	    otherlv_11=(Token)match(input,35,FOLLOW_43); 
+            	    otherlv_11=(Token)match(input,36,FOLLOW_44); 
 
             	    									newLeafNode(otherlv_11, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_4_4());
             	    								
@@ -8390,11 +8391,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3251:19: (otherlv_12= 'alias' otherlv_13= '(' ( (lv_alias_14_0= RULE_ID ) ) otherlv_15= ')' )
             	    // InternalMoba.g:3251:20: otherlv_12= 'alias' otherlv_13= '(' ( (lv_alias_14_0= RULE_ID ) ) otherlv_15= ')'
             	    {
-            	    otherlv_12=(Token)match(input,61,FOLLOW_17); 
+            	    otherlv_12=(Token)match(input,62,FOLLOW_17); 
 
             	    									newLeafNode(otherlv_12, grammarAccess.getMobaDtoAttributeAccess().getAliasKeyword_1_5_0());
             	    								
-            	    otherlv_13=(Token)match(input,34,FOLLOW_3); 
+            	    otherlv_13=(Token)match(input,35,FOLLOW_3); 
 
             	    									newLeafNode(otherlv_13, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_5_1());
             	    								
@@ -8416,7 +8417,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    												current,
             	    												"alias",
             	    												lv_alias_14_0,
-            	    												"org.eclipse.xtext.common.Terminals.ID");
+            	    												"org.mobadsl.grammar.Moba.ID");
             	    										
 
             	    }
@@ -8424,7 +8425,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_15=(Token)match(input,35,FOLLOW_43); 
+            	    otherlv_15=(Token)match(input,36,FOLLOW_44); 
 
             	    									newLeafNode(otherlv_15, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_5_3());
             	    								
@@ -8475,7 +8476,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
             					}
             				
-            otherlv_16=(Token)match(input,RULE_ID,FOLLOW_41); 
+            otherlv_16=(Token)match(input,RULE_ID,FOLLOW_42); 
 
             					newLeafNode(otherlv_16, grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
             				
@@ -8506,7 +8507,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3319:4: (lv_name_18_0= RULE_ID )
             // InternalMoba.g:3320:5: lv_name_18_0= RULE_ID
             {
-            lv_name_18_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_18_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_18_0, grammarAccess.getMobaDtoAttributeAccess().getNameIDTerminalRuleCall_4_0());
             				
@@ -8518,7 +8519,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_18_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -8530,7 +8531,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt58=2;
             int LA58_0 = input.LA(1);
 
-            if ( (LA58_0==42) ) {
+            if ( (LA58_0==43) ) {
                 alt58=1;
             }
             switch (alt58) {
@@ -8642,7 +8643,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3367:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (this_MobaPropertiesAble_8= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:3368:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (this_MobaPropertiesAble_8= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,59,FOLLOW_42); 
+            otherlv_0=(Token)match(input,60,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaDtoReferenceAccess().getRefKeyword_0());
             		
@@ -8664,13 +8665,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt59=4;
                 int LA59_0 = input.LA(1);
 
-                if ( LA59_0 == 60 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                if ( LA59_0 == 61 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
                     alt59=1;
                 }
-                else if ( LA59_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                else if ( LA59_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
                     alt59=2;
                 }
-                else if ( LA59_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                else if ( LA59_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
                     alt59=3;
                 }
 
@@ -8703,7 +8704,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3384:20: (lv_cascading_2_0= 'cascading' )
             	    // InternalMoba.g:3385:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,60,FOLLOW_42); 
+            	    lv_cascading_2_0=(Token)match(input,61,FOLLOW_43); 
 
             	    										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaDtoReferenceAccess().getCascadingCascadingKeyword_1_0_0());
             	    									
@@ -8761,7 +8762,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3407:20: (lv_lazy_3_0= 'lazy' )
             	    // InternalMoba.g:3408:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,55,FOLLOW_42); 
+            	    lv_lazy_3_0=(Token)match(input,56,FOLLOW_43); 
 
             	    										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaDtoReferenceAccess().getLazyLazyKeyword_1_1_0());
             	    									
@@ -8819,7 +8820,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3430:20: (lv_transient_4_0= 'transient' )
             	    // InternalMoba.g:3431:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,56,FOLLOW_42); 
+            	    lv_transient_4_0=(Token)match(input,57,FOLLOW_43); 
 
             	    										newLeafNode(lv_transient_4_0, grammarAccess.getMobaDtoReferenceAccess().getTransientTransientKeyword_1_2_0());
             	    									
@@ -8879,7 +8880,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaDtoReferenceRule());
             					}
             				
-            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_41); 
+            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_42); 
 
             					newLeafNode(otherlv_5, grammarAccess.getMobaDtoReferenceAccess().getTypeMobaDtoCrossReference_2_0());
             				
@@ -8910,7 +8911,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3480:4: (lv_name_7_0= RULE_ID )
             // InternalMoba.g:3481:5: lv_name_7_0= RULE_ID
             {
-            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_7_0, grammarAccess.getMobaDtoReferenceAccess().getNameIDTerminalRuleCall_4_0());
             				
@@ -8922,7 +8923,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_7_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -8934,7 +8935,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt60=2;
             int LA60_0 = input.LA(1);
 
-            if ( (LA60_0==42) ) {
+            if ( (LA60_0==43) ) {
                 alt60=1;
             }
             switch (alt60) {
@@ -9128,7 +9129,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3553:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (this_MobaPropertiesAble_8= ruleMobaPropertiesAble[$current] )? )
             // InternalMoba.g:3554:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (this_MobaPropertiesAble_8= ruleMobaPropertiesAble[$current] )?
             {
-            otherlv_0=(Token)match(input,59,FOLLOW_42); 
+            otherlv_0=(Token)match(input,60,FOLLOW_43); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaQueueReferenceAccess().getRefKeyword_0());
             		
@@ -9150,13 +9151,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 int alt61=4;
                 int LA61_0 = input.LA(1);
 
-                if ( LA61_0 == 60 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                if ( LA61_0 == 61 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0) ) {
                     alt61=1;
                 }
-                else if ( LA61_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                else if ( LA61_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1) ) {
                     alt61=2;
                 }
-                else if ( LA61_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                else if ( LA61_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2) ) {
                     alt61=3;
                 }
 
@@ -9189,7 +9190,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3570:20: (lv_cascading_2_0= 'cascading' )
             	    // InternalMoba.g:3571:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,60,FOLLOW_42); 
+            	    lv_cascading_2_0=(Token)match(input,61,FOLLOW_43); 
 
             	    										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaQueueReferenceAccess().getCascadingCascadingKeyword_1_0_0());
             	    									
@@ -9247,7 +9248,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3593:20: (lv_lazy_3_0= 'lazy' )
             	    // InternalMoba.g:3594:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,55,FOLLOW_42); 
+            	    lv_lazy_3_0=(Token)match(input,56,FOLLOW_43); 
 
             	    										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaQueueReferenceAccess().getLazyLazyKeyword_1_1_0());
             	    									
@@ -9305,7 +9306,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    // InternalMoba.g:3616:20: (lv_transient_4_0= 'transient' )
             	    // InternalMoba.g:3617:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,56,FOLLOW_42); 
+            	    lv_transient_4_0=(Token)match(input,57,FOLLOW_43); 
 
             	    										newLeafNode(lv_transient_4_0, grammarAccess.getMobaQueueReferenceAccess().getTransientTransientKeyword_1_2_0());
             	    									
@@ -9365,7 +9366,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getMobaQueueReferenceRule());
             					}
             				
-            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_41); 
+            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_42); 
 
             					newLeafNode(otherlv_5, grammarAccess.getMobaQueueReferenceAccess().getTypeMobaDataCrossReference_2_0());
             				
@@ -9396,7 +9397,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3666:4: (lv_name_7_0= RULE_ID )
             // InternalMoba.g:3667:5: lv_name_7_0= RULE_ID
             {
-            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_25); 
+            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_26); 
 
             					newLeafNode(lv_name_7_0, grammarAccess.getMobaQueueReferenceAccess().getNameIDTerminalRuleCall_4_0());
             				
@@ -9408,7 +9409,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             						current,
             						"name",
             						lv_name_7_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"org.mobadsl.grammar.Moba.ID");
             				
 
             }
@@ -9420,7 +9421,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt62=2;
             int LA62_0 = input.LA(1);
 
-            if ( (LA62_0==42) ) {
+            if ( (LA62_0==43) ) {
                 alt62=1;
             }
             switch (alt62) {
@@ -9529,7 +9530,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3714:2: (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' )
             // InternalMoba.g:3715:3: otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']'
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_44); 
+            otherlv_0=(Token)match(input,43,FOLLOW_45); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaMuliplicityAccess().getLeftSquareBracketKeyword_0());
             		
@@ -9542,7 +9543,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMobaMuliplicityAccess().getLowerMobaLowerBoundEnumRuleCall_1_0());
             				
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_46);
             lv_lower_1_0=ruleMobaLowerBound();
 
             state._fsp--;
@@ -9568,14 +9569,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt63=2;
             int LA63_0 = input.LA(1);
 
-            if ( (LA63_0==62) ) {
+            if ( (LA63_0==63) ) {
                 alt63=1;
             }
             switch (alt63) {
                 case 1 :
                     // InternalMoba.g:3739:4: otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) )
                     {
-                    otherlv_2=(Token)match(input,62,FOLLOW_46); 
+                    otherlv_2=(Token)match(input,63,FOLLOW_47); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getMobaMuliplicityAccess().getFullStopFullStopKeyword_2_0());
                     			
@@ -9588,7 +9589,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getMobaMuliplicityAccess().getUpperMobaUpperBoundEnumRuleCall_2_1_0());
                     					
-                    pushFollow(FOLLOW_47);
+                    pushFollow(FOLLOW_48);
                     lv_upper_3_0=ruleMobaUpperBound();
 
                     state._fsp--;
@@ -9616,7 +9617,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,43,FOLLOW_2); 
+            otherlv_4=(Token)match(input,44,FOLLOW_2); 
 
             			newLeafNode(otherlv_4, grammarAccess.getMobaMuliplicityAccess().getRightSquareBracketKeyword_3());
             		
@@ -9710,42 +9711,42 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3785:2: (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint )
             int alt64=8;
             switch ( input.LA(1) ) {
-            case 63:
+            case 64:
                 {
                 alt64=1;
                 }
                 break;
-            case 64:
+            case 65:
                 {
                 alt64=2;
                 }
                 break;
-            case 65:
+            case 66:
                 {
                 alt64=3;
                 }
                 break;
-            case 66:
+            case 67:
                 {
                 alt64=4;
                 }
                 break;
-            case 67:
+            case 68:
                 {
                 alt64=5;
                 }
                 break;
-            case 68:
+            case 69:
                 {
                 alt64=6;
                 }
                 break;
-            case 69:
+            case 70:
                 {
                 alt64=7;
                 }
                 break;
-            case 70:
+            case 71:
                 {
                 alt64=8;
                 }
@@ -9980,11 +9981,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3875:2: (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_ID ) ) ) )
             // InternalMoba.g:3876:3: otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,63,FOLLOW_5); 
+            otherlv_0=(Token)match(input,64,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaRegexpConstraintAccess().getRegexpKeyword_0());
             		
-            otherlv_1=(Token)match(input,19,FOLLOW_12); 
+            otherlv_1=(Token)match(input,20,FOLLOW_12); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaRegexpConstraintAccess().getEqualsSignKeyword_1());
             		
@@ -10145,11 +10146,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3936:2: (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_ID ) ) ) )
             // InternalMoba.g:3937:3: otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,64,FOLLOW_5); 
+            otherlv_0=(Token)match(input,65,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaMinConstraintAccess().getMinKeyword_0());
             		
-            otherlv_1=(Token)match(input,19,FOLLOW_48); 
+            otherlv_1=(Token)match(input,20,FOLLOW_49); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaMinConstraintAccess().getEqualsSignKeyword_1());
             		
@@ -10310,11 +10311,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:3997:2: (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_ID ) ) ) )
             // InternalMoba.g:3998:3: otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,65,FOLLOW_5); 
+            otherlv_0=(Token)match(input,66,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaMaxConstraintAccess().getMaxKeyword_0());
             		
-            otherlv_1=(Token)match(input,19,FOLLOW_48); 
+            otherlv_1=(Token)match(input,20,FOLLOW_49); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaMaxConstraintAccess().getEqualsSignKeyword_1());
             		
@@ -10475,11 +10476,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:4058:2: (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_ID ) ) ) )
             // InternalMoba.g:4059:3: otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,66,FOLLOW_5); 
+            otherlv_0=(Token)match(input,67,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaMinLengthConstraintAccess().getMinLengthKeyword_0());
             		
-            otherlv_1=(Token)match(input,19,FOLLOW_49); 
+            otherlv_1=(Token)match(input,20,FOLLOW_50); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaMinLengthConstraintAccess().getEqualsSignKeyword_1());
             		
@@ -10640,11 +10641,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:4119:2: (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_ID ) ) ) )
             // InternalMoba.g:4120:3: otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_ID ) ) )
             {
-            otherlv_0=(Token)match(input,67,FOLLOW_5); 
+            otherlv_0=(Token)match(input,68,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaMaxLengthConstraintAccess().getMaxLengthKeyword_0());
             		
-            otherlv_1=(Token)match(input,19,FOLLOW_49); 
+            otherlv_1=(Token)match(input,20,FOLLOW_50); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaMaxLengthConstraintAccess().getEqualsSignKeyword_1());
             		
@@ -10809,11 +10810,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:4180:2: (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_ID ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_ID ) ) ) otherlv_7= ')' )
             // InternalMoba.g:4181:3: otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_ID ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_ID ) ) ) otherlv_7= ')'
             {
-            otherlv_0=(Token)match(input,68,FOLLOW_17); 
+            otherlv_0=(Token)match(input,69,FOLLOW_17); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMobaDigitsConstraintAccess().getDigitsKeyword_0());
             		
-            otherlv_1=(Token)match(input,34,FOLLOW_49); 
+            otherlv_1=(Token)match(input,35,FOLLOW_50); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaDigitsConstraintAccess().getLeftParenthesisKeyword_1());
             		
@@ -10843,7 +10844,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4191:5: (lv_filterIntegerValue_2_0= RULE_INT )
                     // InternalMoba.g:4192:6: lv_filterIntegerValue_2_0= RULE_INT
                     {
-                    lv_filterIntegerValue_2_0=(Token)match(input,RULE_INT,FOLLOW_22); 
+                    lv_filterIntegerValue_2_0=(Token)match(input,RULE_INT,FOLLOW_23); 
 
                     						newLeafNode(lv_filterIntegerValue_2_0, grammarAccess.getMobaDigitsConstraintAccess().getFilterIntegerValueINTTerminalRuleCall_2_0_0());
                     					
@@ -10880,7 +10881,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     							current = createModelElement(grammarAccess.getMobaDigitsConstraintRule());
                     						}
                     					
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_22); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_23); 
 
                     						newLeafNode(otherlv_3, grammarAccess.getMobaDigitsConstraintAccess().getFilterIntegerConstMobaConstantCrossReference_2_1_0());
                     					
@@ -10896,7 +10897,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,37,FOLLOW_49); 
+            otherlv_4=(Token)match(input,38,FOLLOW_50); 
 
             			newLeafNode(otherlv_4, grammarAccess.getMobaDigitsConstraintAccess().getCommaKeyword_3());
             		
@@ -10979,7 +10980,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,35,FOLLOW_2); 
+            otherlv_7=(Token)match(input,36,FOLLOW_2); 
 
             			newLeafNode(otherlv_7, grammarAccess.getMobaDigitsConstraintAccess().getRightParenthesisKeyword_5());
             		
@@ -11069,7 +11070,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,69,FOLLOW_2); 
+            otherlv_1=(Token)match(input,70,FOLLOW_2); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaNullConstraintAccess().getIsNullKeyword_1());
             		
@@ -11159,7 +11160,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,70,FOLLOW_2); 
+            otherlv_1=(Token)match(input,71,FOLLOW_2); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMobaNotNullConstraintAccess().getIsNotNullKeyword_1());
             		
@@ -11206,27 +11207,27 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             // InternalMoba.g:4336:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
             int alt72=5;
             switch ( input.LA(1) ) {
-            case 71:
+            case 72:
                 {
                 alt72=1;
                 }
                 break;
-            case 72:
+            case 73:
                 {
                 alt72=2;
                 }
                 break;
-            case 73:
+            case 74:
                 {
                 alt72=3;
                 }
                 break;
-            case 41:
+            case 42:
                 {
                 alt72=4;
                 }
                 break;
-            case 74:
+            case 75:
                 {
                 alt72=5;
                 }
@@ -11245,7 +11246,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4337:3: (enumLiteral_0= '*' )
                     // InternalMoba.g:4338:4: enumLiteral_0= '*'
                     {
-                    enumLiteral_0=(Token)match(input,71,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,72,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaLowerBoundAccess().getMANYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getMobaLowerBoundAccess().getMANYEnumLiteralDeclaration_0());
@@ -11262,7 +11263,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4345:3: (enumLiteral_1= '0' )
                     // InternalMoba.g:4346:4: enumLiteral_1= '0'
                     {
-                    enumLiteral_1=(Token)match(input,72,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,73,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaLowerBoundAccess().getZEROEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getMobaLowerBoundAccess().getZEROEnumLiteralDeclaration_1());
@@ -11279,7 +11280,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4353:3: (enumLiteral_2= '?' )
                     // InternalMoba.g:4354:4: enumLiteral_2= '?'
                     {
-                    enumLiteral_2=(Token)match(input,73,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,74,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaLowerBoundAccess().getOPTIONALEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getMobaLowerBoundAccess().getOPTIONALEnumLiteralDeclaration_2());
@@ -11296,7 +11297,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4361:3: (enumLiteral_3= '+' )
                     // InternalMoba.g:4362:4: enumLiteral_3= '+'
                     {
-                    enumLiteral_3=(Token)match(input,41,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,42,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaLowerBoundAccess().getATLEASTONEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getMobaLowerBoundAccess().getATLEASTONEEnumLiteralDeclaration_3());
@@ -11313,7 +11314,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4369:3: (enumLiteral_4= '1' )
                     // InternalMoba.g:4370:4: enumLiteral_4= '1'
                     {
-                    enumLiteral_4=(Token)match(input,74,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,75,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaLowerBoundAccess().getONEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getMobaLowerBoundAccess().getONEEnumLiteralDeclaration_4());
@@ -11365,10 +11366,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             int alt73=2;
             int LA73_0 = input.LA(1);
 
-            if ( (LA73_0==71) ) {
+            if ( (LA73_0==72) ) {
                 alt73=1;
             }
-            else if ( (LA73_0==74) ) {
+            else if ( (LA73_0==75) ) {
                 alt73=2;
             }
             else {
@@ -11384,7 +11385,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4388:3: (enumLiteral_0= '*' )
                     // InternalMoba.g:4389:4: enumLiteral_0= '*'
                     {
-                    enumLiteral_0=(Token)match(input,71,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,72,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaUpperBoundAccess().getMANYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getMobaUpperBoundAccess().getMANYEnumLiteralDeclaration_0());
@@ -11401,7 +11402,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     // InternalMoba.g:4396:3: (enumLiteral_1= '1' )
                     // InternalMoba.g:4397:4: enumLiteral_1= '1'
                     {
-                    enumLiteral_1=(Token)match(input,74,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,75,FOLLOW_2); 
 
                     				current = grammarAccess.getMobaUpperBoundAccess().getONEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getMobaUpperBoundAccess().getONEEnumLiteralDeclaration_1());
@@ -11441,51 +11442,52 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x003D110009E00000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x007A220013C00000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000000000C0L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000006200000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000453F0000002L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00000453E0000002L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000457E0000002L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x8000000000000000L,0x000000000000007FL});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000002800000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000002000200000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000330L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000082000000000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000040010100000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000040000100000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0040000000200000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000400000002L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000C00800000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000240010100000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0842000000200000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0840000000200000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0800000000200000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0780001000000010L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000040000000010L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x1180000000000010L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x2780001000000010L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000020000000000L,0x0000000000000780L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x4000080000000000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000480L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000210L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000110L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x000000000C400000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000110L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000008A7E0000002L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x000008A7C0000002L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x000008AFC0000002L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000005000000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000004000400000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000710L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000104000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000080020200000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000080000200000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0080000000400000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0001801000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000480020200000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x1084000000400000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x1080000000400000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x1000000000400000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0F00002000000010L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000080000000010L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x2300000000000010L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x4F00002000000010L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000040000000000L,0x0000000000000F00L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x8000100000000000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000900L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000410L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000210L});
 
 }

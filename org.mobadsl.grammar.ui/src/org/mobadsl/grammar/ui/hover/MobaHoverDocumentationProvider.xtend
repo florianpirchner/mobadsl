@@ -11,8 +11,16 @@ import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble
 import org.mobadsl.semantic.model.moba.MobaProperty
+import com.google.inject.Inject
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
+import com.google.inject.name.Named
+import org.eclipse.xtext.Constants
+import java.util.Collections
 
 class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvider {
+
+	@Inject ExtensionGeneratorDelegate generatorDelegate
+	@Inject @Named(Constants.LANGUAGE_NAME) String grammarName
 
 	override String getDocumentation(EObject o) {
 		val String returnValue = findComment(o);
@@ -36,10 +44,11 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	}
 
 	def dispatch String getDocu(MobaGenerator object, String value) {
+
 		return value + '''<p>
-		contents:<br>
+		Generators:<br>
 		<ul>
-		«FOR feature : object.features»
+		«FOR feature : object.allGeneratorIdFeatures»
 			<li>«feature.toDocu»</li>
 		«ENDFOR»
 		</ul>
@@ -80,9 +89,15 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	
 	'''
 
-	def dispatch String toDocu(MobaGeneratorIDFeature feature) '''
-		id <code>«feature.generatorId»</code>
-	'''
+	def dispatch String toDocu(MobaGeneratorIDFeature feature) {
+		val metadata = generatorDelegate.readExtentionsMetadata(grammarName, Collections.singletonList(feature.generatorId)).get(feature.generatorId)
+		if(metadata != null) {
+			'''<b>«metadata.name»</b> «IF !metadata.license.nullOrEmpty» <i>under («metadata.license»«ENDIF»</i>) - «metadata.description»: <code>«feature.generatorId»</code>'''
+		}else{
+			'''<code>«feature.generatorId»</code>'''
+		}
+	}
+	
 
 	def dispatch String toDocu(MobaGeneratorMixinFeature feature) '''
 		mixin <code>«feature.generatorId»</code>

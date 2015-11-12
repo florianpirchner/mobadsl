@@ -25,7 +25,7 @@ class MobaQuickfixProvider extends DefaultQuickfixProvider {
 			}
 
 			// replace the entry
-			xtextDocument.replace(issue.offset, issue.length, coordinate.templateID)
+			xtextDocument.replace(issue.offset, issue.length, coordinate.getTemplateID)
 
 			// download the file
 			val IFile file = xtextDocument.getAdapter(IFile)

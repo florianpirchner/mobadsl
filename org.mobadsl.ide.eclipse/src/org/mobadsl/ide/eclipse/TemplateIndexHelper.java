@@ -14,6 +14,7 @@ import org.eclipse.core.runtime.Path;
 import org.mobadsl.api.template.repository.ITemplateRepositoryManager;
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
@@ -54,7 +55,8 @@ public class TemplateIndexHelper {
 
 	public void downloadByCoordinate(IProject project, List<TemplateCoordinate> toDownlaod) {
 		for (TemplateCoordinate coordinate : toDownlaod) {
-			MobaIndexEntry entry = getRepoManager().find(coordinate.indexID, coordinate.templateID, coordinate.version);
+			MobaIndexEntry entry = getRepoManager().find(coordinate.indexID, coordinate.templateName,
+					coordinate.version);
 			if (entry != null) {
 				String value = getRepoManager().getApplicationModelAsString(entry);
 				if (value != null) {
@@ -128,34 +130,39 @@ public class TemplateIndexHelper {
 
 	public static class TemplateCoordinate {
 		final String indexID;
-		final String templateID;
+		final String templateName;
 		final String version;
 
-		public TemplateCoordinate(String indexID, String templateID, String version) {
+		public TemplateCoordinate(String indexID, String templateName, String version) {
 			super();
 			this.indexID = indexID;
-			this.templateID = templateID;
+			this.templateName = templateName;
 			this.version = version;
 		}
 
 		public static TemplateCoordinate parse(String value) {
+			value = value.replace("index://", "");
 			final String[] tokens = value.split(":");
-			if (tokens.length != 4) {
+			if (tokens.length != 3) {
 				return null;
 			}
-			return new TemplateCoordinate(tokens[1], tokens[2], tokens[3]);
+			return new TemplateCoordinate(tokens[0], tokens[1], tokens[2]);
 		}
 
 		public String getIndexID() {
 			return indexID;
 		}
 
-		public String getTemplateID() {
-			return templateID;
+		public String getTemplateName() {
+			return templateName;
 		}
 
 		public String getVersion() {
 			return version;
+		}
+
+		public String getTemplateID() {
+			return MobaUtil.createApplicationId(templateName, version);
 		}
 
 	}

@@ -9179,9 +9179,9 @@ rule__MobaApplication__VersionAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_4_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getMobaApplicationAccess().getVersionSTRINGTerminalRuleCall_4_0()); }
+		{ before(grammarAccess.getMobaApplicationAccess().getVersionVERSIONTerminalRuleCall_4_0()); }
+		RULE_VERSION
+		{ after(grammarAccess.getMobaApplicationAccess().getVersionVERSIONTerminalRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -11218,17 +11218,19 @@ finally {
 
 RULE_INT : SUPER_INT;
 
-fragment RULE_VERSION : ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
+RULE_ID : SUPER_ID;
 
-RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_VERSION;
+RULE_VERSION : ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')*;
 
 RULE_APPLICATION_ID : RULE_ID ':' RULE_VERSION;
+
+RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_APPLICATION_ID;
 
 RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 
 RULE_FLOAT : RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)? (('b'|'B') ('i'|'I'|'d'|'D')|('l'|'L'|'d'|'D'|'f'|'F'))?;
 
-RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+fragment SUPER_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 fragment SUPER_INT : ('0'..'9')+;
 

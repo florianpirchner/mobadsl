@@ -37,18 +37,18 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVersionKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cVersionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cVersionSTRINGTerminalRuleCall_4_0 = (RuleCall)cVersionAssignment_4.eContents().get(0);
+		private final RuleCall cVersionVERSIONTerminalRuleCall_4_0 = (RuleCall)cVersionAssignment_4.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cFeaturesAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cFeaturesMobaApplicationFeatureParserRuleCall_6_0 = (RuleCall)cFeaturesAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//MobaApplication:
-		//	'application' name=ID 'version' '=' version=STRING '{'
+		//	'application' name=ID 'version' '=' version=VERSION '{'
 		//	features+=MobaApplicationFeature* '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'application' name=ID 'version' '=' version=STRING '{' features+=MobaApplicationFeature* '}'
+		//'application' name=ID 'version' '=' version=VERSION '{' features+=MobaApplicationFeature* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'application'
@@ -66,11 +66,11 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
 		
-		//version=STRING
+		//version=VERSION
 		public Assignment getVersionAssignment_4() { return cVersionAssignment_4; }
 		
-		//STRING
-		public RuleCall getVersionSTRINGTerminalRuleCall_4_0() { return cVersionSTRINGTerminalRuleCall_4_0; }
+		//VERSION
+		public RuleCall getVersionVERSIONTerminalRuleCall_4_0() { return cVersionVERSIONTerminalRuleCall_4_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
@@ -2612,9 +2612,10 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	private final MobaLowerBoundElements eMobaLowerBound;
 	private final MobaUpperBoundElements eMobaUpperBound;
 	private final TerminalRule tINT;
+	private final TerminalRule tID;
 	private final TerminalRule tVERSION;
-	private final TerminalRule tDOWNLOAD_TEMPLATE;
 	private final TerminalRule tAPPLICATION_ID;
+	private final TerminalRule tDOWNLOAD_TEMPLATE;
 	private final TerminalRule tDOUBLE;
 	private final TerminalRule tFLOAT;
 	
@@ -2675,9 +2676,10 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		this.eMobaLowerBound = new MobaLowerBoundElements();
 		this.eMobaUpperBound = new MobaUpperBoundElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.INT");
+		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.ID");
 		this.tVERSION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.VERSION");
-		this.tDOWNLOAD_TEMPLATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOWNLOAD_TEMPLATE");
 		this.tAPPLICATION_ID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.APPLICATION_ID");
+		this.tDOWNLOAD_TEMPLATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOWNLOAD_TEMPLATE");
 		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.DOUBLE");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.FLOAT");
 	}
@@ -2710,7 +2712,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//MobaApplication:
-	//	'application' name=ID 'version' '=' version=STRING '{'
+	//	'application' name=ID 'version' '=' version=VERSION '{'
 	//	features+=MobaApplicationFeature* '}';
 	public MobaApplicationElements getMobaApplicationAccess() {
 		return pMobaApplication;
@@ -3225,23 +3227,28 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		return tINT;
 	}
 	
+	//terminal ID:
+	//	super::ID;
+	public TerminalRule getIDRule() {
+		return tID;
+	}
+	
 	//terminal VERSION:
 	//	'a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9'*;
 	public TerminalRule getVERSIONRule() {
 		return tVERSION;
 	}
 	
-	//terminal DOWNLOAD_TEMPLATE:
-	//	'index://' ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9')* ':' ('a'..'z' | 'A'..'Z' | '_' |
-	//	'.' | '0'..'9')* ':' VERSION;
-	public TerminalRule getDOWNLOAD_TEMPLATERule() {
-		return tDOWNLOAD_TEMPLATE;
-	}
-	
 	//terminal APPLICATION_ID:
 	//	ID ":" VERSION;
 	public TerminalRule getAPPLICATION_IDRule() {
 		return tAPPLICATION_ID;
+	}
+	
+	//terminal DOWNLOAD_TEMPLATE:
+	//	'index://' ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9')* ':' APPLICATION_ID;
+	public TerminalRule getDOWNLOAD_TEMPLATERule() {
+		return tDOWNLOAD_TEMPLATE;
 	}
 	
 	//terminal DOUBLE returns ecore::EDouble:
@@ -3258,7 +3265,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//terminal ID:
 	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
-	public TerminalRule getIDRule() {
+	public TerminalRule getTerminalsIDRule() {
 		return gaTerminals.getIDRule();
 	}
 	

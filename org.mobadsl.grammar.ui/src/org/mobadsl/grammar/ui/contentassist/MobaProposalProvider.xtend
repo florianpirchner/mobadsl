@@ -74,7 +74,7 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 	}
 
 	def String createProposalValue(MobaIndex index, MobaIndexEntry entry) '''
-		index://«index.id»:«entry.templateId»»
+		index://«index.id»:«entry.templateId»
 	'''
 
 	def ITemplateRepositoryManager getManager() {

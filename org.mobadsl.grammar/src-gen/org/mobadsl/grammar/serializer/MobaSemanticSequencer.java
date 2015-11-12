@@ -177,7 +177,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaApplication returns MobaApplication
 	 *
 	 * Constraint:
-	 *     (name=ID version=STRING features+=MobaApplicationFeature*)
+	 *     (name=ID version=VERSION features+=MobaApplicationFeature*)
 	 */
 	protected void sequence_MobaApplication(ISerializationContext context, MobaApplication semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -231,9 +231,13 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         superType=[MobaDataType|ID]? 
 	 *         (
-	 *             (primitive?='isPrimitive' | array?='isArray' | enumAST=MobaEnum)? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 
-	 *             ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
+	 *             (
+	 *                 primitive?='isPrimitive' | 
+	 *                 array?='isArray' | 
+	 *                 ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') dateFormatConst=[MobaConstant|ID]? dateFormatString=STRING?) | 
+	 *                 enumAST=MobaEnum
+	 *             )? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
 	 *         )+ 
 	 *         (properties+=MobaProperty properties+=MobaProperty*)?
 	 *     )

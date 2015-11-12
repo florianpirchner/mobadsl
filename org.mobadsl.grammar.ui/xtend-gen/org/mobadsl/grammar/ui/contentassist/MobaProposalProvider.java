@@ -137,7 +137,6 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     _builder.append(":");
     String _templateId = entry.getTemplateId();
     _builder.append(_templateId, "");
-    _builder.append("»");
     _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
