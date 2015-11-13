@@ -49,10 +49,12 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
-import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
@@ -127,6 +129,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaTemplateAdapter();
 			}
 			@Override
+			public Adapter caseMobaServer(MobaServer object) {
+				return createMobaServerAdapter();
+			}
+			@Override
 			public Adapter caseMobaGenerator(MobaGenerator object) {
 				return createMobaGeneratorAdapter();
 			}
@@ -191,16 +197,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaQueueAdapter();
 			}
 			@Override
-			public Adapter caseMobaService(MobaService object) {
-				return createMobaServiceAdapter();
+			public Adapter caseMobaREST(MobaREST object) {
+				return createMobaRESTAdapter();
 			}
 			@Override
-			public Adapter caseMobaRestCustom(MobaRestCustom object) {
-				return createMobaRestCustomAdapter();
+			public Adapter caseMobaRESTCustomService(MobaRESTCustomService object) {
+				return createMobaRESTCustomServiceAdapter();
 			}
 			@Override
-			public Adapter caseMobaRestCrud(MobaRestCrud object) {
-				return createMobaRestCrudAdapter();
+			public Adapter caseMobaRESTWorkflow(MobaRESTWorkflow object) {
+				return createMobaRESTWorkflowAdapter();
+			}
+			@Override
+			public Adapter caseMobaRESTCrud(MobaRESTCrud object) {
+				return createMobaRESTCrudAdapter();
 			}
 			@Override
 			public Adapter caseMobaFeature(MobaFeature object) {
@@ -369,6 +379,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaServer <em>Server</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaServer
+	 * @generated
+	 */
+	public Adapter createMobaServerAdapter() {
 		return null;
 	}
 
@@ -597,44 +621,58 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaService <em>Service</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaREST <em>REST</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaService
+	 * @see org.mobadsl.semantic.model.moba.MobaREST
 	 * @generated
 	 */
-	public Adapter createMobaServiceAdapter() {
+	public Adapter createMobaRESTAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRestCustom <em>Rest Custom</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService <em>REST Custom Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaRestCustom
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTCustomService
 	 * @generated
 	 */
-	public Adapter createMobaRestCustomAdapter() {
+	public Adapter createMobaRESTCustomServiceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRestCrud <em>Rest Crud</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow <em>REST Workflow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mobadsl.semantic.model.moba.MobaRestCrud
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTWorkflow
 	 * @generated
 	 */
-	public Adapter createMobaRestCrudAdapter() {
+	public Adapter createMobaRESTWorkflowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTCrud <em>REST Crud</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTCrud
+	 * @generated
+	 */
+	public Adapter createMobaRESTCrudAdapter() {
 		return null;
 	}
 

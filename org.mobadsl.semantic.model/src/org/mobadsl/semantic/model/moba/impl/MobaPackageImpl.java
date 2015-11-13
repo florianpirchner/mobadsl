@@ -52,10 +52,13 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTOperations;
+import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
-import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
@@ -91,6 +94,13 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * @generated
 	 */
 	private EClass mobaTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaServerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -209,21 +219,28 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mobaServiceEClass = null;
+	private EClass mobaRESTEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mobaRestCustomEClass = null;
+	private EClass mobaRESTCustomServiceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mobaRestCrudEClass = null;
+	private EClass mobaRESTWorkflowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaRESTCrudEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -419,6 +436,13 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum mobaRESTOperationsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum mobaLowerBoundEEnum = null;
 
 	/**
@@ -573,6 +597,33 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EAttribute getMobaTemplate_DownloadTemplate() {
 		return (EAttribute)mobaTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaServer() {
+		return mobaServerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaServer_Url() {
+		return (EAttribute)mobaServerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaServer_Services() {
+		return (EReference)mobaServerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1174,8 +1225,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMobaService() {
-		return mobaServiceEClass;
+	public EClass getMobaREST() {
+		return mobaRESTEClass;
 	}
 
 	/**
@@ -1183,8 +1234,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMobaRestCustom() {
-		return mobaRestCustomEClass;
+	public EAttribute getMobaREST_Name() {
+		return (EAttribute)mobaRESTEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1192,8 +1243,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRestCustom_Name() {
-		return (EAttribute)mobaRestCustomEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMobaREST_Url() {
+		return (EAttribute)mobaRESTEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1201,8 +1252,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMobaRestCrud() {
-		return mobaRestCrudEClass;
+	public EAttribute getMobaREST_BigData() {
+		return (EAttribute)mobaRESTEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1210,8 +1261,80 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRestCrud_Name() {
-		return (EAttribute)mobaRestCrudEClass.getEStructuralFeatures().get(0);
+	public EReference getMobaREST_RequestDto() {
+		return (EReference)mobaRESTEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaREST_ResponseDto() {
+		return (EReference)mobaRESTEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaREST_ErrorDto() {
+		return (EReference)mobaRESTEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaRESTCustomService() {
+		return mobaRESTCustomServiceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaRESTCustomService_Operation() {
+		return (EAttribute)mobaRESTCustomServiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaRESTWorkflow() {
+		return mobaRESTWorkflowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaRESTWorkflow_Services() {
+		return (EReference)mobaRESTWorkflowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaRESTCrud() {
+		return mobaRESTCrudEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaRESTCrud_Operations() {
+		return (EAttribute)mobaRESTCrudEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1939,6 +2062,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getMobaRESTOperations() {
+		return mobaRESTOperationsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getMobaLowerBound() {
 		return mobaLowerBoundEEnum;
 	}
@@ -1991,6 +2123,10 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaTemplateEClass = createEClass(MOBA_TEMPLATE);
 		createEReference(mobaTemplateEClass, MOBA_TEMPLATE__TEMPLATE);
 		createEAttribute(mobaTemplateEClass, MOBA_TEMPLATE__DOWNLOAD_TEMPLATE);
+
+		mobaServerEClass = createEClass(MOBA_SERVER);
+		createEAttribute(mobaServerEClass, MOBA_SERVER__URL);
+		createEReference(mobaServerEClass, MOBA_SERVER__SERVICES);
 
 		mobaGeneratorEClass = createEClass(MOBA_GENERATOR);
 		createEAttribute(mobaGeneratorEClass, MOBA_GENERATOR__NAME);
@@ -2074,13 +2210,22 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaQueueEClass, MOBA_QUEUE__SUPER_TYPE);
 		createEReference(mobaQueueEClass, MOBA_QUEUE__FEATURES);
 
-		mobaServiceEClass = createEClass(MOBA_SERVICE);
+		mobaRESTEClass = createEClass(MOBA_REST);
+		createEAttribute(mobaRESTEClass, MOBA_REST__NAME);
+		createEAttribute(mobaRESTEClass, MOBA_REST__URL);
+		createEAttribute(mobaRESTEClass, MOBA_REST__BIG_DATA);
+		createEReference(mobaRESTEClass, MOBA_REST__REQUEST_DTO);
+		createEReference(mobaRESTEClass, MOBA_REST__RESPONSE_DTO);
+		createEReference(mobaRESTEClass, MOBA_REST__ERROR_DTO);
 
-		mobaRestCustomEClass = createEClass(MOBA_REST_CUSTOM);
-		createEAttribute(mobaRestCustomEClass, MOBA_REST_CUSTOM__NAME);
+		mobaRESTCustomServiceEClass = createEClass(MOBA_REST_CUSTOM_SERVICE);
+		createEAttribute(mobaRESTCustomServiceEClass, MOBA_REST_CUSTOM_SERVICE__OPERATION);
 
-		mobaRestCrudEClass = createEClass(MOBA_REST_CRUD);
-		createEAttribute(mobaRestCrudEClass, MOBA_REST_CRUD__NAME);
+		mobaRESTWorkflowEClass = createEClass(MOBA_REST_WORKFLOW);
+		createEReference(mobaRESTWorkflowEClass, MOBA_REST_WORKFLOW__SERVICES);
+
+		mobaRESTCrudEClass = createEClass(MOBA_REST_CRUD);
+		createEAttribute(mobaRESTCrudEClass, MOBA_REST_CRUD__OPERATIONS);
 
 		mobaFeatureEClass = createEClass(MOBA_FEATURE);
 		createEAttribute(mobaFeatureEClass, MOBA_FEATURE__NAME);
@@ -2190,6 +2335,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__VALUE);
 
 		// Create enums
+		mobaRESTOperationsEEnum = createEEnum(MOBA_REST_OPERATIONS);
 		mobaLowerBoundEEnum = createEEnum(MOBA_LOWER_BOUND);
 		mobaUpperBoundEEnum = createEEnum(MOBA_UPPER_BOUND);
 	}
@@ -2230,6 +2376,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		// Add supertypes to classes
 		mobaApplicationEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaTemplateEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaServerEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaGeneratorEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaGeneratorMixinFeatureEClass.getESuperTypes().add(this.getMobaGeneratorFeature());
 		mobaGeneratorIDFeatureEClass.getESuperTypes().add(this.getMobaGeneratorFeature());
@@ -2247,11 +2394,13 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaDtoEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaQueueEClass.getESuperTypes().add(this.getMobaData());
 		mobaQueueEClass.getESuperTypes().add(this.getMobaPropertiesAble());
-		mobaServiceEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaRestCustomEClass.getESuperTypes().add(this.getMobaService());
-		mobaRestCustomEClass.getESuperTypes().add(this.getMobaPropertiesAble());
-		mobaRestCrudEClass.getESuperTypes().add(this.getMobaService());
-		mobaRestCrudEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaRESTEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaRESTCustomServiceEClass.getESuperTypes().add(this.getMobaREST());
+		mobaRESTCustomServiceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaRESTWorkflowEClass.getESuperTypes().add(this.getMobaREST());
+		mobaRESTWorkflowEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaRESTCrudEClass.getESuperTypes().add(this.getMobaREST());
+		mobaRESTCrudEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaEntityFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaEntityAttributeEClass.getESuperTypes().add(this.getMobaEntityFeature());
 		mobaEntityAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
@@ -2302,6 +2451,10 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaTemplateEClass, MobaTemplate.class, "MobaTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaTemplate_Template(), this.getMobaApplication(), null, "template", null, 0, 1, MobaTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaTemplate_DownloadTemplate(), ecorePackage.getEString(), "downloadTemplate", null, 0, 1, MobaTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaServerEClass, MobaServer.class, "MobaServer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaServer_Url(), ecorePackage.getEString(), "url", null, 0, 1, MobaServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaServer_Services(), this.getMobaREST(), null, "services", null, 0, -1, MobaServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaGeneratorEClass, MobaGenerator.class, "MobaGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaGenerator_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2385,13 +2538,22 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaQueue_SuperType(), this.getMobaQueue(), null, "superType", null, 0, 1, MobaQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaQueue_Features(), this.getMobaQueueFeature(), null, "features", null, 0, -1, MobaQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mobaServiceEClass, MobaService.class, "MobaService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(mobaRESTEClass, MobaREST.class, "MobaREST", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaREST_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaREST_Url(), ecorePackage.getEString(), "url", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaREST_BigData(), ecorePackage.getEBoolean(), "bigData", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaREST_RequestDto(), this.getMobaDto(), null, "requestDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaREST_ResponseDto(), this.getMobaDto(), null, "responseDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaREST_ErrorDto(), this.getMobaDto(), null, "errorDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mobaRestCustomEClass, MobaRestCustom.class, "MobaRestCustom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobaRestCustom_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaRestCustom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(mobaRESTCustomServiceEClass, MobaRESTCustomService.class, "MobaRESTCustomService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaRESTCustomService_Operation(), this.getMobaRESTOperations(), "operation", null, 0, 1, MobaRESTCustomService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mobaRestCrudEClass, MobaRestCrud.class, "MobaRestCrud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobaRestCrud_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaRestCrud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(mobaRESTWorkflowEClass, MobaRESTWorkflow.class, "MobaRESTWorkflow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaRESTWorkflow_Services(), this.getMobaREST(), null, "services", null, 0, -1, MobaRESTWorkflow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaRESTCrudEClass, MobaRESTCrud.class, "MobaRESTCrud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaRESTCrud_Operations(), this.getMobaRESTOperations(), "operations", null, 0, -1, MobaRESTCrud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaFeatureEClass, MobaFeature.class, "MobaFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2501,6 +2663,12 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaEnumLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
+		initEEnum(mobaRESTOperationsEEnum, MobaRESTOperations.class, "MobaRESTOperations");
+		addEEnumLiteral(mobaRESTOperationsEEnum, MobaRESTOperations.GET);
+		addEEnumLiteral(mobaRESTOperationsEEnum, MobaRESTOperations.PUT);
+		addEEnumLiteral(mobaRESTOperationsEEnum, MobaRESTOperations.DELETE);
+		addEEnumLiteral(mobaRESTOperationsEEnum, MobaRESTOperations.POST);
+
 		initEEnum(mobaLowerBoundEEnum, MobaLowerBound.class, "MobaLowerBound");
 		addEEnumLiteral(mobaLowerBoundEEnum, MobaLowerBound.OPTIONAL);
 		addEEnumLiteral(mobaLowerBoundEEnum, MobaLowerBound.MANY);

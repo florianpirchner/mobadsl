@@ -14,6 +14,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="template" eType="#//MobaApplication"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="downloadTemplate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaServer" eSuperTypes="#//MobaApplicationFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//MobaREST"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorization" eType="#//MobaAuthorization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaAuthorization" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesAble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaGenerator" eSuperTypes="#//MobaApplicationFeature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
@@ -110,12 +119,30 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//MobaQueueFeature" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MobaService" eSuperTypes="#//MobaApplicationFeature"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MobaRestCustom" eSuperTypes="#//MobaService #//MobaPropertiesAble">
+  <eClassifiers xsi:type="ecore:EClass" name="MobaREST" abstract="true" eSuperTypes="#//MobaApplicationFeature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bigData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestDto" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseDto" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorDto" eType="#//MobaDto"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MobaRestCrud" eSuperTypes="#//MobaService #//MobaPropertiesAble">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="MobaRESTOperations">
+    <eLiterals name="GET" literal="GET"/>
+    <eLiterals name="PUT" value="1" literal="PUT"/>
+    <eLiterals name="DELETE" value="2" literal="DELETE"/>
+    <eLiterals name="POST" value="3" literal="POST"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTCustomService" eSuperTypes="#//MobaREST #//MobaPropertiesAble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//MobaRESTOperations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTWorkflow" eSuperTypes="#//MobaREST #//MobaPropertiesAble">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//MobaREST"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTCrud" eSuperTypes="#//MobaREST #//MobaPropertiesAble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operations" upperBound="-1"
+        eType="#//MobaRESTOperations"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaFeature" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

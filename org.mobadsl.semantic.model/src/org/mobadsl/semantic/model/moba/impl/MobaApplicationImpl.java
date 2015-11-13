@@ -30,8 +30,8 @@ import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
 import org.mobadsl.semantic.model.moba.MobaService;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
@@ -385,13 +385,13 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaRestCustom> getRestCustoms() {
-		return collect(MobaRestCustom.class);
+	public List<MobaRESTCustomService> getRestCustoms() {
+		return collect(MobaRESTCustomService.class);
 	}
 
 	@Override
-	public List<MobaRestCrud> getRestCruds() {
-		return collect(MobaRestCrud.class);
+	public List<MobaRESTCrud> getRestCruds() {
+		return collect(MobaRESTCrud.class);
 	}
 
 	@Override
@@ -450,13 +450,13 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaRestCustom> getAllRestCustoms() {
-		return collectAll(this, MobaRestCustom.class);
+	public List<MobaRESTCustomService> getAllRestCustoms() {
+		return collectAll(this, MobaRESTCustomService.class);
 	}
 
 	@Override
-	public List<MobaRestCrud> getAllRestCruds() {
-		return collectAll(this, MobaRestCrud.class);
+	public List<MobaRESTCrud> getAllRestCruds() {
+		return collectAll(this, MobaRESTCrud.class);
 	}
 
 	@Override

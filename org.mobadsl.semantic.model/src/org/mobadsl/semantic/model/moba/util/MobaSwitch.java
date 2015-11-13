@@ -48,10 +48,12 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
-import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
@@ -131,6 +133,13 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaTemplate mobaTemplate = (MobaTemplate)theEObject;
 				T result = caseMobaTemplate(mobaTemplate);
 				if (result == null) result = caseMobaApplicationFeature(mobaTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_SERVER: {
+				MobaServer mobaServer = (MobaServer)theEObject;
+				T result = caseMobaServer(mobaServer);
+				if (result == null) result = caseMobaApplicationFeature(mobaServer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -250,28 +259,37 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_SERVICE: {
-				MobaService mobaService = (MobaService)theEObject;
-				T result = caseMobaService(mobaService);
-				if (result == null) result = caseMobaApplicationFeature(mobaService);
+			case MobaPackage.MOBA_REST: {
+				MobaREST mobaREST = (MobaREST)theEObject;
+				T result = caseMobaREST(mobaREST);
+				if (result == null) result = caseMobaApplicationFeature(mobaREST);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_REST_CUSTOM: {
-				MobaRestCustom mobaRestCustom = (MobaRestCustom)theEObject;
-				T result = caseMobaRestCustom(mobaRestCustom);
-				if (result == null) result = caseMobaService(mobaRestCustom);
-				if (result == null) result = caseMobaPropertiesAble(mobaRestCustom);
-				if (result == null) result = caseMobaApplicationFeature(mobaRestCustom);
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE: {
+				MobaRESTCustomService mobaRESTCustomService = (MobaRESTCustomService)theEObject;
+				T result = caseMobaRESTCustomService(mobaRESTCustomService);
+				if (result == null) result = caseMobaREST(mobaRESTCustomService);
+				if (result == null) result = caseMobaPropertiesAble(mobaRESTCustomService);
+				if (result == null) result = caseMobaApplicationFeature(mobaRESTCustomService);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_REST_WORKFLOW: {
+				MobaRESTWorkflow mobaRESTWorkflow = (MobaRESTWorkflow)theEObject;
+				T result = caseMobaRESTWorkflow(mobaRESTWorkflow);
+				if (result == null) result = caseMobaREST(mobaRESTWorkflow);
+				if (result == null) result = caseMobaPropertiesAble(mobaRESTWorkflow);
+				if (result == null) result = caseMobaApplicationFeature(mobaRESTWorkflow);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MobaPackage.MOBA_REST_CRUD: {
-				MobaRestCrud mobaRestCrud = (MobaRestCrud)theEObject;
-				T result = caseMobaRestCrud(mobaRestCrud);
-				if (result == null) result = caseMobaService(mobaRestCrud);
-				if (result == null) result = caseMobaPropertiesAble(mobaRestCrud);
-				if (result == null) result = caseMobaApplicationFeature(mobaRestCrud);
+				MobaRESTCrud mobaRESTCrud = (MobaRESTCrud)theEObject;
+				T result = caseMobaRESTCrud(mobaRESTCrud);
+				if (result == null) result = caseMobaREST(mobaRESTCrud);
+				if (result == null) result = caseMobaPropertiesAble(mobaRESTCrud);
+				if (result == null) result = caseMobaApplicationFeature(mobaRESTCrud);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -530,6 +548,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Server</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaServer(MobaServer object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -770,47 +803,62 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>REST</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>REST</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaService(MobaService object) {
+	public T caseMobaREST(MobaREST object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Rest Custom</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>REST Custom Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rest Custom</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>REST Custom Service</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaRestCustom(MobaRestCustom object) {
+	public T caseMobaRESTCustomService(MobaRESTCustomService object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Rest Crud</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>REST Workflow</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rest Crud</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>REST Workflow</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaRestCrud(MobaRestCrud object) {
+	public T caseMobaRESTWorkflow(MobaRESTWorkflow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>REST Crud</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>REST Crud</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaRESTCrud(MobaRESTCrud object) {
 		return null;
 	}
 

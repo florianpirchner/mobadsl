@@ -40,6 +40,15 @@ public interface MobaFactory extends EFactory {
 	MobaTemplate createMobaTemplate();
 
 	/**
+	 * Returns a new object of class '<em>Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Server</em>'.
+	 * @generated
+	 */
+	MobaServer createMobaServer();
+
+	/**
 	 * Returns a new object of class '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,31 +166,31 @@ public interface MobaFactory extends EFactory {
 	MobaQueue createMobaQueue();
 
 	/**
-	 * Returns a new object of class '<em>Service</em>'.
+	 * Returns a new object of class '<em>REST Custom Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service</em>'.
+	 * @return a new object of class '<em>REST Custom Service</em>'.
 	 * @generated
 	 */
-	MobaService createMobaService();
+	MobaRESTCustomService createMobaRESTCustomService();
 
 	/**
-	 * Returns a new object of class '<em>Rest Custom</em>'.
+	 * Returns a new object of class '<em>REST Workflow</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rest Custom</em>'.
+	 * @return a new object of class '<em>REST Workflow</em>'.
 	 * @generated
 	 */
-	MobaRestCustom createMobaRestCustom();
+	MobaRESTWorkflow createMobaRESTWorkflow();
 
 	/**
-	 * Returns a new object of class '<em>Rest Crud</em>'.
+	 * Returns a new object of class '<em>REST Crud</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rest Crud</em>'.
+	 * @return a new object of class '<em>REST Crud</em>'.
 	 * @generated
 	 */
-	MobaRestCrud createMobaRestCrud();
+	MobaRESTCrud createMobaRESTCrud();
 
 	/**
 	 * Returns a new object of class '<em>Entity Attribute</em>'.

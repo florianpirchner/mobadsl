@@ -5,34 +5,34 @@ package org.mobadsl.semantic.model.moba.impl;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
+import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Crud</b></em>'.
+ * An implementation of the model object '<em><b>REST Workflow</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRestCrudImpl#getProperties <em>Properties</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRestCrudImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTWorkflowImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTWorkflowImpl#getServices <em>Services</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
+public class MobaRESTWorkflowImpl extends MobaRESTImpl implements MobaRESTWorkflow {
 	/**
 	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -44,31 +44,21 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	protected EList<MobaProperty> properties;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getServices()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected EList<MobaREST> services;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaRestCrudImpl() {
+	protected MobaRESTWorkflowImpl() {
 		super();
 	}
 
@@ -79,7 +69,7 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MobaPackage.Literals.MOBA_REST_CRUD;
+		return MobaPackage.Literals.MOBA_REST_WORKFLOW;
 	}
 
 	/**
@@ -89,7 +79,7 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	 */
 	public EList<MobaProperty> getProperties() {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_REST_CRUD__PROPERTIES);
+			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES);
 		}
 		return properties;
 	}
@@ -99,20 +89,11 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CRUD__NAME, oldName, name));
+	public EList<MobaREST> getServices() {
+		if (services == null) {
+			services = new EObjectResolvingEList<MobaREST>(MobaREST.class, this, MobaPackage.MOBA_REST_WORKFLOW__SERVICES);
+		}
+		return services;
 	}
 
 	/**
@@ -123,7 +104,7 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
+			case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES:
 				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -137,10 +118,10 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
+			case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES:
 				return getProperties();
-			case MobaPackage.MOBA_REST_CRUD__NAME:
-				return getName();
+			case MobaPackage.MOBA_REST_WORKFLOW__SERVICES:
+				return getServices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,12 +135,13 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
+			case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
 				return;
-			case MobaPackage.MOBA_REST_CRUD__NAME:
-				setName((String)newValue);
+			case MobaPackage.MOBA_REST_WORKFLOW__SERVICES:
+				getServices().clear();
+				getServices().addAll((Collection<? extends MobaREST>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,11 +155,11 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
+			case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES:
 				getProperties().clear();
 				return;
-			case MobaPackage.MOBA_REST_CRUD__NAME:
-				setName(NAME_EDEFAULT);
+			case MobaPackage.MOBA_REST_WORKFLOW__SERVICES:
+				getServices().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -191,10 +173,10 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
+			case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES:
 				return properties != null && !properties.isEmpty();
-			case MobaPackage.MOBA_REST_CRUD__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MobaPackage.MOBA_REST_WORKFLOW__SERVICES:
+				return services != null && !services.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -208,7 +190,7 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == MobaPropertiesAble.class) {
 			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_REST_CRUD__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
+				case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
 				default: return -1;
 			}
 		}
@@ -224,29 +206,13 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == MobaPropertiesAble.class) {
 			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_REST_CRUD__PROPERTIES;
+				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES;
 				default: return -1;
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
-
+	
 	@Override
 	public List<MobaProperty> getAllProperties() {
 		return getProperties();
@@ -256,4 +222,5 @@ public class MobaRestCrudImpl extends MobaServiceImpl implements MobaRestCrud {
 	public List<MobaProperty> getGenProperties() {
 		return getProperties();
 	}
-} //MobaRestCrudImpl
+
+} //MobaRESTWorkflowImpl

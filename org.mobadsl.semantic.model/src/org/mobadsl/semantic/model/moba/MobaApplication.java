@@ -181,7 +181,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRestCustom> getRestCustoms();
+	List<MobaRESTCustomService> getRestCustoms();
 
 	/**
 	 * Returns the moba restCrud services for the current application. Excluding
@@ -189,7 +189,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRestCrud> getRestCruds();
+	List<MobaRESTCrud> getRestCruds();
 
 	/**
 	 * Returns the moba settings for the current application. Excluding the
@@ -280,7 +280,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRestCustom> getAllRestCustoms();
+	List<MobaRESTCustomService> getAllRestCustoms();
 
 	/**
 	 * Returns the moba restCrud services for the current application. Including
@@ -288,7 +288,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRestCrud> getAllRestCruds();
+	List<MobaRESTCrud> getAllRestCruds();
 
 	/**
 	 * Returns the moba settings for the current application. Including the

@@ -42,10 +42,12 @@ import org.mobadsl.semantic.model.moba.MobaPastConstraint;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTOperations;
+import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
-import org.mobadsl.semantic.model.moba.MobaService;
+import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
@@ -97,6 +99,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 		switch (eClass.getClassifierID()) {
 			case MobaPackage.MOBA_APPLICATION: return createMobaApplication();
 			case MobaPackage.MOBA_TEMPLATE: return createMobaTemplate();
+			case MobaPackage.MOBA_SERVER: return createMobaServer();
 			case MobaPackage.MOBA_GENERATOR: return createMobaGenerator();
 			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE: return createMobaGeneratorMixinFeature();
 			case MobaPackage.MOBA_GENERATOR_ID_FEATURE: return createMobaGeneratorIDFeature();
@@ -110,9 +113,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_ENTITY_INDEX: return createMobaEntityIndex();
 			case MobaPackage.MOBA_DTO: return createMobaDto();
 			case MobaPackage.MOBA_QUEUE: return createMobaQueue();
-			case MobaPackage.MOBA_SERVICE: return createMobaService();
-			case MobaPackage.MOBA_REST_CUSTOM: return createMobaRestCustom();
-			case MobaPackage.MOBA_REST_CRUD: return createMobaRestCrud();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE: return createMobaRESTCustomService();
+			case MobaPackage.MOBA_REST_WORKFLOW: return createMobaRESTWorkflow();
+			case MobaPackage.MOBA_REST_CRUD: return createMobaRESTCrud();
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE: return createMobaEntityAttribute();
 			case MobaPackage.MOBA_ENTITY_REFERENCE: return createMobaEntityReference();
 			case MobaPackage.MOBA_DTO_ATTRIBUTE: return createMobaDtoAttribute();
@@ -145,6 +148,8 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case MobaPackage.MOBA_REST_OPERATIONS:
+				return createMobaRESTOperationsFromString(eDataType, initialValue);
 			case MobaPackage.MOBA_LOWER_BOUND:
 				return createMobaLowerBoundFromString(eDataType, initialValue);
 			case MobaPackage.MOBA_UPPER_BOUND:
@@ -162,6 +167,8 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case MobaPackage.MOBA_REST_OPERATIONS:
+				return convertMobaRESTOperationsToString(eDataType, instanceValue);
 			case MobaPackage.MOBA_LOWER_BOUND:
 				return convertMobaLowerBoundToString(eDataType, instanceValue);
 			case MobaPackage.MOBA_UPPER_BOUND:
@@ -189,6 +196,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaTemplate createMobaTemplate() {
 		MobaTemplateImpl mobaTemplate = new MobaTemplateImpl();
 		return mobaTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaServer createMobaServer() {
+		MobaServerImpl mobaServer = new MobaServerImpl();
+		return mobaServer;
 	}
 
 	/**
@@ -326,9 +343,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaService createMobaService() {
-		MobaServiceImpl mobaService = new MobaServiceImpl();
-		return mobaService;
+	public MobaRESTCustomService createMobaRESTCustomService() {
+		MobaRESTCustomServiceImpl mobaRESTCustomService = new MobaRESTCustomServiceImpl();
+		return mobaRESTCustomService;
 	}
 
 	/**
@@ -336,9 +353,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaRestCustom createMobaRestCustom() {
-		MobaRestCustomImpl mobaRestCustom = new MobaRestCustomImpl();
-		return mobaRestCustom;
+	public MobaRESTWorkflow createMobaRESTWorkflow() {
+		MobaRESTWorkflowImpl mobaRESTWorkflow = new MobaRESTWorkflowImpl();
+		return mobaRESTWorkflow;
 	}
 
 	/**
@@ -346,9 +363,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaRestCrud createMobaRestCrud() {
-		MobaRestCrudImpl mobaRestCrud = new MobaRestCrudImpl();
-		return mobaRestCrud;
+	public MobaRESTCrud createMobaRESTCrud() {
+		MobaRESTCrudImpl mobaRESTCrud = new MobaRESTCrudImpl();
+		return mobaRESTCrud;
 	}
 
 	/**
@@ -539,6 +556,26 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaEnumLiteral createMobaEnumLiteral() {
 		MobaEnumLiteralImpl mobaEnumLiteral = new MobaEnumLiteralImpl();
 		return mobaEnumLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTOperations createMobaRESTOperationsFromString(EDataType eDataType, String initialValue) {
+		MobaRESTOperations result = MobaRESTOperations.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMobaRESTOperationsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
