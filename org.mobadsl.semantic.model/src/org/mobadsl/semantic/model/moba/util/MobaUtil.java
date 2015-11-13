@@ -145,11 +145,11 @@ public class MobaUtil {
 		return result.indexOf(firstFeature);
 	}
 
-	public static String createApplicationId(MobaApplication mobaApplication) {
-		return createApplicationId(mobaApplication.getName(), mobaApplication.getVersion());
+	public static String toApplicationVersionedId(MobaApplication mobaApplication) {
+		return toApplicationVersionedId(mobaApplication.getName(), mobaApplication.getVersion());
 	}
 
-	public static String createApplicationId(String name, String version) {
+	public static String toApplicationVersionedId(String name, String version) {
 		return name + ":" + version;
 	}
 
@@ -159,7 +159,7 @@ public class MobaUtil {
 	 * @param string
 	 * @return
 	 */
-	public static String toApplicationVersionedIdModelValue(String string) {
+	public static String toVersionedIdModelValue(String string) {
 		if (!string.contains(":")) {
 			return string;
 		}
@@ -188,7 +188,7 @@ public class MobaUtil {
 	 * @param string
 	 * @return
 	 */
-	public static String toApplicationVersionedIdUiValue(String value) {
+	public static String toVersionedIdUiValue(String value) {
 		if (value.contains(":")) {
 			return value;
 		}
@@ -212,41 +212,6 @@ public class MobaUtil {
 	}
 
 	/**
-	 * Converts from <code>org.my.generator:1.2.3-SNAPSHOT</code> to
-	 * <code>org.my.generator.1.2.3-SNAPSHOT</code>
-	 * 
-	 * @param string
-	 * @return
-	 */
-	public static String toGeneratorVersionedIdModelValue(String string) {
-		if (!string.contains(":")) {
-			return string;
-		}
-		return string.replaceFirst(":", ".");
-	}
-
-	/**
-	 * Converts from <code>org.my.generator.1.2.3-SNAPSHOT</code> to
-	 * <code>org.my.generator:1.2.3-SNAPSHOT</code>
-	 * 
-	 * @param string
-	 * @return
-	 */
-	public static String toGeneratorVersionedIdUiValue(String value) {
-		if (value.contains(":")) {
-			return value;
-		}
-		int versionQualifierIndex = value.lastIndexOf(".");
-		int versionMinIndex = value.lastIndexOf(".", versionQualifierIndex - 1);
-		int versionMaxIndex = value.lastIndexOf(".", versionMinIndex - 1);
-
-		String generatorId = value.substring(0, versionMaxIndex);
-		String version = value.substring(versionMaxIndex, value.length() + 1);
-
-		return generatorId + ":" + version;
-	}
-
-	/**
 	 * Converts from <code>org.my.generator:0.8.1-SNAPSHOT</code> to
 	 * <code>org.my.generator</code>
 	 * 
@@ -260,6 +225,10 @@ public class MobaUtil {
 		String[] tokens = terminalString.split(":");
 		return tokens[0];
 
+	}
+	
+	public static String toGeneratorVersionedId(String name, String version) {
+		return name + ":" + version;
 	}
 
 	/**
@@ -280,25 +249,12 @@ public class MobaUtil {
 	/**
 	 * Converts from <code>org.my.generator</code> and
 	 * <code>0.8.1-SNAPSHOT</code> to
-	 * <code>org.my.generator:0.8.1-SNAPSHOT</code>
-	 * 
-	 * @param string
-	 * @return
-	 */
-	public static String toGeneratorVersionedId(String id, String version) {
-		return id + ":" + version;
-
-	}
-	
-	/**
-	 * Converts from <code>org.my.generator</code> and
-	 * <code>0.8.1-SNAPSHOT</code> to
 	 * <code>org.my.generator : 0.8.1-SNAPSHOT</code>
 	 * 
 	 * @param string
 	 * @return
 	 */
-	public static String toGeneratorVersionedIdWithWhitespace(String id, String version) {
+	public static String toVersionedIdWithWhitespace(String id, String version) {
 		return id + " : " + version;
 
 	}

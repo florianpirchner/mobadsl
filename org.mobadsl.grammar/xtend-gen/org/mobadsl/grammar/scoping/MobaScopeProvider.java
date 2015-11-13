@@ -3,12 +3,14 @@
  */
 package org.mobadsl.grammar.scoping;
 
+import com.google.common.base.Function;
 import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import java.util.List;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IContainer;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
@@ -32,6 +34,7 @@ import org.mobadsl.semantic.model.moba.MobaRestCrud;
 import org.mobadsl.semantic.model.moba.MobaRestCustom;
 import org.mobadsl.semantic.model.moba.MobaService;
 import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * This class contains custom scoping description.
@@ -99,7 +102,13 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   
   public IScope scope_MobaGenerator(final MobaApplication ctx, final EReference ref) {
     List<MobaGenerator> _allGenerators = ctx.getAllGenerators();
-    return Scopes.scopeFor(_allGenerators);
+    final Function<MobaGenerator, QualifiedName> _function = (MobaGenerator it) -> {
+      String _versionedId = it.getVersionedId();
+      String _versionedIdModelValue = MobaUtil.toVersionedIdModelValue(_versionedId);
+      String[] _split = _versionedIdModelValue.split("\\.");
+      return QualifiedName.create(_split);
+    };
+    return Scopes.<MobaGenerator>scopeFor(_allGenerators, _function, IScope.NULLSCOPE);
   }
   
   public IScope scope_MobaApplication(final MobaApplication ctx, final EReference ref) {

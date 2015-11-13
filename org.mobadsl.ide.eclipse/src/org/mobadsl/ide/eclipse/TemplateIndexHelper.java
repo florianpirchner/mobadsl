@@ -162,7 +162,7 @@ public class TemplateIndexHelper {
 		}
 
 		public String getTemplateID() {
-			return MobaUtil.createApplicationId(templateName, version);
+			return MobaUtil.toApplicationVersionedId(templateName, version);
 		}
 
 	}

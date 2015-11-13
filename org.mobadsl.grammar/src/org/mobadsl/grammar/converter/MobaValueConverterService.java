@@ -9,16 +9,16 @@ import com.google.inject.Inject;
 public class MobaValueConverterService extends DefaultTerminalConverters {
 
 	@Inject
-	private ApplicationIdConverter applicationIdValueConverter;
-	
-	@Inject
-	private GeneratorIdConverter generatorIdValueConverter;
+	private IdVersionConverter idVersionValueConverter;
 
-	@ValueConverter(rule = "APPLICATION_ID")
+//	@Inject
+//	private GeneratorIdConverter generatorIdValueConverter;
+
+	@ValueConverter(rule = "ID_VERSION")
 	public IValueConverter<String> APPLICATION_ID() {
-		return applicationIdValueConverter;
+		return idVersionValueConverter;
 	}
-	
+
 //	@ValueConverter(rule = "GENERATOR_ID")
 //	public IValueConverter<String> GENERATOR_ID() {
 //		return generatorIdValueConverter;

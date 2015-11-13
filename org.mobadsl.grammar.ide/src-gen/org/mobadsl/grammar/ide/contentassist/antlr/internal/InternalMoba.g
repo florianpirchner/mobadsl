@@ -9217,9 +9217,9 @@ rule__MobaTemplate__TemplateAssignment_1_0
 	(
 		{ before(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationCrossReference_1_0_0()); }
 		(
-			{ before(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationAPPLICATION_IDTerminalRuleCall_1_0_0_1()); }
-			RULE_APPLICATION_ID
-			{ after(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationAPPLICATION_IDTerminalRuleCall_1_0_0_1()); }
+			{ before(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationID_VERSIONTerminalRuleCall_1_0_0_1()); }
+			RULE_ID_VERSION
+			{ after(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationID_VERSIONTerminalRuleCall_1_0_0_1()); }
 		)
 		{ after(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationCrossReference_1_0_0()); }
 	)
@@ -9330,9 +9330,9 @@ rule__MobaGeneratorMixinFeature__GeneratorRefAssignment_1
 	(
 		{ before(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorCrossReference_1_0()); }
 		(
-			{ before(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1()); }
-			RULE_GENERATOR_ID
-			{ after(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1()); }
+			{ before(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorID_VERSIONTerminalRuleCall_1_0_1()); }
+			RULE_ID_VERSION
+			{ after(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorID_VERSIONTerminalRuleCall_1_0_1()); }
 		)
 		{ after(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorCrossReference_1_0()); }
 	)
@@ -11228,11 +11228,9 @@ RULE_VERSION : RULE_INT '.' RULE_INT '.' RULE_INT '-SNAPSHOT'?;
 
 RULE_FQN : RULE_ID ('.' RULE_ID)*;
 
-RULE_APPLICATION_ID : RULE_ID ':' RULE_VERSION;
+RULE_ID_VERSION : RULE_ID ':' RULE_VERSION;
 
-RULE_GENERATOR_ID : RULE_FQN ':' RULE_VERSION;
-
-RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_APPLICATION_ID;
+RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_ID_VERSION;
 
 RULE_FLOAT : RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)? (('b'|'B') ('i'|'I'|'d'|'D')|('l'|'L'|'d'|'D'|'f'|'F'))?;
 

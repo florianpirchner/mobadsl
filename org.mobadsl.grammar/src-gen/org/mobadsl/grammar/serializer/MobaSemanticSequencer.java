@@ -231,13 +231,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         superType=[MobaDataType|ID]? 
 	 *         (
-	 *             (
-	 *                 primitive?='isPrimitive' | 
-	 *                 array?='isArray' | 
-	 *                 ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') dateFormatConst=[MobaConstant|ID]? dateFormatString=STRING?) | 
-	 *                 enumAST=MobaEnum
-	 *             )? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
+	 *             (primitive?='isPrimitive' | array?='isArray' | enumAST=MobaEnum)? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 
+	 *             ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
 	 *         )+ 
 	 *         (properties+=MobaProperty properties+=MobaProperty*)?
 	 *     )
@@ -452,7 +448,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaGeneratorMixinFeature returns MobaGeneratorMixinFeature
 	 *
 	 * Constraint:
-	 *     generatorRef=[MobaGenerator|GENERATOR_ID]
+	 *     generatorRef=[MobaGenerator|ID_VERSION]
 	 */
 	protected void sequence_MobaGeneratorMixinFeature(ISerializationContext context, MobaGeneratorMixinFeature semanticObject) {
 		if (errorAcceptor != null) {
@@ -460,7 +456,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorGENERATOR_IDTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
+		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorID_VERSIONTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
 		feeder.finish();
 	}
 	
@@ -695,7 +691,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaTemplate returns MobaTemplate
 	 *
 	 * Constraint:
-	 *     (template=[MobaApplication|APPLICATION_ID] | downloadTemplate=DOWNLOAD_TEMPLATE)
+	 *     (template=[MobaApplication|ID_VERSION] | downloadTemplate=DOWNLOAD_TEMPLATE)
 	 */
 	protected void sequence_MobaTemplate(ISerializationContext context, MobaTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

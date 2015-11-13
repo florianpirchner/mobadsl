@@ -267,7 +267,10 @@ public class MobaGeneratorImpl extends MobaApplicationFeatureImpl implements Mob
 	@SuppressWarnings("unchecked")
 	protected <T> List<T> collectAll(MobaGenerator instance, Class<T> clazz, Set<EObject> processed) {
 		List<T> result = new ArrayList<>();
-
+		if(instance == null) {
+			return result;
+		}
+		
 		for (MobaGeneratorFeature feature : instance.getFeatures()) {
 			// only add to result, if the feature is of type clazz
 			if (clazz.isAssignableFrom(feature.getClass())) {

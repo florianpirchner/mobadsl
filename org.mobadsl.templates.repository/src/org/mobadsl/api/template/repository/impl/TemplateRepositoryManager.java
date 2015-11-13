@@ -110,7 +110,7 @@ public class TemplateRepositoryManager implements ITemplateRepositoryManager {
 
 	@Override
 	public MobaIndexEntry find(String indexId, String templateName, String templateVersion) {
-		String templateId = MobaUtil.createApplicationId(templateName, templateVersion);
+		String templateId = MobaUtil.toApplicationVersionedId(templateName, templateVersion);
 		ITemplateRepository repo = findRepo(indexId);
 		if (repo != null) {
 			MobaIndex index = repo.getIndex();

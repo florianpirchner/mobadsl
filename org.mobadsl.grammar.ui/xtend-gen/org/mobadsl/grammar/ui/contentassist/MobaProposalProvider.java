@@ -79,8 +79,8 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
       StringConcatenation _builder = new StringConcatenation();
       String _id = it.getId();
       String _version = it.getVersion();
-      String _generatorVersionedIdWithWhitespace = MobaUtil.toGeneratorVersionedIdWithWhitespace(_id, _version);
-      _builder.append(_generatorVersionedIdWithWhitespace, "");
+      String _versionedIdWithWhitespace = MobaUtil.toVersionedIdWithWhitespace(_id, _version);
+      _builder.append(_versionedIdWithWhitespace, "");
       StyledString _createStyledString = this.createStyledString(it);
       Image _image = this.getImage(model);
       ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_builder.toString(), _createStyledString, _image, 

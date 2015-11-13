@@ -15,7 +15,7 @@ MobaApplicationFeature:
  * Will import a Moba-Application.
  */
 MobaTemplate:
-	'use template' (template=[MobaApplication|APPLICATION_ID] | downloadTemplate=DOWNLOAD_TEMPLATE);
+	'use template' (template=[MobaApplication|ID_VERSION] | downloadTemplate=DOWNLOAD_TEMPLATE);
 
 MobaGenerator:
 	(active?='active')? 'generator' name=ID '{'
@@ -29,7 +29,7 @@ MobaGeneratorIDFeature:
 	'extensionPoint' generatorId=FQN':'generatorVersion=VERSION;
 
 MobaGeneratorMixinFeature:
-	'mixin' generatorRef=[MobaGenerator|GENERATOR_ID];
+	'mixin' generatorRef=[MobaGenerator|ID_VERSION];
 
 MobaDataType:
 	'datatype' name=ID ('extends' superType=[MobaDataType])? ((primitive?='isPrimitive')? & (array?='isArray')? &
@@ -215,16 +215,12 @@ terminal FQN:
 	ID ('.' ID)*
 ;
 
-terminal APPLICATION_ID:
+terminal ID_VERSION:
 	ID ":" VERSION
 ;
 
-terminal GENERATOR_ID:
-	FQN ':' VERSION
-;
-
 terminal DOWNLOAD_TEMPLATE:
-	'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':'APPLICATION_ID
+	'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' ID_VERSION
 ;
 
 terminal FLOAT returns ecore::EFloat:

@@ -6,7 +6,9 @@ package org.mobadsl.grammar.scoping
 import com.google.inject.Inject
 import java.util.List
 import org.eclipse.emf.ecore.EReference
+import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.IEObjectDescription
+import org.eclipse.xtext.resource.IResourceDescriptions
 import org.eclipse.xtext.resource.impl.SimpleResourceDescriptionsBasedContainerManager
 import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
@@ -14,7 +16,7 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 import org.eclipse.xtext.scoping.impl.SimpleScope
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaPackage
-import org.eclipse.xtext.resource.IResourceDescriptions
+import org.mobadsl.semantic.model.moba.util.MobaUtil
 
 /**
  * This class contains custom scoping description.
@@ -68,7 +70,9 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 
 	def IScope scope_MobaGenerator(MobaApplication ctx, EReference ref) {
-		return Scopes.scopeFor(ctx.allGenerators);
+		return Scopes.scopeFor(ctx.allGenerators, [
+			return QualifiedName.create(MobaUtil.toVersionedIdModelValue(it.versionedId).split("\\."))
+		], IScope.NULLSCOPE);
 	}
 
 	def IScope scope_MobaApplication(MobaApplication ctx, EReference ref) {

@@ -56,7 +56,7 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		val allGenerators = generatorDelegate.readExtentionsMetadataById(grammarName, prefix)
 		allGenerators.values.forEach [
 			acceptor.accept(doCreateProposal(
-				'''«MobaUtil.toGeneratorVersionedIdWithWhitespace(it.id, it.version)»''',
+				'''«MobaUtil.toVersionedIdWithWhitespace(it.id, it.version)»''',
 				it.createStyledString,
 				model.image,
 				1000,

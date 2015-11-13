@@ -205,7 +205,7 @@ public class MobaIndexEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 */
 	public String getTemplateId() {
-		return MobaUtil.createApplicationId(getTemplateName(), getTemplateVersion());
+		return MobaUtil.toApplicationVersionedId(getTemplateName(), getTemplateVersion());
 	}
 
 	/**
