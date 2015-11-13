@@ -2,6 +2,8 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +20,7 @@ package org.mobadsl.semantic.model.moba;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getRequestDto <em>Request Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getHeaders <em>Headers</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST()
@@ -180,5 +183,21 @@ public interface MobaREST extends MobaApplicationFeature {
 	 * @generated
 	 */
 	void setErrorDto(MobaDto value);
+
+	/**
+	 * Returns the value of the '<em><b>Headers</b></em>' containment reference list.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaRESTAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Headers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Headers</em>' containment reference list.
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_Headers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MobaRESTAttribute> getHeaders();
 
 } // MobaREST

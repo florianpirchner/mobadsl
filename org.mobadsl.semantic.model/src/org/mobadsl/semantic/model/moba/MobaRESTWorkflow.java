@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow#getServices <em>Services</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow#getSuperType <em>Super Type</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTWorkflow()
@@ -36,5 +37,31 @@ public interface MobaRESTWorkflow extends MobaREST, MobaPropertiesAble {
 	 * @generated
 	 */
 	EList<MobaREST> getServices();
+
+	/**
+	 * Returns the value of the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Super Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Super Type</em>' reference.
+	 * @see #setSuperType(MobaRESTWorkflow)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTWorkflow_SuperType()
+	 * @model
+	 * @generated
+	 */
+	MobaRESTWorkflow getSuperType();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Super Type</em>' reference.
+	 * @see #getSuperType()
+	 * @generated
+	 */
+	void setSuperType(MobaRESTWorkflow value);
 
 } // MobaRESTWorkflow

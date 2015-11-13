@@ -108,6 +108,14 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     _values.forEach(_function);
   }
   
+  @Override
+  public void completeMobaRestParameter_NameString(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    StyledString _displayString_KeyString = this.getDisplayString_KeyString();
+    Image _image = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal("param1", _displayString_KeyString, _image, 1000, context);
+    acceptor.accept(_doCreateProposal);
+  }
+  
   public StyledString createStyledString(final ExtensionGeneratorDelegate.Metadata metadata) {
     String _name = metadata.getName();
     final StyledString result = new StyledString(_name);
@@ -220,6 +228,12 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
       return manager;
     }
     return null;
+  }
+  
+  public StyledString getDisplayString_KeyString() {
+    final StyledString string = new StyledString("param1");
+    string.append(" - any valid ID", StyledString.QUALIFIER_STYLER);
+    return string;
   }
   
   @Override

@@ -5,6 +5,8 @@ package org.mobadsl.grammar.validation
 
 import com.google.inject.Inject
 import com.google.inject.name.Named
+import java.text.ParseException
+import java.text.SimpleDateFormat
 import java.util.Collections
 import java.util.Set
 import org.eclipse.xtext.Constants
@@ -12,6 +14,7 @@ import org.eclipse.xtext.validation.Check
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaConstant
+import org.mobadsl.semantic.model.moba.MobaConstantValue
 import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaDto
 import org.mobadsl.semantic.model.moba.MobaEntity
@@ -19,11 +22,13 @@ import org.mobadsl.semantic.model.moba.MobaGenerator
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
 import org.mobadsl.semantic.model.moba.MobaPackage
 import org.mobadsl.semantic.model.moba.MobaQueue
-import org.mobadsl.semantic.model.moba.MobaRestCrud
-import org.mobadsl.semantic.model.moba.MobaRestCustom
+import org.mobadsl.semantic.model.moba.MobaRESTAttribute
+import org.mobadsl.semantic.model.moba.MobaRESTCrud
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService
 import org.mobadsl.semantic.model.moba.MobaSettings
 import org.mobadsl.semantic.model.moba.MobaTemplate
 import org.mobadsl.semantic.model.moba.RecursionException
+import org.mobadsl.semantic.model.moba.ValueType
 
 class MobaValidator extends AbstractMobaValidator {
 
@@ -138,36 +143,36 @@ class MobaValidator extends AbstractMobaValidator {
 			switch (feature) {
 				MobaConstant: {
 					if (tempConstFeatures.contains(feature.name)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempConstFeatures.add(feature.name)
 				}
 				MobaDataType: {
 					if (tempDtFeatures.contains(feature.name)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempDtFeatures.add(feature.name)
 				}
 				MobaEntity: {
 					if (tempDataFeatures.contains(feature.getName)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempDataFeatures.add(feature.getName)
 				}
 				MobaDto: {
 					if (tempDataFeatures.contains(feature.getName)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempDataFeatures.add(feature.getName)
 				}
 				MobaQueue: {
 					if (tempDataFeatures.contains(feature.name)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempDataFeatures.add(feature.name)
 				}
@@ -178,17 +183,17 @@ class MobaValidator extends AbstractMobaValidator {
 					}
 					tempSettingsFeatures.add(feature.name)
 				}
-				MobaRestCustom: {
+				MobaRESTCustomService: {
 					if (tempServiceFeatures.contains(feature.name)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempServiceFeatures.add(feature.name)
 				}
-				MobaRestCrud: {
+				MobaRESTCrud: {
 					if (tempServiceFeatures.contains(feature.name)) {
-						error("Name must be unique", application,
-							MobaPackage.Literals.MOBA_APPLICATION__FEATURES, index)
+						error("Name must be unique", application, MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+							index)
 					}
 					tempServiceFeatures.add(feature.name)
 				}
@@ -388,7 +393,8 @@ class MobaValidator extends AbstractMobaValidator {
 
 		// check if there are problems with mixins
 		if (!foundWarning) {
-			val allGeneratorMap = generatorDelegate.readExtentionsMetadata(grammarName, generator.allGeneratorVersionedIds)
+			val allGeneratorMap = generatorDelegate.readExtentionsMetadata(grammarName,
+				generator.allGeneratorVersionedIds)
 			for (id : generator.allGeneratorVersionedIds) {
 				index++
 				if (!allGeneratorMap.containsKey(
@@ -396,6 +402,77 @@ class MobaValidator extends AbstractMobaValidator {
 					foundWarning = true
 					warning('''A mixin uses the GeneratorID «id» and there is no Generator-Extensions registered. Please check template...''',
 						generator, MobaPackage.Literals.MOBA_GENERATOR__NAME)
+				}
+			}
+		}
+	}
+
+	@Check
+	def checkConstantUppercase(MobaConstantValue value) {
+		if (!value.valueString.nullOrEmpty) {
+			if (value.valueConst != null) {
+				if (!value.valueConst.value.toUpperCase.equals(value.valueConst.value)) {
+					error('''Constant values need to be upper case!''', value,
+						MobaPackage.Literals.MOBA_CONSTANT_VALUE__VALUE_CONST)
+				}
+			}
+		}
+	}
+
+	@Check
+	def checkRestAttributeAssignment(MobaRESTAttribute att) {
+		val dt = att.type
+		val value = att.value;
+
+		val eAtt = if (att.valueConst != null)
+				MobaPackage.Literals.MOBA_REST_ATTRIBUTE__VALUE_CONST
+			else
+				MobaPackage.Literals.MOBA_REST_ATTRIBUTE__VALUE_STRING
+
+		if (dt.isArray) {
+			if (!att.value.nullOrEmpty) {
+				error('''Array datatypes must not be assigned a value to.''', att, eAtt)
+			}
+		} else if (dt.isDate || dt.isTime || dt.isTimestamp) {
+			val SimpleDateFormat df = if (!dt.dateFormat.nullOrEmpty)
+					new SimpleDateFormat(dt.dateFormat)
+				else
+					new SimpleDateFormat
+			try {
+				df.parse(value)
+			} catch (ParseException ex) {
+				error('''Value «value» is not a valid date using dateformat «df.toPattern»!''', att, eAtt)
+			}
+		} else if (dt.isEnum) {
+			if (!att.value.nullOrEmpty) {
+				error('''Enum datatypes must not be assigned a value to.''', att, eAtt)
+			}
+		} else if (dt.isEnum) {
+			if (!att.value.nullOrEmpty) {
+				error('''Enum datatypes must not be assigned a value to.''', att, eAtt)
+			}
+		} else if (dt.isNumeric) {
+			if (att.valueType != ValueType.NUMERIC) {
+				if (att.valueType == ValueType.CONSTANT || att.valueType == ValueType.STRING) {
+					try {
+						Integer.valueOf(att.value)
+					} catch (NumberFormatException ex) {
+						error('''Value «value» is not a valid numeric!''', att, eAtt)
+					}
+				} else {
+					error('''Can not assign «att.valueType» to numeric datatype!''', att, eAtt)
+				}
+			}
+		} else if (dt.isDecimal) {
+			if (att.valueType != ValueType.NUMERIC && att.valueType != ValueType.DECIMAL) {
+				if (att.valueType == ValueType.CONSTANT || att.valueType == ValueType.STRING) {
+					try {
+						Double.valueOf(att.value)
+					} catch (NumberFormatException ex) {
+						error('''Value «value» is not a valid decimal!''', att, eAtt)
+					}
+				} else {
+					error('''Can not assign «att.valueType» to decimal datatype!''', att, eAtt)
 				}
 			}
 		}

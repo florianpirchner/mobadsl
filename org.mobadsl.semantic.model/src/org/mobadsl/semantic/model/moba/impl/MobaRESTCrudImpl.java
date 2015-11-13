@@ -5,6 +5,7 @@ package org.mobadsl.semantic.model.moba.impl;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -12,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -32,6 +34,7 @@ import org.mobadsl.semantic.model.moba.MobaRESTOperations;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl#getOperations <em>Operations</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl#getSuperType <em>Super Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +59,16 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 	 * @ordered
 	 */
 	protected EList<MobaRESTOperations> operations;
+
+	/**
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuperType()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaRESTCrud superType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +118,44 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaRESTCrud getSuperType() {
+		if (superType != null && superType.eIsProxy()) {
+			InternalEObject oldSuperType = (InternalEObject)superType;
+			superType = (MobaRESTCrud)eResolveProxy(oldSuperType);
+			if (superType != oldSuperType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_CRUD__SUPER_TYPE, oldSuperType, superType));
+			}
+		}
+		return superType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTCrud basicGetSuperType() {
+		return superType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSuperType(MobaRESTCrud newSuperType) {
+		MobaRESTCrud oldSuperType = superType;
+		superType = newSuperType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CRUD__SUPER_TYPE, oldSuperType, superType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -126,6 +177,9 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 				return getProperties();
 			case MobaPackage.MOBA_REST_CRUD__OPERATIONS:
 				return getOperations();
+			case MobaPackage.MOBA_REST_CRUD__SUPER_TYPE:
+				if (resolve) return getSuperType();
+				return basicGetSuperType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -147,6 +201,9 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 				getOperations().clear();
 				getOperations().addAll((Collection<? extends MobaRESTOperations>)newValue);
 				return;
+			case MobaPackage.MOBA_REST_CRUD__SUPER_TYPE:
+				setSuperType((MobaRESTCrud)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -165,6 +222,9 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 			case MobaPackage.MOBA_REST_CRUD__OPERATIONS:
 				getOperations().clear();
 				return;
+			case MobaPackage.MOBA_REST_CRUD__SUPER_TYPE:
+				setSuperType((MobaRESTCrud)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -181,6 +241,8 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_REST_CRUD__OPERATIONS:
 				return operations != null && !operations.isEmpty();
+			case MobaPackage.MOBA_REST_CRUD__SUPER_TYPE:
+				return superType != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.ValueType;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -402,9 +403,9 @@ public class MobaConstantValueImpl extends MinimalEObjectImpl.Container implemen
 		if (getValueConst() != null) {
 			return ValueType.CONSTANT;
 		} else if (getValueInt() != null) {
-			return ValueType.INT;
+			return ValueType.NUMERIC;
 		} else if (getValueDouble() != null) {
-			return ValueType.DOUBLE;
+			return ValueType.DECIMAL;
 		} else {
 			return ValueType.STRING;
 		}

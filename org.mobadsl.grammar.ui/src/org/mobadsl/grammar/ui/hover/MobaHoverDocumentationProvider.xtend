@@ -1,9 +1,13 @@
 package org.mobadsl.grammar.ui.hover
 
+import com.google.inject.Inject
+import com.google.inject.name.Named
+import java.util.Collections
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.xtext.Constants
 import org.eclipse.xtext.documentation.impl.MultiLineCommentDocumentationProvider
+import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
 import org.mobadsl.semantic.model.moba.MobaConstant
-import org.mobadsl.semantic.model.moba.MobaConstantValue
 import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaGenerator
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature
@@ -11,11 +15,7 @@ import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble
 import org.mobadsl.semantic.model.moba.MobaProperty
-import com.google.inject.Inject
-import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
-import com.google.inject.name.Named
-import org.eclipse.xtext.Constants
-import java.util.Collections
+import org.mobadsl.semantic.model.moba.ValueType
 
 class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvider {
 
@@ -39,7 +39,7 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	def dispatch String getDocu(MobaConstant object, String value) {
 		return value +
 			'''<p>@value = <code>«object.value»</code><br>
-		@valueType = «if(object.valueAST != null && object.valueAST.tail == null) object.valueAST.valueType else MobaConstantValue.ValueType.STRING»
+		@valueType = «if(object.valueAST != null && object.valueAST.tail == null) object.valueAST.valueType else ValueType.STRING»
 		</p>'''
 	}
 
@@ -90,14 +90,15 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	'''
 
 	def dispatch String toDocu(MobaGeneratorIDFeature feature) {
-		val metadata = generatorDelegate.readExtentionsMetadata(grammarName, Collections.singletonList(feature.generatorVersionedId)).get(feature.generatorVersionedId)
-		if(metadata != null) {
+		val metadata = generatorDelegate.readExtentionsMetadata(grammarName,
+			Collections.singletonList(feature.generatorVersionedId)).get(feature.generatorVersionedId)
+		if (metadata !=
+			null) {
 			'''<b>«metadata.name»</b> «IF !metadata.license.nullOrEmpty» <i>under («metadata.license»«ENDIF»</i>) - «metadata.description»: <code>«feature.generatorVersionedId»</code>'''
-		}else{
+		} else {
 			'''<code>«feature.generatorVersionedId»</code>'''
 		}
 	}
-	
 
 	def dispatch String toDocu(MobaGeneratorMixinFeature feature) '''
 		mixin <code>«feature.generatorVersionedId»</code>

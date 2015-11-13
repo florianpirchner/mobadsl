@@ -18,22 +18,22 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 
 /**
- * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaRestCustom} object.
+ * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTCrud} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobaRestCustomItemProvider extends MobaServiceItemProvider {
+public class MobaRESTCrudItemProvider extends MobaRESTItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaRestCustomItemProvider(AdapterFactory adapterFactory) {
+	public MobaRESTCrudItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,29 +48,52 @@ public class MobaRestCustomItemProvider extends MobaServiceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addOperationsPropertyDescriptor(object);
+			addSuperTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Operations feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addOperationsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaRestCustom_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRestCustom_name_feature", "_UI_MobaRestCustom_type"),
-				 MobaPackage.Literals.MOBA_REST_CUSTOM__NAME,
+				 getString("_UI_MobaRESTCrud_operations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTCrud_operations_feature", "_UI_MobaRESTCrud_type"),
+				 MobaPackage.Literals.MOBA_REST_CRUD__OPERATIONS,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Super Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSuperTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaRESTCrud_superType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTCrud_superType_feature", "_UI_MobaRESTCrud_type"),
+				 MobaPackage.Literals.MOBA_REST_CRUD__SUPER_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -106,14 +129,14 @@ public class MobaRestCustomItemProvider extends MobaServiceItemProvider {
 	}
 
 	/**
-	 * This returns MobaRestCustom.gif.
+	 * This returns MobaRESTCrud.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaRestCustom"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaRESTCrud"));
 	}
 
 	/**
@@ -124,10 +147,10 @@ public class MobaRestCustomItemProvider extends MobaServiceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaRestCustom)object).getName();
+		String label = ((MobaRESTCrud)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_MobaRestCustom_type") :
-			getString("_UI_MobaRestCustom_type") + " " + label;
+			getString("_UI_MobaRESTCrud_type") :
+			getString("_UI_MobaRESTCrud_type") + " " + label;
 	}
 	
 
@@ -142,11 +165,11 @@ public class MobaRestCustomItemProvider extends MobaServiceItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(MobaRestCustom.class)) {
-			case MobaPackage.MOBA_REST_CUSTOM__NAME:
+		switch (notification.getFeatureID(MobaRESTCrud.class)) {
+			case MobaPackage.MOBA_REST_CRUD__OPERATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_REST_CUSTOM__PROPERTIES:
+			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

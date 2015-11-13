@@ -118,6 +118,52 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaServer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaServerItemProvider mobaServerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaServer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaServerAdapter() {
+		if (mobaServerItemProvider == null) {
+			mobaServerItemProvider = new MobaServerItemProvider(this);
+		}
+
+		return mobaServerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaAuthorization} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaAuthorizationItemProvider mobaAuthorizationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaAuthorization}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaAuthorizationAdapter() {
+		if (mobaAuthorizationItemProvider == null) {
+			mobaAuthorizationItemProvider = new MobaAuthorizationItemProvider(this);
+		}
+
+		return mobaAuthorizationItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaGenerator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -417,72 +463,95 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaService} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaServiceItemProvider mobaServiceItemProvider;
+	protected MobaRESTAttributeItemProvider mobaRESTAttributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaService}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaServiceAdapter() {
-		if (mobaServiceItemProvider == null) {
-			mobaServiceItemProvider = new MobaServiceItemProvider(this);
+	public Adapter createMobaRESTAttributeAdapter() {
+		if (mobaRESTAttributeItemProvider == null) {
+			mobaRESTAttributeItemProvider = new MobaRESTAttributeItemProvider(this);
 		}
 
-		return mobaServiceItemProvider;
+		return mobaRESTAttributeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRestCustom} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTCustomService} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaRestCustomItemProvider mobaRestCustomItemProvider;
+	protected MobaRESTCustomServiceItemProvider mobaRESTCustomServiceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRestCustom}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTCustomService}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaRestCustomAdapter() {
-		if (mobaRestCustomItemProvider == null) {
-			mobaRestCustomItemProvider = new MobaRestCustomItemProvider(this);
+	public Adapter createMobaRESTCustomServiceAdapter() {
+		if (mobaRESTCustomServiceItemProvider == null) {
+			mobaRESTCustomServiceItemProvider = new MobaRESTCustomServiceItemProvider(this);
 		}
 
-		return mobaRestCustomItemProvider;
+		return mobaRESTCustomServiceItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRestCrud} instances.
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MobaRestCrudItemProvider mobaRestCrudItemProvider;
+	protected MobaRESTWorkflowItemProvider mobaRESTWorkflowItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRestCrud}.
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMobaRestCrudAdapter() {
-		if (mobaRestCrudItemProvider == null) {
-			mobaRestCrudItemProvider = new MobaRestCrudItemProvider(this);
+	public Adapter createMobaRESTWorkflowAdapter() {
+		if (mobaRESTWorkflowItemProvider == null) {
+			mobaRESTWorkflowItemProvider = new MobaRESTWorkflowItemProvider(this);
 		}
 
-		return mobaRestCrudItemProvider;
+		return mobaRESTWorkflowItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTCrud} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaRESTCrudItemProvider mobaRESTCrudItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTCrud}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaRESTCrudAdapter() {
+		if (mobaRESTCrudItemProvider == null) {
+			mobaRESTCrudItemProvider = new MobaRESTCrudItemProvider(this);
+		}
+
+		return mobaRESTCrudItemProvider;
 	}
 
 	/**
@@ -1023,6 +1092,8 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	public void dispose() {
 		if (mobaApplicationItemProvider != null) mobaApplicationItemProvider.dispose();
 		if (mobaTemplateItemProvider != null) mobaTemplateItemProvider.dispose();
+		if (mobaServerItemProvider != null) mobaServerItemProvider.dispose();
+		if (mobaAuthorizationItemProvider != null) mobaAuthorizationItemProvider.dispose();
 		if (mobaGeneratorItemProvider != null) mobaGeneratorItemProvider.dispose();
 		if (mobaGeneratorMixinFeatureItemProvider != null) mobaGeneratorMixinFeatureItemProvider.dispose();
 		if (mobaGeneratorIDFeatureItemProvider != null) mobaGeneratorIDFeatureItemProvider.dispose();
@@ -1036,9 +1107,10 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaEntityIndexItemProvider != null) mobaEntityIndexItemProvider.dispose();
 		if (mobaDtoItemProvider != null) mobaDtoItemProvider.dispose();
 		if (mobaQueueItemProvider != null) mobaQueueItemProvider.dispose();
-		if (mobaServiceItemProvider != null) mobaServiceItemProvider.dispose();
-		if (mobaRestCustomItemProvider != null) mobaRestCustomItemProvider.dispose();
-		if (mobaRestCrudItemProvider != null) mobaRestCrudItemProvider.dispose();
+		if (mobaRESTAttributeItemProvider != null) mobaRESTAttributeItemProvider.dispose();
+		if (mobaRESTCustomServiceItemProvider != null) mobaRESTCustomServiceItemProvider.dispose();
+		if (mobaRESTWorkflowItemProvider != null) mobaRESTWorkflowItemProvider.dispose();
+		if (mobaRESTCrudItemProvider != null) mobaRESTCrudItemProvider.dispose();
 		if (mobaEntityAttributeItemProvider != null) mobaEntityAttributeItemProvider.dispose();
 		if (mobaEntityReferenceItemProvider != null) mobaEntityReferenceItemProvider.dispose();
 		if (mobaDtoAttributeItemProvider != null) mobaDtoAttributeItemProvider.dispose();

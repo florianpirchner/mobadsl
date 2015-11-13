@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getUrl <em>Url</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getServices <em>Services</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer()
@@ -63,5 +64,31 @@ public interface MobaServer extends MobaApplicationFeature {
 	 * @generated
 	 */
 	EList<MobaREST> getServices();
+
+	/**
+	 * Returns the value of the '<em><b>Authorization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Authorization</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authorization</em>' reference.
+	 * @see #setAuthorization(MobaAuthorization)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer_Authorization()
+	 * @model
+	 * @generated
+	 */
+	MobaAuthorization getAuthorization();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authorization</em>' reference.
+	 * @see #getAuthorization()
+	 * @generated
+	 */
+	void setAuthorization(MobaAuthorization value);
 
 } // MobaServer

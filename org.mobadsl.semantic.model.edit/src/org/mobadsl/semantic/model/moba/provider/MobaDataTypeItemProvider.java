@@ -50,10 +50,13 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 
 			addNamePropertyDescriptor(object);
 			addPrimitivePropertyDescriptor(object);
-			addArrayPropertyDescriptor(object);
+			addStringPropertyDescriptor(object);
+			addNumericPropertyDescriptor(object);
+			addDecimalPropertyDescriptor(object);
 			addDatePropertyDescriptor(object);
 			addTimePropertyDescriptor(object);
 			addTimestampPropertyDescriptor(object);
+			addArrayPropertyDescriptor(object);
 			addDateFormatStringPropertyDescriptor(object);
 			addDateFormatConstPropertyDescriptor(object);
 			addSuperTypePropertyDescriptor(object);
@@ -97,6 +100,72 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 				 getString("_UI_MobaDataType_primitive_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDataType_primitive_feature", "_UI_MobaDataType_type"),
 				 MobaPackage.Literals.MOBA_DATA_TYPE__PRIMITIVE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the String feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStringPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDataType_string_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDataType_string_feature", "_UI_MobaDataType_type"),
+				 MobaPackage.Literals.MOBA_DATA_TYPE__STRING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Numeric feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNumericPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDataType_numeric_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDataType_numeric_feature", "_UI_MobaDataType_type"),
+				 MobaPackage.Literals.MOBA_DATA_TYPE__NUMERIC,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Decimal feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDecimalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDataType_decimal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDataType_decimal_feature", "_UI_MobaDataType_type"),
+				 MobaPackage.Literals.MOBA_DATA_TYPE__DECIMAL,
 				 true,
 				 false,
 				 false,
@@ -331,10 +400,13 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 		switch (notification.getFeatureID(MobaDataType.class)) {
 			case MobaPackage.MOBA_DATA_TYPE__NAME:
 			case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
-			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
+			case MobaPackage.MOBA_DATA_TYPE__STRING:
+			case MobaPackage.MOBA_DATA_TYPE__NUMERIC:
+			case MobaPackage.MOBA_DATA_TYPE__DECIMAL:
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 			case MobaPackage.MOBA_DATA_TYPE__TIME:
 			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
+			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

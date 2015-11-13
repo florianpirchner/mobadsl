@@ -133,6 +133,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaServerAdapter();
 			}
 			@Override
+			public Adapter caseMobaAuthorization(MobaAuthorization object) {
+				return createMobaAuthorizationAdapter();
+			}
+			@Override
 			public Adapter caseMobaGenerator(MobaGenerator object) {
 				return createMobaGeneratorAdapter();
 			}
@@ -199,6 +203,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMobaREST(MobaREST object) {
 				return createMobaRESTAdapter();
+			}
+			@Override
+			public Adapter caseMobaRESTAttribute(MobaRESTAttribute object) {
+				return createMobaRESTAttributeAdapter();
 			}
 			@Override
 			public Adapter caseMobaRESTCustomService(MobaRESTCustomService object) {
@@ -393,6 +401,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaServerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaAuthorization <em>Authorization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaAuthorization
+	 * @generated
+	 */
+	public Adapter createMobaAuthorizationAdapter() {
 		return null;
 	}
 
@@ -631,6 +653,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaRESTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute <em>REST Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTAttribute
+	 * @generated
+	 */
+	public Adapter createMobaRESTAttributeAdapter() {
 		return null;
 	}
 

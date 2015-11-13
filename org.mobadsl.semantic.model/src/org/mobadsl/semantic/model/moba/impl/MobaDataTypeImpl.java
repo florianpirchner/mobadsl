@@ -35,14 +35,17 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isPrimitive <em>Primitive</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isArray <em>Array</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isString <em>String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isNumeric <em>Numeric</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isDecimal <em>Decimal</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isDate <em>Date</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isTime <em>Time</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isTimestamp <em>Timestamp</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getEnumAST <em>Enum AST</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isArray <em>Array</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatString <em>Date Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getEnumAST <em>Enum AST</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,22 +106,64 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	protected boolean primitive = PRIMITIVE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isArray() <em>Array</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isArray()
+	 * The default value of the '{@link #isString() <em>String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isString()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ARRAY_EDEFAULT = false;
+	protected static final boolean STRING_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isArray() <em>Array</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isArray()
+	 * The cached value of the '{@link #isString() <em>String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isString()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean array = ARRAY_EDEFAULT;
+	protected boolean string = STRING_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNumeric() <em>Numeric</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNumeric()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NUMERIC_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNumeric() <em>Numeric</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNumeric()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean numeric = NUMERIC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isDecimal() <em>Decimal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDecimal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean DECIMAL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isDecimal() <em>Decimal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isDecimal()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean decimal = DECIMAL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isDate() <em>Date</em>}' attribute.
@@ -177,6 +222,33 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	protected boolean timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getEnumAST() <em>Enum AST</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getEnumAST()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaEnum enumAST;
+
+	/**
+	 * The default value of the '{@link #isArray() <em>Array</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #isArray()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ARRAY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isArray() <em>Array</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #isArray()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean array = ARRAY_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getDateFormatString() <em>Date Format String</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
@@ -214,15 +286,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected MobaDataType superType;
-
-	/**
-	 * The cached value of the '{@link #getEnumAST() <em>Enum AST</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getEnumAST()
-	 * @generated
-	 * @ordered
-	 */
-	protected MobaEnum enumAST;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -299,6 +362,69 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		primitive = newPrimitive;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__PRIMITIVE, oldPrimitive, primitive));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isString() {
+		return string;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setString(boolean newString) {
+		boolean oldString = string;
+		string = newString;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__STRING, oldString, string));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNumeric() {
+		return numeric;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumeric(boolean newNumeric) {
+		boolean oldNumeric = numeric;
+		numeric = newNumeric;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__NUMERIC, oldNumeric, numeric));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDecimal() {
+		return decimal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDecimal(boolean newDecimal) {
+		boolean oldDecimal = decimal;
+		decimal = newDecimal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__DECIMAL, oldDecimal, decimal));
 	}
 
 	/**
@@ -538,14 +664,22 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return getName();
 			case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
 				return isPrimitive();
-			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
-				return isArray();
+			case MobaPackage.MOBA_DATA_TYPE__STRING:
+				return isString();
+			case MobaPackage.MOBA_DATA_TYPE__NUMERIC:
+				return isNumeric();
+			case MobaPackage.MOBA_DATA_TYPE__DECIMAL:
+				return isDecimal();
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				return isDate();
 			case MobaPackage.MOBA_DATA_TYPE__TIME:
 				return isTime();
 			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
 				return isTimestamp();
+			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+				return getEnumAST();
+			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
+				return isArray();
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				return getDateFormatString();
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
@@ -554,8 +688,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
-			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
-				return getEnumAST();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -582,8 +714,14 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
 				setPrimitive((Boolean)newValue);
 				return;
-			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
-				setArray((Boolean)newValue);
+			case MobaPackage.MOBA_DATA_TYPE__STRING:
+				setString((Boolean)newValue);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__NUMERIC:
+				setNumeric((Boolean)newValue);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__DECIMAL:
+				setDecimal((Boolean)newValue);
 				return;
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				setDate((Boolean)newValue);
@@ -594,6 +732,12 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
 				setTimestamp((Boolean)newValue);
 				return;
+			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+				setEnumAST((MobaEnum)newValue);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
+				setArray((Boolean)newValue);
+				return;
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				setDateFormatString((String)newValue);
 				return;
@@ -602,9 +746,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return;
 			case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
 				setSuperType((MobaDataType)newValue);
-				return;
-			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
-				setEnumAST((MobaEnum)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -629,8 +770,14 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
 				setPrimitive(PRIMITIVE_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
-				setArray(ARRAY_EDEFAULT);
+			case MobaPackage.MOBA_DATA_TYPE__STRING:
+				setString(STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__NUMERIC:
+				setNumeric(NUMERIC_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__DECIMAL:
+				setDecimal(DECIMAL_EDEFAULT);
 				return;
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				setDate(DATE_EDEFAULT);
@@ -641,6 +788,12 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
 				setTimestamp(TIMESTAMP_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+				setEnumAST((MobaEnum)null);
+				return;
+			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
+				setArray(ARRAY_EDEFAULT);
+				return;
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				setDateFormatString(DATE_FORMAT_STRING_EDEFAULT);
 				return;
@@ -649,9 +802,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return;
 			case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
 				setSuperType((MobaDataType)null);
-				return;
-			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
-				setEnumAST((MobaEnum)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -672,22 +822,28 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MobaPackage.MOBA_DATA_TYPE__PRIMITIVE:
 				return primitive != PRIMITIVE_EDEFAULT;
-			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
-				return array != ARRAY_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__STRING:
+				return string != STRING_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__NUMERIC:
+				return numeric != NUMERIC_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__DECIMAL:
+				return decimal != DECIMAL_EDEFAULT;
 			case MobaPackage.MOBA_DATA_TYPE__DATE:
 				return date != DATE_EDEFAULT;
 			case MobaPackage.MOBA_DATA_TYPE__TIME:
 				return time != TIME_EDEFAULT;
 			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
 				return timestamp != TIMESTAMP_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
+				return enumAST != null;
+			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
+				return array != ARRAY_EDEFAULT;
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				return DATE_FORMAT_STRING_EDEFAULT == null ? dateFormatString != null : !DATE_FORMAT_STRING_EDEFAULT.equals(dateFormatString);
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_CONST:
 				return dateFormatConst != null;
 			case MobaPackage.MOBA_DATA_TYPE__SUPER_TYPE:
 				return superType != null;
-			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
-				return enumAST != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -747,14 +903,20 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		result.append(name);
 		result.append(", primitive: ");
 		result.append(primitive);
-		result.append(", array: ");
-		result.append(array);
+		result.append(", string: ");
+		result.append(string);
+		result.append(", numeric: ");
+		result.append(numeric);
+		result.append(", decimal: ");
+		result.append(decimal);
 		result.append(", date: ");
 		result.append(date);
 		result.append(", time: ");
 		result.append(time);
 		result.append(", timestamp: ");
 		result.append(timestamp);
+		result.append(", array: ");
+		result.append(array);
 		result.append(", dateFormatString: ");
 		result.append(dateFormatString);
 		result.append(')');

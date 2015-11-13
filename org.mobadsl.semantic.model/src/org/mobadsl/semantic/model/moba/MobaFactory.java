@@ -49,6 +49,15 @@ public interface MobaFactory extends EFactory {
 	MobaServer createMobaServer();
 
 	/**
+	 * Returns a new object of class '<em>Authorization</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Authorization</em>'.
+	 * @generated
+	 */
+	MobaAuthorization createMobaAuthorization();
+
+	/**
 	 * Returns a new object of class '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +173,15 @@ public interface MobaFactory extends EFactory {
 	 * @generated
 	 */
 	MobaQueue createMobaQueue();
+
+	/**
+	 * Returns a new object of class '<em>REST Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>REST Attribute</em>'.
+	 * @generated
+	 */
+	MobaRESTAttribute createMobaRESTAttribute();
 
 	/**
 	 * Returns a new object of class '<em>REST Custom Service</em>'.

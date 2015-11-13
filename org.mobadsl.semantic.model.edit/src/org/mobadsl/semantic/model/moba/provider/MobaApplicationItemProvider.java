@@ -242,6 +242,16 @@ public class MobaApplicationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaServer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaAuthorization()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaGenerator()));
 
 		newChildDescriptors.add
@@ -277,17 +287,17 @@ public class MobaApplicationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaService()));
+				 MobaFactory.eINSTANCE.createMobaRESTCustomService()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaRestCustom()));
+				 MobaFactory.eINSTANCE.createMobaRESTWorkflow()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaRestCrud()));
+				 MobaFactory.eINSTANCE.createMobaRESTCrud()));
 
 		newChildDescriptors.add
 			(createChildParameter

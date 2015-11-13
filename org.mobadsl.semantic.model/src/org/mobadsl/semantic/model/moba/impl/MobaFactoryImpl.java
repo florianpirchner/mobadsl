@@ -100,6 +100,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_APPLICATION: return createMobaApplication();
 			case MobaPackage.MOBA_TEMPLATE: return createMobaTemplate();
 			case MobaPackage.MOBA_SERVER: return createMobaServer();
+			case MobaPackage.MOBA_AUTHORIZATION: return createMobaAuthorization();
 			case MobaPackage.MOBA_GENERATOR: return createMobaGenerator();
 			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE: return createMobaGeneratorMixinFeature();
 			case MobaPackage.MOBA_GENERATOR_ID_FEATURE: return createMobaGeneratorIDFeature();
@@ -113,6 +114,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_ENTITY_INDEX: return createMobaEntityIndex();
 			case MobaPackage.MOBA_DTO: return createMobaDto();
 			case MobaPackage.MOBA_QUEUE: return createMobaQueue();
+			case MobaPackage.MOBA_REST_ATTRIBUTE: return createMobaRESTAttribute();
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE: return createMobaRESTCustomService();
 			case MobaPackage.MOBA_REST_WORKFLOW: return createMobaRESTWorkflow();
 			case MobaPackage.MOBA_REST_CRUD: return createMobaRESTCrud();
@@ -206,6 +208,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaServer createMobaServer() {
 		MobaServerImpl mobaServer = new MobaServerImpl();
 		return mobaServer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaAuthorization createMobaAuthorization() {
+		MobaAuthorizationImpl mobaAuthorization = new MobaAuthorizationImpl();
+		return mobaAuthorization;
 	}
 
 	/**
@@ -336,6 +348,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaQueue createMobaQueue() {
 		MobaQueueImpl mobaQueue = new MobaQueueImpl();
 		return mobaQueue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTAttribute createMobaRESTAttribute() {
+		MobaRESTAttributeImpl mobaRESTAttribute = new MobaRESTAttributeImpl();
+		return mobaRESTAttribute;
 	}
 
 	/**

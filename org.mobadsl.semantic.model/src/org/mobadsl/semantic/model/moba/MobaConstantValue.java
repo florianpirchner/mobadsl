@@ -175,18 +175,4 @@ public interface MobaConstantValue extends EObject {
 	 */
 	ValueType getValueType();
 
-	/**
-	 * The type of value contained in the constant value.
-	 * <ul>
-	 * <li>{@link #CONSTANT} means {@link MobaConstantValue#getValueConst()}
-	 * </li>
-	 * <li>{@link #STRING} means {@link MobaConstantValue#getValueString()}</li>
-	 * <li>{@link #INT} means {@link MobaConstantValue#getValueInt()}</li>
-	 * <li>{@link #DOUBLE} means {@link MobaConstantValue#getValueDouble()}</li>
-	 * </ul>
-	 */
-	public enum ValueType {
-		CONSTANT, STRING, INT, DOUBLE
-	}
-
 } // MobaConstantValue

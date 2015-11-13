@@ -14,14 +14,17 @@ import java.util.List;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isPrimitive <em>Primitive</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isArray <em>Array</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isString <em>String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isNumeric <em>Numeric</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isDecimal <em>Decimal</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isDate <em>Date</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isTime <em>Time</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isTimestamp <em>Timestamp</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST <em>Enum AST</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isArray <em>Array</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString <em>Date Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST <em>Enum AST</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType()
@@ -84,6 +87,84 @@ public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble
 	 * @generated
 	 */
 	void setPrimitive(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>String</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>String</em>' attribute.
+	 * @see #setString(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_String()
+	 * @model
+	 * @generated
+	 */
+	boolean isString();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isString <em>String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>String</em>' attribute.
+	 * @see #isString()
+	 * @generated
+	 */
+	void setString(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Numeric</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Numeric</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Numeric</em>' attribute.
+	 * @see #setNumeric(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_Numeric()
+	 * @model
+	 * @generated
+	 */
+	boolean isNumeric();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isNumeric <em>Numeric</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Numeric</em>' attribute.
+	 * @see #isNumeric()
+	 * @generated
+	 */
+	void setNumeric(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Decimal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decimal</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decimal</em>' attribute.
+	 * @see #setDecimal(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_Decimal()
+	 * @model
+	 * @generated
+	 */
+	boolean isDecimal();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isDecimal <em>Decimal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decimal</em>' attribute.
+	 * @see #isDecimal()
+	 * @generated
+	 */
+	void setDecimal(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Array</b></em>' attribute. <!--

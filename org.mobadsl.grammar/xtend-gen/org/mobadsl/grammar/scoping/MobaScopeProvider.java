@@ -30,8 +30,8 @@ import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaQueue;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
-import org.mobadsl.semantic.model.moba.MobaRestCustom;
+import org.mobadsl.semantic.model.moba.MobaRESTCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
 import org.mobadsl.semantic.model.moba.MobaService;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.util.MobaUtil;
@@ -91,12 +91,12 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_MobaRestCrud(final MobaApplication ctx, final EReference ref) {
-    List<MobaRestCrud> _allRestCruds = ctx.getAllRestCruds();
+    List<MobaRESTCrud> _allRestCruds = ctx.getAllRestCruds();
     return Scopes.scopeFor(_allRestCruds);
   }
   
   public IScope scope_MobaRestCustom(final MobaApplication ctx, final EReference ref) {
-    List<MobaRestCustom> _allRestCustoms = ctx.getAllRestCustoms();
+    List<MobaRESTCustomService> _allRestCustoms = ctx.getAllRestCustoms();
     return Scopes.scopeFor(_allRestCustoms);
   }
   

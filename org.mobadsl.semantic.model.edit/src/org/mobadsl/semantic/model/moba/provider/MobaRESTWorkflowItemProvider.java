@@ -13,27 +13,26 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaRestCrud;
+import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 
 /**
- * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaRestCrud} object.
+ * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTWorkflow} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobaRestCrudItemProvider extends MobaServiceItemProvider {
+public class MobaRESTWorkflowItemProvider extends MobaRESTItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaRestCrudItemProvider(AdapterFactory adapterFactory) {
+	public MobaRESTWorkflowItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,29 +47,52 @@ public class MobaRestCrudItemProvider extends MobaServiceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addServicesPropertyDescriptor(object);
+			addSuperTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Services feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addServicesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaRestCrud_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRestCrud_name_feature", "_UI_MobaRestCrud_type"),
-				 MobaPackage.Literals.MOBA_REST_CRUD__NAME,
+				 getString("_UI_MobaRESTWorkflow_services_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTWorkflow_services_feature", "_UI_MobaRESTWorkflow_type"),
+				 MobaPackage.Literals.MOBA_REST_WORKFLOW__SERVICES,
 				 true,
 				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Super Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSuperTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaRESTWorkflow_superType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTWorkflow_superType_feature", "_UI_MobaRESTWorkflow_type"),
+				 MobaPackage.Literals.MOBA_REST_WORKFLOW__SUPER_TYPE,
+				 true,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -106,14 +128,14 @@ public class MobaRestCrudItemProvider extends MobaServiceItemProvider {
 	}
 
 	/**
-	 * This returns MobaRestCrud.gif.
+	 * This returns MobaRESTWorkflow.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaRestCrud"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaRESTWorkflow"));
 	}
 
 	/**
@@ -124,10 +146,10 @@ public class MobaRestCrudItemProvider extends MobaServiceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaRestCrud)object).getName();
+		String label = ((MobaRESTWorkflow)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_MobaRestCrud_type") :
-			getString("_UI_MobaRestCrud_type") + " " + label;
+			getString("_UI_MobaRESTWorkflow_type") :
+			getString("_UI_MobaRESTWorkflow_type") + " " + label;
 	}
 	
 
@@ -142,11 +164,8 @@ public class MobaRestCrudItemProvider extends MobaServiceItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(MobaRestCrud.class)) {
-			case MobaPackage.MOBA_REST_CRUD__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case MobaPackage.MOBA_REST_CRUD__PROPERTIES:
+		switch (notification.getFeatureID(MobaRESTWorkflow.class)) {
+			case MobaPackage.MOBA_REST_WORKFLOW__PROPERTIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

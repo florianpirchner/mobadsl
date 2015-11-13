@@ -77,6 +77,11 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		]
 	}
 
+	override void completeMobaRestParameter_NameString(EObject model, Assignment assignment,
+		ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		acceptor.accept(doCreateProposal("param1", getDisplayString_KeyString, model.image, 1000, context))
+	}
+
 	def StyledString createStyledString(Metadata metadata) {
 		val result = new StyledString(metadata.name)
 		if (!metadata.version.isNullOrEmpty) {
@@ -129,6 +134,13 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		}
 
 		return null
+	}
+
+	def StyledString getDisplayString_KeyString() {
+		val StyledString string = new StyledString("param1")
+		string.append(" - any valid ID", StyledString.QUALIFIER_STYLER)
+
+		return string
 	}
 
 	override String getDisplayString(EObject element, String givenQualifiedNameAsString, String shortName) {

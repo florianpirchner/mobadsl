@@ -2,13 +2,19 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +30,7 @@ import org.mobadsl.semantic.model.moba.MobaREST;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getRequestDto <em>Request Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getResponseDto <em>Response Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getErrorDto <em>Error Dto</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getHeaders <em>Headers</em>}</li>
  * </ul>
  *
  * @generated
@@ -118,6 +125,16 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * @ordered
 	 */
 	protected MobaDto errorDto;
+
+	/**
+	 * The cached value of the '{@link #getHeaders() <em>Headers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeaders()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MobaRESTAttribute> headers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -320,6 +337,32 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MobaRESTAttribute> getHeaders() {
+		if (headers == null) {
+			headers = new EObjectContainmentEList<MobaRESTAttribute>(MobaRESTAttribute.class, this, MobaPackage.MOBA_REST__HEADERS);
+		}
+		return headers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MobaPackage.MOBA_REST__HEADERS:
+				return ((InternalEList<?>)getHeaders()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -338,6 +381,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				if (resolve) return getErrorDto();
 				return basicGetErrorDto();
+			case MobaPackage.MOBA_REST__HEADERS:
+				return getHeaders();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -347,6 +392,7 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -367,6 +413,10 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return;
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				setErrorDto((MobaDto)newValue);
+				return;
+			case MobaPackage.MOBA_REST__HEADERS:
+				getHeaders().clear();
+				getHeaders().addAll((Collection<? extends MobaRESTAttribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -398,6 +448,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				setErrorDto((MobaDto)null);
 				return;
+			case MobaPackage.MOBA_REST__HEADERS:
+				getHeaders().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -422,6 +475,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return responseDto != null;
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				return errorDto != null;
+			case MobaPackage.MOBA_REST__HEADERS:
+				return headers != null && !headers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
