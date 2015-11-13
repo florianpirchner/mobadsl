@@ -16,8 +16,10 @@ import org.mobadsl.api.template.repository.ITemplateRepositoryManager
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate.Metadata
 import org.mobadsl.semantic.model.moba.MobaApplication
+import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
 import org.mobadsl.semantic.model.moba.index.MobaIndex
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry
+import org.mobadsl.semantic.model.moba.util.MobaUtil
 import org.osgi.framework.FrameworkUtil
 
 /**
@@ -45,13 +47,33 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		}
 	}
 
-	override void completeMobaGeneratorIDFeature_GeneratorConst(EObject model, Assignment assignment,
+	override void completeMobaGeneratorIDFeature_GeneratorId(EObject model, Assignment assignment,
 		ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		super.completeMobaTemplate_Template(model, assignment, context, acceptor);
+		super.completeMobaGeneratorIDFeature_GeneratorId(model, assignment, context, acceptor);
 
-		val allGenerators = generatorDelegate.readExtentionsMetadata(grammarName, null)
+		val prefix = context.prefix;
+
+		val allGenerators = generatorDelegate.readExtentionsMetadataById(grammarName, prefix)
 		allGenerators.values.forEach [
-			acceptor.accept(doCreateProposal('''«it.versionedId»''', it.createStyledString, model.image, 1000, context))
+			acceptor.accept(doCreateProposal(
+				'''«MobaUtil.toGeneratorVersionedIdWithWhitespace(it.id, it.version)»''',
+				it.createStyledString,
+				model.image,
+				1000,
+				context
+			))
+		]
+	}
+
+	override void completeMobaGeneratorIDFeature_GeneratorVersion(EObject model, Assignment assignment,
+		ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		super.completeMobaGeneratorIDFeature_GeneratorId(model, assignment, context, acceptor);
+
+		val prefix = context.prefix;
+		val MobaGeneratorIDFeature feature = model as MobaGeneratorIDFeature
+		val allGenerators = generatorDelegate.readExtentionsMetadataByVersion(grammarName, feature.id, prefix)
+		allGenerators.values.forEach [
+			acceptor.accept(doCreateProposal(it.version, it.createStyledStringForVersion, model.image, 1000, context))
 		]
 	}
 
@@ -60,6 +82,21 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		if (!metadata.version.isNullOrEmpty) {
 			result.append(''' version «metadata.version»''', StyledString.QUALIFIER_STYLER)
 		}
+		if (!metadata.license.isNullOrEmpty) {
+			result.append(''' under «metadata.license»''', StyledString.QUALIFIER_STYLER)
+		}
+
+		if (!metadata.description.isNullOrEmpty) {
+			result.append(''' - «metadata.description»''', StyledString.COUNTER_STYLER)
+		}
+
+		return result
+	}
+
+	def StyledString createStyledStringForVersion(Metadata metadata) {
+		val result = new StyledString(metadata.version)
+		result.append(''' «metadata.name»''', StyledString.QUALIFIER_STYLER)
+
 		if (!metadata.license.isNullOrEmpty) {
 			result.append(''' under «metadata.license»''', StyledString.QUALIFIER_STYLER)
 		}

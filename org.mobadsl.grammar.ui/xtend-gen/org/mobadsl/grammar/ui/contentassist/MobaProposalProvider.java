@@ -27,8 +27,10 @@ import org.mobadsl.api.template.repository.ITemplateRepositoryManager;
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
 import org.mobadsl.grammar.ui.contentassist.AbstractMobaProposalProvider;
 import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
@@ -68,17 +70,39 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
   }
   
   @Override
-  public void completeMobaGeneratorIDFeature_GeneratorConst(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
-    super.completeMobaTemplate_Template(model, assignment, context, acceptor);
-    final Map<String, ExtensionGeneratorDelegate.Metadata> allGenerators = this.generatorDelegate.readExtentionsMetadata(this.grammarName, null);
+  public void completeMobaGeneratorIDFeature_GeneratorId(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    super.completeMobaGeneratorIDFeature_GeneratorId(model, assignment, context, acceptor);
+    final String prefix = context.getPrefix();
+    final Map<String, ExtensionGeneratorDelegate.Metadata> allGenerators = this.generatorDelegate.readExtentionsMetadataById(this.grammarName, prefix);
     Collection<ExtensionGeneratorDelegate.Metadata> _values = allGenerators.values();
     final Consumer<ExtensionGeneratorDelegate.Metadata> _function = (ExtensionGeneratorDelegate.Metadata it) -> {
       StringConcatenation _builder = new StringConcatenation();
-      String _versionedId = it.getVersionedId();
-      _builder.append(_versionedId, "");
+      String _id = it.getId();
+      String _version = it.getVersion();
+      String _generatorVersionedIdWithWhitespace = MobaUtil.toGeneratorVersionedIdWithWhitespace(_id, _version);
+      _builder.append(_generatorVersionedIdWithWhitespace, "");
       StyledString _createStyledString = this.createStyledString(it);
       Image _image = this.getImage(model);
-      ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_builder.toString(), _createStyledString, _image, 1000, context);
+      ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_builder.toString(), _createStyledString, _image, 
+        1000, context);
+      acceptor.accept(_doCreateProposal);
+    };
+    _values.forEach(_function);
+  }
+  
+  @Override
+  public void completeMobaGeneratorIDFeature_GeneratorVersion(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    super.completeMobaGeneratorIDFeature_GeneratorId(model, assignment, context, acceptor);
+    final String prefix = context.getPrefix();
+    final MobaGeneratorIDFeature feature = ((MobaGeneratorIDFeature) model);
+    String _id = feature.getId();
+    final Map<String, ExtensionGeneratorDelegate.Metadata> allGenerators = this.generatorDelegate.readExtentionsMetadataByVersion(this.grammarName, _id, prefix);
+    Collection<ExtensionGeneratorDelegate.Metadata> _values = allGenerators.values();
+    final Consumer<ExtensionGeneratorDelegate.Metadata> _function = (ExtensionGeneratorDelegate.Metadata it) -> {
+      String _version = it.getVersion();
+      StyledString _createStyledStringForVersion = this.createStyledStringForVersion(it);
+      Image _image = this.getImage(model);
+      ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_version, _createStyledStringForVersion, _image, 1000, context);
       acceptor.accept(_doCreateProposal);
     };
     _values.forEach(_function);
@@ -113,6 +137,39 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     boolean _isNullOrEmpty_2 = StringExtensions.isNullOrEmpty(_description);
     boolean _not_2 = (!_isNullOrEmpty_2);
     if (_not_2) {
+      StringConcatenation _builder_2 = new StringConcatenation();
+      _builder_2.append(" ");
+      _builder_2.append("- ");
+      String _description_1 = metadata.getDescription();
+      _builder_2.append(_description_1, " ");
+      result.append(_builder_2.toString(), StyledString.COUNTER_STYLER);
+    }
+    return result;
+  }
+  
+  public StyledString createStyledStringForVersion(final ExtensionGeneratorDelegate.Metadata metadata) {
+    String _version = metadata.getVersion();
+    final StyledString result = new StyledString(_version);
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append(" ");
+    String _name = metadata.getName();
+    _builder.append(_name, " ");
+    result.append(_builder.toString(), StyledString.QUALIFIER_STYLER);
+    String _license = metadata.getLicense();
+    boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(_license);
+    boolean _not = (!_isNullOrEmpty);
+    if (_not) {
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append(" ");
+      _builder_1.append("under ");
+      String _license_1 = metadata.getLicense();
+      _builder_1.append(_license_1, " ");
+      result.append(_builder_1.toString(), StyledString.QUALIFIER_STYLER);
+    }
+    String _description = metadata.getDescription();
+    boolean _isNullOrEmpty_1 = StringExtensions.isNullOrEmpty(_description);
+    boolean _not_1 = (!_isNullOrEmpty_1);
+    if (_not_1) {
       StringConcatenation _builder_2 = new StringConcatenation();
       _builder_2.append(" ");
       _builder_2.append("- ");
