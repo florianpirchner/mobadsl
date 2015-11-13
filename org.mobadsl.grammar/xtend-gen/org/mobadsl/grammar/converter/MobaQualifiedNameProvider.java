@@ -1,7 +1,11 @@
 package org.mobadsl.grammar.converter;
 
+import java.util.ArrayList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.xbase.lib.CollectionExtensions;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.util.MobaUtil;
@@ -16,12 +20,13 @@ public class MobaQualifiedNameProvider extends DefaultDeclarativeQualifiedNamePr
   }
   
   public QualifiedName qualifiedName(final MobaGenerator ele) {
+    EObject _eContainer = ele.eContainer();
+    final MobaApplication app = ((MobaApplication) _eContainer);
     String _versionedId = ele.getVersionedId();
-    final String[] tokens = _versionedId.split(":");
-    String _get = tokens[0];
-    QualifiedName _create = QualifiedName.create(_get);
-    String _get_1 = tokens[1];
-    QualifiedName _create_1 = QualifiedName.create(_get_1);
-    return _create.append(_create_1);
+    final String[] idTokens = _versionedId.split("(:|\\.|-)");
+    String _name = app.getName();
+    final ArrayList<String> tokens = CollectionLiterals.<String>newArrayList(_name);
+    CollectionExtensions.<String>addAll(tokens, idTokens);
+    return QualifiedName.create(tokens);
   }
 }

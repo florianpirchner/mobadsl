@@ -60,48 +60,48 @@ public class MobaGeneratorIDFeatureItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addGeneratorConstPropertyDescriptor(object);
-			addGeneratorStringPropertyDescriptor(object);
+			addGeneratorIdPropertyDescriptor(object);
+			addGeneratorVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Generator Const feature.
+	 * This adds a property descriptor for the Generator Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addGeneratorConstPropertyDescriptor(Object object) {
+	protected void addGeneratorIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaGeneratorIDFeature_generatorConst_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaGeneratorIDFeature_generatorConst_feature", "_UI_MobaGeneratorIDFeature_type"),
-				 MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_CONST,
+				 getString("_UI_MobaGeneratorIDFeature_generatorId_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaGeneratorIDFeature_generatorId_feature", "_UI_MobaGeneratorIDFeature_type"),
+				 MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Generator String feature.
+	 * This adds a property descriptor for the Generator Version feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addGeneratorStringPropertyDescriptor(Object object) {
+	protected void addGeneratorVersionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaGeneratorIDFeature_generatorString_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaGeneratorIDFeature_generatorString_feature", "_UI_MobaGeneratorIDFeature_type"),
-				 MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_STRING,
+				 getString("_UI_MobaGeneratorIDFeature_generatorVersion_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaGeneratorIDFeature_generatorVersion_feature", "_UI_MobaGeneratorIDFeature_type"),
+				 MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class MobaGeneratorIDFeatureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaGeneratorIDFeature)object).getGeneratorString();
+		String label = ((MobaGeneratorIDFeature)object).getGeneratorId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MobaGeneratorIDFeature_type") :
 			getString("_UI_MobaGeneratorIDFeature_type") + " " + label;
@@ -148,7 +148,8 @@ public class MobaGeneratorIDFeatureItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaGeneratorIDFeature.class)) {
-			case MobaPackage.MOBA_GENERATOR_ID_FEATURE__GENERATOR_STRING:
+			case MobaPackage.MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID:
+			case MobaPackage.MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

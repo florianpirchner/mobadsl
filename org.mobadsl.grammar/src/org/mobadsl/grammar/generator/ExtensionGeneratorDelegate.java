@@ -182,6 +182,74 @@ public class ExtensionGeneratorDelegate {
 		return delegates;
 	}
 
+	/**
+	 * All extensions that match the generatorId and the version prefix. Should
+	 * only be one!
+	 * 
+	 * @param grammarName
+	 * @param generatorID
+	 * @param versionPrefix
+	 *            - the prefix the found version needs to match
+	 * 
+	 * @return
+	 */
+	public Map<String, Metadata> readExtentionsMetadataByVersion(String grammarName, String generatorId,
+			String versionPrefix) {
+		IExtensionRegistry registry = Platform.getExtensionRegistry();
+		IExtensionPoint point = registry.getExtensionPoint("org.mobadsl.grammar", INFERRER_HOOK_EXTPT);
+		if (point == null) {
+			return Collections.emptyMap();
+		}
+
+		Map<String, Metadata> delegates = new HashMap<>();
+		IExtension[] extensions = point.getExtensions();
+		for (int i = 0; i < extensions.length; i++) {
+			IConfigurationElement[] elements = extensions[i].getConfigurationElements();
+			for (int j = 0; j < elements.length; j++) {
+				String id = elements[j].getAttribute(ATTR_ID);
+				String version = elements[j].getAttribute(ATTR_VERSION);
+				if (!generatorId.equals(id)) {
+					continue;
+				}
+				if (versionPrefix != null && !versionPrefix.isEmpty() && !version.startsWith(versionPrefix)) {
+					continue;
+				}
+				String _grammarName = elements[j].getAttribute(ATTR_GRAMMAR);
+				if (_grammarName != null && _grammarName.equals(grammarName)) {
+					Metadata metadata = new Metadata(elements[j]);
+					delegates.put(toGeneratorVersionedId(elements, j), metadata);
+				}
+			}
+		}
+		return delegates;
+	}
+	
+	public Map<String, Metadata> readExtentionsMetadataById(String grammarName, String idPrefix) {
+		IExtensionRegistry registry = Platform.getExtensionRegistry();
+		IExtensionPoint point = registry.getExtensionPoint("org.mobadsl.grammar", INFERRER_HOOK_EXTPT);
+		if (point == null) {
+			return Collections.emptyMap();
+		}
+
+		Map<String, Metadata> delegates = new HashMap<>();
+		IExtension[] extensions = point.getExtensions();
+		for (int i = 0; i < extensions.length; i++) {
+			IConfigurationElement[] elements = extensions[i].getConfigurationElements();
+			for (int j = 0; j < elements.length; j++) {
+				String id = elements[j].getAttribute(ATTR_ID);
+				if (idPrefix != null && !idPrefix.isEmpty() && !id.startsWith(idPrefix)) {
+					continue;
+				}
+				String _grammarName = elements[j].getAttribute(ATTR_GRAMMAR);
+				if (_grammarName != null && _grammarName.equals(grammarName)) {
+					Metadata metadata = new Metadata(elements[j]);
+					delegates.put(toGeneratorVersionedId(elements, j), metadata);
+				}
+			}
+		}
+		return delegates;
+	}
+
 	public static class Metadata {
 		private final IConfigurationElement element;
 

@@ -231,9 +231,13 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         superType=[MobaDataType|ID]? 
 	 *         (
-	 *             (primitive?='isPrimitive' | array?='isArray' | enumAST=MobaEnum)? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 
-	 *             ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') (dateFormatString=STRING | dateFormatConst=[MobaConstant|ID])?)?
+	 *             (
+	 *                 primitive?='isPrimitive' | 
+	 *                 array?='isArray' | 
+	 *                 ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') dateFormatConst=[MobaConstant|ID]? dateFormatString=STRING?) | 
+	 *                 enumAST=MobaEnum
+	 *             )? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
 	 *         )+ 
 	 *         (properties+=MobaProperty properties+=MobaProperty*)?
 	 *     )
@@ -426,10 +430,19 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaGeneratorIDFeature returns MobaGeneratorIDFeature
 	 *
 	 * Constraint:
-	 *     (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING)
+	 *     (generatorId=FQN generatorVersion=VERSION)
 	 */
 	protected void sequence_MobaGeneratorIDFeature(ISerializationContext context, MobaGeneratorIDFeature semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID));
+			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorIdFQNTerminalRuleCall_1_0(), semanticObject.getGeneratorId());
+		feeder.accept(grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorVersionVERSIONTerminalRuleCall_3_0(), semanticObject.getGeneratorVersion());
+		feeder.finish();
 	}
 	
 	

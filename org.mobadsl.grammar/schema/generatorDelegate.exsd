@@ -50,48 +50,54 @@
             <annotation>
                <documentation>
                   The Moba DSL allows to specify genertors to be used by their IDs. Use this id in the grammar to address this generator.
+MobaDSL will automatically find all registered generator delegates and shows them in the content assist.
                </documentation>
             </annotation>
          </attribute>
          <attribute name="grammarName" type="string" use="required">
             <annotation>
                <documentation>
-                  A string identifier defining the name of the grammar the hook should be used for.
+                  A string identifier defining the name of the grammar the hook should be used for. You can find the grammarName in the Abstract{...}RuntimeModule of your Xtext project. Or also in the .mwe2 file.
                </documentation>
             </annotation>
          </attribute>
          <attribute name="name" type="string" use="required">
             <annotation>
                <documentation>
-                  The name of the generator. Is used for ContentAssist in MobaDSL.
+                  The name of the generator. Is used for DocumentationHovers in MobaDSL Xtext editor.
                </documentation>
             </annotation>
          </attribute>
          <attribute name="version" type="string" use="required">
             <annotation>
                <documentation>
-                  The version of the generator. Is used for ContentAssist in MobaDSL.
+                  The version of the generator. Is used for ContentAssist in MobaDSL.&lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt;
+Version need to follow the pattern &lt;code&gt;&quot;INT &apos;.&apos; INT &apos;.&apos; INT (&apos;-SNAPSHOT&apos;)?&quot;&lt;/code&gt;.&lt;p&gt;
+&lt;code&gt;&quot;1.2.3-SNAPSHOT&quot;&lt;/code&gt; is allowed, while &lt;code&gt;&quot;1.2.3.4-RC1&quot;&lt;/code&gt; is not allowed.
                </documentation>
             </annotation>
          </attribute>
          <attribute name="documentation" type="string">
             <annotation>
                <documentation>
-                  The documentation of the generator. Is used for ContentAssist in MobaDSL.
+                  The documentation of the generator. Is used for documentation hover in MobaDSL  Xtext editor.
                </documentation>
             </annotation>
          </attribute>
          <attribute name="license" type="string">
             <annotation>
                <documentation>
-                  The license of the generator. Is used for ContentAssist in MobaDSL.
+                  The license of the generator. Is used for documentation hover in MobaDSL  Xtext editor.&lt;p&gt;
+&lt;b&gt;Note&lt;/b&gt;:&lt;br&gt;
+Please use the short form of you license like &lt;i&gt;EPLv1&lt;/i&gt;, &lt;i&gt;Apache v2&lt;/i&gt;, &lt;i&gt;LGPL&lt;/i&gt;,...
                </documentation>
             </annotation>
          </attribute>
          <attribute name="generatorDelegateClass" type="string">
             <annotation>
                <documentation>
-                  Class implementing &lt;code&gt;IGeneratorDelegate&lt;/code&gt;.  Used to create new instances of this delegate
+                  Class implementing &lt;code&gt;IGeneratorDelegate&lt;/code&gt;.  Used to create new instances of this delegate.
                </documentation>
                <appInfo>
                   <meta.attribute kind="java" basedOn=":org.mobadsl.grammar.generator.common.IGeneratorDelegate"/>

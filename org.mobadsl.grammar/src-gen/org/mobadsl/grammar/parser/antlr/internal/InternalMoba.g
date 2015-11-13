@@ -427,46 +427,48 @@ ruleMobaGeneratorIDFeature returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='id'
+		otherlv_0='extensionPoint'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getIdKeyword_0());
-		}
-		otherlv_1='='
-		{
-			newLeafNode(otherlv_1, grammarAccess.getMobaGeneratorIDFeatureAccess().getEqualsSignKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getExtensionPointKeyword_0());
 		}
 		(
 			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
-						}
+				lv_generatorId_1_0=RULE_FQN
+				{
+					newLeafNode(lv_generatorId_1_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorIdFQNTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
 					}
-					otherlv_2=RULE_GENERATOR_ID
-					{
-						newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorConstMobaConstantCrossReference_2_0_0());
-					}
-				)
+					setWithLastConsumed(
+						$current,
+						"generatorId",
+						lv_generatorId_1_0,
+						"org.mobadsl.grammar.Moba.FQN");
+				}
 			)
-			    |
+		)
+		otherlv_2=':'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorIDFeatureAccess().getColonKeyword_2());
+		}
+		(
 			(
-				(
-					lv_generatorString_3_0=RULE_STRING
-					{
-						newLeafNode(lv_generatorString_3_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorStringSTRINGTerminalRuleCall_2_1_0());
+				lv_generatorVersion_3_0=RULE_VERSION
+				{
+					newLeafNode(lv_generatorVersion_3_0, grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorVersionVERSIONTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getMobaGeneratorIDFeatureRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"generatorString",
-							lv_generatorString_3_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
-					}
-				)
+					setWithLastConsumed(
+						$current,
+						"generatorVersion",
+						lv_generatorVersion_3_0,
+						"org.mobadsl.grammar.Moba.VERSION");
+				}
 			)
 		)
 	)
@@ -4409,9 +4411,9 @@ RULE_DOUBLE : ('+'|'-')? RULE_INT ('.' RULE_INT)?;
 
 RULE_ID : SUPER_ID;
 
-RULE_VERSION : RULE_INT '.' RULE_INT '.' RULE_INT ('-' ('SNAPSHOT'|'RELEASE'))?;
+RULE_VERSION : RULE_INT '.' RULE_INT '.' RULE_INT '-SNAPSHOT'?;
 
-fragment RULE_FQN : RULE_ID ('.' RULE_ID)*;
+RULE_FQN : RULE_ID ('.' RULE_ID)*;
 
 RULE_APPLICATION_ID : RULE_ID ':' RULE_VERSION;
 

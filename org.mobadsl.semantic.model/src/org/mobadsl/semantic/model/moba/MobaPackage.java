@@ -308,22 +308,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_GENERATOR_ID_FEATURE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Generator Const</b></em>' reference.
+	 * The feature id for the '<em><b>Generator Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_GENERATOR_ID_FEATURE__GENERATOR_CONST = MOBA_GENERATOR_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID = MOBA_GENERATOR_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Generator String</b></em>' attribute.
+	 * The feature id for the '<em><b>Generator Version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_GENERATOR_ID_FEATURE__GENERATOR_STRING = MOBA_GENERATOR_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION = MOBA_GENERATOR_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Generator ID Feature</em>' class.
@@ -2512,26 +2512,26 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaGeneratorIDFeature();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorConst <em>Generator Const</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorId <em>Generator Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Generator Const</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorConst()
+	 * @return the meta object for the attribute '<em>Generator Id</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorId()
 	 * @see #getMobaGeneratorIDFeature()
 	 * @generated
 	 */
-	EReference getMobaGeneratorIDFeature_GeneratorConst();
+	EAttribute getMobaGeneratorIDFeature_GeneratorId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorString <em>Generator String</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorVersion <em>Generator Version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator String</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorString()
+	 * @return the meta object for the attribute '<em>Generator Version</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature#getGeneratorVersion()
 	 * @see #getMobaGeneratorIDFeature()
 	 * @generated
 	 */
-	EAttribute getMobaGeneratorIDFeature_GeneratorString();
+	EAttribute getMobaGeneratorIDFeature_GeneratorVersion();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDataType <em>Data Type</em>}'.
@@ -4235,20 +4235,20 @@ public interface MobaPackage extends EPackage {
 		EClass MOBA_GENERATOR_ID_FEATURE = eINSTANCE.getMobaGeneratorIDFeature();
 
 		/**
-		 * The meta object literal for the '<em><b>Generator Const</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Generator Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_GENERATOR_ID_FEATURE__GENERATOR_CONST = eINSTANCE.getMobaGeneratorIDFeature_GeneratorConst();
+		EAttribute MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID = eINSTANCE.getMobaGeneratorIDFeature_GeneratorId();
 
 		/**
-		 * The meta object literal for the '<em><b>Generator String</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Generator Version</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_GENERATOR_ID_FEATURE__GENERATOR_STRING = eINSTANCE.getMobaGeneratorIDFeature_GeneratorString();
+		EAttribute MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION = eINSTANCE.getMobaGeneratorIDFeature_GeneratorVersion();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl <em>Data Type</em>}' class.

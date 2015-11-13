@@ -235,45 +235,37 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	public class MobaGeneratorIDFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaGeneratorIDFeature");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cIdKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cGeneratorConstAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final CrossReference cGeneratorConstMobaConstantCrossReference_2_0_0 = (CrossReference)cGeneratorConstAssignment_2_0.eContents().get(0);
-		private final RuleCall cGeneratorConstMobaConstantGENERATOR_IDTerminalRuleCall_2_0_0_1 = (RuleCall)cGeneratorConstMobaConstantCrossReference_2_0_0.eContents().get(1);
-		private final Assignment cGeneratorStringAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cGeneratorStringSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cGeneratorStringAssignment_2_1.eContents().get(0);
+		private final Keyword cExtensionPointKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cGeneratorIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cGeneratorIdFQNTerminalRuleCall_1_0 = (RuleCall)cGeneratorIdAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cGeneratorVersionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cGeneratorVersionVERSIONTerminalRuleCall_3_0 = (RuleCall)cGeneratorVersionAssignment_3.eContents().get(0);
 		
 		//MobaGeneratorIDFeature:
-		//	'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING);
+		//	'extensionPoint' generatorId=FQN ':' generatorVersion=VERSION;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING)
+		//'extensionPoint' generatorId=FQN ':' generatorVersion=VERSION
 		public Group getGroup() { return cGroup; }
 		
-		//'id'
-		public Keyword getIdKeyword_0() { return cIdKeyword_0; }
+		//'extensionPoint'
+		public Keyword getExtensionPointKeyword_0() { return cExtensionPointKeyword_0; }
 		
-		//'='
-		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+		//generatorId=FQN
+		public Assignment getGeneratorIdAssignment_1() { return cGeneratorIdAssignment_1; }
 		
-		//(generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING)
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		//FQN
+		public RuleCall getGeneratorIdFQNTerminalRuleCall_1_0() { return cGeneratorIdFQNTerminalRuleCall_1_0; }
 		
-		//generatorConst=[MobaConstant|GENERATOR_ID]
-		public Assignment getGeneratorConstAssignment_2_0() { return cGeneratorConstAssignment_2_0; }
+		//':'
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 		
-		//[MobaConstant|GENERATOR_ID]
-		public CrossReference getGeneratorConstMobaConstantCrossReference_2_0_0() { return cGeneratorConstMobaConstantCrossReference_2_0_0; }
+		//generatorVersion=VERSION
+		public Assignment getGeneratorVersionAssignment_3() { return cGeneratorVersionAssignment_3; }
 		
-		//GENERATOR_ID
-		public RuleCall getGeneratorConstMobaConstantGENERATOR_IDTerminalRuleCall_2_0_0_1() { return cGeneratorConstMobaConstantGENERATOR_IDTerminalRuleCall_2_0_0_1; }
-		
-		//generatorString=STRING
-		public Assignment getGeneratorStringAssignment_2_1() { return cGeneratorStringAssignment_2_1; }
-		
-		//STRING
-		public RuleCall getGeneratorStringSTRINGTerminalRuleCall_2_1_0() { return cGeneratorStringSTRINGTerminalRuleCall_2_1_0; }
+		//VERSION
+		public RuleCall getGeneratorVersionVERSIONTerminalRuleCall_3_0() { return cGeneratorVersionVERSIONTerminalRuleCall_3_0; }
 	}
 	public class MobaGeneratorMixinFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaGeneratorMixinFeature");
@@ -2771,7 +2763,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaGeneratorIDFeature:
-	//	'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING);
+	//	'extensionPoint' generatorId=FQN ':' generatorVersion=VERSION;
 	public MobaGeneratorIDFeatureElements getMobaGeneratorIDFeatureAccess() {
 		return pMobaGeneratorIDFeature;
 	}
@@ -3244,7 +3236,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal VERSION:
-	//	INT '.' INT '.' INT ('-' ('SNAPSHOT' | 'RELEASE'))?;
+	//	INT '.' INT '.' INT '-SNAPSHOT'?;
 	public TerminalRule getVERSIONRule() {
 		return tVERSION;
 	}

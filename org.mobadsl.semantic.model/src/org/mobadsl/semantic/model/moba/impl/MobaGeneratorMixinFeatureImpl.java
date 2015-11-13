@@ -19,18 +19,15 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorMixinFeatureImpl#getGeneratorRef
- * <em>Generator Ref</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorMixinFeatureImpl#getGeneratorRef <em>Generator Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaGeneratorMixinFeatureImpl extends MinimalEObjectImpl.Container implements MobaGeneratorMixinFeature {
 	/**
-	 * The cached value of the '{@link #getGeneratorRef() <em>Generator Ref</em>
-	 * }' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getGeneratorRef() <em>Generator Ref</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getGeneratorRef()
 	 * @generated
 	 * @ordered
@@ -39,7 +36,6 @@ public class MobaGeneratorMixinFeatureImpl extends MinimalEObjectImpl.Container 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaGeneratorMixinFeatureImpl() {
@@ -48,7 +44,6 @@ public class MobaGeneratorMixinFeatureImpl extends MinimalEObjectImpl.Container 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -58,17 +53,15 @@ public class MobaGeneratorMixinFeatureImpl extends MinimalEObjectImpl.Container 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaGenerator getGeneratorRef() {
 		if (generatorRef != null && generatorRef.eIsProxy()) {
-			InternalEObject oldGeneratorRef = (InternalEObject) generatorRef;
-			generatorRef = (MobaGenerator) eResolveProxy(oldGeneratorRef);
+			InternalEObject oldGeneratorRef = (InternalEObject)generatorRef;
+			generatorRef = (MobaGenerator)eResolveProxy(oldGeneratorRef);
 			if (generatorRef != oldGeneratorRef) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF, oldGeneratorRef, generatorRef));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF, oldGeneratorRef, generatorRef));
 			}
 		}
 		return generatorRef;
@@ -76,7 +69,6 @@ public class MobaGeneratorMixinFeatureImpl extends MinimalEObjectImpl.Container 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaGenerator basicGetGeneratorRef() {
@@ -85,73 +77,66 @@ public class MobaGeneratorMixinFeatureImpl extends MinimalEObjectImpl.Container 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setGeneratorRef(MobaGenerator newGeneratorRef) {
 		MobaGenerator oldGeneratorRef = generatorRef;
 		generatorRef = newGeneratorRef;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF, oldGeneratorRef, generatorRef));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF, oldGeneratorRef, generatorRef));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
-			if (resolve)
-				return getGeneratorRef();
-			return basicGetGeneratorRef();
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
+				if (resolve) return getGeneratorRef();
+				return basicGetGeneratorRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
-			setGeneratorRef((MobaGenerator) newValue);
-			return;
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
+				setGeneratorRef((MobaGenerator)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
-			setGeneratorRef((MobaGenerator) null);
-			return;
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
+				setGeneratorRef((MobaGenerator)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
-			return generatorRef != null;
+			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF:
+				return generatorRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

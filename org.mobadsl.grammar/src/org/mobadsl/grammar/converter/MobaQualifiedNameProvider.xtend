@@ -13,8 +13,11 @@ class MobaQualifiedNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 	}
 	
 	def QualifiedName qualifiedName(MobaGenerator ele) {
-		val tokens = ele.versionedId.split(":");
+		val MobaApplication app = ele.eContainer as MobaApplication
+		val idTokens = ele.versionedId.split("(:|\\.|-)");
+		val tokens = newArrayList(app.name)
+		tokens.addAll(idTokens)
 		// avoid splitting the versions into single tokens
-		return QualifiedName.create(tokens.get(0)).append(QualifiedName.create(tokens.get(1)))
+		return QualifiedName.create(tokens)
 	}
 }

@@ -289,5 +289,18 @@ public class MobaUtil {
 		return id + ":" + version;
 
 	}
+	
+	/**
+	 * Converts from <code>org.my.generator</code> and
+	 * <code>0.8.1-SNAPSHOT</code> to
+	 * <code>org.my.generator : 0.8.1-SNAPSHOT</code>
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static String toGeneratorVersionedIdWithWhitespace(String id, String version) {
+		return id + " : " + version;
+
+	}
 
 }

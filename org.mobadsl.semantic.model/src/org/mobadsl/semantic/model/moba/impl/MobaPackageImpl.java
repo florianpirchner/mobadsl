@@ -652,8 +652,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaGeneratorIDFeature_GeneratorConst() {
-		return (EReference)mobaGeneratorIDFeatureEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMobaGeneratorIDFeature_GeneratorId() {
+		return (EAttribute)mobaGeneratorIDFeatureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -661,7 +661,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaGeneratorIDFeature_GeneratorString() {
+	public EAttribute getMobaGeneratorIDFeature_GeneratorVersion() {
 		return (EAttribute)mobaGeneratorIDFeatureEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2003,8 +2003,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaGeneratorMixinFeatureEClass, MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF);
 
 		mobaGeneratorIDFeatureEClass = createEClass(MOBA_GENERATOR_ID_FEATURE);
-		createEReference(mobaGeneratorIDFeatureEClass, MOBA_GENERATOR_ID_FEATURE__GENERATOR_CONST);
-		createEAttribute(mobaGeneratorIDFeatureEClass, MOBA_GENERATOR_ID_FEATURE__GENERATOR_STRING);
+		createEAttribute(mobaGeneratorIDFeatureEClass, MOBA_GENERATOR_ID_FEATURE__GENERATOR_ID);
+		createEAttribute(mobaGeneratorIDFeatureEClass, MOBA_GENERATOR_ID_FEATURE__GENERATOR_VERSION);
 
 		mobaDataTypeEClass = createEClass(MOBA_DATA_TYPE);
 		createEAttribute(mobaDataTypeEClass, MOBA_DATA_TYPE__NAME);
@@ -2314,8 +2314,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaGeneratorMixinFeature_GeneratorRef(), this.getMobaGenerator(), null, "generatorRef", null, 0, 1, MobaGeneratorMixinFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaGeneratorIDFeatureEClass, MobaGeneratorIDFeature.class, "MobaGeneratorIDFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMobaGeneratorIDFeature_GeneratorConst(), this.getMobaConstant(), null, "generatorConst", null, 0, 1, MobaGeneratorIDFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaGeneratorIDFeature_GeneratorString(), ecorePackage.getEString(), "generatorString", null, 0, 1, MobaGeneratorIDFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaGeneratorIDFeature_GeneratorId(), ecorePackage.getEString(), "generatorId", null, 0, 1, MobaGeneratorIDFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaGeneratorIDFeature_GeneratorVersion(), ecorePackage.getEString(), "generatorVersion", null, 0, 1, MobaGeneratorIDFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaDataTypeEClass, MobaDataType.class, "MobaDataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaDataType_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

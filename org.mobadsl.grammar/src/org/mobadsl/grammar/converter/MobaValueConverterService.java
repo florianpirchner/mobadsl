@@ -19,9 +19,9 @@ public class MobaValueConverterService extends DefaultTerminalConverters {
 		return applicationIdValueConverter;
 	}
 	
-	@ValueConverter(rule = "GENERATOR_ID")
-	public IValueConverter<String> GENERATOR_ID() {
-		return generatorIdValueConverter;
-	}
+//	@ValueConverter(rule = "GENERATOR_ID")
+//	public IValueConverter<String> GENERATOR_ID() {
+//		return generatorIdValueConverter;
+//	}
 
 }

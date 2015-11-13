@@ -26,7 +26,7 @@ MobaGeneratorFeature:
 	MobaGeneratorIDFeature | MobaGeneratorMixinFeature;
 
 MobaGeneratorIDFeature:
-	'id' '=' (generatorConst=[MobaConstant|GENERATOR_ID] | generatorString=STRING);
+	'extensionPoint' generatorId=FQN':'generatorVersion=VERSION;
 
 MobaGeneratorMixinFeature:
 	'mixin' generatorRef=[MobaGenerator|GENERATOR_ID];
@@ -208,7 +208,7 @@ terminal ID:
 ;
 
 terminal VERSION:
-	INT '.' INT '.' INT ('-' ('SNAPSHOT' | 'RELEASE'))?
+	INT '.' INT '.' INT ('-SNAPSHOT')?
 ;
 
 terminal FQN:

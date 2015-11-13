@@ -26,8 +26,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatorRef" eType="#//MobaGenerator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaGeneratorIDFeature" eSuperTypes="#//MobaGeneratorFeature">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorConst" eType="#//MobaConstant"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatorVersion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaDataType" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesAble #//MobaConstraintable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

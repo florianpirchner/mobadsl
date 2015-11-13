@@ -38,7 +38,6 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaApplicationFeatureAccess().getAlternatives(), "rule__MobaApplicationFeature__Alternatives");
 					put(grammarAccess.getMobaTemplateAccess().getAlternatives_1(), "rule__MobaTemplate__Alternatives_1");
 					put(grammarAccess.getMobaGeneratorFeatureAccess().getAlternatives(), "rule__MobaGeneratorFeature__Alternatives");
-					put(grammarAccess.getMobaGeneratorIDFeatureAccess().getAlternatives_2(), "rule__MobaGeneratorIDFeature__Alternatives_2");
 					put(grammarAccess.getMobaDataTypeAccess().getAlternatives_3_2_0(), "rule__MobaDataType__Alternatives_3_2_0");
 					put(grammarAccess.getMobaDataTypeAccess().getAlternatives_3_2_1_1(), "rule__MobaDataType__Alternatives_3_2_1_1");
 					put(grammarAccess.getMobaConstantValueAccess().getAlternatives_0(), "rule__MobaConstantValue__Alternatives_0");
@@ -127,8 +126,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaGeneratorAccess().getActiveAssignment_0(), "rule__MobaGenerator__ActiveAssignment_0");
 					put(grammarAccess.getMobaGeneratorAccess().getNameAssignment_2(), "rule__MobaGenerator__NameAssignment_2");
 					put(grammarAccess.getMobaGeneratorAccess().getFeaturesAssignment_4(), "rule__MobaGenerator__FeaturesAssignment_4");
-					put(grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorConstAssignment_2_0(), "rule__MobaGeneratorIDFeature__GeneratorConstAssignment_2_0");
-					put(grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorStringAssignment_2_1(), "rule__MobaGeneratorIDFeature__GeneratorStringAssignment_2_1");
+					put(grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorIdAssignment_1(), "rule__MobaGeneratorIDFeature__GeneratorIdAssignment_1");
+					put(grammarAccess.getMobaGeneratorIDFeatureAccess().getGeneratorVersionAssignment_3(), "rule__MobaGeneratorIDFeature__GeneratorVersionAssignment_3");
 					put(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefAssignment_1(), "rule__MobaGeneratorMixinFeature__GeneratorRefAssignment_1");
 					put(grammarAccess.getMobaDataTypeAccess().getNameAssignment_1(), "rule__MobaDataType__NameAssignment_1");
 					put(grammarAccess.getMobaDataTypeAccess().getSuperTypeAssignment_2_1(), "rule__MobaDataType__SuperTypeAssignment_2_1");

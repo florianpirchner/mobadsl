@@ -13,25 +13,13 @@ import org.mobadsl.semantic.model.moba.MobaApplication;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getRelativePath
- * <em>Relative Path</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getFilename
- * <em>Filename</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId
- * <em>Template Id</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName
- * <em>Template Name</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription
- * <em>Template Description</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion
- * <em>Template Version</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTransientTemplate
- * <em>Transient Template</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getRelativePath <em>Relative Path</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getFilename <em>Filename</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId <em>Template Id</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName <em>Template Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription <em>Template Description</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion <em>Template Version</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTransientTemplate <em>Transient Template</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry()
@@ -57,13 +45,10 @@ public interface MobaIndexEntry extends EObject {
 	String getRelativePath();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getRelativePath
-	 * <em>Relative Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getRelativePath <em>Relative Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Relative Path</em>' attribute.
+	 * @param value the new value of the '<em>Relative Path</em>' attribute.
 	 * @see #getRelativePath()
 	 * @generated
 	 */
@@ -118,11 +103,9 @@ public interface MobaIndexEntry extends EObject {
 	String getTemplateId();
 
 	/**
-	 * Returns whether the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId
-	 * <em>Template Id</em>}' attribute is set. <!-- begin-user-doc --> <!--
+	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateId <em>Template Id</em>}' attribute is set.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @return whether the value of the '<em>Template Id</em>' attribute is set.
 	 * @see #getTemplateId()
 	 * @generated
@@ -147,27 +130,23 @@ public interface MobaIndexEntry extends EObject {
 	String getTemplateName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName
-	 * <em>Template Name</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateName <em>Template Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Template Name</em>' attribute.
+	 * @param value the new value of the '<em>Template Name</em>' attribute.
 	 * @see #getTemplateName()
 	 * @generated
 	 */
 	void setTemplateName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Template Description</b></em>'
-	 * attribute. <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Template Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Template Description</em>' attribute isn't
 	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Template Description</em>' attribute.
 	 * @see #setTemplateDescription(String)
 	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TemplateDescription()
@@ -177,14 +156,10 @@ public interface MobaIndexEntry extends EObject {
 	String getTemplateDescription();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription
-	 * <em>Template Description</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateDescription <em>Template Description</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Template Description</em>'
-	 *            attribute.
+	 * @param value the new value of the '<em>Template Description</em>' attribute.
 	 * @see #getTemplateDescription()
 	 * @generated
 	 */
@@ -198,7 +173,6 @@ public interface MobaIndexEntry extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Template Version</em>' attribute.
 	 * @see #setTemplateVersion(String)
 	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TemplateVersion()
@@ -208,13 +182,10 @@ public interface MobaIndexEntry extends EObject {
 	String getTemplateVersion();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion
-	 * <em>Template Version</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTemplateVersion <em>Template Version</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Template Version</em>' attribute.
+	 * @param value the new value of the '<em>Template Version</em>' attribute.
 	 * @see #getTemplateVersion()
 	 * @generated
 	 */
@@ -228,7 +199,6 @@ public interface MobaIndexEntry extends EObject {
 	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Transient Template</em>' reference.
 	 * @see #setTransientTemplate(MobaApplication)
 	 * @see org.mobadsl.semantic.model.moba.index.MobaIndexPackage#getMobaIndexEntry_TransientTemplate()
@@ -238,13 +208,10 @@ public interface MobaIndexEntry extends EObject {
 	MobaApplication getTransientTemplate();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTransientTemplate
-	 * <em>Transient Template</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.index.MobaIndexEntry#getTransientTemplate <em>Transient Template</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Transient Template</em>' reference.
+	 * @param value the new value of the '<em>Transient Template</em>' reference.
 	 * @see #getTransientTemplate()
 	 * @generated
 	 */
