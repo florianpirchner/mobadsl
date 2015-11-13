@@ -14,10 +14,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion <em>Version</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+ * <em>Name</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion
+ * <em>Version</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
+ * <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
@@ -26,17 +30,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface MobaApplication extends MobaPropertiesAble {
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Id</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear, there really
+	 * should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #isSetId()
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication_Id()
-	 * @model unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unsettable="true" transient="true" changeable="false"
+	 *        volatile="true" derived="true"
 	 * @generated
 	 */
 	String getId();
@@ -59,22 +65,26 @@ public interface MobaApplication extends MobaPropertiesAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Version</b></em>' attribute. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Version</em>' attribute isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Version</em>' attribute isn't clear, there
+	 * really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Version</em>' attribute.
 	 * @see #setVersion(String)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication_Version()
@@ -84,10 +94,13 @@ public interface MobaApplication extends MobaPropertiesAble {
 	String getVersion();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion <em>Version</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Version</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion
+	 * <em>Version</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Version</em>' attribute.
 	 * @see #getVersion()
 	 * @generated
 	 */
@@ -173,7 +186,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaService> getServices();
+	List<MobaService> getRESTs();
 
 	/**
 	 * Returns the moba restCustom services for the current application.
@@ -181,7 +194,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRESTCustomService> getRestCustoms();
+	List<MobaRESTCustomService> getRestCustomServices();
 
 	/**
 	 * Returns the moba restCrud services for the current application. Excluding
@@ -189,7 +202,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRESTCrud> getRestCruds();
+	List<MobaRESTCrud> getRESTCruds();
 
 	/**
 	 * Returns the moba settings for the current application. Excluding the
@@ -232,7 +245,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaEntity> getAllDtos();
+	List<MobaDto> getAllDtos();
 
 	/**
 	 * Returns the moba payloads for the current application. Including the
@@ -240,7 +253,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaDto> getAllPayloads();
+	List<MobaEntity> getAllEntities();
 
 	/**
 	 * Returns the moba queues for the current application. Including the
@@ -272,7 +285,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaService> getAllServices();
+	List<MobaService> getAllREST();
 
 	/**
 	 * Returns the moba restCustom services for the current application.
@@ -280,7 +293,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRESTCustomService> getAllRestCustoms();
+	List<MobaRESTCustomService> getAllRESTCustomServices();
 
 	/**
 	 * Returns the moba restCrud services for the current application. Including
@@ -288,7 +301,7 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * 
 	 * @return
 	 */
-	List<MobaRESTCrud> getAllRestCruds();
+	List<MobaRESTCrud> getAllRESTCruds();
 
 	/**
 	 * Returns the moba settings for the current application. Including the
@@ -307,6 +320,22 @@ public interface MobaApplication extends MobaPropertiesAble {
 	List<MobaTemplate> getAllTemplates();
 
 	/**
+	 * Returns the moba authorizations for the current application. Including
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaAuthorization> getAllAuthorizations();
+
+	/**
+	 * Returns the moba transportSerializationType for the current application.
+	 * Including the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaTransportSerializationType> getAllTransportSerializationTypes();
+
+	/**
 	 * Returns the active generator.
 	 * 
 	 * @return
@@ -319,11 +348,12 @@ public interface MobaApplication extends MobaPropertiesAble {
 	 * @return
 	 */
 	MobaSettings getActiveSettings();
-	
+
 	/**
-	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns whether the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
+	 * ' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return whether the value of the '<em>Id</em>' attribute is set.
 	 * @see #getId()
 	 * @generated

@@ -164,6 +164,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaTransportSerializationType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaTransportSerializationTypeItemProvider mobaTransportSerializationTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaTransportSerializationType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaTransportSerializationTypeAdapter() {
+		if (mobaTransportSerializationTypeItemProvider == null) {
+			mobaTransportSerializationTypeItemProvider = new MobaTransportSerializationTypeItemProvider(this);
+		}
+
+		return mobaTransportSerializationTypeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaGenerator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -460,6 +483,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		}
 
 		return mobaQueueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaRESTPayloadDefinitionItemProvider mobaRESTPayloadDefinitionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaRESTPayloadDefinitionAdapter() {
+		if (mobaRESTPayloadDefinitionItemProvider == null) {
+			mobaRESTPayloadDefinitionItemProvider = new MobaRESTPayloadDefinitionItemProvider(this);
+		}
+
+		return mobaRESTPayloadDefinitionItemProvider;
 	}
 
 	/**
@@ -1094,6 +1140,7 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaTemplateItemProvider != null) mobaTemplateItemProvider.dispose();
 		if (mobaServerItemProvider != null) mobaServerItemProvider.dispose();
 		if (mobaAuthorizationItemProvider != null) mobaAuthorizationItemProvider.dispose();
+		if (mobaTransportSerializationTypeItemProvider != null) mobaTransportSerializationTypeItemProvider.dispose();
 		if (mobaGeneratorItemProvider != null) mobaGeneratorItemProvider.dispose();
 		if (mobaGeneratorMixinFeatureItemProvider != null) mobaGeneratorMixinFeatureItemProvider.dispose();
 		if (mobaGeneratorIDFeatureItemProvider != null) mobaGeneratorIDFeatureItemProvider.dispose();
@@ -1107,6 +1154,7 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaEntityIndexItemProvider != null) mobaEntityIndexItemProvider.dispose();
 		if (mobaDtoItemProvider != null) mobaDtoItemProvider.dispose();
 		if (mobaQueueItemProvider != null) mobaQueueItemProvider.dispose();
+		if (mobaRESTPayloadDefinitionItemProvider != null) mobaRESTPayloadDefinitionItemProvider.dispose();
 		if (mobaRESTAttributeItemProvider != null) mobaRESTAttributeItemProvider.dispose();
 		if (mobaRESTCustomServiceItemProvider != null) mobaRESTCustomServiceItemProvider.dispose();
 		if (mobaRESTWorkflowItemProvider != null) mobaRESTWorkflowItemProvider.dispose();

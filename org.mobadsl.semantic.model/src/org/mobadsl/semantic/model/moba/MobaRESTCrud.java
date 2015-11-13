@@ -24,8 +24,8 @@ import org.eclipse.emf.common.util.EList;
 public interface MobaRESTCrud extends MobaREST, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Operations</b></em>' attribute list.
-	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaRESTOperations}.
-	 * The literals are from the enumeration {@link org.mobadsl.semantic.model.moba.MobaRESTOperations}.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaRESTMethods}.
+	 * The literals are from the enumeration {@link org.mobadsl.semantic.model.moba.MobaRESTMethods}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operations</em>' attribute list isn't clear,
@@ -33,12 +33,12 @@ public interface MobaRESTCrud extends MobaREST, MobaPropertiesAble {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operations</em>' attribute list.
-	 * @see org.mobadsl.semantic.model.moba.MobaRESTOperations
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTMethods
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTCrud_Operations()
 	 * @model
 	 * @generated
 	 */
-	EList<MobaRESTOperations> getOperations();
+	EList<MobaRESTMethods> getOperations();
 
 	/**
 	 * Returns the value of the '<em><b>Super Type</b></em>' reference.

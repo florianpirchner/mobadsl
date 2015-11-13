@@ -22,6 +22,7 @@ import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 import org.mobadsl.semantic.model.moba.RecursionException;
 import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
@@ -36,6 +37,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getSerializationType <em>Serialization Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -85,6 +87,16 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	 * @ordered
 	 */
 	protected EList<MobaDtoFeature> features;
+
+	/**
+	 * The cached value of the '{@link #getSerializationType() <em>Serialization Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSerializationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaTransportSerializationType serializationType;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -180,6 +192,44 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaTransportSerializationType getSerializationType() {
+		if (serializationType != null && serializationType.eIsProxy()) {
+			InternalEObject oldSerializationType = (InternalEObject)serializationType;
+			serializationType = (MobaTransportSerializationType)eResolveProxy(oldSerializationType);
+			if (serializationType != oldSerializationType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_DTO__SERIALIZATION_TYPE, oldSerializationType, serializationType));
+			}
+		}
+		return serializationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaTransportSerializationType basicGetSerializationType() {
+		return serializationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSerializationType(MobaTransportSerializationType newSerializationType) {
+		MobaTransportSerializationType oldSerializationType = serializationType;
+		serializationType = newSerializationType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO__SERIALIZATION_TYPE, oldSerializationType, serializationType));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -210,6 +260,9 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 				return basicGetSuperType();
 			case MobaPackage.MOBA_DTO__FEATURES:
 				return getFeatures();
+			case MobaPackage.MOBA_DTO__SERIALIZATION_TYPE:
+				if (resolve) return getSerializationType();
+				return basicGetSerializationType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -236,6 +289,9 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 				getFeatures().clear();
 				getFeatures().addAll((Collection<? extends MobaDtoFeature>)newValue);
 				return;
+			case MobaPackage.MOBA_DTO__SERIALIZATION_TYPE:
+				setSerializationType((MobaTransportSerializationType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -259,6 +315,9 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 			case MobaPackage.MOBA_DTO__FEATURES:
 				getFeatures().clear();
 				return;
+			case MobaPackage.MOBA_DTO__SERIALIZATION_TYPE:
+				setSerializationType((MobaTransportSerializationType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -278,6 +337,8 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 				return superType != null;
 			case MobaPackage.MOBA_DTO__FEATURES:
 				return features != null && !features.isEmpty();
+			case MobaPackage.MOBA_DTO__SERIALIZATION_TYPE:
+				return serializationType != null;
 		}
 		return super.eIsSet(featureID);
 	}

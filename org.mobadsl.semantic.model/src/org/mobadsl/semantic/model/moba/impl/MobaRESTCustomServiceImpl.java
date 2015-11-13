@@ -18,7 +18,7 @@ import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
-import org.mobadsl.semantic.model.moba.MobaRESTOperations;
+import org.mobadsl.semantic.model.moba.MobaRESTMethods;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	 * @generated
 	 * @ordered
 	 */
-	protected static final MobaRESTOperations OPERATION_EDEFAULT = MobaRESTOperations.GET;
+	protected static final MobaRESTMethods OPERATION_EDEFAULT = MobaRESTMethods.GET;
 
 	/**
 	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' attribute.
@@ -65,7 +65,7 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaRESTOperations operation = OPERATION_EDEFAULT;
+	protected MobaRESTMethods operation = OPERATION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
@@ -123,7 +123,7 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaRESTOperations getOperation() {
+	public MobaRESTMethods getOperation() {
 		return operation;
 	}
 
@@ -132,8 +132,8 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperation(MobaRESTOperations newOperation) {
-		MobaRESTOperations oldOperation = operation;
+	public void setOperation(MobaRESTMethods newOperation) {
+		MobaRESTMethods oldOperation = operation;
 		operation = newOperation == null ? OPERATION_EDEFAULT : newOperation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION, oldOperation, operation));
@@ -240,7 +240,7 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
 				return;
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
-				setOperation((MobaRESTOperations)newValue);
+				setOperation((MobaRESTMethods)newValue);
 				return;
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
 				getParameters().clear();

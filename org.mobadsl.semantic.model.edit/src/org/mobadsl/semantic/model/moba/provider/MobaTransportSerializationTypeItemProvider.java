@@ -16,24 +16,24 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 
 /**
- * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaDto} object.
+ * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaTransportSerializationType} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobaDtoItemProvider extends MobaDataItemProvider {
+public class MobaTransportSerializationTypeItemProvider extends MobaApplicationFeatureItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDtoItemProvider(AdapterFactory adapterFactory) {
+	public MobaTransportSerializationTypeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -49,8 +49,6 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addSuperTypePropertyDescriptor(object);
-			addSerializationTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,57 +64,13 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaDto_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDto_name_feature", "_UI_MobaDto_type"),
-				 MobaPackage.Literals.MOBA_DTO__NAME,
+				 getString("_UI_MobaTransportSerializationType_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaTransportSerializationType_name_feature", "_UI_MobaTransportSerializationType_type"),
+				 MobaPackage.Literals.MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Super Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuperTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaDto_superType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDto_superType_feature", "_UI_MobaDto_type"),
-				 MobaPackage.Literals.MOBA_DTO__SUPER_TYPE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Serialization Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSerializationTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaDto_serializationType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDto_serializationType_feature", "_UI_MobaDto_type"),
-				 MobaPackage.Literals.MOBA_DTO__SERIALIZATION_TYPE,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -134,7 +88,6 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_DTO__FEATURES);
 		}
 		return childrenFeatures;
 	}
@@ -153,14 +106,14 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 	}
 
 	/**
-	 * This returns MobaDto.gif.
+	 * This returns MobaTransportSerializationType.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaDto"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaTransportSerializationType"));
 	}
 
 	/**
@@ -171,10 +124,10 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaDto)object).getName();
+		String label = ((MobaTransportSerializationType)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_MobaDto_type") :
-			getString("_UI_MobaDto_type") + " " + label;
+			getString("_UI_MobaTransportSerializationType_type") :
+			getString("_UI_MobaTransportSerializationType_type") + " " + label;
 	}
 	
 
@@ -189,12 +142,11 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(MobaDto.class)) {
-			case MobaPackage.MOBA_DTO__NAME:
+		switch (notification.getFeatureID(MobaTransportSerializationType.class)) {
+			case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_DTO__PROPERTIES:
-			case MobaPackage.MOBA_DTO__FEATURES:
+			case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -216,16 +168,6 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
 				 MobaFactory.eINSTANCE.createMobaProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_DTO__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaDtoAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_DTO__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaDtoReference()));
 	}
 
 }

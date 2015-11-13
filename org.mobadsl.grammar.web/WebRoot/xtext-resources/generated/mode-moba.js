@@ -1,6 +1,6 @@
 define("xtext-resources/generated/mode-moba", ["ace/lib/oop", "ace/mode/text", "ace/mode/text_highlight_rules"], function(oop, mText, mTextHighlightRules) {
 	var HighlightRules = function() {
-		var keywords = "0|1|DELETE|GET|Post|active|alias|application|bigData|cache|cascading|const|constraints|datatype|digits|domainDescription|domainKey|dto|entity|enum|extends|extensionPoint|generator|headers|index|isArray|isDate|isDecimal|isNotNull|isNull|isNumeric|isPrimitive|isString|isTime|isTimestamp|lazy|lit|max|maxLength|min|minLength|mixin|param|parameters|queue|ref|regexp|rest|restCrud|restWorkflow|service|settings|strategy|transient|type|var|version";
+		var keywords = "0|1|DELETE|GET|POST|active|alias|application|as|authorization|bigData|cache|cascading|const|constraints|datatype|digits|domainDescription|domainKey|dto|entity|enum|errorDto|extends|extensionPoint|generator|headers|index|isArray|isDate|isDecimal|isNotNull|isNull|isNumeric|isPrimitive|isString|isTime|isTimestamp|lazy|lit|max|maxLength|method|min|minLength|mixin|param|parameters|queue|ref|regexp|requestDto|responseDto|rest|restCrud|restWorkflow|serialization|service|settings|strategy|transient|type|var|version";
 		this.$rules = {
 			"start": [
 				{token: "comment", regex: "\\/\\/.*$"},

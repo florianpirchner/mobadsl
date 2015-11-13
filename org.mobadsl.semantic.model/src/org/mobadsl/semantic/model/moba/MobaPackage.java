@@ -64,7 +64,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPropertiesAble()
 	 * @generated
 	 */
-	int MOBA_PROPERTIES_ABLE = 12;
+	int MOBA_PROPERTIES_ABLE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -288,6 +288,43 @@ public interface MobaPackage extends EPackage {
 	int MOBA_AUTHORIZATION_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl <em>Transport Serialization Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTransportSerializationType()
+	 * @generated
+	 */
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Transport Serialization Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl <em>Generator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -295,7 +332,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGenerator()
 	 * @generated
 	 */
-	int MOBA_GENERATOR = 5;
+	int MOBA_GENERATOR = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -341,7 +378,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorFeature()
 	 * @generated
 	 */
-	int MOBA_GENERATOR_FEATURE = 6;
+	int MOBA_GENERATOR_FEATURE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Generator Feature</em>' class.
@@ -360,7 +397,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorMixinFeature()
 	 * @generated
 	 */
-	int MOBA_GENERATOR_MIXIN_FEATURE = 7;
+	int MOBA_GENERATOR_MIXIN_FEATURE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Generator Ref</b></em>' reference.
@@ -388,7 +425,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorIDFeature()
 	 * @generated
 	 */
-	int MOBA_GENERATOR_ID_FEATURE = 8;
+	int MOBA_GENERATOR_ID_FEATURE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Generator Id</b></em>' attribute.
@@ -425,7 +462,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDataType()
 	 * @generated
 	 */
-	int MOBA_DATA_TYPE = 9;
+	int MOBA_DATA_TYPE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -579,7 +616,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstant()
 	 * @generated
 	 */
-	int MOBA_CONSTANT = 10;
+	int MOBA_CONSTANT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -625,7 +662,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstantValue()
 	 * @generated
 	 */
-	int MOBA_CONSTANT_VALUE = 11;
+	int MOBA_CONSTANT_VALUE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Value String</b></em>' attribute.
@@ -689,7 +726,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaProperty()
 	 * @generated
 	 */
-	int MOBA_PROPERTY = 13;
+	int MOBA_PROPERTY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Key String</b></em>' attribute.
@@ -762,7 +799,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaData()
 	 * @generated
 	 */
-	int MOBA_DATA = 14;
+	int MOBA_DATA = 15;
 
 	/**
 	 * The number of structural features of the '<em>Data</em>' class.
@@ -781,7 +818,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettings()
 	 * @generated
 	 */
-	int MOBA_SETTINGS = 15;
+	int MOBA_SETTINGS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -845,7 +882,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaCache()
 	 * @generated
 	 */
-	int MOBA_CACHE = 16;
+	int MOBA_CACHE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Cache Type String</b></em>' attribute.
@@ -900,7 +937,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntity()
 	 * @generated
 	 */
-	int MOBA_ENTITY = 17;
+	int MOBA_ENTITY = 18;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -973,7 +1010,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityIndex()
 	 * @generated
 	 */
-	int MOBA_ENTITY_INDEX = 18;
+	int MOBA_ENTITY_INDEX = 19;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
@@ -1001,7 +1038,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDto()
 	 * @generated
 	 */
-	int MOBA_DTO = 19;
+	int MOBA_DTO = 20;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1040,13 +1077,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DTO__FEATURES = MOBA_DATA_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Serialization Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO__SERIALIZATION_TYPE = MOBA_DATA_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Dto</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 4;
+	int MOBA_DTO_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl <em>Queue</em>}' class.
@@ -1056,7 +1102,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueue()
 	 * @generated
 	 */
-	int MOBA_QUEUE = 20;
+	int MOBA_QUEUE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1111,7 +1157,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaREST()
 	 * @generated
 	 */
-	int MOBA_REST = 21;
+	int MOBA_REST = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1141,7 +1187,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST__BIG_DATA = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Request Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Request Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1150,7 +1196,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST__REQUEST_DTO = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Response Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Response Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1159,7 +1205,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST__RESPONSE_DTO = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Error Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Error Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1186,6 +1232,52 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
 
 	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl <em>REST Payload Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTPayloadDefinition()
+	 * @generated
+	 */
+	int MOBA_REST_PAYLOAD_DEFINITION = 23;
+
+	/**
+	 * The feature id for the '<em><b>Dto</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_PAYLOAD_DEFINITION__DTO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_PAYLOAD_DEFINITION__ARRAY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Serialization Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_PAYLOAD_DEFINITION__SERIALIZATION_TYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>REST Payload Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_PAYLOAD_DEFINITION_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl <em>REST Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1193,7 +1285,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTAttribute()
 	 * @generated
 	 */
-	int MOBA_REST_ATTRIBUTE = 22;
+	int MOBA_REST_ATTRIBUTE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1293,7 +1385,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTCustomService()
 	 * @generated
 	 */
-	int MOBA_REST_CUSTOM_SERVICE = 23;
+	int MOBA_REST_CUSTOM_SERVICE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1323,7 +1415,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CUSTOM_SERVICE__BIG_DATA = MOBA_REST__BIG_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Request Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Request Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1332,7 +1424,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CUSTOM_SERVICE__REQUEST_DTO = MOBA_REST__REQUEST_DTO;
 
 	/**
-	 * The feature id for the '<em><b>Response Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Response Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1341,7 +1433,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CUSTOM_SERVICE__RESPONSE_DTO = MOBA_REST__RESPONSE_DTO;
 
 	/**
-	 * The feature id for the '<em><b>Error Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Error Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1411,7 +1503,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTWorkflow()
 	 * @generated
 	 */
-	int MOBA_REST_WORKFLOW = 24;
+	int MOBA_REST_WORKFLOW = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1441,7 +1533,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_WORKFLOW__BIG_DATA = MOBA_REST__BIG_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Request Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Request Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1450,7 +1542,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_WORKFLOW__REQUEST_DTO = MOBA_REST__REQUEST_DTO;
 
 	/**
-	 * The feature id for the '<em><b>Response Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Response Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1459,7 +1551,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_WORKFLOW__RESPONSE_DTO = MOBA_REST__RESPONSE_DTO;
 
 	/**
-	 * The feature id for the '<em><b>Error Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Error Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1520,7 +1612,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTCrud()
 	 * @generated
 	 */
-	int MOBA_REST_CRUD = 25;
+	int MOBA_REST_CRUD = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1550,7 +1642,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CRUD__BIG_DATA = MOBA_REST__BIG_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Request Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Request Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1559,7 +1651,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CRUD__REQUEST_DTO = MOBA_REST__REQUEST_DTO;
 
 	/**
-	 * The feature id for the '<em><b>Response Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Response Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1568,7 +1660,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CRUD__RESPONSE_DTO = MOBA_REST__RESPONSE_DTO;
 
 	/**
-	 * The feature id for the '<em><b>Error Dto</b></em>' reference.
+	 * The feature id for the '<em><b>Error Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1629,7 +1721,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFeature()
 	 * @generated
 	 */
-	int MOBA_FEATURE = 26;
+	int MOBA_FEATURE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1657,7 +1749,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityFeature()
 	 * @generated
 	 */
-	int MOBA_ENTITY_FEATURE = 27;
+	int MOBA_ENTITY_FEATURE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1685,7 +1777,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityAttribute()
 	 * @generated
 	 */
-	int MOBA_ENTITY_ATTRIBUTE = 28;
+	int MOBA_ENTITY_ATTRIBUTE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1785,7 +1877,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMultiplicityAble()
 	 * @generated
 	 */
-	int MOBA_MULTIPLICITY_ABLE = 29;
+	int MOBA_MULTIPLICITY_ABLE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicity</b></em>' containment reference.
@@ -1813,7 +1905,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityReference()
 	 * @generated
 	 */
-	int MOBA_ENTITY_REFERENCE = 30;
+	int MOBA_ENTITY_REFERENCE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1895,7 +1987,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoFeature()
 	 * @generated
 	 */
-	int MOBA_DTO_FEATURE = 31;
+	int MOBA_DTO_FEATURE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1923,7 +2015,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoAttribute()
 	 * @generated
 	 */
-	int MOBA_DTO_ATTRIBUTE = 32;
+	int MOBA_DTO_ATTRIBUTE = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2032,7 +2124,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoReference()
 	 * @generated
 	 */
-	int MOBA_DTO_REFERENCE = 33;
+	int MOBA_DTO_REFERENCE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2114,7 +2206,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueueFeature()
 	 * @generated
 	 */
-	int MOBA_QUEUE_FEATURE = 34;
+	int MOBA_QUEUE_FEATURE = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2142,7 +2234,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueueReference()
 	 * @generated
 	 */
-	int MOBA_QUEUE_REFERENCE = 35;
+	int MOBA_QUEUE_REFERENCE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2224,7 +2316,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMuliplicity()
 	 * @generated
 	 */
-	int MOBA_MULIPLICITY = 36;
+	int MOBA_MULIPLICITY = 38;
 
 	/**
 	 * The feature id for the '<em><b>Lower</b></em>' attribute.
@@ -2261,7 +2353,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsFeature()
 	 * @generated
 	 */
-	int MOBA_SETTINGS_FEATURE = 37;
+	int MOBA_SETTINGS_FEATURE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2289,7 +2381,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsAttribute()
 	 * @generated
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE = 38;
+	int MOBA_SETTINGS_ATTRIBUTE = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2389,7 +2481,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstraintable()
 	 * @generated
 	 */
-	int MOBA_CONSTRAINTABLE = 39;
+	int MOBA_CONSTRAINTABLE = 41;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -2417,7 +2509,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstraint()
 	 * @generated
 	 */
-	int MOBA_CONSTRAINT = 40;
+	int MOBA_CONSTRAINT = 42;
 
 	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
@@ -2436,7 +2528,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRegexpConstraint()
 	 * @generated
 	 */
-	int MOBA_REGEXP_CONSTRAINT = 41;
+	int MOBA_REGEXP_CONSTRAINT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Filter String</b></em>' attribute.
@@ -2473,7 +2565,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMinConstraint()
 	 * @generated
 	 */
-	int MOBA_MIN_CONSTRAINT = 42;
+	int MOBA_MIN_CONSTRAINT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
@@ -2510,7 +2602,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMaxConstraint()
 	 * @generated
 	 */
-	int MOBA_MAX_CONSTRAINT = 43;
+	int MOBA_MAX_CONSTRAINT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
@@ -2547,7 +2639,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFutureConstraint()
 	 * @generated
 	 */
-	int MOBA_FUTURE_CONSTRAINT = 44;
+	int MOBA_FUTURE_CONSTRAINT = 46;
 
 	/**
 	 * The number of structural features of the '<em>Future Constraint</em>' class.
@@ -2566,7 +2658,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPastConstraint()
 	 * @generated
 	 */
-	int MOBA_PAST_CONSTRAINT = 45;
+	int MOBA_PAST_CONSTRAINT = 47;
 
 	/**
 	 * The number of structural features of the '<em>Past Constraint</em>' class.
@@ -2585,7 +2677,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNotNullConstraint()
 	 * @generated
 	 */
-	int MOBA_NOT_NULL_CONSTRAINT = 46;
+	int MOBA_NOT_NULL_CONSTRAINT = 48;
 
 	/**
 	 * The number of structural features of the '<em>Not Null Constraint</em>' class.
@@ -2604,7 +2696,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNullConstraint()
 	 * @generated
 	 */
-	int MOBA_NULL_CONSTRAINT = 47;
+	int MOBA_NULL_CONSTRAINT = 49;
 
 	/**
 	 * The number of structural features of the '<em>Null Constraint</em>' class.
@@ -2623,7 +2715,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMinLengthConstraint()
 	 * @generated
 	 */
-	int MOBA_MIN_LENGTH_CONSTRAINT = 48;
+	int MOBA_MIN_LENGTH_CONSTRAINT = 50;
 
 	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
@@ -2660,7 +2752,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMaxLengthConstraint()
 	 * @generated
 	 */
-	int MOBA_MAX_LENGTH_CONSTRAINT = 49;
+	int MOBA_MAX_LENGTH_CONSTRAINT = 51;
 
 	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
@@ -2697,7 +2789,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDigitsConstraint()
 	 * @generated
 	 */
-	int MOBA_DIGITS_CONSTRAINT = 50;
+	int MOBA_DIGITS_CONSTRAINT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Filter Integer Value</b></em>' attribute.
@@ -2752,7 +2844,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEnum()
 	 * @generated
 	 */
-	int MOBA_ENUM = 51;
+	int MOBA_ENUM = 53;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2807,7 +2899,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEnumLiteral()
 	 * @generated
 	 */
-	int MOBA_ENUM_LITERAL = 52;
+	int MOBA_ENUM_LITERAL = 54;
 
 	/**
 	 * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -2846,14 +2938,14 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENUM_LITERAL_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaRESTOperations <em>REST Operations</em>}' enum.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.MobaRESTOperations
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTOperations()
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTMethods
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTMethods()
 	 * @generated
 	 */
-	int MOBA_REST_OPERATIONS = 53;
+	int MOBA_REST_METHODS = 55;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaLowerBound <em>Lower Bound</em>}' enum.
@@ -2863,7 +2955,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaLowerBound()
 	 * @generated
 	 */
-	int MOBA_LOWER_BOUND = 54;
+	int MOBA_LOWER_BOUND = 56;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaUpperBound <em>Upper Bound</em>}' enum.
@@ -2873,7 +2965,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaUpperBound()
 	 * @generated
 	 */
-	int MOBA_UPPER_BOUND = 55;
+	int MOBA_UPPER_BOUND = 57;
 
 
 	/**
@@ -3035,6 +3127,27 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMobaAuthorization_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaTransportSerializationType <em>Transport Serialization Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Transport Serialization Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTransportSerializationType
+	 * @generated
+	 */
+	EClass getMobaTransportSerializationType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaTransportSerializationType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTransportSerializationType#getName()
+	 * @see #getMobaTransportSerializationType()
+	 * @generated
+	 */
+	EAttribute getMobaTransportSerializationType_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaGenerator <em>Generator</em>}'.
@@ -3737,6 +3850,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaDto_Features();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaDto#getSerializationType <em>Serialization Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Serialization Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaDto#getSerializationType()
+	 * @see #getMobaDto()
+	 * @generated
+	 */
+	EReference getMobaDto_SerializationType();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaQueue <em>Queue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3823,10 +3947,10 @@ public interface MobaPackage extends EPackage {
 	EAttribute getMobaREST_BigData();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getRequestDto <em>Request Dto</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getRequestDto <em>Request Dto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Request Dto</em>'.
+	 * @return the meta object for the containment reference '<em>Request Dto</em>'.
 	 * @see org.mobadsl.semantic.model.moba.MobaREST#getRequestDto()
 	 * @see #getMobaREST()
 	 * @generated
@@ -3834,10 +3958,10 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaREST_RequestDto();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Response Dto</em>'.
+	 * @return the meta object for the containment reference '<em>Response Dto</em>'.
 	 * @see org.mobadsl.semantic.model.moba.MobaREST#getResponseDto()
 	 * @see #getMobaREST()
 	 * @generated
@@ -3845,10 +3969,10 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaREST_ResponseDto();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Error Dto</em>'.
+	 * @return the meta object for the containment reference '<em>Error Dto</em>'.
 	 * @see org.mobadsl.semantic.model.moba.MobaREST#getErrorDto()
 	 * @see #getMobaREST()
 	 * @generated
@@ -3865,6 +3989,49 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMobaREST_Headers();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition <em>REST Payload Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>REST Payload Definition</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition
+	 * @generated
+	 */
+	EClass getMobaRESTPayloadDefinition();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition#getDto <em>Dto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Dto</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition#getDto()
+	 * @see #getMobaRESTPayloadDefinition()
+	 * @generated
+	 */
+	EReference getMobaRESTPayloadDefinition_Dto();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition#isArray <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Array</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition#isArray()
+	 * @see #getMobaRESTPayloadDefinition()
+	 * @generated
+	 */
+	EAttribute getMobaRESTPayloadDefinition_Array();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition#getSerializationType <em>Serialization Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Serialization Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition#getSerializationType()
+	 * @see #getMobaRESTPayloadDefinition()
+	 * @generated
+	 */
+	EReference getMobaRESTPayloadDefinition_SerializationType();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute <em>REST Attribute</em>}'.
@@ -4936,14 +5103,14 @@ public interface MobaPackage extends EPackage {
 	EAttribute getMobaEnumLiteral_Value();
 
 	/**
-	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaRESTOperations <em>REST Operations</em>}'.
+	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>REST Operations</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaRESTOperations
+	 * @return the meta object for enum '<em>REST Methods</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTMethods
 	 * @generated
 	 */
-	EEnum getMobaRESTOperations();
+	EEnum getMobaRESTMethods();
 
 	/**
 	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaLowerBound <em>Lower Bound</em>}'.
@@ -5116,6 +5283,24 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOBA_AUTHORIZATION__NAME = eINSTANCE.getMobaAuthorization_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl <em>Transport Serialization Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTransportSerializationType()
+		 * @generated
+		 */
+		EClass MOBA_TRANSPORT_SERIALIZATION_TYPE = eINSTANCE.getMobaTransportSerializationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME = eINSTANCE.getMobaTransportSerializationType_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl <em>Generator</em>}' class.
@@ -5668,6 +5853,14 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_DTO__FEATURES = eINSTANCE.getMobaDto_Features();
 
 		/**
+		 * The meta object literal for the '<em><b>Serialization Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_DTO__SERIALIZATION_TYPE = eINSTANCE.getMobaDto_SerializationType();
+
+		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl <em>Queue</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5736,7 +5929,7 @@ public interface MobaPackage extends EPackage {
 		EAttribute MOBA_REST__BIG_DATA = eINSTANCE.getMobaREST_BigData();
 
 		/**
-		 * The meta object literal for the '<em><b>Request Dto</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Request Dto</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5744,7 +5937,7 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_REST__REQUEST_DTO = eINSTANCE.getMobaREST_RequestDto();
 
 		/**
-		 * The meta object literal for the '<em><b>Response Dto</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Response Dto</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5752,7 +5945,7 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_REST__RESPONSE_DTO = eINSTANCE.getMobaREST_ResponseDto();
 
 		/**
-		 * The meta object literal for the '<em><b>Error Dto</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Error Dto</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5766,6 +5959,40 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_REST__HEADERS = eINSTANCE.getMobaREST_Headers();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl <em>REST Payload Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTPayloadDefinition()
+		 * @generated
+		 */
+		EClass MOBA_REST_PAYLOAD_DEFINITION = eINSTANCE.getMobaRESTPayloadDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Dto</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_REST_PAYLOAD_DEFINITION__DTO = eINSTANCE.getMobaRESTPayloadDefinition_Dto();
+
+		/**
+		 * The meta object literal for the '<em><b>Array</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_REST_PAYLOAD_DEFINITION__ARRAY = eINSTANCE.getMobaRESTPayloadDefinition_Array();
+
+		/**
+		 * The meta object literal for the '<em><b>Serialization Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_REST_PAYLOAD_DEFINITION__SERIALIZATION_TYPE = eINSTANCE.getMobaRESTPayloadDefinition_SerializationType();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl <em>REST Attribute</em>}' class.
@@ -6630,14 +6857,14 @@ public interface MobaPackage extends EPackage {
 		EAttribute MOBA_ENUM_LITERAL__VALUE = eINSTANCE.getMobaEnumLiteral_Value();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaRESTOperations <em>REST Operations</em>}' enum.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.MobaRESTOperations
-		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTOperations()
+		 * @see org.mobadsl.semantic.model.moba.MobaRESTMethods
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTMethods()
 		 * @generated
 		 */
-		EEnum MOBA_REST_OPERATIONS = eINSTANCE.getMobaRESTOperations();
+		EEnum MOBA_REST_METHODS = eINSTANCE.getMobaRESTMethods();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaLowerBound <em>Lower Bound</em>}' enum.

@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSerializationType <em>Serialization Type</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto()
@@ -93,6 +94,32 @@ public interface MobaDto extends MobaData, MobaPropertiesAble {
 	 */
 	EList<MobaDtoFeature> getFeatures();
 	
+	/**
+	 * Returns the value of the '<em><b>Serialization Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Serialization Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Serialization Type</em>' reference.
+	 * @see #setSerializationType(MobaTransportSerializationType)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_SerializationType()
+	 * @model
+	 * @generated
+	 */
+	MobaTransportSerializationType getSerializationType();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getSerializationType <em>Serialization Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Serialization Type</em>' reference.
+	 * @see #getSerializationType()
+	 * @generated
+	 */
+	void setSerializationType(MobaTransportSerializationType value);
+
 	/**
 	 * Returns the values for the current instance. Excluding the
 	 * "super types".

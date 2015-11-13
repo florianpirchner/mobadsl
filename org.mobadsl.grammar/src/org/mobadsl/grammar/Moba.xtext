@@ -4,12 +4,13 @@ import "platform:/resource/org.mobadsl.semantic.model/model/Moba.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 MobaApplication:
-	'application' name=ID 'version' '=' version=VERSION '{'
+	'application' name=ID 'version' '=' version=VERSION MobaPropertiesAble? '{'
 	(features+=MobaApplicationFeature*)
 	'}';
 
 MobaApplicationFeature:
-	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaREST | MobaGenerator;
+	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaREST | MobaGenerator | MobaAuthorization |
+	MobaTransportSerializationType;
 
 	/**
  * Will import a Moba-Application.
@@ -31,19 +32,22 @@ MobaGeneratorIDFeature:
 MobaGeneratorMixinFeature:
 	'mixin' generatorRef=[MobaGenerator|ID_VERSION];
 
+MobaAuthorization:
+	'authorization' name=CONSTANT MobaPropertiesAble?;
+
+MobaTransportSerializationType:
+	'serialization' name=CONSTANT MobaPropertiesAble?;
+
 MobaDataType:
-	'datatype' name=ID ('extends' superType=[MobaDataType])? 
-	(
-		(array?='isArray')? 
-		& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
-		& (
-			((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING | dateFormatConst=[MobaConstant]) ')')?)
-				| (enumAST=MobaEnum)
-				| (string?="isString" (primitive?='isPrimitive')?)
-				| (numeric?="isNumeric" (primitive?='isPrimitive')?)
-				| (decimal?="isDecimal" (primitive?='isPrimitive')?)
-		)
-	) MobaPropertiesAble?;
+	'datatype' name=ID ('extends' superType=[MobaDataType])?
+	((array?='isArray')?
+	& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
+	& (((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
+	dateFormatConst=[MobaConstant]) ')')?)
+	| (enumAST=MobaEnum)
+	| (string?="isString" (primitive?='isPrimitive')?)
+	| (numeric?="isNumeric" (primitive?='isPrimitive')?)
+	| (decimal?="isDecimal" (primitive?='isPrimitive')?))) MobaPropertiesAble?;
 
 MobaEnum:
 	'enum' name=ID '{'
@@ -117,20 +121,25 @@ MobaRESTCustomService:
 	('parameters' '{'
 	parameters+=MobaRestParameter*
 	'}')? &
-	(requestDto=[MobaDto])?
+	('requestDto' '=' requestDto=MobaRESTPayloadDefinition)?
 	&
-	(responseDto=[MobaDto])?
+	('responseDto' '=' responseDto=MobaRESTPayloadDefinition)?
 	&
-	(errorDto=[MobaDto])?
+	('errorDto' '=' errorDto=MobaRESTPayloadDefinition)?
 	&
-	(operation=MobaRESTOperations)?)
+	('method' '=' operation=MobaRESTMethods)?)
 	'}';
 
+MobaRESTPayloadDefinition:
+	dto=[MobaDto] ((array?='isArray')? & ('as' serializationType=[MobaTransportSerializationType|CONSTANT])?);
+
 MobaRestParameter returns MobaRESTAttribute:
-	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
+	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
+	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
 MobaRestHeader returns MobaRESTAttribute:
-	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
+	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
+	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
 MobaRESTCrud:
 	'restCrud' name=ID ('extends' superType=[MobaRESTCrud])? MobaPropertiesAble?;
@@ -229,8 +238,8 @@ enum MobaLowerBound:
 enum MobaUpperBound:
 	MANY='*' | ONE='1';
 
-enum MobaRESTOperations:
-	GET="GET" | POST="Post" | PUT=" PUT" | DELETE="DELETE";
+enum MobaRESTMethods:
+	GET="GET" | POST="POST" | PUT=" PUT" | DELETE="DELETE";
 
 	// if this is removed, antlr detects an error. INT and FLOAT can not become created since the are not unique definitions. 
 terminal INT returns ecore::EInt:

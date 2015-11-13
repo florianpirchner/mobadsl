@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>REST Operations</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTOperations()
+ * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTMethods()
  * @model
  * @generated
  */
-public enum MobaRESTOperations implements Enumerator {
+public enum MobaRESTMethods implements Enumerator {
 	/**
 	 * The '<em><b>GET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -119,13 +119,13 @@ public enum MobaRESTOperations implements Enumerator {
 	public static final int POST_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>REST Operations</b></em>' enumerators.
+	 * An array of all the '<em><b>REST Methods</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final MobaRESTOperations[] VALUES_ARRAY =
-		new MobaRESTOperations[] {
+	private static final MobaRESTMethods[] VALUES_ARRAY =
+		new MobaRESTMethods[] {
 			GET,
 			PUT,
 			DELETE,
@@ -133,24 +133,24 @@ public enum MobaRESTOperations implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>REST Operations</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>REST Methods</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<MobaRESTOperations> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<MobaRESTMethods> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>REST Operations</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>REST Methods</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static MobaRESTOperations get(String literal) {
+	public static MobaRESTMethods get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			MobaRESTOperations result = VALUES_ARRAY[i];
+			MobaRESTMethods result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -159,16 +159,16 @@ public enum MobaRESTOperations implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>REST Operations</b></em>' literal with the specified name.
+	 * Returns the '<em><b>REST Methods</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static MobaRESTOperations getByName(String name) {
+	public static MobaRESTMethods getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			MobaRESTOperations result = VALUES_ARRAY[i];
+			MobaRESTMethods result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -177,14 +177,14 @@ public enum MobaRESTOperations implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>REST Operations</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>REST Methods</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static MobaRESTOperations get(int value) {
+	public static MobaRESTMethods get(int value) {
 		switch (value) {
 			case GET_VALUE: return GET;
 			case PUT_VALUE: return PUT;
@@ -221,7 +221,7 @@ public enum MobaRESTOperations implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private MobaRESTOperations(int value, String name, String literal) {
+	private MobaRESTMethods(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;

@@ -22,7 +22,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
-import org.mobadsl.semantic.model.moba.MobaRESTOperations;
+import org.mobadsl.semantic.model.moba.MobaRESTMethods;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MobaRESTOperations> operations;
+	protected EList<MobaRESTMethods> operations;
 
 	/**
 	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
@@ -106,9 +106,9 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MobaRESTOperations> getOperations() {
+	public EList<MobaRESTMethods> getOperations() {
 		if (operations == null) {
-			operations = new EDataTypeUniqueEList<MobaRESTOperations>(MobaRESTOperations.class, this, MobaPackage.MOBA_REST_CRUD__OPERATIONS);
+			operations = new EDataTypeUniqueEList<MobaRESTMethods>(MobaRESTMethods.class, this, MobaPackage.MOBA_REST_CRUD__OPERATIONS);
 		}
 		return operations;
 	}
@@ -199,7 +199,7 @@ public class MobaRESTCrudImpl extends MobaRESTImpl implements MobaRESTCrud {
 				return;
 			case MobaPackage.MOBA_REST_CRUD__OPERATIONS:
 				getOperations().clear();
-				getOperations().addAll((Collection<? extends MobaRESTOperations>)newValue);
+				getOperations().addAll((Collection<? extends MobaRESTMethods>)newValue);
 				return;
 			case MobaPackage.MOBA_REST_CRUD__SUPER_TYPE:
 				setSuperType((MobaRESTCrud)newValue);

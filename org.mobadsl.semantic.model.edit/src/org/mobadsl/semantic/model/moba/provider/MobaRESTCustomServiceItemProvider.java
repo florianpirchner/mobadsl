@@ -212,6 +212,9 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
+			childFeature == MobaPackage.Literals.MOBA_REST__REQUEST_DTO ||
+			childFeature == MobaPackage.Literals.MOBA_REST__RESPONSE_DTO ||
+			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO ||
 			childFeature == MobaPackage.Literals.MOBA_REST__HEADERS ||
 			childFeature == MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS;
 

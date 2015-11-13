@@ -22,6 +22,7 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.scoping.impl.SimpleScope;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -34,6 +35,7 @@ import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
 import org.mobadsl.semantic.model.moba.MobaService;
 import org.mobadsl.semantic.model.moba.MobaSettings;
+import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
@@ -66,13 +68,13 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_MobaDto(final MobaApplication ctx, final EReference ref) {
-    List<MobaEntity> _allDtos = ctx.getAllDtos();
+    List<MobaDto> _allDtos = ctx.getAllDtos();
     return Scopes.scopeFor(_allDtos);
   }
   
-  public IScope scope_MobaPayload(final MobaApplication ctx, final EReference ref) {
-    List<MobaDto> _allPayloads = ctx.getAllPayloads();
-    return Scopes.scopeFor(_allPayloads);
+  public IScope scope_MobaEntity(final MobaApplication ctx, final EReference ref) {
+    List<MobaEntity> _allEntities = ctx.getAllEntities();
+    return Scopes.scopeFor(_allEntities);
   }
   
   public IScope scope_MobaQueue(final MobaApplication ctx, final EReference ref) {
@@ -85,19 +87,29 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
     return Scopes.scopeFor(_allSettings);
   }
   
-  public IScope scope_MobaService(final MobaApplication ctx, final EReference ref) {
-    List<MobaService> _allServices = ctx.getAllServices();
-    return Scopes.scopeFor(_allServices);
+  public IScope scope_MobaREST(final MobaApplication ctx, final EReference ref) {
+    List<MobaService> _allREST = ctx.getAllREST();
+    return Scopes.scopeFor(_allREST);
   }
   
-  public IScope scope_MobaRestCrud(final MobaApplication ctx, final EReference ref) {
-    List<MobaRESTCrud> _allRestCruds = ctx.getAllRestCruds();
-    return Scopes.scopeFor(_allRestCruds);
+  public IScope scope_MobaRESTCrud(final MobaApplication ctx, final EReference ref) {
+    List<MobaRESTCrud> _allRESTCruds = ctx.getAllRESTCruds();
+    return Scopes.scopeFor(_allRESTCruds);
   }
   
-  public IScope scope_MobaRestCustom(final MobaApplication ctx, final EReference ref) {
-    List<MobaRESTCustomService> _allRestCustoms = ctx.getAllRestCustoms();
-    return Scopes.scopeFor(_allRestCustoms);
+  public IScope scope_MobaRESTCustomService(final MobaApplication ctx, final EReference ref) {
+    List<MobaRESTCustomService> _allRESTCustomServices = ctx.getAllRESTCustomServices();
+    return Scopes.scopeFor(_allRESTCustomServices);
+  }
+  
+  public IScope scope_MobaAuthorization(final MobaApplication ctx, final EReference ref) {
+    List<MobaAuthorization> _allAuthorizations = ctx.getAllAuthorizations();
+    return Scopes.scopeFor(_allAuthorizations);
+  }
+  
+  public IScope scope_MobaTransportSerializationType(final MobaApplication ctx, final EReference ref) {
+    List<MobaTransportSerializationType> _allTransportSerializationTypes = ctx.getAllTransportSerializationTypes();
+    return Scopes.scopeFor(_allTransportSerializationTypes);
   }
   
   public IScope scope_MobaGenerator(final MobaApplication ctx, final EReference ref) {

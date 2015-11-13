@@ -107,82 +107,82 @@ public interface MobaREST extends MobaApplicationFeature {
 	void setBigData(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Request Dto</b></em>' reference.
+	 * Returns the value of the '<em><b>Request Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Request Dto</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Request Dto</em>' reference.
-	 * @see #setRequestDto(MobaDto)
+	 * @return the value of the '<em>Request Dto</em>' containment reference.
+	 * @see #setRequestDto(MobaRESTPayloadDefinition)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_RequestDto()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	MobaDto getRequestDto();
+	MobaRESTPayloadDefinition getRequestDto();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getRequestDto <em>Request Dto</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getRequestDto <em>Request Dto</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Request Dto</em>' reference.
+	 * @param value the new value of the '<em>Request Dto</em>' containment reference.
 	 * @see #getRequestDto()
 	 * @generated
 	 */
-	void setRequestDto(MobaDto value);
+	void setRequestDto(MobaRESTPayloadDefinition value);
 
 	/**
-	 * Returns the value of the '<em><b>Response Dto</b></em>' reference.
+	 * Returns the value of the '<em><b>Response Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Response Dto</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Response Dto</em>' reference.
-	 * @see #setResponseDto(MobaDto)
+	 * @return the value of the '<em>Response Dto</em>' containment reference.
+	 * @see #setResponseDto(MobaRESTPayloadDefinition)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_ResponseDto()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	MobaDto getResponseDto();
+	MobaRESTPayloadDefinition getResponseDto();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Response Dto</em>' reference.
+	 * @param value the new value of the '<em>Response Dto</em>' containment reference.
 	 * @see #getResponseDto()
 	 * @generated
 	 */
-	void setResponseDto(MobaDto value);
+	void setResponseDto(MobaRESTPayloadDefinition value);
 
 	/**
-	 * Returns the value of the '<em><b>Error Dto</b></em>' reference.
+	 * Returns the value of the '<em><b>Error Dto</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Error Dto</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Error Dto</em>' reference.
-	 * @see #setErrorDto(MobaDto)
+	 * @return the value of the '<em>Error Dto</em>' containment reference.
+	 * @see #setErrorDto(MobaRESTPayloadDefinition)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_ErrorDto()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	MobaDto getErrorDto();
+	MobaRESTPayloadDefinition getErrorDto();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Error Dto</em>' reference.
+	 * @param value the new value of the '<em>Error Dto</em>' containment reference.
 	 * @see #getErrorDto()
 	 * @generated
 	 */
-	void setErrorDto(MobaDto value);
+	void setErrorDto(MobaRESTPayloadDefinition value);
 
 	/**
 	 * Returns the value of the '<em><b>Headers</b></em>' containment reference list.

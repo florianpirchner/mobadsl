@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -35,6 +36,7 @@ import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
 import org.mobadsl.semantic.model.moba.MobaService;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
+import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -380,17 +382,17 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaService> getServices() {
+	public List<MobaService> getRESTs() {
 		return collect(MobaService.class);
 	}
 
 	@Override
-	public List<MobaRESTCustomService> getRestCustoms() {
+	public List<MobaRESTCustomService> getRestCustomServices() {
 		return collect(MobaRESTCustomService.class);
 	}
 
 	@Override
-	public List<MobaRESTCrud> getRestCruds() {
+	public List<MobaRESTCrud> getRESTCruds() {
 		return collect(MobaRESTCrud.class);
 	}
 
@@ -420,13 +422,13 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaEntity> getAllDtos() {
-		return collectAll(this, MobaEntity.class);
+	public List<MobaDto> getAllDtos() {
+		return collectAll(this, MobaDto.class);
 	}
 
 	@Override
-	public List<MobaDto> getAllPayloads() {
-		return collectAll(this, MobaDto.class);
+	public List<MobaEntity> getAllEntities() {
+		return collectAll(this, MobaEntity.class);
 	}
 
 	@Override
@@ -445,17 +447,17 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	@Override
-	public List<MobaService> getAllServices() {
+	public List<MobaService> getAllREST() {
 		return collectAll(this, MobaService.class);
 	}
 
 	@Override
-	public List<MobaRESTCustomService> getAllRestCustoms() {
+	public List<MobaRESTCustomService> getAllRESTCustomServices() {
 		return collectAll(this, MobaRESTCustomService.class);
 	}
 
 	@Override
-	public List<MobaRESTCrud> getAllRestCruds() {
+	public List<MobaRESTCrud> getAllRESTCruds() {
 		return collectAll(this, MobaRESTCrud.class);
 	}
 
@@ -468,6 +470,17 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	public List<MobaTemplate> getAllTemplates() {
 		return collectAll(this, MobaTemplate.class);
 	}
+	
+	@Override
+	public List<MobaAuthorization> getAllAuthorizations() {
+		return collectAll(this, MobaAuthorization.class);
+	}
+
+	@Override
+	public List<MobaTransportSerializationType> getAllTransportSerializationTypes() {
+		return collectAll(this, MobaTransportSerializationType.class);
+	}
+
 
 	@Override
 	public MobaGenerator getActiveGenerator() {

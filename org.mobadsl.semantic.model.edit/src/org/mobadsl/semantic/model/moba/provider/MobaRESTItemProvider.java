@@ -51,9 +51,6 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			addNamePropertyDescriptor(object);
 			addUrlPropertyDescriptor(object);
 			addBigDataPropertyDescriptor(object);
-			addRequestDtoPropertyDescriptor(object);
-			addResponseDtoPropertyDescriptor(object);
-			addErrorDtoPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -125,72 +122,6 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Request Dto feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequestDtoPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaREST_requestDto_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaREST_requestDto_feature", "_UI_MobaREST_type"),
-				 MobaPackage.Literals.MOBA_REST__REQUEST_DTO,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Response Dto feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResponseDtoPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaREST_responseDto_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaREST_responseDto_feature", "_UI_MobaREST_type"),
-				 MobaPackage.Literals.MOBA_REST__RESPONSE_DTO,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Error Dto feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addErrorDtoPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaREST_errorDto_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaREST_errorDto_feature", "_UI_MobaREST_type"),
-				 MobaPackage.Literals.MOBA_REST__ERROR_DTO,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -202,6 +133,9 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__REQUEST_DTO);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__RESPONSE_DTO);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__ERROR_DTO);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__HEADERS);
 		}
 		return childrenFeatures;
@@ -252,6 +186,9 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			case MobaPackage.MOBA_REST__BIG_DATA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case MobaPackage.MOBA_REST__REQUEST_DTO:
+			case MobaPackage.MOBA_REST__RESPONSE_DTO:
+			case MobaPackage.MOBA_REST__ERROR_DTO:
 			case MobaPackage.MOBA_REST__HEADERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -272,8 +209,47 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST__REQUEST_DTO,
+				 MobaFactory.eINSTANCE.createMobaRESTPayloadDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST__RESPONSE_DTO,
+				 MobaFactory.eINSTANCE.createMobaRESTPayloadDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST__ERROR_DTO,
+				 MobaFactory.eINSTANCE.createMobaRESTPayloadDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(MobaPackage.Literals.MOBA_REST__HEADERS,
 				 MobaFactory.eINSTANCE.createMobaRESTAttribute()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == MobaPackage.Literals.MOBA_REST__REQUEST_DTO ||
+			childFeature == MobaPackage.Literals.MOBA_REST__RESPONSE_DTO ||
+			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

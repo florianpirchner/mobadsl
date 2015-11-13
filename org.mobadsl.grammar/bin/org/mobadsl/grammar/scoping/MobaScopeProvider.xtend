@@ -45,8 +45,8 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 		return Scopes.scopeFor(ctx.allDtos);
 	}
 
-	def IScope scope_MobaPayload(MobaApplication ctx, EReference ref) {
-		return Scopes.scopeFor(ctx.allPayloads);
+	def IScope scope_MobaEntity(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allEntities);
 	}
 
 	def IScope scope_MobaQueue(MobaApplication ctx, EReference ref) {
@@ -57,16 +57,24 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 		return Scopes.scopeFor(ctx.allSettings);
 	}
 
-	def IScope scope_MobaService(MobaApplication ctx, EReference ref) {
-		return Scopes.scopeFor(ctx.allServices);
+	def IScope scope_MobaREST(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allREST);
 	}
 
-	def IScope scope_MobaRestCrud(MobaApplication ctx, EReference ref) {
-		return Scopes.scopeFor(ctx.allRestCruds);
+	def IScope scope_MobaRESTCrud(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allRESTCruds);
 	}
 
-	def IScope scope_MobaRestCustom(MobaApplication ctx, EReference ref) {
-		return Scopes.scopeFor(ctx.allRestCustoms);
+	def IScope scope_MobaRESTCustomService(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allRESTCustomServices);
+	}
+
+	def IScope scope_MobaAuthorization(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allAuthorizations);
+	}
+
+	def IScope scope_MobaTransportSerializationType(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allTransportSerializationTypes);
 	}
 
 	def IScope scope_MobaGenerator(MobaApplication ctx, EReference ref) {

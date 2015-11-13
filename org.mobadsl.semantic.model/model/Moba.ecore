@@ -23,6 +23,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="MobaAuthorization" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesAble">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaTransportSerializationType" eSuperTypes="#//MobaApplicationFeature #//MobaPropertiesAble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaGenerator" eSuperTypes="#//MobaApplicationFeature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
@@ -115,6 +118,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaDto"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//MobaDtoFeature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serializationType" eType="#//MobaTransportSerializationType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaQueue" eSuperTypes="#//MobaData #//MobaPropertiesAble">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -126,13 +130,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bigData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requestDto" eType="#//MobaDto"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="responseDto" eType="#//MobaDto"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="errorDto" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestDto" eType="#//MobaRESTPayloadDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseDto" eType="#//MobaRESTPayloadDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorDto" eType="#//MobaRESTPayloadDefinition"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="headers" upperBound="-1"
         eType="#//MobaRESTAttribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="MobaRESTOperations">
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTPayloadDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dto" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="array" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serializationType" eType="#//MobaTransportSerializationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MobaRESTMethods">
     <eLiterals name="GET" literal="GET"/>
     <eLiterals name="PUT" value="1" literal="PUT"/>
     <eLiterals name="DELETE" value="2" literal="DELETE"/>
@@ -152,7 +164,7 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTCustomService" eSuperTypes="#//MobaREST #//MobaPropertiesAble">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//MobaRESTOperations"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//MobaRESTMethods"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//MobaRESTAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaRESTCustomService"/>
@@ -164,7 +176,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTCrud" eSuperTypes="#//MobaREST #//MobaPropertiesAble">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operations" upperBound="-1"
-        eType="#//MobaRESTOperations"/>
+        eType="#//MobaRESTMethods"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaRESTCrud"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaFeature" abstract="true">

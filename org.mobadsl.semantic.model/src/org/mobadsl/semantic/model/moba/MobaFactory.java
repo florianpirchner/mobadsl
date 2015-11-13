@@ -58,6 +58,15 @@ public interface MobaFactory extends EFactory {
 	MobaAuthorization createMobaAuthorization();
 
 	/**
+	 * Returns a new object of class '<em>Transport Serialization Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Transport Serialization Type</em>'.
+	 * @generated
+	 */
+	MobaTransportSerializationType createMobaTransportSerializationType();
+
+	/**
 	 * Returns a new object of class '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,6 +182,15 @@ public interface MobaFactory extends EFactory {
 	 * @generated
 	 */
 	MobaQueue createMobaQueue();
+
+	/**
+	 * Returns a new object of class '<em>REST Payload Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>REST Payload Definition</em>'.
+	 * @generated
+	 */
+	MobaRESTPayloadDefinition createMobaRESTPayloadDefinition();
 
 	/**
 	 * Returns a new object of class '<em>REST Attribute</em>'.

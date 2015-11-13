@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
 public interface MobaRESTCustomService extends MobaREST, MobaPropertiesAble {
 	/**
 	 * Returns the value of the '<em><b>Operation</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.mobadsl.semantic.model.moba.MobaRESTOperations}.
+	 * The literals are from the enumeration {@link org.mobadsl.semantic.model.moba.MobaRESTMethods}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operation</em>' attribute isn't clear,
@@ -34,24 +34,24 @@ public interface MobaRESTCustomService extends MobaREST, MobaPropertiesAble {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation</em>' attribute.
-	 * @see org.mobadsl.semantic.model.moba.MobaRESTOperations
-	 * @see #setOperation(MobaRESTOperations)
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTMethods
+	 * @see #setOperation(MobaRESTMethods)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTCustomService_Operation()
 	 * @model
 	 * @generated
 	 */
-	MobaRESTOperations getOperation();
+	MobaRESTMethods getOperation();
 
 	/**
 	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getOperation <em>Operation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operation</em>' attribute.
-	 * @see org.mobadsl.semantic.model.moba.MobaRESTOperations
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTMethods
 	 * @see #getOperation()
 	 * @generated
 	 */
-	void setOperation(MobaRESTOperations value);
+	void setOperation(MobaRESTMethods value);
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.

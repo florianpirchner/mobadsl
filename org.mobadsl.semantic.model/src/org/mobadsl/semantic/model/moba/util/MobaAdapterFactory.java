@@ -137,6 +137,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaAuthorizationAdapter();
 			}
 			@Override
+			public Adapter caseMobaTransportSerializationType(MobaTransportSerializationType object) {
+				return createMobaTransportSerializationTypeAdapter();
+			}
+			@Override
 			public Adapter caseMobaGenerator(MobaGenerator object) {
 				return createMobaGeneratorAdapter();
 			}
@@ -203,6 +207,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMobaREST(MobaREST object) {
 				return createMobaRESTAdapter();
+			}
+			@Override
+			public Adapter caseMobaRESTPayloadDefinition(MobaRESTPayloadDefinition object) {
+				return createMobaRESTPayloadDefinitionAdapter();
 			}
 			@Override
 			public Adapter caseMobaRESTAttribute(MobaRESTAttribute object) {
@@ -415,6 +423,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaAuthorizationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaTransportSerializationType <em>Transport Serialization Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaTransportSerializationType
+	 * @generated
+	 */
+	public Adapter createMobaTransportSerializationTypeAdapter() {
 		return null;
 	}
 
@@ -653,6 +675,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaRESTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition <em>REST Payload Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition
+	 * @generated
+	 */
+	public Adapter createMobaRESTPayloadDefinitionAdapter() {
 		return null;
 	}
 

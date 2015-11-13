@@ -151,6 +151,14 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE: {
+				MobaTransportSerializationType mobaTransportSerializationType = (MobaTransportSerializationType)theEObject;
+				T result = caseMobaTransportSerializationType(mobaTransportSerializationType);
+				if (result == null) result = caseMobaApplicationFeature(mobaTransportSerializationType);
+				if (result == null) result = caseMobaPropertiesAble(mobaTransportSerializationType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_GENERATOR: {
 				MobaGenerator mobaGenerator = (MobaGenerator)theEObject;
 				T result = caseMobaGenerator(mobaGenerator);
@@ -271,6 +279,12 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaREST mobaREST = (MobaREST)theEObject;
 				T result = caseMobaREST(mobaREST);
 				if (result == null) result = caseMobaApplicationFeature(mobaREST);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_REST_PAYLOAD_DEFINITION: {
+				MobaRESTPayloadDefinition mobaRESTPayloadDefinition = (MobaRESTPayloadDefinition)theEObject;
+				T result = caseMobaRESTPayloadDefinition(mobaRESTPayloadDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -592,6 +606,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Transport Serialization Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Transport Serialization Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaTransportSerializationType(MobaTransportSerializationType object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -843,6 +872,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaREST(MobaREST object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>REST Payload Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>REST Payload Definition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaRESTPayloadDefinition(MobaRESTPayloadDefinition object) {
 		return null;
 	}
 

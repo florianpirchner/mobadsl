@@ -15,6 +15,7 @@ import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
+import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 
 /**
  * <!-- begin-user-doc -->
@@ -97,34 +98,34 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	protected boolean bigData = BIG_DATA_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRequestDto() <em>Request Dto</em>}' reference.
+	 * The cached value of the '{@link #getRequestDto() <em>Request Dto</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequestDto()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaDto requestDto;
+	protected MobaRESTPayloadDefinition requestDto;
 
 	/**
-	 * The cached value of the '{@link #getResponseDto() <em>Response Dto</em>}' reference.
+	 * The cached value of the '{@link #getResponseDto() <em>Response Dto</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getResponseDto()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaDto responseDto;
+	protected MobaRESTPayloadDefinition responseDto;
 
 	/**
-	 * The cached value of the '{@link #getErrorDto() <em>Error Dto</em>}' reference.
+	 * The cached value of the '{@link #getErrorDto() <em>Error Dto</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getErrorDto()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaDto errorDto;
+	protected MobaRESTPayloadDefinition errorDto;
 
 	/**
 	 * The cached value of the '{@link #getHeaders() <em>Headers</em>}' containment reference list.
@@ -223,15 +224,7 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDto getRequestDto() {
-		if (requestDto != null && requestDto.eIsProxy()) {
-			InternalEObject oldRequestDto = (InternalEObject)requestDto;
-			requestDto = (MobaDto)eResolveProxy(oldRequestDto);
-			if (requestDto != oldRequestDto) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST__REQUEST_DTO, oldRequestDto, requestDto));
-			}
-		}
+	public MobaRESTPayloadDefinition getRequestDto() {
 		return requestDto;
 	}
 
@@ -240,36 +233,41 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDto basicGetRequestDto() {
-		return requestDto;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRequestDto(MobaDto newRequestDto) {
-		MobaDto oldRequestDto = requestDto;
+	public NotificationChain basicSetRequestDto(MobaRESTPayloadDefinition newRequestDto, NotificationChain msgs) {
+		MobaRESTPayloadDefinition oldRequestDto = requestDto;
 		requestDto = newRequestDto;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__REQUEST_DTO, oldRequestDto, requestDto));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MobaDto getResponseDto() {
-		if (responseDto != null && responseDto.eIsProxy()) {
-			InternalEObject oldResponseDto = (InternalEObject)responseDto;
-			responseDto = (MobaDto)eResolveProxy(oldResponseDto);
-			if (responseDto != oldResponseDto) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST__RESPONSE_DTO, oldResponseDto, responseDto));
-			}
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__REQUEST_DTO, oldRequestDto, newRequestDto);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequestDto(MobaRESTPayloadDefinition newRequestDto) {
+		if (newRequestDto != requestDto) {
+			NotificationChain msgs = null;
+			if (requestDto != null)
+				msgs = ((InternalEObject)requestDto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__REQUEST_DTO, null, msgs);
+			if (newRequestDto != null)
+				msgs = ((InternalEObject)newRequestDto).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__REQUEST_DTO, null, msgs);
+			msgs = basicSetRequestDto(newRequestDto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__REQUEST_DTO, newRequestDto, newRequestDto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTPayloadDefinition getResponseDto() {
 		return responseDto;
 	}
 
@@ -278,36 +276,41 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDto basicGetResponseDto() {
-		return responseDto;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResponseDto(MobaDto newResponseDto) {
-		MobaDto oldResponseDto = responseDto;
+	public NotificationChain basicSetResponseDto(MobaRESTPayloadDefinition newResponseDto, NotificationChain msgs) {
+		MobaRESTPayloadDefinition oldResponseDto = responseDto;
 		responseDto = newResponseDto;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__RESPONSE_DTO, oldResponseDto, responseDto));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MobaDto getErrorDto() {
-		if (errorDto != null && errorDto.eIsProxy()) {
-			InternalEObject oldErrorDto = (InternalEObject)errorDto;
-			errorDto = (MobaDto)eResolveProxy(oldErrorDto);
-			if (errorDto != oldErrorDto) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST__ERROR_DTO, oldErrorDto, errorDto));
-			}
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__RESPONSE_DTO, oldResponseDto, newResponseDto);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResponseDto(MobaRESTPayloadDefinition newResponseDto) {
+		if (newResponseDto != responseDto) {
+			NotificationChain msgs = null;
+			if (responseDto != null)
+				msgs = ((InternalEObject)responseDto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__RESPONSE_DTO, null, msgs);
+			if (newResponseDto != null)
+				msgs = ((InternalEObject)newResponseDto).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__RESPONSE_DTO, null, msgs);
+			msgs = basicSetResponseDto(newResponseDto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__RESPONSE_DTO, newResponseDto, newResponseDto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTPayloadDefinition getErrorDto() {
 		return errorDto;
 	}
 
@@ -316,20 +319,33 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDto basicGetErrorDto() {
-		return errorDto;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setErrorDto(MobaDto newErrorDto) {
-		MobaDto oldErrorDto = errorDto;
+	public NotificationChain basicSetErrorDto(MobaRESTPayloadDefinition newErrorDto, NotificationChain msgs) {
+		MobaRESTPayloadDefinition oldErrorDto = errorDto;
 		errorDto = newErrorDto;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__ERROR_DTO, oldErrorDto, errorDto));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__ERROR_DTO, oldErrorDto, newErrorDto);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorDto(MobaRESTPayloadDefinition newErrorDto) {
+		if (newErrorDto != errorDto) {
+			NotificationChain msgs = null;
+			if (errorDto != null)
+				msgs = ((InternalEObject)errorDto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__ERROR_DTO, null, msgs);
+			if (newErrorDto != null)
+				msgs = ((InternalEObject)newErrorDto).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__ERROR_DTO, null, msgs);
+			msgs = basicSetErrorDto(newErrorDto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__ERROR_DTO, newErrorDto, newErrorDto));
 	}
 
 	/**
@@ -352,6 +368,12 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case MobaPackage.MOBA_REST__REQUEST_DTO:
+				return basicSetRequestDto(null, msgs);
+			case MobaPackage.MOBA_REST__RESPONSE_DTO:
+				return basicSetResponseDto(null, msgs);
+			case MobaPackage.MOBA_REST__ERROR_DTO:
+				return basicSetErrorDto(null, msgs);
 			case MobaPackage.MOBA_REST__HEADERS:
 				return ((InternalEList<?>)getHeaders()).basicRemove(otherEnd, msgs);
 		}
@@ -373,14 +395,11 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__BIG_DATA:
 				return isBigData();
 			case MobaPackage.MOBA_REST__REQUEST_DTO:
-				if (resolve) return getRequestDto();
-				return basicGetRequestDto();
+				return getRequestDto();
 			case MobaPackage.MOBA_REST__RESPONSE_DTO:
-				if (resolve) return getResponseDto();
-				return basicGetResponseDto();
+				return getResponseDto();
 			case MobaPackage.MOBA_REST__ERROR_DTO:
-				if (resolve) return getErrorDto();
-				return basicGetErrorDto();
+				return getErrorDto();
 			case MobaPackage.MOBA_REST__HEADERS:
 				return getHeaders();
 		}
@@ -406,13 +425,13 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				setBigData((Boolean)newValue);
 				return;
 			case MobaPackage.MOBA_REST__REQUEST_DTO:
-				setRequestDto((MobaDto)newValue);
+				setRequestDto((MobaRESTPayloadDefinition)newValue);
 				return;
 			case MobaPackage.MOBA_REST__RESPONSE_DTO:
-				setResponseDto((MobaDto)newValue);
+				setResponseDto((MobaRESTPayloadDefinition)newValue);
 				return;
 			case MobaPackage.MOBA_REST__ERROR_DTO:
-				setErrorDto((MobaDto)newValue);
+				setErrorDto((MobaRESTPayloadDefinition)newValue);
 				return;
 			case MobaPackage.MOBA_REST__HEADERS:
 				getHeaders().clear();
@@ -440,13 +459,13 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				setBigData(BIG_DATA_EDEFAULT);
 				return;
 			case MobaPackage.MOBA_REST__REQUEST_DTO:
-				setRequestDto((MobaDto)null);
+				setRequestDto((MobaRESTPayloadDefinition)null);
 				return;
 			case MobaPackage.MOBA_REST__RESPONSE_DTO:
-				setResponseDto((MobaDto)null);
+				setResponseDto((MobaRESTPayloadDefinition)null);
 				return;
 			case MobaPackage.MOBA_REST__ERROR_DTO:
-				setErrorDto((MobaDto)null);
+				setErrorDto((MobaRESTPayloadDefinition)null);
 				return;
 			case MobaPackage.MOBA_REST__HEADERS:
 				getHeaders().clear();
