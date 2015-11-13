@@ -7,11 +7,16 @@
 *.jar
 *.war
 *.ear
+*.java._trace
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-/target
-/bin
+target
+bin
+src-gen
+xtend-gen
+
+*.DS_Store
 
 *.xtendbin
