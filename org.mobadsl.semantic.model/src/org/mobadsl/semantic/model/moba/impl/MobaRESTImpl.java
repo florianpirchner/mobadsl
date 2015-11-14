@@ -3,19 +3,24 @@
 package org.mobadsl.semantic.model.moba.impl;
 
 import java.util.Collection;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
+import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -520,4 +525,34 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 		return result.toString();
 	}
 
+	protected <T extends EObject> List<T> collect(Class<T> clazz, EReference collectionFeture) {
+		return MobaUtil.getAllFeatures(this, clazz, collectionFeture);
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	protected <T extends EObject> List<T> collectAll(MobaREST instance, Class<T> clazz,
+			EReference collectionFeture) {
+		List types = getAllSuperTypes();
+		// add this instance to the begin of the list
+		types.add(0, this);
+
+		return MobaUtil.getAllFeatures(types, clazz, collectionFeture);
+	}
+
+	protected <T extends EObject> List<T> collectGen(MobaREST instance, Class<T> clazz,
+			EReference collectionFeture, EAttribute nameAtt) {
+		return MobaUtil.getGenFeatures(collectAll(this, clazz, collectionFeture), nameAtt);
+	}
+	
+	@Override
+	public List<MobaRESTAttribute> getAllHeaders() {
+		return collectAll(this, MobaRESTAttribute.class, MobaPackage.Literals.MOBA_REST__HEADERS);
+	}
+
+	@Override
+	public List<MobaRESTAttribute> getGenHeaders() {
+		return collectGen(this, MobaRESTAttribute.class, MobaPackage.Literals.MOBA_REST__HEADERS,
+				MobaPackage.Literals.MOBA_REST_ATTRIBUTE__NAME);
+	}
+	
 } //MobaRESTImpl

@@ -2,6 +2,8 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 
 
@@ -199,5 +201,35 @@ public interface MobaREST extends MobaApplicationFeature {
 	 * @generated
 	 */
 	EList<MobaRESTAttribute> getHeaders();
+	
+	/**
+	 * Returns the values for the current instance. Including the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaRESTAttribute> getAllHeaders();
+	
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaRESTAttribute> getGenHeaders();
+	
+	/**
+	 * Returns all supertypes for this instance.
+	 * 
+	 * @return
+	 * @throws RecursionException
+	 *             if a recursion was found
+	 */
+	List<? extends MobaREST> getAllSuperTypes() throws RecursionException;
 
 } // MobaREST
