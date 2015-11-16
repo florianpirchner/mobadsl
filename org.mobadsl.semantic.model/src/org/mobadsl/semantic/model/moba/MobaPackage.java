@@ -1402,7 +1402,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT__PROPERTIES = MOBA_PROPERTIES_ABLE__PROPERTIES;
+	int MOBA_CONSTANT__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CONSTANT__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1411,7 +1420,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT__NAME = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 0;
+	int MOBA_CONSTANT__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value AST</b></em>' containment reference.
@@ -1420,7 +1429,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT__VALUE_AST = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 1;
+	int MOBA_CONSTANT__VALUE_AST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Constant</em>' class.
@@ -1429,7 +1438,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_FEATURE_COUNT = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 2;
+	int MOBA_CONSTANT_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Value String</b></em>' attribute.
@@ -3709,13 +3718,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_TRIGGER__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRIGGER__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_TRIGGER_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_TRIGGER_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -3743,6 +3761,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_APP_INSTALL_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_INSTALL_TRIGGER__NAME = MOBA_TRIGGER__NAME;
 
 	/**
 	 * The number of structural features of the '<em>App Install Trigger</em>' class.
@@ -3781,6 +3808,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_APP_UPDATEL_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
 	 * The number of structural features of the '<em>App Updatel Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3815,6 +3851,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_SMS_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SMS_TRIGGER__NAME = MOBA_TRIGGER__NAME;
 
 	/**
 	 * The number of structural features of the '<em>SMS Trigger</em>' class.
@@ -3853,6 +3898,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DEVICE_STARTUP_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Device Startup Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3887,6 +3941,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_EMAIL_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EMAIL_TRIGGER__NAME = MOBA_TRIGGER__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Email Trigger</em>' class.
@@ -3925,6 +3988,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_TIMER_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TIMER_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Timer Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3961,6 +4033,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_PUSH_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Push Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3995,6 +4076,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_GEOFENCE_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER__NAME = MOBA_TRIGGER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Event Type</b></em>' attribute.
@@ -4142,13 +4232,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_EXTERNAL_MODULE__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EXTERNAL_MODULE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>External Module</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_EXTERNAL_MODULE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_EXTERNAL_MODULE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBluetoothModuleImpl <em>Bluetooth Module</em>}' class.
@@ -4186,6 +4285,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_BLUETOOTH_MODULE__SUPER_TYPE = MOBA_EXTERNAL_MODULE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE__NAME = MOBA_EXTERNAL_MODULE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -4243,6 +4351,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_NFC_MODULE__SUPER_TYPE = MOBA_EXTERNAL_MODULE__SUPER_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE__NAME = MOBA_EXTERNAL_MODULE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4296,6 +4413,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_PUSH_MODULE__SUPER_TYPE = MOBA_EXTERNAL_MODULE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_MODULE__NAME = MOBA_EXTERNAL_MODULE__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Push Module</em>' class.
@@ -6620,6 +6746,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaTrigger_SuperType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaTrigger#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTrigger#getName()
+	 * @see #getMobaTrigger()
+	 * @generated
+	 */
+	EAttribute getMobaTrigger_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaAppInstallTrigger <em>App Install Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6837,6 +6974,17 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMobaExternalModule_SuperType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaExternalModule#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaExternalModule#getName()
+	 * @see #getMobaExternalModule()
+	 * @generated
+	 */
+	EAttribute getMobaExternalModule_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBluetoothModule <em>Bluetooth Module</em>}'.
@@ -8771,6 +8919,14 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_TRIGGER__SUPER_TYPE = eINSTANCE.getMobaTrigger_SuperType();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_TRIGGER__NAME = eINSTANCE.getMobaTrigger_Name();
+
+		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAppInstallTriggerImpl <em>App Install Trigger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8961,6 +9117,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_EXTERNAL_MODULE__SUPER_TYPE = eINSTANCE.getMobaExternalModule_SuperType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_EXTERNAL_MODULE__NAME = eINSTANCE.getMobaExternalModule_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBluetoothModuleImpl <em>Bluetooth Module</em>}' class.

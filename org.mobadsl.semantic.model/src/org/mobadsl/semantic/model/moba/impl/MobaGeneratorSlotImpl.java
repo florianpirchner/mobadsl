@@ -19,22 +19,17 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl#getName
- * <em>Name</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl#getType
- * <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements MobaGeneratorSlot {
 	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSuperType()
 	 * @generated
 	 * @ordered
@@ -44,7 +39,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -54,7 +48,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -64,7 +57,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -74,7 +66,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -83,7 +74,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaGeneratorSlotImpl() {
@@ -92,7 +82,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -102,17 +91,15 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaGeneratorSlot getSuperType() {
 		if (superType != null && superType.eIsProxy()) {
-			InternalEObject oldSuperType = (InternalEObject) superType;
-			superType = (MobaGeneratorSlot) eResolveProxy(oldSuperType);
+			InternalEObject oldSuperType = (InternalEObject)superType;
+			superType = (MobaGeneratorSlot)eResolveProxy(oldSuperType);
 			if (superType != oldSuperType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE, oldSuperType, superType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE, oldSuperType, superType));
 			}
 		}
 		return superType;
@@ -120,7 +107,6 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaGeneratorSlot basicGetSuperType() {
@@ -129,20 +115,17 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setSuperType(MobaGeneratorSlot newSuperType) {
 		MobaGeneratorSlot oldSuperType = superType;
 		superType = newSuperType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE,
-					oldSuperType, superType));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -151,20 +134,17 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_SLOT__NAME, oldName,
-					name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_SLOT__NAME, oldName, name));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getType() {
@@ -173,106 +153,97 @@ public class MobaGeneratorSlotImpl extends MobaApplicationFeatureImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setType(String newType) {
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_SLOT__TYPE, oldType,
-					type));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_GENERATOR_SLOT__TYPE, oldType, type));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
-			if (resolve)
-				return getSuperType();
-			return basicGetSuperType();
-		case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
-			return getName();
-		case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
-			return getType();
+			case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
+				if (resolve) return getSuperType();
+				return basicGetSuperType();
+			case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
+				return getName();
+			case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
-			setSuperType((MobaGeneratorSlot) newValue);
-			return;
-		case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
-			setName((String) newValue);
-			return;
-		case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
-			setType((String) newValue);
-			return;
+			case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
+				setSuperType((MobaGeneratorSlot)newValue);
+				return;
+			case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
+				setName((String)newValue);
+				return;
+			case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
+				setType((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
-			setSuperType((MobaGeneratorSlot) null);
-			return;
-		case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
-			setType(TYPE_EDEFAULT);
-			return;
+			case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
+				setSuperType((MobaGeneratorSlot)null);
+				return;
+			case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
-			return superType != null;
-		case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
-			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case MobaPackage.MOBA_GENERATOR_SLOT__SUPER_TYPE:
+				return superType != null;
+			case MobaPackage.MOBA_GENERATOR_SLOT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MobaPackage.MOBA_GENERATOR_SLOT__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

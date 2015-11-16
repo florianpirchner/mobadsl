@@ -264,6 +264,33 @@ ruleMobaApplicationFeature returns [EObject current=null]
 			$current = $this_MobaTransportSerializationType_8.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaApplicationFeatureAccess().getMobaExternalModuleParserRuleCall_9());
+		}
+		this_MobaExternalModule_9=ruleMobaExternalModule
+		{
+			$current = $this_MobaExternalModule_9.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaApplicationFeatureAccess().getMobaTriggerParserRuleCall_10());
+		}
+		this_MobaTrigger_10=ruleMobaTrigger
+		{
+			$current = $this_MobaTrigger_10.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaApplicationFeatureAccess().getMobaGeneratorSlotParserRuleCall_11());
+		}
+		this_MobaGeneratorSlot_11=ruleMobaGeneratorSlot
+		{
+			$current = $this_MobaGeneratorSlot_11.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -5317,6 +5344,653 @@ ruleMobaNotNullConstraint returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getMobaNotNullConstraintAccess().getIsNotNullKeyword_1());
 		}
+	)
+;
+
+// Entry rule entryRuleMobaGeneratorSlot
+entryRuleMobaGeneratorSlot returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaGeneratorSlotRule()); }
+	iv_ruleMobaGeneratorSlot=ruleMobaGeneratorSlot
+	{ $current=$iv_ruleMobaGeneratorSlot.current; }
+	EOF;
+
+// Rule MobaGeneratorSlot
+ruleMobaGeneratorSlot returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='slot'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorSlotAccess().getSlotKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaGeneratorSlotAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeneratorSlotRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+		(
+			otherlv_2='type'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorSlotAccess().getTypeKeyword_2_0());
+			}
+			(
+				(
+					lv_type_3_0=RULE_STRING
+					{
+						newLeafNode(lv_type_3_0, grammarAccess.getMobaGeneratorSlotAccess().getTypeSTRINGTerminalRuleCall_2_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMobaGeneratorSlotRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"type",
+							lv_type_3_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleMobaTrigger
+entryRuleMobaTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaTriggerRule()); }
+	iv_ruleMobaTrigger=ruleMobaTrigger
+	{ $current=$iv_ruleMobaTrigger.current; }
+	EOF;
+
+// Rule MobaTrigger
+ruleMobaTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaAppInstallTriggerParserRuleCall_0());
+		}
+		this_MobaAppInstallTrigger_0=ruleMobaAppInstallTrigger
+		{
+			$current = $this_MobaAppInstallTrigger_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaAppUpdatelTriggerParserRuleCall_1());
+		}
+		this_MobaAppUpdatelTrigger_1=ruleMobaAppUpdatelTrigger
+		{
+			$current = $this_MobaAppUpdatelTrigger_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaEmailTriggerParserRuleCall_2());
+		}
+		this_MobaEmailTrigger_2=ruleMobaEmailTrigger
+		{
+			$current = $this_MobaEmailTrigger_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaDeviceStartupTriggerParserRuleCall_3());
+		}
+		this_MobaDeviceStartupTrigger_3=ruleMobaDeviceStartupTrigger
+		{
+			$current = $this_MobaDeviceStartupTrigger_3.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaSMSTriggerParserRuleCall_4());
+		}
+		this_MobaSMSTrigger_4=ruleMobaSMSTrigger
+		{
+			$current = $this_MobaSMSTrigger_4.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaPushTriggerParserRuleCall_5());
+		}
+		this_MobaPushTrigger_5=ruleMobaPushTrigger
+		{
+			$current = $this_MobaPushTrigger_5.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaTriggerAccess().getMobaGeofenceTriggerParserRuleCall_6());
+		}
+		this_MobaGeofenceTrigger_6=ruleMobaGeofenceTrigger
+		{
+			$current = $this_MobaGeofenceTrigger_6.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleMobaAppInstallTrigger
+entryRuleMobaAppInstallTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaAppInstallTriggerRule()); }
+	iv_ruleMobaAppInstallTrigger=ruleMobaAppInstallTrigger
+	{ $current=$iv_ruleMobaAppInstallTrigger.current; }
+	EOF;
+
+// Rule MobaAppInstallTrigger
+ruleMobaAppInstallTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger app install'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaAppInstallTriggerAccess().getTriggerAppInstallKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaAppInstallTriggerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaAppInstallTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaAppUpdatelTrigger
+entryRuleMobaAppUpdatelTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaAppUpdatelTriggerRule()); }
+	iv_ruleMobaAppUpdatelTrigger=ruleMobaAppUpdatelTrigger
+	{ $current=$iv_ruleMobaAppUpdatelTrigger.current; }
+	EOF;
+
+// Rule MobaAppUpdatelTrigger
+ruleMobaAppUpdatelTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger app update'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaAppUpdatelTriggerAccess().getTriggerAppUpdateKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaAppUpdatelTriggerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaAppUpdatelTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaEmailTrigger
+entryRuleMobaEmailTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaEmailTriggerRule()); }
+	iv_ruleMobaEmailTrigger=ruleMobaEmailTrigger
+	{ $current=$iv_ruleMobaEmailTrigger.current; }
+	EOF;
+
+// Rule MobaEmailTrigger
+ruleMobaEmailTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger email'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaEmailTriggerAccess().getTriggerEmailKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaEmailTriggerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaEmailTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaDeviceStartupTrigger
+entryRuleMobaDeviceStartupTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaDeviceStartupTriggerRule()); }
+	iv_ruleMobaDeviceStartupTrigger=ruleMobaDeviceStartupTrigger
+	{ $current=$iv_ruleMobaDeviceStartupTrigger.current; }
+	EOF;
+
+// Rule MobaDeviceStartupTrigger
+ruleMobaDeviceStartupTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger device start'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaDeviceStartupTriggerAccess().getTriggerDeviceStartKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaDeviceStartupTriggerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaDeviceStartupTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaSMSTrigger
+entryRuleMobaSMSTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaSMSTriggerRule()); }
+	iv_ruleMobaSMSTrigger=ruleMobaSMSTrigger
+	{ $current=$iv_ruleMobaSMSTrigger.current; }
+	EOF;
+
+// Rule MobaSMSTrigger
+ruleMobaSMSTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger sms'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaSMSTriggerAccess().getTriggerSmsKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaSMSTriggerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaSMSTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaPushTrigger
+entryRuleMobaPushTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaPushTriggerRule()); }
+	iv_ruleMobaPushTrigger=ruleMobaPushTrigger
+	{ $current=$iv_ruleMobaPushTrigger.current; }
+	EOF;
+
+// Rule MobaPushTrigger
+ruleMobaPushTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger push'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaPushTriggerAccess().getTriggerPushKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaPushTriggerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaPushTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaGeofenceTrigger
+entryRuleMobaGeofenceTrigger returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaGeofenceTriggerRule()); }
+	iv_ruleMobaGeofenceTrigger=ruleMobaGeofenceTrigger
+	{ $current=$iv_ruleMobaGeofenceTrigger.current; }
+	EOF;
+
+// Rule MobaGeofenceTrigger
+ruleMobaGeofenceTrigger returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='trigger geofence'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaGeofenceTriggerAccess().getTriggerGeofenceKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeMobaGeofenceEventEnumRuleCall_1_0());
+				}
+				lv_eventType_1_0=ruleMobaGeofenceEvent
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMobaGeofenceTriggerRule());
+					}
+					set(
+						$current,
+						"eventType",
+						lv_eventType_1_0,
+						"org.mobadsl.grammar.Moba.MobaGeofenceEvent");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				lv_name_2_0=RULE_ID
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getMobaGeofenceTriggerAccess().getNameIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaGeofenceTriggerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaExternalModule
+entryRuleMobaExternalModule returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaExternalModuleRule()); }
+	iv_ruleMobaExternalModule=ruleMobaExternalModule
+	{ $current=$iv_ruleMobaExternalModule.current; }
+	EOF;
+
+// Rule MobaExternalModule
+ruleMobaExternalModule returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getMobaExternalModuleAccess().getMobaBluetoothModuleParserRuleCall_0());
+		}
+		this_MobaBluetoothModule_0=ruleMobaBluetoothModule
+		{
+			$current = $this_MobaBluetoothModule_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaExternalModuleAccess().getMobaPushModuleParserRuleCall_1());
+		}
+		this_MobaPushModule_1=ruleMobaPushModule
+		{
+			$current = $this_MobaPushModule_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaExternalModuleAccess().getMobaNFCModuleParserRuleCall_2());
+		}
+		this_MobaNFCModule_2=ruleMobaNFCModule
+		{
+			$current = $this_MobaNFCModule_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleMobaBluetoothModule
+entryRuleMobaBluetoothModule returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaBluetoothModuleRule()); }
+	iv_ruleMobaBluetoothModule=ruleMobaBluetoothModule
+	{ $current=$iv_ruleMobaBluetoothModule.current; }
+	EOF;
+
+// Rule MobaBluetoothModule
+ruleMobaBluetoothModule returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='module bluetooth'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaBluetoothModuleAccess().getModuleBluetoothKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaBluetoothModuleAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaBluetoothModuleRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaPushModule
+entryRuleMobaPushModule returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaPushModuleRule()); }
+	iv_ruleMobaPushModule=ruleMobaPushModule
+	{ $current=$iv_ruleMobaPushModule.current; }
+	EOF;
+
+// Rule MobaPushModule
+ruleMobaPushModule returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='module push'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaPushModuleAccess().getModulePushKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaPushModuleAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaPushModuleRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleMobaNFCModule
+entryRuleMobaNFCModule returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaNFCModuleRule()); }
+	iv_ruleMobaNFCModule=ruleMobaNFCModule
+	{ $current=$iv_ruleMobaNFCModule.current; }
+	EOF;
+
+// Rule MobaNFCModule
+ruleMobaNFCModule returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='module NFC'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaNFCModuleAccess().getModuleNFCKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMobaNFCModuleAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaNFCModuleRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+	)
+;
+
+// Rule MobaGeofenceEvent
+ruleMobaGeofenceEvent returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='enter'
+			{
+				$current = grammarAccess.getMobaGeofenceEventAccess().getENTEREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getMobaGeofenceEventAccess().getENTEREnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='leave'
+			{
+				$current = grammarAccess.getMobaGeofenceEventAccess().getLEAVEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getMobaGeofenceEventAccess().getLEAVEEnumLiteralDeclaration_1());
+			}
+		)
 	)
 ;
 

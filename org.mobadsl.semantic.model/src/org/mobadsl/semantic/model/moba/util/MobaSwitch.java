@@ -5,6 +5,7 @@ package org.mobadsl.semantic.model.moba.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.mobadsl.semantic.model.moba.*;
 import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
 import org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger;
 import org.mobadsl.semantic.model.moba.MobaApplication;
@@ -240,6 +241,8 @@ public class MobaSwitch<T> extends Switch<T> {
 			case MobaPackage.MOBA_CONSTANT: {
 				MobaConstant mobaConstant = (MobaConstant)theEObject;
 				T result = caseMobaConstant(mobaConstant);
+				if (result == null) result = caseMobaApplicationFeature(mobaConstant);
+				if (result == null) result = caseMobaFriendsAble(mobaConstant);
 				if (result == null) result = caseMobaPropertiesAble(mobaConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

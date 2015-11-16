@@ -19,7 +19,6 @@ import org.mobadsl.semantic.model.moba.MobaUiApplication;
 public class MobaUiApplicationImpl extends MobaApplicationImpl implements MobaUiApplication {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaUiApplicationImpl() {
@@ -28,7 +27,6 @@ public class MobaUiApplicationImpl extends MobaApplicationImpl implements MobaUi
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

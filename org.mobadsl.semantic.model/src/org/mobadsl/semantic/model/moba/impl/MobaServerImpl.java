@@ -24,13 +24,9 @@ import org.mobadsl.semantic.model.moba.MobaServer;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getUrl
- * <em>Url</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getServices
- * <em>Services</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getAuthorization
- * <em>Authorization</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getAuthorization <em>Authorization</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,9 +53,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected String url = URL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getServices() <em>Services</em>}'
-	 * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getServices()
 	 * @generated
 	 * @ordered
@@ -67,10 +62,9 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected EList<MobaREST> services;
 
 	/**
-	 * The cached value of the '{@link #getAuthorization()
-	 * <em>Authorization</em>}' reference. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getAuthorization()
 	 * @generated
 	 * @ordered
@@ -79,7 +73,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaServerImpl() {
@@ -88,7 +81,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -98,7 +90,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getUrl() {
@@ -107,7 +98,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setUrl(String newUrl) {
@@ -119,7 +109,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaREST> getServices() {
@@ -131,17 +120,15 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaAuthorization getAuthorization() {
 		if (authorization != null && authorization.eIsProxy()) {
-			InternalEObject oldAuthorization = (InternalEObject) authorization;
-			authorization = (MobaAuthorization) eResolveProxy(oldAuthorization);
+			InternalEObject oldAuthorization = (InternalEObject)authorization;
+			authorization = (MobaAuthorization)eResolveProxy(oldAuthorization);
 			if (authorization != oldAuthorization) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__AUTHORIZATION,
-							oldAuthorization, authorization));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__AUTHORIZATION, oldAuthorization, authorization));
 			}
 		}
 		return authorization;
@@ -149,7 +136,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaAuthorization basicGetAuthorization() {
@@ -158,108 +144,99 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setAuthorization(MobaAuthorization newAuthorization) {
 		MobaAuthorization oldAuthorization = authorization;
 		authorization = newAuthorization;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__AUTHORIZATION,
-					oldAuthorization, authorization));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__AUTHORIZATION, oldAuthorization, authorization));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__URL:
-			return getUrl();
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			return getServices();
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			if (resolve)
-				return getAuthorization();
-			return basicGetAuthorization();
+			case MobaPackage.MOBA_SERVER__URL:
+				return getUrl();
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				return getServices();
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				if (resolve) return getAuthorization();
+				return basicGetAuthorization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__URL:
-			setUrl((String) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			getServices().clear();
-			getServices().addAll((Collection<? extends MobaREST>) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			setAuthorization((MobaAuthorization) newValue);
-			return;
+			case MobaPackage.MOBA_SERVER__URL:
+				setUrl((String)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				getServices().clear();
+				getServices().addAll((Collection<? extends MobaREST>)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				setAuthorization((MobaAuthorization)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__URL:
-			setUrl(URL_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			getServices().clear();
-			return;
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			setAuthorization((MobaAuthorization) null);
-			return;
+			case MobaPackage.MOBA_SERVER__URL:
+				setUrl(URL_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				getServices().clear();
+				return;
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				setAuthorization((MobaAuthorization)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			return services != null && !services.isEmpty();
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			return authorization != null;
+			case MobaPackage.MOBA_SERVER__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				return services != null && !services.isEmpty();
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				return authorization != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (url: ");

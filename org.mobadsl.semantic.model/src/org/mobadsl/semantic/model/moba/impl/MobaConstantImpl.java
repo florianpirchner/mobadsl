@@ -29,7 +29,7 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  *
  * @generated
  */
-public class MobaConstantImpl extends MobaPropertiesAbleImpl implements MobaConstant {
+public class MobaConstantImpl extends MobaApplicationFeatureImpl implements MobaConstant {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

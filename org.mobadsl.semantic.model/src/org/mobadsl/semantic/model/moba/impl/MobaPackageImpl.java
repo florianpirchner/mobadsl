@@ -2621,6 +2621,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaTrigger_Name() {
+		return (EAttribute)mobaTriggerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaAppInstallTrigger() {
 		return mobaAppInstallTriggerEClass;
 	}
@@ -2803,6 +2812,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EReference getMobaExternalModule_SuperType() {
 		return (EReference)mobaExternalModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaExternalModule_Name() {
+		return (EAttribute)mobaExternalModuleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3200,6 +3218,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		mobaTriggerEClass = createEClass(MOBA_TRIGGER);
 		createEReference(mobaTriggerEClass, MOBA_TRIGGER__SUPER_TYPE);
+		createEAttribute(mobaTriggerEClass, MOBA_TRIGGER__NAME);
 
 		mobaAppInstallTriggerEClass = createEClass(MOBA_APP_INSTALL_TRIGGER);
 
@@ -3233,6 +3252,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		mobaExternalModuleEClass = createEClass(MOBA_EXTERNAL_MODULE);
 		createEReference(mobaExternalModuleEClass, MOBA_EXTERNAL_MODULE__SUPER_TYPE);
+		createEAttribute(mobaExternalModuleEClass, MOBA_EXTERNAL_MODULE__NAME);
 
 		mobaBluetoothModuleEClass = createEClass(MOBA_BLUETOOTH_MODULE);
 		createEAttribute(mobaBluetoothModuleEClass, MOBA_BLUETOOTH_MODULE__TYPE);
@@ -3297,7 +3317,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaGeneratorIDFeatureEClass.getESuperTypes().add(this.getMobaGeneratorFeature());
 		mobaDataTypeEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaDataTypeEClass.getESuperTypes().add(this.getMobaConstraintable());
-		mobaConstantEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaConstantEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaDataEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaSettingsEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaEntityEClass.getESuperTypes().add(this.getMobaData());
@@ -3625,6 +3645,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		initEClass(mobaTriggerEClass, MobaTrigger.class, "MobaTrigger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaTrigger_SuperType(), this.getMobaTrigger(), null, "superType", null, 0, 1, MobaTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaTrigger_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaAppInstallTriggerEClass, MobaAppInstallTrigger.class, "MobaAppInstallTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3658,6 +3679,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		initEClass(mobaExternalModuleEClass, MobaExternalModule.class, "MobaExternalModule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaExternalModule_SuperType(), this.getMobaExternalModule(), null, "superType", null, 0, 1, MobaExternalModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaExternalModule_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaExternalModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaBluetoothModuleEClass, MobaBluetoothModule.class, "MobaBluetoothModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaBluetoothModule_Type(), this.getMobaBlueToothModuleType(), "type", null, 0, 1, MobaBluetoothModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

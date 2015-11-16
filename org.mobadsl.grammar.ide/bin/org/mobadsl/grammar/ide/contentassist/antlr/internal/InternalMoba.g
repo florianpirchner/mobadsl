@@ -1308,6 +1308,347 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleMobaGeneratorSlot
+entryRuleMobaGeneratorSlot
+:
+{ before(grammarAccess.getMobaGeneratorSlotRule()); }
+	 ruleMobaGeneratorSlot
+{ after(grammarAccess.getMobaGeneratorSlotRule()); } 
+	 EOF 
+;
+
+// Rule MobaGeneratorSlot
+ruleMobaGeneratorSlot 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaGeneratorSlotAccess().getGroup()); }
+		(rule__MobaGeneratorSlot__Group__0)
+		{ after(grammarAccess.getMobaGeneratorSlotAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaTrigger
+entryRuleMobaTrigger
+:
+{ before(grammarAccess.getMobaTriggerRule()); }
+	 ruleMobaTrigger
+{ after(grammarAccess.getMobaTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaTrigger
+ruleMobaTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getAlternatives()); }
+		(rule__MobaTrigger__Alternatives)
+		{ after(grammarAccess.getMobaTriggerAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaAppInstallTrigger
+entryRuleMobaAppInstallTrigger
+:
+{ before(grammarAccess.getMobaAppInstallTriggerRule()); }
+	 ruleMobaAppInstallTrigger
+{ after(grammarAccess.getMobaAppInstallTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaAppInstallTrigger
+ruleMobaAppInstallTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaAppInstallTriggerAccess().getGroup()); }
+		(rule__MobaAppInstallTrigger__Group__0)
+		{ after(grammarAccess.getMobaAppInstallTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaAppUpdatelTrigger
+entryRuleMobaAppUpdatelTrigger
+:
+{ before(grammarAccess.getMobaAppUpdatelTriggerRule()); }
+	 ruleMobaAppUpdatelTrigger
+{ after(grammarAccess.getMobaAppUpdatelTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaAppUpdatelTrigger
+ruleMobaAppUpdatelTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaAppUpdatelTriggerAccess().getGroup()); }
+		(rule__MobaAppUpdatelTrigger__Group__0)
+		{ after(grammarAccess.getMobaAppUpdatelTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaEmailTrigger
+entryRuleMobaEmailTrigger
+:
+{ before(grammarAccess.getMobaEmailTriggerRule()); }
+	 ruleMobaEmailTrigger
+{ after(grammarAccess.getMobaEmailTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaEmailTrigger
+ruleMobaEmailTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaEmailTriggerAccess().getGroup()); }
+		(rule__MobaEmailTrigger__Group__0)
+		{ after(grammarAccess.getMobaEmailTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaDeviceStartupTrigger
+entryRuleMobaDeviceStartupTrigger
+:
+{ before(grammarAccess.getMobaDeviceStartupTriggerRule()); }
+	 ruleMobaDeviceStartupTrigger
+{ after(grammarAccess.getMobaDeviceStartupTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaDeviceStartupTrigger
+ruleMobaDeviceStartupTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaDeviceStartupTriggerAccess().getGroup()); }
+		(rule__MobaDeviceStartupTrigger__Group__0)
+		{ after(grammarAccess.getMobaDeviceStartupTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaSMSTrigger
+entryRuleMobaSMSTrigger
+:
+{ before(grammarAccess.getMobaSMSTriggerRule()); }
+	 ruleMobaSMSTrigger
+{ after(grammarAccess.getMobaSMSTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaSMSTrigger
+ruleMobaSMSTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaSMSTriggerAccess().getGroup()); }
+		(rule__MobaSMSTrigger__Group__0)
+		{ after(grammarAccess.getMobaSMSTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaPushTrigger
+entryRuleMobaPushTrigger
+:
+{ before(grammarAccess.getMobaPushTriggerRule()); }
+	 ruleMobaPushTrigger
+{ after(grammarAccess.getMobaPushTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaPushTrigger
+ruleMobaPushTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaPushTriggerAccess().getGroup()); }
+		(rule__MobaPushTrigger__Group__0)
+		{ after(grammarAccess.getMobaPushTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaGeofenceTrigger
+entryRuleMobaGeofenceTrigger
+:
+{ before(grammarAccess.getMobaGeofenceTriggerRule()); }
+	 ruleMobaGeofenceTrigger
+{ after(grammarAccess.getMobaGeofenceTriggerRule()); } 
+	 EOF 
+;
+
+// Rule MobaGeofenceTrigger
+ruleMobaGeofenceTrigger 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaGeofenceTriggerAccess().getGroup()); }
+		(rule__MobaGeofenceTrigger__Group__0)
+		{ after(grammarAccess.getMobaGeofenceTriggerAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaExternalModule
+entryRuleMobaExternalModule
+:
+{ before(grammarAccess.getMobaExternalModuleRule()); }
+	 ruleMobaExternalModule
+{ after(grammarAccess.getMobaExternalModuleRule()); } 
+	 EOF 
+;
+
+// Rule MobaExternalModule
+ruleMobaExternalModule 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaExternalModuleAccess().getAlternatives()); }
+		(rule__MobaExternalModule__Alternatives)
+		{ after(grammarAccess.getMobaExternalModuleAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaBluetoothModule
+entryRuleMobaBluetoothModule
+:
+{ before(grammarAccess.getMobaBluetoothModuleRule()); }
+	 ruleMobaBluetoothModule
+{ after(grammarAccess.getMobaBluetoothModuleRule()); } 
+	 EOF 
+;
+
+// Rule MobaBluetoothModule
+ruleMobaBluetoothModule 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaBluetoothModuleAccess().getGroup()); }
+		(rule__MobaBluetoothModule__Group__0)
+		{ after(grammarAccess.getMobaBluetoothModuleAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaPushModule
+entryRuleMobaPushModule
+:
+{ before(grammarAccess.getMobaPushModuleRule()); }
+	 ruleMobaPushModule
+{ after(grammarAccess.getMobaPushModuleRule()); } 
+	 EOF 
+;
+
+// Rule MobaPushModule
+ruleMobaPushModule 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaPushModuleAccess().getGroup()); }
+		(rule__MobaPushModule__Group__0)
+		{ after(grammarAccess.getMobaPushModuleAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaNFCModule
+entryRuleMobaNFCModule
+:
+{ before(grammarAccess.getMobaNFCModuleRule()); }
+	 ruleMobaNFCModule
+{ after(grammarAccess.getMobaNFCModuleRule()); } 
+	 EOF 
+;
+
+// Rule MobaNFCModule
+ruleMobaNFCModule 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaNFCModuleAccess().getGroup()); }
+		(rule__MobaNFCModule__Group__0)
+		{ after(grammarAccess.getMobaNFCModuleAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Rule MobaGeofenceEvent
+ruleMobaGeofenceEvent
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaGeofenceEventAccess().getAlternatives()); }
+		(rule__MobaGeofenceEvent__Alternatives)
+		{ after(grammarAccess.getMobaGeofenceEventAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Rule MobaLowerBound
 ruleMobaLowerBound
 	@init {
@@ -1413,6 +1754,24 @@ rule__MobaApplicationFeature__Alternatives
 		{ before(grammarAccess.getMobaApplicationFeatureAccess().getMobaTransportSerializationTypeParserRuleCall_8()); }
 		ruleMobaTransportSerializationType
 		{ after(grammarAccess.getMobaApplicationFeatureAccess().getMobaTransportSerializationTypeParserRuleCall_8()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaApplicationFeatureAccess().getMobaExternalModuleParserRuleCall_9()); }
+		ruleMobaExternalModule
+		{ after(grammarAccess.getMobaApplicationFeatureAccess().getMobaExternalModuleParserRuleCall_9()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaApplicationFeatureAccess().getMobaTriggerParserRuleCall_10()); }
+		ruleMobaTrigger
+		{ after(grammarAccess.getMobaApplicationFeatureAccess().getMobaTriggerParserRuleCall_10()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaApplicationFeatureAccess().getMobaGeneratorSlotParserRuleCall_11()); }
+		ruleMobaGeneratorSlot
+		{ after(grammarAccess.getMobaApplicationFeatureAccess().getMobaGeneratorSlotParserRuleCall_11()); }
 	)
 ;
 finally {
@@ -2067,6 +2426,105 @@ rule__MobaDigitsConstraint__Alternatives_4
 		{ before(grammarAccess.getMobaDigitsConstraintAccess().getFilterFractionConstAssignment_4_1()); }
 		(rule__MobaDigitsConstraint__FilterFractionConstAssignment_4_1)
 		{ after(grammarAccess.getMobaDigitsConstraintAccess().getFilterFractionConstAssignment_4_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaTrigger__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaAppInstallTriggerParserRuleCall_0()); }
+		ruleMobaAppInstallTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaAppInstallTriggerParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaAppUpdatelTriggerParserRuleCall_1()); }
+		ruleMobaAppUpdatelTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaAppUpdatelTriggerParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaEmailTriggerParserRuleCall_2()); }
+		ruleMobaEmailTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaEmailTriggerParserRuleCall_2()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaDeviceStartupTriggerParserRuleCall_3()); }
+		ruleMobaDeviceStartupTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaDeviceStartupTriggerParserRuleCall_3()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaSMSTriggerParserRuleCall_4()); }
+		ruleMobaSMSTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaSMSTriggerParserRuleCall_4()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaPushTriggerParserRuleCall_5()); }
+		ruleMobaPushTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaPushTriggerParserRuleCall_5()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaTriggerAccess().getMobaGeofenceTriggerParserRuleCall_6()); }
+		ruleMobaGeofenceTrigger
+		{ after(grammarAccess.getMobaTriggerAccess().getMobaGeofenceTriggerParserRuleCall_6()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaExternalModule__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaExternalModuleAccess().getMobaBluetoothModuleParserRuleCall_0()); }
+		ruleMobaBluetoothModule
+		{ after(grammarAccess.getMobaExternalModuleAccess().getMobaBluetoothModuleParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaExternalModuleAccess().getMobaPushModuleParserRuleCall_1()); }
+		ruleMobaPushModule
+		{ after(grammarAccess.getMobaExternalModuleAccess().getMobaPushModuleParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaExternalModuleAccess().getMobaNFCModuleParserRuleCall_2()); }
+		ruleMobaNFCModule
+		{ after(grammarAccess.getMobaExternalModuleAccess().getMobaNFCModuleParserRuleCall_2()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceEvent__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaGeofenceEventAccess().getENTEREnumLiteralDeclaration_0()); }
+		('enter')
+		{ after(grammarAccess.getMobaGeofenceEventAccess().getENTEREnumLiteralDeclaration_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaGeofenceEventAccess().getLEAVEEnumLiteralDeclaration_1()); }
+		('leave')
+		{ after(grammarAccess.getMobaGeofenceEventAccess().getLEAVEEnumLiteralDeclaration_1()); }
 	)
 ;
 finally {
@@ -10158,6 +10616,708 @@ finally {
 }
 
 
+rule__MobaGeneratorSlot__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeneratorSlot__Group__0__Impl
+	rule__MobaGeneratorSlot__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeneratorSlotAccess().getSlotKeyword_0()); }
+	'slot'
+	{ after(grammarAccess.getMobaGeneratorSlotAccess().getSlotKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeneratorSlot__Group__1__Impl
+	rule__MobaGeneratorSlot__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeneratorSlotAccess().getNameAssignment_1()); }
+	(rule__MobaGeneratorSlot__NameAssignment_1)
+	{ after(grammarAccess.getMobaGeneratorSlotAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeneratorSlot__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeneratorSlotAccess().getGroup_2()); }
+	(rule__MobaGeneratorSlot__Group_2__0)?
+	{ after(grammarAccess.getMobaGeneratorSlotAccess().getGroup_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaGeneratorSlot__Group_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeneratorSlot__Group_2__0__Impl
+	rule__MobaGeneratorSlot__Group_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeneratorSlotAccess().getTypeKeyword_2_0()); }
+	'type'
+	{ after(grammarAccess.getMobaGeneratorSlotAccess().getTypeKeyword_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeneratorSlot__Group_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__Group_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeneratorSlotAccess().getTypeAssignment_2_1()); }
+	(rule__MobaGeneratorSlot__TypeAssignment_2_1)
+	{ after(grammarAccess.getMobaGeneratorSlotAccess().getTypeAssignment_2_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaAppInstallTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaAppInstallTrigger__Group__0__Impl
+	rule__MobaAppInstallTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppInstallTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaAppInstallTriggerAccess().getTriggerAppInstallKeyword_0()); }
+	'trigger app install'
+	{ after(grammarAccess.getMobaAppInstallTriggerAccess().getTriggerAppInstallKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppInstallTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaAppInstallTrigger__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppInstallTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaAppInstallTriggerAccess().getNameAssignment_1()); }
+	(rule__MobaAppInstallTrigger__NameAssignment_1)
+	{ after(grammarAccess.getMobaAppInstallTriggerAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaAppUpdatelTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaAppUpdatelTrigger__Group__0__Impl
+	rule__MobaAppUpdatelTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppUpdatelTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaAppUpdatelTriggerAccess().getTriggerAppUpdateKeyword_0()); }
+	'trigger app update'
+	{ after(grammarAccess.getMobaAppUpdatelTriggerAccess().getTriggerAppUpdateKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppUpdatelTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaAppUpdatelTrigger__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppUpdatelTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaAppUpdatelTriggerAccess().getNameAssignment_1()); }
+	(rule__MobaAppUpdatelTrigger__NameAssignment_1)
+	{ after(grammarAccess.getMobaAppUpdatelTriggerAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaEmailTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaEmailTrigger__Group__0__Impl
+	rule__MobaEmailTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaEmailTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaEmailTriggerAccess().getTriggerEmailKeyword_0()); }
+	'trigger email'
+	{ after(grammarAccess.getMobaEmailTriggerAccess().getTriggerEmailKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaEmailTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaEmailTrigger__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaEmailTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaEmailTriggerAccess().getNameAssignment_1()); }
+	(rule__MobaEmailTrigger__NameAssignment_1)
+	{ after(grammarAccess.getMobaEmailTriggerAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaDeviceStartupTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaDeviceStartupTrigger__Group__0__Impl
+	rule__MobaDeviceStartupTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDeviceStartupTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaDeviceStartupTriggerAccess().getTriggerDeviceStartKeyword_0()); }
+	'trigger device start'
+	{ after(grammarAccess.getMobaDeviceStartupTriggerAccess().getTriggerDeviceStartKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDeviceStartupTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaDeviceStartupTrigger__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDeviceStartupTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaDeviceStartupTriggerAccess().getNameAssignment_1()); }
+	(rule__MobaDeviceStartupTrigger__NameAssignment_1)
+	{ after(grammarAccess.getMobaDeviceStartupTriggerAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaSMSTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSMSTrigger__Group__0__Impl
+	rule__MobaSMSTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSMSTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSMSTriggerAccess().getTriggerSmsKeyword_0()); }
+	'trigger sms'
+	{ after(grammarAccess.getMobaSMSTriggerAccess().getTriggerSmsKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSMSTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSMSTrigger__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSMSTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSMSTriggerAccess().getNameAssignment_1()); }
+	(rule__MobaSMSTrigger__NameAssignment_1)
+	{ after(grammarAccess.getMobaSMSTriggerAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaPushTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaPushTrigger__Group__0__Impl
+	rule__MobaPushTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaPushTriggerAccess().getTriggerPushKeyword_0()); }
+	'trigger push'
+	{ after(grammarAccess.getMobaPushTriggerAccess().getTriggerPushKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaPushTrigger__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaPushTriggerAccess().getNameAssignment_1()); }
+	(rule__MobaPushTrigger__NameAssignment_1)
+	{ after(grammarAccess.getMobaPushTriggerAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaGeofenceTrigger__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeofenceTrigger__Group__0__Impl
+	rule__MobaGeofenceTrigger__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeofenceTriggerAccess().getTriggerGeofenceKeyword_0()); }
+	'trigger geofence'
+	{ after(grammarAccess.getMobaGeofenceTriggerAccess().getTriggerGeofenceKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeofenceTrigger__Group__1__Impl
+	rule__MobaGeofenceTrigger__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeAssignment_1()); }
+	(rule__MobaGeofenceTrigger__EventTypeAssignment_1)
+	{ after(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaGeofenceTrigger__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaGeofenceTriggerAccess().getNameAssignment_2()); }
+	(rule__MobaGeofenceTrigger__NameAssignment_2)
+	{ after(grammarAccess.getMobaGeofenceTriggerAccess().getNameAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaBluetoothModule__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaBluetoothModule__Group__0__Impl
+	rule__MobaBluetoothModule__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaBluetoothModule__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaBluetoothModuleAccess().getModuleBluetoothKeyword_0()); }
+	'module bluetooth'
+	{ after(grammarAccess.getMobaBluetoothModuleAccess().getModuleBluetoothKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaBluetoothModule__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaBluetoothModule__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaBluetoothModule__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaBluetoothModuleAccess().getNameAssignment_1()); }
+	(rule__MobaBluetoothModule__NameAssignment_1)
+	{ after(grammarAccess.getMobaBluetoothModuleAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaPushModule__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaPushModule__Group__0__Impl
+	rule__MobaPushModule__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushModule__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaPushModuleAccess().getModulePushKeyword_0()); }
+	'module push'
+	{ after(grammarAccess.getMobaPushModuleAccess().getModulePushKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushModule__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaPushModule__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushModule__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaPushModuleAccess().getNameAssignment_1()); }
+	(rule__MobaPushModule__NameAssignment_1)
+	{ after(grammarAccess.getMobaPushModuleAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaNFCModule__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaNFCModule__Group__0__Impl
+	rule__MobaNFCModule__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaNFCModule__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaNFCModuleAccess().getModuleNFCKeyword_0()); }
+	'module NFC'
+	{ after(grammarAccess.getMobaNFCModuleAccess().getModuleNFCKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaNFCModule__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaNFCModule__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaNFCModule__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaNFCModuleAccess().getNameAssignment_1()); }
+	(rule__MobaNFCModule__NameAssignment_1)
+	{ after(grammarAccess.getMobaNFCModuleAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 rule__MobaDataType__UnorderedGroup_3
 	@init {
 		int stackSize = keepStackSize();
@@ -14206,6 +15366,201 @@ rule__MobaDigitsConstraint__FilterFractionConstAssignment_4_1
 			{ after(grammarAccess.getMobaDigitsConstraintAccess().getFilterFractionConstMobaConstantCONSTANTTerminalRuleCall_4_1_0_1()); }
 		)
 		{ after(grammarAccess.getMobaDigitsConstraintAccess().getFilterFractionConstMobaConstantCrossReference_4_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaGeneratorSlotAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaGeneratorSlotAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeneratorSlot__TypeAssignment_2_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaGeneratorSlotAccess().getTypeSTRINGTerminalRuleCall_2_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getMobaGeneratorSlotAccess().getTypeSTRINGTerminalRuleCall_2_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppInstallTrigger__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaAppInstallTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaAppInstallTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaAppUpdatelTrigger__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaAppUpdatelTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaAppUpdatelTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaEmailTrigger__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaEmailTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaEmailTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDeviceStartupTrigger__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaDeviceStartupTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaDeviceStartupTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSMSTrigger__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSMSTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaSMSTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushTrigger__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaPushTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaPushTriggerAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__EventTypeAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeMobaGeofenceEventEnumRuleCall_1_0()); }
+		ruleMobaGeofenceEvent
+		{ after(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeMobaGeofenceEventEnumRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaGeofenceTrigger__NameAssignment_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaGeofenceTriggerAccess().getNameIDTerminalRuleCall_2_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaGeofenceTriggerAccess().getNameIDTerminalRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaBluetoothModule__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaBluetoothModuleAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaBluetoothModuleAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushModule__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaPushModuleAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaPushModuleAccess().getNameIDTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaNFCModule__NameAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaNFCModuleAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaNFCModuleAccess().getNameIDTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
