@@ -5,7 +5,6 @@ package org.mobadsl.semantic.model.moba.index.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.mobadsl.semantic.model.moba.index.*;
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
 import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;

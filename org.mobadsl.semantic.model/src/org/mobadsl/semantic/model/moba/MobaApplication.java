@@ -14,21 +14,17 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName
- * <em>Name</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion
- * <em>Version</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
- * <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion <em>Version</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface MobaApplication extends MobaPropertiesAble {
+public interface MobaApplication extends MobaFriendsAble {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute. <!--
 	 * begin-user-doc -->
@@ -65,12 +61,9 @@ public interface MobaApplication extends MobaPropertiesAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getName
-	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -350,10 +343,8 @@ public interface MobaApplication extends MobaPropertiesAble {
 	MobaSettings getActiveSettings();
 
 	/**
-	 * Returns whether the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
-	 * ' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}' attribute is set.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return whether the value of the '<em>Id</em>' attribute is set.
 	 * @see #getId()
 	 * @generated

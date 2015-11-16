@@ -1,5 +1,8 @@
 package org.mobadsl.api.template.repository;
 
+import java.io.EOFException;
+import java.util.List;
+
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry;
 

@@ -22,7 +22,7 @@ package org.mobadsl.semantic.model.moba;
  * @model
  * @generated
  */
-public interface MobaEntityReference extends MobaEntityFeature, MobaMultiplicityAble, MobaPropertiesAble {
+public interface MobaEntityReference extends MobaEntityFeature, MobaMultiplicityAble {
 	/**
 	 * Returns the value of the '<em><b>Cascading</b></em>' attribute.
 	 * <!-- begin-user-doc -->

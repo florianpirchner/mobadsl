@@ -2,6 +2,9 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -216,6 +219,12 @@ public class MobaTemplateImpl extends MobaApplicationFeatureImpl implements Moba
 		result.append(downloadTemplate);
 		result.append(')');
 		return result.toString();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<MobaTemplate> getAllSuperTypes() {
+		return new ArrayList<>();
 	}
 
 } //MobaTemplateImpl

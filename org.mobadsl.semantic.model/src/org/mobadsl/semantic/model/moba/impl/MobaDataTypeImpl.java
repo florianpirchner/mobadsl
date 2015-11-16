@@ -19,8 +19,6 @@ import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
-import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.RecursionException;
 import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
@@ -31,7 +29,6 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isPrimitive <em>Primitive</em>}</li>
@@ -51,15 +48,6 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * @generated
  */
 public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements MobaDataType {
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MobaProperty> properties;
-
 	/**
 	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -302,17 +290,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	protected EClass eStaticClass() {
 		return MobaPackage.Literals.MOBA_DATA_TYPE;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MobaProperty> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_DATA_TYPE__PROPERTIES);
-		}
-		return properties;
 	}
 
 	/**
@@ -639,8 +616,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
 				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
 			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
@@ -656,8 +631,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
-				return getProperties();
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
 				return getConstraints();
 			case MobaPackage.MOBA_DATA_TYPE__NAME:
@@ -700,10 +673,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
-				return;
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends MobaConstraint>)newValue);
@@ -758,9 +727,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
-				getProperties().clear();
-				return;
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
 				getConstraints().clear();
 				return;
@@ -814,8 +780,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
-				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
 			case MobaPackage.MOBA_DATA_TYPE__NAME:
@@ -854,12 +818,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_DATA_TYPE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
-				default: return -1;
-			}
-		}
 		if (baseClass == MobaConstraintable.class) {
 			switch (derivedFeatureID) {
 				case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS: return MobaPackage.MOBA_CONSTRAINTABLE__CONSTRAINTS;
@@ -875,12 +833,6 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_DATA_TYPE__PROPERTIES;
-				default: return -1;
-			}
-		}
 		if (baseClass == MobaConstraintable.class) {
 			switch (baseFeatureID) {
 				case MobaPackage.MOBA_CONSTRAINTABLE__CONSTRAINTS: return MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS;
@@ -963,20 +915,5 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	public List<MobaDataType> getAllSuperTypes() throws RecursionException {
 		List<MobaDataType> result = MobaUtil.getAllSuperTypes(this, MobaPackage.Literals.MOBA_DATA_TYPE__SUPER_TYPE);
 		return result;
-	}
-
-	@Override
-	public List<MobaProperty> getAllProperties() {
-		List<MobaDataType> types = getAllSuperTypes();
-		// add this instance to the begin of the list
-		types.add(0, this);
-
-		return MobaUtil.getAllFeatures(types, MobaProperty.class,
-				MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
-	}
-
-	@Override
-	public List<MobaProperty> getGenProperties() {
-		return MobaUtil.getGenFeatures(getAllProperties(), MobaPackage.Literals.MOBA_PROPERTY__KEY);
 	}
 } // MobaDataTypeImpl

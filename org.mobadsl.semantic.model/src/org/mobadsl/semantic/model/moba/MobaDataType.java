@@ -31,7 +31,7 @@ import java.util.List;
  * @model
  * @generated
  */
-public interface MobaDataType extends MobaApplicationFeature, MobaPropertiesAble, MobaConstraintable {
+public interface MobaDataType extends MobaApplicationFeature, MobaConstraintable {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
 	 * begin-user-doc -->

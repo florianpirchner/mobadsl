@@ -321,4 +321,10 @@ public class MobaGeneratorImpl extends MobaApplicationFeatureImpl implements Mob
 		return MobaUtil.toGeneratorVersionedId(getName(), app.getVersion());
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<MobaGenerator> getAllSuperTypes() {
+		return new ArrayList<>();
+	}
+	
 } // MobaGeneratorImpl

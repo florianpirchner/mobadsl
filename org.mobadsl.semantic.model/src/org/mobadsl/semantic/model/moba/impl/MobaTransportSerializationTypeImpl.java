@@ -2,20 +2,13 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
-import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 
 /**
@@ -26,9 +19,6 @@ import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
  * </p>
  * <ul>
  * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl#getProperties
- * <em>Properties</em>}</li>
- * <li>
  * {@link org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl#getName
  * <em>Name</em>}</li>
  * </ul>
@@ -37,16 +27,6 @@ import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
  */
 public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureImpl
 		implements MobaTransportSerializationType {
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MobaProperty> properties;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -91,19 +71,6 @@ public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureIm
 	 * 
 	 * @generated
 	 */
-	public EList<MobaProperty> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this,
-					MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES);
-		}
-		return properties;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -127,24 +94,8 @@ public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureIm
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
-			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
-			return getProperties();
 		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME:
 			return getName();
 		}
@@ -160,10 +111,6 @@ public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
-			getProperties().clear();
-			getProperties().addAll((Collection<? extends MobaProperty>) newValue);
-			return;
 		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME:
 			setName((String) newValue);
 			return;
@@ -179,9 +126,6 @@ public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
-			getProperties().clear();
-			return;
 		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -197,48 +141,10 @@ public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
-			return properties != null && !properties.isEmpty();
 		case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (derivedFeatureID) {
-			case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES:
-				return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
-			default:
-				return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (baseFeatureID) {
-			case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES:
-				return MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES;
-			default:
-				return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -258,14 +164,10 @@ public class MobaTransportSerializationTypeImpl extends MobaApplicationFeatureIm
 		return result.toString();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<MobaProperty> getAllProperties() {
-		return getProperties();
-	}
-
-	@Override
-	public List<MobaProperty> getGenProperties() {
-		return getProperties();
+	public List<MobaTransportSerializationType> getAllSuperTypes() {
+		return new ArrayList<>();
 	}
 
 } // MobaTransportSerializationTypeImpl

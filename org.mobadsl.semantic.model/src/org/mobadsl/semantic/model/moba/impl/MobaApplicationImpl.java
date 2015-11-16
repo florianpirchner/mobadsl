@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaApplication;
@@ -45,7 +44,6 @@ import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getVersion <em>Version</em>}</li>
@@ -54,16 +52,7 @@ import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
  *
  * @generated
  */
-public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements MobaApplication {
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MobaProperty> properties;
-
+public abstract class MobaApplicationImpl extends MobaFriendsAbleImpl implements MobaApplication {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -140,17 +129,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MobaProperty> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_APPLICATION__PROPERTIES);
-		}
-		return properties;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -203,8 +181,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
@@ -218,8 +194,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
-				return getProperties();
 			case MobaPackage.MOBA_APPLICATION__ID:
 				return getId();
 			case MobaPackage.MOBA_APPLICATION__NAME:
@@ -240,10 +214,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
-				return;
 			case MobaPackage.MOBA_APPLICATION__NAME:
 				setName((String)newValue);
 				return;
@@ -265,9 +235,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
-				getProperties().clear();
-				return;
 			case MobaPackage.MOBA_APPLICATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -288,8 +255,6 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
-				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_APPLICATION__ID:
 				return isSetId();
 			case MobaPackage.MOBA_APPLICATION__NAME:
@@ -530,6 +495,11 @@ public class MobaApplicationImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public boolean isSetId() {
 		return getId() != null;
+	}
+
+	@Override
+	public <T extends EObject> List<T> getAllSuperTypes() {
+		return new ArrayList<>();
 	}
 
 } // MobaApplicationImpl

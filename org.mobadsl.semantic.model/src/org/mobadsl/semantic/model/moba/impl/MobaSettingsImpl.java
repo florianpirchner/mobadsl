@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
-import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
@@ -30,7 +28,6 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getFeatures <em>Features</em>}</li>
@@ -40,15 +37,6 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * @generated
  */
 public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements MobaSettings {
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MobaProperty> properties;
-
 	/**
 	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -118,17 +106,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	protected EClass eStaticClass() {
 		return MobaPackage.Literals.MOBA_SETTINGS;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MobaProperty> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_SETTINGS__PROPERTIES);
-		}
-		return properties;
 	}
 
 	/**
@@ -222,8 +199,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_SETTINGS__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case MobaPackage.MOBA_SETTINGS__FEATURES:
 				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
@@ -237,8 +212,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_SETTINGS__PROPERTIES:
-				return getProperties();
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
@@ -260,10 +233,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_SETTINGS__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
-				return;
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				setSuperType((MobaSettings)newValue);
 				return;
@@ -288,9 +257,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_SETTINGS__PROPERTIES:
-				getProperties().clear();
-				return;
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				setSuperType((MobaSettings)null);
 				return;
@@ -314,8 +280,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_SETTINGS__PROPERTIES:
-				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
 				return superType != null;
 			case MobaPackage.MOBA_SETTINGS__NAME:
@@ -326,36 +290,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_SETTINGS__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_SETTINGS__PROPERTIES;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -423,18 +357,4 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 		return MobaUtil.getGenFeatures(getAllAttributes(), MobaPackage.Literals.MOBA_FEATURE__NAME);
 	}
 
-	@Override
-	public List<MobaProperty> getAllProperties() {
-		List<MobaSettings> types = getAllSuperTypes();
-		// add this instance to the begin of the list
-		types.add(0, this);
-
-		return MobaUtil.getAllFeatures(types, MobaProperty.class,
-				MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
-	}
-
-	@Override
-	public List<MobaProperty> getGenProperties() {
-		return MobaUtil.getGenFeatures(getAllProperties(), MobaPackage.Literals.MOBA_PROPERTY__KEY);
-	}
 } // MobaSettingsImpl

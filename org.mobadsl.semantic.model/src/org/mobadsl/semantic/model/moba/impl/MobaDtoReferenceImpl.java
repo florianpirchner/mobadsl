@@ -2,24 +2,16 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
-import java.util.Collection;
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
-import org.mobadsl.semantic.model.moba.MobaProperty;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +22,6 @@ import org.mobadsl.semantic.model.moba.MobaProperty;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getMultiplicity <em>Multiplicity</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isCascading <em>Cascading</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isTransient <em>Transient</em>}</li>
@@ -49,16 +40,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * @ordered
 	 */
 	protected MobaMuliplicity multiplicity;
-
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MobaProperty> properties;
 
 	/**
 	 * The default value of the '{@link #isCascading() <em>Cascading</em>}' attribute.
@@ -197,18 +178,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MobaProperty> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES);
-		}
-		return properties;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isCascading() {
 		return cascading;
 	}
@@ -315,8 +284,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		switch (featureID) {
 			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
 				return basicSetMultiplicity(null, msgs);
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -331,8 +298,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		switch (featureID) {
 			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
 				return getMultiplicity();
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
-				return getProperties();
 			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
 				return isCascading();
 			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
@@ -357,10 +322,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		switch (featureID) {
 			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
 				setMultiplicity((MobaMuliplicity)newValue);
-				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
 				return;
 			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
 				setCascading((Boolean)newValue);
@@ -389,9 +350,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
 				setMultiplicity((MobaMuliplicity)null);
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
-				getProperties().clear();
-				return;
 			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
 				setCascading(CASCADING_EDEFAULT);
 				return;
@@ -418,8 +376,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		switch (featureID) {
 			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
 				return multiplicity != null;
-			case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES:
-				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
 				return cascading != CASCADING_EDEFAULT;
 			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
@@ -445,12 +401,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 				default: return -1;
 			}
 		}
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
-				default: return -1;
-			}
-		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -464,12 +414,6 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		if (baseClass == MobaMultiplicityAble.class) {
 			switch (baseFeatureID) {
 				case MobaPackage.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY: return MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY;
-				default: return -1;
-			}
-		}
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_DTO_REFERENCE__PROPERTIES;
 				default: return -1;
 			}
 		}
@@ -496,14 +440,4 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		return result.toString();
 	}
 
-	@Override
-	public List<MobaProperty> getAllProperties() {
-		return getProperties();
-	}
-
-	@Override
-	public List<MobaProperty> getGenProperties() {
-		return getProperties();
-	}
-	
 } //MobaPayloadReferenceImpl

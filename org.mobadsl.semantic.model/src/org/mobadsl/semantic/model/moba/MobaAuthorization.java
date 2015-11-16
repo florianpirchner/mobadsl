@@ -19,7 +19,7 @@ package org.mobadsl.semantic.model.moba;
  * @model
  * @generated
  */
-public interface MobaAuthorization extends MobaApplicationFeature, MobaPropertiesAble {
+public interface MobaAuthorization extends MobaApplicationFeature {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
