@@ -14,10 +14,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion <em>Version</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+ * <em>Name</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion
+ * <em>Version</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
+ * <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
@@ -61,9 +65,12 @@ public interface MobaApplication extends MobaFriendsAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -213,9 +220,158 @@ public interface MobaApplication extends MobaFriendsAble {
 	 */
 	List<MobaTemplate> getTemplates();
 
+	/**
+	 * Returns the moba external modules for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaExternalModule> getExternalModules();
+
+	/**
+	 * Returns the moba generator slots for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaGeneratorSlot> getGeneratorSlots();
+
+	/**
+	 * Returns the moba triggers for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaTrigger> getTriggers();
+
 	// all features
 	List<MobaApplicationFeature> getAllFeatures();
 
+
+	// gen
+	/**
+	 * Returns the moba constants for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaConstant> getGenConstants();
+
+	/**
+	 * Returns the moba datas for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaData> getGenDatas();
+
+	/**
+	 * Returns the moba dtos for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaEntity> getGenDtos();
+
+	/**
+	 * Returns the moba payloads for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaDto> getGenPayloads();
+
+	/**
+	 * Returns the moba queues for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaQueue> getGenQueues();
+
+	/**
+	 * Returns the moba datatypes for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaDataType> getGenDataTypes();
+
+	/**
+	 * Returns the moba gernerators for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaGenerator> getGenGenerators();
+
+	/**
+	 * Returns the moba services for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaService> getGenRESTs();
+
+	/**
+	 * Returns the moba restCustom services for the current application.
+	 * Excluding the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaRESTCustomService> getGenRestCustomServices();
+
+	/**
+	 * Returns the moba restCrud services for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaRESTCrud> getGenRESTCruds();
+
+	/**
+	 * Returns the moba settings for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaSettings> getGenSettings();
+
+	/**
+	 * Returns the moba datas for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaTemplate> getGenTemplates();
+
+	/**
+	 * Returns the moba external modules for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaExternalModule> getGenExternalModules();
+
+	/**
+	 * Returns the moba generator slots for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaGeneratorSlot> getGenGeneratorSlots();
+
+	/**
+	 * Returns the moba triggers for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaTrigger> getGenTriggers();
+
+	// all features
+	List<MobaApplicationFeature> getGenFeatures();
+	
 	/**
 	 * Returns the moba constants for the current application. Including the
 	 * "used templates".
@@ -343,8 +499,34 @@ public interface MobaApplication extends MobaFriendsAble {
 	MobaSettings getActiveSettings();
 
 	/**
-	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * Returns the moba external modules for the current application. Including
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaExternalModule> getAllExternalModules();
+
+	/**
+	 * Returns the moba generator slots for the current application. Including
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaGeneratorSlot> getAllGeneratorSlots();
+
+	/**
+	 * Returns the moba triggers for the current application. Including the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaTrigger> getAllTriggers();
+
+	/**
+	 * Returns whether the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
+	 * ' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return whether the value of the '<em>Id</em>' attribute is set.
 	 * @see #getId()
 	 * @generated
