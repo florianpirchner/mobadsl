@@ -77,6 +77,18 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 		return Scopes.scopeFor(ctx.allTransportSerializationTypes);
 	}
 
+	def IScope scope_MobaServer(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allServers);
+	}
+
+	def IScope scope_MobaTrigger(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allTriggers);
+	}
+
+	def IScope scope_MobaExternalModule(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allExternalModules);
+	}
+
 	def IScope scope_MobaGenerator(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allGenerators, [
 			return QualifiedName.create(MobaUtil.toVersionedIdModelValue(it.versionedId).split("\\."))

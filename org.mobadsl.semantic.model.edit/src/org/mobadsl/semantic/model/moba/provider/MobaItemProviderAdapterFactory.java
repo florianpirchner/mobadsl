@@ -72,6 +72,52 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaModelItemProvider mobaModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaModelAdapter() {
+		if (mobaModelItemProvider == null) {
+			mobaModelItemProvider = new MobaModelItemProvider(this);
+		}
+
+		return mobaModelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaProject} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaProjectItemProvider mobaProjectItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaProject}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaProjectAdapter() {
+		if (mobaProjectItemProvider == null) {
+			mobaProjectItemProvider = new MobaProjectItemProvider(this);
+		}
+
+		return mobaProjectItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaApplication} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,6 +299,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		}
 
 		return mobaGeneratorIDFeatureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaGeneratorSlotItemProvider mobaGeneratorSlotItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaGeneratorSlotAdapter() {
+		if (mobaGeneratorSlotItemProvider == null) {
+			mobaGeneratorSlotItemProvider = new MobaGeneratorSlotItemProvider(this);
+		}
+
+		return mobaGeneratorSlotItemProvider;
 	}
 
 	/**
@@ -1038,6 +1107,282 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaAppInstallTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaAppInstallTriggerItemProvider mobaAppInstallTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaAppInstallTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaAppInstallTriggerAdapter() {
+		if (mobaAppInstallTriggerItemProvider == null) {
+			mobaAppInstallTriggerItemProvider = new MobaAppInstallTriggerItemProvider(this);
+		}
+
+		return mobaAppInstallTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaAppUpdateTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaAppUpdateTriggerItemProvider mobaAppUpdateTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaAppUpdateTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaAppUpdateTriggerAdapter() {
+		if (mobaAppUpdateTriggerItemProvider == null) {
+			mobaAppUpdateTriggerItemProvider = new MobaAppUpdateTriggerItemProvider(this);
+		}
+
+		return mobaAppUpdateTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaSMSTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaSMSTriggerItemProvider mobaSMSTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaSMSTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaSMSTriggerAdapter() {
+		if (mobaSMSTriggerItemProvider == null) {
+			mobaSMSTriggerItemProvider = new MobaSMSTriggerItemProvider(this);
+		}
+
+		return mobaSMSTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaDeviceStartupTriggerItemProvider mobaDeviceStartupTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaDeviceStartupTriggerAdapter() {
+		if (mobaDeviceStartupTriggerItemProvider == null) {
+			mobaDeviceStartupTriggerItemProvider = new MobaDeviceStartupTriggerItemProvider(this);
+		}
+
+		return mobaDeviceStartupTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaEmailTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaEmailTriggerItemProvider mobaEmailTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaEmailTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaEmailTriggerAdapter() {
+		if (mobaEmailTriggerItemProvider == null) {
+			mobaEmailTriggerItemProvider = new MobaEmailTriggerItemProvider(this);
+		}
+
+		return mobaEmailTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaTimerTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaTimerTriggerItemProvider mobaTimerTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaTimerTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaTimerTriggerAdapter() {
+		if (mobaTimerTriggerItemProvider == null) {
+			mobaTimerTriggerItemProvider = new MobaTimerTriggerItemProvider(this);
+		}
+
+		return mobaTimerTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaPushTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaPushTriggerItemProvider mobaPushTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaPushTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaPushTriggerAdapter() {
+		if (mobaPushTriggerItemProvider == null) {
+			mobaPushTriggerItemProvider = new MobaPushTriggerItemProvider(this);
+		}
+
+		return mobaPushTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaGeofenceTrigger} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaGeofenceTriggerItemProvider mobaGeofenceTriggerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaGeofenceTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaGeofenceTriggerAdapter() {
+		if (mobaGeofenceTriggerItemProvider == null) {
+			mobaGeofenceTriggerItemProvider = new MobaGeofenceTriggerItemProvider(this);
+		}
+
+		return mobaGeofenceTriggerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaFriend} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaFriendItemProvider mobaFriendItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaFriend}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaFriendAdapter() {
+		if (mobaFriendItemProvider == null) {
+			mobaFriendItemProvider = new MobaFriendItemProvider(this);
+		}
+
+		return mobaFriendItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaBluetoothModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaBluetoothModuleItemProvider mobaBluetoothModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaBluetoothModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaBluetoothModuleAdapter() {
+		if (mobaBluetoothModuleItemProvider == null) {
+			mobaBluetoothModuleItemProvider = new MobaBluetoothModuleItemProvider(this);
+		}
+
+		return mobaBluetoothModuleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaNFCModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaNFCModuleItemProvider mobaNFCModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaNFCModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaNFCModuleAdapter() {
+		if (mobaNFCModuleItemProvider == null) {
+			mobaNFCModuleItemProvider = new MobaNFCModuleItemProvider(this);
+		}
+
+		return mobaNFCModuleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaPushModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaPushModuleItemProvider mobaPushModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaPushModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaPushModuleAdapter() {
+		if (mobaPushModuleItemProvider == null) {
+			mobaPushModuleItemProvider = new MobaPushModuleItemProvider(this);
+		}
+
+		return mobaPushModuleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1136,6 +1481,8 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	 * @generated
 	 */
 	public void dispose() {
+		if (mobaModelItemProvider != null) mobaModelItemProvider.dispose();
+		if (mobaProjectItemProvider != null) mobaProjectItemProvider.dispose();
 		if (mobaApplicationItemProvider != null) mobaApplicationItemProvider.dispose();
 		if (mobaTemplateItemProvider != null) mobaTemplateItemProvider.dispose();
 		if (mobaServerItemProvider != null) mobaServerItemProvider.dispose();
@@ -1144,6 +1491,7 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaGeneratorItemProvider != null) mobaGeneratorItemProvider.dispose();
 		if (mobaGeneratorMixinFeatureItemProvider != null) mobaGeneratorMixinFeatureItemProvider.dispose();
 		if (mobaGeneratorIDFeatureItemProvider != null) mobaGeneratorIDFeatureItemProvider.dispose();
+		if (mobaGeneratorSlotItemProvider != null) mobaGeneratorSlotItemProvider.dispose();
 		if (mobaDataTypeItemProvider != null) mobaDataTypeItemProvider.dispose();
 		if (mobaConstantItemProvider != null) mobaConstantItemProvider.dispose();
 		if (mobaConstantValueItemProvider != null) mobaConstantValueItemProvider.dispose();
@@ -1178,6 +1526,18 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaDigitsConstraintItemProvider != null) mobaDigitsConstraintItemProvider.dispose();
 		if (mobaEnumItemProvider != null) mobaEnumItemProvider.dispose();
 		if (mobaEnumLiteralItemProvider != null) mobaEnumLiteralItemProvider.dispose();
+		if (mobaAppInstallTriggerItemProvider != null) mobaAppInstallTriggerItemProvider.dispose();
+		if (mobaAppUpdateTriggerItemProvider != null) mobaAppUpdateTriggerItemProvider.dispose();
+		if (mobaSMSTriggerItemProvider != null) mobaSMSTriggerItemProvider.dispose();
+		if (mobaDeviceStartupTriggerItemProvider != null) mobaDeviceStartupTriggerItemProvider.dispose();
+		if (mobaEmailTriggerItemProvider != null) mobaEmailTriggerItemProvider.dispose();
+		if (mobaTimerTriggerItemProvider != null) mobaTimerTriggerItemProvider.dispose();
+		if (mobaPushTriggerItemProvider != null) mobaPushTriggerItemProvider.dispose();
+		if (mobaGeofenceTriggerItemProvider != null) mobaGeofenceTriggerItemProvider.dispose();
+		if (mobaFriendItemProvider != null) mobaFriendItemProvider.dispose();
+		if (mobaBluetoothModuleItemProvider != null) mobaBluetoothModuleItemProvider.dispose();
+		if (mobaNFCModuleItemProvider != null) mobaNFCModuleItemProvider.dispose();
+		if (mobaPushModuleItemProvider != null) mobaPushModuleItemProvider.dispose();
 	}
 
 }

@@ -87,7 +87,6 @@ public class MobaConstantItemProvider extends MobaApplicationFeatureItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_CONSTANT__VALUE_AST);
 		}
 		return childrenFeatures;
@@ -147,7 +146,6 @@ public class MobaConstantItemProvider extends MobaApplicationFeatureItemProvider
 			case MobaPackage.MOBA_CONSTANT__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_CONSTANT__PROPERTIES:
 			case MobaPackage.MOBA_CONSTANT__VALUE_AST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -165,11 +163,6 @@ public class MobaConstantItemProvider extends MobaApplicationFeatureItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

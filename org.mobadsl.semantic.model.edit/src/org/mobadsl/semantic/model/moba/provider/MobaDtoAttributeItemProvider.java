@@ -203,7 +203,6 @@ public class MobaDtoAttributeItemProvider extends MobaDtoFeatureItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS);
 		}
 		return childrenFeatures;
@@ -268,7 +267,6 @@ public class MobaDtoAttributeItemProvider extends MobaDtoFeatureItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__MULTIPLICITY:
-			case MobaPackage.MOBA_DTO_ATTRIBUTE__PROPERTIES:
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -291,11 +289,6 @@ public class MobaDtoAttributeItemProvider extends MobaDtoFeatureItemProvider {
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY,
 				 MobaFactory.eINSTANCE.createMobaMuliplicity()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

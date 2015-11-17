@@ -48,54 +48,8 @@ public class MobaEnumItemProvider extends MobaApplicationFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuperTypePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Super Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuperTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaEnum_superType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEnum_superType_feature", "_UI_MobaEnum_type"),
-				 MobaPackage.Literals.MOBA_ENUM__SUPER_TYPE,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaEnum_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEnum_name_feature", "_UI_MobaEnum_type"),
-				 MobaPackage.Literals.MOBA_ENUM__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -110,7 +64,6 @@ public class MobaEnumItemProvider extends MobaApplicationFeatureItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_ENUM__LITERALS);
 		}
 		return childrenFeatures;
@@ -148,10 +101,7 @@ public class MobaEnumItemProvider extends MobaApplicationFeatureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaEnum)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_MobaEnum_type") :
-			getString("_UI_MobaEnum_type") + " " + label;
+		return getString("_UI_MobaEnum_type");
 	}
 	
 
@@ -167,10 +117,6 @@ public class MobaEnumItemProvider extends MobaApplicationFeatureItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaEnum.class)) {
-			case MobaPackage.MOBA_ENUM__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case MobaPackage.MOBA_ENUM__PROPERTIES:
 			case MobaPackage.MOBA_ENUM__LITERALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -188,11 +134,6 @@ public class MobaEnumItemProvider extends MobaApplicationFeatureItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

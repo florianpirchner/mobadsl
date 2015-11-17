@@ -10,9 +10,8 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.mobadsl.semantic.model.moba.*;
 import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
-import org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger;
+import org.mobadsl.semantic.model.moba.MobaAppUpdateTrigger;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
-import org.mobadsl.semantic.model.moba.MobaBackgroundApplication;
 import org.mobadsl.semantic.model.moba.MobaBlueToothModuleType;
 import org.mobadsl.semantic.model.moba.MobaBluetoothModule;
 import org.mobadsl.semantic.model.moba.MobaCache;
@@ -45,6 +44,7 @@ import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
+import org.mobadsl.semantic.model.moba.MobaModel;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaNFCModule;
 import org.mobadsl.semantic.model.moba.MobaNFCModuleType;
@@ -72,7 +72,6 @@ import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
-import org.mobadsl.semantic.model.moba.MobaUiApplication;
 import org.mobadsl.semantic.model.moba.MobaUpperBound;
 
 /**
@@ -119,7 +118,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case MobaPackage.MOBA_MODEL: return createMobaModel();
 			case MobaPackage.MOBA_PROJECT: return createMobaProject();
+			case MobaPackage.MOBA_APPLICATION: return createMobaApplication();
 			case MobaPackage.MOBA_TEMPLATE: return createMobaTemplate();
 			case MobaPackage.MOBA_SERVER: return createMobaServer();
 			case MobaPackage.MOBA_AUTHORIZATION: return createMobaAuthorization();
@@ -127,6 +128,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_GENERATOR: return createMobaGenerator();
 			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE: return createMobaGeneratorMixinFeature();
 			case MobaPackage.MOBA_GENERATOR_ID_FEATURE: return createMobaGeneratorIDFeature();
+			case MobaPackage.MOBA_GENERATOR_SLOT: return createMobaGeneratorSlot();
 			case MobaPackage.MOBA_DATA_TYPE: return createMobaDataType();
 			case MobaPackage.MOBA_CONSTANT: return createMobaConstant();
 			case MobaPackage.MOBA_CONSTANT_VALUE: return createMobaConstantValue();
@@ -161,17 +163,14 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_DIGITS_CONSTRAINT: return createMobaDigitsConstraint();
 			case MobaPackage.MOBA_ENUM: return createMobaEnum();
 			case MobaPackage.MOBA_ENUM_LITERAL: return createMobaEnumLiteral();
-			case MobaPackage.MOBA_UI_APPLICATION: return createMobaUiApplication();
-			case MobaPackage.MOBA_BACKGROUND_APPLICATION: return createMobaBackgroundApplication();
 			case MobaPackage.MOBA_APP_INSTALL_TRIGGER: return createMobaAppInstallTrigger();
-			case MobaPackage.MOBA_APP_UPDATEL_TRIGGER: return createMobaAppUpdatelTrigger();
+			case MobaPackage.MOBA_APP_UPDATE_TRIGGER: return createMobaAppUpdateTrigger();
 			case MobaPackage.MOBA_SMS_TRIGGER: return createMobaSMSTrigger();
 			case MobaPackage.MOBA_DEVICE_STARTUP_TRIGGER: return createMobaDeviceStartupTrigger();
 			case MobaPackage.MOBA_EMAIL_TRIGGER: return createMobaEmailTrigger();
 			case MobaPackage.MOBA_TIMER_TRIGGER: return createMobaTimerTrigger();
 			case MobaPackage.MOBA_PUSH_TRIGGER: return createMobaPushTrigger();
 			case MobaPackage.MOBA_GEOFENCE_TRIGGER: return createMobaGeofenceTrigger();
-			case MobaPackage.MOBA_GENERATOR_SLOT: return createMobaGeneratorSlot();
 			case MobaPackage.MOBA_FRIEND: return createMobaFriend();
 			case MobaPackage.MOBA_BLUETOOTH_MODULE: return createMobaBluetoothModule();
 			case MobaPackage.MOBA_NFC_MODULE: return createMobaNFCModule();
@@ -236,9 +235,29 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaModel createMobaModel() {
+		MobaModelImpl mobaModel = new MobaModelImpl();
+		return mobaModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MobaProject createMobaProject() {
 		MobaProjectImpl mobaProject = new MobaProjectImpl();
 		return mobaProject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaApplication createMobaApplication() {
+		MobaApplicationImpl mobaApplication = new MobaApplicationImpl();
+		return mobaApplication;
 	}
 
 	/**
@@ -656,26 +675,6 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaUiApplication createMobaUiApplication() {
-		MobaUiApplicationImpl mobaUiApplication = new MobaUiApplicationImpl();
-		return mobaUiApplication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MobaBackgroundApplication createMobaBackgroundApplication() {
-		MobaBackgroundApplicationImpl mobaBackgroundApplication = new MobaBackgroundApplicationImpl();
-		return mobaBackgroundApplication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MobaAppInstallTrigger createMobaAppInstallTrigger() {
 		MobaAppInstallTriggerImpl mobaAppInstallTrigger = new MobaAppInstallTriggerImpl();
 		return mobaAppInstallTrigger;
@@ -686,9 +685,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaAppUpdatelTrigger createMobaAppUpdatelTrigger() {
-		MobaAppUpdatelTriggerImpl mobaAppUpdatelTrigger = new MobaAppUpdatelTriggerImpl();
-		return mobaAppUpdatelTrigger;
+	public MobaAppUpdateTrigger createMobaAppUpdateTrigger() {
+		MobaAppUpdateTriggerImpl mobaAppUpdateTrigger = new MobaAppUpdateTriggerImpl();
+		return mobaAppUpdateTrigger;
 	}
 
 	/**

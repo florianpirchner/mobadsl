@@ -3,15 +3,37 @@ grammar org.mobadsl.^grammar.Moba with org.eclipse.xtext.common.Terminals
 import "platform:/resource/org.mobadsl.semantic.model/model/Moba.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+MobaModel:
+	features+=MobaModelFeature*;
+
+MobaModelFeature:
+	MobaProject | MobaApplication;
+
+MobaProject:
+	'project' name=ID 'version' '=' version=VERSION MobaFriendsAble '{'
+	(('uiApp' '=' uiApplication=[MobaApplication|ID_VERSION])?
+	&
+	('backgroundApp' '=' backgroundApplication=[MobaApplication|ID_VERSION])?)
+	'}';
+
 MobaApplication:
-	'application' name=ID 'version' '=' version=VERSION MobaPropertiesAble? '{'
+	'application' name=ID 'version' '=' version=VERSION MobaFriendsAble '{'
 	(features+=MobaApplicationFeature*)
 	'}';
 
 MobaApplicationFeature:
 	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaREST | MobaGenerator | MobaAuthorization |
 	MobaTransportSerializationType | MobaExternalModule | MobaTrigger |
-	MobaGeneratorSlot;
+	MobaGeneratorSlot | MobaServer;
+
+MobaServer:
+	'server' name=ID 'url' '=' url=STRING ('extends' superType=[MobaServer])? MobaFriendsAble '{'
+		(
+			('autorizations' '=' '(' authorization+=[MobaAuthorization|CONSTANT] (',' authorization+=[MobaAuthorization|CONSTANT])*')')? &
+			('services' '=' '(' services+=[MobaREST] (',' services+=[MobaREST])*')')?
+		)
+	'}'
+;
 
 	/**
  * Will import a Moba-Application.
@@ -34,10 +56,10 @@ MobaGeneratorMixinFeature:
 	'mixin' generatorRef=[MobaGenerator|ID_VERSION];
 
 MobaAuthorization:
-	'authorization' name=CONSTANT MobaPropertiesAble?;
+	'authorization' name=CONSTANT MobaFriendsAble;
 
 MobaTransportSerializationType:
-	'serialization' name=CONSTANT MobaPropertiesAble?;
+	'serialization' name=CONSTANT MobaFriendsAble;
 
 MobaDataType:
 	'datatype' name=ID ('extends' superType=[MobaDataType])?
@@ -48,9 +70,10 @@ MobaDataType:
 	| (enumAST=MobaEnum)
 	| (string?="isString" (primitive?='isPrimitive')?)
 	| (numeric?="isNumeric" (primitive?='isPrimitive')?)
-	| (decimal?="isDecimal" (primitive?='isPrimitive')?))) MobaPropertiesAble?;
+	| (decimal?="isDecimal" (primitive?='isPrimitive')?))) MobaFriendsAble;
 
 MobaEnum:
+	{MobaEnum}
 	'enum' '{'
 	literals+=MobaEnumLiteral*
 	'}';
@@ -59,21 +82,18 @@ MobaEnumLiteral:
 	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT ')';
 
 MobaConstant:
-	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaPropertiesAble?;
+	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaFriendsAble;
 
 MobaConstantValue:
 	(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]) ('+'
 	tail=MobaConstantValue)?;
 
-fragment MobaPropertiesAble:
-	'[' properties+=MobaProperty (',' properties+=MobaProperty)* ']';
-	
 fragment MobaFriendsAble:
-	'friends' '(' friends+=MobaFriend (',' friends+=MobaFriend)* ']';
+	(('friends' '(' friends+=MobaFriend (',' friends+=MobaFriend)* ')')? & ('[' properties+=MobaProperty (','
+	properties+=MobaProperty)* ']')?);
 
 MobaFriend:
-	(valueString=STRING | valueConst=[MobaConstant|CONSTANT])
-;
+	(valueString=STRING | valueConst=[MobaConstant|CONSTANT]);
 
 MobaProperty:
 	(keyString=STRING | keyConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING | valueConst=[MobaConstant|CONSTANT]);
@@ -83,7 +103,7 @@ MobaData:
 
 MobaSettings:
 	{MobaSettings}
-	(active?='active')? 'settings' name=ID ('extends' superType=[MobaSettings])? MobaPropertiesAble? '{'
+	(active?='active')? 'settings' name=ID ('extends' superType=[MobaSettings])? MobaFriendsAble '{'
 	features+=MobaSettingsFeature*
 	'}';
 
@@ -100,7 +120,7 @@ MobaCache:
 	cacheStrategyConst=[MobaConstant]))?) ')')?;
 
 MobaEntity:
-	'entity' name=ID (('extends' superType=[MobaEntity])? & (cache=MobaCache)?) MobaPropertiesAble? '{'
+	'entity' name=ID (('extends' superType=[MobaEntity])? & (cache=MobaCache)?) MobaFriendsAble '{'
 	features+=MobaEntityFeature*
 	(index=MobaEntityIndex)?
 	'}';
@@ -109,12 +129,12 @@ MobaEntityIndex:
 	'index' attributes+=[MobaEntityAttribute|ID] (',' attributes+=[MobaEntityAttribute|ID]*);
 
 MobaDto:
-	'dto' name=ID ('extends' superType=[MobaDto])? MobaPropertiesAble? '{'
+	'dto' name=ID ('extends' superType=[MobaDto])? MobaFriendsAble '{'
 	features+=MobaDtoFeature*
 	'}';
 
 MobaQueue:
-	'queue' name=ID ('extends' superType=[MobaQueue])? MobaPropertiesAble? '{'
+	'queue' name=ID ('extends' superType=[MobaQueue])? MobaFriendsAble '{'
 	features+=MobaQueueFeature*
 	'}';
 
@@ -122,7 +142,7 @@ MobaREST:
 	MobaRESTCustomService | MobaRESTCrud | MobaRESTWorkflow;
 
 MobaRESTCustomService:
-	'rest' (bigData?='bigData')? name=ID ('extends' superType=[MobaRESTCustomService])? MobaPropertiesAble? '{'
+	'rest' (bigData?='bigData')? name=ID ('extends' superType=[MobaRESTCustomService])? MobaFriendsAble '{'
 	(('headers' '{'
 	headers+=MobaRestHeader*
 	'}')? &
@@ -150,10 +170,10 @@ MobaRestHeader returns MobaRESTAttribute:
 	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
 MobaRESTCrud:
-	'restCrud' name=ID ('extends' superType=[MobaRESTCrud])? MobaPropertiesAble?;
+	'restCrud' name=ID ('extends' superType=[MobaRESTCrud])? MobaFriendsAble;
 
 MobaRESTWorkflow:
-	'restWorkflow' name=ID ('extends' superType=[MobaRESTWorkflow])? MobaPropertiesAble? '{'
+	'restWorkflow' name=ID ('extends' superType=[MobaRESTWorkflow])? MobaFriendsAble '{'
 	('service' services+=[MobaREST])*
 	'}';
 
@@ -164,7 +184,7 @@ MobaEntityAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
 	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
-	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
+	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
 MobaSettingsFeature:
 	MobaSettingsAttribute;
@@ -173,7 +193,7 @@ MobaSettingsAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
 	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
-	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
+	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
 fragment MobaMultiplicityAble:
 	(multiplicity=MobaMuliplicity)?;
@@ -181,7 +201,7 @@ fragment MobaMultiplicityAble:
 MobaEntityReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity] MobaMultiplicityAble
 	name=ID
-	MobaPropertiesAble?;
+	MobaFriendsAble;
 
 MobaDtoFeature:
 	MobaDtoAttribute | MobaDtoReference;
@@ -190,13 +210,13 @@ MobaDtoAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
 	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')? & ('alias' '(' alias=ID ')')?)
-	type=[MobaDataType] MobaMultiplicityAble name=ID MobaPropertiesAble?;
+	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
 MobaDtoReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto]
 	MobaMultiplicityAble
 	name=ID
-	MobaPropertiesAble?;
+	MobaFriendsAble;
 
 MobaQueueFeature:
 	MobaQueueReference;
@@ -204,7 +224,7 @@ MobaQueueFeature:
 MobaQueueReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaData] MobaMultiplicityAble
 	name=ID
-	MobaPropertiesAble?;
+	MobaFriendsAble;
 
 MobaMuliplicity:
 	'[' (lower=MobaLowerBound) ('..' upper=MobaUpperBound)? ']';
@@ -244,13 +264,13 @@ MobaGeneratorSlot:
 	'slot' name=ID ('type' type=STRING)?;
 
 MobaTrigger:
-	MobaAppInstallTrigger | MobaAppUpdatelTrigger | MobaEmailTrigger | MobaDeviceStartupTrigger | MobaSMSTrigger |
+	MobaAppInstallTrigger | MobaAppUpdateTrigger | MobaEmailTrigger | MobaDeviceStartupTrigger | MobaSMSTrigger |
 	MobaPushTrigger | MobaGeofenceTrigger;
 
 MobaAppInstallTrigger:
 	'trigger app install' name=ID;
 
-MobaAppUpdatelTrigger:
+MobaAppUpdateTrigger:
 	'trigger app update' name=ID;
 
 MobaEmailTrigger:

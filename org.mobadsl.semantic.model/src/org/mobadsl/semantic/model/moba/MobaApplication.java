@@ -14,17 +14,21 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion <em>Version</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+ * <em>Name</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getVersion
+ * <em>Version</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
+ * <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface MobaApplication extends MobaFriendsAble {
+public interface MobaApplication extends MobaModelFeature {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute. <!--
 	 * begin-user-doc -->
@@ -61,9 +65,12 @@ public interface MobaApplication extends MobaFriendsAble {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getName
+	 * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -179,7 +186,7 @@ public interface MobaApplication extends MobaFriendsAble {
 	 * 
 	 * @return
 	 */
-	List<MobaService> getRESTs();
+	List<MobaREST> getRESTs();
 
 	/**
 	 * Returns the moba restCustom services for the current application.
@@ -236,10 +243,17 @@ public interface MobaApplication extends MobaFriendsAble {
 	 * @return
 	 */
 	List<MobaTrigger> getTriggers();
+	
+	/**
+	 * Returns the moba servers for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaServer> getServers();
 
 	// all features
 	List<MobaApplicationFeature> getAllFeatures();
-
 
 	// gen
 	/**
@@ -291,8 +305,7 @@ public interface MobaApplication extends MobaFriendsAble {
 	List<MobaDataType> getGenDataTypes();
 
 	/**
-	 * Returns the moba gernerators for the current application. Excluding the
-	 * "used templates".
+	 * Returns the moba gernerators for the current application.
 	 * 
 	 * @return
 	 */
@@ -304,7 +317,7 @@ public interface MobaApplication extends MobaFriendsAble {
 	 * 
 	 * @return
 	 */
-	List<MobaService> getGenRESTs();
+	List<MobaREST> getGenRESTs();
 
 	/**
 	 * Returns the moba restCustom services for the current application.
@@ -364,7 +377,7 @@ public interface MobaApplication extends MobaFriendsAble {
 
 	// all features
 	List<MobaApplicationFeature> getGenFeatures();
-	
+
 	/**
 	 * Returns the moba constants for the current application. Including the
 	 * "used templates".
@@ -427,7 +440,7 @@ public interface MobaApplication extends MobaFriendsAble {
 	 * 
 	 * @return
 	 */
-	List<MobaService> getAllREST();
+	List<MobaREST> getAllREST();
 
 	/**
 	 * Returns the moba restCustom services for the current application.
@@ -516,12 +529,30 @@ public interface MobaApplication extends MobaFriendsAble {
 	List<MobaTrigger> getAllTriggers();
 
 	/**
-	 * Returns whether the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * Returns whether the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getId <em>Id</em>}
+	 * ' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @return whether the value of the '<em>Id</em>' attribute is set.
 	 * @see #getId()
 	 * @generated
 	 */
 	boolean isSetId();
+
+	/**
+	 * Returns the moba servers for the current application. Including the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	public List<MobaServer> getAllServers();
+
+	/**
+	 * Returns the moba servers for the current application. Including the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	public List<MobaServer> getGenServers();
 
 } // MobaApplication

@@ -110,7 +110,6 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_ENTITY__CACHE);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_ENTITY__FEATURES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_ENTITY__INDEX);
@@ -172,7 +171,6 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 			case MobaPackage.MOBA_ENTITY__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_ENTITY__PROPERTIES:
 			case MobaPackage.MOBA_ENTITY__CACHE:
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 			case MobaPackage.MOBA_ENTITY__INDEX:
@@ -192,11 +190,6 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

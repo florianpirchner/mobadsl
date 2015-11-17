@@ -22,6 +22,15 @@ public interface MobaFactory extends EFactory {
 	MobaFactory eINSTANCE = org.mobadsl.semantic.model.moba.impl.MobaFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model</em>'.
+	 * @generated
+	 */
+	MobaModel createMobaModel();
+
+	/**
 	 * Returns a new object of class '<em>Project</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -29,6 +38,15 @@ public interface MobaFactory extends EFactory {
 	 * @generated
 	 */
 	MobaProject createMobaProject();
+
+	/**
+	 * Returns a new object of class '<em>Application</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Application</em>'.
+	 * @generated
+	 */
+	MobaApplication createMobaApplication();
 
 	/**
 	 * Returns a new object of class '<em>Template</em>'.
@@ -400,24 +418,6 @@ public interface MobaFactory extends EFactory {
 	MobaEnumLiteral createMobaEnumLiteral();
 
 	/**
-	 * Returns a new object of class '<em>Ui Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ui Application</em>'.
-	 * @generated
-	 */
-	MobaUiApplication createMobaUiApplication();
-
-	/**
-	 * Returns a new object of class '<em>Background Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Background Application</em>'.
-	 * @generated
-	 */
-	MobaBackgroundApplication createMobaBackgroundApplication();
-
-	/**
 	 * Returns a new object of class '<em>App Install Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -427,13 +427,13 @@ public interface MobaFactory extends EFactory {
 	MobaAppInstallTrigger createMobaAppInstallTrigger();
 
 	/**
-	 * Returns a new object of class '<em>App Updatel Trigger</em>'.
+	 * Returns a new object of class '<em>App Update Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>App Updatel Trigger</em>'.
+	 * @return a new object of class '<em>App Update Trigger</em>'.
 	 * @generated
 	 */
-	MobaAppUpdatelTrigger createMobaAppUpdatelTrigger();
+	MobaAppUpdateTrigger createMobaAppUpdateTrigger();
 
 	/**
 	 * Returns a new object of class '<em>SMS Trigger</em>'.

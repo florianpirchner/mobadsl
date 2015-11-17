@@ -110,7 +110,6 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_QUEUE__FEATURES);
 		}
 		return childrenFeatures;
@@ -170,7 +169,6 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 			case MobaPackage.MOBA_QUEUE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_QUEUE__PROPERTIES:
 			case MobaPackage.MOBA_QUEUE__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -188,11 +186,6 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

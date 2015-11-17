@@ -29,10 +29,6 @@ public class RestServicesGenerator implements IGeneratorDelegate {
 	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context, PropertiesMap properties) {
 		fsa.generateFile("Foo", "server-rest", "Heyho");
 		
-		MobaApplication app = (MobaApplication) input.getContents().get(0);
-		for(MobaConstant consts : app.getConstants()) {
-			System.out.println(consts.getValue());
-		}
 	}
 
 	@Override

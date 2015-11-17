@@ -10,10 +10,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.mobadsl.semantic.model.moba.MobaBackgroundApplication;
+import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaProject;
-import org.mobadsl.semantic.model.moba.MobaUiApplication;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +31,7 @@ import org.mobadsl.semantic.model.moba.MobaUiApplication;
  *
  * @generated
  */
-public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject {
+public class MobaProjectImpl extends MobaModelFeatureImpl implements MobaProject {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,7 +90,7 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaUiApplication uiApplication;
+	protected MobaApplication uiApplication;
 
 	/**
 	 * The cached value of the '{@link #getBackgroundApplication() <em>Background Application</em>}' reference.
@@ -101,7 +100,7 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaBackgroundApplication backgroundApplication;
+	protected MobaApplication backgroundApplication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,10 +180,10 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaUiApplication getUiApplication() {
+	public MobaApplication getUiApplication() {
 		if (uiApplication != null && uiApplication.eIsProxy()) {
 			InternalEObject oldUiApplication = (InternalEObject)uiApplication;
-			uiApplication = (MobaUiApplication)eResolveProxy(oldUiApplication);
+			uiApplication = (MobaApplication)eResolveProxy(oldUiApplication);
 			if (uiApplication != oldUiApplication) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_PROJECT__UI_APPLICATION, oldUiApplication, uiApplication));
@@ -198,7 +197,7 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaUiApplication basicGetUiApplication() {
+	public MobaApplication basicGetUiApplication() {
 		return uiApplication;
 	}
 
@@ -207,8 +206,8 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUiApplication(MobaUiApplication newUiApplication) {
-		MobaUiApplication oldUiApplication = uiApplication;
+	public void setUiApplication(MobaApplication newUiApplication) {
+		MobaApplication oldUiApplication = uiApplication;
 		uiApplication = newUiApplication;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROJECT__UI_APPLICATION, oldUiApplication, uiApplication));
@@ -219,10 +218,10 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaBackgroundApplication getBackgroundApplication() {
+	public MobaApplication getBackgroundApplication() {
 		if (backgroundApplication != null && backgroundApplication.eIsProxy()) {
 			InternalEObject oldBackgroundApplication = (InternalEObject)backgroundApplication;
-			backgroundApplication = (MobaBackgroundApplication)eResolveProxy(oldBackgroundApplication);
+			backgroundApplication = (MobaApplication)eResolveProxy(oldBackgroundApplication);
 			if (backgroundApplication != oldBackgroundApplication) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_PROJECT__BACKGROUND_APPLICATION, oldBackgroundApplication, backgroundApplication));
@@ -236,7 +235,7 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaBackgroundApplication basicGetBackgroundApplication() {
+	public MobaApplication basicGetBackgroundApplication() {
 		return backgroundApplication;
 	}
 
@@ -245,8 +244,8 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBackgroundApplication(MobaBackgroundApplication newBackgroundApplication) {
-		MobaBackgroundApplication oldBackgroundApplication = backgroundApplication;
+	public void setBackgroundApplication(MobaApplication newBackgroundApplication) {
+		MobaApplication oldBackgroundApplication = backgroundApplication;
 		backgroundApplication = newBackgroundApplication;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_PROJECT__BACKGROUND_APPLICATION, oldBackgroundApplication, backgroundApplication));
@@ -292,10 +291,10 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 				setVersion((String)newValue);
 				return;
 			case MobaPackage.MOBA_PROJECT__UI_APPLICATION:
-				setUiApplication((MobaUiApplication)newValue);
+				setUiApplication((MobaApplication)newValue);
 				return;
 			case MobaPackage.MOBA_PROJECT__BACKGROUND_APPLICATION:
-				setBackgroundApplication((MobaBackgroundApplication)newValue);
+				setBackgroundApplication((MobaApplication)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -316,10 +315,10 @@ public class MobaProjectImpl extends MobaFriendsAbleImpl implements MobaProject 
 				setVersion(VERSION_EDEFAULT);
 				return;
 			case MobaPackage.MOBA_PROJECT__UI_APPLICATION:
-				setUiApplication((MobaUiApplication)null);
+				setUiApplication((MobaApplication)null);
 				return;
 			case MobaPackage.MOBA_PROJECT__BACKGROUND_APPLICATION:
-				setBackgroundApplication((MobaBackgroundApplication)null);
+				setBackgroundApplication((MobaApplication)null);
 				return;
 		}
 		super.eUnset(featureID);

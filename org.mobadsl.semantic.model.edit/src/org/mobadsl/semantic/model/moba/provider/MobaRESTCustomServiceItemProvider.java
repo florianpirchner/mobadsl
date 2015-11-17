@@ -110,7 +110,6 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS);
 		}
 		return childrenFeatures;
@@ -170,7 +169,6 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PROPERTIES:
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -188,11 +186,6 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

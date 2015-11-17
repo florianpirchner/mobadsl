@@ -2,6 +2,8 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -13,6 +15,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getUrl <em>Url</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getServices <em>Services</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}</li>
@@ -23,6 +27,58 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface MobaServer extends MobaApplicationFeature {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Super Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Super Type</em>' reference.
+	 * @see #setSuperType(MobaServer)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer_SuperType()
+	 * @model
+	 * @generated
+	 */
+	MobaServer getSuperType();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Super Type</em>' reference.
+	 * @see #getSuperType()
+	 * @generated
+	 */
+	void setSuperType(MobaServer value);
+
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -66,29 +122,31 @@ public interface MobaServer extends MobaApplicationFeature {
 	EList<MobaREST> getServices();
 
 	/**
-	 * Returns the value of the '<em><b>Authorization</b></em>' reference.
+	 * Returns the value of the '<em><b>Authorization</b></em>' reference list.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaAuthorization}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Authorization</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Authorization</em>' reference.
-	 * @see #setAuthorization(MobaAuthorization)
+	 * @return the value of the '<em>Authorization</em>' reference list.
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer_Authorization()
 	 * @model
 	 * @generated
 	 */
-	MobaAuthorization getAuthorization();
-
+	EList<MobaAuthorization> getAuthorization();
+	
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Authorization</em>' reference.
-	 * @see #getAuthorization()
-	 * @generated
+	 * Returns all services including superTypes.
+	 * @return
 	 */
-	void setAuthorization(MobaAuthorization value);
+	public List<MobaREST> getAllServices();
+	
+	/**
+	 * Returns services required for generator stuff.
+	 * @return
+	 */
+	public List<MobaREST> getGenServices();
 
 } // MobaServer

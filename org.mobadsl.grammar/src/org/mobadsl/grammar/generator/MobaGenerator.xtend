@@ -11,6 +11,7 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.mobadsl.semantic.model.moba.MobaApplication
+import org.mobadsl.semantic.model.moba.MobaModel
 
 /**
  * Generates code from your model files on save.
@@ -23,7 +24,7 @@ class MobaGenerator extends AbstractGenerator {
 
 	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
-		if(generatorIds == null) {
+		if (generatorIds == null) {
 			return
 		}
 		generatorDelegate.generate(input, fsa, context, generatorIds);
@@ -31,7 +32,7 @@ class MobaGenerator extends AbstractGenerator {
 
 	override beforeGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
-		if(generatorIds == null) {
+		if (generatorIds == null) {
 			return
 		}
 		generatorDelegate.beforeGenerate(input, fsa, context, generatorIds);
@@ -39,18 +40,25 @@ class MobaGenerator extends AbstractGenerator {
 
 	override afterGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val List<String> generatorIds = input.collectGeneratorIds();
-		if(generatorIds == null) {
+		if (generatorIds == null) {
 			return
 		}
 		generatorDelegate.afterGenerate(input, fsa, context, generatorIds);
 	}
 
 	def List<String> collectGeneratorIds(Resource resource) {
-		val MobaApplication application = resource.contents.get(0) as MobaApplication
-		if (application == null) {
+		val MobaModel model = resource.contents.get(0) as MobaModel
+		if (model == null) {
 			return Collections.emptyList
 		}
-		return application.activeGenerator?.allGeneratorVersionedIds
+
+		val List<String> generatorIds = newArrayList()
+		model.features.filter[it instanceof MobaApplication].forEach [
+			val app = it as MobaApplication
+			generatorIds += if(app.activeGenerator != null) app.activeGenerator.allGeneratorVersionedIds else Collections.emptyList
+		]
+
+		return generatorIds
 	}
 
 }

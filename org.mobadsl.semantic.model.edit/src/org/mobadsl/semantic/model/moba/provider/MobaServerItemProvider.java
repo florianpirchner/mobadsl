@@ -45,11 +45,57 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addSuperTypePropertyDescriptor(object);
 			addUrlPropertyDescriptor(object);
 			addServicesPropertyDescriptor(object);
 			addAuthorizationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaServer_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaServer_name_feature", "_UI_MobaServer_type"),
+				 MobaPackage.Literals.MOBA_SERVER__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Super Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSuperTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaServer_superType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaServer_superType_feature", "_UI_MobaServer_type"),
+				 MobaPackage.Literals.MOBA_SERVER__SUPER_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -137,7 +183,7 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaServer)object).getUrl();
+		String label = ((MobaServer)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MobaServer_type") :
 			getString("_UI_MobaServer_type") + " " + label;
@@ -156,6 +202,7 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaServer.class)) {
+			case MobaPackage.MOBA_SERVER__NAME:
 			case MobaPackage.MOBA_SERVER__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

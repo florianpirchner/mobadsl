@@ -7,11 +7,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.mobadsl.semantic.model.moba.*;
 import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
-import org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger;
+import org.mobadsl.semantic.model.moba.MobaAppUpdateTrigger;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
-import org.mobadsl.semantic.model.moba.MobaBackgroundApplication;
 import org.mobadsl.semantic.model.moba.MobaBluetoothModule;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
@@ -49,6 +48,8 @@ import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
+import org.mobadsl.semantic.model.moba.MobaModel;
+import org.mobadsl.semantic.model.moba.MobaModelFeature;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaNFCModule;
@@ -80,7 +81,6 @@ import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 import org.mobadsl.semantic.model.moba.MobaTrigger;
-import org.mobadsl.semantic.model.moba.MobaUiApplication;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,9 +139,26 @@ public class MobaSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case MobaPackage.MOBA_MODEL: {
+				MobaModel mobaModel = (MobaModel)theEObject;
+				T result = caseMobaModel(mobaModel);
+				if (result == null) result = caseMobaFriendsAble(mobaModel);
+				if (result == null) result = caseMobaPropertiesAble(mobaModel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_MODEL_FEATURE: {
+				MobaModelFeature mobaModelFeature = (MobaModelFeature)theEObject;
+				T result = caseMobaModelFeature(mobaModelFeature);
+				if (result == null) result = caseMobaFriendsAble(mobaModelFeature);
+				if (result == null) result = caseMobaPropertiesAble(mobaModelFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_PROJECT: {
 				MobaProject mobaProject = (MobaProject)theEObject;
 				T result = caseMobaProject(mobaProject);
+				if (result == null) result = caseMobaModelFeature(mobaProject);
 				if (result == null) result = caseMobaFriendsAble(mobaProject);
 				if (result == null) result = caseMobaPropertiesAble(mobaProject);
 				if (result == null) result = defaultCase(theEObject);
@@ -150,6 +167,7 @@ public class MobaSwitch<T> extends Switch<T> {
 			case MobaPackage.MOBA_APPLICATION: {
 				MobaApplication mobaApplication = (MobaApplication)theEObject;
 				T result = caseMobaApplication(mobaApplication);
+				if (result == null) result = caseMobaModelFeature(mobaApplication);
 				if (result == null) result = caseMobaFriendsAble(mobaApplication);
 				if (result == null) result = caseMobaPropertiesAble(mobaApplication);
 				if (result == null) result = defaultCase(theEObject);
@@ -225,6 +243,15 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaGeneratorIDFeature mobaGeneratorIDFeature = (MobaGeneratorIDFeature)theEObject;
 				T result = caseMobaGeneratorIDFeature(mobaGeneratorIDFeature);
 				if (result == null) result = caseMobaGeneratorFeature(mobaGeneratorIDFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_GENERATOR_SLOT: {
+				MobaGeneratorSlot mobaGeneratorSlot = (MobaGeneratorSlot)theEObject;
+				T result = caseMobaGeneratorSlot(mobaGeneratorSlot);
+				if (result == null) result = caseMobaApplicationFeature(mobaGeneratorSlot);
+				if (result == null) result = caseMobaFriendsAble(mobaGeneratorSlot);
+				if (result == null) result = caseMobaPropertiesAble(mobaGeneratorSlot);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -598,24 +625,6 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_UI_APPLICATION: {
-				MobaUiApplication mobaUiApplication = (MobaUiApplication)theEObject;
-				T result = caseMobaUiApplication(mobaUiApplication);
-				if (result == null) result = caseMobaApplication(mobaUiApplication);
-				if (result == null) result = caseMobaFriendsAble(mobaUiApplication);
-				if (result == null) result = caseMobaPropertiesAble(mobaUiApplication);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MobaPackage.MOBA_BACKGROUND_APPLICATION: {
-				MobaBackgroundApplication mobaBackgroundApplication = (MobaBackgroundApplication)theEObject;
-				T result = caseMobaBackgroundApplication(mobaBackgroundApplication);
-				if (result == null) result = caseMobaApplication(mobaBackgroundApplication);
-				if (result == null) result = caseMobaFriendsAble(mobaBackgroundApplication);
-				if (result == null) result = caseMobaPropertiesAble(mobaBackgroundApplication);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MobaPackage.MOBA_TRIGGER: {
 				MobaTrigger mobaTrigger = (MobaTrigger)theEObject;
 				T result = caseMobaTrigger(mobaTrigger);
@@ -635,13 +644,13 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_APP_UPDATEL_TRIGGER: {
-				MobaAppUpdatelTrigger mobaAppUpdatelTrigger = (MobaAppUpdatelTrigger)theEObject;
-				T result = caseMobaAppUpdatelTrigger(mobaAppUpdatelTrigger);
-				if (result == null) result = caseMobaTrigger(mobaAppUpdatelTrigger);
-				if (result == null) result = caseMobaApplicationFeature(mobaAppUpdatelTrigger);
-				if (result == null) result = caseMobaFriendsAble(mobaAppUpdatelTrigger);
-				if (result == null) result = caseMobaPropertiesAble(mobaAppUpdatelTrigger);
+			case MobaPackage.MOBA_APP_UPDATE_TRIGGER: {
+				MobaAppUpdateTrigger mobaAppUpdateTrigger = (MobaAppUpdateTrigger)theEObject;
+				T result = caseMobaAppUpdateTrigger(mobaAppUpdateTrigger);
+				if (result == null) result = caseMobaTrigger(mobaAppUpdateTrigger);
+				if (result == null) result = caseMobaApplicationFeature(mobaAppUpdateTrigger);
+				if (result == null) result = caseMobaFriendsAble(mobaAppUpdateTrigger);
+				if (result == null) result = caseMobaPropertiesAble(mobaAppUpdateTrigger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -705,15 +714,6 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MobaPackage.MOBA_GENERATOR_SLOT: {
-				MobaGeneratorSlot mobaGeneratorSlot = (MobaGeneratorSlot)theEObject;
-				T result = caseMobaGeneratorSlot(mobaGeneratorSlot);
-				if (result == null) result = caseMobaApplicationFeature(mobaGeneratorSlot);
-				if (result == null) result = caseMobaFriendsAble(mobaGeneratorSlot);
-				if (result == null) result = caseMobaPropertiesAble(mobaGeneratorSlot);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MobaPackage.MOBA_FRIEND: {
 				MobaFriend mobaFriend = (MobaFriend)theEObject;
 				T result = caseMobaFriend(mobaFriend);
@@ -768,6 +768,36 @@ public class MobaSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaModel(MobaModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaModelFeature(MobaModelFeature object) {
+		return null;
 	}
 
 	/**
@@ -1611,36 +1641,6 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ui Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ui Application</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMobaUiApplication(MobaUiApplication object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Background Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Background Application</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMobaBackgroundApplication(MobaBackgroundApplication object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1671,17 +1671,17 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>App Updatel Trigger</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>App Update Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>App Updatel Trigger</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>App Update Trigger</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMobaAppUpdatelTrigger(MobaAppUpdatelTrigger object) {
+	public T caseMobaAppUpdateTrigger(MobaAppUpdateTrigger object) {
 		return null;
 	}
 

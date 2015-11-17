@@ -340,7 +340,6 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
 		}
@@ -410,7 +409,6 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_DATA_TYPE__PROPERTIES:
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:
 			case MobaPackage.MOBA_DATA_TYPE__ENUM_AST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -429,11 +427,6 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

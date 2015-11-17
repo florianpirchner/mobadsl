@@ -35,13 +35,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  * @generated
  */
 public class MobaApplicationItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends MobaModelFeatureItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -148,7 +142,6 @@ public class MobaApplicationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_APPLICATION__FEATURES);
 		}
 		return childrenFeatures;
@@ -210,7 +203,6 @@ public class MobaApplicationItemProvider
 			case MobaPackage.MOBA_APPLICATION__VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_APPLICATION__PROPERTIES:
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -228,11 +220,6 @@ public class MobaApplicationItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES,
-				 MobaFactory.eINSTANCE.createMobaProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -258,6 +245,11 @@ public class MobaApplicationItemProvider
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaGenerator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaGeneratorSlot()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -308,17 +300,61 @@ public class MobaApplicationItemProvider
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaEnum()));
-	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return MobaEditPlugin.INSTANCE;
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaAppInstallTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaAppUpdateTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaSMSTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaDeviceStartupTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaEmailTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaTimerTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaPushTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaGeofenceTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaBluetoothModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaNFCModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaPushModule()));
 	}
 
 }

@@ -23,7 +23,7 @@ package org.mobadsl.semantic.model.moba;
  * @model
  * @generated
  */
-public interface MobaProject extends MobaFriendsAble {
+public interface MobaProject extends MobaModelFeature {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -111,12 +111,12 @@ public interface MobaProject extends MobaFriendsAble {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ui Application</em>' reference.
-	 * @see #setUiApplication(MobaUiApplication)
+	 * @see #setUiApplication(MobaApplication)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProject_UiApplication()
 	 * @model
 	 * @generated
 	 */
-	MobaUiApplication getUiApplication();
+	MobaApplication getUiApplication();
 
 	/**
 	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProject#getUiApplication <em>Ui Application</em>}' reference.
@@ -126,7 +126,7 @@ public interface MobaProject extends MobaFriendsAble {
 	 * @see #getUiApplication()
 	 * @generated
 	 */
-	void setUiApplication(MobaUiApplication value);
+	void setUiApplication(MobaApplication value);
 
 	/**
 	 * Returns the value of the '<em><b>Background Application</b></em>' reference.
@@ -137,12 +137,12 @@ public interface MobaProject extends MobaFriendsAble {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Background Application</em>' reference.
-	 * @see #setBackgroundApplication(MobaBackgroundApplication)
+	 * @see #setBackgroundApplication(MobaApplication)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaProject_BackgroundApplication()
 	 * @model
 	 * @generated
 	 */
-	MobaBackgroundApplication getBackgroundApplication();
+	MobaApplication getBackgroundApplication();
 
 	/**
 	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaProject#getBackgroundApplication <em>Background Application</em>}' reference.
@@ -152,6 +152,6 @@ public interface MobaProject extends MobaFriendsAble {
 	 * @see #getBackgroundApplication()
 	 * @generated
 	 */
-	void setBackgroundApplication(MobaBackgroundApplication value);
+	void setBackgroundApplication(MobaApplication value);
 
 } // MobaProject
