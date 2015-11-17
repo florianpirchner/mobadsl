@@ -47,75 +47,15 @@ import org.mobadsl.semantic.model.moba.MobaTrigger;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getId
- * <em>Id</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getName
- * <em>Name</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getVersion
- * <em>Version</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getFeatures
- * <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApplication {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getVersion() <em>Version</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getVersion()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String VERSION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getVersion() <em>Version</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @see #getVersion()
-	 * @generated
-	 * @ordered
-	 */
-	protected String version = VERSION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getFeatures() <em>Features</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
@@ -124,7 +64,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaApplicationImpl() {
@@ -133,7 +72,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -143,175 +81,82 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public String getVersion() {
-		return version;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setVersion(String newVersion) {
-		String oldVersion = version;
-		version = newVersion;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__VERSION, oldVersion,
-					version));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaApplicationFeature> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentEList<MobaApplicationFeature>(MobaApplicationFeature.class, this,
-					MobaPackage.MOBA_APPLICATION__FEATURES);
+			features = new EObjectContainmentEList<MobaApplicationFeature>(MobaApplicationFeature.class, this, MobaPackage.MOBA_APPLICATION__FEATURES);
 		}
 		return features;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			return ((InternalEList<?>) getFeatures()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__ID:
-			return getId();
-		case MobaPackage.MOBA_APPLICATION__NAME:
-			return getName();
-		case MobaPackage.MOBA_APPLICATION__VERSION:
-			return getVersion();
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			return getFeatures();
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				return getFeatures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__NAME:
-			setName((String) newValue);
-			return;
-		case MobaPackage.MOBA_APPLICATION__VERSION:
-			setVersion((String) newValue);
-			return;
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			getFeatures().clear();
-			getFeatures().addAll((Collection<? extends MobaApplicationFeature>) newValue);
-			return;
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				getFeatures().clear();
+				getFeatures().addAll((Collection<? extends MobaApplicationFeature>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_APPLICATION__VERSION:
-			setVersion(VERSION_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			getFeatures().clear();
-			return;
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				getFeatures().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__ID:
-			return isSetId();
-		case MobaPackage.MOBA_APPLICATION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MobaPackage.MOBA_APPLICATION__VERSION:
-			return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			return features != null && !features.isEmpty();
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				return features != null && !features.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", version: ");
-		result.append(version);
-		result.append(')');
-		return result.toString();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -627,18 +472,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 		}
 
 		return settings.stream().filter(e -> e.isActive()).findFirst().orElse(null);
-	}
-
-	@Override
-	public String getId() {
-		return getName() + ":" + getVersion();
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 */
-	public boolean isSetId() {
-		return getId() != null;
 	}
 
 	@Override

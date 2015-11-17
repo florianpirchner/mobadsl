@@ -45,79 +45,10 @@ public class MobaProjectItemProvider extends MobaModelFeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addVersionPropertyDescriptor(object);
 			addUiApplicationPropertyDescriptor(object);
 			addBackgroundApplicationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaProject_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaProject_id_feature", "_UI_MobaProject_type"),
-				 MobaPackage.Literals.MOBA_PROJECT__ID,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaProject_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaProject_name_feature", "_UI_MobaProject_type"),
-				 MobaPackage.Literals.MOBA_PROJECT__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Version feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVersionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaProject_version_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaProject_version_feature", "_UI_MobaProject_type"),
-				 MobaPackage.Literals.MOBA_PROJECT__VERSION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -200,14 +131,6 @@ public class MobaProjectItemProvider extends MobaModelFeatureItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(MobaProject.class)) {
-			case MobaPackage.MOBA_PROJECT__ID:
-			case MobaPackage.MOBA_PROJECT__NAME:
-			case MobaPackage.MOBA_PROJECT__VERSION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

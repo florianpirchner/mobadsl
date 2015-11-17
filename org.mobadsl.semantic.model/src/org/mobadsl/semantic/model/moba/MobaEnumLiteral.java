@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#getLiteral <em>Literal</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#getValue <em>Value</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isDefault <em>Default</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnumLiteral()
@@ -100,5 +101,31 @@ public interface MobaEnumLiteral extends EObject {
 	 * @generated
 	 */
 	void setValue(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Default</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Default</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default</em>' attribute.
+	 * @see #setDefault(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnumLiteral_Default()
+	 * @model
+	 * @generated
+	 */
+	boolean isDefault();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isDefault <em>Default</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default</em>' attribute.
+	 * @see #isDefault()
+	 * @generated
+	 */
+	void setDefault(boolean value);
 
 } // MobaEnumLiteral

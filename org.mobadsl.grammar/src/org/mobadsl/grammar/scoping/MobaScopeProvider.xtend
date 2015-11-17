@@ -4,15 +4,18 @@
 package org.mobadsl.grammar.scoping
 
 import com.google.inject.Inject
+import com.google.inject.name.Named
 import java.util.List
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.IEObjectDescription
 import org.eclipse.xtext.resource.IResourceDescriptions
+import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider
 import org.eclipse.xtext.resource.impl.SimpleResourceDescriptionsBasedContainerManager
 import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
+import org.eclipse.xtext.scoping.impl.ResourceSetGlobalScopeProvider
 import org.eclipse.xtext.scoping.impl.SimpleScope
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaPackage
@@ -27,7 +30,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil
 class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	@Inject SimpleResourceDescriptionsBasedContainerManager containerManager
-	@Inject IResourceDescriptions resourceDescriptions
+	@Inject @Named(ResourceDescriptionsProvider.PERSISTED_DESCRIPTIONS) IResourceDescriptions resourceDescriptions
 
 	def IScope scope_MobaConstant(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allConstants);

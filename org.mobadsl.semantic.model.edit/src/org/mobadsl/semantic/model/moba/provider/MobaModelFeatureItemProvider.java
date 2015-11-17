@@ -9,7 +9,12 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.mobadsl.semantic.model.moba.MobaModelFeature;
+import org.mobadsl.semantic.model.moba.MobaPackage;
 
 /**
  * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaModelFeature} object.
@@ -39,8 +44,77 @@ public class MobaModelFeatureItemProvider extends MobaFriendsAbleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaModelFeature_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaModelFeature_id_feature", "_UI_MobaModelFeature_type"),
+				 MobaPackage.Literals.MOBA_MODEL_FEATURE__ID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaModelFeature_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaModelFeature_name_feature", "_UI_MobaModelFeature_type"),
+				 MobaPackage.Literals.MOBA_MODEL_FEATURE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Version feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVersionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaModelFeature_version_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaModelFeature_version_feature", "_UI_MobaModelFeature_type"),
+				 MobaPackage.Literals.MOBA_MODEL_FEATURE__VERSION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -51,7 +125,10 @@ public class MobaModelFeatureItemProvider extends MobaFriendsAbleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MobaModelFeature_type");
+		String label = ((MobaModelFeature)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MobaModelFeature_type") :
+			getString("_UI_MobaModelFeature_type") + " " + label;
 	}
 	
 
@@ -65,6 +142,14 @@ public class MobaModelFeatureItemProvider extends MobaFriendsAbleItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(MobaModelFeature.class)) {
+			case MobaPackage.MOBA_MODEL_FEATURE__ID:
+			case MobaPackage.MOBA_MODEL_FEATURE__NAME:
+			case MobaPackage.MOBA_MODEL_FEATURE__VERSION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

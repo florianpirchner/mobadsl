@@ -46,8 +46,9 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addUrlStringPropertyDescriptor(object);
+			addUrlConstPropertyDescriptor(object);
 			addSuperTypePropertyDescriptor(object);
-			addUrlPropertyDescriptor(object);
 			addServicesPropertyDescriptor(object);
 			addAuthorizationPropertyDescriptor(object);
 		}
@@ -77,6 +78,50 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Url String feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlStringPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaServer_urlString_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaServer_urlString_feature", "_UI_MobaServer_type"),
+				 MobaPackage.Literals.MOBA_SERVER__URL_STRING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url Const feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlConstPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaServer_urlConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaServer_urlConst_feature", "_UI_MobaServer_type"),
+				 MobaPackage.Literals.MOBA_SERVER__URL_CONST,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Super Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,28 +139,6 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Url feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUrlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaServer_url_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaServer_url_feature", "_UI_MobaServer_type"),
-				 MobaPackage.Literals.MOBA_SERVER__URL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -203,7 +226,7 @@ public class MobaServerItemProvider extends MobaApplicationFeatureItemProvider {
 
 		switch (notification.getFeatureID(MobaServer.class)) {
 			case MobaPackage.MOBA_SERVER__NAME:
-			case MobaPackage.MOBA_SERVER__URL:
+			case MobaPackage.MOBA_SERVER__URL_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

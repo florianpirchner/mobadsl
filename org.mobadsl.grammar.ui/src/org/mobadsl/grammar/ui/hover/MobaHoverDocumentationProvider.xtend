@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtext.Constants
 import org.eclipse.xtext.documentation.impl.MultiLineCommentDocumentationProvider
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
+import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaConstant
 import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaGenerator
@@ -43,10 +44,14 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 		</p>'''
 	}
 
+	def dispatch String getDocu(MobaApplication object, String value) {
+		return value + '''<p>@verson = <code>«object.version»</code></p>'''
+	}
+
 	def dispatch String getDocu(MobaGenerator object, String value) {
 
 		return value + '''<p>
-		Generators:<br>
+		<b><i>Used Generators:</i></b><br>
 		<ul>
 		«FOR feature : object.allGeneratorIdFeatures»
 			<li>«feature.toDocu»</li>
@@ -56,8 +61,10 @@ class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvid
 	}
 
 	def dispatch String getDocu(MobaDataType object, String value) {
-		return value + '''<p>
-		Datatype <b>«object.name»</b>:<br>
+		return value +
+			'''<p>
+		«IF ( !object.dateFormat.nullOrEmpty && ( object.isDate || object.isTime || object.isTimestamp))»@dateformat = «object.dateFormat»</br>«ENDIF»
+		«IF ( object.dateFormat.nullOrEmpty && ( object.isDate || object.isTime || object.isTimestamp))»@dateformat = default</br>«ENDIF»
 		«object.toPropertiesDocu»
 		'''
 	}

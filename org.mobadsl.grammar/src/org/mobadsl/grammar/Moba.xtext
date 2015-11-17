@@ -27,13 +27,12 @@ MobaApplicationFeature:
 	MobaGeneratorSlot | MobaServer;
 
 MobaServer:
-	'server' name=ID 'url' '=' url=STRING ('extends' superType=[MobaServer])? MobaFriendsAble '{'
-		(
-			('autorizations' '=' '(' authorization+=[MobaAuthorization|CONSTANT] (',' authorization+=[MobaAuthorization|CONSTANT])*')')? &
-			('services' '=' '(' services+=[MobaREST] (',' services+=[MobaREST])*')')?
-		)
-	'}'
-;
+	'server' name=ID 'url' '=' (urlString=STRING | urlConst=[MobaConstant|CONSTANT]) ('extends' superType=[MobaServer])?
+	MobaFriendsAble '{'
+	(('autorizations' '=' '(' authorization+=[MobaAuthorization|CONSTANT] (','
+	authorization+=[MobaAuthorization|CONSTANT])* ')')? &
+	('services' '=' '(' services+=[MobaREST] (',' services+=[MobaREST])* ')')?)
+	'}';
 
 	/**
  * Will import a Moba-Application.
@@ -66,7 +65,7 @@ MobaDataType:
 	((array?='isArray')?
 	& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
 	& (((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
-	dateFormatConst=[MobaConstant]) ')')?)
+	dateFormatConst=[MobaConstant|CONSTANT]) ')')?)
 	| (enumAST=MobaEnum)
 	| (string?="isString" (primitive?='isPrimitive')?)
 	| (numeric?="isNumeric" (primitive?='isPrimitive')?)
@@ -79,7 +78,7 @@ MobaEnum:
 	'}';
 
 MobaEnumLiteral:
-	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT ')';
+	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT (',' default?='default')? ')';
 
 MobaConstant:
 	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaFriendsAble;
@@ -286,7 +285,7 @@ MobaPushTrigger:
 	'trigger push' name=ID;
 
 MobaGeofenceTrigger:
-	'trigger geofence' eventType=MobaGeofenceEvent name=ID;
+	'trigger geofence' name=ID 'event' '=' eventType=MobaGeofenceEvent;
 
 enum MobaGeofenceEvent:
 	ENTER="enter" | LEAVE="leave";
@@ -295,13 +294,21 @@ MobaExternalModule:
 	MobaBluetoothModule | MobaPushModule | MobaNFCModule;
 
 MobaBluetoothModule:
-	'module bluetooth' name=ID;
+	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType ;
+
+enum MobaBlueToothModuleType:
+	LE = "low energy" | SPP = "spp" | BEACON ="beacon"
+;
 
 MobaPushModule:
 	'module push' name=ID;
 
 MobaNFCModule:
-	'module NFC' name=ID;
+	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType ;
+
+enum MobaNFCModuleType:
+	ID = "id" | CUSTOM = "custom" | TEXT = 'text'
+;
 
 enum MobaLowerBound:
 	MANY='*' | ZERO='0' | OPTIONAL='?' | ATLEASTONE='+' | ONE='1';

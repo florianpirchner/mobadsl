@@ -5,6 +5,8 @@ package org.mobadsl.grammar.validation
 
 import com.google.inject.Inject
 import com.google.inject.name.Named
+import java.net.MalformedURLException
+import java.net.URL
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Collections
@@ -18,13 +20,17 @@ import org.mobadsl.semantic.model.moba.MobaConstantValue
 import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaDto
 import org.mobadsl.semantic.model.moba.MobaEntity
+import org.mobadsl.semantic.model.moba.MobaEnum
 import org.mobadsl.semantic.model.moba.MobaGenerator
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature
+import org.mobadsl.semantic.model.moba.MobaModel
+import org.mobadsl.semantic.model.moba.MobaModelFeature
 import org.mobadsl.semantic.model.moba.MobaPackage
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute
 import org.mobadsl.semantic.model.moba.MobaRESTCrud
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService
+import org.mobadsl.semantic.model.moba.MobaServer
 import org.mobadsl.semantic.model.moba.MobaSettings
 import org.mobadsl.semantic.model.moba.MobaTemplate
 import org.mobadsl.semantic.model.moba.RecursionException
@@ -361,6 +367,33 @@ class MobaValidator extends AbstractMobaValidator {
 	}
 
 	@Check
+	def checkEnumDuplicateLiterals(MobaEnum enumx) {
+		val names = newHashSet()
+		val literals = newHashSet()
+		val values = newHashSet()
+
+		var index = 0
+		for (literal : enumx.literals) {
+			if (names.contains(literal.name)) {
+				error('''Duplicate name "«literal.name»."''', enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index)
+			}
+			if (literals.contains(literal.literal)) {
+				error('''Duplicate literal "«literal.literal»."''', enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS,
+					index)
+			}
+
+			if (values.contains(literal.value)) {
+				error('''Duplicate value "«literal.value»."''', enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index)
+			}
+
+			index++
+			names += literal.name
+			literals += literal.literal
+			values += literal.value
+		}
+	}
+
+	@Check
 	def checkDownloadTemplate(MobaTemplate template) {
 		if (!template.downloadTemplate.nullOrEmpty && template.downloadTemplate.startsWith("index://")) {
 			error("You need to download the template using the quickfix.", template,
@@ -420,6 +453,25 @@ class MobaValidator extends AbstractMobaValidator {
 	}
 
 	@Check
+	def checkResourceName(MobaModelFeature feature) {
+		val MobaModel model = feature.eContainer as MobaModel
+
+		if (model.features.empty || model.features.size > 1) {
+			// if empty or multiple features, do not check
+			return;
+		}
+
+		val id = feature.name + "-" + feature.version
+		val resourceURI = model.eResource.URI
+
+		if (!resourceURI.lastSegment.startsWith(
+			id)) {
+			error('''File need to start with the same name as the name of the element. "«feature.name»:«feature.version»" needs a filename "«feature.name»-«feature.version»{...}.moba"''',
+				feature, MobaPackage.Literals.MOBA_MODEL_FEATURE__NAME, 0)
+		}
+	}
+
+	@Check
 	def checkRestAttributeAssignment(MobaRESTAttribute att) {
 		val dt = att.type
 		val value = att.value;
@@ -475,6 +527,17 @@ class MobaValidator extends AbstractMobaValidator {
 					error('''Can not assign «att.valueType» to decimal datatype!''', att, eAtt)
 				}
 			}
+		}
+	}
+
+	@Check
+	def void checkServerURL(MobaServer server) {
+		val urlValue = server.URL
+		try {
+			new URL(urlValue)
+		} catch (MalformedURLException ex) {
+			warning('''The url «urlValue» is not a valid URL. You need to redefine it by a sub instance of server «server.name»''',
+				server, MobaPackage.Literals.MOBA_SERVER__NAME)
 		}
 	}
 }

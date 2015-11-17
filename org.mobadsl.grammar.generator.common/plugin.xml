@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.mobadsl.grammar.generatorDelegate">
+      <generatorDelegate
+            documentation="The open source generator for Moba projects"
+            generatorDelegateClass="org.mobadsl.grammar.generator.common.CommonGenerator"
+            generatorId="org.mobadsl.grammar.generator.common"
+            grammarName="org.mobadsl.grammar.Moba"
+            license="Apache v2"
+            name="Common Moba Generator"
+            version="0.3.1-SNAPSHOT">
+      </generatorDelegate>
+   </extension>
+</plugin>
