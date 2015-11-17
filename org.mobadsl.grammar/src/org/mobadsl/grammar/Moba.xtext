@@ -50,7 +50,7 @@ MobaDataType:
 	| (decimal?="isDecimal" (primitive?='isPrimitive')?))) MobaPropertiesAble?;
 
 MobaEnum:
-	'enum' name=ID '{'
+	'enum' '{'
 	literals+=MobaEnumLiteral*
 	'}';
 
