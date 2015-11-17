@@ -2,10 +2,13 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mobadsl.semantic.model.moba.MobaFeature;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 
@@ -22,7 +25,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *
  * @generated
  */
-public abstract class MobaFeatureImpl extends MinimalEObjectImpl.Container implements MobaFeature {
+public abstract class MobaFeatureImpl extends MobaFriendsAbleImpl implements MobaFeature {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,6 +105,7 @@ public abstract class MobaFeatureImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -155,6 +159,11 @@ public abstract class MobaFeatureImpl extends MinimalEObjectImpl.Container imple
 		result.append(name);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public <T extends EObject> List<T> getAllSuperTypes() {
+		return new ArrayList<>();
 	}
 
 } //MobaFeatureImpl

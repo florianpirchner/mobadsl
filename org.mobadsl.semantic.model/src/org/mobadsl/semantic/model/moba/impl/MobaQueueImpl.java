@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaPackage;
-import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
-import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
@@ -30,7 +28,6 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getFeatures <em>Features</em>}</li>
@@ -39,15 +36,6 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * @generated
  */
 public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
-	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MobaProperty> properties;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -99,17 +87,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	@Override
 	protected EClass eStaticClass() {
 		return MobaPackage.Literals.MOBA_QUEUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MobaProperty> getProperties() {
-		if (properties == null) {
-			properties = new EObjectContainmentEList<MobaProperty>(MobaProperty.class, this, MobaPackage.MOBA_QUEUE__PROPERTIES);
-		}
-		return properties;
 	}
 
 	/**
@@ -184,8 +161,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_QUEUE__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case MobaPackage.MOBA_QUEUE__FEATURES:
 				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
@@ -199,8 +174,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_QUEUE__PROPERTIES:
-				return getProperties();
 			case MobaPackage.MOBA_QUEUE__NAME:
 				return getName();
 			case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
@@ -220,10 +193,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_QUEUE__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends MobaProperty>)newValue);
-				return;
 			case MobaPackage.MOBA_QUEUE__NAME:
 				setName((String)newValue);
 				return;
@@ -245,9 +214,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_QUEUE__PROPERTIES:
-				getProperties().clear();
-				return;
 			case MobaPackage.MOBA_QUEUE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -268,8 +234,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_QUEUE__PROPERTIES:
-				return properties != null && !properties.isEmpty();
 			case MobaPackage.MOBA_QUEUE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
@@ -278,36 +242,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 				return features != null && !features.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (derivedFeatureID) {
-				case MobaPackage.MOBA_QUEUE__PROPERTIES: return MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MobaPropertiesAble.class) {
-			switch (baseFeatureID) {
-				case MobaPackage.MOBA_PROPERTIES_ABLE__PROPERTIES: return MobaPackage.MOBA_QUEUE__PROPERTIES;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -372,18 +306,4 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 		return MobaUtil.getGenFeatures(getAllReferences(), MobaPackage.Literals.MOBA_FEATURE__NAME);
 	}
 
-	@Override
-	public List<MobaProperty> getAllProperties() {
-		List<MobaQueue> types = getAllSuperTypes();
-		// add this instance to the begin of the list
-		types.add(0, this);
-
-		return MobaUtil.getAllFeatures(types, MobaProperty.class,
-				MobaPackage.Literals.MOBA_PROPERTIES_ABLE__PROPERTIES);
-	}
-
-	@Override
-	public List<MobaProperty> getGenProperties() {
-		return MobaUtil.getGenFeatures(getAllProperties(), MobaPackage.Literals.MOBA_PROPERTY__KEY);
-	}
 } // MobaQueueImpl

@@ -18,7 +18,7 @@ package org.mobadsl.semantic.model.moba;
  * @model
  * @generated
  */
-public interface MobaConstant extends MobaApplicationFeature, MobaPropertiesAble {
+public interface MobaConstant extends MobaApplicationFeature {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute. <!--
 	 * begin-user-doc -->

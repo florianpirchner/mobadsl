@@ -23,7 +23,7 @@ package org.mobadsl.semantic.model.moba;
  * @model
  * @generated
  */
-public interface MobaEntityAttribute extends MobaEntityFeature, MobaMultiplicityAble, MobaPropertiesAble, MobaConstraintable {
+public interface MobaEntityAttribute extends MobaEntityFeature, MobaMultiplicityAble, MobaConstraintable {
 	/**
 	 * Returns the value of the '<em><b>Lazy</b></em>' attribute.
 	 * <!-- begin-user-doc -->

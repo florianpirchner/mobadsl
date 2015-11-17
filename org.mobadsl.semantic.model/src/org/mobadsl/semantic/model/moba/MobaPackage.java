@@ -57,14 +57,14 @@ public interface MobaPackage extends EPackage {
 	MobaPackage eINSTANCE = org.mobadsl.semantic.model.moba.impl.MobaPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble <em>Properties Able</em>}' class.
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPropertiesAbleImpl <em>Properties Able</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.MobaPropertiesAble
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPropertiesAbleImpl
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPropertiesAble()
 	 * @generated
 	 */
-	int MOBA_PROPERTIES_ABLE = 13;
+	int MOBA_PROPERTIES_ABLE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -85,6 +85,16 @@ public interface MobaPackage extends EPackage {
 	int MOBA_PROPERTIES_ABLE_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaProjectImpl <em>Project</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaProjectImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaProject()
+	 * @generated
+	 */
+	int MOBA_PROJECT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl <em>Application</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,61 +102,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaApplication()
 	 * @generated
 	 */
-	int MOBA_APPLICATION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION__PROPERTIES = MOBA_PROPERTIES_ABLE__PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION__ID = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION__NAME = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION__VERSION = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION__FEATURES = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Application</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 4;
+	int MOBA_APPLICATION = 1;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationFeatureImpl <em>Application Feature</em>}' class.
@@ -156,16 +112,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaApplicationFeature()
 	 * @generated
 	 */
-	int MOBA_APPLICATION_FEATURE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Application Feature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_APPLICATION_FEATURE_FEATURE_COUNT = 0;
+	int MOBA_APPLICATION_FEATURE = 2;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTemplateImpl <em>Template</em>}' class.
@@ -175,7 +122,864 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTemplate()
 	 * @generated
 	 */
-	int MOBA_TEMPLATE = 2;
+	int MOBA_TEMPLATE = 3;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl <em>Server</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaServerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaServer()
+	 * @generated
+	 */
+	int MOBA_SERVER = 4;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAuthorizationImpl <em>Authorization</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaAuthorizationImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaAuthorization()
+	 * @generated
+	 */
+	int MOBA_AUTHORIZATION = 5;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl <em>Transport Serialization Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTransportSerializationType()
+	 * @generated
+	 */
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE = 6;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl <em>Generator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGenerator()
+	 * @generated
+	 */
+	int MOBA_GENERATOR = 7;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaGeneratorFeature <em>Generator Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorFeature
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorFeature()
+	 * @generated
+	 */
+	int MOBA_GENERATOR_FEATURE = 8;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorMixinFeatureImpl <em>Generator Mixin Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorMixinFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorMixinFeature()
+	 * @generated
+	 */
+	int MOBA_GENERATOR_MIXIN_FEATURE = 9;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorIDFeatureImpl <em>Generator ID Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorIDFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorIDFeature()
+	 * @generated
+	 */
+	int MOBA_GENERATOR_ID_FEATURE = 10;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl <em>Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDataType()
+	 * @generated
+	 */
+	int MOBA_DATA_TYPE = 11;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaConstantImpl <em>Constant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaConstantImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstant()
+	 * @generated
+	 */
+	int MOBA_CONSTANT = 12;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl <em>Constant Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstantValue()
+	 * @generated
+	 */
+	int MOBA_CONSTANT_VALUE = 13;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl <em>Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaProperty()
+	 * @generated
+	 */
+	int MOBA_PROPERTY = 15;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataImpl <em>Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDataImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaData()
+	 * @generated
+	 */
+	int MOBA_DATA = 16;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl <em>Settings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettings()
+	 * @generated
+	 */
+	int MOBA_SETTINGS = 17;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl <em>Cache</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaCacheImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaCache()
+	 * @generated
+	 */
+	int MOBA_CACHE = 18;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl <em>Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntity()
+	 * @generated
+	 */
+	int MOBA_ENTITY = 19;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityIndexImpl <em>Entity Index</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityIndexImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityIndex()
+	 * @generated
+	 */
+	int MOBA_ENTITY_INDEX = 20;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl <em>Dto</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDto()
+	 * @generated
+	 */
+	int MOBA_DTO = 21;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl <em>Queue</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaQueueImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueue()
+	 * @generated
+	 */
+	int MOBA_QUEUE = 22;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl <em>REST</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaREST()
+	 * @generated
+	 */
+	int MOBA_REST = 23;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl <em>REST Payload Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTPayloadDefinition()
+	 * @generated
+	 */
+	int MOBA_REST_PAYLOAD_DEFINITION = 24;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl <em>REST Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTAttribute()
+	 * @generated
+	 */
+	int MOBA_REST_ATTRIBUTE = 25;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl <em>REST Custom Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTCustomService()
+	 * @generated
+	 */
+	int MOBA_REST_CUSTOM_SERVICE = 26;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTWorkflowImpl <em>REST Workflow</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTWorkflowImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTWorkflow()
+	 * @generated
+	 */
+	int MOBA_REST_WORKFLOW = 27;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl <em>REST Crud</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTCrud()
+	 * @generated
+	 */
+	int MOBA_REST_CRUD = 28;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFeatureImpl <em>Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFeature()
+	 * @generated
+	 */
+	int MOBA_FEATURE = 29;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityFeatureImpl <em>Entity Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityFeature()
+	 * @generated
+	 */
+	int MOBA_ENTITY_FEATURE = 30;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityAttributeImpl <em>Entity Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityAttributeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityAttribute()
+	 * @generated
+	 */
+	int MOBA_ENTITY_ATTRIBUTE = 31;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityAble <em>Multiplicity Able</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaMultiplicityAble
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMultiplicityAble()
+	 * @generated
+	 */
+	int MOBA_MULTIPLICITY_ABLE = 32;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityReferenceImpl <em>Entity Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityReferenceImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityReference()
+	 * @generated
+	 */
+	int MOBA_ENTITY_REFERENCE = 33;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl <em>Dto Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoFeature()
+	 * @generated
+	 */
+	int MOBA_DTO_FEATURE = 34;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl <em>Dto Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoAttribute()
+	 * @generated
+	 */
+	int MOBA_DTO_ATTRIBUTE = 35;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl <em>Dto Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoReference()
+	 * @generated
+	 */
+	int MOBA_DTO_REFERENCE = 36;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueFeatureImpl <em>Queue Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaQueueFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueueFeature()
+	 * @generated
+	 */
+	int MOBA_QUEUE_FEATURE = 37;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl <em>Queue Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueueReference()
+	 * @generated
+	 */
+	int MOBA_QUEUE_REFERENCE = 38;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMuliplicityImpl <em>Muliplicity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaMuliplicityImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMuliplicity()
+	 * @generated
+	 */
+	int MOBA_MULIPLICITY = 39;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsFeatureImpl <em>Settings Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsFeatureImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsFeature()
+	 * @generated
+	 */
+	int MOBA_SETTINGS_FEATURE = 40;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl <em>Settings Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsAttribute()
+	 * @generated
+	 */
+	int MOBA_SETTINGS_ATTRIBUTE = 41;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaConstraintable <em>Constraintable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaConstraintable
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstraintable()
+	 * @generated
+	 */
+	int MOBA_CONSTRAINTABLE = 42;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaConstraintImpl <em>Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstraint()
+	 * @generated
+	 */
+	int MOBA_CONSTRAINT = 43;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRegexpConstraintImpl <em>Regexp Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaRegexpConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRegexpConstraint()
+	 * @generated
+	 */
+	int MOBA_REGEXP_CONSTRAINT = 44;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMinConstraintImpl <em>Min Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaMinConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMinConstraint()
+	 * @generated
+	 */
+	int MOBA_MIN_CONSTRAINT = 45;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMaxConstraintImpl <em>Max Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaMaxConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMaxConstraint()
+	 * @generated
+	 */
+	int MOBA_MAX_CONSTRAINT = 46;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFutureConstraintImpl <em>Future Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaFutureConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFutureConstraint()
+	 * @generated
+	 */
+	int MOBA_FUTURE_CONSTRAINT = 47;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPastConstraintImpl <em>Past Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPastConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPastConstraint()
+	 * @generated
+	 */
+	int MOBA_PAST_CONSTRAINT = 48;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaNotNullConstraintImpl <em>Not Null Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaNotNullConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNotNullConstraint()
+	 * @generated
+	 */
+	int MOBA_NOT_NULL_CONSTRAINT = 49;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaNullConstraintImpl <em>Null Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaNullConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNullConstraint()
+	 * @generated
+	 */
+	int MOBA_NULL_CONSTRAINT = 50;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMinLengthConstraintImpl <em>Min Length Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaMinLengthConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMinLengthConstraint()
+	 * @generated
+	 */
+	int MOBA_MIN_LENGTH_CONSTRAINT = 51;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMaxLengthConstraintImpl <em>Max Length Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaMaxLengthConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMaxLengthConstraint()
+	 * @generated
+	 */
+	int MOBA_MAX_LENGTH_CONSTRAINT = 52;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDigitsConstraintImpl <em>Digits Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDigitsConstraintImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDigitsConstraint()
+	 * @generated
+	 */
+	int MOBA_DIGITS_CONSTRAINT = 53;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEnumImpl <em>Enum</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEnumImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEnum()
+	 * @generated
+	 */
+	int MOBA_ENUM = 54;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl <em>Enum Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEnumLiteral()
+	 * @generated
+	 */
+	int MOBA_ENUM_LITERAL = 55;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaUiApplicationImpl <em>Ui Application</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaUiApplicationImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaUiApplication()
+	 * @generated
+	 */
+	int MOBA_UI_APPLICATION = 56;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBackgroundApplicationImpl <em>Background Application</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBackgroundApplicationImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBackgroundApplication()
+	 * @generated
+	 */
+	int MOBA_BACKGROUND_APPLICATION = 57;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTriggerImpl <em>Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTrigger()
+	 * @generated
+	 */
+	int MOBA_TRIGGER = 58;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAppInstallTriggerImpl <em>App Install Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaAppInstallTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaAppInstallTrigger()
+	 * @generated
+	 */
+	int MOBA_APP_INSTALL_TRIGGER = 59;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAppUpdatelTriggerImpl <em>App Updatel Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaAppUpdatelTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaAppUpdatelTrigger()
+	 * @generated
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER = 60;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSMSTriggerImpl <em>SMS Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaSMSTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSMSTrigger()
+	 * @generated
+	 */
+	int MOBA_SMS_TRIGGER = 61;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDeviceStartupTriggerImpl <em>Device Startup Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDeviceStartupTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDeviceStartupTrigger()
+	 * @generated
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER = 62;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEmailTriggerImpl <em>Email Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEmailTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEmailTrigger()
+	 * @generated
+	 */
+	int MOBA_EMAIL_TRIGGER = 63;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTimerTriggerImpl <em>Timer Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaTimerTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTimerTrigger()
+	 * @generated
+	 */
+	int MOBA_TIMER_TRIGGER = 64;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPushTriggerImpl <em>Push Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPushTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPushTrigger()
+	 * @generated
+	 */
+	int MOBA_PUSH_TRIGGER = 65;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeofenceTriggerImpl <em>Geofence Trigger</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeofenceTriggerImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeofenceTrigger()
+	 * @generated
+	 */
+	int MOBA_GEOFENCE_TRIGGER = 66;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl <em>Generator Slot</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorSlot()
+	 * @generated
+	 */
+	int MOBA_GENERATOR_SLOT = 67;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFriendImpl <em>Friend</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaFriendImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFriend()
+	 * @generated
+	 */
+	int MOBA_FRIEND = 68;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFriendsAbleImpl <em>Friends Able</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaFriendsAbleImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFriendsAble()
+	 * @generated
+	 */
+	int MOBA_FRIENDS_ABLE = 69;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIENDS_ABLE__PROPERTIES = MOBA_PROPERTIES_ABLE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIENDS_ABLE__FRIENDS = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Friends Able</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIENDS_ABLE_FEATURE_COUNT = MOBA_PROPERTIES_ABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__PROPERTIES = MOBA_FRIENDS_ABLE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__FRIENDS = MOBA_FRIENDS_ABLE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__ID = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__NAME = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__VERSION = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Ui Application</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__UI_APPLICATION = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Background Application</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT__BACKGROUND_APPLICATION = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Project</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PROJECT_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__PROPERTIES = MOBA_FRIENDS_ABLE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__FRIENDS = MOBA_FRIENDS_ABLE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__ID = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__NAME = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__VERSION = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__FEATURES = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION_FEATURE__PROPERTIES = MOBA_FRIENDS_ABLE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION_FEATURE__FRIENDS = MOBA_FRIENDS_ABLE__FRIENDS;
+
+	/**
+	 * The number of structural features of the '<em>Application Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION_FEATURE_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TEMPLATE__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TEMPLATE__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Template</b></em>' reference.
@@ -205,14 +1009,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_TEMPLATE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl <em>Server</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaServerImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaServer()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_SERVER = 3;
+	int MOBA_SERVER__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SERVER__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -251,23 +1063,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_SERVER_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAuthorizationImpl <em>Authorization</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaAuthorizationImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaAuthorization()
-	 * @generated
-	 */
-	int MOBA_AUTHORIZATION = 4;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_AUTHORIZATION__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_AUTHORIZATION__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_AUTHORIZATION__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -276,7 +1087,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_AUTHORIZATION__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_AUTHORIZATION__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Authorization</em>' class.
@@ -285,17 +1096,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_AUTHORIZATION_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl <em>Transport Serialization Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaTransportSerializationTypeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTransportSerializationType()
-	 * @generated
-	 */
-	int MOBA_TRANSPORT_SERIALIZATION_TYPE = 5;
+	int MOBA_AUTHORIZATION_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -304,7 +1105,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -313,7 +1123,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Transport Serialization Type</em>' class.
@@ -322,17 +1132,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_TRANSPORT_SERIALIZATION_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_TRANSPORT_SERIALIZATION_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl <em>Generator</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGenerator()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_GENERATOR = 6;
+	int MOBA_GENERATOR__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -371,16 +1189,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_GENERATOR_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaGeneratorFeature <em>Generator Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorFeature
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorFeature()
-	 * @generated
-	 */
-	int MOBA_GENERATOR_FEATURE = 7;
-
-	/**
 	 * The number of structural features of the '<em>Generator Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -388,16 +1196,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_GENERATOR_FEATURE_FEATURE_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorMixinFeatureImpl <em>Generator Mixin Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorMixinFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorMixinFeature()
-	 * @generated
-	 */
-	int MOBA_GENERATOR_MIXIN_FEATURE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Generator Ref</b></em>' reference.
@@ -416,16 +1214,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_GENERATOR_MIXIN_FEATURE_FEATURE_COUNT = MOBA_GENERATOR_FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorIDFeatureImpl <em>Generator ID Feature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorIDFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorIDFeature()
-	 * @generated
-	 */
-	int MOBA_GENERATOR_ID_FEATURE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Generator Id</b></em>' attribute.
@@ -455,23 +1243,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_GENERATOR_ID_FEATURE_FEATURE_COUNT = MOBA_GENERATOR_FEATURE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl <em>Data Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDataType()
-	 * @generated
-	 */
-	int MOBA_DATA_TYPE = 10;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_DATA_TYPE__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DATA_TYPE__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -480,7 +1267,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__CONSTRAINTS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_DATA_TYPE__CONSTRAINTS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -489,7 +1276,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_DATA_TYPE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Primitive</b></em>' attribute.
@@ -498,7 +1285,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__PRIMITIVE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_DATA_TYPE__PRIMITIVE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>String</b></em>' attribute.
@@ -507,7 +1294,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__STRING = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_DATA_TYPE__STRING = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Numeric</b></em>' attribute.
@@ -516,7 +1303,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__NUMERIC = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_DATA_TYPE__NUMERIC = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Decimal</b></em>' attribute.
@@ -525,7 +1312,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__DECIMAL = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_DATA_TYPE__DECIMAL = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -534,7 +1321,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__DATE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_DATA_TYPE__DATE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -543,7 +1330,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__TIME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 8;
+	int MOBA_DATA_TYPE__TIME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
@@ -552,7 +1339,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__TIMESTAMP = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 9;
+	int MOBA_DATA_TYPE__TIMESTAMP = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Enum AST</b></em>' containment reference.
@@ -561,7 +1348,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__ENUM_AST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 10;
+	int MOBA_DATA_TYPE__ENUM_AST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Array</b></em>' attribute.
@@ -570,7 +1357,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__ARRAY = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 11;
+	int MOBA_DATA_TYPE__ARRAY = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Date Format String</b></em>' attribute.
@@ -579,7 +1366,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__DATE_FORMAT_STRING = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 12;
+	int MOBA_DATA_TYPE__DATE_FORMAT_STRING = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Date Format Const</b></em>' reference.
@@ -588,7 +1375,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__DATE_FORMAT_CONST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 13;
+	int MOBA_DATA_TYPE__DATE_FORMAT_CONST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -597,7 +1384,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 14;
+	int MOBA_DATA_TYPE__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
@@ -606,17 +1393,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 15;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaConstantImpl <em>Constant</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaConstantImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstant()
-	 * @generated
-	 */
-	int MOBA_CONSTANT = 11;
+	int MOBA_DATA_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -625,7 +1402,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_CONSTANT__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CONSTANT__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -634,7 +1420,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_CONSTANT__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value AST</b></em>' containment reference.
@@ -643,7 +1429,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT__VALUE_AST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_CONSTANT__VALUE_AST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Constant</em>' class.
@@ -652,17 +1438,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl <em>Constant Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaConstantValueImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstantValue()
-	 * @generated
-	 */
-	int MOBA_CONSTANT_VALUE = 12;
+	int MOBA_CONSTANT_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Value String</b></em>' attribute.
@@ -717,16 +1493,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_CONSTANT_VALUE_FEATURE_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl <em>Property</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaProperty()
-	 * @generated
-	 */
-	int MOBA_PROPERTY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Key String</b></em>' attribute.
@@ -792,14 +1558,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_PROPERTY_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataImpl <em>Data</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDataImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaData()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_DATA = 15;
+	int MOBA_DATA__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DATA__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The number of structural features of the '<em>Data</em>' class.
@@ -811,23 +1585,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DATA_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl <em>Settings</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettings()
-	 * @generated
-	 */
-	int MOBA_SETTINGS = 16;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_SETTINGS__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SETTINGS__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -836,7 +1609,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_SETTINGS__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -845,7 +1618,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_SETTINGS__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -854,7 +1627,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS__FEATURES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_SETTINGS__FEATURES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -863,7 +1636,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS__ACTIVE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_SETTINGS__ACTIVE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Settings</em>' class.
@@ -872,17 +1645,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 5;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl <em>Cache</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaCacheImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaCache()
-	 * @generated
-	 */
-	int MOBA_CACHE = 17;
+	int MOBA_SETTINGS_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Cache Type String</b></em>' attribute.
@@ -930,23 +1693,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_CACHE_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl <em>Entity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntity()
-	 * @generated
-	 */
-	int MOBA_ENTITY = 18;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__PROPERTIES = MOBA_DATA_FEATURE_COUNT + 0;
+	int MOBA_ENTITY__PROPERTIES = MOBA_DATA__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENTITY__FRIENDS = MOBA_DATA__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -955,7 +1717,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__NAME = MOBA_DATA_FEATURE_COUNT + 1;
+	int MOBA_ENTITY__NAME = MOBA_DATA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -964,7 +1726,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 2;
+	int MOBA_ENTITY__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
@@ -973,7 +1735,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__CACHE = MOBA_DATA_FEATURE_COUNT + 3;
+	int MOBA_ENTITY__CACHE = MOBA_DATA_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -982,7 +1744,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__FEATURES = MOBA_DATA_FEATURE_COUNT + 4;
+	int MOBA_ENTITY__FEATURES = MOBA_DATA_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' containment reference.
@@ -991,7 +1753,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__INDEX = MOBA_DATA_FEATURE_COUNT + 5;
+	int MOBA_ENTITY__INDEX = MOBA_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -1000,17 +1762,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 6;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityIndexImpl <em>Entity Index</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityIndexImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityIndex()
-	 * @generated
-	 */
-	int MOBA_ENTITY_INDEX = 19;
+	int MOBA_ENTITY_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
@@ -1031,23 +1783,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY_INDEX_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl <em>Dto</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDto()
-	 * @generated
-	 */
-	int MOBA_DTO = 20;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__PROPERTIES = MOBA_DATA_FEATURE_COUNT + 0;
+	int MOBA_DTO__PROPERTIES = MOBA_DATA__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO__FRIENDS = MOBA_DATA__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1056,7 +1807,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__NAME = MOBA_DATA_FEATURE_COUNT + 1;
+	int MOBA_DTO__NAME = MOBA_DATA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -1065,7 +1816,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 2;
+	int MOBA_DTO__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1074,7 +1825,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__FEATURES = MOBA_DATA_FEATURE_COUNT + 3;
+	int MOBA_DTO__FEATURES = MOBA_DATA_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Serialization Type</b></em>' reference.
@@ -1083,7 +1834,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO__SERIALIZATION_TYPE = MOBA_DATA_FEATURE_COUNT + 4;
+	int MOBA_DTO__SERIALIZATION_TYPE = MOBA_DATA_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Dto</em>' class.
@@ -1092,17 +1843,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 5;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl <em>Queue</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaQueueImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueue()
-	 * @generated
-	 */
-	int MOBA_QUEUE = 21;
+	int MOBA_DTO_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1111,7 +1852,16 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE__PROPERTIES = MOBA_DATA_FEATURE_COUNT + 0;
+	int MOBA_QUEUE__PROPERTIES = MOBA_DATA__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_QUEUE__FRIENDS = MOBA_DATA__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1120,7 +1870,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE__NAME = MOBA_DATA_FEATURE_COUNT + 1;
+	int MOBA_QUEUE__NAME = MOBA_DATA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -1129,7 +1879,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 2;
+	int MOBA_QUEUE__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1138,7 +1888,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE__FEATURES = MOBA_DATA_FEATURE_COUNT + 3;
+	int MOBA_QUEUE__FEATURES = MOBA_DATA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Queue</em>' class.
@@ -1147,17 +1897,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 4;
+	int MOBA_QUEUE_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl <em>REST</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaREST()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_REST = 22;
+	int MOBA_REST__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1232,16 +1990,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl <em>REST Payload Definition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTPayloadDefinition()
-	 * @generated
-	 */
-	int MOBA_REST_PAYLOAD_DEFINITION = 23;
-
-	/**
 	 * The feature id for the '<em><b>Dto</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1276,16 +2024,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_REST_PAYLOAD_DEFINITION_FEATURE_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl <em>REST Attribute</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTAttribute()
-	 * @generated
-	 */
-	int MOBA_REST_ATTRIBUTE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1378,14 +2116,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_ATTRIBUTE_FEATURE_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl <em>REST Custom Service</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTCustomService()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_REST_CUSTOM_SERVICE = 25;
+	int MOBA_REST_CUSTOM_SERVICE__PROPERTIES = MOBA_REST__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_CUSTOM_SERVICE__FRIENDS = MOBA_REST__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1451,22 +2197,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CUSTOM_SERVICE__HEADERS = MOBA_REST__HEADERS;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_REST_CUSTOM_SERVICE__PROPERTIES = MOBA_REST_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Operation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CUSTOM_SERVICE__OPERATION = MOBA_REST_FEATURE_COUNT + 1;
+	int MOBA_REST_CUSTOM_SERVICE__OPERATION = MOBA_REST_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -1475,7 +2212,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CUSTOM_SERVICE__PARAMETERS = MOBA_REST_FEATURE_COUNT + 2;
+	int MOBA_REST_CUSTOM_SERVICE__PARAMETERS = MOBA_REST_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -1484,7 +2221,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE = MOBA_REST_FEATURE_COUNT + 3;
+	int MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE = MOBA_REST_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>REST Custom Service</em>' class.
@@ -1493,17 +2230,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CUSTOM_SERVICE_FEATURE_COUNT = MOBA_REST_FEATURE_COUNT + 4;
+	int MOBA_REST_CUSTOM_SERVICE_FEATURE_COUNT = MOBA_REST_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTWorkflowImpl <em>REST Workflow</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTWorkflowImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTWorkflow()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_REST_WORKFLOW = 26;
+	int MOBA_REST_WORKFLOW__PROPERTIES = MOBA_REST__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_WORKFLOW__FRIENDS = MOBA_REST__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1569,22 +2314,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_WORKFLOW__HEADERS = MOBA_REST__HEADERS;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_REST_WORKFLOW__PROPERTIES = MOBA_REST_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_WORKFLOW__SERVICES = MOBA_REST_FEATURE_COUNT + 1;
+	int MOBA_REST_WORKFLOW__SERVICES = MOBA_REST_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -1593,7 +2329,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_WORKFLOW__SUPER_TYPE = MOBA_REST_FEATURE_COUNT + 2;
+	int MOBA_REST_WORKFLOW__SUPER_TYPE = MOBA_REST_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>REST Workflow</em>' class.
@@ -1602,17 +2338,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_WORKFLOW_FEATURE_COUNT = MOBA_REST_FEATURE_COUNT + 3;
+	int MOBA_REST_WORKFLOW_FEATURE_COUNT = MOBA_REST_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl <em>REST Crud</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRESTCrudImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTCrud()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_REST_CRUD = 27;
+	int MOBA_REST_CRUD__PROPERTIES = MOBA_REST__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_CRUD__FRIENDS = MOBA_REST__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1678,22 +2422,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CRUD__HEADERS = MOBA_REST__HEADERS;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_REST_CRUD__PROPERTIES = MOBA_REST_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Operations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CRUD__OPERATIONS = MOBA_REST_FEATURE_COUNT + 1;
+	int MOBA_REST_CRUD__OPERATIONS = MOBA_REST_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -1702,7 +2437,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CRUD__SUPER_TYPE = MOBA_REST_FEATURE_COUNT + 2;
+	int MOBA_REST_CRUD__SUPER_TYPE = MOBA_REST_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>REST Crud</em>' class.
@@ -1711,17 +2446,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_CRUD_FEATURE_COUNT = MOBA_REST_FEATURE_COUNT + 3;
+	int MOBA_REST_CRUD_FEATURE_COUNT = MOBA_REST_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFeatureImpl <em>Feature</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFeature()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_FEATURE = 28;
+	int MOBA_FEATURE__PROPERTIES = MOBA_FRIENDS_ABLE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FEATURE__FRIENDS = MOBA_FRIENDS_ABLE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1730,7 +2473,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_FEATURE__NAME = 0;
+	int MOBA_FEATURE__NAME = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
@@ -1739,17 +2482,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_FEATURE_FEATURE_COUNT = 1;
+	int MOBA_FEATURE_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityFeatureImpl <em>Entity Feature</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityFeature()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_ENTITY_FEATURE = 29;
+	int MOBA_ENTITY_FEATURE__PROPERTIES = MOBA_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENTITY_FEATURE__FRIENDS = MOBA_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1770,14 +2521,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY_FEATURE_FEATURE_COUNT = MOBA_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityAttributeImpl <em>Entity Attribute</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityAttributeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityAttribute()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE = 30;
+	int MOBA_ENTITY_ATTRIBUTE__PROPERTIES = MOBA_ENTITY_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENTITY_ATTRIBUTE__FRIENDS = MOBA_ENTITY_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1798,22 +2557,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY_ATTRIBUTE__MULTIPLICITY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_ENTITY_ATTRIBUTE__PROPERTIES = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE__CONSTRAINTS = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_ENTITY_ATTRIBUTE__CONSTRAINTS = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -1822,7 +2572,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE__LAZY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_ENTITY_ATTRIBUTE__LAZY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -1831,7 +2581,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE__TRANSIENT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_ENTITY_ATTRIBUTE__TRANSIENT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Domain Key</b></em>' attribute.
@@ -1840,7 +2590,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE__DOMAIN_KEY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_ENTITY_ATTRIBUTE__DOMAIN_KEY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Domain Description</b></em>' attribute.
@@ -1849,7 +2599,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_ENTITY_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1858,7 +2608,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE__TYPE = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_ENTITY_ATTRIBUTE__TYPE = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Entity Attribute</em>' class.
@@ -1867,17 +2617,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_ATTRIBUTE_FEATURE_COUNT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 8;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaMultiplicityAble <em>Multiplicity Able</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.MobaMultiplicityAble
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMultiplicityAble()
-	 * @generated
-	 */
-	int MOBA_MULTIPLICITY_ABLE = 31;
+	int MOBA_ENTITY_ATTRIBUTE_FEATURE_COUNT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicity</b></em>' containment reference.
@@ -1898,14 +2638,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_MULTIPLICITY_ABLE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityReferenceImpl <em>Entity Reference</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityReferenceImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityReference()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_ENTITY_REFERENCE = 32;
+	int MOBA_ENTITY_REFERENCE__PROPERTIES = MOBA_ENTITY_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENTITY_REFERENCE__FRIENDS = MOBA_ENTITY_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1926,22 +2674,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY_REFERENCE__MULTIPLICITY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_ENTITY_REFERENCE__PROPERTIES = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Cascading</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_REFERENCE__CASCADING = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_ENTITY_REFERENCE__CASCADING = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -1950,7 +2689,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_REFERENCE__LAZY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_ENTITY_REFERENCE__LAZY = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -1959,7 +2698,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_REFERENCE__TRANSIENT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_ENTITY_REFERENCE__TRANSIENT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1968,7 +2707,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_REFERENCE__TYPE = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_ENTITY_REFERENCE__TYPE = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Entity Reference</em>' class.
@@ -1977,17 +2716,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_REFERENCE_FEATURE_COUNT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_ENTITY_REFERENCE_FEATURE_COUNT = MOBA_ENTITY_FEATURE_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl <em>Dto Feature</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoFeature()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_DTO_FEATURE = 33;
+	int MOBA_DTO_FEATURE__PROPERTIES = MOBA_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO_FEATURE__FRIENDS = MOBA_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2008,14 +2755,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DTO_FEATURE_FEATURE_COUNT = MOBA_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl <em>Dto Attribute</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoAttribute()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE = 34;
+	int MOBA_DTO_ATTRIBUTE__PROPERTIES = MOBA_DTO_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO_ATTRIBUTE__FRIENDS = MOBA_DTO_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2036,22 +2791,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DTO_ATTRIBUTE__MULTIPLICITY = MOBA_DTO_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_DTO_ATTRIBUTE__PROPERTIES = MOBA_DTO_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__CONSTRAINTS = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_DTO_ATTRIBUTE__CONSTRAINTS = MOBA_DTO_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -2060,7 +2806,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__LAZY = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_DTO_ATTRIBUTE__LAZY = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -2069,7 +2815,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__TRANSIENT = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_DTO_ATTRIBUTE__TRANSIENT = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Domain Key</b></em>' attribute.
@@ -2078,7 +2824,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__DOMAIN_KEY = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_DTO_ATTRIBUTE__DOMAIN_KEY = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Domain Description</b></em>' attribute.
@@ -2087,7 +2833,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_DTO_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Alias</b></em>' attribute.
@@ -2096,7 +2842,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__ALIAS = MOBA_DTO_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_DTO_ATTRIBUTE__ALIAS = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2105,7 +2851,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 8;
+	int MOBA_DTO_ATTRIBUTE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Dto Attribute</em>' class.
@@ -2114,17 +2860,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_ATTRIBUTE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 9;
+	int MOBA_DTO_ATTRIBUTE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 8;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl <em>Dto Reference</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoReference()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE = 35;
+	int MOBA_DTO_REFERENCE__PROPERTIES = MOBA_DTO_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO_REFERENCE__FRIENDS = MOBA_DTO_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2145,22 +2899,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DTO_REFERENCE__MULTIPLICITY = MOBA_DTO_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_DTO_REFERENCE__PROPERTIES = MOBA_DTO_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Cascading</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__CASCADING = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_DTO_REFERENCE__CASCADING = MOBA_DTO_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -2169,7 +2914,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__LAZY = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_DTO_REFERENCE__LAZY = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -2178,7 +2923,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__TRANSIENT = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_DTO_REFERENCE__TRANSIENT = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2187,7 +2932,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_DTO_REFERENCE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Dto Reference</em>' class.
@@ -2196,17 +2941,25 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_DTO_REFERENCE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueFeatureImpl <em>Queue Feature</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaQueueFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueueFeature()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_QUEUE_FEATURE = 36;
+	int MOBA_QUEUE_FEATURE__PROPERTIES = MOBA_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_QUEUE_FEATURE__FRIENDS = MOBA_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2227,14 +2980,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_QUEUE_FEATURE_FEATURE_COUNT = MOBA_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl <em>Queue Reference</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaQueueReferenceImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaQueueReference()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE = 37;
+	int MOBA_QUEUE_REFERENCE__PROPERTIES = MOBA_QUEUE_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_QUEUE_REFERENCE__FRIENDS = MOBA_QUEUE_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2255,22 +3016,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_QUEUE_REFERENCE__MULTIPLICITY = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_QUEUE_REFERENCE__PROPERTIES = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Cascading</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE__CASCADING = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_QUEUE_REFERENCE__CASCADING = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -2279,7 +3031,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE__LAZY = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_QUEUE_REFERENCE__LAZY = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -2288,7 +3040,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE__TRANSIENT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_QUEUE_REFERENCE__TRANSIENT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2297,7 +3049,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE__TYPE = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_QUEUE_REFERENCE__TYPE = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Queue Reference</em>' class.
@@ -2306,17 +3058,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE_FEATURE_COUNT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 6;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMuliplicityImpl <em>Muliplicity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaMuliplicityImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMuliplicity()
-	 * @generated
-	 */
-	int MOBA_MULIPLICITY = 38;
+	int MOBA_QUEUE_REFERENCE_FEATURE_COUNT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Lower</b></em>' attribute.
@@ -2346,14 +3088,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_MULIPLICITY_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsFeatureImpl <em>Settings Feature</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsFeatureImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsFeature()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_SETTINGS_FEATURE = 39;
+	int MOBA_SETTINGS_FEATURE__PROPERTIES = MOBA_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SETTINGS_FEATURE__FRIENDS = MOBA_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2374,14 +3124,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_SETTINGS_FEATURE_FEATURE_COUNT = MOBA_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl <em>Settings Attribute</em>}' class.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsAttribute()
 	 * @generated
+	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE = 40;
+	int MOBA_SETTINGS_ATTRIBUTE__PROPERTIES = MOBA_SETTINGS_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SETTINGS_ATTRIBUTE__FRIENDS = MOBA_SETTINGS_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2402,22 +3160,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_SETTINGS_ATTRIBUTE__MULTIPLICITY = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_SETTINGS_ATTRIBUTE__PROPERTIES = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE__CONSTRAINTS = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_SETTINGS_ATTRIBUTE__CONSTRAINTS = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
@@ -2426,7 +3175,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE__LAZY = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_SETTINGS_ATTRIBUTE__LAZY = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transient</b></em>' attribute.
@@ -2435,7 +3184,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE__TRANSIENT = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_SETTINGS_ATTRIBUTE__TRANSIENT = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Domain Key</b></em>' attribute.
@@ -2444,7 +3193,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE__DOMAIN_KEY = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_SETTINGS_ATTRIBUTE__DOMAIN_KEY = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Domain Description</b></em>' attribute.
@@ -2453,7 +3202,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_SETTINGS_ATTRIBUTE__DOMAIN_DESCRIPTION = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2462,7 +3211,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE__TYPE = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_SETTINGS_ATTRIBUTE__TYPE = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Settings Attribute</em>' class.
@@ -2471,17 +3220,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE_FEATURE_COUNT = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 8;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaConstraintable <em>Constraintable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.MobaConstraintable
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstraintable()
-	 * @generated
-	 */
-	int MOBA_CONSTRAINTABLE = 41;
+	int MOBA_SETTINGS_ATTRIBUTE_FEATURE_COUNT = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -2502,16 +3241,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_CONSTRAINTABLE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaConstraintImpl <em>Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstraint()
-	 * @generated
-	 */
-	int MOBA_CONSTRAINT = 42;
-
-	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2519,16 +3248,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_CONSTRAINT_FEATURE_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRegexpConstraintImpl <em>Regexp Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaRegexpConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRegexpConstraint()
-	 * @generated
-	 */
-	int MOBA_REGEXP_CONSTRAINT = 43;
 
 	/**
 	 * The feature id for the '<em><b>Filter String</b></em>' attribute.
@@ -2558,16 +3277,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REGEXP_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMinConstraintImpl <em>Min Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaMinConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMinConstraint()
-	 * @generated
-	 */
-	int MOBA_MIN_CONSTRAINT = 44;
-
-	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2593,16 +3302,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_MIN_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMaxConstraintImpl <em>Max Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaMaxConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMaxConstraint()
-	 * @generated
-	 */
-	int MOBA_MAX_CONSTRAINT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
@@ -2632,16 +3331,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_MAX_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFutureConstraintImpl <em>Future Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaFutureConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFutureConstraint()
-	 * @generated
-	 */
-	int MOBA_FUTURE_CONSTRAINT = 46;
-
-	/**
 	 * The number of structural features of the '<em>Future Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2649,16 +3338,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_FUTURE_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPastConstraintImpl <em>Past Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPastConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPastConstraint()
-	 * @generated
-	 */
-	int MOBA_PAST_CONSTRAINT = 47;
 
 	/**
 	 * The number of structural features of the '<em>Past Constraint</em>' class.
@@ -2670,16 +3349,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_PAST_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaNotNullConstraintImpl <em>Not Null Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaNotNullConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNotNullConstraint()
-	 * @generated
-	 */
-	int MOBA_NOT_NULL_CONSTRAINT = 48;
-
-	/**
 	 * The number of structural features of the '<em>Not Null Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2689,16 +3358,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_NOT_NULL_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaNullConstraintImpl <em>Null Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaNullConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNullConstraint()
-	 * @generated
-	 */
-	int MOBA_NULL_CONSTRAINT = 49;
-
-	/**
 	 * The number of structural features of the '<em>Null Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2706,16 +3365,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_NULL_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMinLengthConstraintImpl <em>Min Length Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaMinLengthConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMinLengthConstraint()
-	 * @generated
-	 */
-	int MOBA_MIN_LENGTH_CONSTRAINT = 50;
 
 	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
@@ -2745,16 +3394,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_MIN_LENGTH_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMaxLengthConstraintImpl <em>Max Length Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaMaxLengthConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaMaxLengthConstraint()
-	 * @generated
-	 */
-	int MOBA_MAX_LENGTH_CONSTRAINT = 51;
-
-	/**
 	 * The feature id for the '<em><b>Filter Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2780,16 +3419,6 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_MAX_LENGTH_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDigitsConstraintImpl <em>Digits Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDigitsConstraintImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDigitsConstraint()
-	 * @generated
-	 */
-	int MOBA_DIGITS_CONSTRAINT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Filter Integer Value</b></em>' attribute.
@@ -2837,23 +3466,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DIGITS_CONSTRAINT_FEATURE_COUNT = MOBA_CONSTRAINT_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEnumImpl <em>Enum</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEnumImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEnum()
-	 * @generated
-	 */
-	int MOBA_ENUM = 53;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM__PROPERTIES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_ENUM__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENUM__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -2862,7 +3490,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_ENUM__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2871,7 +3499,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_ENUM__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
@@ -2880,7 +3508,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM__LITERALS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_ENUM__LITERALS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Enum</em>' class.
@@ -2889,17 +3517,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl <em>Enum Literal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEnumLiteral()
-	 * @generated
-	 */
-	int MOBA_ENUM_LITERAL = 54;
+	int MOBA_ENUM_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -2938,6 +3556,883 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENUM_LITERAL_FEATURE_COUNT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION__PROPERTIES = MOBA_APPLICATION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION__FRIENDS = MOBA_APPLICATION__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION__ID = MOBA_APPLICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION__NAME = MOBA_APPLICATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION__VERSION = MOBA_APPLICATION__VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION__FEATURES = MOBA_APPLICATION__FEATURES;
+
+	/**
+	 * The number of structural features of the '<em>Ui Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_UI_APPLICATION_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__PROPERTIES = MOBA_APPLICATION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__FRIENDS = MOBA_APPLICATION__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__ID = MOBA_APPLICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__NAME = MOBA_APPLICATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__VERSION = MOBA_APPLICATION__VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__FEATURES = MOBA_APPLICATION__FEATURES;
+
+	/**
+	 * The feature id for the '<em><b>Triggers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION__TRIGGERS = MOBA_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Background Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BACKGROUND_APPLICATION_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRIGGER__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRIGGER__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRIGGER__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRIGGER__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TRIGGER_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_INSTALL_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_INSTALL_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_INSTALL_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_INSTALL_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>App Install Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_INSTALL_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>App Updatel Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APP_UPDATEL_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SMS_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SMS_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SMS_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SMS_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>SMS Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_SMS_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Device Startup Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DEVICE_STARTUP_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EMAIL_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EMAIL_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EMAIL_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EMAIL_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Email Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EMAIL_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TIMER_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TIMER_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TIMER_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TIMER_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Timer Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_TIMER_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Push Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER__PROPERTIES = MOBA_TRIGGER__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER__FRIENDS = MOBA_TRIGGER__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER__SUPER_TYPE = MOBA_TRIGGER__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER__NAME = MOBA_TRIGGER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Event Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER__EVENT_TYPE = MOBA_TRIGGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Geofence Trigger</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GEOFENCE_TRIGGER_FEATURE_COUNT = MOBA_TRIGGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR_SLOT__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR_SLOT__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR_SLOT__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR_SLOT__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR_SLOT__TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Generator Slot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_GENERATOR_SLOT_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Value String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIEND__VALUE_STRING = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIEND__VALUE_CONST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIEND__VALUE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Friend</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_FRIEND_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaExternalModuleImpl <em>External Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaExternalModuleImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaExternalModule()
+	 * @generated
+	 */
+	int MOBA_EXTERNAL_MODULE = 70;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EXTERNAL_MODULE__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EXTERNAL_MODULE__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EXTERNAL_MODULE__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EXTERNAL_MODULE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>External Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_EXTERNAL_MODULE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBluetoothModuleImpl <em>Bluetooth Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaBluetoothModuleImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBluetoothModule()
+	 * @generated
+	 */
+	int MOBA_BLUETOOTH_MODULE = 71;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE__PROPERTIES = MOBA_EXTERNAL_MODULE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE__FRIENDS = MOBA_EXTERNAL_MODULE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE__SUPER_TYPE = MOBA_EXTERNAL_MODULE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE__NAME = MOBA_EXTERNAL_MODULE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE__TYPE = MOBA_EXTERNAL_MODULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Bluetooth Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_BLUETOOTH_MODULE_FEATURE_COUNT = MOBA_EXTERNAL_MODULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaNFCModuleImpl <em>NFC Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaNFCModuleImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNFCModule()
+	 * @generated
+	 */
+	int MOBA_NFC_MODULE = 72;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE__PROPERTIES = MOBA_EXTERNAL_MODULE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE__FRIENDS = MOBA_EXTERNAL_MODULE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE__SUPER_TYPE = MOBA_EXTERNAL_MODULE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE__NAME = MOBA_EXTERNAL_MODULE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE__TYPE = MOBA_EXTERNAL_MODULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>NFC Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_NFC_MODULE_FEATURE_COUNT = MOBA_EXTERNAL_MODULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPushModuleImpl <em>Push Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPushModuleImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPushModule()
+	 * @generated
+	 */
+	int MOBA_PUSH_MODULE = 73;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_MODULE__PROPERTIES = MOBA_EXTERNAL_MODULE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_MODULE__FRIENDS = MOBA_EXTERNAL_MODULE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_MODULE__SUPER_TYPE = MOBA_EXTERNAL_MODULE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_MODULE__NAME = MOBA_EXTERNAL_MODULE__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Push Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_PUSH_MODULE_FEATURE_COUNT = MOBA_EXTERNAL_MODULE_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2945,7 +4440,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTMethods()
 	 * @generated
 	 */
-	int MOBA_REST_METHODS = 55;
+	int MOBA_REST_METHODS = 74;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaLowerBound <em>Lower Bound</em>}' enum.
@@ -2955,7 +4450,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaLowerBound()
 	 * @generated
 	 */
-	int MOBA_LOWER_BOUND = 56;
+	int MOBA_LOWER_BOUND = 75;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaUpperBound <em>Upper Bound</em>}' enum.
@@ -2965,8 +4460,104 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaUpperBound()
 	 * @generated
 	 */
-	int MOBA_UPPER_BOUND = 57;
+	int MOBA_UPPER_BOUND = 76;
 
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaGeofenceEvent <em>Geofence Event</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaGeofenceEvent
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeofenceEvent()
+	 * @generated
+	 */
+	int MOBA_GEOFENCE_EVENT = 77;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaNFCModuleType <em>NFC Module Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaNFCModuleType
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNFCModuleType()
+	 * @generated
+	 */
+	int MOBA_NFC_MODULE_TYPE = 78;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaBlueToothModuleType <em>Blue Tooth Module Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaBlueToothModuleType
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBlueToothModuleType()
+	 * @generated
+	 */
+	int MOBA_BLUE_TOOTH_MODULE_TYPE = 79;
+
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Project</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject
+	 * @generated
+	 */
+	EClass getMobaProject();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaProject#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject#getId()
+	 * @see #getMobaProject()
+	 * @generated
+	 */
+	EAttribute getMobaProject_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaProject#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject#getName()
+	 * @see #getMobaProject()
+	 * @generated
+	 */
+	EAttribute getMobaProject_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaProject#getVersion <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Version</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject#getVersion()
+	 * @see #getMobaProject()
+	 * @generated
+	 */
+	EAttribute getMobaProject_Version();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaProject#getUiApplication <em>Ui Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ui Application</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject#getUiApplication()
+	 * @see #getMobaProject()
+	 * @generated
+	 */
+	EReference getMobaProject_UiApplication();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaProject#getBackgroundApplication <em>Background Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Background Application</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject#getBackgroundApplication()
+	 * @see #getMobaProject()
+	 * @generated
+	 */
+	EReference getMobaProject_BackgroundApplication();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaApplication <em>Application</em>}'.
@@ -5103,6 +6694,351 @@ public interface MobaPackage extends EPackage {
 	EAttribute getMobaEnumLiteral_Value();
 
 	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaUiApplication <em>Ui Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ui Application</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaUiApplication
+	 * @generated
+	 */
+	EClass getMobaUiApplication();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBackgroundApplication <em>Background Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Background Application</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBackgroundApplication
+	 * @generated
+	 */
+	EClass getMobaBackgroundApplication();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.mobadsl.semantic.model.moba.MobaBackgroundApplication#getTriggers <em>Triggers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Triggers</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBackgroundApplication#getTriggers()
+	 * @see #getMobaBackgroundApplication()
+	 * @generated
+	 */
+	EReference getMobaBackgroundApplication_Triggers();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTrigger
+	 * @generated
+	 */
+	EClass getMobaTrigger();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaTrigger#getSuperType <em>Super Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Super Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTrigger#getSuperType()
+	 * @see #getMobaTrigger()
+	 * @generated
+	 */
+	EReference getMobaTrigger_SuperType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaTrigger#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTrigger#getName()
+	 * @see #getMobaTrigger()
+	 * @generated
+	 */
+	EAttribute getMobaTrigger_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaAppInstallTrigger <em>App Install Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>App Install Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaAppInstallTrigger
+	 * @generated
+	 */
+	EClass getMobaAppInstallTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger <em>App Updatel Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>App Updatel Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger
+	 * @generated
+	 */
+	EClass getMobaAppUpdatelTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaSMSTrigger <em>SMS Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SMS Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaSMSTrigger
+	 * @generated
+	 */
+	EClass getMobaSMSTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger <em>Device Startup Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Device Startup Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger
+	 * @generated
+	 */
+	EClass getMobaDeviceStartupTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaEmailTrigger <em>Email Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Email Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaEmailTrigger
+	 * @generated
+	 */
+	EClass getMobaEmailTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaTimerTrigger <em>Timer Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Timer Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaTimerTrigger
+	 * @generated
+	 */
+	EClass getMobaTimerTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaPushTrigger <em>Push Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Push Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaPushTrigger
+	 * @generated
+	 */
+	EClass getMobaPushTrigger();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaGeofenceTrigger <em>Geofence Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Geofence Trigger</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeofenceTrigger
+	 * @generated
+	 */
+	EClass getMobaGeofenceTrigger();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaGeofenceTrigger#getEventType <em>Event Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Event Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeofenceTrigger#getEventType()
+	 * @see #getMobaGeofenceTrigger()
+	 * @generated
+	 */
+	EAttribute getMobaGeofenceTrigger_EventType();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot <em>Generator Slot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generator Slot</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorSlot
+	 * @generated
+	 */
+	EClass getMobaGeneratorSlot();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot#getSuperType <em>Super Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Super Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorSlot#getSuperType()
+	 * @see #getMobaGeneratorSlot()
+	 * @generated
+	 */
+	EReference getMobaGeneratorSlot_SuperType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorSlot#getName()
+	 * @see #getMobaGeneratorSlot()
+	 * @generated
+	 */
+	EAttribute getMobaGeneratorSlot_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorSlot#getType()
+	 * @see #getMobaGeneratorSlot()
+	 * @generated
+	 */
+	EAttribute getMobaGeneratorSlot_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaFriend <em>Friend</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Friend</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriend
+	 * @generated
+	 */
+	EClass getMobaFriend();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaFriend#getValueString <em>Value String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value String</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriend#getValueString()
+	 * @see #getMobaFriend()
+	 * @generated
+	 */
+	EAttribute getMobaFriend_ValueString();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaFriend#getValueConst <em>Value Const</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value Const</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriend#getValueConst()
+	 * @see #getMobaFriend()
+	 * @generated
+	 */
+	EReference getMobaFriend_ValueConst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaFriend#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriend#getValue()
+	 * @see #getMobaFriend()
+	 * @generated
+	 */
+	EAttribute getMobaFriend_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaFriendsAble <em>Friends Able</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Friends Able</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriendsAble
+	 * @generated
+	 */
+	EClass getMobaFriendsAble();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaFriendsAble#getFriends <em>Friends</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Friends</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriendsAble#getFriends()
+	 * @see #getMobaFriendsAble()
+	 * @generated
+	 */
+	EReference getMobaFriendsAble_Friends();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaExternalModule <em>External Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>External Module</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaExternalModule
+	 * @generated
+	 */
+	EClass getMobaExternalModule();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaExternalModule#getSuperType <em>Super Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Super Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaExternalModule#getSuperType()
+	 * @see #getMobaExternalModule()
+	 * @generated
+	 */
+	EReference getMobaExternalModule_SuperType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaExternalModule#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaExternalModule#getName()
+	 * @see #getMobaExternalModule()
+	 * @generated
+	 */
+	EAttribute getMobaExternalModule_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaBluetoothModule <em>Bluetooth Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bluetooth Module</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBluetoothModule
+	 * @generated
+	 */
+	EClass getMobaBluetoothModule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaBluetoothModule#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBluetoothModule#getType()
+	 * @see #getMobaBluetoothModule()
+	 * @generated
+	 */
+	EAttribute getMobaBluetoothModule_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaNFCModule <em>NFC Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>NFC Module</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaNFCModule
+	 * @generated
+	 */
+	EClass getMobaNFCModule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaNFCModule#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaNFCModule#getType()
+	 * @see #getMobaNFCModule()
+	 * @generated
+	 */
+	EAttribute getMobaNFCModule_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaPushModule <em>Push Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Push Module</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaPushModule
+	 * @generated
+	 */
+	EClass getMobaPushModule();
+
+	/**
 	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5133,6 +7069,36 @@ public interface MobaPackage extends EPackage {
 	EEnum getMobaUpperBound();
 
 	/**
+	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaGeofenceEvent <em>Geofence Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Geofence Event</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeofenceEvent
+	 * @generated
+	 */
+	EEnum getMobaGeofenceEvent();
+
+	/**
+	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaNFCModuleType <em>NFC Module Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>NFC Module Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaNFCModuleType
+	 * @generated
+	 */
+	EEnum getMobaNFCModuleType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaBlueToothModuleType <em>Blue Tooth Module Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Blue Tooth Module Type</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaBlueToothModuleType
+	 * @generated
+	 */
+	EEnum getMobaBlueToothModuleType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5154,6 +7120,56 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaProjectImpl <em>Project</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaProjectImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaProject()
+		 * @generated
+		 */
+		EClass MOBA_PROJECT = eINSTANCE.getMobaProject();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_PROJECT__ID = eINSTANCE.getMobaProject_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_PROJECT__NAME = eINSTANCE.getMobaProject_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_PROJECT__VERSION = eINSTANCE.getMobaProject_Version();
+
+		/**
+		 * The meta object literal for the '<em><b>Ui Application</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_PROJECT__UI_APPLICATION = eINSTANCE.getMobaProject_UiApplication();
+
+		/**
+		 * The meta object literal for the '<em><b>Background Application</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_PROJECT__BACKGROUND_APPLICATION = eINSTANCE.getMobaProject_BackgroundApplication();
+
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl <em>Application</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -5581,10 +7597,10 @@ public interface MobaPackage extends EPackage {
 		EAttribute MOBA_CONSTANT_VALUE__VALUE_DOUBLE = eINSTANCE.getMobaConstantValue_ValueDouble();
 
 		/**
-		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaPropertiesAble <em>Properties Able</em>}' class.
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPropertiesAbleImpl <em>Properties Able</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mobadsl.semantic.model.moba.MobaPropertiesAble
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPropertiesAbleImpl
 		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPropertiesAble()
 		 * @generated
 		 */
@@ -6857,6 +8873,306 @@ public interface MobaPackage extends EPackage {
 		EAttribute MOBA_ENUM_LITERAL__VALUE = eINSTANCE.getMobaEnumLiteral_Value();
 
 		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaUiApplicationImpl <em>Ui Application</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaUiApplicationImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaUiApplication()
+		 * @generated
+		 */
+		EClass MOBA_UI_APPLICATION = eINSTANCE.getMobaUiApplication();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBackgroundApplicationImpl <em>Background Application</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBackgroundApplicationImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBackgroundApplication()
+		 * @generated
+		 */
+		EClass MOBA_BACKGROUND_APPLICATION = eINSTANCE.getMobaBackgroundApplication();
+
+		/**
+		 * The meta object literal for the '<em><b>Triggers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_BACKGROUND_APPLICATION__TRIGGERS = eINSTANCE.getMobaBackgroundApplication_Triggers();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTriggerImpl <em>Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTrigger()
+		 * @generated
+		 */
+		EClass MOBA_TRIGGER = eINSTANCE.getMobaTrigger();
+
+		/**
+		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_TRIGGER__SUPER_TYPE = eINSTANCE.getMobaTrigger_SuperType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_TRIGGER__NAME = eINSTANCE.getMobaTrigger_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAppInstallTriggerImpl <em>App Install Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaAppInstallTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaAppInstallTrigger()
+		 * @generated
+		 */
+		EClass MOBA_APP_INSTALL_TRIGGER = eINSTANCE.getMobaAppInstallTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaAppUpdatelTriggerImpl <em>App Updatel Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaAppUpdatelTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaAppUpdatelTrigger()
+		 * @generated
+		 */
+		EClass MOBA_APP_UPDATEL_TRIGGER = eINSTANCE.getMobaAppUpdatelTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSMSTriggerImpl <em>SMS Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaSMSTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSMSTrigger()
+		 * @generated
+		 */
+		EClass MOBA_SMS_TRIGGER = eINSTANCE.getMobaSMSTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDeviceStartupTriggerImpl <em>Device Startup Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaDeviceStartupTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDeviceStartupTrigger()
+		 * @generated
+		 */
+		EClass MOBA_DEVICE_STARTUP_TRIGGER = eINSTANCE.getMobaDeviceStartupTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEmailTriggerImpl <em>Email Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaEmailTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEmailTrigger()
+		 * @generated
+		 */
+		EClass MOBA_EMAIL_TRIGGER = eINSTANCE.getMobaEmailTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTimerTriggerImpl <em>Timer Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaTimerTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaTimerTrigger()
+		 * @generated
+		 */
+		EClass MOBA_TIMER_TRIGGER = eINSTANCE.getMobaTimerTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPushTriggerImpl <em>Push Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPushTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPushTrigger()
+		 * @generated
+		 */
+		EClass MOBA_PUSH_TRIGGER = eINSTANCE.getMobaPushTrigger();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeofenceTriggerImpl <em>Geofence Trigger</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaGeofenceTriggerImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeofenceTrigger()
+		 * @generated
+		 */
+		EClass MOBA_GEOFENCE_TRIGGER = eINSTANCE.getMobaGeofenceTrigger();
+
+		/**
+		 * The meta object literal for the '<em><b>Event Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_GEOFENCE_TRIGGER__EVENT_TYPE = eINSTANCE.getMobaGeofenceTrigger_EventType();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl <em>Generator Slot</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaGeneratorSlotImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeneratorSlot()
+		 * @generated
+		 */
+		EClass MOBA_GENERATOR_SLOT = eINSTANCE.getMobaGeneratorSlot();
+
+		/**
+		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_GENERATOR_SLOT__SUPER_TYPE = eINSTANCE.getMobaGeneratorSlot_SuperType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_GENERATOR_SLOT__NAME = eINSTANCE.getMobaGeneratorSlot_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_GENERATOR_SLOT__TYPE = eINSTANCE.getMobaGeneratorSlot_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFriendImpl <em>Friend</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaFriendImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFriend()
+		 * @generated
+		 */
+		EClass MOBA_FRIEND = eINSTANCE.getMobaFriend();
+
+		/**
+		 * The meta object literal for the '<em><b>Value String</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_FRIEND__VALUE_STRING = eINSTANCE.getMobaFriend_ValueString();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Const</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_FRIEND__VALUE_CONST = eINSTANCE.getMobaFriend_ValueConst();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_FRIEND__VALUE = eINSTANCE.getMobaFriend_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaFriendsAbleImpl <em>Friends Able</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaFriendsAbleImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaFriendsAble()
+		 * @generated
+		 */
+		EClass MOBA_FRIENDS_ABLE = eINSTANCE.getMobaFriendsAble();
+
+		/**
+		 * The meta object literal for the '<em><b>Friends</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_FRIENDS_ABLE__FRIENDS = eINSTANCE.getMobaFriendsAble_Friends();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaExternalModuleImpl <em>External Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaExternalModuleImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaExternalModule()
+		 * @generated
+		 */
+		EClass MOBA_EXTERNAL_MODULE = eINSTANCE.getMobaExternalModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_EXTERNAL_MODULE__SUPER_TYPE = eINSTANCE.getMobaExternalModule_SuperType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_EXTERNAL_MODULE__NAME = eINSTANCE.getMobaExternalModule_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaBluetoothModuleImpl <em>Bluetooth Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaBluetoothModuleImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBluetoothModule()
+		 * @generated
+		 */
+		EClass MOBA_BLUETOOTH_MODULE = eINSTANCE.getMobaBluetoothModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_BLUETOOTH_MODULE__TYPE = eINSTANCE.getMobaBluetoothModule_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaNFCModuleImpl <em>NFC Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaNFCModuleImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNFCModule()
+		 * @generated
+		 */
+		EClass MOBA_NFC_MODULE = eINSTANCE.getMobaNFCModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_NFC_MODULE__TYPE = eINSTANCE.getMobaNFCModule_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPushModuleImpl <em>Push Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPushModuleImpl
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPushModule()
+		 * @generated
+		 */
+		EClass MOBA_PUSH_MODULE = eINSTANCE.getMobaPushModule();
+
+		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6885,6 +9201,36 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum MOBA_UPPER_BOUND = eINSTANCE.getMobaUpperBound();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaGeofenceEvent <em>Geofence Event</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.MobaGeofenceEvent
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeofenceEvent()
+		 * @generated
+		 */
+		EEnum MOBA_GEOFENCE_EVENT = eINSTANCE.getMobaGeofenceEvent();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaNFCModuleType <em>NFC Module Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.MobaNFCModuleType
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNFCModuleType()
+		 * @generated
+		 */
+		EEnum MOBA_NFC_MODULE_TYPE = eINSTANCE.getMobaNFCModuleType();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaBlueToothModuleType <em>Blue Tooth Module Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.MobaBlueToothModuleType
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBlueToothModuleType()
+		 * @generated
+		 */
+		EEnum MOBA_BLUE_TOOTH_MODULE_TYPE = eINSTANCE.getMobaBlueToothModuleType();
 
 	}
 

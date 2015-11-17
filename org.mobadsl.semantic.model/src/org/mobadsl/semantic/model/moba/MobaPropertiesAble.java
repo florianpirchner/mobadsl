@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaPropertiesAble()
- * @model interface="true" abstract="true"
+ * @model abstract="true"
  * @generated
  */
 public interface MobaPropertiesAble extends EObject {
@@ -47,18 +47,28 @@ public interface MobaPropertiesAble extends EObject {
 	 * @return
 	 */
 	List<MobaProperty> getAllProperties();
-	
+
 	/**
-	 * Returns the generator specific properties for the current instance. Including
-	 * the "super types".
+	 * Returns the generator specific properties for the current instance.
+	 * Including the "super types".
 	 * <p>
-	 * The difference to getAll...() is, that shadowed properties are replaces with
-	 * their new representation. For instance, if the feature Property#key is defined in
-	 * superType and in this instance, then the Property from this instance
-	 * will be put at the original index from the equal Property in the superType.
+	 * The difference to getAll...() is, that shadowed properties are replaces
+	 * with their new representation. For instance, if the feature Property#key
+	 * is defined in superType and in this instance, then the Property from this
+	 * instance will be put at the original index from the equal Property in the
+	 * superType.
 	 * 
 	 * @return
 	 */
 	List<MobaProperty> getGenProperties();
+
+	/**
+	 * Returns a list with all supertypes. The highest supertype is at the end
+	 * of the list. <br>
+	 * If no supertypes are available, return a mutable empty list.
+	 * 
+	 * @return
+	 */
+	<T extends EObject> List<T> getAllSuperTypes();
 
 } // MobaPropertiesAble

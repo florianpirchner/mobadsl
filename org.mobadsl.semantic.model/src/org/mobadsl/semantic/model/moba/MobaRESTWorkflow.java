@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MobaRESTWorkflow extends MobaREST, MobaPropertiesAble {
+public interface MobaRESTWorkflow extends MobaREST {
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' reference list.
 	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaREST}.

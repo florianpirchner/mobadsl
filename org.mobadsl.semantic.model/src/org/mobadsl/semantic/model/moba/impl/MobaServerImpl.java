@@ -2,7 +2,9 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -16,9 +18,8 @@ import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaServer;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Server</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Server</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -32,9 +33,9 @@ import org.mobadsl.semantic.model.moba.MobaServer;
  */
 public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaServer {
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getUrl()
 	 * @generated
 	 * @ordered
@@ -42,9 +43,9 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected static final String URL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getUrl()
 	 * @generated
 	 * @ordered
@@ -53,8 +54,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getServices()
 	 * @generated
 	 * @ordered
@@ -63,8 +63,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getAuthorization()
 	 * @generated
 	 * @ordered
@@ -72,8 +72,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected MobaAuthorization authorization;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected MobaServerImpl() {
@@ -81,8 +80,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -91,8 +89,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getUrl() {
@@ -100,8 +97,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setUrl(String newUrl) {
@@ -112,8 +108,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<MobaREST> getServices() {
@@ -124,8 +119,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaAuthorization getAuthorization() {
@@ -141,8 +135,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaAuthorization basicGetAuthorization() {
@@ -150,8 +143,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setAuthorization(MobaAuthorization newAuthorization) {
@@ -162,8 +154,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -181,8 +172,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -204,8 +194,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -225,8 +214,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -243,8 +231,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -258,4 +245,10 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 		return result.toString();
 	}
 
-} //MobaServerImpl
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<MobaServer> getAllSuperTypes() {
+		return new ArrayList<>();
+	}
+
+} // MobaServerImpl

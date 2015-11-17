@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MobaSettings extends MobaApplicationFeature, MobaPropertiesAble {
+public interface MobaSettings extends MobaApplicationFeature {
 	/**
 	 * Returns the value of the '<em><b>Super Type</b></em>' reference. <!--
 	 * begin-user-doc -->

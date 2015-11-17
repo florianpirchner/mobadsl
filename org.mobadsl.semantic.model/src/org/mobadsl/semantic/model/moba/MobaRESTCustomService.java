@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MobaRESTCustomService extends MobaREST, MobaPropertiesAble {
+public interface MobaRESTCustomService extends MobaREST {
 	/**
 	 * Returns the value of the '<em><b>Operation</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.mobadsl.semantic.model.moba.MobaRESTMethods}.

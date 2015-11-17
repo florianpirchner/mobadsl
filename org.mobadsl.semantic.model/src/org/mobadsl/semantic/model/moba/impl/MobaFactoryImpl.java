@@ -8,16 +8,23 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.*;
+import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
+import org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
+import org.mobadsl.semantic.model.moba.MobaBackgroundApplication;
+import org.mobadsl.semantic.model.moba.MobaBlueToothModuleType;
+import org.mobadsl.semantic.model.moba.MobaBluetoothModule;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEmailTrigger;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
 import org.mobadsl.semantic.model.moba.MobaEntityIndex;
@@ -25,21 +32,30 @@ import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaFactory;
+import org.mobadsl.semantic.model.moba.MobaFriend;
 import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
+import org.mobadsl.semantic.model.moba.MobaGeneratorSlot;
+import org.mobadsl.semantic.model.moba.MobaGeofenceEvent;
+import org.mobadsl.semantic.model.moba.MobaGeofenceTrigger;
 import org.mobadsl.semantic.model.moba.MobaLowerBound;
 import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
+import org.mobadsl.semantic.model.moba.MobaNFCModule;
+import org.mobadsl.semantic.model.moba.MobaNFCModuleType;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaPushModule;
+import org.mobadsl.semantic.model.moba.MobaPushTrigger;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
@@ -49,11 +65,14 @@ import org.mobadsl.semantic.model.moba.MobaRESTMethods;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
+import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
+import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
+import org.mobadsl.semantic.model.moba.MobaUiApplication;
 import org.mobadsl.semantic.model.moba.MobaUpperBound;
 
 /**
@@ -100,7 +119,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case MobaPackage.MOBA_APPLICATION: return createMobaApplication();
+			case MobaPackage.MOBA_PROJECT: return createMobaProject();
 			case MobaPackage.MOBA_TEMPLATE: return createMobaTemplate();
 			case MobaPackage.MOBA_SERVER: return createMobaServer();
 			case MobaPackage.MOBA_AUTHORIZATION: return createMobaAuthorization();
@@ -142,6 +161,21 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_DIGITS_CONSTRAINT: return createMobaDigitsConstraint();
 			case MobaPackage.MOBA_ENUM: return createMobaEnum();
 			case MobaPackage.MOBA_ENUM_LITERAL: return createMobaEnumLiteral();
+			case MobaPackage.MOBA_UI_APPLICATION: return createMobaUiApplication();
+			case MobaPackage.MOBA_BACKGROUND_APPLICATION: return createMobaBackgroundApplication();
+			case MobaPackage.MOBA_APP_INSTALL_TRIGGER: return createMobaAppInstallTrigger();
+			case MobaPackage.MOBA_APP_UPDATEL_TRIGGER: return createMobaAppUpdatelTrigger();
+			case MobaPackage.MOBA_SMS_TRIGGER: return createMobaSMSTrigger();
+			case MobaPackage.MOBA_DEVICE_STARTUP_TRIGGER: return createMobaDeviceStartupTrigger();
+			case MobaPackage.MOBA_EMAIL_TRIGGER: return createMobaEmailTrigger();
+			case MobaPackage.MOBA_TIMER_TRIGGER: return createMobaTimerTrigger();
+			case MobaPackage.MOBA_PUSH_TRIGGER: return createMobaPushTrigger();
+			case MobaPackage.MOBA_GEOFENCE_TRIGGER: return createMobaGeofenceTrigger();
+			case MobaPackage.MOBA_GENERATOR_SLOT: return createMobaGeneratorSlot();
+			case MobaPackage.MOBA_FRIEND: return createMobaFriend();
+			case MobaPackage.MOBA_BLUETOOTH_MODULE: return createMobaBluetoothModule();
+			case MobaPackage.MOBA_NFC_MODULE: return createMobaNFCModule();
+			case MobaPackage.MOBA_PUSH_MODULE: return createMobaPushModule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -161,6 +195,12 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 				return createMobaLowerBoundFromString(eDataType, initialValue);
 			case MobaPackage.MOBA_UPPER_BOUND:
 				return createMobaUpperBoundFromString(eDataType, initialValue);
+			case MobaPackage.MOBA_GEOFENCE_EVENT:
+				return createMobaGeofenceEventFromString(eDataType, initialValue);
+			case MobaPackage.MOBA_NFC_MODULE_TYPE:
+				return createMobaNFCModuleTypeFromString(eDataType, initialValue);
+			case MobaPackage.MOBA_BLUE_TOOTH_MODULE_TYPE:
+				return createMobaBlueToothModuleTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -180,6 +220,12 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 				return convertMobaLowerBoundToString(eDataType, instanceValue);
 			case MobaPackage.MOBA_UPPER_BOUND:
 				return convertMobaUpperBoundToString(eDataType, instanceValue);
+			case MobaPackage.MOBA_GEOFENCE_EVENT:
+				return convertMobaGeofenceEventToString(eDataType, instanceValue);
+			case MobaPackage.MOBA_NFC_MODULE_TYPE:
+				return convertMobaNFCModuleTypeToString(eDataType, instanceValue);
+			case MobaPackage.MOBA_BLUE_TOOTH_MODULE_TYPE:
+				return convertMobaBlueToothModuleTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -190,9 +236,9 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaApplication createMobaApplication() {
-		MobaApplicationImpl mobaApplication = new MobaApplicationImpl();
-		return mobaApplication;
+	public MobaProject createMobaProject() {
+		MobaProjectImpl mobaProject = new MobaProjectImpl();
+		return mobaProject;
 	}
 
 	/**
@@ -610,6 +656,156 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaUiApplication createMobaUiApplication() {
+		MobaUiApplicationImpl mobaUiApplication = new MobaUiApplicationImpl();
+		return mobaUiApplication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaBackgroundApplication createMobaBackgroundApplication() {
+		MobaBackgroundApplicationImpl mobaBackgroundApplication = new MobaBackgroundApplicationImpl();
+		return mobaBackgroundApplication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaAppInstallTrigger createMobaAppInstallTrigger() {
+		MobaAppInstallTriggerImpl mobaAppInstallTrigger = new MobaAppInstallTriggerImpl();
+		return mobaAppInstallTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaAppUpdatelTrigger createMobaAppUpdatelTrigger() {
+		MobaAppUpdatelTriggerImpl mobaAppUpdatelTrigger = new MobaAppUpdatelTriggerImpl();
+		return mobaAppUpdatelTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaSMSTrigger createMobaSMSTrigger() {
+		MobaSMSTriggerImpl mobaSMSTrigger = new MobaSMSTriggerImpl();
+		return mobaSMSTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaDeviceStartupTrigger createMobaDeviceStartupTrigger() {
+		MobaDeviceStartupTriggerImpl mobaDeviceStartupTrigger = new MobaDeviceStartupTriggerImpl();
+		return mobaDeviceStartupTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaEmailTrigger createMobaEmailTrigger() {
+		MobaEmailTriggerImpl mobaEmailTrigger = new MobaEmailTriggerImpl();
+		return mobaEmailTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaTimerTrigger createMobaTimerTrigger() {
+		MobaTimerTriggerImpl mobaTimerTrigger = new MobaTimerTriggerImpl();
+		return mobaTimerTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaPushTrigger createMobaPushTrigger() {
+		MobaPushTriggerImpl mobaPushTrigger = new MobaPushTriggerImpl();
+		return mobaPushTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaGeofenceTrigger createMobaGeofenceTrigger() {
+		MobaGeofenceTriggerImpl mobaGeofenceTrigger = new MobaGeofenceTriggerImpl();
+		return mobaGeofenceTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaGeneratorSlot createMobaGeneratorSlot() {
+		MobaGeneratorSlotImpl mobaGeneratorSlot = new MobaGeneratorSlotImpl();
+		return mobaGeneratorSlot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaFriend createMobaFriend() {
+		MobaFriendImpl mobaFriend = new MobaFriendImpl();
+		return mobaFriend;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaBluetoothModule createMobaBluetoothModule() {
+		MobaBluetoothModuleImpl mobaBluetoothModule = new MobaBluetoothModuleImpl();
+		return mobaBluetoothModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaNFCModule createMobaNFCModule() {
+		MobaNFCModuleImpl mobaNFCModule = new MobaNFCModuleImpl();
+		return mobaNFCModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaPushModule createMobaPushModule() {
+		MobaPushModuleImpl mobaPushModule = new MobaPushModuleImpl();
+		return mobaPushModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MobaRESTMethods createMobaRESTMethodsFromString(EDataType eDataType, String initialValue) {
 		MobaRESTMethods result = MobaRESTMethods.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -662,6 +858,66 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * @generated
 	 */
 	public String convertMobaUpperBoundToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaGeofenceEvent createMobaGeofenceEventFromString(EDataType eDataType, String initialValue) {
+		MobaGeofenceEvent result = MobaGeofenceEvent.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMobaGeofenceEventToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaNFCModuleType createMobaNFCModuleTypeFromString(EDataType eDataType, String initialValue) {
+		MobaNFCModuleType result = MobaNFCModuleType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMobaNFCModuleTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaBlueToothModuleType createMobaBlueToothModuleTypeFromString(EDataType eDataType, String initialValue) {
+		MobaBlueToothModuleType result = MobaBlueToothModuleType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMobaBlueToothModuleTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

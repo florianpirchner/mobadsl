@@ -10,7 +10,8 @@ MobaApplication:
 
 MobaApplicationFeature:
 	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaREST | MobaGenerator | MobaAuthorization |
-	MobaTransportSerializationType;
+	MobaTransportSerializationType | MobaExternalModule | MobaTrigger |
+	MobaGeneratorSlot;
 
 	/**
  * Will import a Moba-Application.
@@ -66,6 +67,13 @@ MobaConstantValue:
 
 fragment MobaPropertiesAble:
 	'[' properties+=MobaProperty (',' properties+=MobaProperty)* ']';
+	
+fragment MobaFriendsAble:
+	'friends' '(' friends+=MobaFriend (',' friends+=MobaFriend)* ']';
+
+MobaFriend:
+	(valueString=STRING | valueConst=[MobaConstant|CONSTANT])
+;
 
 MobaProperty:
 	(keyString=STRING | keyConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING | valueConst=[MobaConstant|CONSTANT]);
@@ -231,6 +239,49 @@ MobaNullConstraint:
 MobaNotNullConstraint:
 	{MobaNotNullConstraint}
 	'isNotNull';
+
+MobaGeneratorSlot:
+	'slot' name=ID ('type' type=STRING)?;
+
+MobaTrigger:
+	MobaAppInstallTrigger | MobaAppUpdatelTrigger | MobaEmailTrigger | MobaDeviceStartupTrigger | MobaSMSTrigger |
+	MobaPushTrigger | MobaGeofenceTrigger;
+
+MobaAppInstallTrigger:
+	'trigger app install' name=ID;
+
+MobaAppUpdatelTrigger:
+	'trigger app update' name=ID;
+
+MobaEmailTrigger:
+	'trigger email' name=ID;
+
+MobaDeviceStartupTrigger:
+	'trigger device start' name=ID;
+
+MobaSMSTrigger:
+	'trigger sms' name=ID;
+
+MobaPushTrigger:
+	'trigger push' name=ID;
+
+MobaGeofenceTrigger:
+	'trigger geofence' eventType=MobaGeofenceEvent name=ID;
+
+enum MobaGeofenceEvent:
+	ENTER="enter" | LEAVE="leave";
+
+MobaExternalModule:
+	MobaBluetoothModule | MobaPushModule | MobaNFCModule;
+
+MobaBluetoothModule:
+	'module bluetooth' name=ID;
+
+MobaPushModule:
+	'module push' name=ID;
+
+MobaNFCModule:
+	'module NFC' name=ID;
 
 enum MobaLowerBound:
 	MANY='*' | ZERO='0' | OPTIONAL='?' | ATLEASTONE='+' | ONE='1';

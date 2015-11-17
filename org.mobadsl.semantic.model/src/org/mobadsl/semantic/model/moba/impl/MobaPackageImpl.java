@@ -8,9 +8,14 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
+import org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
+import org.mobadsl.semantic.model.moba.MobaBackgroundApplication;
+import org.mobadsl.semantic.model.moba.MobaBlueToothModuleType;
+import org.mobadsl.semantic.model.moba.MobaBluetoothModule;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
@@ -18,11 +23,13 @@ import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEmailTrigger;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
 import org.mobadsl.semantic.model.moba.MobaEntityFeature;
@@ -30,13 +37,19 @@ import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
+import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaFeature;
+import org.mobadsl.semantic.model.moba.MobaFriend;
+import org.mobadsl.semantic.model.moba.MobaFriendsAble;
 import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
+import org.mobadsl.semantic.model.moba.MobaGeneratorSlot;
+import org.mobadsl.semantic.model.moba.MobaGeofenceEvent;
+import org.mobadsl.semantic.model.moba.MobaGeofenceTrigger;
 import org.mobadsl.semantic.model.moba.MobaLowerBound;
 import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
@@ -44,12 +57,17 @@ import org.mobadsl.semantic.model.moba.MobaMinConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
+import org.mobadsl.semantic.model.moba.MobaNFCModule;
+import org.mobadsl.semantic.model.moba.MobaNFCModuleType;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaPushModule;
+import org.mobadsl.semantic.model.moba.MobaPushTrigger;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
@@ -61,12 +79,16 @@ import org.mobadsl.semantic.model.moba.MobaRESTMethods;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
+import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
+import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
+import org.mobadsl.semantic.model.moba.MobaTrigger;
+import org.mobadsl.semantic.model.moba.MobaUiApplication;
 import org.mobadsl.semantic.model.moba.MobaUpperBound;
 import org.mobadsl.semantic.model.moba.index.MobaIndexPackage;
 import org.mobadsl.semantic.model.moba.index.impl.MobaIndexPackageImpl;
@@ -78,6 +100,13 @@ import org.mobadsl.semantic.model.moba.index.impl.MobaIndexPackageImpl;
  * @generated
  */
 public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaProjectEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -468,6 +497,132 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass mobaUiApplicationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaBackgroundApplicationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaAppInstallTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaAppUpdatelTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaSMSTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaDeviceStartupTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaEmailTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaTimerTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaPushTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaGeofenceTriggerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaGeneratorSlotEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaFriendEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaFriendsAbleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaExternalModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaBluetoothModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaNFCModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaPushModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum mobaRESTMethodsEEnum = null;
 
 	/**
@@ -483,6 +638,27 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * @generated
 	 */
 	private EEnum mobaUpperBoundEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum mobaGeofenceEventEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum mobaNFCModuleTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum mobaBlueToothModuleTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -548,6 +724,60 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(MobaPackage.eNS_URI, theMobaPackage);
 		return theMobaPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaProject() {
+		return mobaProjectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaProject_Id() {
+		return (EAttribute)mobaProjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaProject_Name() {
+		return (EAttribute)mobaProjectEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaProject_Version() {
+		return (EAttribute)mobaProjectEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaProject_UiApplication() {
+		return (EReference)mobaProjectEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaProject_BackgroundApplication() {
+		return (EReference)mobaProjectEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2346,6 +2576,303 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMobaUiApplication() {
+		return mobaUiApplicationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaBackgroundApplication() {
+		return mobaBackgroundApplicationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaBackgroundApplication_Triggers() {
+		return (EReference)mobaBackgroundApplicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaTrigger() {
+		return mobaTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaTrigger_SuperType() {
+		return (EReference)mobaTriggerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaTrigger_Name() {
+		return (EAttribute)mobaTriggerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaAppInstallTrigger() {
+		return mobaAppInstallTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaAppUpdatelTrigger() {
+		return mobaAppUpdatelTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaSMSTrigger() {
+		return mobaSMSTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaDeviceStartupTrigger() {
+		return mobaDeviceStartupTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaEmailTrigger() {
+		return mobaEmailTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaTimerTrigger() {
+		return mobaTimerTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaPushTrigger() {
+		return mobaPushTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaGeofenceTrigger() {
+		return mobaGeofenceTriggerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaGeofenceTrigger_EventType() {
+		return (EAttribute)mobaGeofenceTriggerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaGeneratorSlot() {
+		return mobaGeneratorSlotEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaGeneratorSlot_SuperType() {
+		return (EReference)mobaGeneratorSlotEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaGeneratorSlot_Name() {
+		return (EAttribute)mobaGeneratorSlotEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaGeneratorSlot_Type() {
+		return (EAttribute)mobaGeneratorSlotEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaFriend() {
+		return mobaFriendEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaFriend_ValueString() {
+		return (EAttribute)mobaFriendEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaFriend_ValueConst() {
+		return (EReference)mobaFriendEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaFriend_Value() {
+		return (EAttribute)mobaFriendEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaFriendsAble() {
+		return mobaFriendsAbleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaFriendsAble_Friends() {
+		return (EReference)mobaFriendsAbleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaExternalModule() {
+		return mobaExternalModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaExternalModule_SuperType() {
+		return (EReference)mobaExternalModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaExternalModule_Name() {
+		return (EAttribute)mobaExternalModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaBluetoothModule() {
+		return mobaBluetoothModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaBluetoothModule_Type() {
+		return (EAttribute)mobaBluetoothModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaNFCModule() {
+		return mobaNFCModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaNFCModule_Type() {
+		return (EAttribute)mobaNFCModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobaPushModule() {
+		return mobaPushModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getMobaRESTMethods() {
 		return mobaRESTMethodsEEnum;
 	}
@@ -2366,6 +2893,33 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EEnum getMobaUpperBound() {
 		return mobaUpperBoundEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMobaGeofenceEvent() {
+		return mobaGeofenceEventEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMobaNFCModuleType() {
+		return mobaNFCModuleTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMobaBlueToothModuleType() {
+		return mobaBlueToothModuleTypeEEnum;
 	}
 
 	/**
@@ -2396,6 +2950,13 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		mobaProjectEClass = createEClass(MOBA_PROJECT);
+		createEAttribute(mobaProjectEClass, MOBA_PROJECT__ID);
+		createEAttribute(mobaProjectEClass, MOBA_PROJECT__NAME);
+		createEAttribute(mobaProjectEClass, MOBA_PROJECT__VERSION);
+		createEReference(mobaProjectEClass, MOBA_PROJECT__UI_APPLICATION);
+		createEReference(mobaProjectEClass, MOBA_PROJECT__BACKGROUND_APPLICATION);
+
 		mobaApplicationEClass = createEClass(MOBA_APPLICATION);
 		createEAttribute(mobaApplicationEClass, MOBA_APPLICATION__ID);
 		createEAttribute(mobaApplicationEClass, MOBA_APPLICATION__NAME);
@@ -2650,10 +3211,64 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__NAME);
 		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__VALUE);
 
+		mobaUiApplicationEClass = createEClass(MOBA_UI_APPLICATION);
+
+		mobaBackgroundApplicationEClass = createEClass(MOBA_BACKGROUND_APPLICATION);
+		createEReference(mobaBackgroundApplicationEClass, MOBA_BACKGROUND_APPLICATION__TRIGGERS);
+
+		mobaTriggerEClass = createEClass(MOBA_TRIGGER);
+		createEReference(mobaTriggerEClass, MOBA_TRIGGER__SUPER_TYPE);
+		createEAttribute(mobaTriggerEClass, MOBA_TRIGGER__NAME);
+
+		mobaAppInstallTriggerEClass = createEClass(MOBA_APP_INSTALL_TRIGGER);
+
+		mobaAppUpdatelTriggerEClass = createEClass(MOBA_APP_UPDATEL_TRIGGER);
+
+		mobaSMSTriggerEClass = createEClass(MOBA_SMS_TRIGGER);
+
+		mobaDeviceStartupTriggerEClass = createEClass(MOBA_DEVICE_STARTUP_TRIGGER);
+
+		mobaEmailTriggerEClass = createEClass(MOBA_EMAIL_TRIGGER);
+
+		mobaTimerTriggerEClass = createEClass(MOBA_TIMER_TRIGGER);
+
+		mobaPushTriggerEClass = createEClass(MOBA_PUSH_TRIGGER);
+
+		mobaGeofenceTriggerEClass = createEClass(MOBA_GEOFENCE_TRIGGER);
+		createEAttribute(mobaGeofenceTriggerEClass, MOBA_GEOFENCE_TRIGGER__EVENT_TYPE);
+
+		mobaGeneratorSlotEClass = createEClass(MOBA_GENERATOR_SLOT);
+		createEReference(mobaGeneratorSlotEClass, MOBA_GENERATOR_SLOT__SUPER_TYPE);
+		createEAttribute(mobaGeneratorSlotEClass, MOBA_GENERATOR_SLOT__NAME);
+		createEAttribute(mobaGeneratorSlotEClass, MOBA_GENERATOR_SLOT__TYPE);
+
+		mobaFriendEClass = createEClass(MOBA_FRIEND);
+		createEAttribute(mobaFriendEClass, MOBA_FRIEND__VALUE_STRING);
+		createEReference(mobaFriendEClass, MOBA_FRIEND__VALUE_CONST);
+		createEAttribute(mobaFriendEClass, MOBA_FRIEND__VALUE);
+
+		mobaFriendsAbleEClass = createEClass(MOBA_FRIENDS_ABLE);
+		createEReference(mobaFriendsAbleEClass, MOBA_FRIENDS_ABLE__FRIENDS);
+
+		mobaExternalModuleEClass = createEClass(MOBA_EXTERNAL_MODULE);
+		createEReference(mobaExternalModuleEClass, MOBA_EXTERNAL_MODULE__SUPER_TYPE);
+		createEAttribute(mobaExternalModuleEClass, MOBA_EXTERNAL_MODULE__NAME);
+
+		mobaBluetoothModuleEClass = createEClass(MOBA_BLUETOOTH_MODULE);
+		createEAttribute(mobaBluetoothModuleEClass, MOBA_BLUETOOTH_MODULE__TYPE);
+
+		mobaNFCModuleEClass = createEClass(MOBA_NFC_MODULE);
+		createEAttribute(mobaNFCModuleEClass, MOBA_NFC_MODULE__TYPE);
+
+		mobaPushModuleEClass = createEClass(MOBA_PUSH_MODULE);
+
 		// Create enums
 		mobaRESTMethodsEEnum = createEEnum(MOBA_REST_METHODS);
 		mobaLowerBoundEEnum = createEEnum(MOBA_LOWER_BOUND);
 		mobaUpperBoundEEnum = createEEnum(MOBA_UPPER_BOUND);
+		mobaGeofenceEventEEnum = createEEnum(MOBA_GEOFENCE_EVENT);
+		mobaNFCModuleTypeEEnum = createEEnum(MOBA_NFC_MODULE_TYPE);
+		mobaBlueToothModuleTypeEEnum = createEEnum(MOBA_BLUE_TOOTH_MODULE_TYPE);
 	}
 
 	/**
@@ -2690,61 +3305,47 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		mobaApplicationEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaProjectEClass.getESuperTypes().add(this.getMobaFriendsAble());
+		mobaApplicationEClass.getESuperTypes().add(this.getMobaFriendsAble());
+		mobaApplicationFeatureEClass.getESuperTypes().add(this.getMobaFriendsAble());
 		mobaTemplateEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaServerEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaAuthorizationEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaAuthorizationEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaTransportSerializationTypeEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaTransportSerializationTypeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaGeneratorEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaGeneratorMixinFeatureEClass.getESuperTypes().add(this.getMobaGeneratorFeature());
 		mobaGeneratorIDFeatureEClass.getESuperTypes().add(this.getMobaGeneratorFeature());
 		mobaDataTypeEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaDataTypeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDataTypeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaConstantEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaConstantEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDataEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaSettingsEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaSettingsEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaEntityEClass.getESuperTypes().add(this.getMobaData());
-		mobaEntityEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDtoEClass.getESuperTypes().add(this.getMobaData());
-		mobaDtoEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaQueueEClass.getESuperTypes().add(this.getMobaData());
-		mobaQueueEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaRESTEClass.getESuperTypes().add(this.getMobaApplicationFeature());
 		mobaRESTCustomServiceEClass.getESuperTypes().add(this.getMobaREST());
-		mobaRESTCustomServiceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaRESTWorkflowEClass.getESuperTypes().add(this.getMobaREST());
-		mobaRESTWorkflowEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaRESTCrudEClass.getESuperTypes().add(this.getMobaREST());
-		mobaRESTCrudEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaFeatureEClass.getESuperTypes().add(this.getMobaFriendsAble());
 		mobaEntityFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaEntityAttributeEClass.getESuperTypes().add(this.getMobaEntityFeature());
 		mobaEntityAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
-		mobaEntityAttributeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaEntityAttributeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaEntityReferenceEClass.getESuperTypes().add(this.getMobaEntityFeature());
 		mobaEntityReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
-		mobaEntityReferenceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDtoFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaDtoFeature());
 		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
-		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaDtoAttributeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaDtoFeature());
 		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
-		mobaDtoReferenceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaQueueFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaQueueFeature());
 		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
-		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaSettingsFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaSettingsFeature());
 		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
-		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaPropertiesAble());
 		mobaSettingsAttributeEClass.getESuperTypes().add(this.getMobaConstraintable());
 		mobaRegexpConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
 		mobaMinConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
@@ -2757,10 +3358,33 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaMaxLengthConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
 		mobaDigitsConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
 		mobaEnumEClass.getESuperTypes().add(this.getMobaApplicationFeature());
-		mobaEnumEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaUiApplicationEClass.getESuperTypes().add(this.getMobaApplication());
+		mobaBackgroundApplicationEClass.getESuperTypes().add(this.getMobaApplication());
+		mobaTriggerEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaAppInstallTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaAppUpdatelTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaSMSTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaDeviceStartupTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaEmailTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaTimerTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaPushTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaGeofenceTriggerEClass.getESuperTypes().add(this.getMobaTrigger());
+		mobaGeneratorSlotEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaFriendsAbleEClass.getESuperTypes().add(this.getMobaPropertiesAble());
+		mobaExternalModuleEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaBluetoothModuleEClass.getESuperTypes().add(this.getMobaExternalModule());
+		mobaNFCModuleEClass.getESuperTypes().add(this.getMobaExternalModule());
+		mobaPushModuleEClass.getESuperTypes().add(this.getMobaExternalModule());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(mobaApplicationEClass, MobaApplication.class, "MobaApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(mobaProjectEClass, MobaProject.class, "MobaProject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaProject_Id(), ecorePackage.getEString(), "id", null, 0, 1, MobaProject.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaProject_Version(), ecorePackage.getEString(), "version", null, 0, 1, MobaProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaProject_UiApplication(), this.getMobaUiApplication(), null, "uiApplication", null, 0, 1, MobaProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaProject_BackgroundApplication(), this.getMobaBackgroundApplication(), null, "backgroundApplication", null, 0, 1, MobaProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaApplicationEClass, MobaApplication.class, "MobaApplication", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaApplication_Id(), ecorePackage.getEString(), "id", null, 0, 1, MobaApplication.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaApplication_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaApplication_Version(), ecorePackage.getEString(), "version", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2823,7 +3447,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaConstantValue_ValueInt(), ecorePackage.getEIntegerObject(), "valueInt", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaConstantValue_ValueDouble(), ecorePackage.getEDoubleObject(), "valueDouble", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mobaPropertiesAbleEClass, MobaPropertiesAble.class, "MobaPropertiesAble", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(mobaPropertiesAbleEClass, MobaPropertiesAble.class, "MobaPropertiesAble", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaPropertiesAble_Properties(), this.getMobaProperty(), null, "properties", null, 0, -1, MobaPropertiesAble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaPropertyEClass, MobaProperty.class, "MobaProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3014,6 +3638,57 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaEnumLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaEnumLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(mobaUiApplicationEClass, MobaUiApplication.class, "MobaUiApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaBackgroundApplicationEClass, MobaBackgroundApplication.class, "MobaBackgroundApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaBackgroundApplication_Triggers(), this.getMobaTrigger(), null, "triggers", null, 0, -1, MobaBackgroundApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaTriggerEClass, MobaTrigger.class, "MobaTrigger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaTrigger_SuperType(), this.getMobaTrigger(), null, "superType", null, 0, 1, MobaTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaTrigger_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaAppInstallTriggerEClass, MobaAppInstallTrigger.class, "MobaAppInstallTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaAppUpdatelTriggerEClass, MobaAppUpdatelTrigger.class, "MobaAppUpdatelTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaSMSTriggerEClass, MobaSMSTrigger.class, "MobaSMSTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaDeviceStartupTriggerEClass, MobaDeviceStartupTrigger.class, "MobaDeviceStartupTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaEmailTriggerEClass, MobaEmailTrigger.class, "MobaEmailTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaTimerTriggerEClass, MobaTimerTrigger.class, "MobaTimerTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaPushTriggerEClass, MobaPushTrigger.class, "MobaPushTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mobaGeofenceTriggerEClass, MobaGeofenceTrigger.class, "MobaGeofenceTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaGeofenceTrigger_EventType(), this.getMobaGeofenceEvent(), "eventType", null, 0, 1, MobaGeofenceTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaGeneratorSlotEClass, MobaGeneratorSlot.class, "MobaGeneratorSlot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaGeneratorSlot_SuperType(), this.getMobaGeneratorSlot(), null, "superType", null, 0, 1, MobaGeneratorSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaGeneratorSlot_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaGeneratorSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaGeneratorSlot_Type(), ecorePackage.getEString(), "type", null, 0, 1, MobaGeneratorSlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaFriendEClass, MobaFriend.class, "MobaFriend", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaFriend_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaFriend.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaFriend_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaFriend.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaFriend_Value(), ecorePackage.getEString(), "value", null, 0, 1, MobaFriend.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaFriendsAbleEClass, MobaFriendsAble.class, "MobaFriendsAble", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaFriendsAble_Friends(), this.getMobaFriend(), null, "friends", null, 0, -1, MobaFriendsAble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaExternalModuleEClass, MobaExternalModule.class, "MobaExternalModule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaExternalModule_SuperType(), this.getMobaExternalModule(), null, "superType", null, 0, 1, MobaExternalModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaExternalModule_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaExternalModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaBluetoothModuleEClass, MobaBluetoothModule.class, "MobaBluetoothModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaBluetoothModule_Type(), this.getMobaBlueToothModuleType(), "type", null, 0, 1, MobaBluetoothModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaNFCModuleEClass, MobaNFCModule.class, "MobaNFCModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaNFCModule_Type(), this.getMobaNFCModuleType(), "type", null, 0, 1, MobaNFCModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mobaPushModuleEClass, MobaPushModule.class, "MobaPushModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(mobaRESTMethodsEEnum, MobaRESTMethods.class, "MobaRESTMethods");
 		addEEnumLiteral(mobaRESTMethodsEEnum, MobaRESTMethods.GET);
@@ -3032,6 +3707,20 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		addEEnumLiteral(mobaUpperBoundEEnum, MobaUpperBound.NULL);
 		addEEnumLiteral(mobaUpperBoundEEnum, MobaUpperBound.ONE);
 		addEEnumLiteral(mobaUpperBoundEEnum, MobaUpperBound.MANY);
+
+		initEEnum(mobaGeofenceEventEEnum, MobaGeofenceEvent.class, "MobaGeofenceEvent");
+		addEEnumLiteral(mobaGeofenceEventEEnum, MobaGeofenceEvent.ENTER);
+		addEEnumLiteral(mobaGeofenceEventEEnum, MobaGeofenceEvent.LEAVE);
+
+		initEEnum(mobaNFCModuleTypeEEnum, MobaNFCModuleType.class, "MobaNFCModuleType");
+		addEEnumLiteral(mobaNFCModuleTypeEEnum, MobaNFCModuleType.ID);
+		addEEnumLiteral(mobaNFCModuleTypeEEnum, MobaNFCModuleType.CUSTOM);
+		addEEnumLiteral(mobaNFCModuleTypeEEnum, MobaNFCModuleType.TEXT);
+
+		initEEnum(mobaBlueToothModuleTypeEEnum, MobaBlueToothModuleType.class, "MobaBlueToothModuleType");
+		addEEnumLiteral(mobaBlueToothModuleTypeEEnum, MobaBlueToothModuleType.LE);
+		addEEnumLiteral(mobaBlueToothModuleTypeEEnum, MobaBlueToothModuleType.SPP);
+		addEEnumLiteral(mobaBlueToothModuleTypeEEnum, MobaBlueToothModuleType.BEACON);
 
 		// Create resource
 		createResource(eNS_URI);

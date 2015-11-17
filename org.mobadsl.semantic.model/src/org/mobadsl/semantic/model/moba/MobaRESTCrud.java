@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MobaRESTCrud extends MobaREST, MobaPropertiesAble {
+public interface MobaRESTCrud extends MobaREST {
 	/**
 	 * Returns the value of the '<em><b>Operations</b></em>' attribute list.
 	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaRESTMethods}.

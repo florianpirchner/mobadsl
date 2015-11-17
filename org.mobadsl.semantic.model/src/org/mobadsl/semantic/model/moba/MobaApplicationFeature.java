@@ -2,8 +2,6 @@
  */
 package org.mobadsl.semantic.model.moba;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Application Feature</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface MobaApplicationFeature extends EObject {
+public interface MobaApplicationFeature extends MobaFriendsAble {
 } // MobaApplicationFeature

@@ -7,8 +7,13 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.mobadsl.semantic.model.moba.*;
+import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
+import org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaAuthorization;
+import org.mobadsl.semantic.model.moba.MobaBackgroundApplication;
+import org.mobadsl.semantic.model.moba.MobaBluetoothModule;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
@@ -16,11 +21,13 @@ import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEmailTrigger;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
 import org.mobadsl.semantic.model.moba.MobaEntityFeature;
@@ -28,37 +35,53 @@ import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
+import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaFeature;
+import org.mobadsl.semantic.model.moba.MobaFriend;
+import org.mobadsl.semantic.model.moba.MobaFriendsAble;
 import org.mobadsl.semantic.model.moba.MobaFutureConstraint;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
+import org.mobadsl.semantic.model.moba.MobaGeneratorSlot;
+import org.mobadsl.semantic.model.moba.MobaGeofenceTrigger;
 import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
+import org.mobadsl.semantic.model.moba.MobaNFCModule;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
+import org.mobadsl.semantic.model.moba.MobaPushModule;
+import org.mobadsl.semantic.model.moba.MobaPushTrigger;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
+import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
+import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
+import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
+import org.mobadsl.semantic.model.moba.MobaTrigger;
+import org.mobadsl.semantic.model.moba.MobaUiApplication;
 
 /**
  * <!-- begin-user-doc -->
@@ -116,6 +139,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected MobaSwitch<Adapter> modelSwitch =
 		new MobaSwitch<Adapter>() {
+			@Override
+			public Adapter caseMobaProject(MobaProject object) {
+				return createMobaProjectAdapter();
+			}
 			@Override
 			public Adapter caseMobaApplication(MobaApplication object) {
 				return createMobaApplicationAdapter();
@@ -337,6 +364,78 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaEnumLiteralAdapter();
 			}
 			@Override
+			public Adapter caseMobaUiApplication(MobaUiApplication object) {
+				return createMobaUiApplicationAdapter();
+			}
+			@Override
+			public Adapter caseMobaBackgroundApplication(MobaBackgroundApplication object) {
+				return createMobaBackgroundApplicationAdapter();
+			}
+			@Override
+			public Adapter caseMobaTrigger(MobaTrigger object) {
+				return createMobaTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaAppInstallTrigger(MobaAppInstallTrigger object) {
+				return createMobaAppInstallTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaAppUpdatelTrigger(MobaAppUpdatelTrigger object) {
+				return createMobaAppUpdatelTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaSMSTrigger(MobaSMSTrigger object) {
+				return createMobaSMSTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaDeviceStartupTrigger(MobaDeviceStartupTrigger object) {
+				return createMobaDeviceStartupTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaEmailTrigger(MobaEmailTrigger object) {
+				return createMobaEmailTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaTimerTrigger(MobaTimerTrigger object) {
+				return createMobaTimerTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaPushTrigger(MobaPushTrigger object) {
+				return createMobaPushTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaGeofenceTrigger(MobaGeofenceTrigger object) {
+				return createMobaGeofenceTriggerAdapter();
+			}
+			@Override
+			public Adapter caseMobaGeneratorSlot(MobaGeneratorSlot object) {
+				return createMobaGeneratorSlotAdapter();
+			}
+			@Override
+			public Adapter caseMobaFriend(MobaFriend object) {
+				return createMobaFriendAdapter();
+			}
+			@Override
+			public Adapter caseMobaFriendsAble(MobaFriendsAble object) {
+				return createMobaFriendsAbleAdapter();
+			}
+			@Override
+			public Adapter caseMobaExternalModule(MobaExternalModule object) {
+				return createMobaExternalModuleAdapter();
+			}
+			@Override
+			public Adapter caseMobaBluetoothModule(MobaBluetoothModule object) {
+				return createMobaBluetoothModuleAdapter();
+			}
+			@Override
+			public Adapter caseMobaNFCModule(MobaNFCModule object) {
+				return createMobaNFCModuleAdapter();
+			}
+			@Override
+			public Adapter caseMobaPushModule(MobaPushModule object) {
+				return createMobaPushModuleAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -355,6 +454,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaProject
+	 * @generated
+	 */
+	public Adapter createMobaProjectAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaApplication <em>Application</em>}'.
@@ -1123,6 +1236,258 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaEnumLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaUiApplication <em>Ui Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaUiApplication
+	 * @generated
+	 */
+	public Adapter createMobaUiApplicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBackgroundApplication <em>Background Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaBackgroundApplication
+	 * @generated
+	 */
+	public Adapter createMobaBackgroundApplicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaTrigger
+	 * @generated
+	 */
+	public Adapter createMobaTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaAppInstallTrigger <em>App Install Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaAppInstallTrigger
+	 * @generated
+	 */
+	public Adapter createMobaAppInstallTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger <em>App Updatel Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaAppUpdatelTrigger
+	 * @generated
+	 */
+	public Adapter createMobaAppUpdatelTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaSMSTrigger <em>SMS Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaSMSTrigger
+	 * @generated
+	 */
+	public Adapter createMobaSMSTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger <em>Device Startup Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger
+	 * @generated
+	 */
+	public Adapter createMobaDeviceStartupTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEmailTrigger <em>Email Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaEmailTrigger
+	 * @generated
+	 */
+	public Adapter createMobaEmailTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaTimerTrigger <em>Timer Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaTimerTrigger
+	 * @generated
+	 */
+	public Adapter createMobaTimerTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPushTrigger <em>Push Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaPushTrigger
+	 * @generated
+	 */
+	public Adapter createMobaPushTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaGeofenceTrigger <em>Geofence Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeofenceTrigger
+	 * @generated
+	 */
+	public Adapter createMobaGeofenceTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaGeneratorSlot <em>Generator Slot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaGeneratorSlot
+	 * @generated
+	 */
+	public Adapter createMobaGeneratorSlotAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaFriend <em>Friend</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriend
+	 * @generated
+	 */
+	public Adapter createMobaFriendAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaFriendsAble <em>Friends Able</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaFriendsAble
+	 * @generated
+	 */
+	public Adapter createMobaFriendsAbleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaExternalModule <em>External Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaExternalModule
+	 * @generated
+	 */
+	public Adapter createMobaExternalModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaBluetoothModule <em>Bluetooth Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaBluetoothModule
+	 * @generated
+	 */
+	public Adapter createMobaBluetoothModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaNFCModule <em>NFC Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaNFCModule
+	 * @generated
+	 */
+	public Adapter createMobaNFCModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPushModule <em>Push Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaPushModule
+	 * @generated
+	 */
+	public Adapter createMobaPushModuleAdapter() {
 		return null;
 	}
 

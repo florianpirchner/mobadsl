@@ -22,13 +22,13 @@ public interface MobaFactory extends EFactory {
 	MobaFactory eINSTANCE = org.mobadsl.semantic.model.moba.impl.MobaFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Application</em>'.
+	 * Returns a new object of class '<em>Project</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Application</em>'.
+	 * @return a new object of class '<em>Project</em>'.
 	 * @generated
 	 */
-	MobaApplication createMobaApplication();
+	MobaProject createMobaProject();
 
 	/**
 	 * Returns a new object of class '<em>Template</em>'.
@@ -398,6 +398,141 @@ public interface MobaFactory extends EFactory {
 	 * @generated
 	 */
 	MobaEnumLiteral createMobaEnumLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Ui Application</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ui Application</em>'.
+	 * @generated
+	 */
+	MobaUiApplication createMobaUiApplication();
+
+	/**
+	 * Returns a new object of class '<em>Background Application</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Background Application</em>'.
+	 * @generated
+	 */
+	MobaBackgroundApplication createMobaBackgroundApplication();
+
+	/**
+	 * Returns a new object of class '<em>App Install Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>App Install Trigger</em>'.
+	 * @generated
+	 */
+	MobaAppInstallTrigger createMobaAppInstallTrigger();
+
+	/**
+	 * Returns a new object of class '<em>App Updatel Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>App Updatel Trigger</em>'.
+	 * @generated
+	 */
+	MobaAppUpdatelTrigger createMobaAppUpdatelTrigger();
+
+	/**
+	 * Returns a new object of class '<em>SMS Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SMS Trigger</em>'.
+	 * @generated
+	 */
+	MobaSMSTrigger createMobaSMSTrigger();
+
+	/**
+	 * Returns a new object of class '<em>Device Startup Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Device Startup Trigger</em>'.
+	 * @generated
+	 */
+	MobaDeviceStartupTrigger createMobaDeviceStartupTrigger();
+
+	/**
+	 * Returns a new object of class '<em>Email Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Email Trigger</em>'.
+	 * @generated
+	 */
+	MobaEmailTrigger createMobaEmailTrigger();
+
+	/**
+	 * Returns a new object of class '<em>Timer Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Timer Trigger</em>'.
+	 * @generated
+	 */
+	MobaTimerTrigger createMobaTimerTrigger();
+
+	/**
+	 * Returns a new object of class '<em>Push Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Push Trigger</em>'.
+	 * @generated
+	 */
+	MobaPushTrigger createMobaPushTrigger();
+
+	/**
+	 * Returns a new object of class '<em>Geofence Trigger</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geofence Trigger</em>'.
+	 * @generated
+	 */
+	MobaGeofenceTrigger createMobaGeofenceTrigger();
+
+	/**
+	 * Returns a new object of class '<em>Generator Slot</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generator Slot</em>'.
+	 * @generated
+	 */
+	MobaGeneratorSlot createMobaGeneratorSlot();
+
+	/**
+	 * Returns a new object of class '<em>Friend</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Friend</em>'.
+	 * @generated
+	 */
+	MobaFriend createMobaFriend();
+
+	/**
+	 * Returns a new object of class '<em>Bluetooth Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bluetooth Module</em>'.
+	 * @generated
+	 */
+	MobaBluetoothModule createMobaBluetoothModule();
+
+	/**
+	 * Returns a new object of class '<em>NFC Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>NFC Module</em>'.
+	 * @generated
+	 */
+	MobaNFCModule createMobaNFCModule();
+
+	/**
+	 * Returns a new object of class '<em>Push Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Push Module</em>'.
+	 * @generated
+	 */
+	MobaPushModule createMobaPushModule();
 
 	/**
 	 * Returns the package supported by this factory.
