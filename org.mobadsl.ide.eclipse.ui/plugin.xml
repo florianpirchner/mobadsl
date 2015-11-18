@@ -10,7 +10,7 @@
             objectClass="org.eclipse.core.resources.IProject">
          <action
                class="org.mobadsl.ide.eclipse.ui.nature.ToggleMobaNatureAction"
-               icon="icons/moba.png"
+               icon="icons/phone_receiver2.png"
                id="org.mobadsl.ide.eclipse.ui.nature.AddMobaNatureAction"
                label="Convert to Moba project"
                menubarPath="org.eclipse.ui.projectConfigure/additions">
@@ -30,7 +30,7 @@
             objectClass="org.eclipse.core.resources.IProject">
          <action
                class="org.mobadsl.ide.eclipse.ui.nature.ToggleMobaNatureAction"
-               icon="icons/moba.png"
+               icon="icons/phone_receiver2.png"
                id="org.mobadsl.ide.eclipse.ui.nature.RemoveMobaNatureAction"
                label="Remove Moba Nature"
                menubarPath="org.eclipse.ui.projectConfigure/additions">
@@ -48,10 +48,10 @@
             objectClass="org.eclipse.core.resources.IProject">
          <action
                class="org.mobadsl.ide.eclipse.ui.AddTemplateFormRepoDialogAction"
-               icon="icons/moba.png"
+               icon="icons/phone_receiver2.png"
                id="org.mobadsl.ide.eclipse.ui.AddTemplateFormRepoDialogAction"
-               label="Add template..."
-               menubarPath="org.eclipse.ui.projectConfigure/additions">
+               label="Add mobaDSL templates..."
+               menubarPath="org.eclipse.ui.projectConfigure">
          </action>
          <visibility>
                <objectState

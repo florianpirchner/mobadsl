@@ -9,6 +9,7 @@
 			default="true"
 			extensions="moba"
 			id="org.mobadsl.grammar.Moba"
+			icon="icons/phone_receiver2.png"
 			name="Moba Editor">
 		</editor>
 	</extension>
