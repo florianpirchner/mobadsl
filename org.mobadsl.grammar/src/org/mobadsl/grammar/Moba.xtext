@@ -84,8 +84,13 @@ MobaConstant:
 	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaFriendsAble;
 
 MobaConstantValue:
-	(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]) ('+'
+	(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | (valueConst=[MobaConstant|CONSTANT] ('->'
+	valueConstFunctions+=MobaConstantValueFunction)*)) ('+'
 	tail=MobaConstantValue)?;
+
+enum MobaConstantValueFunction:
+	TO_FIRST_LOWER_CASE="toFirstLower" | TO_FIRST_UPPER_CASE="toFirstUpper" | TO_LOWER_CASE="toLowerCase" |
+	TO_UPPER_CASE="toUpperCase";
 
 fragment MobaFriendsAble:
 	(('friends' '(' friends+=MobaFriend (',' friends+=MobaFriend)* ')')? & ('[' properties+=MobaProperty (','
@@ -294,21 +299,19 @@ MobaExternalModule:
 	MobaBluetoothModule | MobaPushModule | MobaNFCModule;
 
 MobaBluetoothModule:
-	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType ;
+	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType;
 
 enum MobaBlueToothModuleType:
-	LE = "low energy" | SPP = "spp" | BEACON ="beacon"
-;
+	LE="low energy" | SPP="spp" | BEACON="beacon";
 
 MobaPushModule:
 	'module push' name=ID;
 
 MobaNFCModule:
-	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType ;
+	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType;
 
 enum MobaNFCModuleType:
-	ID = "id" | CUSTOM = "custom" | TEXT = 'text'
-;
+	ID="id" | CUSTOM="custom" | TEXT='text';
 
 enum MobaLowerBound:
 	MANY='*' | ZERO='0' | OPTIONAL='?' | ATLEASTONE='+' | ONE='1';

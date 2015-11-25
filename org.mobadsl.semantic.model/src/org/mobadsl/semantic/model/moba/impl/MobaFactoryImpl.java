@@ -188,6 +188,8 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case MobaPackage.MOBA_CONSTANT_VALUE_FUNCTION:
+				return createMobaConstantValueFunctionFromString(eDataType, initialValue);
 			case MobaPackage.MOBA_REST_METHODS:
 				return createMobaRESTMethodsFromString(eDataType, initialValue);
 			case MobaPackage.MOBA_LOWER_BOUND:
@@ -213,6 +215,8 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case MobaPackage.MOBA_CONSTANT_VALUE_FUNCTION:
+				return convertMobaConstantValueFunctionToString(eDataType, instanceValue);
 			case MobaPackage.MOBA_REST_METHODS:
 				return convertMobaRESTMethodsToString(eDataType, instanceValue);
 			case MobaPackage.MOBA_LOWER_BOUND:
@@ -798,6 +802,26 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaPushModule createMobaPushModule() {
 		MobaPushModuleImpl mobaPushModule = new MobaPushModuleImpl();
 		return mobaPushModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstantValueFunction createMobaConstantValueFunctionFromString(EDataType eDataType, String initialValue) {
+		MobaConstantValueFunction result = MobaConstantValueFunction.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMobaConstantValueFunctionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

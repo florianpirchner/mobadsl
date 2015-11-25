@@ -86,10 +86,20 @@
   <eClassifiers xsi:type="ecore:EClass" name="MobaConstantValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueConstFunctions" upperBound="-1"
+        eType="#//MobaConstantValueFunction"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueConstToLowerCase"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#//MobaConstantValue"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueInt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueDouble" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MobaConstantValueFunction">
+    <eLiterals name="TO_LOWER_CASE" literal="TO_LOWER_CASE"/>
+    <eLiterals name="TO_UPPER_CASE" value="1" literal="TO_UPPER_CASE"/>
+    <eLiterals name="TO_FIRST_UPPER_CASE" value="2" literal="TO_FIRST_UPPER_CASE"/>
+    <eLiterals name="TO_FIRST_LOWER_CASE" value="3" literal="TO_FIRST_LOWER_CASE"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaPropertiesAble" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"

@@ -14,18 +14,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getName <em>Name</em>}
- * </li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getUrlString
- * <em>Url String</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getUrlConst
- * <em>Url Const</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getServices
- * <em>Services</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization
- * <em>Authorization</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getUrlString <em>Url String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getUrlConst <em>Url Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getServices <em>Services</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer()
@@ -51,12 +45,9 @@ public interface MobaServer extends MobaApplicationFeature {
 	String getName();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaServer#getName <em>Name</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -80,13 +71,10 @@ public interface MobaServer extends MobaApplicationFeature {
 	String getUrlString();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaServer#getUrlString
-	 * <em>Url String</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getUrlString <em>Url String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Url String</em>' attribute.
+	 * @param value the new value of the '<em>Url String</em>' attribute.
 	 * @see #getUrlString()
 	 * @generated
 	 */
@@ -140,28 +128,24 @@ public interface MobaServer extends MobaApplicationFeature {
 	MobaServer getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaServer#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
 	void setSuperType(MobaServer value);
 
 	/**
-	 * Returns the value of the '<em><b>Services</b></em>' reference list. The
-	 * list contents are of type
-	 * {@link org.mobadsl.semantic.model.moba.MobaREST}. <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Services</b></em>' reference list.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaREST}.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Services</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Services</em>' reference list.
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaServer_Services()
 	 * @model

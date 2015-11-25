@@ -1630,13 +1630,31 @@ public interface MobaPackage extends EPackage {
 	int MOBA_CONSTANT_VALUE__VALUE_CONST = 1;
 
 	/**
+	 * The feature id for the '<em><b>Value Const Functions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CONSTANT_VALUE__VALUE_CONST_FUNCTIONS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Value Const To Lower Case</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CONSTANT_VALUE__VALUE_CONST_TO_LOWER_CASE = 3;
+
+	/**
 	 * The feature id for the '<em><b>Tail</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_VALUE__TAIL = 2;
+	int MOBA_CONSTANT_VALUE__TAIL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Value Int</b></em>' attribute.
@@ -1645,7 +1663,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_VALUE__VALUE_INT = 3;
+	int MOBA_CONSTANT_VALUE__VALUE_INT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Value Double</b></em>' attribute.
@@ -1654,7 +1672,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_VALUE__VALUE_DOUBLE = 4;
+	int MOBA_CONSTANT_VALUE__VALUE_DOUBLE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Constant Value</em>' class.
@@ -1663,7 +1681,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CONSTANT_VALUE_FEATURE_COUNT = 5;
+	int MOBA_CONSTANT_VALUE_FEATURE_COUNT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Key String</b></em>' attribute.
@@ -4406,6 +4424,16 @@ public interface MobaPackage extends EPackage {
 	int MOBA_PUSH_MODULE_FEATURE_COUNT = MOBA_EXTERNAL_MODULE_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaConstantValueFunction <em>Constant Value Function</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValueFunction
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstantValueFunction()
+	 * @generated
+	 */
+	int MOBA_CONSTANT_VALUE_FUNCTION = 74;
+
+	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4413,7 +4441,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaRESTMethods()
 	 * @generated
 	 */
-	int MOBA_REST_METHODS = 74;
+	int MOBA_REST_METHODS = 75;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaLowerBound <em>Lower Bound</em>}' enum.
@@ -4423,7 +4451,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaLowerBound()
 	 * @generated
 	 */
-	int MOBA_LOWER_BOUND = 75;
+	int MOBA_LOWER_BOUND = 76;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaUpperBound <em>Upper Bound</em>}' enum.
@@ -4433,7 +4461,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaUpperBound()
 	 * @generated
 	 */
-	int MOBA_UPPER_BOUND = 76;
+	int MOBA_UPPER_BOUND = 77;
 
 
 	/**
@@ -4444,7 +4472,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaGeofenceEvent()
 	 * @generated
 	 */
-	int MOBA_GEOFENCE_EVENT = 77;
+	int MOBA_GEOFENCE_EVENT = 78;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaNFCModuleType <em>NFC Module Type</em>}' enum.
@@ -4454,7 +4482,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaNFCModuleType()
 	 * @generated
 	 */
-	int MOBA_NFC_MODULE_TYPE = 78;
+	int MOBA_NFC_MODULE_TYPE = 79;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaBlueToothModuleType <em>Blue Tooth Module Type</em>}' enum.
@@ -4464,7 +4492,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaBlueToothModuleType()
 	 * @generated
 	 */
-	int MOBA_BLUE_TOOTH_MODULE_TYPE = 79;
+	int MOBA_BLUE_TOOTH_MODULE_TYPE = 80;
 
 
 	/**
@@ -5066,6 +5094,28 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMobaConstantValue_ValueConst();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getValueConstFunctions <em>Value Const Functions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value Const Functions</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValue#getValueConstFunctions()
+	 * @see #getMobaConstantValue()
+	 * @generated
+	 */
+	EAttribute getMobaConstantValue_ValueConstFunctions();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaConstantValue#isValueConstToLowerCase <em>Value Const To Lower Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value Const To Lower Case</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValue#isValueConstToLowerCase()
+	 * @see #getMobaConstantValue()
+	 * @generated
+	 */
+	EAttribute getMobaConstantValue_ValueConstToLowerCase();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaConstantValue#getTail <em>Tail</em>}'.
@@ -7001,6 +7051,16 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaPushModule();
 
 	/**
+	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaConstantValueFunction <em>Constant Value Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Constant Value Function</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaConstantValueFunction
+	 * @generated
+	 */
+	EEnum getMobaConstantValueFunction();
+
+	/**
 	 * Returns the meta object for enum '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7561,6 +7621,22 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_CONSTANT_VALUE__VALUE_CONST = eINSTANCE.getMobaConstantValue_ValueConst();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Const Functions</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_CONSTANT_VALUE__VALUE_CONST_FUNCTIONS = eINSTANCE.getMobaConstantValue_ValueConstFunctions();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Const To Lower Case</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_CONSTANT_VALUE__VALUE_CONST_TO_LOWER_CASE = eINSTANCE.getMobaConstantValue_ValueConstToLowerCase();
 
 		/**
 		 * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
@@ -9125,6 +9201,16 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MOBA_PUSH_MODULE = eINSTANCE.getMobaPushModule();
+
+		/**
+		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaConstantValueFunction <em>Constant Value Function</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mobadsl.semantic.model.moba.MobaConstantValueFunction
+		 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstantValueFunction()
+		 * @generated
+		 */
+		EEnum MOBA_CONSTANT_VALUE_FUNCTION = eINSTANCE.getMobaConstantValueFunction();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.MobaRESTMethods <em>REST Methods</em>}' enum.

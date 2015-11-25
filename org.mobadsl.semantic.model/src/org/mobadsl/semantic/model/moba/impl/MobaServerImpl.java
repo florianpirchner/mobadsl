@@ -28,19 +28,12 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getName
- * <em>Name</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getUrlString
- * <em>Url String</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getUrlConst
- * <em>Url Const</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getServices
- * <em>Services</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getAuthorization
- * <em>Authorization</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getUrlString <em>Url String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getUrlConst <em>Url Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaServerImpl#getAuthorization <em>Authorization</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,7 +42,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -59,7 +51,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -67,9 +58,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUrlString() <em>Url String</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getUrlString() <em>Url String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getUrlString()
 	 * @generated
 	 * @ordered
@@ -77,9 +67,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected static final String URL_STRING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrlString() <em>Url String</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getUrlString() <em>Url String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getUrlString()
 	 * @generated
 	 * @ordered
@@ -87,9 +76,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected String urlString = URL_STRING_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUrlConst() <em>Url Const</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getUrlConst() <em>Url Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getUrlConst()
 	 * @generated
 	 * @ordered
@@ -97,9 +85,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected MobaConstant urlConst;
 
 	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSuperType()
 	 * @generated
 	 * @ordered
@@ -107,9 +94,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected MobaServer superType;
 
 	/**
-	 * The cached value of the '{@link #getServices() <em>Services</em>}'
-	 * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getServices()
 	 * @generated
 	 * @ordered
@@ -117,10 +103,9 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected EList<MobaREST> services;
 
 	/**
-	 * The cached value of the '{@link #getAuthorization()
-	 * <em>Authorization</em>}' reference list. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference list.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getAuthorization()
 	 * @generated
 	 * @ordered
@@ -129,7 +114,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaServerImpl() {
@@ -138,7 +122,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -148,7 +131,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -157,7 +139,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -169,7 +150,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getUrlString() {
@@ -178,30 +158,26 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setUrlString(String newUrlString) {
 		String oldUrlString = urlString;
 		urlString = newUrlString;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__URL_STRING, oldUrlString,
-					urlString));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__URL_STRING, oldUrlString, urlString));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaConstant getUrlConst() {
 		if (urlConst != null && urlConst.eIsProxy()) {
-			InternalEObject oldUrlConst = (InternalEObject) urlConst;
-			urlConst = (MobaConstant) eResolveProxy(oldUrlConst);
+			InternalEObject oldUrlConst = (InternalEObject)urlConst;
+			urlConst = (MobaConstant)eResolveProxy(oldUrlConst);
 			if (urlConst != oldUrlConst) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__URL_CONST,
-							oldUrlConst, urlConst));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__URL_CONST, oldUrlConst, urlConst));
 			}
 		}
 		return urlConst;
@@ -209,7 +185,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaConstant basicGetUrlConst() {
@@ -218,30 +193,26 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setUrlConst(MobaConstant newUrlConst) {
 		MobaConstant oldUrlConst = urlConst;
 		urlConst = newUrlConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__URL_CONST, oldUrlConst,
-					urlConst));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__URL_CONST, oldUrlConst, urlConst));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaServer getSuperType() {
 		if (superType != null && superType.eIsProxy()) {
-			InternalEObject oldSuperType = (InternalEObject) superType;
-			superType = (MobaServer) eResolveProxy(oldSuperType);
+			InternalEObject oldSuperType = (InternalEObject)superType;
+			superType = (MobaServer)eResolveProxy(oldSuperType);
 			if (superType != oldSuperType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__SUPER_TYPE,
-							oldSuperType, superType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__SUPER_TYPE, oldSuperType, superType));
 			}
 		}
 		return superType;
@@ -249,7 +220,6 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaServer basicGetSuperType() {
@@ -258,20 +228,17 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setSuperType(MobaServer newSuperType) {
 		MobaServer oldSuperType = superType;
 		superType = newSuperType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__SUPER_TYPE, oldSuperType,
-					superType));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaREST> getServices() {
@@ -283,141 +250,131 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaAuthorization> getAuthorization() {
 		if (authorization == null) {
-			authorization = new EObjectResolvingEList<MobaAuthorization>(MobaAuthorization.class, this,
-					MobaPackage.MOBA_SERVER__AUTHORIZATION);
+			authorization = new EObjectResolvingEList<MobaAuthorization>(MobaAuthorization.class, this, MobaPackage.MOBA_SERVER__AUTHORIZATION);
 		}
 		return authorization;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__NAME:
-			return getName();
-		case MobaPackage.MOBA_SERVER__URL_STRING:
-			return getUrlString();
-		case MobaPackage.MOBA_SERVER__URL_CONST:
-			if (resolve)
-				return getUrlConst();
-			return basicGetUrlConst();
-		case MobaPackage.MOBA_SERVER__SUPER_TYPE:
-			if (resolve)
-				return getSuperType();
-			return basicGetSuperType();
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			return getServices();
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			return getAuthorization();
+			case MobaPackage.MOBA_SERVER__NAME:
+				return getName();
+			case MobaPackage.MOBA_SERVER__URL_STRING:
+				return getUrlString();
+			case MobaPackage.MOBA_SERVER__URL_CONST:
+				if (resolve) return getUrlConst();
+				return basicGetUrlConst();
+			case MobaPackage.MOBA_SERVER__SUPER_TYPE:
+				if (resolve) return getSuperType();
+				return basicGetSuperType();
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				return getServices();
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				return getAuthorization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__NAME:
-			setName((String) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__URL_STRING:
-			setUrlString((String) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__URL_CONST:
-			setUrlConst((MobaConstant) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__SUPER_TYPE:
-			setSuperType((MobaServer) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			getServices().clear();
-			getServices().addAll((Collection<? extends MobaREST>) newValue);
-			return;
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			getAuthorization().clear();
-			getAuthorization().addAll((Collection<? extends MobaAuthorization>) newValue);
-			return;
+			case MobaPackage.MOBA_SERVER__NAME:
+				setName((String)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__URL_STRING:
+				setUrlString((String)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__URL_CONST:
+				setUrlConst((MobaConstant)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__SUPER_TYPE:
+				setSuperType((MobaServer)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				getServices().clear();
+				getServices().addAll((Collection<? extends MobaREST>)newValue);
+				return;
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				getAuthorization().clear();
+				getAuthorization().addAll((Collection<? extends MobaAuthorization>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_SERVER__URL_STRING:
-			setUrlString(URL_STRING_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_SERVER__URL_CONST:
-			setUrlConst((MobaConstant) null);
-			return;
-		case MobaPackage.MOBA_SERVER__SUPER_TYPE:
-			setSuperType((MobaServer) null);
-			return;
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			getServices().clear();
-			return;
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			getAuthorization().clear();
-			return;
+			case MobaPackage.MOBA_SERVER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_SERVER__URL_STRING:
+				setUrlString(URL_STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_SERVER__URL_CONST:
+				setUrlConst((MobaConstant)null);
+				return;
+			case MobaPackage.MOBA_SERVER__SUPER_TYPE:
+				setSuperType((MobaServer)null);
+				return;
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				getServices().clear();
+				return;
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				getAuthorization().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SERVER__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MobaPackage.MOBA_SERVER__URL_STRING:
-			return URL_STRING_EDEFAULT == null ? urlString != null : !URL_STRING_EDEFAULT.equals(urlString);
-		case MobaPackage.MOBA_SERVER__URL_CONST:
-			return urlConst != null;
-		case MobaPackage.MOBA_SERVER__SUPER_TYPE:
-			return superType != null;
-		case MobaPackage.MOBA_SERVER__SERVICES:
-			return services != null && !services.isEmpty();
-		case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-			return authorization != null && !authorization.isEmpty();
+			case MobaPackage.MOBA_SERVER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MobaPackage.MOBA_SERVER__URL_STRING:
+				return URL_STRING_EDEFAULT == null ? urlString != null : !URL_STRING_EDEFAULT.equals(urlString);
+			case MobaPackage.MOBA_SERVER__URL_CONST:
+				return urlConst != null;
+			case MobaPackage.MOBA_SERVER__SUPER_TYPE:
+				return superType != null;
+			case MobaPackage.MOBA_SERVER__SERVICES:
+				return services != null && !services.isEmpty();
+			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
+				return authorization != null && !authorization.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

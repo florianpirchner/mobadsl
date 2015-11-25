@@ -18,6 +18,7 @@ import org.mobadsl.semantic.model.moba.MobaBluetoothModule;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
+import org.mobadsl.semantic.model.moba.MobaConstantValueFunction;
 import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaData;
@@ -617,6 +618,13 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * @generated
 	 */
 	private EClass mobaPushModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum mobaConstantValueFunctionEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1235,8 +1243,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaConstantValue_Tail() {
-		return (EReference)mobaConstantValueEClass.getEStructuralFeatures().get(2);
+	public EAttribute getMobaConstantValue_ValueConstFunctions() {
+		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1244,7 +1252,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaConstantValue_ValueInt() {
+	public EAttribute getMobaConstantValue_ValueConstToLowerCase() {
 		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1253,8 +1261,26 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMobaConstantValue_Tail() {
+		return (EReference)mobaConstantValueEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaConstantValue_ValueInt() {
+		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getMobaConstantValue_ValueDouble() {
-		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)mobaConstantValueEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2864,6 +2890,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getMobaConstantValueFunction() {
+		return mobaConstantValueFunctionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getMobaRESTMethods() {
 		return mobaRESTMethodsEEnum;
 	}
@@ -3017,6 +3052,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaConstantValueEClass = createEClass(MOBA_CONSTANT_VALUE);
 		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_STRING);
 		createEReference(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_CONST);
+		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_CONST_FUNCTIONS);
+		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_CONST_TO_LOWER_CASE);
 		createEReference(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__TAIL);
 		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_INT);
 		createEAttribute(mobaConstantValueEClass, MOBA_CONSTANT_VALUE__VALUE_DOUBLE);
@@ -3253,6 +3290,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaPushModuleEClass = createEClass(MOBA_PUSH_MODULE);
 
 		// Create enums
+		mobaConstantValueFunctionEEnum = createEEnum(MOBA_CONSTANT_VALUE_FUNCTION);
 		mobaRESTMethodsEEnum = createEEnum(MOBA_REST_METHODS);
 		mobaLowerBoundEEnum = createEEnum(MOBA_LOWER_BOUND);
 		mobaUpperBoundEEnum = createEEnum(MOBA_UPPER_BOUND);
@@ -3443,6 +3481,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaConstantValueEClass, MobaConstantValue.class, "MobaConstantValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaConstantValue_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaConstantValue_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaConstantValue_ValueConstFunctions(), this.getMobaConstantValueFunction(), "valueConstFunctions", null, 0, -1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaConstantValue_ValueConstToLowerCase(), ecorePackage.getEBoolean(), "valueConstToLowerCase", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaConstantValue_Tail(), this.getMobaConstantValue(), null, "tail", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaConstantValue_ValueInt(), ecorePackage.getEIntegerObject(), "valueInt", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaConstantValue_ValueDouble(), ecorePackage.getEDoubleObject(), "valueDouble", null, 0, 1, MobaConstantValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3679,6 +3719,12 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaPushModuleEClass, MobaPushModule.class, "MobaPushModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
+		initEEnum(mobaConstantValueFunctionEEnum, MobaConstantValueFunction.class, "MobaConstantValueFunction");
+		addEEnumLiteral(mobaConstantValueFunctionEEnum, MobaConstantValueFunction.TO_LOWER_CASE);
+		addEEnumLiteral(mobaConstantValueFunctionEEnum, MobaConstantValueFunction.TO_UPPER_CASE);
+		addEEnumLiteral(mobaConstantValueFunctionEEnum, MobaConstantValueFunction.TO_FIRST_UPPER_CASE);
+		addEEnumLiteral(mobaConstantValueFunctionEEnum, MobaConstantValueFunction.TO_FIRST_LOWER_CASE);
+
 		initEEnum(mobaRESTMethodsEEnum, MobaRESTMethods.class, "MobaRESTMethods");
 		addEEnumLiteral(mobaRESTMethodsEEnum, MobaRESTMethods.GET);
 		addEEnumLiteral(mobaRESTMethodsEEnum, MobaRESTMethods.PUT);
