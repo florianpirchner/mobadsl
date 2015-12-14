@@ -68,7 +68,7 @@
 		<lunifera.stage.repository.root>/lunifera/downloads/p2/</lunifera.stage.repository.root>
 		<lunifera.stage.repository.local.dir>${lunifera.stage.repository.root}${project.artifactId}${file.separator}${bundle.full.version}${file.separator}</lunifera.stage.repository.local.dir>
 
-		
+
 		<orbit-site>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</orbit-site>
 	</properties>
 
@@ -251,6 +251,9 @@
 					<name>lunifera.build.p2</name>
 				</property>
 			</activation>
+			<modules>
+				<module>org.mobadsl.p2</module>
+			</modules>
 			<build>
 				<defaultGoal>clean verify</defaultGoal>
 				<plugins>
@@ -287,41 +290,8 @@
 					</plugin>
 				</plugins>
 			</build>
-			<!-- <modules> -->
-			<!-- <module>org.lunifera.org.eclipse.gemini.naming.p2</module> -->
-			<!-- </modules> -->
 		</profile>
-		<profile>
-			<id>prepare-for-next-release</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<defaultGoal>org.eclipse.tycho:tycho-versions-plugin:set-version</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.tycho</groupId>
-						<artifactId>tycho-versions-plugin</artifactId>
-						<version>${tycho-version}</version>
-						<executions>
-							<execution>
-								<id>change-next-release</id>
-								<goals>
-									<goal>set-version</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<newVersion>${next-release}</newVersion>
-							<artifacts>org.lunifera.runtime.aggregator,
-								org.lunifera.runtime.parent,
-								org.lunifera.runtime.p2
-							</artifacts>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+
 		<profile>
 			<id>platform.default</id>
 			<activation>
@@ -331,7 +301,7 @@
 				</property>
 			</activation>
 			<properties>
-				<lunifera.build.platform.name>luna</lunifera.build.platform.name>
+				<lunifera.build.platform.name>mars</lunifera.build.platform.name>
 				<lunifera.build.eclipse.platform.p2.url>http://download.eclipse.org/releases/mars</lunifera.build.eclipse.platform.p2.url>
 			</properties>
 		</profile>
@@ -364,37 +334,6 @@
 			</properties>
 		</profile>
 
-		<profile>
-			<id>lunifera.build.uses.local.federated.p2</id>
-			<activation>
-				<property>
-					<name>lunifera.build.uses.local.federated.p2</name>
-				</property>
-			</activation>
-			<repositories>
-				<repository>
-					<id>lunifera.local.federated.p2</id>
-					<url>${lunifera.build.local.federated.p2.url}</url>
-					<layout>p2</layout>
-				</repository>
-			</repositories>
-		</profile>
-
-		<profile>
-			<id>lunifera.build.uses.remote.federated.p2</id>
-			<activation>
-				<property>
-					<name>lunifera.build.uses.remote.federated.p2</name>
-				</property>
-			</activation>
-			<repositories>
-				<repository>
-					<id>lunifera.remote.federated.p2</id>
-					<url>${lunifera.build.remote.federated.p2.url}</url>
-					<layout>p2</layout>
-				</repository>
-			</repositories>
-		</profile>
 
 		<profile>
 			<id>whenIsRepositoryP2Project</id>
@@ -889,61 +828,9 @@
 			</build>
 		</profile>
 
-		<profile>
-			<id>whenIsProductProject</id>
-			<activation>
-				<file>
-					<exists>.lunifera.releng.eclipse.rcp</exists>
-				</file>
-			</activation>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>org.eclipse.tycho</groupId>
-							<artifactId>tycho-p2-director-plugin</artifactId>
-							<version>${tycho-version}</version>
-							<executions>
-								<execution>
-									<!-- install the product for all configured os/ws/arch environments 
-										using p2 director -->
-									<id>materialize-products</id>
-									<goals>
-										<goal>materialize-products</goal>
-									</goals>
-								</execution>
-								<execution>
-									<!-- (optional) create product zips (one per os/ws/arch) -->
-									<id>archive-products</id>
-									<goals>
-										<goal>archive-products</goal>
-									</goals>
-									<phase>pre-integration-test</phase>
-								</execution>
-							</executions>
-							<configuration>
-								<formats>
-									<win32>zip</win32>
-									<linux>tar.gz</linux>
-									<macosx>tar.gz</macosx>
-								</formats>
-								<products>
-									<product>
-										<id>${project.artifactId}</id>
-										<!-- <archiveFileName>Equinox-Luna-Standard-Node-${unqualifiedVersion}.${buildQualifier}</archiveFileName> -->
-										<!-- (optional) customize the root folder name of the product zip -->
-										<!-- <rootFolder>myServer</rootFolder> -->
-									</product>
-								</products>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-		
-		
-<!-- 		From PARENT -->
+
+
+		<!-- From PARENT -->
 		<profile>
 			<!-- this profile must be activated when there isn't lunifera.build.branch 
 				defined. -->
@@ -966,6 +853,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>milestone</id>
 			<activation>
@@ -984,6 +872,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>GA</id>
 			<activation>
@@ -1001,18 +890,6 @@
 				<plugins>
 				</plugins>
 			</build>
-		</profile>
-
-		<profile>
-			<id>whenIsAggregatorProject</id>
-			<activation>
-				<file>
-					<exists>.lunifera.releng.aggregator</exists>
-				</file>
-			</activation>
-			<properties>
-				<lunifera.scm.url>${lunifera.scm.url.host}${lunifera.scm.user}/${lunifera.gitrepo.name}/tree/${lunifera.scm.branch}/${project.artifactId}/</lunifera.scm.url>
-			</properties>
 		</profile>
 
 		<profile>
@@ -1121,226 +998,6 @@
 		</profile>
 
 		<profile>
-			<id>full-project-info-report</id>
-			<activation>
-				<file>
-					<missing>.lunifera.releng.root</missing>
-				</file>
-				<property>
-					<name>lunifera.build.release</name>
-				</property>
-			</activation>
-			<properties>
-				<javadocJreApiVersion>7</javadocJreApiVersion>
-			</properties>
-			<reporting>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jxr-plugin</artifactId>
-						<version>${report.jxr.version}</version>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-changes-plugin</artifactId>
-						<version>2.11</version>
-						<reportSets>
-							<reportSet>
-								<reports>
-									<report>jira-report</report>
-								</reports>
-							</reportSet>
-						</reportSets>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-						<version>${report.version.version}</version>
-						<reportSets>
-							<reportSet>
-								<reports>
-									<report>dependency-updates-report</report>
-									<report>plugin-updates-report</report>
-									<report>property-updates-report</report>
-								</reports>
-							</reportSet>
-						</reportSets>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>taglist-maven-plugin</artifactId>
-						<version>2.4</version>
-					</plugin>
-					<!-- <plugin> -->
-					<!-- <groupId>org.codehaus.mojo</groupId> -->
-					<!-- <artifactId>license-maven-plugin</artifactId> -->
-					<!-- <version>${report.license.version}</version> -->
-					<!-- <reportSets> -->
-					<!-- <reportSet> -->
-					<!-- <id>licenses-report</id> -->
-					<!-- <reports> -->
-					<!-- <report>third-party-report</report> -->
-					<!-- </reports> -->
-					<!-- </reportSet> -->
-					<!-- </reportSets> -->
-					<!-- </plugin> -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-project-info-reports-plugin</artifactId>
-						<version>${report.project-info.version}</version>
-						<reportSets>
-							<reportSet>
-								<reports>
-									<!-- distribution-management, index, dependencies, help, issue-tracking, 
-										plugins, cim, license, dependency-management, mailing-list, project-team, 
-										dependency-convergence, scm, plugin-management, modules, summary -->
-									<report>index</report>
-									<report>distribution-management</report>
-									<report>issue-tracking</report>
-									<report>plugins</report>
-									<report>cim</report>
-									<report>dependency-management</report>
-									<report>license</report>
-									<report>dependencies</report>
-									<report>plugin-management</report>
-									<report>dependency-convergence</report>
-									<report>summary</report>
-								</reports>
-							</reportSet>
-						</reportSets>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-						<version>2.1</version>
-						<reportSets>
-							<reportSet>
-								<reports>
-									<report>dependency-updates-report</report>
-									<report>plugin-updates-report</report>
-									<report>property-updates-report</report>
-								</reports>
-							</reportSet>
-						</reportSets>
-					</plugin>
-				</plugins>
-			</reporting>
-		</profile>
-
-		<profile>
-			<id>check-license</id>
-			<activation>
-				<file>
-					<missing>.lunifera.releng.root</missing>
-				</file>
-				<property>
-					<name>lunifera.build.full</name>
-				</property>
-			</activation>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<!-- <plugin> -->
-						<!-- <groupId>org.codehaus.mojo</groupId> -->
-						<!-- <artifactId>license-maven-plugin</artifactId> -->
-						<!-- <version>${report.license.version}</version> -->
-						<!-- <inherited>true</inherited> -->
-						<!-- <configuration> -->
-						<!-- <skipAddThirdParty>true</skipAddThirdParty> -->
-						<!-- <skipCheckLicense>true</skipCheckLicense> -->
-						<!-- <verbose>false</verbose> -->
-						<!-- <acceptPomPackaging>true</acceptPomPackaging> -->
-						<!-- <generateBundle>true</generateBundle> -->
-						<!-- <deployMissingFile>false</deployMissingFile> -->
-						<!-- <useRepositoryMissingFiles>true</useRepositoryMissingFiles> -->
-						<!-- <quiet>false</quiet> -->
-						<!-- <useMissingFile>true</useMissingFile> -->
-						<!-- <failIfWarning>false</failIfWarning> -->
-						<!-- <encoding>UTF-8</encoding> -->
-						<!-- <useAsMissingFileRepository>org.lunifera.releng.maven:lunifera-releng-maven-licenses:0.12.5-SNAPSHOT</useAsMissingFileRepository> -->
-						<!-- <licenseMerges> -->
-						<!-- <licenseMerge> -->
-						<!-- The Apache Software License, Version 2.0|Apache -->
-						<!-- License, Version -->
-						<!-- 2.0|Apache License V2.0|Apache 2|ASF -->
-						<!-- 2.0|apache-2.0|Apache -->
-						<!-- Public License 2.0 -->
-						<!-- </licenseMerge> -->
-						<!-- <licenseMerge>BSD License|BSD -->
-						<!-- license|BSD</licenseMerge> -->
-						<!-- <licenseMerge>MIT License|MIT -->
-						<!-- license|MIT</licenseMerge> -->
-						<!-- <licenseMerge> -->
-						<!-- Lesser General Public License (LPGL) v 2.1|GNU -->
-						<!-- Lesser General -->
-						<!-- Public License, 2.1|LGPL 2.1 -->
-						<!-- </licenseMerge> -->
-						<!-- <licenseMerge> -->
-						<!-- Lesser General Public License (LPGL)|GNU Lesser -->
-						<!-- General Public -->
-						<!-- License|GNU LESSER GENERAL PUBLIC -->
-						<!-- LICENSE|LGPL|lgpl -->
-						<!-- </licenseMerge> -->
-						<!-- <licenseMerge> -->
-						<!-- COMMON DEVELOPMENT AND DISTRIBUTION LICENSE -->
-						<!-- (CDDL) -->
-						<!-- Version -->
-						<!-- 1.0|Common Development and Distribution License -->
-						<!-- (CDDL) -->
-						<!-- v1.0 -->
-						<!-- </licenseMerge> -->
-						<!-- <licenseMerge>Indiana University -->
-						<!-- Extreme! Lab Software -->
-						<!-- License, -->
-						<!-- vesion 1.1.1|Indiana University Extreme! Lab -->
-						<!-- Software License</licenseMerge> -->
-						<!-- </licenseMerges> -->
-						<!-- <skipUpdateProjectLicense>true</skipUpdateProjectLicense> -->
-						<!-- <skipAddThirdParty>true</skipAddThirdParty> -->
-						<!-- <skipCheckLicense>true</skipCheckLicense> -->
-
-						<!-- </configuration> -->
-						<!-- <executions> -->
-						<!-- <execution> -->
-						<!-- <id>update-license-files</id> -->
-						<!-- <goals> -->
-						<!-- <goal>update-project-license</goal> -->
-						<!-- <goal>add-third-party</goal> -->
-						<!-- </goals> -->
-						<!-- </execution> -->
-						<!-- <execution> -->
-						<!-- <id>update-file-header</id> -->
-						<!-- <goals> -->
-						<!-- <goal>update-file-header</goal> -->
-						<!-- </goals> -->
-						<!-- <phase>process-sources</phase> -->
-						<!-- <configuration> -->
-						<!-- <excludes> -->
-						<!-- <exclude>**/THIRD-PARTY.properties</exclude> -->
-						<!-- </excludes> -->
-						<!-- <canUpdateCopyright>${license.canUpdateCopyright}</canUpdateCopyright> -->
-						<!-- <canUpdateDescription>${license.canUpdateDescription}</canUpdateDescription> -->
-						<!-- <acceptPomPackaging>false</acceptPomPackaging> -->
-						<!-- <verbose>false</verbose> -->
-						<!-- <copyrightOwners>${license.copyrightOwners}</copyrightOwners> -->
-						<!-- <dryRun>${license.dryRun}</dryRun> -->
-						<!-- <failOnMissingHeader>${license.failIfWarning}</failOnMissingHeader> -->
-						<!-- </configuration> -->
-						<!-- </execution> -->
-						<!-- </executions> -->
-						<!-- </plugin> -->
-					</plugins>
-				</pluginManagement>
-				<plugins>
-					<!-- <plugin> -->
-					<!-- <groupId>org.codehaus.mojo</groupId> -->
-					<!-- <artifactId>license-maven-plugin</artifactId> -->
-					<!-- </plugin> -->
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
 			<!-- Just in case the developer have forgotten to set it in settings.xml -->
 			<id>set.workspace.location</id>
 			<activation>
@@ -1353,46 +1010,6 @@
 				<lunifera.developer.home>${env.HOME}${file.separator}lunifera-dev${file.separator}</lunifera.developer.home>
 				<lunifera.stage.site.dir>${lunifera.developer.home}site${file.separator}</lunifera.stage.site.dir>
 			</properties>
-		</profile>
-
-		<profile>
-			<id>sign</id>
-			<activation>
-				<file>
-					<missing>.lunifera.releng.root</missing>
-				</file>
-				<property>
-					<name>lunifera.build.release</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jarsigner-plugin</artifactId>
-						<version>1.3.2</version>
-						<configuration>
-							<verify>true</verify>
-							<storetype>jks</storetype>
-							<tsa>https://timestamp.geotrust.com/tsa</tsa>
-						</configuration>
-						<executions>
-							<execution>
-								<id>sign</id>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>verify</id>
-								<goals>
-									<goal>verify</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
 		</profile>
 
 		<profile>
@@ -1424,132 +1041,6 @@
 					</plugin>
 				</plugins>
 			</build>
-		</profile>
-
-		<!-- This profile is used to gather code coverage for Sonar -->
-		<profile>
-			<id>codeCoverage</id>
-			<activation>
-				<file>
-					<missing>.lunifera.releng.root</missing>
-				</file>
-				<property>
-					<name>lunifera.build.full</name>
-				</property>
-			</activation>
-			<properties>
-			</properties>
-			<reporting>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.sonar-plugins</groupId>
-						<artifactId>maven-report</artifactId>
-						<version>${report.sonar.version}</version>
-						<configuration>
-							<sonarHostURL>${sonar.host.url}</sonarHostURL>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-report-plugin</artifactId>
-						<version>${report.surefire.version}</version>
-						<reportSets>
-							<reportSet>
-								<id>integration-tests</id>
-								<reports>
-									<report>report-only</report>
-									<report>failsafe-report-only</report>
-								</reports>
-							</reportSet>
-						</reportSets>
-					</plugin>
-				</plugins>
-			</reporting>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<!-- Setup jacoco -->
-						<plugin>
-							<groupId>org.jacoco</groupId>
-							<artifactId>jacoco-maven-plugin</artifactId>
-							<configuration>
-								<skip>${jacoco.skip}</skip>
-							</configuration>
-							<executions>
-								<!-- Prepares a variable, jacoco.agent.ut.arg, that contains the 
-									info to be passed to the JVM hosting the code being tested. -->
-								<execution>
-									<id>prepare-ut-agent</id>
-									<phase>process-test-classes</phase>
-									<goals>
-										<goal>prepare-agent</goal>
-									</goals>
-									<configuration>
-										<destFile>${sonar.jacoco.reportPath}</destFile>
-										<propertyName>jacoco.agent.ut.arg</propertyName>
-										<append>true</append>
-										<includes>
-											<include>${lunifera.jacoco.include}</include>
-										</includes>
-									</configuration>
-								</execution>
-								<!-- Prepares a variable, jacoco.agent.it.arg, that contains the 
-									info to be passed to the JVM hosting the code being tested. -->
-								<execution>
-									<id>prepare-it-agent</id>
-									<phase>pre-integration-test</phase>
-									<goals>
-										<goal>prepare-agent-integration</goal>
-									</goals>
-									<configuration>
-										<destFile>${sonar.jacoco.itReportPath}</destFile>
-										<propertyName>jacoco.agent.it.arg</propertyName>
-										<append>true</append>
-									</configuration>
-								</execution>
-								<execution>
-									<id>post-test</id>
-									<goals>
-										<goal>report</goal>
-									</goals>
-									<configuration>
-										<dataFile>${sonar.jacoco.reportPath}</dataFile>
-									</configuration>
-								</execution>
-								<execution>
-									<id>post-itest</id>
-									<goals>
-										<goal>report-integration</goal>
-									</goals>
-									<configuration>
-										<dataFile>${sonar.jacoco.itReportPath}</dataFile>
-									</configuration>
-								</execution>
-							</executions>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-<!-- 				<plugins> -->
-<!-- 					<plugin> -->
-<!-- 						<groupId>org.codehaus.mojo</groupId> -->
-<!-- 						<artifactId>sonar-maven-plugin</artifactId> -->
-<!-- 					</plugin> -->
-
-<!-- 					Enabling use of jacoco -->
-<!-- 					<plugin> -->
-<!-- 						<groupId>org.jacoco</groupId> -->
-<!-- 						<artifactId>jacoco-maven-plugin</artifactId> -->
-<!-- 					</plugin> -->
-<!-- 				</plugins> -->
-			</build>
-			<dependencies>
-<!-- 				<dependency> -->
-<!-- 					<groupId>org.codehaus.sonar-plugins.java</groupId> -->
-<!-- 					<artifactId>sonar-jacoco-listeners</artifactId> -->
-<!-- 					<version>${sonar-jacoco-listeners.version}</version> -->
-<!-- 					<scope>test</scope> -->
-<!-- 				</dependency> -->
-			</dependencies>
 		</profile>
 
 		<profile>
@@ -1676,8 +1167,8 @@
 				</pluginManagement>
 			</build>
 		</profile>
-		
-		
+
+
 	</profiles>
 
 </project>
