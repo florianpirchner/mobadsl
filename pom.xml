@@ -64,6 +64,11 @@
 		<lunifera.build.local.federated.p2.dir>${lunifera.stage.repository.root}</lunifera.build.local.federated.p2.dir>
 		<lunifera.build.local.federated.p2.url>file://${lunifera.build.local.federated.p2.dir}</lunifera.build.local.federated.p2.url>
 		<lunifera.build.remote.federated.p2.url>http://lun.lunifera.org/downloads/p2/lunifera/${lunifera.build.platform.name}${file.separator}${lunifera.build.branch}</lunifera.build.remote.federated.p2.url>
+
+		<lunifera.stage.repository.root>/lunifera/downloads/p2/</lunifera.stage.repository.root>
+		<lunifera.stage.repository.local.dir>${lunifera.stage.repository.root}${project.artifactId}${file.separator}${bundle.full.version}${file.separator}</lunifera.stage.repository.local.dir>
+
+		
 		<orbit-site>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</orbit-site>
 	</properties>
 
@@ -228,8 +233,6 @@
 	<!-- <lunifera.build.platform.name>none</lunifera.build.platform.name> -->
 	<!-- <lunifera.build.eclipse.platform.p2.url>none</lunifera.build.eclipse.platform.p2.url> -->
 
-	<!-- <lunifera.build.local.federated.p2.dir>${lunifera.stage.repository.root}</lunifera.build.local.federated.p2.dir> -->
-	<!-- <lunifera.build.local.federated.p2.url>file://${lunifera.build.local.federated.p2.dir}</lunifera.build.local.federated.p2.url> -->
 	<!-- <lunifera.build.remote.federated.p2.url>http://lun.lunifera.org/downloads/p2/lunifera/${lunifera.build.platform.name}${file.separator}${lunifera.build.branch}</lunifera.build.remote.federated.p2.url> -->
 
 	<!-- <lunifera.stage.artifact.version>none</lunifera.stage.artifact.version> -->
