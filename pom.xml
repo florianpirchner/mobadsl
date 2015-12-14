@@ -1543,12 +1543,12 @@
 <!-- 				</plugins> -->
 			</build>
 			<dependencies>
-				<dependency>
-					<groupId>org.codehaus.sonar-plugins.java</groupId>
-					<artifactId>sonar-jacoco-listeners</artifactId>
-					<version>${sonar-jacoco-listeners.version}</version>
-					<scope>test</scope>
-				</dependency>
+<!-- 				<dependency> -->
+<!-- 					<groupId>org.codehaus.sonar-plugins.java</groupId> -->
+<!-- 					<artifactId>sonar-jacoco-listeners</artifactId> -->
+<!-- 					<version>${sonar-jacoco-listeners.version}</version> -->
+<!-- 					<scope>test</scope> -->
+<!-- 				</dependency> -->
 			</dependencies>
 		</profile>
 
