@@ -60,6 +60,7 @@
 	<properties>
 		<tycho-version>0.21.0</tycho-version>
 		<tychoExtrasVersion>0.21.0</tychoExtrasVersion>
+		<lunifera.build.branch>latest</lunifera.build.branch>
 		<lunifera.build.local.federated.p2.dir>${lunifera.stage.repository.root}</lunifera.build.local.federated.p2.dir>
 		<lunifera.build.local.federated.p2.url>file://${lunifera.build.local.federated.p2.dir}</lunifera.build.local.federated.p2.url>
 		<lunifera.build.remote.federated.p2.url>http://lun.lunifera.org/downloads/p2/lunifera/${lunifera.build.platform.name}${file.separator}${lunifera.build.branch}</lunifera.build.remote.federated.p2.url>
