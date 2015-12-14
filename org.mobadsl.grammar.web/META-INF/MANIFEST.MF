@@ -2,9 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Web
 Bundle-SymbolicName: org.mobadsl.grammar.web
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.8.0.qualifier
 Export-Package: org.mobadsl.grammar.web
 Require-Bundle: org.eclipse.xtext.ide;bundle-version="2.9.0",
  org.mobadsl.grammar;bundle-version="0.8.0",
+ org.mobadsl.grammar.ide;bundle-version="0.8.0",
  javax.servlet;bundle-version="3.1.0",
  org.eclipse.xtend.lib;bundle-version="2.9.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

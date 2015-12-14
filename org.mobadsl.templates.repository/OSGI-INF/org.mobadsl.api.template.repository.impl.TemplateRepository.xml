@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" enabled="true" immediate="true" name="org.mobadsl.api.template.repository.impl.TemplateRepository">
-   <property name="moba.repository.id" value="org.mobadsl.templates"/>
-   <property name="moba.repository.version" value="0.8.0"/>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" immediate="true" name="org.mobadsl.api.template.repository.impl.TemplateRepository">
+   <implementation class="org.mobadsl.api.template.repository.impl.TemplateRepository"/>
    <service>
       <provide interface="org.mobadsl.api.template.repository.ITemplateRepository"/>
    </service>
-   <implementation class="org.mobadsl.api.template.repository.impl.TemplateRepository"/>
+   <property name="moba.repository.id" value="org.mobadsl.templates"/>
+   <property name="moba.repository.version" value="0.8.0"/>
 </scr:component>

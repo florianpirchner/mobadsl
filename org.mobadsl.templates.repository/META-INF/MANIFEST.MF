@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Model
-Bundle-SymbolicName: org.mobadsl.templates.repository.impl
+Bundle-SymbolicName: org.mobadsl.templates.repository
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: org.mobadsl.api.template.repository,
  org.osgi.service.component;version="1.2.2",
@@ -12,5 +12,5 @@ Require-Bundle: org.eclipse.ui;bundle-version="3.107.0",
  org.apache.commons.io;bundle-version="2.0.1",
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi
-Bundle-Version: 0.8.0
+Bundle-Version: 0.8.0.qualifier
 Service-Component: OSGI-INF/*.xml

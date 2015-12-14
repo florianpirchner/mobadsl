@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.mobadsl.feature" version="0.8.0.qualifier">
+      <category name="org.mobadsl"/>
+   </feature>
+   <feature id="org.mobadsl.feature.source" version="0.8.0.qualifier">
+      <category name="org.mobadsl"/>
+   </feature>
+   <category-def name="org.mobadsl" label="mobaDSL"/>
+</site>
