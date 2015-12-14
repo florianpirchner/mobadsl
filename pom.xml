@@ -14,10 +14,10 @@
 		<module>org.mobadsl.grammar.generator.common</module>
 		<module>org.mobadsl.grammar.generator.server.rest</module>
 		<module>org.mobadsl.grammar.ide</module>
-<!-- 		<module>org.mobadsl.grammar.tests</module> -->
+		<!-- <module>org.mobadsl.grammar.tests</module> -->
 		<module>org.mobadsl.grammar.ui</module>
-<!-- 		<module>org.mobadsl.grammar.ui.tests</module> -->
-<!-- 		<module>org.mobadsl.grammar.web</module> -->
+		<!-- <module>org.mobadsl.grammar.ui.tests</module> -->
+		<!-- <module>org.mobadsl.grammar.web</module> -->
 		<module>org.mobadsl.ide.eclipse</module>
 		<module>org.mobadsl.ide.eclipse.ui</module>
 		<module>org.mobadsl.semantic.model</module>
@@ -251,7 +251,9 @@
 				<defaultGoal>clean verify</defaultGoal>
 				<plugins>
 					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-clean-plugin</artifactId>
+						<version>3.0.0</version>
 						<configuration>
 							<filesets>
 								<fileset>
@@ -266,6 +268,7 @@
 					<plugin>
 						<groupId>org.eclipse.xtend</groupId>
 						<artifactId>xtend-maven-plugin</artifactId>
+						<version>2.9.0</version>
 						<executions>
 							<execution>
 								<goals>
