@@ -66,7 +66,7 @@
 		<lunifera.build.remote.federated.p2.url>http://lun.lunifera.org/downloads/p2/lunifera/${lunifera.build.platform.name}${file.separator}${lunifera.build.branch}</lunifera.build.remote.federated.p2.url>
 
 		<lunifera.stage.repository.root>/lunifera/downloads/p2/mobadsl/</lunifera.stage.repository.root>
-		<lunifera.stage.repository.local.dir>${lunifera.stage.repository.root}${project.artifactId}${file.separator}${bundle.full.version}${file.separator}</lunifera.stage.repository.local.dir>
+		<lunifera.stage.repository.local.dir>${lunifera.stage.repository.root}${project.artifactId}${file.separator}${pom.version}${file.separator}</lunifera.stage.repository.local.dir>
 
 
 		<orbit-site>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</orbit-site>

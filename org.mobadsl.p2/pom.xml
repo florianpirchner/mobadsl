@@ -97,7 +97,7 @@
 				<xtext-p2>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/milestones/</xtext-p2>
 				<lunifera.build.eclipse.platform.p2.url>http://download.eclipse.org/releases/mars</lunifera.build.eclipse.platform.p2.url>
 				<lunifera.deployment.p2.origin.dir>${project.build.directory}/repository</lunifera.deployment.p2.origin.dir>
-				<lunifera.stage.repository.local.dir>${lunifera.stage.repository.root}${project.artifactId}${file.separator}${bundle.full.version}${file.separator}</lunifera.stage.repository.local.dir>
+				<lunifera.stage.repository.local.dir>${lunifera.stage.repository.root}${project.artifactId}${file.separator}${pom.version}${file.separator}</lunifera.stage.repository.local.dir>
 
 				<associate.p2>${lunifera.build.eclipse.platform.p2.url},${orbit-site},${xtext-p2}</associate.p2>
 			</properties>
