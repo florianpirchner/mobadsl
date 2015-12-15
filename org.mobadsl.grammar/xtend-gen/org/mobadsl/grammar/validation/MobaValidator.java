@@ -83,11 +83,8 @@ public class MobaValidator extends AbstractMobaValidator {
       try {
         MobaEntity _superType_1 = dto.getSuperType();
         List<MobaEntityFeature> _allFeatures = _superType_1.getAllFeatures();
-        final Function1<MobaEntityFeature, String> _function = new Function1<MobaEntityFeature, String>() {
-          @Override
-          public String apply(final MobaEntityFeature it) {
-            return it.getName();
-          }
+        final Function1<MobaEntityFeature, String> _function = (MobaEntityFeature it) -> {
+          return it.getName();
         };
         _xtrycatchfinallyexpression = IterableExtensions.<String, MobaEntityFeature>toMap(_allFeatures, _function);
       } catch (final Throwable _t) {
@@ -135,11 +132,8 @@ public class MobaValidator extends AbstractMobaValidator {
       try {
         MobaDto _superType_1 = payload.getSuperType();
         List<MobaDtoFeature> _allFeatures = _superType_1.getAllFeatures();
-        final Function1<MobaDtoFeature, String> _function = new Function1<MobaDtoFeature, String>() {
-          @Override
-          public String apply(final MobaDtoFeature it) {
-            return it.getName();
-          }
+        final Function1<MobaDtoFeature, String> _function = (MobaDtoFeature it) -> {
+          return it.getName();
         };
         _xtrycatchfinallyexpression = IterableExtensions.<String, MobaDtoFeature>toMap(_allFeatures, _function);
       } catch (final Throwable _t) {
@@ -187,11 +181,8 @@ public class MobaValidator extends AbstractMobaValidator {
       try {
         MobaQueue _superType_1 = queue.getSuperType();
         List<MobaQueueFeature> _allFeatures = _superType_1.getAllFeatures();
-        final Function1<MobaQueueFeature, String> _function = new Function1<MobaQueueFeature, String>() {
-          @Override
-          public String apply(final MobaQueueFeature it) {
-            return it.getName();
-          }
+        final Function1<MobaQueueFeature, String> _function = (MobaQueueFeature it) -> {
+          return it.getName();
         };
         _xtrycatchfinallyexpression = IterableExtensions.<String, MobaQueueFeature>toMap(_allFeatures, _function);
       } catch (final Throwable _t) {
@@ -574,56 +565,50 @@ public class MobaValidator extends AbstractMobaValidator {
     final HashSet<Integer> values = CollectionLiterals.<Integer>newHashSet();
     MobaEnum _enumAST = superType.getEnumAST();
     List<MobaEnumLiteral> _allLiterals = _enumAST.getAllLiterals();
-    final Consumer<MobaEnumLiteral> _function = new Consumer<MobaEnumLiteral>() {
-      @Override
-      public void accept(final MobaEnumLiteral it) {
-        String _name = it.getName();
-        names.add(_name);
-        String _literal = it.getLiteral();
-        literals.add(_literal);
-        int _value = it.getValue();
-        values.add(Integer.valueOf(_value));
-      }
+    final Consumer<MobaEnumLiteral> _function = (MobaEnumLiteral it) -> {
+      String _name = it.getName();
+      names.add(_name);
+      String _literal = it.getLiteral();
+      literals.add(_literal);
+      int _value = it.getValue();
+      values.add(Integer.valueOf(_value));
     };
     _allLiterals.forEach(_function);
     MobaEnum _enumAST_1 = datatype.getEnumAST();
     EList<MobaEnumLiteral> _literals = _enumAST_1.getLiterals();
-    final Consumer<MobaEnumLiteral> _function_1 = new Consumer<MobaEnumLiteral>() {
-      @Override
-      public void accept(final MobaEnumLiteral it) {
-        String _name = it.getName();
-        boolean _contains = names.contains(_name);
-        if (_contains) {
-          StringConcatenation _builder = new StringConcatenation();
-          _builder.append("Duplicate name \"");
-          String _name_1 = it.getName();
-          _builder.append(_name_1, "");
-          _builder.append(".\" Check super type.");
-          MobaValidator.this.error(_builder.toString(), datatype, 
-            MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
-        }
-        String _literal = it.getLiteral();
-        boolean _contains_1 = literals.contains(_literal);
-        if (_contains_1) {
-          StringConcatenation _builder_1 = new StringConcatenation();
-          _builder_1.append("Duplicate literal \"");
-          String _literal_1 = it.getLiteral();
-          _builder_1.append(_literal_1, "");
-          _builder_1.append(".\" Check super type.");
-          MobaValidator.this.error(_builder_1.toString(), datatype, 
-            MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
-        }
-        int _value = it.getValue();
-        boolean _contains_2 = values.contains(Integer.valueOf(_value));
-        if (_contains_2) {
-          StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("You are redefinging enum literal with value\"");
-          int _value_1 = it.getValue();
-          _builder_2.append(_value_1, "");
-          _builder_2.append(".\" Check super type.");
-          MobaValidator.this.warning(_builder_2.toString(), datatype, 
-            MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
-        }
+    final Consumer<MobaEnumLiteral> _function_1 = (MobaEnumLiteral it) -> {
+      String _name = it.getName();
+      boolean _contains = names.contains(_name);
+      if (_contains) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("Duplicate name \"");
+        String _name_1 = it.getName();
+        _builder.append(_name_1, "");
+        _builder.append(".\" Check super type.");
+        this.error(_builder.toString(), datatype, 
+          MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
+      }
+      String _literal = it.getLiteral();
+      boolean _contains_1 = literals.contains(_literal);
+      if (_contains_1) {
+        StringConcatenation _builder_1 = new StringConcatenation();
+        _builder_1.append("Duplicate literal \"");
+        String _literal_1 = it.getLiteral();
+        _builder_1.append(_literal_1, "");
+        _builder_1.append(".\" Check super type.");
+        this.error(_builder_1.toString(), datatype, 
+          MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
+      }
+      int _value = it.getValue();
+      boolean _contains_2 = values.contains(Integer.valueOf(_value));
+      if (_contains_2) {
+        StringConcatenation _builder_2 = new StringConcatenation();
+        _builder_2.append("You are redefinging enum literal with value\"");
+        int _value_1 = it.getValue();
+        _builder_2.append(_value_1, "");
+        _builder_2.append(".\" Check super type.");
+        this.warning(_builder_2.toString(), datatype, 
+          MobaPackage.Literals.MOBA_DATA_TYPE__ENUM_AST);
       }
     };
     _literals.forEach(_function_1);
@@ -703,18 +688,12 @@ public class MobaValidator extends AbstractMobaValidator {
     boolean foundWarning = false;
     int index = (-1);
     final EList<MobaGeneratorFeature> features = generator.getFeatures();
-    final Function1<MobaGeneratorFeature, Boolean> _function = new Function1<MobaGeneratorFeature, Boolean>() {
-      @Override
-      public Boolean apply(final MobaGeneratorFeature it) {
-        return Boolean.valueOf((it instanceof MobaGeneratorIDFeature));
-      }
+    final Function1<MobaGeneratorFeature, Boolean> _function = (MobaGeneratorFeature it) -> {
+      return Boolean.valueOf((it instanceof MobaGeneratorIDFeature));
     };
     Iterable<MobaGeneratorFeature> _filter = IterableExtensions.<MobaGeneratorFeature>filter(features, _function);
-    final Function1<MobaGeneratorFeature, String> _function_1 = new Function1<MobaGeneratorFeature, String>() {
-      @Override
-      public String apply(final MobaGeneratorFeature it) {
-        return it.getGeneratorVersionedId();
-      }
+    final Function1<MobaGeneratorFeature, String> _function_1 = (MobaGeneratorFeature it) -> {
+      return it.getGeneratorVersionedId();
     };
     Iterable<String> _map = IterableExtensions.<MobaGeneratorFeature, String>map(_filter, _function_1);
     List<String> _list = IterableExtensions.<String>toList(_map);

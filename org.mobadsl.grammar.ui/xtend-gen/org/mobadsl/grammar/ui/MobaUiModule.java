@@ -19,7 +19,7 @@ public class MobaUiModule extends AbstractMobaUiModule {
     return MobaHoverDocumentationProvider.class;
   }
   
-  public MobaUiModule(final AbstractUIPlugin arg0) {
-    super(arg0);
+  public MobaUiModule(final AbstractUIPlugin plugin) {
+    super(plugin);
   }
 }

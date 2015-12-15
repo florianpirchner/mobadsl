@@ -135,14 +135,11 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   
   public IScope scope_MobaGenerator(final MobaApplication ctx, final EReference ref) {
     List<MobaGenerator> _allGenerators = ctx.getAllGenerators();
-    final Function<MobaGenerator, QualifiedName> _function = new Function<MobaGenerator, QualifiedName>() {
-      @Override
-      public QualifiedName apply(final MobaGenerator it) {
-        String _versionedId = it.getVersionedId();
-        String _versionedIdModelValue = MobaUtil.toVersionedIdModelValue(_versionedId);
-        String[] _split = _versionedIdModelValue.split("\\.");
-        return QualifiedName.create(_split);
-      }
+    final Function<MobaGenerator, QualifiedName> _function = (MobaGenerator it) -> {
+      String _versionedId = it.getVersionedId();
+      String _versionedIdModelValue = MobaUtil.toVersionedIdModelValue(_versionedId);
+      String[] _split = _versionedIdModelValue.split("\\.");
+      return QualifiedName.create(_split);
     };
     return Scopes.<MobaGenerator>scopeFor(_allGenerators, _function, IScope.NULLSCOPE);
   }

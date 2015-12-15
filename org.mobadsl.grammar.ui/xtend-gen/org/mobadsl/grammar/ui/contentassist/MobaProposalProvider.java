@@ -56,17 +56,14 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     boolean _notEquals = (!Objects.equal(manager, null));
     if (_notEquals) {
       List<MobaIndexEntry> _availableEntries = manager.getAvailableEntries();
-      final Consumer<MobaIndexEntry> _function = new Consumer<MobaIndexEntry>() {
-        @Override
-        public void accept(final MobaIndexEntry it) {
-          EObject _eContainer = it.eContainer();
-          final MobaIndex index = ((MobaIndex) _eContainer);
-          String _createProposalValue = MobaProposalProvider.this.createProposalValue(index, it);
-          StyledString _createStyledString = MobaProposalProvider.this.createStyledString(index, it);
-          Image _image = MobaProposalProvider.this.getImage(it);
-          ConfigurableCompletionProposal _doCreateProposal = MobaProposalProvider.this.doCreateProposal(_createProposalValue, _createStyledString, _image, 1000, context);
-          acceptor.accept(_doCreateProposal);
-        }
+      final Consumer<MobaIndexEntry> _function = (MobaIndexEntry it) -> {
+        EObject _eContainer = it.eContainer();
+        final MobaIndex index = ((MobaIndex) _eContainer);
+        String _createProposalValue = this.createProposalValue(index, it);
+        StyledString _createStyledString = this.createStyledString(index, it);
+        Image _image = this.getImage(it);
+        ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_createProposalValue, _createStyledString, _image, 1000, context);
+        acceptor.accept(_doCreateProposal);
       };
       _availableEntries.forEach(_function);
     }
@@ -78,20 +75,17 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     final String prefix = context.getPrefix();
     final Map<String, ExtensionGeneratorDelegate.Metadata> allGenerators = this.generatorDelegate.readExtentionsMetadataById(this.grammarName, prefix);
     Collection<ExtensionGeneratorDelegate.Metadata> _values = allGenerators.values();
-    final Consumer<ExtensionGeneratorDelegate.Metadata> _function = new Consumer<ExtensionGeneratorDelegate.Metadata>() {
-      @Override
-      public void accept(final ExtensionGeneratorDelegate.Metadata it) {
-        StringConcatenation _builder = new StringConcatenation();
-        String _id = it.getId();
-        String _version = it.getVersion();
-        String _versionedIdWithWhitespace = MobaUtil.toVersionedIdWithWhitespace(_id, _version);
-        _builder.append(_versionedIdWithWhitespace, "");
-        StyledString _createStyledString = MobaProposalProvider.this.createStyledString(it);
-        Image _image = MobaProposalProvider.this.getImage(model);
-        ConfigurableCompletionProposal _doCreateProposal = MobaProposalProvider.this.doCreateProposal(_builder.toString(), _createStyledString, _image, 
-          1000, context);
-        acceptor.accept(_doCreateProposal);
-      }
+    final Consumer<ExtensionGeneratorDelegate.Metadata> _function = (ExtensionGeneratorDelegate.Metadata it) -> {
+      StringConcatenation _builder = new StringConcatenation();
+      String _id = it.getId();
+      String _version = it.getVersion();
+      String _versionedIdWithWhitespace = MobaUtil.toVersionedIdWithWhitespace(_id, _version);
+      _builder.append(_versionedIdWithWhitespace, "");
+      StyledString _createStyledString = this.createStyledString(it);
+      Image _image = this.getImage(model);
+      ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_builder.toString(), _createStyledString, _image, 
+        1000, context);
+      acceptor.accept(_doCreateProposal);
     };
     _values.forEach(_function);
   }
@@ -104,15 +98,12 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     String _id = feature.getId();
     final Map<String, ExtensionGeneratorDelegate.Metadata> allGenerators = this.generatorDelegate.readExtentionsMetadataByVersion(this.grammarName, _id, prefix);
     Collection<ExtensionGeneratorDelegate.Metadata> _values = allGenerators.values();
-    final Consumer<ExtensionGeneratorDelegate.Metadata> _function = new Consumer<ExtensionGeneratorDelegate.Metadata>() {
-      @Override
-      public void accept(final ExtensionGeneratorDelegate.Metadata it) {
-        String _version = it.getVersion();
-        StyledString _createStyledStringForVersion = MobaProposalProvider.this.createStyledStringForVersion(it);
-        Image _image = MobaProposalProvider.this.getImage(model);
-        ConfigurableCompletionProposal _doCreateProposal = MobaProposalProvider.this.doCreateProposal(_version, _createStyledStringForVersion, _image, 1000, context);
-        acceptor.accept(_doCreateProposal);
-      }
+    final Consumer<ExtensionGeneratorDelegate.Metadata> _function = (ExtensionGeneratorDelegate.Metadata it) -> {
+      String _version = it.getVersion();
+      StyledString _createStyledStringForVersion = this.createStyledStringForVersion(it);
+      Image _image = this.getImage(model);
+      ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal(_version, _createStyledStringForVersion, _image, 1000, context);
+      acceptor.accept(_doCreateProposal);
     };
     _values.forEach(_function);
   }

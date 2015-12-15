@@ -22,29 +22,26 @@ import org.mobadsl.ide.eclipse.TemplateIndexHelper;
 public class MobaQuickfixProvider extends DefaultQuickfixProvider {
   @Fix(MobaValidator.DOWNLOAD_TEMPLATE)
   public void downloadTemplate(final Issue issue, final IssueResolutionAcceptor acceptor) {
-    final IModification _function = new IModification() {
-      @Override
-      public void apply(final IModificationContext context) throws Exception {
-        final IXtextDocument xtextDocument = context.getXtextDocument();
-        Integer _offset = issue.getOffset();
-        Integer _length = issue.getLength();
-        final String value = xtextDocument.get((_offset).intValue(), (_length).intValue());
-        final TemplateIndexHelper.TemplateCoordinate coordinate = TemplateIndexHelper.TemplateCoordinate.parse(value);
-        boolean _equals = Objects.equal(coordinate, null);
-        if (_equals) {
-          return;
-        }
-        Integer _offset_1 = issue.getOffset();
-        Integer _length_1 = issue.getLength();
-        String _templateID = coordinate.getTemplateID();
-        xtextDocument.replace((_offset_1).intValue(), (_length_1).intValue(), _templateID);
-        final IFile file = xtextDocument.<IFile>getAdapter(IFile.class);
-        final IProject project = file.getProject();
-        final TemplateIndexHelper helper = new TemplateIndexHelper();
-        ArrayList<TemplateIndexHelper.TemplateCoordinate> _newArrayList = CollectionLiterals.<TemplateIndexHelper.TemplateCoordinate>newArrayList(coordinate);
-        helper.downloadByCoordinate(project, _newArrayList);
-        helper.dispose();
+    final IModification _function = (IModificationContext context) -> {
+      final IXtextDocument xtextDocument = context.getXtextDocument();
+      Integer _offset = issue.getOffset();
+      Integer _length = issue.getLength();
+      final String value = xtextDocument.get((_offset).intValue(), (_length).intValue());
+      final TemplateIndexHelper.TemplateCoordinate coordinate = TemplateIndexHelper.TemplateCoordinate.parse(value);
+      boolean _equals = Objects.equal(coordinate, null);
+      if (_equals) {
+        return;
       }
+      Integer _offset_1 = issue.getOffset();
+      Integer _length_1 = issue.getLength();
+      String _templateID = coordinate.getTemplateID();
+      xtextDocument.replace((_offset_1).intValue(), (_length_1).intValue(), _templateID);
+      final IFile file = xtextDocument.<IFile>getAdapter(IFile.class);
+      final IProject project = file.getProject();
+      final TemplateIndexHelper helper = new TemplateIndexHelper();
+      ArrayList<TemplateIndexHelper.TemplateCoordinate> _newArrayList = CollectionLiterals.<TemplateIndexHelper.TemplateCoordinate>newArrayList(coordinate);
+      helper.downloadByCoordinate(project, _newArrayList);
+      helper.dispose();
     };
     acceptor.accept(issue, "Download template", "Download the template from the repository.", "index.gif", _function);
   }

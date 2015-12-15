@@ -73,28 +73,22 @@ public class MobaGenerator extends AbstractGenerator {
     }
     final List<String> generatorIds = CollectionLiterals.<String>newArrayList();
     EList<MobaModelFeature> _features = model.getFeatures();
-    final Function1<MobaModelFeature, Boolean> _function = new Function1<MobaModelFeature, Boolean>() {
-      @Override
-      public Boolean apply(final MobaModelFeature it) {
-        return Boolean.valueOf((it instanceof MobaApplication));
-      }
+    final Function1<MobaModelFeature, Boolean> _function = (MobaModelFeature it) -> {
+      return Boolean.valueOf((it instanceof MobaApplication));
     };
     Iterable<MobaModelFeature> _filter = IterableExtensions.<MobaModelFeature>filter(_features, _function);
-    final Consumer<MobaModelFeature> _function_1 = new Consumer<MobaModelFeature>() {
-      @Override
-      public void accept(final MobaModelFeature it) {
-        final MobaApplication app = ((MobaApplication) it);
-        List<String> _xifexpression = null;
-        org.mobadsl.semantic.model.moba.MobaGenerator _activeGenerator = app.getActiveGenerator();
-        boolean _notEquals = (!Objects.equal(_activeGenerator, null));
-        if (_notEquals) {
-          org.mobadsl.semantic.model.moba.MobaGenerator _activeGenerator_1 = app.getActiveGenerator();
-          _xifexpression = _activeGenerator_1.getAllGeneratorVersionedIds();
-        } else {
-          _xifexpression = Collections.<String>emptyList();
-        }
-        Iterables.<String>addAll(generatorIds, _xifexpression);
+    final Consumer<MobaModelFeature> _function_1 = (MobaModelFeature it) -> {
+      final MobaApplication app = ((MobaApplication) it);
+      List<String> _xifexpression = null;
+      org.mobadsl.semantic.model.moba.MobaGenerator _activeGenerator = app.getActiveGenerator();
+      boolean _notEquals = (!Objects.equal(_activeGenerator, null));
+      if (_notEquals) {
+        org.mobadsl.semantic.model.moba.MobaGenerator _activeGenerator_1 = app.getActiveGenerator();
+        _xifexpression = _activeGenerator_1.getAllGeneratorVersionedIds();
+      } else {
+        _xifexpression = Collections.<String>emptyList();
       }
+      Iterables.<String>addAll(generatorIds, _xifexpression);
     };
     _filter.forEach(_function_1);
     return generatorIds;
