@@ -40,6 +40,14 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+	<repositories>
+		<repository>
+			<id>Mars</id>
+			<url>http://download.eclipse.org/releases/mars</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+
 
 
 	<build>
@@ -88,6 +96,7 @@
 			<properties>
 				<xtext-p2>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/milestones/</xtext-p2>
 				<ecview-p2>http://lun.lunifera.org/downloads/p2/ecview/nightly/</ecview-p2>
+				<lunifera.build.eclipse.platform.p2.url>http://download.eclipse.org/releases/mars</lunifera.build.eclipse.platform.p2.url>
 				<lunifera.deployment.p2.origin.dir>${project.build.directory}/repository</lunifera.deployment.p2.origin.dir>
 				<associate.p2>${lunifera.build.eclipse.platform.p2.url},${orbit-site},${ecview-p2},${xtext-p2}</associate.p2>
 			</properties>
