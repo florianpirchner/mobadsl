@@ -116,6 +116,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     name=ID '{' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     operation=MobaRESTMethods (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     parameters+=MobaRestParameter '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
@@ -174,6 +175,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
@@ -217,6 +219,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     errorDto=MobaRESTPayloadDefinition ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
+	 *     friends+=MobaFriend ')' '{' ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     headers+=MobaRestHeader (ambiguity) headers+=MobaRestHeader
 	 *     name=ID '{' ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     operation=MobaRESTMethods ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
@@ -235,6 +238,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     errorDto=MobaRESTPayloadDefinition ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
+	 *     friends+=MobaFriend ')' '{' ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
 	 *     name=ID '{' ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
 	 *     operation=MobaRESTMethods ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
 	 *     parameters+=MobaRestParameter (ambiguity) parameters+=MobaRestParameter
@@ -257,6 +261,11 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
+	 *     friends+=MobaFriend ')' '{' (ambiguity) '}' (rule end)
 	 *     name=ID '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     name=ID '{' (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition

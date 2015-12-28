@@ -27,7 +27,7 @@ public class MobaParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "MobaApplication";
+		return "MobaModel";
 	}
 
 	public MobaGrammarAccess getGrammarAccess() {

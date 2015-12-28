@@ -3,8 +3,8 @@
  */
 package org.mobadsl.grammar.serializer;
 
+import com.google.inject.Inject;
 import java.util.Set;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtext.Action;
@@ -46,11 +46,13 @@ import org.mobadsl.semantic.model.moba.MobaMaxConstraint;
 import org.mobadsl.semantic.model.moba.MobaMaxLengthConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinConstraint;
 import org.mobadsl.semantic.model.moba.MobaMinLengthConstraint;
+import org.mobadsl.semantic.model.moba.MobaModel;
 import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaNFCModule;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaPushModule;
 import org.mobadsl.semantic.model.moba.MobaPushTrigger;
@@ -63,12 +65,11 @@ import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
 import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
+import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
-
-import com.google.inject.Inject;
 
 @SuppressWarnings("all")
 public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -91,10 +92,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaAppUpdateTrigger(context, (MobaAppUpdateTrigger) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_APPLICATION:
-				sequence_MobaApplication_MobaPropertiesAble(context, (MobaApplication) semanticObject); 
+				sequence_MobaApplication_MobaFriendsAble(context, (MobaApplication) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_AUTHORIZATION:
-				sequence_MobaAuthorization_MobaPropertiesAble(context, (MobaAuthorization) semanticObject); 
+				sequence_MobaAuthorization_MobaFriendsAble(context, (MobaAuthorization) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_BLUETOOTH_MODULE:
 				sequence_MobaBluetoothModule(context, (MobaBluetoothModule) semanticObject); 
@@ -103,13 +104,13 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaCache(context, (MobaCache) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_CONSTANT:
-				sequence_MobaConstant_MobaPropertiesAble(context, (MobaConstant) semanticObject); 
+				sequence_MobaConstant_MobaFriendsAble(context, (MobaConstant) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_CONSTANT_VALUE:
 				sequence_MobaConstantValue(context, (MobaConstantValue) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_DATA_TYPE:
-				sequence_MobaDataType_MobaPropertiesAble(context, (MobaDataType) semanticObject); 
+				sequence_MobaDataType_MobaFriendsAble(context, (MobaDataType) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_DEVICE_STARTUP_TRIGGER:
 				sequence_MobaDeviceStartupTrigger(context, (MobaDeviceStartupTrigger) semanticObject); 
@@ -118,28 +119,28 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaDigitsConstraint(context, (MobaDigitsConstraint) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_DTO:
-				sequence_MobaDto_MobaPropertiesAble(context, (MobaDto) semanticObject); 
+				sequence_MobaDto_MobaFriendsAble(context, (MobaDto) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_DTO_ATTRIBUTE:
-				sequence_MobaDtoAttribute_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaDtoAttribute) semanticObject); 
+				sequence_MobaDtoAttribute_MobaFriendsAble_MobaMultiplicityAble(context, (MobaDtoAttribute) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_DTO_REFERENCE:
-				sequence_MobaDtoReference_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaDtoReference) semanticObject); 
+				sequence_MobaDtoReference_MobaFriendsAble_MobaMultiplicityAble(context, (MobaDtoReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_EMAIL_TRIGGER:
 				sequence_MobaEmailTrigger(context, (MobaEmailTrigger) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_ENTITY:
-				sequence_MobaEntity_MobaPropertiesAble(context, (MobaEntity) semanticObject); 
+				sequence_MobaEntity_MobaFriendsAble(context, (MobaEntity) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE:
-				sequence_MobaEntityAttribute_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaEntityAttribute) semanticObject); 
+				sequence_MobaEntityAttribute_MobaFriendsAble_MobaMultiplicityAble(context, (MobaEntityAttribute) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_ENTITY_INDEX:
 				sequence_MobaEntityIndex(context, (MobaEntityIndex) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_ENTITY_REFERENCE:
-				sequence_MobaEntityReference_MobaMultiplicityAble_MobaPropertiesAble(context, (MobaEntityReference) semanticObject); 
+				sequence_MobaEntityReference_MobaFriendsAble_MobaMultiplicityAble(context, (MobaEntityReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_ENUM:
 				sequence_MobaEnum(context, (MobaEnum) semanticObject); 
@@ -177,6 +178,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case MobaPackage.MOBA_MIN_LENGTH_CONSTRAINT:
 				sequence_MobaMinLengthConstraint(context, (MobaMinLengthConstraint) semanticObject); 
 				return; 
+			case MobaPackage.MOBA_MODEL:
+				sequence_MobaModel(context, (MobaModel) semanticObject); 
+				return; 
 			case MobaPackage.MOBA_MULIPLICITY:
 				sequence_MobaMuliplicity(context, (MobaMuliplicity) semanticObject); 
 				return; 
@@ -189,6 +193,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case MobaPackage.MOBA_NULL_CONSTRAINT:
 				sequence_MobaNullConstraint(context, (MobaNullConstraint) semanticObject); 
 				return; 
+			case MobaPackage.MOBA_PROJECT:
+				sequence_MobaFriendsAble_MobaProject(context, (MobaProject) semanticObject); 
+				return; 
 			case MobaPackage.MOBA_PROPERTY:
 				sequence_MobaProperty(context, (MobaProperty) semanticObject); 
 				return; 
@@ -199,10 +206,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaPushTrigger(context, (MobaPushTrigger) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_QUEUE:
-				sequence_MobaPropertiesAble_MobaQueue(context, (MobaQueue) semanticObject); 
+				sequence_MobaFriendsAble_MobaQueue(context, (MobaQueue) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_QUEUE_REFERENCE:
-				sequence_MobaMultiplicityAble_MobaPropertiesAble_MobaQueueReference(context, (MobaQueueReference) semanticObject); 
+				sequence_MobaFriendsAble_MobaMultiplicityAble_MobaQueueReference(context, (MobaQueueReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_ATTRIBUTE:
 				if (rule == grammarAccess.getMobaRestHeaderRule()) {
@@ -215,16 +222,16 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case MobaPackage.MOBA_REST_CRUD:
-				sequence_MobaPropertiesAble_MobaRESTCrud(context, (MobaRESTCrud) semanticObject); 
+				sequence_MobaFriendsAble_MobaRESTCrud(context, (MobaRESTCrud) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE:
-				sequence_MobaPropertiesAble_MobaRESTCustomService(context, (MobaRESTCustomService) semanticObject); 
+				sequence_MobaFriendsAble_MobaRESTCustomService(context, (MobaRESTCustomService) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_PAYLOAD_DEFINITION:
 				sequence_MobaRESTPayloadDefinition(context, (MobaRESTPayloadDefinition) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_WORKFLOW:
-				sequence_MobaPropertiesAble_MobaRESTWorkflow(context, (MobaRESTWorkflow) semanticObject); 
+				sequence_MobaFriendsAble_MobaRESTWorkflow(context, (MobaRESTWorkflow) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REGEXP_CONSTRAINT:
 				sequence_MobaRegexpConstraint(context, (MobaRegexpConstraint) semanticObject); 
@@ -232,17 +239,20 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case MobaPackage.MOBA_SMS_TRIGGER:
 				sequence_MobaSMSTrigger(context, (MobaSMSTrigger) semanticObject); 
 				return; 
+			case MobaPackage.MOBA_SERVER:
+				sequence_MobaFriendsAble_MobaServer(context, (MobaServer) semanticObject); 
+				return; 
 			case MobaPackage.MOBA_SETTINGS:
-				sequence_MobaPropertiesAble_MobaSettings(context, (MobaSettings) semanticObject); 
+				sequence_MobaFriendsAble_MobaSettings(context, (MobaSettings) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE:
-				sequence_MobaMultiplicityAble_MobaPropertiesAble_MobaSettingsAttribute(context, (MobaSettingsAttribute) semanticObject); 
+				sequence_MobaFriendsAble_MobaMultiplicityAble_MobaSettingsAttribute(context, (MobaSettingsAttribute) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_TEMPLATE:
 				sequence_MobaTemplate(context, (MobaTemplate) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE:
-				sequence_MobaPropertiesAble_MobaTransportSerializationType(context, (MobaTransportSerializationType) semanticObject); 
+				sequence_MobaFriendsAble_MobaTransportSerializationType(context, (MobaTransportSerializationType) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -271,9 +281,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     MobaApplicationFeature returns MobaAppUpdatelTrigger
-	 *     MobaTrigger returns MobaAppUpdatelTrigger
-	 *     MobaAppUpdatelTrigger returns MobaAppUpdatelTrigger
+	 *     MobaApplicationFeature returns MobaAppUpdateTrigger
+	 *     MobaTrigger returns MobaAppUpdateTrigger
+	 *     MobaAppUpdateTrigger returns MobaAppUpdateTrigger
 	 *
 	 * Constraint:
 	 *     name=ID
@@ -284,19 +294,25 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_TRIGGER__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaAppUpdatelTriggerAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMobaAppUpdateTriggerAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     MobaModelFeature returns MobaApplication
 	 *     MobaApplication returns MobaApplication
 	 *
 	 * Constraint:
-	 *     (name=ID version=VERSION (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaApplicationFeature*)
+	 *     (
+	 *         name=ID 
+	 *         version=VERSION 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         features+=MobaApplicationFeature*
+	 *     )
 	 */
-	protected void sequence_MobaApplication_MobaPropertiesAble(ISerializationContext context, MobaApplication semanticObject) {
+	protected void sequence_MobaApplication_MobaFriendsAble(ISerializationContext context, MobaApplication semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -307,9 +323,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaAuthorization returns MobaAuthorization
 	 *
 	 * Constraint:
-	 *     (name=CONSTANT (properties+=MobaProperty properties+=MobaProperty*)?)
+	 *     (name=CONSTANT ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
 	 */
-	protected void sequence_MobaAuthorization_MobaPropertiesAble(ISerializationContext context, MobaAuthorization semanticObject) {
+	protected void sequence_MobaAuthorization_MobaFriendsAble(ISerializationContext context, MobaAuthorization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -321,15 +337,18 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaBluetoothModule returns MobaBluetoothModule
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID type=MobaBlueToothModuleType)
 	 */
 	protected void sequence_MobaBluetoothModule(ISerializationContext context, MobaBluetoothModule semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME));
+			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_BLUETOOTH_MODULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_BLUETOOTH_MODULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMobaBluetoothModuleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMobaBluetoothModuleAccess().getTypeMobaBlueToothModuleTypeEnumRuleCall_4_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	
@@ -351,7 +370,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaConstantValue returns MobaConstantValue
 	 *
 	 * Constraint:
-	 *     ((valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]) tail=MobaConstantValue?)
+	 *     (
+	 *         (valueString=STRING | valueInt=INT | valueDouble=DOUBLE | (valueConst=[MobaConstant|CONSTANT] valueConstFunctions+=MobaConstantValueFunction*)) 
+	 *         tail=MobaConstantValue?
+	 *     )
 	 */
 	protected void sequence_MobaConstantValue(ISerializationContext context, MobaConstantValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -364,9 +386,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaConstant returns MobaConstant
 	 *
 	 * Constraint:
-	 *     (name=CONSTANT valueAST=MobaConstantValue (properties+=MobaProperty properties+=MobaProperty*)?)
+	 *     (name=CONSTANT valueAST=MobaConstantValue ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
 	 */
-	protected void sequence_MobaConstant_MobaPropertiesAble(ISerializationContext context, MobaConstant semanticObject) {
+	protected void sequence_MobaConstant_MobaFriendsAble(ISerializationContext context, MobaConstant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -377,9 +399,14 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaDataType returns MobaDataType
 	 *
 	 * Constraint:
-	 *     (name=ID superType=[MobaDataType|ID]? (properties+=MobaProperty properties+=MobaProperty*)?)
+	 *     (
+	 *         name=ID 
+	 *         superType=[MobaDataType|ID]? 
+	 *         (properties+=MobaProperty properties+=MobaProperty*)? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*)? (properties+=MobaProperty properties+=MobaProperty*)?)*
+	 *     )
 	 */
-	protected void sequence_MobaDataType_MobaPropertiesAble(ISerializationContext context, MobaDataType semanticObject) {
+	protected void sequence_MobaDataType_MobaFriendsAble(ISerializationContext context, MobaDataType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -431,10 +458,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         type=[MobaDataType|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
-	protected void sequence_MobaDtoAttribute_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaDtoAttribute semanticObject) {
+	protected void sequence_MobaDtoAttribute_MobaFriendsAble_MobaMultiplicityAble(ISerializationContext context, MobaDtoAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -450,10 +477,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         type=[MobaDto|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
-	protected void sequence_MobaDtoReference_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaDtoReference semanticObject) {
+	protected void sequence_MobaDtoReference_MobaFriendsAble_MobaMultiplicityAble(ISerializationContext context, MobaDtoReference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -465,9 +492,14 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaDto returns MobaDto
 	 *
 	 * Constraint:
-	 *     (name=ID superType=[MobaDto|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaDtoFeature*)
+	 *     (
+	 *         name=ID 
+	 *         superType=[MobaDto|ID]? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         features+=MobaDtoFeature*
+	 *     )
 	 */
-	protected void sequence_MobaDto_MobaPropertiesAble(ISerializationContext context, MobaDto semanticObject) {
+	protected void sequence_MobaDto_MobaFriendsAble(ISerializationContext context, MobaDto semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -506,10 +538,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         type=[MobaDataType|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
-	protected void sequence_MobaEntityAttribute_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaEntityAttribute semanticObject) {
+	protected void sequence_MobaEntityAttribute_MobaFriendsAble_MobaMultiplicityAble(ISerializationContext context, MobaEntityAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -537,10 +569,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         type=[MobaEntity|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
-	protected void sequence_MobaEntityReference_MobaMultiplicityAble_MobaPropertiesAble(ISerializationContext context, MobaEntityReference semanticObject) {
+	protected void sequence_MobaEntityReference_MobaFriendsAble_MobaMultiplicityAble(ISerializationContext context, MobaEntityReference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -555,12 +587,12 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         (superType=[MobaEntity|ID] | cache=MobaCache)* 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaEntityFeature* 
 	 *         index=MobaEntityIndex?
 	 *     )
 	 */
-	protected void sequence_MobaEntity_MobaPropertiesAble(ISerializationContext context, MobaEntity semanticObject) {
+	protected void sequence_MobaEntity_MobaFriendsAble(ISerializationContext context, MobaEntity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -570,22 +602,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaEnumLiteral returns MobaEnumLiteral
 	 *
 	 * Constraint:
-	 *     (name=CONSTANT literal=STRING value=INT)
+	 *     (name=CONSTANT literal=STRING value=INT default?='default'?)
 	 */
 	protected void sequence_MobaEnumLiteral(ISerializationContext context, MobaEnumLiteral semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_ENUM_LITERAL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_ENUM_LITERAL__NAME));
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_ENUM_LITERAL__LITERAL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_ENUM_LITERAL__LITERAL));
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_ENUM_LITERAL__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_ENUM_LITERAL__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaEnumLiteralAccess().getNameCONSTANTTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMobaEnumLiteralAccess().getLiteralSTRINGTerminalRuleCall_4_0(), semanticObject.getLiteral());
-		feeder.accept(grammarAccess.getMobaEnumLiteralAccess().getValueINTTerminalRuleCall_6_0(), semanticObject.getValue());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -594,7 +614,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaEnum returns MobaEnum
 	 *
 	 * Constraint:
-	 *     literals+=MobaEnumLiteral+
+	 *     literals+=MobaEnumLiteral*
 	 */
 	protected void sequence_MobaEnum(ISerializationContext context, MobaEnum semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -609,6 +629,199 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (valueString=STRING | valueConst=[MobaConstant|CONSTANT])
 	 */
 	protected void sequence_MobaFriend(ISerializationContext context, MobaFriend semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaQueueFeature returns MobaQueueReference
+	 *     MobaQueueReference returns MobaQueueReference
+	 *
+	 * Constraint:
+	 *     (
+	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
+	 *         type=[MobaData|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaMultiplicityAble_MobaQueueReference(ISerializationContext context, MobaQueueReference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaSettingsFeature returns MobaSettingsAttribute
+	 *     MobaSettingsAttribute returns MobaSettingsAttribute
+	 *
+	 * Constraint:
+	 *     (
+	 *         (
+	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
+	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
+	 *         )+ 
+	 *         type=[MobaDataType|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaMultiplicityAble_MobaSettingsAttribute(ISerializationContext context, MobaSettingsAttribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaModelFeature returns MobaProject
+	 *     MobaProject returns MobaProject
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         version=VERSION 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         (uiApplication=[MobaApplication|ID_VERSION] | backgroundApplication=[MobaApplication|ID_VERSION])*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaProject(ISerializationContext context, MobaProject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaQueue
+	 *     MobaData returns MobaQueue
+	 *     MobaQueue returns MobaQueue
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         superType=[MobaQueue|ID]? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         features+=MobaQueueFeature*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaQueue(ISerializationContext context, MobaQueue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaRESTCrud
+	 *     MobaREST returns MobaRESTCrud
+	 *     MobaRESTCrud returns MobaRESTCrud
+	 *
+	 * Constraint:
+	 *     (name=ID superType=[MobaRESTCrud|ID]? ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
+	 */
+	protected void sequence_MobaFriendsAble_MobaRESTCrud(ISerializationContext context, MobaRESTCrud semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaRESTCustomService
+	 *     MobaREST returns MobaRESTCustomService
+	 *     MobaRESTCustomService returns MobaRESTCustomService
+	 *
+	 * Constraint:
+	 *     (
+	 *         bigData?='bigData'? 
+	 *         name=ID 
+	 *         superType=[MobaRESTCustomService|ID]? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         (
+	 *             headers+=MobaRestHeader | 
+	 *             parameters+=MobaRestParameter | 
+	 *             requestDto=MobaRESTPayloadDefinition | 
+	 *             responseDto=MobaRESTPayloadDefinition | 
+	 *             errorDto=MobaRESTPayloadDefinition | 
+	 *             operation=MobaRESTMethods
+	 *         )*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaRESTCustomService(ISerializationContext context, MobaRESTCustomService semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaRESTWorkflow
+	 *     MobaREST returns MobaRESTWorkflow
+	 *     MobaRESTWorkflow returns MobaRESTWorkflow
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         superType=[MobaRESTWorkflow|ID]? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         services+=[MobaREST|ID]*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaRESTWorkflow(ISerializationContext context, MobaRESTWorkflow semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaServer
+	 *     MobaServer returns MobaServer
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         (urlString=STRING | urlConst=[MobaConstant|CONSTANT]) 
+	 *         superType=[MobaServer|ID]? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         (authorization+=[MobaAuthorization|CONSTANT] authorization+=[MobaAuthorization|CONSTANT]*)? 
+	 *         (
+	 *             (services+=[MobaREST|ID] services+=[MobaREST|ID]*)? 
+	 *             (authorization+=[MobaAuthorization|CONSTANT] authorization+=[MobaAuthorization|CONSTANT]*)?
+	 *         )*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaServer(ISerializationContext context, MobaServer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaSettings
+	 *     MobaSettings returns MobaSettings
+	 *
+	 * Constraint:
+	 *     (
+	 *         active?='active'? 
+	 *         name=ID 
+	 *         superType=[MobaSettings|ID]? 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         features+=MobaSettingsFeature*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaSettings(ISerializationContext context, MobaSettings semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaTransportSerializationType
+	 *     MobaTransportSerializationType returns MobaTransportSerializationType
+	 *
+	 * Constraint:
+	 *     (name=CONSTANT ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
+	 */
+	protected void sequence_MobaFriendsAble_MobaTransportSerializationType(ISerializationContext context, MobaTransportSerializationType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -687,18 +900,18 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaGeofenceTrigger returns MobaGeofenceTrigger
 	 *
 	 * Constraint:
-	 *     (eventType=MobaGeofenceEvent name=ID)
+	 *     (name=ID eventType=MobaGeofenceEvent)
 	 */
 	protected void sequence_MobaGeofenceTrigger(ISerializationContext context, MobaGeofenceTrigger semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_GEOFENCE_TRIGGER__EVENT_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GEOFENCE_TRIGGER__EVENT_TYPE));
 			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_TRIGGER__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_TRIGGER__NAME));
+			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_GEOFENCE_TRIGGER__EVENT_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GEOFENCE_TRIGGER__EVENT_TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeMobaGeofenceEventEnumRuleCall_1_0(), semanticObject.getEventType());
-		feeder.accept(grammarAccess.getMobaGeofenceTriggerAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMobaGeofenceTriggerAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMobaGeofenceTriggerAccess().getEventTypeMobaGeofenceEventEnumRuleCall_4_0(), semanticObject.getEventType());
 		feeder.finish();
 	}
 	
@@ -757,6 +970,18 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     MobaModel returns MobaModel
+	 *
+	 * Constraint:
+	 *     features+=MobaModelFeature+
+	 */
+	protected void sequence_MobaModel(ISerializationContext context, MobaModel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MobaMuliplicity returns MobaMuliplicity
 	 *
 	 * Constraint:
@@ -769,61 +994,23 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     MobaQueueFeature returns MobaQueueReference
-	 *     MobaQueueReference returns MobaQueueReference
-	 *
-	 * Constraint:
-	 *     (
-	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
-	 *         type=[MobaData|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
-	 *     )
-	 */
-	protected void sequence_MobaMultiplicityAble_MobaPropertiesAble_MobaQueueReference(ISerializationContext context, MobaQueueReference semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaSettingsFeature returns MobaSettingsAttribute
-	 *     MobaSettingsAttribute returns MobaSettingsAttribute
-	 *
-	 * Constraint:
-	 *     (
-	 *         (
-	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
-	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
-	 *         )+ 
-	 *         type=[MobaDataType|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)?
-	 *     )
-	 */
-	protected void sequence_MobaMultiplicityAble_MobaPropertiesAble_MobaSettingsAttribute(ISerializationContext context, MobaSettingsAttribute semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     MobaApplicationFeature returns MobaNFCModule
 	 *     MobaExternalModule returns MobaNFCModule
 	 *     MobaNFCModule returns MobaNFCModule
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID type=MobaNFCModuleType)
 	 */
 	protected void sequence_MobaNFCModule(ISerializationContext context, MobaNFCModule semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME));
+			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_NFC_MODULE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_NFC_MODULE__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMobaNFCModuleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMobaNFCModuleAccess().getTypeMobaNFCModuleTypeEnumRuleCall_4_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	
@@ -850,101 +1037,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     {MobaNullConstraint}
 	 */
 	protected void sequence_MobaNullConstraint(ISerializationContext context, MobaNullConstraint semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaQueue
-	 *     MobaData returns MobaQueue
-	 *     MobaQueue returns MobaQueue
-	 *
-	 * Constraint:
-	 *     (name=ID superType=[MobaQueue|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaQueueFeature*)
-	 */
-	protected void sequence_MobaPropertiesAble_MobaQueue(ISerializationContext context, MobaQueue semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaRESTCrud
-	 *     MobaREST returns MobaRESTCrud
-	 *     MobaRESTCrud returns MobaRESTCrud
-	 *
-	 * Constraint:
-	 *     (name=ID superType=[MobaRESTCrud|ID]? (properties+=MobaProperty properties+=MobaProperty*)?)
-	 */
-	protected void sequence_MobaPropertiesAble_MobaRESTCrud(ISerializationContext context, MobaRESTCrud semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaRESTCustomService
-	 *     MobaREST returns MobaRESTCustomService
-	 *     MobaRESTCustomService returns MobaRESTCustomService
-	 *
-	 * Constraint:
-	 *     (
-	 *         bigData?='bigData'? 
-	 *         name=ID 
-	 *         superType=[MobaRESTCustomService|ID]? 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)? 
-	 *         (
-	 *             headers+=MobaRestHeader | 
-	 *             parameters+=MobaRestParameter | 
-	 *             requestDto=MobaRESTPayloadDefinition | 
-	 *             responseDto=MobaRESTPayloadDefinition | 
-	 *             errorDto=MobaRESTPayloadDefinition | 
-	 *             operation=MobaRESTMethods
-	 *         )*
-	 *     )
-	 */
-	protected void sequence_MobaPropertiesAble_MobaRESTCustomService(ISerializationContext context, MobaRESTCustomService semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaRESTWorkflow
-	 *     MobaREST returns MobaRESTWorkflow
-	 *     MobaRESTWorkflow returns MobaRESTWorkflow
-	 *
-	 * Constraint:
-	 *     (name=ID superType=[MobaRESTWorkflow|ID]? (properties+=MobaProperty properties+=MobaProperty*)? services+=[MobaREST|ID]*)
-	 */
-	protected void sequence_MobaPropertiesAble_MobaRESTWorkflow(ISerializationContext context, MobaRESTWorkflow semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaSettings
-	 *     MobaSettings returns MobaSettings
-	 *
-	 * Constraint:
-	 *     (active?='active'? name=ID superType=[MobaSettings|ID]? (properties+=MobaProperty properties+=MobaProperty*)? features+=MobaSettingsFeature*)
-	 */
-	protected void sequence_MobaPropertiesAble_MobaSettings(ISerializationContext context, MobaSettings semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaTransportSerializationType
-	 *     MobaTransportSerializationType returns MobaTransportSerializationType
-	 *
-	 * Constraint:
-	 *     (name=CONSTANT (properties+=MobaProperty properties+=MobaProperty*)?)
-	 */
-	protected void sequence_MobaPropertiesAble_MobaTransportSerializationType(ISerializationContext context, MobaTransportSerializationType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
