@@ -4,18 +4,16 @@
 package org.mobadsl.grammar.scoping
 
 import com.google.inject.Inject
-import com.google.inject.name.Named
 import java.util.List
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.IEObjectDescription
 import org.eclipse.xtext.resource.IResourceDescriptions
-import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider
 import org.eclipse.xtext.resource.impl.SimpleResourceDescriptionsBasedContainerManager
 import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
-import org.eclipse.xtext.scoping.impl.ResourceSetGlobalScopeProvider
+import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider
 import org.eclipse.xtext.scoping.impl.SimpleScope
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaPackage
@@ -29,8 +27,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil
  */
 class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 
-	@Inject SimpleResourceDescriptionsBasedContainerManager containerManager
-	@Inject @Named(ResourceDescriptionsProvider.PERSISTED_DESCRIPTIONS) IResourceDescriptions resourceDescriptions
+	@Inject DefaultGlobalScopeProvider globalScopeProvider
 
 	def IScope scope_MobaConstant(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allConstants);
@@ -99,16 +96,7 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 
 	def IScope scope_MobaApplication(MobaApplication ctx, EReference ref) {
-
-		val ctxDesciption = resourceDescriptions.getResourceDescription(ctx.eResource.URI)
-		val containers = containerManager.getVisibleContainers(ctxDesciption, resourceDescriptions)
-
-		val List<IEObjectDescription> result = newArrayList()
-		for (container : containers) {
-			val applications = container.getExportedObjectsByType(MobaPackage.Literals.MOBA_APPLICATION)
-			result.addAll(applications)
-		}
-		return new SimpleScope(result)
+		return globalScopeProvider.getScope(ctx.eResource, ref)
 	}
 
 }

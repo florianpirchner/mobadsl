@@ -4,25 +4,15 @@
 package org.mobadsl.grammar.scoping;
 
 import com.google.common.base.Function;
-import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
-import com.google.inject.name.Named;
 import java.util.List;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.naming.QualifiedName;
-import org.eclipse.xtext.resource.IContainer;
-import org.eclipse.xtext.resource.IEObjectDescription;
-import org.eclipse.xtext.resource.IResourceDescription;
-import org.eclipse.xtext.resource.IResourceDescriptions;
-import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
-import org.eclipse.xtext.resource.impl.SimpleResourceDescriptionsBasedContainerManager;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-import org.eclipse.xtext.scoping.impl.SimpleScope;
-import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaConstant;
@@ -32,7 +22,6 @@ import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
-import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
@@ -52,11 +41,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
 @SuppressWarnings("all")
 public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   @Inject
-  private SimpleResourceDescriptionsBasedContainerManager containerManager;
-  
-  @Inject
-  @Named(ResourceDescriptionsProvider.PERSISTED_DESCRIPTIONS)
-  private IResourceDescriptions resourceDescriptions;
+  private DefaultGlobalScopeProvider globalScopeProvider;
   
   public IScope scope_MobaConstant(final MobaApplication ctx, final EReference ref) {
     List<MobaConstant> _allConstants = ctx.getAllConstants();
@@ -146,16 +131,6 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   
   public IScope scope_MobaApplication(final MobaApplication ctx, final EReference ref) {
     Resource _eResource = ctx.eResource();
-    URI _uRI = _eResource.getURI();
-    final IResourceDescription ctxDesciption = this.resourceDescriptions.getResourceDescription(_uRI);
-    final List<IContainer> containers = this.containerManager.getVisibleContainers(ctxDesciption, this.resourceDescriptions);
-    final List<IEObjectDescription> result = CollectionLiterals.<IEObjectDescription>newArrayList();
-    for (final IContainer container : containers) {
-      {
-        final Iterable<IEObjectDescription> applications = container.getExportedObjectsByType(MobaPackage.Literals.MOBA_APPLICATION);
-        Iterables.<IEObjectDescription>addAll(result, applications);
-      }
-    }
-    return new SimpleScope(result);
+    return this.globalScopeProvider.getScope(_eResource, ref);
   }
 }
