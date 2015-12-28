@@ -29,8 +29,8 @@ public class CommonGenerator implements IGeneratorDelegate {
 	@Override
 	public void generate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context, PropertiesMap properties) {
 		MobaModel model = (MobaModel) input.getContents().get(0);
-		
-		fsa.generateFile("Foo", "mobile", "Heyho");
+
+		new CommonGeneratorDelegate().generate(model, fsa, context, properties);
 	}
 
 	@Override
