@@ -24,9 +24,7 @@
 	<!-- <version>0.12.5-SNAPSHOT</version> -->
 	<!-- </parent> -->
 
-	<groupId>org.mobadsl</groupId>
 	<artifactId>org.mobadsl.p2</artifactId>
-	<version>0.8.0-SNAPSHOT</version>
 	<packaging>eclipse-repository</packaging>
 
 	<properties>
