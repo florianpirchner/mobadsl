@@ -9,6 +9,7 @@ import org.mobadsl.semantic.model.moba.MobaConstant
 import org.mobadsl.semantic.model.moba.MobaModel
 import org.mobadsl.semantic.model.moba.MobaProject
 import org.mobadsl.semantic.model.moba.MobaServer
+import org.mobadsl.semantic.model.moba.MobaApplicationFeature
 
 /**
  * The generator iterates the given MobaModel and generates the required code.<br>
@@ -39,6 +40,9 @@ class CommonGeneratorDelegate {
 	}
 
 	def dispatch generate(MobaProject project) {
+	}
+	
+	def dispatch generateFeature(MobaApplicationFeature auth) {
 	}
 
 	def dispatch generateFeature(MobaAuthorization auth) {

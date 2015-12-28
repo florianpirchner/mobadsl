@@ -50,6 +50,10 @@ public class CommonGeneratorDelegate {
     return null;
   }
   
+  protected Object _generateFeature(final MobaApplicationFeature auth) {
+    return null;
+  }
+  
   protected Object _generateFeature(final MobaAuthorization auth) {
     return null;
   }
@@ -80,6 +84,8 @@ public class CommonGeneratorDelegate {
       return _generateFeature((MobaConstant)auth);
     } else if (auth instanceof MobaServer) {
       return _generateFeature((MobaServer)auth);
+    } else if (auth != null) {
+      return _generateFeature(auth);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(auth).toString());

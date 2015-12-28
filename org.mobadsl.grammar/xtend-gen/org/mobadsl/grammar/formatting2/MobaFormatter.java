@@ -6,6 +6,7 @@ package org.mobadsl.grammar.formatting2;
 import com.google.inject.Inject;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.formatting2.AbstractFormatter2;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.resource.XtextResource;
@@ -97,6 +98,9 @@ public class MobaFormatter extends AbstractFormatter2 {
       return;
     } else if (mobaPayload instanceof MobaPropertiesAble) {
       _format((MobaPropertiesAble)mobaPayload, document);
+      return;
+    } else if (mobaPayload instanceof EObject) {
+      _format((EObject)mobaPayload, document);
       return;
     } else if (mobaPayload == null) {
       _format((Void)null, document);
