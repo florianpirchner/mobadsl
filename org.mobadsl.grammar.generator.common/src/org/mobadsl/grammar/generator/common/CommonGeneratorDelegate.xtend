@@ -30,7 +30,7 @@ class CommonGeneratorDelegate {
 			feature.generate
 		}
 	}
-
+ 
 	def dispatch generate(MobaApplication app) {
 		// iterates all features required for generation
 		app.genFeatures.forEach [
