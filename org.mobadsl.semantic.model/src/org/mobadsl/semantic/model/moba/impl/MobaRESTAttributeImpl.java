@@ -29,6 +29,8 @@ import org.mobadsl.semantic.model.moba.ValueType;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValueInt <em>Value Int</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getFormatString <em>Format String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getFormatConst <em>Format Const</em>}</li>
  * </ul>
  *
  * @generated
@@ -154,6 +156,36 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected static final String VALUE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormatString()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FORMAT_STRING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormatString()
+	 * @generated
+	 * @ordered
+	 */
+	protected String formatString = FORMAT_STRING_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFormatConst() <em>Format Const</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormatConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaConstant formatConst;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -378,6 +410,65 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFormatString() {
+		return formatString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatString(String newFormatString) {
+		String oldFormatString = formatString;
+		formatString = newFormatString;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING, oldFormatString, formatString));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant getFormatConst() {
+		if (formatConst != null && formatConst.eIsProxy()) {
+			InternalEObject oldFormatConst = (InternalEObject)formatConst;
+			formatConst = (MobaConstant)eResolveProxy(oldFormatConst);
+			if (formatConst != oldFormatConst) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_CONST, oldFormatConst, formatConst));
+			}
+		}
+		return formatConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant basicGetFormatConst() {
+		return formatConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatConst(MobaConstant newFormatConst) {
+		MobaConstant oldFormatConst = formatConst;
+		formatConst = newFormatConst;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_CONST, oldFormatConst, formatConst));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -405,6 +496,11 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return getName();
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE:
 				return getValue();
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
+				return getFormatString();
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_CONST:
+				if (resolve) return getFormatConst();
+				return basicGetFormatConst();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -436,6 +532,12 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return;
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_INT:
 				setValueInt((Integer)newValue);
+				return;
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
+				setFormatString((String)newValue);
+				return;
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_CONST:
+				setFormatConst((MobaConstant)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -469,6 +571,12 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_INT:
 				setValueInt(VALUE_INT_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
+				setFormatString(FORMAT_STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_CONST:
+				setFormatConst((MobaConstant)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -498,6 +606,10 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE:
 				return VALUE_EDEFAULT == null ? getValue() != null : !VALUE_EDEFAULT.equals(getValue());
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
+				return FORMAT_STRING_EDEFAULT == null ? formatString != null : !FORMAT_STRING_EDEFAULT.equals(formatString);
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_CONST:
+				return formatConst != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -519,6 +631,8 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 		result.append(valueDouble);
 		result.append(", valueInt: ");
 		result.append(valueInt);
+		result.append(", formatString: ");
+		result.append(formatString);
 		result.append(')');
 		return result.toString();
 	}
@@ -534,6 +648,23 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 		} else {
 			return ValueType.STRING;
 		}
+	}
+	
+	@Override
+	public String getFormat() {
+		if (getFormatConst() != null) {
+			return getFormatConst().getValue();
+		}
+
+		if (getFormatString() != null && !getFormatString().equals("")) {
+			return getFormatString();
+		}
+
+		if (getType() != null && getType().isDate()) {
+			return getType().getDateFormat();
+		}
+
+		return null;
 	}
 
 } // MobaRESTAttributeImpl

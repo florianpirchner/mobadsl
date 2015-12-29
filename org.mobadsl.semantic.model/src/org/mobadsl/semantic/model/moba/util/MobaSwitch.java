@@ -449,6 +449,17 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_ENTITY_EMBEDDABLE: {
+				MobaEntityEmbeddable mobaEntityEmbeddable = (MobaEntityEmbeddable)theEObject;
+				T result = caseMobaEntityEmbeddable(mobaEntityEmbeddable);
+				if (result == null) result = caseMobaEntityFeature(mobaEntityEmbeddable);
+				if (result == null) result = caseMobaMultiplicityAble(mobaEntityEmbeddable);
+				if (result == null) result = caseMobaFeature(mobaEntityEmbeddable);
+				if (result == null) result = caseMobaFriendsAble(mobaEntityEmbeddable);
+				if (result == null) result = caseMobaPropertiesAble(mobaEntityEmbeddable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_DTO_FEATURE: {
 				MobaDtoFeature mobaDtoFeature = (MobaDtoFeature)theEObject;
 				T result = caseMobaDtoFeature(mobaDtoFeature);
@@ -478,6 +489,17 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaFeature(mobaDtoReference);
 				if (result == null) result = caseMobaFriendsAble(mobaDtoReference);
 				if (result == null) result = caseMobaPropertiesAble(mobaDtoReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_DTO_EMBEDDABLE: {
+				MobaDtoEmbeddable mobaDtoEmbeddable = (MobaDtoEmbeddable)theEObject;
+				T result = caseMobaDtoEmbeddable(mobaDtoEmbeddable);
+				if (result == null) result = caseMobaDtoFeature(mobaDtoEmbeddable);
+				if (result == null) result = caseMobaMultiplicityAble(mobaDtoEmbeddable);
+				if (result == null) result = caseMobaFeature(mobaDtoEmbeddable);
+				if (result == null) result = caseMobaFriendsAble(mobaDtoEmbeddable);
+				if (result == null) result = caseMobaPropertiesAble(mobaDtoEmbeddable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1311,6 +1333,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Embeddable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Embeddable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaEntityEmbeddable(MobaEntityEmbeddable object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Dto Feature</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1352,6 +1389,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaDtoReference(MobaDtoReference object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dto Embeddable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dto Embeddable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaDtoEmbeddable(MobaDtoEmbeddable object) {
 		return null;
 	}
 

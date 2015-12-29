@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
-import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 import org.mobadsl.semantic.model.moba.RecursionException;
@@ -78,8 +78,8 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 
 	/**
 	 * The cached value of the '{@link #getSerializationType() <em>Serialization Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getSerializationType()
 	 * @generated
 	 * @ordered
@@ -169,8 +169,7 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaTransportSerializationType getSerializationType() {
@@ -186,8 +185,7 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaTransportSerializationType basicGetSerializationType() {
@@ -195,8 +193,7 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSerializationType(MobaTransportSerializationType newSerializationType) {
@@ -360,10 +357,6 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 		return MobaUtil.getAllFeatures(types, clazz, MobaPackage.Literals.MOBA_DTO__FEATURES);
 	}
 
-	protected <T extends EObject> List<T> collectGen(MobaEntity instance, Class<T> clazz) {
-		return MobaUtil.getGenFeatures(collectAll(this, clazz), MobaPackage.Literals.MOBA_FEATURE__NAME);
-	}
-
 	@Override
 	public List<MobaDto> getAllSuperTypes() throws RecursionException {
 		List<MobaDto> result = MobaUtil.getAllSuperTypes(this, MobaPackage.Literals.MOBA_DTO__SUPER_TYPE);
@@ -383,6 +376,21 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	@Override
 	public List<MobaDtoReference> getGenReferences() {
 		return MobaUtil.getGenFeatures(getAllReferences(), MobaPackage.Literals.MOBA_FEATURE__NAME);
+	}
+
+	@Override
+	public List<MobaDtoEmbeddable> getEmbeddables() {
+		return collect(MobaDtoEmbeddable.class);
+	}
+
+	@Override
+	public List<MobaDtoEmbeddable> getAllEmbeddables() {
+		return collectAll(this, MobaDtoEmbeddable.class);
+	}
+
+	@Override
+	public List<MobaDtoEmbeddable> getGenEmbeddables() {
+		return MobaUtil.getGenFeatures(getAllEmbeddables(), MobaPackage.Literals.MOBA_FEATURE__NAME);
 	}
 
 } // MobaPayloadImpl

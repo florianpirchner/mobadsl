@@ -183,11 +183,13 @@ MobaRESTWorkflow:
 	'}';
 
 MobaEntityFeature:
-	MobaEntityAttribute | MobaEntityReference;
+	MobaEntityAttribute | MobaEntityReference | MobaEntityEmbeddable;
 
 MobaEntityAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
+	(domainDescription?='domainDescription')? 
+	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')?
+	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
@@ -196,7 +198,9 @@ MobaSettingsFeature:
 
 MobaSettingsAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
+	(domainDescription?='domainDescription')? 
+	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')?
+	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
@@ -205,20 +209,33 @@ fragment MobaMultiplicityAble:
 
 MobaEntityReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity] MobaMultiplicityAble
+	name=ID ('opposite' opposite=[MobaEntityReference])?
+	MobaFriendsAble;
+	
+MobaEntityEmbeddable: 
+	'embed' (transient?='transient')? type=[MobaEntity] MobaMultiplicityAble
 	name=ID
 	MobaFriendsAble;
 
 MobaDtoFeature:
-	MobaDtoAttribute | MobaDtoReference;
+	MobaDtoAttribute | MobaDtoReference | MobaDtoEmbeddable;
 
 MobaDtoAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? & ('constraints' '(' constraints+=MobaConstraint (','
+	(domainDescription?='domainDescription')? 
+	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')? 
+	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')? & ('alias' '(' alias=ID ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
 MobaDtoReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto]
+	MobaMultiplicityAble
+	name=ID ('opposite' opposite=[MobaDtoReference])?
+	MobaFriendsAble;
+	
+MobaDtoEmbeddable:
+	'embed' (transient?='transient')? type=[MobaDto]
 	MobaMultiplicityAble
 	name=ID
 	MobaFriendsAble;

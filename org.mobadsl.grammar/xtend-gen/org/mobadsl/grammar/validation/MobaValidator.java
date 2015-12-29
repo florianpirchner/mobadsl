@@ -37,13 +37,16 @@ import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityFeature;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
+import org.mobadsl.semantic.model.moba.MobaMuliplicity;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
@@ -55,6 +58,7 @@ import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.RecursionException;
 import org.mobadsl.semantic.model.moba.ValueType;
+import org.mobadsl.semantic.model.moba.util.Bounds;
 
 @SuppressWarnings("all")
 public class MobaValidator extends AbstractMobaValidator {
@@ -632,7 +636,8 @@ public class MobaValidator extends AbstractMobaValidator {
         if (_and) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("Only one \"default literal\" allowed");
-          this.error(_builder.toString(), literal, MobaPackage.Literals.MOBA_ENUM_LITERAL__DEFAULT);
+          this.error(_builder.toString(), literal, 
+            MobaPackage.Literals.MOBA_ENUM_LITERAL__DEFAULT);
         }
         boolean _and_1 = false;
         boolean _notEquals_1 = (!Objects.equal(undefinedLit, null));
@@ -645,7 +650,8 @@ public class MobaValidator extends AbstractMobaValidator {
         if (_and_1) {
           StringConcatenation _builder_1 = new StringConcatenation();
           _builder_1.append("Only one \"undefined literal\" allowed");
-          this.error(_builder_1.toString(), literal, MobaPackage.Literals.MOBA_ENUM_LITERAL__UNDEFINED);
+          this.error(_builder_1.toString(), literal, 
+            MobaPackage.Literals.MOBA_ENUM_LITERAL__UNDEFINED);
         }
         boolean _and_2 = false;
         boolean _equals = Objects.equal(defaultLit, null);
@@ -1052,6 +1058,74 @@ public class MobaValidator extends AbstractMobaValidator {
       } else {
         throw Exceptions.sneakyThrow(_t);
       }
+    }
+  }
+  
+  @Check
+  public void checkOpposite(final MobaEntityReference ref) {
+    boolean _and = false;
+    MobaMuliplicity _multiplicity = ref.getMultiplicity();
+    Bounds _bounds = _multiplicity.getBounds();
+    boolean _isToMany = _bounds.isToMany();
+    if (!_isToMany) {
+      _and = false;
+    } else {
+      MobaEntityReference _opposite = ref.getOpposite();
+      boolean _equals = Objects.equal(_opposite, null);
+      _and = _equals;
+    }
+    if (_and) {
+      this.error("Opposite reference must be set for 0-* references", ref, 
+        MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE);
+    }
+    boolean _and_1 = false;
+    MobaEntityReference _opposite_1 = ref.getOpposite();
+    boolean _notEquals = (!Objects.equal(_opposite_1, null));
+    if (!_notEquals) {
+      _and_1 = false;
+    } else {
+      MobaEntityReference _opposite_2 = ref.getOpposite();
+      MobaEntityReference _opposite_3 = _opposite_2.getOpposite();
+      boolean _equals_1 = Objects.equal(_opposite_3, null);
+      _and_1 = _equals_1;
+    }
+    if (_and_1) {
+      this.error("Opposite references must be defined on both sides", ref, 
+        MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE);
+    }
+  }
+  
+  @Check
+  public void checkOpposite(final MobaDtoReference ref) {
+    boolean _and = false;
+    MobaMuliplicity _multiplicity = ref.getMultiplicity();
+    Bounds _bounds = _multiplicity.getBounds();
+    boolean _isToMany = _bounds.isToMany();
+    if (!_isToMany) {
+      _and = false;
+    } else {
+      MobaDtoReference _opposite = ref.getOpposite();
+      boolean _equals = Objects.equal(_opposite, null);
+      _and = _equals;
+    }
+    if (_and) {
+      this.error("Opposite reference must be set for 0-* references", ref, 
+        MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE);
+    }
+    boolean _and_1 = false;
+    MobaDtoReference _opposite_1 = ref.getOpposite();
+    boolean _notEquals = (!Objects.equal(_opposite_1, null));
+    if (!_notEquals) {
+      _and_1 = false;
+    } else {
+      MobaDtoReference _opposite_2 = ref.getOpposite();
+      MobaDtoReference _opposite_3 = _opposite_2.getOpposite();
+      boolean _equals_1 = Objects.equal(_opposite_3, null);
+      _and_1 = _equals_1;
+    }
+    if (_and_1) {
+      this.error("Opposite references must be defined on both sides", ref, 
+        MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE);
     }
   }
 }

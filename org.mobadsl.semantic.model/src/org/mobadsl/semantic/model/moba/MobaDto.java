@@ -135,6 +135,14 @@ public interface MobaDto extends MobaData {
 	 * @return
 	 */
 	List<MobaDtoReference> getReferences();
+	
+	/**
+	 * Returns the values for the current instance. Excluding the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoEmbeddable> getEmbeddables();
 
 	/**
 	 * Returns the values for the current instance. Including the
@@ -159,6 +167,14 @@ public interface MobaDto extends MobaData {
 	 * @return
 	 */
 	List<MobaDtoReference> getAllReferences();
+	
+	/**
+	 * Returns the values for the current instance. Including the
+	 * "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaDtoEmbeddable> getAllEmbeddables();
 	
 	/**
 	 * Returns the generator specific values for the current instance. Including
@@ -198,6 +214,19 @@ public interface MobaDto extends MobaData {
 	 * @return
 	 */
 	List<MobaDtoReference> getGenReferences();
+	
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaDtoEmbeddable> getGenEmbeddables();
 	
 	
 	/**

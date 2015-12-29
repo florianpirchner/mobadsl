@@ -148,8 +148,10 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_REST_CRUD: return createMobaRESTCrud();
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE: return createMobaEntityAttribute();
 			case MobaPackage.MOBA_ENTITY_REFERENCE: return createMobaEntityReference();
+			case MobaPackage.MOBA_ENTITY_EMBEDDABLE: return createMobaEntityEmbeddable();
 			case MobaPackage.MOBA_DTO_ATTRIBUTE: return createMobaDtoAttribute();
 			case MobaPackage.MOBA_DTO_REFERENCE: return createMobaDtoReference();
+			case MobaPackage.MOBA_DTO_EMBEDDABLE: return createMobaDtoEmbeddable();
 			case MobaPackage.MOBA_QUEUE_REFERENCE: return createMobaQueueReference();
 			case MobaPackage.MOBA_MULIPLICITY: return createMobaMuliplicity();
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: return createMobaSettingsAttribute();
@@ -511,6 +513,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaEntityEmbeddable createMobaEntityEmbeddable() {
+		MobaEntityEmbeddableImpl mobaEntityEmbeddable = new MobaEntityEmbeddableImpl();
+		return mobaEntityEmbeddable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MobaDtoAttribute createMobaDtoAttribute() {
 		MobaDtoAttributeImpl mobaDtoAttribute = new MobaDtoAttributeImpl();
 		return mobaDtoAttribute;
@@ -524,6 +536,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaDtoReference createMobaDtoReference() {
 		MobaDtoReferenceImpl mobaDtoReference = new MobaDtoReferenceImpl();
 		return mobaDtoReference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaDtoEmbeddable createMobaDtoEmbeddable() {
+		MobaDtoEmbeddableImpl mobaDtoEmbeddable = new MobaDtoEmbeddableImpl();
+		return mobaDtoEmbeddable;
 	}
 
 	/**

@@ -17,6 +17,8 @@ package org.mobadsl.semantic.model.moba;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#isDomainKey <em>Domain Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#isDomainDescription <em>Domain Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#getFormatString <em>Format String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#getFormatConst <em>Format Const</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaSettingsAttribute()
@@ -154,4 +156,64 @@ public interface MobaSettingsAttribute extends MobaSettingsFeature, MobaMultipli
 	 */
 	void setType(MobaDataType value);
 
+	/**
+	 * Returns the value of the '<em><b>Format String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Format String</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Format String</em>' attribute.
+	 * @see #setFormatString(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaSettingsAttribute_FormatString()
+	 * @model
+	 * @generated
+	 */
+	String getFormatString();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#getFormatString <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Format String</em>' attribute.
+	 * @see #getFormatString()
+	 * @generated
+	 */
+	void setFormatString(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Format Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Format Const</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Format Const</em>' reference.
+	 * @see #setFormatConst(MobaConstant)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaSettingsAttribute_FormatConst()
+	 * @model
+	 * @generated
+	 */
+	MobaConstant getFormatConst();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaSettingsAttribute#getFormatConst <em>Format Const</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Format Const</em>' reference.
+	 * @see #getFormatConst()
+	 * @generated
+	 */
+	void setFormatConst(MobaConstant value);
+
+	/**
+	 * Returns the format. From {@link #getFormatString()} or
+	 * {@link #getFormatConstant()}. If values are empty and datatype is date, then the dateFormat will be returned.
+	 * 
+	 * @return
+	 */
+	String getFormat();
+	
 } // MobaSettingsAttribute

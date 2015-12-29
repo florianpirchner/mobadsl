@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -38,6 +39,8 @@ import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl#isDomainKey <em>Domain Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl#isDomainDescription <em>Domain Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl#getFormatString <em>Format String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl#getFormatConst <em>Format Const</em>}</li>
  * </ul>
  *
  * @generated
@@ -152,6 +155,36 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 	 * @ordered
 	 */
 	protected MobaDataType type;
+
+	/**
+	 * The default value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormatString()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FORMAT_STRING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormatString()
+	 * @generated
+	 * @ordered
+	 */
+	protected String formatString = FORMAT_STRING_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFormatConst() <em>Format Const</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormatConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaConstant formatConst;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -354,6 +387,65 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFormatString() {
+		return formatString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatString(String newFormatString) {
+		String oldFormatString = formatString;
+		formatString = newFormatString;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_STRING, oldFormatString, formatString));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant getFormatConst() {
+		if (formatConst != null && formatConst.eIsProxy()) {
+			InternalEObject oldFormatConst = (InternalEObject)formatConst;
+			formatConst = (MobaConstant)eResolveProxy(oldFormatConst);
+			if (formatConst != oldFormatConst) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_CONST, oldFormatConst, formatConst));
+			}
+		}
+		return formatConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant basicGetFormatConst() {
+		return formatConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatConst(MobaConstant newFormatConst) {
+		MobaConstant oldFormatConst = formatConst;
+		formatConst = newFormatConst;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_CONST, oldFormatConst, formatConst));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -388,6 +480,11 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_STRING:
+				return getFormatString();
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_CONST:
+				if (resolve) return getFormatConst();
+				return basicGetFormatConst();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -423,6 +520,12 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__TYPE:
 				setType((MobaDataType)newValue);
 				return;
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_STRING:
+				setFormatString((String)newValue);
+				return;
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_CONST:
+				setFormatConst((MobaConstant)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -456,6 +559,12 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__TYPE:
 				setType((MobaDataType)null);
 				return;
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_STRING:
+				setFormatString(FORMAT_STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_CONST:
+				setFormatConst((MobaConstant)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -482,6 +591,10 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 				return domainDescription != DOMAIN_DESCRIPTION_EDEFAULT;
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__TYPE:
 				return type != null;
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_STRING:
+				return FORMAT_STRING_EDEFAULT == null ? formatString != null : !FORMAT_STRING_EDEFAULT.equals(formatString);
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE__FORMAT_CONST:
+				return formatConst != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -548,6 +661,8 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 		result.append(domainKey);
 		result.append(", domainDescription: ");
 		result.append(domainDescription);
+		result.append(", formatString: ");
+		result.append(formatString);
 		result.append(')');
 		return result.toString();
 	}
@@ -556,4 +671,22 @@ public class MobaSettingsAttributeImpl extends MobaSettingsFeatureImpl implement
 	public List<EObject> getAllSuperTypes() {
 		return new ArrayList<>();
 	}
+	
+	@Override
+	public String getFormat() {
+		if (getFormatConst() != null) {
+			return getFormatConst().getValue();
+		}
+
+		if (getFormatString() != null && !getFormatString().equals("")) {
+			return getFormatString();
+		}
+
+		if (getType() != null && getType().isDate()) {
+			return getType().getDateFormat();
+		}
+
+		return null;
+	}
+	
 } //MobaSettingsAttributeImpl

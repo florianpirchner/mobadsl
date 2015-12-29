@@ -26,6 +26,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getOpposite <em>Opposite</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +111,16 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * @ordered
 	 */
 	protected MobaDto type;
+
+	/**
+	 * The cached value of the '{@link #getOpposite() <em>Opposite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOpposite()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaDtoReference opposite;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -279,6 +290,44 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaDtoReference getOpposite() {
+		if (opposite != null && opposite.eIsProxy()) {
+			InternalEObject oldOpposite = (InternalEObject)opposite;
+			opposite = (MobaDtoReference)eResolveProxy(oldOpposite);
+			if (opposite != oldOpposite) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE, oldOpposite, opposite));
+			}
+		}
+		return opposite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaDtoReference basicGetOpposite() {
+		return opposite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOpposite(MobaDtoReference newOpposite) {
+		MobaDtoReference oldOpposite = opposite;
+		opposite = newOpposite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE, oldOpposite, opposite));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -307,6 +356,9 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
+				if (resolve) return getOpposite();
+				return basicGetOpposite();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -335,6 +387,9 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
 				setType((MobaDto)newValue);
 				return;
+			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
+				setOpposite((MobaDtoReference)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -362,6 +417,9 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
 				setType((MobaDto)null);
 				return;
+			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
+				setOpposite((MobaDtoReference)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -384,6 +442,8 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 				return transient_ != TRANSIENT_EDEFAULT;
 			case MobaPackage.MOBA_DTO_REFERENCE__TYPE:
 				return type != null;
+			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
+				return opposite != null;
 		}
 		return super.eIsSet(featureID);
 	}

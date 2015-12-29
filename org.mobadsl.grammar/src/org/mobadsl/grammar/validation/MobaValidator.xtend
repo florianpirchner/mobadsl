@@ -19,7 +19,9 @@ import org.mobadsl.semantic.model.moba.MobaConstant
 import org.mobadsl.semantic.model.moba.MobaConstantValue
 import org.mobadsl.semantic.model.moba.MobaDataType
 import org.mobadsl.semantic.model.moba.MobaDto
+import org.mobadsl.semantic.model.moba.MobaDtoReference
 import org.mobadsl.semantic.model.moba.MobaEntity
+import org.mobadsl.semantic.model.moba.MobaEntityReference
 import org.mobadsl.semantic.model.moba.MobaEnum
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral
 import org.mobadsl.semantic.model.moba.MobaGenerator
@@ -370,33 +372,35 @@ class MobaValidator extends AbstractMobaValidator {
 		val names = newHashSet()
 		val literals = newHashSet()
 		val values = newHashSet()
-		
+
 		var MobaEnumLiteral defaultLit = null
 		var MobaEnumLiteral undefinedLit = null
 
 		var index = 0
 		for (literal : enumx.literals) {
-			
-			if(defaultLit != null && literal.^default) {
-				error('''Only one "default literal" allowed''', literal, MobaPackage.Literals.MOBA_ENUM_LITERAL__DEFAULT)
+
+			if (defaultLit != null && literal.^default) {
+				error('''Only one "default literal" allowed''', literal,
+					MobaPackage.Literals.MOBA_ENUM_LITERAL__DEFAULT)
 			}
-			
-			if(undefinedLit != null && literal.undefined) {
-				error('''Only one "undefined literal" allowed''', literal, MobaPackage.Literals.MOBA_ENUM_LITERAL__UNDEFINED)
+
+			if (undefinedLit != null && literal.undefined) {
+				error('''Only one "undefined literal" allowed''', literal,
+					MobaPackage.Literals.MOBA_ENUM_LITERAL__UNDEFINED)
 			}
-			
-			if(defaultLit == null && literal.^default) {
+
+			if (defaultLit == null && literal.^default) {
 				defaultLit = literal
-			}	
-			
-			if(undefinedLit == null && literal.undefined) {
+			}
+
+			if (undefinedLit == null && literal.undefined) {
 				undefinedLit = literal
-			}			
-			
+			}
+
 			if (names.contains(literal.name)) {
 				error('''Duplicate name "«literal.name»."''', enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index)
 			}
-			
+
 			if (literals.contains(literal.literal)) {
 				error('''Duplicate literal "«literal.literal»."''', enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS,
 					index)
@@ -490,7 +494,6 @@ class MobaValidator extends AbstractMobaValidator {
 //				feature, MobaPackage.Literals.MOBA_MODEL_FEATURE__NAME, 0)
 //		}
 //	}
-
 	@Check
 	def checkRestAttributeAssignment(MobaRESTAttribute att) {
 		val dt = att.type
@@ -554,10 +557,37 @@ class MobaValidator extends AbstractMobaValidator {
 	def void checkServerURL(MobaServer server) {
 		val urlValue = server.URL
 		try {
-			new URL(urlValue)
+			new URL(
+				urlValue)
 		} catch (MalformedURLException ex) {
 			warning('''The url «urlValue» is not a valid URL. You need to redefine it by a sub instance of server «server.name»''',
 				server, MobaPackage.Literals.MOBA_SERVER__NAME)
+		}
+	}
+
+	@Check
+	def void checkOpposite(MobaEntityReference ref) {
+		if (ref.multiplicity.bounds.isToMany && ref.opposite == null) {
+			error("Opposite reference must be set for 0-* references", ref,
+				MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE)
+		}
+
+		if (ref.opposite != null && ref.opposite.opposite == null) {
+			error("Opposite references must be defined on both sides", ref,
+				MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE)
+		}
+	}
+
+	@Check
+	def void checkOpposite(MobaDtoReference ref) {
+		if (ref.multiplicity.bounds.isToMany && ref.opposite == null) {
+			error("Opposite reference must be set for 0-* references", ref,
+				MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE)
+		}
+
+		if (ref.opposite != null && ref.opposite.opposite == null) {
+			error("Opposite references must be defined on both sides", ref,
+				MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE)
 		}
 	}
 }

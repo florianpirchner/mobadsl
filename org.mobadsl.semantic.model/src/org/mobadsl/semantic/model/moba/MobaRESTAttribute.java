@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValueInt <em>Value Int</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValue <em>Value</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getFormatString <em>Format String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getFormatConst <em>Format Const</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute()
@@ -242,10 +244,70 @@ public interface MobaRESTAttribute extends EObject {
 	String getValue();
 	
 	/**
+	 * Returns the value of the '<em><b>Format String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Format String</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Format String</em>' attribute.
+	 * @see #setFormatString(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_FormatString()
+	 * @model
+	 * @generated
+	 */
+	String getFormatString();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getFormatString <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Format String</em>' attribute.
+	 * @see #getFormatString()
+	 * @generated
+	 */
+	void setFormatString(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Format Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Format Const</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Format Const</em>' reference.
+	 * @see #setFormatConst(MobaConstant)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_FormatConst()
+	 * @model
+	 * @generated
+	 */
+	MobaConstant getFormatConst();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getFormatConst <em>Format Const</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Format Const</em>' reference.
+	 * @see #getFormatConst()
+	 * @generated
+	 */
+	void setFormatConst(MobaConstant value);
+
+	/**
 	 * Returns the {@link ValueType} of the set value.
 	 * 
 	 * @return
 	 */
 	ValueType getValueType();
 
+	/**
+	 * Returns the format. From {@link #getFormatString()} or
+	 * {@link #getFormatConstant()}. If values are empty and datatype is date, then the dateFormat will be returned.
+	 * 
+	 * @return
+	 */
+	String getFormat();
+	
 } // MobaRESTAttribute

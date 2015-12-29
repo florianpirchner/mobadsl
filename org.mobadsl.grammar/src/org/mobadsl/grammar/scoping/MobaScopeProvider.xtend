@@ -11,6 +11,8 @@ import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider
 import org.mobadsl.semantic.model.moba.MobaApplication
+import org.mobadsl.semantic.model.moba.MobaDtoReference
+import org.mobadsl.semantic.model.moba.MobaEntityReference
 import org.mobadsl.semantic.model.moba.util.MobaUtil
 
 /**
@@ -93,4 +95,23 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 		return globalScopeProvider.getScope(ctx.eResource, ref)
 	}
 
+	def IScope scope_MobaEntityReference_opposite(MobaEntityReference ctx, EReference ref) {
+		if (ctx.type != null) {
+			return Scopes.scopeFor(ctx.type.genReferences.filter [
+				// ensure that the available opposite references point to the targetDto
+				ctx.eContainer == it.type
+			]);
+		}
+		return IScope.NULLSCOPE
+	}
+
+	def IScope scope_MobaDtoReference_opposite(MobaDtoReference ctx, EReference ref) {
+		if (ctx.type != null) {
+			return Scopes.scopeFor(ctx.type.genReferences.filter [
+				// ensure that the available opposite references point to the targetDto
+				ctx.eContainer == it.type
+			]);
+		}
+		return IScope.NULLSCOPE
+	}
 }

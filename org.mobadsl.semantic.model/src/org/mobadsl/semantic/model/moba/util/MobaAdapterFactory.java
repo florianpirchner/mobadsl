@@ -288,6 +288,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaEntityReferenceAdapter();
 			}
 			@Override
+			public Adapter caseMobaEntityEmbeddable(MobaEntityEmbeddable object) {
+				return createMobaEntityEmbeddableAdapter();
+			}
+			@Override
 			public Adapter caseMobaDtoFeature(MobaDtoFeature object) {
 				return createMobaDtoFeatureAdapter();
 			}
@@ -298,6 +302,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMobaDtoReference(MobaDtoReference object) {
 				return createMobaDtoReferenceAdapter();
+			}
+			@Override
+			public Adapter caseMobaDtoEmbeddable(MobaDtoEmbeddable object) {
+				return createMobaDtoEmbeddableAdapter();
 			}
 			@Override
 			public Adapter caseMobaQueueFeature(MobaQueueFeature object) {
@@ -960,6 +968,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaEntityEmbeddable <em>Entity Embeddable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityEmbeddable
+	 * @generated
+	 */
+	public Adapter createMobaEntityEmbeddableAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDtoFeature <em>Dto Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -998,6 +1020,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaDtoReferenceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaDtoEmbeddable <em>Dto Embeddable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaDtoEmbeddable
+	 * @generated
+	 */
+	public Adapter createMobaDtoEmbeddableAdapter() {
 		return null;
 	}
 

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaEntityFeature;
 import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
@@ -448,6 +449,21 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	@Override
 	public List<MobaEntityReference> getGenReferences() {
 		return collectGen(this, MobaEntityReference.class);
+	}
+	
+	@Override
+	public List<MobaEntityEmbeddable> getEmbeddables() {
+		return collect(MobaEntityEmbeddable.class);
+	}
+
+	@Override
+	public List<MobaEntityEmbeddable> getAllEmbeddables() {
+		return collectAll(this, MobaEntityEmbeddable.class);
+	}
+
+	@Override
+	public List<MobaEntityEmbeddable> getGenEmbeddables() {
+		return collectGen(this, MobaEntityEmbeddable.class);
 	}
 
 	@Override

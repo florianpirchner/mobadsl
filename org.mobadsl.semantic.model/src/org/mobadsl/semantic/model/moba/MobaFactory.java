@@ -265,6 +265,15 @@ public interface MobaFactory extends EFactory {
 	MobaEntityReference createMobaEntityReference();
 
 	/**
+	 * Returns a new object of class '<em>Entity Embeddable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entity Embeddable</em>'.
+	 * @generated
+	 */
+	MobaEntityEmbeddable createMobaEntityEmbeddable();
+
+	/**
 	 * Returns a new object of class '<em>Dto Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -281,6 +290,15 @@ public interface MobaFactory extends EFactory {
 	 * @generated
 	 */
 	MobaDtoReference createMobaDtoReference();
+
+	/**
+	 * Returns a new object of class '<em>Dto Embeddable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dto Embeddable</em>'.
+	 * @generated
+	 */
+	MobaDtoEmbeddable createMobaDtoEmbeddable();
 
 	/**
 	 * Returns a new object of class '<em>Queue Reference</em>'.

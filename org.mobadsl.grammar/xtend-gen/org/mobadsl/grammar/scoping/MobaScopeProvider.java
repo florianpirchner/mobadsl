@@ -4,8 +4,10 @@
 package org.mobadsl.grammar.scoping;
 
 import com.google.common.base.Function;
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import java.util.List;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.naming.QualifiedName;
@@ -13,13 +15,17 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaQueue;
@@ -132,5 +138,39 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_MobaApplication(final MobaApplication ctx, final EReference ref) {
     Resource _eResource = ctx.eResource();
     return this.globalScopeProvider.getScope(_eResource, ref);
+  }
+  
+  public IScope scope_MobaEntityReference_opposite(final MobaEntityReference ctx, final EReference ref) {
+    MobaEntity _type = ctx.getType();
+    boolean _notEquals = (!Objects.equal(_type, null));
+    if (_notEquals) {
+      MobaEntity _type_1 = ctx.getType();
+      List<MobaEntityReference> _genReferences = _type_1.getGenReferences();
+      final Function1<MobaEntityReference, Boolean> _function = (MobaEntityReference it) -> {
+        EObject _eContainer = ctx.eContainer();
+        MobaEntity _type_2 = it.getType();
+        return Boolean.valueOf(Objects.equal(_eContainer, _type_2));
+      };
+      Iterable<MobaEntityReference> _filter = IterableExtensions.<MobaEntityReference>filter(_genReferences, _function);
+      return Scopes.scopeFor(_filter);
+    }
+    return IScope.NULLSCOPE;
+  }
+  
+  public IScope scope_MobaDtoReference_opposite(final MobaDtoReference ctx, final EReference ref) {
+    MobaDto _type = ctx.getType();
+    boolean _notEquals = (!Objects.equal(_type, null));
+    if (_notEquals) {
+      MobaDto _type_1 = ctx.getType();
+      List<MobaDtoReference> _genReferences = _type_1.getGenReferences();
+      final Function1<MobaDtoReference, Boolean> _function = (MobaDtoReference it) -> {
+        EObject _eContainer = ctx.eContainer();
+        MobaDto _type_2 = it.getType();
+        return Boolean.valueOf(Objects.equal(_eContainer, _type_2));
+      };
+      Iterable<MobaDtoReference> _filter = IterableExtensions.<MobaDtoReference>filter(_genReferences, _function);
+      return Scopes.scopeFor(_filter);
+    }
+    return IScope.NULLSCOPE;
   }
 }

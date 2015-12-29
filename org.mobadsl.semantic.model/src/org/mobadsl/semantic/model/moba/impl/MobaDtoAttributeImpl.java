@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstraint;
 import org.mobadsl.semantic.model.moba.MobaConstraintable;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -21,9 +22,8 @@ import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Payload Attribute</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Payload Attribute</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -36,6 +36,8 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#isDomainDescription <em>Domain Description</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getAlias <em>Alias</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getFormatString <em>Format String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoAttributeImpl#getFormatConst <em>Format Const</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,8 +45,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
 public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoAttribute {
 	/**
 	 * The cached value of the '{@link #getMultiplicity() <em>Multiplicity</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getMultiplicity()
 	 * @generated
 	 * @ordered
@@ -53,8 +54,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getConstraints()
 	 * @generated
 	 * @ordered
@@ -63,8 +63,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The default value of the '{@link #isLazy() <em>Lazy</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isLazy()
 	 * @generated
 	 * @ordered
@@ -72,9 +71,9 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	protected static final boolean LAZY_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isLazy() <em>Lazy</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #isLazy() <em>Lazy</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #isLazy()
 	 * @generated
 	 * @ordered
@@ -83,8 +82,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The default value of the '{@link #isTransient() <em>Transient</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isTransient()
 	 * @generated
 	 * @ordered
@@ -93,8 +91,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The cached value of the '{@link #isTransient() <em>Transient</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isTransient()
 	 * @generated
 	 * @ordered
@@ -103,8 +100,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The default value of the '{@link #isDomainKey() <em>Domain Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isDomainKey()
 	 * @generated
 	 * @ordered
@@ -113,8 +109,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The cached value of the '{@link #isDomainKey() <em>Domain Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isDomainKey()
 	 * @generated
 	 * @ordered
@@ -123,8 +118,8 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The default value of the '{@link #isDomainDescription() <em>Domain Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isDomainDescription()
 	 * @generated
 	 * @ordered
@@ -133,8 +128,8 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The cached value of the '{@link #isDomainDescription() <em>Domain Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isDomainDescription()
 	 * @generated
 	 * @ordered
@@ -143,8 +138,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The default value of the '{@link #getAlias() <em>Alias</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getAlias()
 	 * @generated
 	 * @ordered
@@ -153,8 +147,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The cached value of the '{@link #getAlias() <em>Alias</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getAlias()
 	 * @generated
 	 * @ordered
@@ -163,8 +156,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -172,8 +164,35 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	protected MobaDataType type;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getFormatString()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FORMAT_STRING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getFormatString()
+	 * @generated
+	 * @ordered
+	 */
+	protected String formatString = FORMAT_STRING_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFormatConst() <em>Format Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getFormatConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaConstant formatConst;
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected MobaDtoAttributeImpl() {
@@ -181,8 +200,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -191,8 +209,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaMuliplicity getMultiplicity() {
@@ -200,8 +217,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NotificationChain basicSetMultiplicity(MobaMuliplicity newMultiplicity, NotificationChain msgs) {
@@ -215,8 +231,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setMultiplicity(MobaMuliplicity newMultiplicity) {
@@ -234,8 +249,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<MobaConstraint> getConstraints() {
@@ -246,8 +260,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isLazy() {
@@ -255,8 +268,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setLazy(boolean newLazy) {
@@ -267,8 +279,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isTransient() {
@@ -276,8 +287,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setTransient(boolean newTransient) {
@@ -288,8 +298,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isDomainKey() {
@@ -297,8 +306,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setDomainKey(boolean newDomainKey) {
@@ -309,8 +317,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isDomainDescription() {
@@ -318,8 +325,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setDomainDescription(boolean newDomainDescription) {
@@ -330,8 +336,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getAlias() {
@@ -339,8 +344,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setAlias(String newAlias) {
@@ -351,8 +355,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaDataType getType() {
@@ -368,8 +371,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaDataType basicGetType() {
@@ -377,8 +379,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setType(MobaDataType newType) {
@@ -389,8 +390,61 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFormatString() {
+		return formatString;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatString(String newFormatString) {
+		String oldFormatString = formatString;
+		formatString = newFormatString;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_STRING, oldFormatString, formatString));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant getFormatConst() {
+		if (formatConst != null && formatConst.eIsProxy()) {
+			InternalEObject oldFormatConst = (InternalEObject)formatConst;
+			formatConst = (MobaConstant)eResolveProxy(oldFormatConst);
+			if (formatConst != oldFormatConst) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_CONST, oldFormatConst, formatConst));
+			}
+		}
+		return formatConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant basicGetFormatConst() {
+		return formatConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatConst(MobaConstant newFormatConst) {
+		MobaConstant oldFormatConst = formatConst;
+		formatConst = newFormatConst;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_CONST, oldFormatConst, formatConst));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -405,8 +459,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -429,13 +482,17 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_STRING:
+				return getFormatString();
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_CONST:
+				if (resolve) return getFormatConst();
+				return basicGetFormatConst();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -467,13 +524,18 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__TYPE:
 				setType((MobaDataType)newValue);
 				return;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_STRING:
+				setFormatString((String)newValue);
+				return;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_CONST:
+				setFormatConst((MobaConstant)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -503,13 +565,18 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__TYPE:
 				setType((MobaDataType)null);
 				return;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_STRING:
+				setFormatString(FORMAT_STRING_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_CONST:
+				setFormatConst((MobaConstant)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -531,13 +598,16 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 				return ALIAS_EDEFAULT == null ? alias != null : !ALIAS_EDEFAULT.equals(alias);
 			case MobaPackage.MOBA_DTO_ATTRIBUTE__TYPE:
 				return type != null;
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_STRING:
+				return FORMAT_STRING_EDEFAULT == null ? formatString != null : !FORMAT_STRING_EDEFAULT.equals(formatString);
+			case MobaPackage.MOBA_DTO_ATTRIBUTE__FORMAT_CONST:
+				return formatConst != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -558,8 +628,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -580,8 +649,7 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -599,8 +667,27 @@ public class MobaDtoAttributeImpl extends MobaDtoFeatureImpl implements MobaDtoA
 		result.append(domainDescription);
 		result.append(", alias: ");
 		result.append(alias);
+		result.append(", formatString: ");
+		result.append(formatString);
 		result.append(')');
 		return result.toString();
 	}
 
-} //MobaPayloadAttributeImpl
+	@Override
+	public String getFormat() {
+		if (getFormatConst() != null) {
+			return getFormatConst().getValue();
+		}
+
+		if (getFormatString() != null && !getFormatString().equals("")) {
+			return getFormatString();
+		}
+
+		if (getType() != null && getType().isDate()) {
+			return getType().getDateFormat();
+		}
+
+		return null;
+	}
+
+} // MobaPayloadAttributeImpl

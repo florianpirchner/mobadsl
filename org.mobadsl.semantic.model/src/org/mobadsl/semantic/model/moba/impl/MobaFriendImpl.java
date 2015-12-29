@@ -151,9 +151,10 @@ public class MobaFriendImpl extends MinimalEObjectImpl.Container implements Moba
 	 * @generated
 	 */
 	public String getValue() {
-		// TODO: implement this method to return the 'Value' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (getValueConst() != null) {
+			return getValueConst().getValue();
+		}
+		return getValueString();
 	}
 
 	/**

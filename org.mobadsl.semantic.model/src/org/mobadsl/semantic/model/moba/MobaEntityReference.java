@@ -16,6 +16,7 @@ package org.mobadsl.semantic.model.moba;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntityReference#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntityReference#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntityReference#getType <em>Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntityReference#getOpposite <em>Opposite</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntityReference()
@@ -126,5 +127,31 @@ public interface MobaEntityReference extends MobaEntityFeature, MobaMultiplicity
 	 * @generated
 	 */
 	void setType(MobaEntity value);
+
+	/**
+	 * Returns the value of the '<em><b>Opposite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Opposite</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Opposite</em>' reference.
+	 * @see #setOpposite(MobaEntityReference)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntityReference_Opposite()
+	 * @model
+	 * @generated
+	 */
+	MobaEntityReference getOpposite();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEntityReference#getOpposite <em>Opposite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Opposite</em>' reference.
+	 * @see #getOpposite()
+	 * @generated
+	 */
+	void setOpposite(MobaEntityReference value);
 
 } // MobaDtoReference

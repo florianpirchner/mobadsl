@@ -193,6 +193,8 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formatConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTCustomService" eSuperTypes="#//MobaREST">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//MobaRESTMethods"/>
@@ -220,6 +222,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formatConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaMultiplicityAble" abstract="true"
       interface="true">
@@ -231,6 +235,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opposite" eType="#//MobaEntityReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaEntityEmbeddable" eSuperTypes="#//MobaEntityFeature #//MobaMultiplicityAble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaEntity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaDtoFeature" abstract="true" eSuperTypes="#//MobaFeature"/>
   <eClassifiers xsi:type="ecore:EClass" name="MobaDtoAttribute" eSuperTypes="#//MobaDtoFeature #//MobaMultiplicityAble #//MobaConstraintable">
@@ -240,10 +249,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formatConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaDtoReference" eSuperTypes="#//MobaDtoFeature #//MobaMultiplicityAble">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascading" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opposite" eType="#//MobaDtoReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaDtoEmbeddable" eSuperTypes="#//MobaDtoFeature #//MobaMultiplicityAble">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDto"/>
   </eClassifiers>
@@ -278,6 +294,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formatConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaConstraintable" abstract="true"
       interface="true">
