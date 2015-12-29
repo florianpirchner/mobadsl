@@ -78,7 +78,7 @@ MobaEnum:
 	'}';
 
 MobaEnumLiteral:
-	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT (',' default?='default')? ')';
+	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT ((',' default?='isDefault')? & (',' undefined?='isUndefined')?)')';
 
 MobaConstant:
 	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaFriendsAble;

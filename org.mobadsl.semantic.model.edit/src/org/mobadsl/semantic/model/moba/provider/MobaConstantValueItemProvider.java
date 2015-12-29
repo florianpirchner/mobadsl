@@ -61,6 +61,8 @@ public class MobaConstantValueItemProvider
 
 			addValueStringPropertyDescriptor(object);
 			addValueConstPropertyDescriptor(object);
+			addValueConstFunctionsPropertyDescriptor(object);
+			addValueConstToLowerCasePropertyDescriptor(object);
 			addValueIntPropertyDescriptor(object);
 			addValueDoublePropertyDescriptor(object);
 		}
@@ -107,6 +109,50 @@ public class MobaConstantValueItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Value Const Functions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValueConstFunctionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaConstantValue_valueConstFunctions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaConstantValue_valueConstFunctions_feature", "_UI_MobaConstantValue_type"),
+				 MobaPackage.Literals.MOBA_CONSTANT_VALUE__VALUE_CONST_FUNCTIONS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Value Const To Lower Case feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValueConstToLowerCasePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaConstantValue_valueConstToLowerCase_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaConstantValue_valueConstToLowerCase_feature", "_UI_MobaConstantValue_type"),
+				 MobaPackage.Literals.MOBA_CONSTANT_VALUE__VALUE_CONST_TO_LOWER_CASE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -224,6 +270,8 @@ public class MobaConstantValueItemProvider
 
 		switch (notification.getFeatureID(MobaConstantValue.class)) {
 			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_STRING:
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_CONST_FUNCTIONS:
+			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_CONST_TO_LOWER_CASE:
 			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_INT:
 			case MobaPackage.MOBA_CONSTANT_VALUE__VALUE_DOUBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

@@ -24,4 +24,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.mobadsl.grammar.ui.quickfix,
  org.mobadsl.grammar.ui.contentassist,
  org.mobadsl.grammar.ui.internal
-Bundle-Activator: org.mobadsl.grammar.ui.internal.MobaActivator
+Bundle-Activator: org.mobadsl.grammar.ui.internal.GrammarActivator

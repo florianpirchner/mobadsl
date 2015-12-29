@@ -61,6 +61,7 @@ public class MobaEnumLiteralItemProvider
 			addNamePropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
 			addDefaultPropertyDescriptor(object);
+			addUndefinedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -154,6 +155,28 @@ public class MobaEnumLiteralItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Undefined feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUndefinedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaEnumLiteral_undefined_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEnumLiteral_undefined_feature", "_UI_MobaEnumLiteral_type"),
+				 MobaPackage.Literals.MOBA_ENUM_LITERAL__UNDEFINED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MobaEnumLiteral.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -195,6 +218,7 @@ public class MobaEnumLiteralItemProvider
 			case MobaPackage.MOBA_ENUM_LITERAL__NAME:
 			case MobaPackage.MOBA_ENUM_LITERAL__VALUE:
 			case MobaPackage.MOBA_ENUM_LITERAL__DEFAULT:
+			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

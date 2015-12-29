@@ -1,10 +1,12 @@
 package org.mobadsl.grammar.ui.hover;
 
+import com.google.common.base.Objects;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.Constants;
@@ -22,10 +24,6 @@ import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.ValueType;
-
-import com.google.common.base.Objects;
-import com.google.inject.Inject;
-import com.google.inject.name.Named;
 
 @SuppressWarnings("all")
 public class MobaHoverDocumentationProvider extends MultiLineCommentDocumentationProvider {

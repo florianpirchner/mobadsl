@@ -21,6 +21,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#isDefault <em>Default</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#isUndefined <em>Undefined</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,6 +106,26 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected boolean default_ = DEFAULT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isUndefined() <em>Undefined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUndefined()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean UNDEFINED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUndefined() <em>Undefined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUndefined()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean undefined = UNDEFINED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,6 +235,27 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isUndefined() {
+		return undefined;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUndefined(boolean newUndefined) {
+		boolean oldUndefined = undefined;
+		undefined = newUndefined;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED, oldUndefined, undefined));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -225,6 +267,8 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 				return getValue();
 			case MobaPackage.MOBA_ENUM_LITERAL__DEFAULT:
 				return isDefault();
+			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
+				return isUndefined();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -248,6 +292,9 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case MobaPackage.MOBA_ENUM_LITERAL__DEFAULT:
 				setDefault((Boolean)newValue);
+				return;
+			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
+				setUndefined((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -273,6 +320,9 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 			case MobaPackage.MOBA_ENUM_LITERAL__DEFAULT:
 				setDefault(DEFAULT_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
+				setUndefined(UNDEFINED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -293,6 +343,8 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 				return value != VALUE_EDEFAULT;
 			case MobaPackage.MOBA_ENUM_LITERAL__DEFAULT:
 				return default_ != DEFAULT_EDEFAULT;
+			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
+				return undefined != UNDEFINED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -315,6 +367,8 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 		result.append(value);
 		result.append(", default: ");
 		result.append(default_);
+		result.append(", undefined: ");
+		result.append(undefined);
 		result.append(')');
 		return result.toString();
 	}

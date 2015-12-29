@@ -3727,13 +3727,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENUM_LITERAL__DEFAULT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Undefined</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENUM_LITERAL__UNDEFINED = 4;
+
+	/**
 	 * The number of structural features of the '<em>Enum Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM_LITERAL_FEATURE_COUNT = 4;
+	int MOBA_ENUM_LITERAL_FEATURE_COUNT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -6737,6 +6746,17 @@ public interface MobaPackage extends EPackage {
 	EAttribute getMobaEnumLiteral_Default();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isUndefined <em>Undefined</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Undefined</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaEnumLiteral#isUndefined()
+	 * @see #getMobaEnumLiteral()
+	 * @generated
+	 */
+	EAttribute getMobaEnumLiteral_Undefined();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaTrigger <em>Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8929,6 +8949,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOBA_ENUM_LITERAL__DEFAULT = eINSTANCE.getMobaEnumLiteral_Default();
+
+		/**
+		 * The meta object literal for the '<em><b>Undefined</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_ENUM_LITERAL__UNDEFINED = eINSTANCE.getMobaEnumLiteral_Undefined();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTriggerImpl <em>Trigger</em>}' class.

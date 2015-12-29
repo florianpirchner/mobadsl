@@ -18,10 +18,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.validation.Check;
@@ -46,8 +44,6 @@ import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorFeature;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
-import org.mobadsl.semantic.model.moba.MobaModel;
-import org.mobadsl.semantic.model.moba.MobaModelFeature;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
@@ -619,39 +615,89 @@ public class MobaValidator extends AbstractMobaValidator {
     final HashSet<String> names = CollectionLiterals.<String>newHashSet();
     final HashSet<String> literals = CollectionLiterals.<String>newHashSet();
     final HashSet<Integer> values = CollectionLiterals.<Integer>newHashSet();
+    MobaEnumLiteral defaultLit = null;
+    MobaEnumLiteral undefinedLit = null;
     int index = 0;
     EList<MobaEnumLiteral> _literals = enumx.getLiterals();
     for (final MobaEnumLiteral literal : _literals) {
       {
+        boolean _and = false;
+        boolean _notEquals = (!Objects.equal(defaultLit, null));
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          boolean _isDefault = literal.isDefault();
+          _and = _isDefault;
+        }
+        if (_and) {
+          StringConcatenation _builder = new StringConcatenation();
+          _builder.append("Only one \"default literal\" allowed");
+          this.error(_builder.toString(), literal, MobaPackage.Literals.MOBA_ENUM_LITERAL__DEFAULT);
+        }
+        boolean _and_1 = false;
+        boolean _notEquals_1 = (!Objects.equal(undefinedLit, null));
+        if (!_notEquals_1) {
+          _and_1 = false;
+        } else {
+          boolean _isUndefined = literal.isUndefined();
+          _and_1 = _isUndefined;
+        }
+        if (_and_1) {
+          StringConcatenation _builder_1 = new StringConcatenation();
+          _builder_1.append("Only one \"undefined literal\" allowed");
+          this.error(_builder_1.toString(), literal, MobaPackage.Literals.MOBA_ENUM_LITERAL__UNDEFINED);
+        }
+        boolean _and_2 = false;
+        boolean _equals = Objects.equal(defaultLit, null);
+        if (!_equals) {
+          _and_2 = false;
+        } else {
+          boolean _isDefault_1 = literal.isDefault();
+          _and_2 = _isDefault_1;
+        }
+        if (_and_2) {
+          defaultLit = literal;
+        }
+        boolean _and_3 = false;
+        boolean _equals_1 = Objects.equal(undefinedLit, null);
+        if (!_equals_1) {
+          _and_3 = false;
+        } else {
+          boolean _isUndefined_1 = literal.isUndefined();
+          _and_3 = _isUndefined_1;
+        }
+        if (_and_3) {
+          undefinedLit = literal;
+        }
         String _name = literal.getName();
         boolean _contains = names.contains(_name);
         if (_contains) {
-          StringConcatenation _builder = new StringConcatenation();
-          _builder.append("Duplicate name \"");
+          StringConcatenation _builder_2 = new StringConcatenation();
+          _builder_2.append("Duplicate name \"");
           String _name_1 = literal.getName();
-          _builder.append(_name_1, "");
-          _builder.append(".\"");
-          this.error(_builder.toString(), enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index);
+          _builder_2.append(_name_1, "");
+          _builder_2.append(".\"");
+          this.error(_builder_2.toString(), enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index);
         }
         String _literal = literal.getLiteral();
         boolean _contains_1 = literals.contains(_literal);
         if (_contains_1) {
-          StringConcatenation _builder_1 = new StringConcatenation();
-          _builder_1.append("Duplicate literal \"");
+          StringConcatenation _builder_3 = new StringConcatenation();
+          _builder_3.append("Duplicate literal \"");
           String _literal_1 = literal.getLiteral();
-          _builder_1.append(_literal_1, "");
-          _builder_1.append(".\"");
-          this.error(_builder_1.toString(), enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index);
+          _builder_3.append(_literal_1, "");
+          _builder_3.append(".\"");
+          this.error(_builder_3.toString(), enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index);
         }
         int _value = literal.getValue();
         boolean _contains_2 = values.contains(Integer.valueOf(_value));
         if (_contains_2) {
-          StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("Duplicate value \"");
+          StringConcatenation _builder_4 = new StringConcatenation();
+          _builder_4.append("Duplicate value \"");
           int _value_1 = literal.getValue();
-          _builder_2.append(_value_1, "");
-          _builder_2.append(".\"");
-          this.error(_builder_2.toString(), enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index);
+          _builder_4.append(_value_1, "");
+          _builder_4.append(".\"");
+          this.error(_builder_4.toString(), enumx, MobaPackage.Literals.MOBA_ENUM__LITERALS, index);
         }
         index++;
         String _name_2 = literal.getName();
@@ -763,52 +809,6 @@ public class MobaValidator extends AbstractMobaValidator {
             MobaPackage.Literals.MOBA_CONSTANT_VALUE__VALUE_CONST);
         }
       }
-    }
-  }
-  
-  @Check
-  public void checkResourceName(final MobaModelFeature feature) {
-    EObject _eContainer = feature.eContainer();
-    final MobaModel model = ((MobaModel) _eContainer);
-    boolean _or = false;
-    EList<MobaModelFeature> _features = model.getFeatures();
-    boolean _isEmpty = _features.isEmpty();
-    if (_isEmpty) {
-      _or = true;
-    } else {
-      EList<MobaModelFeature> _features_1 = model.getFeatures();
-      int _size = _features_1.size();
-      boolean _greaterThan = (_size > 1);
-      _or = _greaterThan;
-    }
-    if (_or) {
-      return;
-    }
-    String _name = feature.getName();
-    String _plus = (_name + "-");
-    String _version = feature.getVersion();
-    final String id = (_plus + _version);
-    Resource _eResource = model.eResource();
-    final URI resourceURI = _eResource.getURI();
-    String _lastSegment = resourceURI.lastSegment();
-    boolean _startsWith = _lastSegment.startsWith(id);
-    boolean _not = (!_startsWith);
-    if (_not) {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("File need to start with the same name as the name of the element. \"");
-      String _name_1 = feature.getName();
-      _builder.append(_name_1, "");
-      _builder.append(":");
-      String _version_1 = feature.getVersion();
-      _builder.append(_version_1, "");
-      _builder.append("\" needs a filename \"");
-      String _name_2 = feature.getName();
-      _builder.append(_name_2, "");
-      _builder.append("-");
-      String _version_2 = feature.getVersion();
-      _builder.append(_version_2, "");
-      _builder.append("{...}.moba\"");
-      this.error(_builder.toString(), feature, MobaPackage.Literals.MOBA_MODEL_FEATURE__NAME, 0);
     }
   }
   

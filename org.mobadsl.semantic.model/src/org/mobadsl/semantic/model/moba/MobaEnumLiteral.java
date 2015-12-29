@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#getValue <em>Value</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isDefault <em>Default</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isUndefined <em>Undefined</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnumLiteral()
@@ -127,5 +128,31 @@ public interface MobaEnumLiteral extends EObject {
 	 * @generated
 	 */
 	void setDefault(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Undefined</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Undefined</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Undefined</em>' attribute.
+	 * @see #setUndefined(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnumLiteral_Undefined()
+	 * @model
+	 * @generated
+	 */
+	boolean isUndefined();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isUndefined <em>Undefined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Undefined</em>' attribute.
+	 * @see #isUndefined()
+	 * @generated
+	 */
+	void setUndefined(boolean value);
 
 } // MobaEnumLiteral

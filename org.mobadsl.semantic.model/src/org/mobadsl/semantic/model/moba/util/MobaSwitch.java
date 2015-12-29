@@ -5,6 +5,7 @@ package org.mobadsl.semantic.model.moba.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.mobadsl.semantic.model.moba.*;
 import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
 import org.mobadsl.semantic.model.moba.MobaAppUpdateTrigger;
 import org.mobadsl.semantic.model.moba.MobaApplication;

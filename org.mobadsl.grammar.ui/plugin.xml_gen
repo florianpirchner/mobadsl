@@ -205,19 +205,19 @@
 		</handler>
 	</extension>
 	<!-- adding resource factories -->
-		<extension
-			point="org.eclipse.emf.ecore.extension_parser">
-			<parser
-				class="org.mobadsl.grammar.ui.MobaExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-				type="moba">
-			</parser>
-		</extension>
-		<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
-		    <resourceServiceProvider
-		        class="org.mobadsl.grammar.ui.MobaExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-		        uriExtension="moba">
-		    </resourceServiceProvider>
-		</extension>
+	<extension
+		point="org.eclipse.emf.ecore.extension_parser">
+		<parser
+			class="org.mobadsl.grammar.ui.MobaExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			type="moba">
+		</parser>
+	</extension>
+	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
+	    <resourceServiceProvider
+	        class="org.mobadsl.grammar.ui.MobaExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+	        uriExtension="moba">
+	    </resourceServiceProvider>
+	</extension>
 	<!-- marker definitions for org.mobadsl.grammar.Moba -->
 	<extension
 			id="moba.check.fast"

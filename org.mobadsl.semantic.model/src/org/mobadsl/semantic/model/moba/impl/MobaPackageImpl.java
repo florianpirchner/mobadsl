@@ -2620,6 +2620,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaEnumLiteral_Undefined() {
+		return (EAttribute)mobaEnumLiteralEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaTrigger() {
 		return mobaTriggerEClass;
 	}
@@ -3247,6 +3256,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__NAME);
 		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__VALUE);
 		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__DEFAULT);
+		createEAttribute(mobaEnumLiteralEClass, MOBA_ENUM_LITERAL__UNDEFINED);
 
 		mobaTriggerEClass = createEClass(MOBA_TRIGGER);
 		createEReference(mobaTriggerEClass, MOBA_TRIGGER__SUPER_TYPE);
@@ -3676,6 +3686,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaEnumLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaEnumLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaEnumLiteral_Default(), ecorePackage.getEBoolean(), "default", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaEnumLiteral_Undefined(), ecorePackage.getEBoolean(), "undefined", null, 0, 1, MobaEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaTriggerEClass, MobaTrigger.class, "MobaTrigger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaTrigger_SuperType(), this.getMobaTrigger(), null, "superType", null, 0, 1, MobaTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
