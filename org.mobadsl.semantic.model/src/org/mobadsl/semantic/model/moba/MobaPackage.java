@@ -1558,13 +1558,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DATA_TYPE__SUPER_TYPE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Bool</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DATA_TYPE__BOOL = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 14;
+	int MOBA_DATA_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -5008,6 +5017,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaDataType_SuperType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDataType#isBool <em>Bool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bool</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaDataType#isBool()
+	 * @see #getMobaDataType()
+	 * @generated
+	 */
+	EAttribute getMobaDataType_Bool();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST <em>Enum AST</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7565,6 +7585,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_DATA_TYPE__SUPER_TYPE = eINSTANCE.getMobaDataType_SuperType();
+
+		/**
+		 * The meta object literal for the '<em><b>Bool</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_DATA_TYPE__BOOL = eINSTANCE.getMobaDataType_Bool();
 
 		/**
 		 * The meta object literal for the '<em><b>Enum AST</b></em>' containment reference feature.

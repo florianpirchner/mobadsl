@@ -1162,6 +1162,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaDataType_Bool() {
+		return (EAttribute)mobaDataTypeEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMobaDataType_EnumAST() {
 		return (EReference)mobaDataTypeEClass.getEStructuralFeatures().get(8);
 	}
@@ -3053,6 +3062,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEAttribute(mobaDataTypeEClass, MOBA_DATA_TYPE__DATE_FORMAT_STRING);
 		createEReference(mobaDataTypeEClass, MOBA_DATA_TYPE__DATE_FORMAT_CONST);
 		createEReference(mobaDataTypeEClass, MOBA_DATA_TYPE__SUPER_TYPE);
+		createEAttribute(mobaDataTypeEClass, MOBA_DATA_TYPE__BOOL);
 
 		mobaConstantEClass = createEClass(MOBA_CONSTANT);
 		createEAttribute(mobaConstantEClass, MOBA_CONSTANT__NAME);
@@ -3483,6 +3493,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEAttribute(getMobaDataType_DateFormatString(), ecorePackage.getEString(), "dateFormatString", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaDataType_DateFormatConst(), this.getMobaConstant(), null, "dateFormatConst", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaDataType_SuperType(), this.getMobaDataType(), null, "superType", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaDataType_Bool(), ecorePackage.getEBoolean(), "bool", null, 0, 1, MobaDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaConstantEClass, MobaConstant.class, "MobaConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaConstant_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

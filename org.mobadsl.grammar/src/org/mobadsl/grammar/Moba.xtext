@@ -68,6 +68,7 @@ MobaDataType:
 	dateFormatConst=[MobaConstant|CONSTANT]) ')')?)
 	| (enumAST=MobaEnum)
 	| (string?="isString" (primitive?='isPrimitive')?)
+	| (bool?="isBool" (primitive?='isPrimitive')?)
 	| (numeric?="isNumeric" (primitive?='isPrimitive')?)
 	| (decimal?="isDecimal" (primitive?='isPrimitive')?))) MobaFriendsAble;
 

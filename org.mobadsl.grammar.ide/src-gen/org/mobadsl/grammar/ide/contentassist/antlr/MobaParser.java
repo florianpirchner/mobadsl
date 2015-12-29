@@ -99,6 +99,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_2(), "rule__MobaDataType__Group_3_2_2__0");
 					put(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_3(), "rule__MobaDataType__Group_3_2_3__0");
 					put(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_4(), "rule__MobaDataType__Group_3_2_4__0");
+					put(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_5(), "rule__MobaDataType__Group_3_2_5__0");
 					put(grammarAccess.getMobaEnumAccess().getGroup(), "rule__MobaEnum__Group__0");
 					put(grammarAccess.getMobaEnumLiteralAccess().getGroup(), "rule__MobaEnumLiteral__Group__0");
 					put(grammarAccess.getMobaEnumLiteralAccess().getGroup_7_0(), "rule__MobaEnumLiteral__Group_7_0__0");
@@ -220,10 +221,12 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaDataTypeAccess().getEnumASTAssignment_3_2_1(), "rule__MobaDataType__EnumASTAssignment_3_2_1");
 					put(grammarAccess.getMobaDataTypeAccess().getStringAssignment_3_2_2_0(), "rule__MobaDataType__StringAssignment_3_2_2_0");
 					put(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_2_1(), "rule__MobaDataType__PrimitiveAssignment_3_2_2_1");
-					put(grammarAccess.getMobaDataTypeAccess().getNumericAssignment_3_2_3_0(), "rule__MobaDataType__NumericAssignment_3_2_3_0");
+					put(grammarAccess.getMobaDataTypeAccess().getBoolAssignment_3_2_3_0(), "rule__MobaDataType__BoolAssignment_3_2_3_0");
 					put(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_3_1(), "rule__MobaDataType__PrimitiveAssignment_3_2_3_1");
-					put(grammarAccess.getMobaDataTypeAccess().getDecimalAssignment_3_2_4_0(), "rule__MobaDataType__DecimalAssignment_3_2_4_0");
+					put(grammarAccess.getMobaDataTypeAccess().getNumericAssignment_3_2_4_0(), "rule__MobaDataType__NumericAssignment_3_2_4_0");
 					put(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_4_1(), "rule__MobaDataType__PrimitiveAssignment_3_2_4_1");
+					put(grammarAccess.getMobaDataTypeAccess().getDecimalAssignment_3_2_5_0(), "rule__MobaDataType__DecimalAssignment_3_2_5_0");
+					put(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_5_1(), "rule__MobaDataType__PrimitiveAssignment_3_2_5_1");
 					put(grammarAccess.getMobaEnumAccess().getLiteralsAssignment_3(), "rule__MobaEnum__LiteralsAssignment_3");
 					put(grammarAccess.getMobaEnumLiteralAccess().getNameAssignment_1(), "rule__MobaEnumLiteral__NameAssignment_1");
 					put(grammarAccess.getMobaEnumLiteralAccess().getLiteralAssignment_4(), "rule__MobaEnumLiteral__LiteralAssignment_4");

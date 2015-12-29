@@ -2076,6 +2076,12 @@ rule__MobaDataType__Alternatives_3_2
 		(rule__MobaDataType__Group_3_2_4__0)
 		{ after(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_4()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_5()); }
+		(rule__MobaDataType__Group_3_2_5__0)
+		{ after(grammarAccess.getMobaDataTypeAccess().getGroup_3_2_5()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5483,9 +5489,9 @@ rule__MobaDataType__Group_3_2_3__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getMobaDataTypeAccess().getNumericAssignment_3_2_3_0()); }
-	(rule__MobaDataType__NumericAssignment_3_2_3_0)
-	{ after(grammarAccess.getMobaDataTypeAccess().getNumericAssignment_3_2_3_0()); }
+	{ before(grammarAccess.getMobaDataTypeAccess().getBoolAssignment_3_2_3_0()); }
+	(rule__MobaDataType__BoolAssignment_3_2_3_0)
+	{ after(grammarAccess.getMobaDataTypeAccess().getBoolAssignment_3_2_3_0()); }
 )
 ;
 finally {
@@ -5537,9 +5543,9 @@ rule__MobaDataType__Group_3_2_4__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getMobaDataTypeAccess().getDecimalAssignment_3_2_4_0()); }
-	(rule__MobaDataType__DecimalAssignment_3_2_4_0)
-	{ after(grammarAccess.getMobaDataTypeAccess().getDecimalAssignment_3_2_4_0()); }
+	{ before(grammarAccess.getMobaDataTypeAccess().getNumericAssignment_3_2_4_0()); }
+	(rule__MobaDataType__NumericAssignment_3_2_4_0)
+	{ after(grammarAccess.getMobaDataTypeAccess().getNumericAssignment_3_2_4_0()); }
 )
 ;
 finally {
@@ -5566,6 +5572,60 @@ rule__MobaDataType__Group_3_2_4__1__Impl
 	{ before(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_4_1()); }
 	(rule__MobaDataType__PrimitiveAssignment_3_2_4_1)?
 	{ after(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_4_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MobaDataType__Group_3_2_5__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaDataType__Group_3_2_5__0__Impl
+	rule__MobaDataType__Group_3_2_5__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDataType__Group_3_2_5__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaDataTypeAccess().getDecimalAssignment_3_2_5_0()); }
+	(rule__MobaDataType__DecimalAssignment_3_2_5_0)
+	{ after(grammarAccess.getMobaDataTypeAccess().getDecimalAssignment_3_2_5_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDataType__Group_3_2_5__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaDataType__Group_3_2_5__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDataType__Group_3_2_5__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_5_1()); }
+	(rule__MobaDataType__PrimitiveAssignment_3_2_5_1)?
+	{ after(grammarAccess.getMobaDataTypeAccess().getPrimitiveAssignment_3_2_5_1()); }
 )
 ;
 finally {
@@ -15849,19 +15909,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__MobaDataType__NumericAssignment_3_2_3_0
+rule__MobaDataType__BoolAssignment_3_2_3_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_3_0_0()); }
+		{ before(grammarAccess.getMobaDataTypeAccess().getBoolIsBoolKeyword_3_2_3_0_0()); }
 		(
-			{ before(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_3_0_0()); }
-			'isNumeric'
-			{ after(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_3_0_0()); }
+			{ before(grammarAccess.getMobaDataTypeAccess().getBoolIsBoolKeyword_3_2_3_0_0()); }
+			'isBool'
+			{ after(grammarAccess.getMobaDataTypeAccess().getBoolIsBoolKeyword_3_2_3_0_0()); }
 		)
-		{ after(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_3_0_0()); }
+		{ after(grammarAccess.getMobaDataTypeAccess().getBoolIsBoolKeyword_3_2_3_0_0()); }
 	)
 ;
 finally {
@@ -15887,19 +15947,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__MobaDataType__DecimalAssignment_3_2_4_0
+rule__MobaDataType__NumericAssignment_3_2_4_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_4_0_0()); }
+		{ before(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_4_0_0()); }
 		(
-			{ before(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_4_0_0()); }
-			'isDecimal'
-			{ after(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_4_0_0()); }
+			{ before(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_4_0_0()); }
+			'isNumeric'
+			{ after(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_4_0_0()); }
 		)
-		{ after(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_4_0_0()); }
+		{ after(grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_4_0_0()); }
 	)
 ;
 finally {
@@ -15919,6 +15979,44 @@ rule__MobaDataType__PrimitiveAssignment_3_2_4_1
 			{ after(grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_4_1_0()); }
 		)
 		{ after(grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_4_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDataType__DecimalAssignment_3_2_5_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_5_0_0()); }
+		(
+			{ before(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_5_0_0()); }
+			'isDecimal'
+			{ after(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_5_0_0()); }
+		)
+		{ after(grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_5_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaDataType__PrimitiveAssignment_3_2_5_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_5_1_0()); }
+		(
+			{ before(grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_5_1_0()); }
+			'isPrimitive'
+			{ after(grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_5_1_0()); }
+		)
+		{ after(grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_5_1_0()); }
 	)
 ;
 finally {

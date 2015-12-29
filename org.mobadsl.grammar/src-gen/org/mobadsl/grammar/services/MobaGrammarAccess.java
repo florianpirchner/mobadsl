@@ -775,15 +775,20 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPrimitiveAssignment_3_2_2_1 = (Assignment)cGroup_3_2_2.eContents().get(1);
 		private final Keyword cPrimitiveIsPrimitiveKeyword_3_2_2_1_0 = (Keyword)cPrimitiveAssignment_3_2_2_1.eContents().get(0);
 		private final Group cGroup_3_2_3 = (Group)cAlternatives_3_2.eContents().get(3);
-		private final Assignment cNumericAssignment_3_2_3_0 = (Assignment)cGroup_3_2_3.eContents().get(0);
-		private final Keyword cNumericIsNumericKeyword_3_2_3_0_0 = (Keyword)cNumericAssignment_3_2_3_0.eContents().get(0);
+		private final Assignment cBoolAssignment_3_2_3_0 = (Assignment)cGroup_3_2_3.eContents().get(0);
+		private final Keyword cBoolIsBoolKeyword_3_2_3_0_0 = (Keyword)cBoolAssignment_3_2_3_0.eContents().get(0);
 		private final Assignment cPrimitiveAssignment_3_2_3_1 = (Assignment)cGroup_3_2_3.eContents().get(1);
 		private final Keyword cPrimitiveIsPrimitiveKeyword_3_2_3_1_0 = (Keyword)cPrimitiveAssignment_3_2_3_1.eContents().get(0);
 		private final Group cGroup_3_2_4 = (Group)cAlternatives_3_2.eContents().get(4);
-		private final Assignment cDecimalAssignment_3_2_4_0 = (Assignment)cGroup_3_2_4.eContents().get(0);
-		private final Keyword cDecimalIsDecimalKeyword_3_2_4_0_0 = (Keyword)cDecimalAssignment_3_2_4_0.eContents().get(0);
+		private final Assignment cNumericAssignment_3_2_4_0 = (Assignment)cGroup_3_2_4.eContents().get(0);
+		private final Keyword cNumericIsNumericKeyword_3_2_4_0_0 = (Keyword)cNumericAssignment_3_2_4_0.eContents().get(0);
 		private final Assignment cPrimitiveAssignment_3_2_4_1 = (Assignment)cGroup_3_2_4.eContents().get(1);
 		private final Keyword cPrimitiveIsPrimitiveKeyword_3_2_4_1_0 = (Keyword)cPrimitiveAssignment_3_2_4_1.eContents().get(0);
+		private final Group cGroup_3_2_5 = (Group)cAlternatives_3_2.eContents().get(5);
+		private final Assignment cDecimalAssignment_3_2_5_0 = (Assignment)cGroup_3_2_5.eContents().get(0);
+		private final Keyword cDecimalIsDecimalKeyword_3_2_5_0_0 = (Keyword)cDecimalAssignment_3_2_5_0.eContents().get(0);
+		private final Assignment cPrimitiveAssignment_3_2_5_1 = (Assignment)cGroup_3_2_5.eContents().get(1);
+		private final Keyword cPrimitiveIsPrimitiveKeyword_3_2_5_1_0 = (Keyword)cPrimitiveAssignment_3_2_5_1.eContents().get(0);
 		private final RuleCall cMobaFriendsAbleParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//MobaDataType:
@@ -791,14 +796,15 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//	& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
 		//	& ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
 		//	dateFormatConst=[MobaConstant|CONSTANT]) ')')? | enumAST=MobaEnum | string?="isString" primitive?='isPrimitive'? |
-		//	numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal" primitive?='isPrimitive'?)) MobaFriendsAble;
+		//	bool?="isBool" primitive?='isPrimitive'? | numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal"
+		//	primitive?='isPrimitive'?)) MobaFriendsAble;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'datatype' name=ID ('extends' superType=[MobaDataType])? (array?='isArray'? & ('constraints' '('
 		//constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')? & ((date?='isDate' | time?='isTime' |
 		//timestamp?='isTimestamp') ('(' (dateFormatString=STRING | dateFormatConst=[MobaConstant|CONSTANT]) ')')? |
-		//enumAST=MobaEnum | string?="isString" primitive?='isPrimitive'? | numeric?="isNumeric" primitive?='isPrimitive'? |
-		//decimal?="isDecimal" primitive?='isPrimitive'?)) MobaFriendsAble
+		//enumAST=MobaEnum | string?="isString" primitive?='isPrimitive'? | bool?="isBool" primitive?='isPrimitive'? |
+		//numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal" primitive?='isPrimitive'?)) MobaFriendsAble
 		public Group getGroup() { return cGroup; }
 		
 		//'datatype'
@@ -828,7 +834,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//(array?='isArray'? & ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')? &
 		//((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
 		//dateFormatConst=[MobaConstant|CONSTANT]) ')')? | enumAST=MobaEnum | string?="isString" primitive?='isPrimitive'? |
-		//numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal" primitive?='isPrimitive'?))
+		//bool?="isBool" primitive?='isPrimitive'? | numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal"
+		//primitive?='isPrimitive'?))
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 		
 		//array?='isArray'?
@@ -869,7 +876,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
 		//dateFormatConst=[MobaConstant|CONSTANT]) ')')? | enumAST=MobaEnum | string?="isString" primitive?='isPrimitive'? |
-		//numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal" primitive?='isPrimitive'?)
+		//bool?="isBool" primitive?='isPrimitive'? | numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal"
+		//primitive?='isPrimitive'?)
 		public Alternatives getAlternatives_3_2() { return cAlternatives_3_2; }
 		
 		//(date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
@@ -945,14 +953,14 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'isPrimitive'
 		public Keyword getPrimitiveIsPrimitiveKeyword_3_2_2_1_0() { return cPrimitiveIsPrimitiveKeyword_3_2_2_1_0; }
 		
-		//numeric?="isNumeric" primitive?='isPrimitive'?
+		//bool?="isBool" primitive?='isPrimitive'?
 		public Group getGroup_3_2_3() { return cGroup_3_2_3; }
 		
-		//numeric?="isNumeric"
-		public Assignment getNumericAssignment_3_2_3_0() { return cNumericAssignment_3_2_3_0; }
+		//bool?="isBool"
+		public Assignment getBoolAssignment_3_2_3_0() { return cBoolAssignment_3_2_3_0; }
 		
-		//"isNumeric"
-		public Keyword getNumericIsNumericKeyword_3_2_3_0_0() { return cNumericIsNumericKeyword_3_2_3_0_0; }
+		//"isBool"
+		public Keyword getBoolIsBoolKeyword_3_2_3_0_0() { return cBoolIsBoolKeyword_3_2_3_0_0; }
 		
 		//primitive?='isPrimitive'?
 		public Assignment getPrimitiveAssignment_3_2_3_1() { return cPrimitiveAssignment_3_2_3_1; }
@@ -960,20 +968,35 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'isPrimitive'
 		public Keyword getPrimitiveIsPrimitiveKeyword_3_2_3_1_0() { return cPrimitiveIsPrimitiveKeyword_3_2_3_1_0; }
 		
-		//decimal?="isDecimal" primitive?='isPrimitive'?
+		//numeric?="isNumeric" primitive?='isPrimitive'?
 		public Group getGroup_3_2_4() { return cGroup_3_2_4; }
 		
-		//decimal?="isDecimal"
-		public Assignment getDecimalAssignment_3_2_4_0() { return cDecimalAssignment_3_2_4_0; }
+		//numeric?="isNumeric"
+		public Assignment getNumericAssignment_3_2_4_0() { return cNumericAssignment_3_2_4_0; }
 		
-		//"isDecimal"
-		public Keyword getDecimalIsDecimalKeyword_3_2_4_0_0() { return cDecimalIsDecimalKeyword_3_2_4_0_0; }
+		//"isNumeric"
+		public Keyword getNumericIsNumericKeyword_3_2_4_0_0() { return cNumericIsNumericKeyword_3_2_4_0_0; }
 		
 		//primitive?='isPrimitive'?
 		public Assignment getPrimitiveAssignment_3_2_4_1() { return cPrimitiveAssignment_3_2_4_1; }
 		
 		//'isPrimitive'
 		public Keyword getPrimitiveIsPrimitiveKeyword_3_2_4_1_0() { return cPrimitiveIsPrimitiveKeyword_3_2_4_1_0; }
+		
+		//decimal?="isDecimal" primitive?='isPrimitive'?
+		public Group getGroup_3_2_5() { return cGroup_3_2_5; }
+		
+		//decimal?="isDecimal"
+		public Assignment getDecimalAssignment_3_2_5_0() { return cDecimalAssignment_3_2_5_0; }
+		
+		//"isDecimal"
+		public Keyword getDecimalIsDecimalKeyword_3_2_5_0_0() { return cDecimalIsDecimalKeyword_3_2_5_0_0; }
+		
+		//primitive?='isPrimitive'?
+		public Assignment getPrimitiveAssignment_3_2_5_1() { return cPrimitiveAssignment_3_2_5_1; }
+		
+		//'isPrimitive'
+		public Keyword getPrimitiveIsPrimitiveKeyword_3_2_5_1_0() { return cPrimitiveIsPrimitiveKeyword_3_2_5_1_0; }
 		
 		//MobaFriendsAble
 		public RuleCall getMobaFriendsAbleParserRuleCall_4() { return cMobaFriendsAbleParserRuleCall_4; }
@@ -4629,7 +4652,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	//	& ('constraints' '(' constraints+=MobaConstraint (',' constraints+=MobaConstraint)* ')')?
 	//	& ((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
 	//	dateFormatConst=[MobaConstant|CONSTANT]) ')')? | enumAST=MobaEnum | string?="isString" primitive?='isPrimitive'? |
-	//	numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal" primitive?='isPrimitive'?)) MobaFriendsAble;
+	//	bool?="isBool" primitive?='isPrimitive'? | numeric?="isNumeric" primitive?='isPrimitive'? | decimal?="isDecimal"
+	//	primitive?='isPrimitive'?)) MobaFriendsAble;
 	public MobaDataTypeElements getMobaDataTypeAccess() {
 		return pMobaDataType;
 	}

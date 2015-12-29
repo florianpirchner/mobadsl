@@ -1474,15 +1474,15 @@ ruleMobaDataType returns [EObject current=null]
 								(
 									(
 										(
-											lv_numeric_22_0='isNumeric'
+											lv_bool_22_0='isBool'
 											{
-												newLeafNode(lv_numeric_22_0, grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_3_0_0());
+												newLeafNode(lv_bool_22_0, grammarAccess.getMobaDataTypeAccess().getBoolIsBoolKeyword_3_2_3_0_0());
 											}
 											{
 												if ($current==null) {
 													$current = createModelElement(grammarAccess.getMobaDataTypeRule());
 												}
-												setWithLastConsumed($current, "numeric", true, "isNumeric");
+												setWithLastConsumed($current, "bool", true, "isBool");
 											}
 										)
 									)
@@ -1505,9 +1505,40 @@ ruleMobaDataType returns [EObject current=null]
 								(
 									(
 										(
-											lv_decimal_24_0='isDecimal'
+											lv_numeric_24_0='isNumeric'
 											{
-												newLeafNode(lv_decimal_24_0, grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_4_0_0());
+												newLeafNode(lv_numeric_24_0, grammarAccess.getMobaDataTypeAccess().getNumericIsNumericKeyword_3_2_4_0_0());
+											}
+											{
+												if ($current==null) {
+													$current = createModelElement(grammarAccess.getMobaDataTypeRule());
+												}
+												setWithLastConsumed($current, "numeric", true, "isNumeric");
+											}
+										)
+									)
+									(
+										(
+											lv_primitive_25_0='isPrimitive'
+											{
+												newLeafNode(lv_primitive_25_0, grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_4_1_0());
+											}
+											{
+												if ($current==null) {
+													$current = createModelElement(grammarAccess.getMobaDataTypeRule());
+												}
+												setWithLastConsumed($current, "primitive", true, "isPrimitive");
+											}
+										)
+									)?
+								)
+								    |
+								(
+									(
+										(
+											lv_decimal_26_0='isDecimal'
+											{
+												newLeafNode(lv_decimal_26_0, grammarAccess.getMobaDataTypeAccess().getDecimalIsDecimalKeyword_3_2_5_0_0());
 											}
 											{
 												if ($current==null) {
@@ -1519,9 +1550,9 @@ ruleMobaDataType returns [EObject current=null]
 									)
 									(
 										(
-											lv_primitive_25_0='isPrimitive'
+											lv_primitive_27_0='isPrimitive'
 											{
-												newLeafNode(lv_primitive_25_0, grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_4_1_0());
+												newLeafNode(lv_primitive_27_0, grammarAccess.getMobaDataTypeAccess().getPrimitiveIsPrimitiveKeyword_3_2_5_1_0());
 											}
 											{
 												if ($current==null) {
@@ -1552,9 +1583,9 @@ ruleMobaDataType returns [EObject current=null]
 			}
 			newCompositeNode(grammarAccess.getMobaDataTypeAccess().getMobaFriendsAbleParserRuleCall_4());
 		}
-		this_MobaFriendsAble_26=ruleMobaFriendsAble[$current]
+		this_MobaFriendsAble_28=ruleMobaFriendsAble[$current]
 		{
-			$current = $this_MobaFriendsAble_26.current;
+			$current = $this_MobaFriendsAble_28.current;
 			afterParserOrEnumRuleCall();
 		}
 	)

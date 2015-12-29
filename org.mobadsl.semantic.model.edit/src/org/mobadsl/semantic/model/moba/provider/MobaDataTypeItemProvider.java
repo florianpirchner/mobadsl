@@ -57,6 +57,7 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 			addDateFormatStringPropertyDescriptor(object);
 			addDateFormatConstPropertyDescriptor(object);
 			addSuperTypePropertyDescriptor(object);
+			addBoolPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -326,6 +327,28 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Bool feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBoolPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDataType_bool_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDataType_bool_feature", "_UI_MobaDataType_type"),
+				 MobaPackage.Literals.MOBA_DATA_TYPE__BOOL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -404,6 +427,7 @@ public class MobaDataTypeItemProvider extends MobaApplicationFeatureItemProvider
 			case MobaPackage.MOBA_DATA_TYPE__TIMESTAMP:
 			case MobaPackage.MOBA_DATA_TYPE__ARRAY:
 			case MobaPackage.MOBA_DATA_TYPE__DATE_FORMAT_STRING:
+			case MobaPackage.MOBA_DATA_TYPE__BOOL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaPackage.MOBA_DATA_TYPE__CONSTRAINTS:

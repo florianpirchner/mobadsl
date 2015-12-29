@@ -405,6 +405,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             (array?='isArray' | enumAST=MobaEnum)? 
 	 *             (string?='isString' primitive?='isPrimitive'?)? 
+	 *             (bool?='isBool' primitive?='isPrimitive'?)? 
 	 *             (numeric?='isNumeric' primitive?='isPrimitive'?)? 
 	 *             (decimal?='isDecimal' primitive?='isPrimitive'?)? 
 	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)? 

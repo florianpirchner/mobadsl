@@ -25,6 +25,7 @@ import java.util.List;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatString <em>Date Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isBool <em>Bool</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType()
@@ -296,6 +297,32 @@ public interface MobaDataType extends MobaApplicationFeature, MobaConstraintable
 	 * @generated
 	 */
 	void setSuperType(MobaDataType value);
+
+	/**
+	 * Returns the value of the '<em><b>Bool</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bool</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bool</em>' attribute.
+	 * @see #setBool(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_Bool()
+	 * @model
+	 * @generated
+	 */
+	boolean isBool();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isBool <em>Bool</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bool</em>' attribute.
+	 * @see #isBool()
+	 * @generated
+	 */
+	void setBool(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Enum AST</b></em>' containment reference.
