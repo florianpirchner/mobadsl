@@ -3,7 +3,6 @@
 package org.mobadsl.semantic.model.moba.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

@@ -6,7 +6,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.mobadsl.semantic.model.moba.*;
 import org.mobadsl.semantic.model.moba.MobaAppInstallTrigger;
 import org.mobadsl.semantic.model.moba.MobaAppUpdateTrigger;
 import org.mobadsl.semantic.model.moba.MobaApplication;

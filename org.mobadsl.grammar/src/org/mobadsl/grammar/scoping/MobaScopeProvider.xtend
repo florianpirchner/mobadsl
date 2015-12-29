@@ -4,19 +4,13 @@
 package org.mobadsl.grammar.scoping
 
 import com.google.inject.Inject
-import java.util.List
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.naming.QualifiedName
-import org.eclipse.xtext.resource.IEObjectDescription
-import org.eclipse.xtext.resource.IResourceDescriptions
-import org.eclipse.xtext.resource.impl.SimpleResourceDescriptionsBasedContainerManager
 import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider
-import org.eclipse.xtext.scoping.impl.SimpleScope
 import org.mobadsl.semantic.model.moba.MobaApplication
-import org.mobadsl.semantic.model.moba.MobaPackage
 import org.mobadsl.semantic.model.moba.util.MobaUtil
 
 /**

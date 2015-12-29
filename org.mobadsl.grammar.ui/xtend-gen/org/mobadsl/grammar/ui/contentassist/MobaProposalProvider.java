@@ -3,13 +3,11 @@
  */
 package org.mobadsl.grammar.ui.contentassist;
 
-import com.google.common.base.Objects;
-import com.google.inject.Inject;
-import com.google.inject.name.Named;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.StyledString;
@@ -25,7 +23,6 @@ import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.mobadsl.api.template.repository.ITemplateRepositoryManager;
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
-import org.mobadsl.grammar.ui.contentassist.AbstractMobaProposalProvider;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaGeneratorIDFeature;
 import org.mobadsl.semantic.model.moba.index.MobaIndex;
@@ -35,6 +32,10 @@ import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
+
+import com.google.common.base.Objects;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist

@@ -3,10 +3,10 @@ package org.mobadsl.grammar.generator.common;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
-import org.mobadsl.grammar.generator.common.IGeneratorDelegate;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;

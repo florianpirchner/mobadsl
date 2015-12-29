@@ -3,10 +3,10 @@
  */
 package org.mobadsl.grammar.ide.contentassist.antlr;
 
-import com.google.inject.Inject;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.antlr.runtime.RecognitionException;
 import org.eclipse.xtext.AbstractElement;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.AbstractContentAssistParser;
@@ -14,6 +14,8 @@ import org.eclipse.xtext.ide.editor.contentassist.antlr.FollowElement;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
 import org.mobadsl.grammar.ide.contentassist.antlr.internal.InternalMobaParser;
 import org.mobadsl.grammar.services.MobaGrammarAccess;
+
+import com.google.inject.Inject;
 
 public class MobaParser extends AbstractContentAssistParser {
 

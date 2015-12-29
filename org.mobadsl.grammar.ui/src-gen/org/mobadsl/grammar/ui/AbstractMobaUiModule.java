@@ -3,9 +3,6 @@
  */
 package org.mobadsl.grammar.ui;
 
-import com.google.inject.Binder;
-import com.google.inject.Provider;
-import com.google.inject.name.Names;
 import org.eclipse.compare.IViewerCreator;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -76,6 +73,10 @@ import org.mobadsl.grammar.ui.labeling.MobaDescriptionLabelProvider;
 import org.mobadsl.grammar.ui.labeling.MobaLabelProvider;
 import org.mobadsl.grammar.ui.outline.MobaOutlineTreeProvider;
 import org.mobadsl.grammar.ui.quickfix.MobaQuickfixProvider;
+
+import com.google.inject.Binder;
+import com.google.inject.Provider;
+import com.google.inject.name.Names;
 
 /**
  * Manual modifications go to {@link MobaUiModule}.

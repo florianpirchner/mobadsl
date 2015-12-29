@@ -6,7 +6,6 @@ package org.mobadsl.grammar.ui;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 import org.eclipse.xtext.documentation.IEObjectDocumentationProvider;
-import org.mobadsl.grammar.ui.AbstractMobaUiModule;
 import org.mobadsl.grammar.ui.hover.MobaHoverDocumentationProvider;
 
 /**

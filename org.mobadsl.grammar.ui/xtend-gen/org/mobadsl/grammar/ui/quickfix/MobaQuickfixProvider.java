@@ -3,8 +3,8 @@
  */
 package org.mobadsl.grammar.ui.quickfix;
 
-import com.google.common.base.Objects;
 import java.util.ArrayList;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.xtext.ui.editor.model.IXtextDocument;
@@ -17,6 +17,8 @@ import org.eclipse.xtext.validation.Issue;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.mobadsl.grammar.validation.MobaValidator;
 import org.mobadsl.ide.eclipse.TemplateIndexHelper;
+
+import com.google.common.base.Objects;
 
 @SuppressWarnings("all")
 public class MobaQuickfixProvider extends DefaultQuickfixProvider {
