@@ -567,8 +567,8 @@ class MobaValidator extends AbstractMobaValidator {
 
 	@Check
 	def void checkOpposite(MobaEntityReference ref) {
-		if (ref.multiplicity.bounds.isToMany && ref.opposite == null) {
-			error("Opposite reference must be set for 0-* references", ref,
+		if (ref.cascading && ref.multiplicity.bounds.isToMany && ref.opposite == null) {
+			error("Opposite reference must be set for cascading 0-* references", ref,
 				MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE)
 		}
 
@@ -580,8 +580,8 @@ class MobaValidator extends AbstractMobaValidator {
 
 	@Check
 	def void checkOpposite(MobaDtoReference ref) {
-		if (ref.multiplicity.bounds.isToMany && ref.opposite == null) {
-			error("Opposite reference must be set for 0-* references", ref,
+		if (ref.cascading && ref.multiplicity.bounds.isToMany && ref.opposite == null) {
+			error("Opposite reference must be set for cascading 0-* references", ref,
 				MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE)
 		}
 

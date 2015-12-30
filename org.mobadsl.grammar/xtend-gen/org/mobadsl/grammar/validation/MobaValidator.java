@@ -1064,10 +1064,17 @@ public class MobaValidator extends AbstractMobaValidator {
   @Check
   public void checkOpposite(final MobaEntityReference ref) {
     boolean _and = false;
-    MobaMuliplicity _multiplicity = ref.getMultiplicity();
-    Bounds _bounds = _multiplicity.getBounds();
-    boolean _isToMany = _bounds.isToMany();
-    if (!_isToMany) {
+    boolean _and_1 = false;
+    boolean _isCascading = ref.isCascading();
+    if (!_isCascading) {
+      _and_1 = false;
+    } else {
+      MobaMuliplicity _multiplicity = ref.getMultiplicity();
+      Bounds _bounds = _multiplicity.getBounds();
+      boolean _isToMany = _bounds.isToMany();
+      _and_1 = _isToMany;
+    }
+    if (!_and_1) {
       _and = false;
     } else {
       MobaEntityReference _opposite = ref.getOpposite();
@@ -1075,21 +1082,21 @@ public class MobaValidator extends AbstractMobaValidator {
       _and = _equals;
     }
     if (_and) {
-      this.error("Opposite reference must be set for 0-* references", ref, 
+      this.error("Opposite reference must be set for cascading 0-* references", ref, 
         MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE);
     }
-    boolean _and_1 = false;
+    boolean _and_2 = false;
     MobaEntityReference _opposite_1 = ref.getOpposite();
     boolean _notEquals = (!Objects.equal(_opposite_1, null));
     if (!_notEquals) {
-      _and_1 = false;
+      _and_2 = false;
     } else {
       MobaEntityReference _opposite_2 = ref.getOpposite();
       MobaEntityReference _opposite_3 = _opposite_2.getOpposite();
       boolean _equals_1 = Objects.equal(_opposite_3, null);
-      _and_1 = _equals_1;
+      _and_2 = _equals_1;
     }
-    if (_and_1) {
+    if (_and_2) {
       this.error("Opposite references must be defined on both sides", ref, 
         MobaPackage.Literals.MOBA_ENTITY_REFERENCE__OPPOSITE);
     }
@@ -1098,10 +1105,17 @@ public class MobaValidator extends AbstractMobaValidator {
   @Check
   public void checkOpposite(final MobaDtoReference ref) {
     boolean _and = false;
-    MobaMuliplicity _multiplicity = ref.getMultiplicity();
-    Bounds _bounds = _multiplicity.getBounds();
-    boolean _isToMany = _bounds.isToMany();
-    if (!_isToMany) {
+    boolean _and_1 = false;
+    boolean _isCascading = ref.isCascading();
+    if (!_isCascading) {
+      _and_1 = false;
+    } else {
+      MobaMuliplicity _multiplicity = ref.getMultiplicity();
+      Bounds _bounds = _multiplicity.getBounds();
+      boolean _isToMany = _bounds.isToMany();
+      _and_1 = _isToMany;
+    }
+    if (!_and_1) {
       _and = false;
     } else {
       MobaDtoReference _opposite = ref.getOpposite();
@@ -1109,21 +1123,21 @@ public class MobaValidator extends AbstractMobaValidator {
       _and = _equals;
     }
     if (_and) {
-      this.error("Opposite reference must be set for 0-* references", ref, 
+      this.error("Opposite reference must be set for cascading 0-* references", ref, 
         MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE);
     }
-    boolean _and_1 = false;
+    boolean _and_2 = false;
     MobaDtoReference _opposite_1 = ref.getOpposite();
     boolean _notEquals = (!Objects.equal(_opposite_1, null));
     if (!_notEquals) {
-      _and_1 = false;
+      _and_2 = false;
     } else {
       MobaDtoReference _opposite_2 = ref.getOpposite();
       MobaDtoReference _opposite_3 = _opposite_2.getOpposite();
       boolean _equals_1 = Objects.equal(_opposite_3, null);
-      _and_1 = _equals_1;
+      _and_2 = _equals_1;
     }
-    if (_and_1) {
+    if (_and_2) {
       this.error("Opposite references must be defined on both sides", ref, 
         MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE);
     }
