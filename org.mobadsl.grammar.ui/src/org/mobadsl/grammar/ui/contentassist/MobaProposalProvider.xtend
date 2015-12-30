@@ -21,6 +21,7 @@ import org.mobadsl.semantic.model.moba.index.MobaIndex
 import org.mobadsl.semantic.model.moba.index.MobaIndexEntry
 import org.mobadsl.semantic.model.moba.util.MobaUtil
 import org.osgi.framework.FrameworkUtil
+import org.eclipse.xtext.RuleCall
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
@@ -97,6 +98,22 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 
 		return result
 	}
+	
+	override void complete_MobaMuliplicity(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		super.complete_MobaMuliplicity(model, ruleCall, context, acceptor);
+		
+		acceptor.accept(doCreateProposal("[*]", "[*]".getDisplayString_Multiplicity("to many"), model.image, 1000, context))
+		acceptor.accept(doCreateProposal("[+]", "[+]".getDisplayString_Multiplicity("to many, but at least one"), model.image, 1000, context))
+		acceptor.accept(doCreateProposal("[?]", "[?]".getDisplayString_Multiplicity("optional"), model.image, 1000, context))
+		acceptor.accept(doCreateProposal("[0 ..*]", "[0..*]".getDisplayString_Multiplicity("to many"), model.image, 1000, context))
+	}
+	
+	def StyledString getDisplayString_Multiplicity(String value, String description) {
+		val StyledString string = new StyledString(value + " - ")
+		string.append(description, StyledString.QUALIFIER_STYLER)
+
+		return string
+	}
 
 	def StyledString createStyledStringForVersion(Metadata metadata) {
 		val result = new StyledString(metadata.version)
@@ -163,5 +180,4 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		}
 		return qualifiedNameAsString;
 	}
-
 }

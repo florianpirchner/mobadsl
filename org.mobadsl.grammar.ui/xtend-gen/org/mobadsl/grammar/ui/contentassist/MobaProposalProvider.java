@@ -17,6 +17,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Constants;
+import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.ui.editor.contentassist.ConfigurableCompletionProposal;
@@ -153,6 +154,33 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
       result.append(_builder_2.toString(), StyledString.COUNTER_STYLER);
     }
     return result;
+  }
+  
+  @Override
+  public void complete_MobaMuliplicity(final EObject model, final RuleCall ruleCall, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    super.complete_MobaMuliplicity(model, ruleCall, context, acceptor);
+    StyledString _displayString_Multiplicity = this.getDisplayString_Multiplicity("[*]", "to many");
+    Image _image = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal("[*]", _displayString_Multiplicity, _image, 1000, context);
+    acceptor.accept(_doCreateProposal);
+    StyledString _displayString_Multiplicity_1 = this.getDisplayString_Multiplicity("[+]", "to many, but at least one");
+    Image _image_1 = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal_1 = this.doCreateProposal("[+]", _displayString_Multiplicity_1, _image_1, 1000, context);
+    acceptor.accept(_doCreateProposal_1);
+    StyledString _displayString_Multiplicity_2 = this.getDisplayString_Multiplicity("[?]", "optional");
+    Image _image_2 = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal_2 = this.doCreateProposal("[?]", _displayString_Multiplicity_2, _image_2, 1000, context);
+    acceptor.accept(_doCreateProposal_2);
+    StyledString _displayString_Multiplicity_3 = this.getDisplayString_Multiplicity("[0..*]", "to many");
+    Image _image_3 = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal_3 = this.doCreateProposal("[0 ..*]", _displayString_Multiplicity_3, _image_3, 1000, context);
+    acceptor.accept(_doCreateProposal_3);
+  }
+  
+  public StyledString getDisplayString_Multiplicity(final String value, final String description) {
+    final StyledString string = new StyledString((value + " - "));
+    string.append(description, StyledString.QUALIFIER_STYLER);
+    return string;
   }
   
   public StyledString createStyledStringForVersion(final ExtensionGeneratorDelegate.Metadata metadata) {
