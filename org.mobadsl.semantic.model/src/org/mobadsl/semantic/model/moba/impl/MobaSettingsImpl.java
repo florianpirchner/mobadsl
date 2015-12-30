@@ -29,23 +29,18 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getName
- * <em>Name</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getFeatures
- * <em>Features</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#isActive
- * <em>Active</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements MobaSettings {
 	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSuperType()
 	 * @generated
 	 * @ordered
@@ -55,7 +50,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -65,7 +59,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -73,9 +66,8 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFeatures() <em>Features</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
@@ -85,7 +77,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	/**
 	 * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #isActive()
 	 * @generated
 	 * @ordered
@@ -95,7 +86,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 	/**
 	 * The cached value of the '{@link #isActive() <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #isActive()
 	 * @generated
 	 * @ordered
@@ -104,7 +94,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaSettingsImpl() {
@@ -113,7 +102,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -123,17 +111,15 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaSettings getSuperType() {
 		if (superType != null && superType.eIsProxy()) {
-			InternalEObject oldSuperType = (InternalEObject) superType;
-			superType = (MobaSettings) eResolveProxy(oldSuperType);
+			InternalEObject oldSuperType = (InternalEObject)superType;
+			superType = (MobaSettings)eResolveProxy(oldSuperType);
 			if (superType != oldSuperType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SETTINGS__SUPER_TYPE,
-							oldSuperType, superType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SETTINGS__SUPER_TYPE, oldSuperType, superType));
 			}
 		}
 		return superType;
@@ -141,7 +127,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaSettings basicGetSuperType() {
@@ -150,20 +135,17 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setSuperType(MobaSettings newSuperType) {
 		MobaSettings oldSuperType = superType;
 		superType = newSuperType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS__SUPER_TYPE, oldSuperType,
-					superType));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -172,7 +154,6 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -184,20 +165,17 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaSettingsFeature> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentEList<MobaSettingsFeature>(MobaSettingsFeature.class, this,
-					MobaPackage.MOBA_SETTINGS__FEATURES);
+			features = new EObjectContainmentEList<MobaSettingsFeature>(MobaSettingsFeature.class, this, MobaPackage.MOBA_SETTINGS__FEATURES);
 		}
 		return features;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean isActive() {
@@ -206,132 +184,122 @@ public class MobaSettingsImpl extends MobaApplicationFeatureImpl implements Moba
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setActive(boolean newActive) {
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS__ACTIVE, oldActive,
-					active));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SETTINGS__ACTIVE, oldActive, active));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SETTINGS__FEATURES:
-			return ((InternalEList<?>) getFeatures()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_SETTINGS__FEATURES:
+				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
-			if (resolve)
-				return getSuperType();
-			return basicGetSuperType();
-		case MobaPackage.MOBA_SETTINGS__NAME:
-			return getName();
-		case MobaPackage.MOBA_SETTINGS__FEATURES:
-			return getFeatures();
-		case MobaPackage.MOBA_SETTINGS__ACTIVE:
-			return isActive();
+			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
+				if (resolve) return getSuperType();
+				return basicGetSuperType();
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				return getName();
+			case MobaPackage.MOBA_SETTINGS__FEATURES:
+				return getFeatures();
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
-			setSuperType((MobaSettings) newValue);
-			return;
-		case MobaPackage.MOBA_SETTINGS__NAME:
-			setName((String) newValue);
-			return;
-		case MobaPackage.MOBA_SETTINGS__FEATURES:
-			getFeatures().clear();
-			getFeatures().addAll((Collection<? extends MobaSettingsFeature>) newValue);
-			return;
-		case MobaPackage.MOBA_SETTINGS__ACTIVE:
-			setActive((Boolean) newValue);
-			return;
+			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
+				setSuperType((MobaSettings)newValue);
+				return;
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				setName((String)newValue);
+				return;
+			case MobaPackage.MOBA_SETTINGS__FEATURES:
+				getFeatures().clear();
+				getFeatures().addAll((Collection<? extends MobaSettingsFeature>)newValue);
+				return;
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				setActive((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
-			setSuperType((MobaSettings) null);
-			return;
-		case MobaPackage.MOBA_SETTINGS__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_SETTINGS__FEATURES:
-			getFeatures().clear();
-			return;
-		case MobaPackage.MOBA_SETTINGS__ACTIVE:
-			setActive(ACTIVE_EDEFAULT);
-			return;
+			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
+				setSuperType((MobaSettings)null);
+				return;
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_SETTINGS__FEATURES:
+				getFeatures().clear();
+				return;
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				setActive(ACTIVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
-			return superType != null;
-		case MobaPackage.MOBA_SETTINGS__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MobaPackage.MOBA_SETTINGS__FEATURES:
-			return features != null && !features.isEmpty();
-		case MobaPackage.MOBA_SETTINGS__ACTIVE:
-			return active != ACTIVE_EDEFAULT;
+			case MobaPackage.MOBA_SETTINGS__SUPER_TYPE:
+				return superType != null;
+			case MobaPackage.MOBA_SETTINGS__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MobaPackage.MOBA_SETTINGS__FEATURES:
+				return features != null && !features.isEmpty();
+			case MobaPackage.MOBA_SETTINGS__ACTIVE:
+				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

@@ -27,6 +27,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getOpposite <em>Opposite</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoReferenceImpl#getAlias <em>Alias</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,6 +122,26 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * @ordered
 	 */
 	protected MobaDtoReference opposite;
+
+	/**
+	 * The default value of the '{@link #getAlias() <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlias()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIAS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAlias() <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlias()
+	 * @generated
+	 * @ordered
+	 */
+	protected String alias = ALIAS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -328,6 +349,27 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getAlias() {
+		return alias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlias(String newAlias) {
+		String oldAlias = alias;
+		alias = newAlias;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO_REFERENCE__ALIAS, oldAlias, alias));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -359,6 +401,8 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
 				if (resolve) return getOpposite();
 				return basicGetOpposite();
+			case MobaPackage.MOBA_DTO_REFERENCE__ALIAS:
+				return getAlias();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -390,6 +434,9 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
 				setOpposite((MobaDtoReference)newValue);
 				return;
+			case MobaPackage.MOBA_DTO_REFERENCE__ALIAS:
+				setAlias((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -420,6 +467,9 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
 				setOpposite((MobaDtoReference)null);
 				return;
+			case MobaPackage.MOBA_DTO_REFERENCE__ALIAS:
+				setAlias(ALIAS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -444,6 +494,8 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 				return type != null;
 			case MobaPackage.MOBA_DTO_REFERENCE__OPPOSITE:
 				return opposite != null;
+			case MobaPackage.MOBA_DTO_REFERENCE__ALIAS:
+				return ALIAS_EDEFAULT == null ? alias != null : !ALIAS_EDEFAULT.equals(alias);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -496,6 +548,8 @@ public class MobaDtoReferenceImpl extends MobaDtoFeatureImpl implements MobaDtoR
 		result.append(lazy);
 		result.append(", transient: ");
 		result.append(transient_);
+		result.append(", alias: ");
+		result.append(alias);
 		result.append(')');
 		return result.toString();
 	}

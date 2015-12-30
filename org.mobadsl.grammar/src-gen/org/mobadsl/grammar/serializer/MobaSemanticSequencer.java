@@ -472,20 +472,13 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             (
-	 *                 lazy?='lazy' | 
-	 *                 transient?='transient' | 
-	 *                 domainKey?='domainKey' | 
-	 *                 domainDescription?='domainDescription' | 
-	 *                 formatString=STRING | 
-	 *                 formatConst=[MobaConstant|CONSTANT] | 
-	 *                 alias=ID
-	 *             )? 
+	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
 	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
 	 *         )+ 
 	 *         type=[MobaDataType|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
+	 *         (alias=ID | formatString=STRING | formatConst=[MobaConstant|CONSTANT])* 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
@@ -505,6 +498,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         type=[MobaDto|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
+	 *         alias=ID? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
@@ -524,6 +518,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         type=[MobaDto|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
+	 *         alias=ID? 
 	 *         opposite=[MobaDtoReference|ID]? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
@@ -580,19 +575,13 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             (
-	 *                 lazy?='lazy' | 
-	 *                 transient?='transient' | 
-	 *                 domainKey?='domainKey' | 
-	 *                 domainDescription?='domainDescription' | 
-	 *                 formatString=STRING | 
-	 *                 formatConst=[MobaConstant|CONSTANT]
-	 *             )? 
+	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
 	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
 	 *         )+ 
 	 *         type=[MobaDataType|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
+	 *         (formatString=STRING | formatConst=[MobaConstant|CONSTANT])? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */
@@ -735,19 +724,13 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             (
-	 *                 lazy?='lazy' | 
-	 *                 transient?='transient' | 
-	 *                 domainKey?='domainKey' | 
-	 *                 domainDescription?='domainDescription' | 
-	 *                 formatString=STRING | 
-	 *                 formatConst=[MobaConstant|CONSTANT]
-	 *             )? 
+	 *             (lazy?='lazy' | transient?='transient' | domainKey?='domainKey' | domainDescription?='domainDescription')? 
 	 *             (constraints+=MobaConstraint constraints+=MobaConstraint*)?
 	 *         )+ 
 	 *         type=[MobaDataType|ID] 
 	 *         multiplicity=MobaMuliplicity? 
 	 *         name=ID 
+	 *         (formatString=STRING | formatConst=[MobaConstant|CONSTANT])? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
 	 *     )
 	 */

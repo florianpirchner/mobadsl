@@ -102,6 +102,7 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 	override void complete_MobaMuliplicity(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		super.complete_MobaMuliplicity(model, ruleCall, context, acceptor);
 		
+		acceptor.accept(doCreateProposal("attName", "attName".getDisplayString_Multiplicity("the attName for optional"), model.image, 1001, context))
 		acceptor.accept(doCreateProposal("[*]", "[*]".getDisplayString_Multiplicity("to many"), model.image, 1000, context))
 		acceptor.accept(doCreateProposal("[+]", "[+]".getDisplayString_Multiplicity("to many, but at least one"), model.image, 1000, context))
 		acceptor.accept(doCreateProposal("[?]", "[?]".getDisplayString_Multiplicity("optional"), model.image, 1000, context))

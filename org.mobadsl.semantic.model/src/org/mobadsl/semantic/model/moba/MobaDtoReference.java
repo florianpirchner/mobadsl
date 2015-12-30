@@ -17,6 +17,7 @@ package org.mobadsl.semantic.model.moba;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#isTransient <em>Transient</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getType <em>Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getOpposite <em>Opposite</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getAlias <em>Alias</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference()
@@ -153,5 +154,31 @@ public interface MobaDtoReference extends MobaDtoFeature, MobaMultiplicityAble {
 	 * @generated
 	 */
 	void setOpposite(MobaDtoReference value);
+
+	/**
+	 * Returns the value of the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Alias</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Alias</em>' attribute.
+	 * @see #setAlias(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDtoReference_Alias()
+	 * @model
+	 * @generated
+	 */
+	String getAlias();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getAlias <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Alias</em>' attribute.
+	 * @see #getAlias()
+	 * @generated
+	 */
+	void setAlias(String value);
 
 } // MobaPayloadReference

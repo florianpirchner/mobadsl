@@ -3559,13 +3559,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DTO_REFERENCE__OPPOSITE = MOBA_DTO_FEATURE_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO_REFERENCE__ALIAS = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Dto Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_REFERENCE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_DTO_REFERENCE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -3622,13 +3631,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DTO_EMBEDDABLE__TYPE = MOBA_DTO_FEATURE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DTO_EMBEDDABLE__ALIAS = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Dto Embeddable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DTO_EMBEDDABLE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 3;
+	int MOBA_DTO_EMBEDDABLE_FEATURE_COUNT = MOBA_DTO_FEATURE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -6731,6 +6749,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaDtoReference_Opposite();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoReference#getAlias <em>Alias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alias</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaDtoReference#getAlias()
+	 * @see #getMobaDtoReference()
+	 * @generated
+	 */
+	EAttribute getMobaDtoReference_Alias();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaDtoEmbeddable <em>Dto Embeddable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6761,6 +6790,17 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMobaDtoEmbeddable_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDtoEmbeddable#getAlias <em>Alias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alias</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaDtoEmbeddable#getAlias()
+	 * @see #getMobaDtoEmbeddable()
+	 * @generated
+	 */
+	EAttribute getMobaDtoEmbeddable_Alias();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaQueueFeature <em>Queue Feature</em>}'.
@@ -9251,6 +9291,14 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_DTO_REFERENCE__OPPOSITE = eINSTANCE.getMobaDtoReference_Opposite();
 
 		/**
+		 * The meta object literal for the '<em><b>Alias</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_DTO_REFERENCE__ALIAS = eINSTANCE.getMobaDtoReference_Alias();
+
+		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoEmbeddableImpl <em>Dto Embeddable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9275,6 +9323,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_DTO_EMBEDDABLE__TYPE = eINSTANCE.getMobaDtoEmbeddable_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Alias</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_DTO_EMBEDDABLE__ALIAS = eINSTANCE.getMobaDtoEmbeddable_Alias();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaQueueFeatureImpl <em>Queue Feature</em>}' class.

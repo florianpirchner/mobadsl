@@ -11389,7 +11389,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaEntityAttribute"
-    // InternalMoba.g:4119:1: ruleMobaEntityAttribute returns [EObject current=null] : (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:4119:1: ruleMobaEntityAttribute returns [EObject current=null] : (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaEntityAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -11400,20 +11400,20 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token lv_domainDescription_5_0=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
-        Token lv_formatString_8_0=null;
         Token otherlv_9=null;
-        Token otherlv_10=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token otherlv_14=null;
+        Token lv_name_14_0=null;
+        Token otherlv_15=null;
         Token otherlv_16=null;
-        Token otherlv_17=null;
-        Token lv_name_19_0=null;
-        EObject lv_constraints_13_0 = null;
+        Token lv_formatString_17_0=null;
+        Token otherlv_18=null;
+        Token otherlv_19=null;
+        EObject lv_constraints_8_0 = null;
 
-        EObject lv_constraints_15_0 = null;
+        EObject lv_constraints_10_0 = null;
 
-        EObject this_MobaMultiplicityAble_18 = null;
+        EObject this_MobaMultiplicityAble_13 = null;
 
         EObject this_MobaFriendsAble_20 = null;
 
@@ -11422,11 +11422,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:4125:2: ( (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:4126:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4125:2: ( (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:4126:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:4126:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:4127:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:4126:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4127:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current]
             {
             otherlv_0=(Token)match(input,87,FOLLOW_65); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -11434,43 +11434,40 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaEntityAttributeAccess().getVarKeyword_0());
               		
             }
-            // InternalMoba.g:4131:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) )
-            // InternalMoba.g:4132:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:4131:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) )
+            // InternalMoba.g:4132:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) )
             {
-            // InternalMoba.g:4132:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) )
-            // InternalMoba.g:4133:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* )
+            // InternalMoba.g:4132:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:4133:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1());
-            // InternalMoba.g:4136:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* )
-            // InternalMoba.g:4137:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )*
+            // InternalMoba.g:4136:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* )
+            // InternalMoba.g:4137:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )*
             {
-            // InternalMoba.g:4137:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )*
-            loop73:
+            // InternalMoba.g:4137:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )*
+            loop72:
             do {
-                int alt73=7;
-                int LA73_0 = input.LA(1);
+                int alt72=6;
+                int LA72_0 = input.LA(1);
 
-                if ( LA73_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
-                    alt73=1;
+                if ( LA72_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                    alt72=1;
                 }
-                else if ( LA73_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
-                    alt73=2;
+                else if ( LA72_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                    alt72=2;
                 }
-                else if ( LA73_0 == 90 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
-                    alt73=3;
+                else if ( LA72_0 == 90 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                    alt72=3;
                 }
-                else if ( LA73_0 == 91 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
-                    alt73=4;
+                else if ( LA72_0 == 91 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                    alt72=4;
                 }
-                else if ( LA73_0 == 92 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
-                    alt73=5;
-                }
-                else if ( LA73_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 5) ) {
-                    alt73=6;
+                else if ( LA72_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                    alt72=5;
                 }
 
 
-                switch (alt73) {
+                switch (alt72) {
             	case 1 :
             	    // InternalMoba.g:4138:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
             	    {
@@ -11712,200 +11709,54 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // InternalMoba.g:4230:4: ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) )
+            	    // InternalMoba.g:4230:4: ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) )
             	    {
-            	    // InternalMoba.g:4230:4: ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) )
-            	    // InternalMoba.g:4231:5: {...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) )
+            	    // InternalMoba.g:4230:4: ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) )
+            	    // InternalMoba.g:4231:5: {...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4)");
             	    }
-            	    // InternalMoba.g:4231:116: ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) )
-            	    // InternalMoba.g:4232:6: ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) )
+            	    // InternalMoba.g:4231:116: ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) )
+            	    // InternalMoba.g:4232:6: ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 4);
-            	    // InternalMoba.g:4235:9: ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) )
-            	    // InternalMoba.g:4235:10: {...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' )
+            	    // InternalMoba.g:4235:9: ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) )
+            	    // InternalMoba.g:4235:10: {...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityAttribute", "true");
             	    }
-            	    // InternalMoba.g:4235:19: (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' )
-            	    // InternalMoba.g:4235:20: otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')'
+            	    // InternalMoba.g:4235:19: (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
+            	    // InternalMoba.g:4235:20: otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')'
             	    {
-            	    otherlv_6=(Token)match(input,92,FOLLOW_17); if (state.failed) return current;
+            	    otherlv_6=(Token)match(input,46,FOLLOW_17); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      									newLeafNode(otherlv_6, grammarAccess.getMobaEntityAttributeAccess().getFormatKeyword_1_4_0());
+            	      									newLeafNode(otherlv_6, grammarAccess.getMobaEntityAttributeAccess().getConstraintsKeyword_1_4_0());
             	      								
             	    }
-            	    otherlv_7=(Token)match(input,32,FOLLOW_14); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,32,FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getMobaEntityAttributeAccess().getLeftParenthesisKeyword_1_4_1());
             	      								
             	    }
-            	    // InternalMoba.g:4243:9: ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) )
-            	    int alt71=2;
-            	    int LA71_0 = input.LA(1);
-
-            	    if ( (LA71_0==RULE_STRING) ) {
-            	        alt71=1;
-            	    }
-            	    else if ( (LA71_0==RULE_CONSTANT) ) {
-            	        alt71=2;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 71, 0, input);
-
-            	        throw nvae;
-            	    }
-            	    switch (alt71) {
-            	        case 1 :
-            	            // InternalMoba.g:4244:10: ( (lv_formatString_8_0= RULE_STRING ) )
-            	            {
-            	            // InternalMoba.g:4244:10: ( (lv_formatString_8_0= RULE_STRING ) )
-            	            // InternalMoba.g:4245:11: (lv_formatString_8_0= RULE_STRING )
-            	            {
-            	            // InternalMoba.g:4245:11: (lv_formatString_8_0= RULE_STRING )
-            	            // InternalMoba.g:4246:12: lv_formatString_8_0= RULE_STRING
-            	            {
-            	            lv_formatString_8_0=(Token)match(input,RULE_STRING,FOLLOW_31); if (state.failed) return current;
-            	            if ( state.backtracking==0 ) {
-
-            	              												newLeafNode(lv_formatString_8_0, grammarAccess.getMobaEntityAttributeAccess().getFormatStringSTRINGTerminalRuleCall_1_4_2_0_0());
-            	              											
-            	            }
-            	            if ( state.backtracking==0 ) {
-
-            	              												if (current==null) {
-            	              													current = createModelElement(grammarAccess.getMobaEntityAttributeRule());
-            	              												}
-            	              												setWithLastConsumed(
-            	              													current,
-            	              													"formatString",
-            	              													lv_formatString_8_0,
-            	              													"org.eclipse.xtext.common.Terminals.STRING");
-            	              											
-            	            }
-
-            	            }
-
-
-            	            }
-
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            // InternalMoba.g:4263:10: ( (otherlv_9= RULE_CONSTANT ) )
-            	            {
-            	            // InternalMoba.g:4263:10: ( (otherlv_9= RULE_CONSTANT ) )
-            	            // InternalMoba.g:4264:11: (otherlv_9= RULE_CONSTANT )
-            	            {
-            	            // InternalMoba.g:4264:11: (otherlv_9= RULE_CONSTANT )
-            	            // InternalMoba.g:4265:12: otherlv_9= RULE_CONSTANT
-            	            {
-            	            if ( state.backtracking==0 ) {
-
-            	              												if (current==null) {
-            	              													current = createModelElement(grammarAccess.getMobaEntityAttributeRule());
-            	              												}
-            	              											
-            	            }
-            	            otherlv_9=(Token)match(input,RULE_CONSTANT,FOLLOW_31); if (state.failed) return current;
-            	            if ( state.backtracking==0 ) {
-
-            	              												newLeafNode(otherlv_9, grammarAccess.getMobaEntityAttributeAccess().getFormatConstMobaConstantCrossReference_1_4_2_1_0());
-            	              											
-            	            }
-
-            	            }
-
-
-            	            }
-
-
-            	            }
-            	            break;
-
-            	    }
-
-            	    otherlv_10=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_10, grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_1_4_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1());
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 6 :
-            	    // InternalMoba.g:4287:4: ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) )
+            	    // InternalMoba.g:4243:9: ( (lv_constraints_8_0= ruleMobaConstraint ) )
+            	    // InternalMoba.g:4244:10: (lv_constraints_8_0= ruleMobaConstraint )
             	    {
-            	    // InternalMoba.g:4287:4: ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) )
-            	    // InternalMoba.g:4288:5: {...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 5) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaEntityAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 5)");
-            	    }
-            	    // InternalMoba.g:4288:116: ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) )
-            	    // InternalMoba.g:4289:6: ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), 5);
-            	    // InternalMoba.g:4292:9: ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) )
-            	    // InternalMoba.g:4292:10: {...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaEntityAttribute", "true");
-            	    }
-            	    // InternalMoba.g:4292:19: (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' )
-            	    // InternalMoba.g:4292:20: otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')'
-            	    {
-            	    otherlv_11=(Token)match(input,46,FOLLOW_17); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_11, grammarAccess.getMobaEntityAttributeAccess().getConstraintsKeyword_1_5_0());
-            	      								
-            	    }
-            	    otherlv_12=(Token)match(input,32,FOLLOW_29); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_12, grammarAccess.getMobaEntityAttributeAccess().getLeftParenthesisKeyword_1_5_1());
-            	      								
-            	    }
-            	    // InternalMoba.g:4300:9: ( (lv_constraints_13_0= ruleMobaConstraint ) )
-            	    // InternalMoba.g:4301:10: (lv_constraints_13_0= ruleMobaConstraint )
-            	    {
-            	    // InternalMoba.g:4301:10: (lv_constraints_13_0= ruleMobaConstraint )
-            	    // InternalMoba.g:4302:11: lv_constraints_13_0= ruleMobaConstraint
+            	    // InternalMoba.g:4244:10: (lv_constraints_8_0= ruleMobaConstraint )
+            	    // InternalMoba.g:4245:11: lv_constraints_8_0= ruleMobaConstraint
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_5_2_0());
+            	      											newCompositeNode(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0());
             	      										
             	    }
             	    pushFollow(FOLLOW_19);
-            	    lv_constraints_13_0=ruleMobaConstraint();
+            	    lv_constraints_8_0=ruleMobaConstraint();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -11917,7 +11768,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	      											add(
             	      												current,
             	      												"constraints",
-            	      												lv_constraints_13_0,
+            	      												lv_constraints_8_0,
             	      												"org.mobadsl.grammar.Moba.MobaConstraint");
             	      											afterParserOrEnumRuleCall();
             	      										
@@ -11928,40 +11779,40 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMoba.g:4319:9: (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )*
-            	    loop72:
+            	    // InternalMoba.g:4262:9: (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )*
+            	    loop71:
             	    do {
-            	        int alt72=2;
-            	        int LA72_0 = input.LA(1);
+            	        int alt71=2;
+            	        int LA71_0 = input.LA(1);
 
-            	        if ( (LA72_0==33) ) {
-            	            alt72=1;
+            	        if ( (LA71_0==33) ) {
+            	            alt71=1;
             	        }
 
 
-            	        switch (alt72) {
+            	        switch (alt71) {
             	    	case 1 :
-            	    	    // InternalMoba.g:4320:10: otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) )
+            	    	    // InternalMoba.g:4263:10: otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_14=(Token)match(input,33,FOLLOW_29); if (state.failed) return current;
+            	    	    otherlv_9=(Token)match(input,33,FOLLOW_29); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
 
-            	    	      										newLeafNode(otherlv_14, grammarAccess.getMobaEntityAttributeAccess().getCommaKeyword_1_5_3_0());
+            	    	      										newLeafNode(otherlv_9, grammarAccess.getMobaEntityAttributeAccess().getCommaKeyword_1_4_3_0());
             	    	      									
             	    	    }
-            	    	    // InternalMoba.g:4324:10: ( (lv_constraints_15_0= ruleMobaConstraint ) )
-            	    	    // InternalMoba.g:4325:11: (lv_constraints_15_0= ruleMobaConstraint )
+            	    	    // InternalMoba.g:4267:10: ( (lv_constraints_10_0= ruleMobaConstraint ) )
+            	    	    // InternalMoba.g:4268:11: (lv_constraints_10_0= ruleMobaConstraint )
             	    	    {
-            	    	    // InternalMoba.g:4325:11: (lv_constraints_15_0= ruleMobaConstraint )
-            	    	    // InternalMoba.g:4326:12: lv_constraints_15_0= ruleMobaConstraint
+            	    	    // InternalMoba.g:4268:11: (lv_constraints_10_0= ruleMobaConstraint )
+            	    	    // InternalMoba.g:4269:12: lv_constraints_10_0= ruleMobaConstraint
             	    	    {
             	    	    if ( state.backtracking==0 ) {
 
-            	    	      												newCompositeNode(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_5_3_1_0());
+            	    	      												newCompositeNode(grammarAccess.getMobaEntityAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0());
             	    	      											
             	    	    }
             	    	    pushFollow(FOLLOW_19);
-            	    	    lv_constraints_15_0=ruleMobaConstraint();
+            	    	    lv_constraints_10_0=ruleMobaConstraint();
 
             	    	    state._fsp--;
             	    	    if (state.failed) return current;
@@ -11973,7 +11824,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	      												add(
             	    	      													current,
             	    	      													"constraints",
-            	    	      													lv_constraints_15_0,
+            	    	      													lv_constraints_10_0,
             	    	      													"org.mobadsl.grammar.Moba.MobaConstraint");
             	    	      												afterParserOrEnumRuleCall();
             	    	      											
@@ -11989,14 +11840,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    break loop72;
+            	    	    break loop71;
             	        }
             	    } while (true);
 
-            	    otherlv_16=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      									newLeafNode(otherlv_16, grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_1_5_4());
+            	      									newLeafNode(otherlv_11, grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_1_4_4());
             	      								
             	    }
 
@@ -12017,7 +11868,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop73;
+            	    break loop72;
                 }
             } while (true);
 
@@ -12031,11 +11882,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:4361:3: ( (otherlv_17= RULE_ID ) )
-            // InternalMoba.g:4362:4: (otherlv_17= RULE_ID )
+            // InternalMoba.g:4304:3: ( (otherlv_12= RULE_ID ) )
+            // InternalMoba.g:4305:4: (otherlv_12= RULE_ID )
             {
-            // InternalMoba.g:4362:4: (otherlv_17= RULE_ID )
-            // InternalMoba.g:4363:5: otherlv_17= RULE_ID
+            // InternalMoba.g:4305:4: (otherlv_12= RULE_ID )
+            // InternalMoba.g:4306:5: otherlv_12= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -12044,10 +11895,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					}
               				
             }
-            otherlv_17=(Token)match(input,RULE_ID,FOLLOW_66); if (state.failed) return current;
+            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_66); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_17, grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
+              					newLeafNode(otherlv_12, grammarAccess.getMobaEntityAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
               				
             }
 
@@ -12065,26 +11916,26 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               		
             }
             pushFollow(FOLLOW_4);
-            this_MobaMultiplicityAble_18=ruleMobaMultiplicityAble(current);
+            this_MobaMultiplicityAble_13=ruleMobaMultiplicityAble(current);
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			current = this_MobaMultiplicityAble_18;
+              			current = this_MobaMultiplicityAble_13;
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:4385:3: ( (lv_name_19_0= RULE_ID ) )
-            // InternalMoba.g:4386:4: (lv_name_19_0= RULE_ID )
+            // InternalMoba.g:4328:3: ( (lv_name_14_0= RULE_ID ) )
+            // InternalMoba.g:4329:4: (lv_name_14_0= RULE_ID )
             {
-            // InternalMoba.g:4386:4: (lv_name_19_0= RULE_ID )
-            // InternalMoba.g:4387:5: lv_name_19_0= RULE_ID
+            // InternalMoba.g:4329:4: (lv_name_14_0= RULE_ID )
+            // InternalMoba.g:4330:5: lv_name_14_0= RULE_ID
             {
-            lv_name_19_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
+            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_67); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_name_19_0, grammarAccess.getMobaEntityAttributeAccess().getNameIDTerminalRuleCall_4_0());
+              					newLeafNode(lv_name_14_0, grammarAccess.getMobaEntityAttributeAccess().getNameIDTerminalRuleCall_4_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -12095,7 +11946,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					setWithLastConsumed(
               						current,
               						"name",
-              						lv_name_19_0,
+              						lv_name_14_0,
               						"org.mobadsl.grammar.Moba.ID");
               				
             }
@@ -12105,12 +11956,135 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            // InternalMoba.g:4346:3: (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )?
+            int alt74=2;
+            int LA74_0 = input.LA(1);
+
+            if ( (LA74_0==92) ) {
+                alt74=1;
+            }
+            switch (alt74) {
+                case 1 :
+                    // InternalMoba.g:4347:4: otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')'
+                    {
+                    otherlv_15=(Token)match(input,92,FOLLOW_17); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_15, grammarAccess.getMobaEntityAttributeAccess().getFormatKeyword_5_0());
+                      			
+                    }
+                    otherlv_16=(Token)match(input,32,FOLLOW_14); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_16, grammarAccess.getMobaEntityAttributeAccess().getLeftParenthesisKeyword_5_1());
+                      			
+                    }
+                    // InternalMoba.g:4355:4: ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) )
+                    int alt73=2;
+                    int LA73_0 = input.LA(1);
+
+                    if ( (LA73_0==RULE_STRING) ) {
+                        alt73=1;
+                    }
+                    else if ( (LA73_0==RULE_CONSTANT) ) {
+                        alt73=2;
+                    }
+                    else {
+                        if (state.backtracking>0) {state.failed=true; return current;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 73, 0, input);
+
+                        throw nvae;
+                    }
+                    switch (alt73) {
+                        case 1 :
+                            // InternalMoba.g:4356:5: ( (lv_formatString_17_0= RULE_STRING ) )
+                            {
+                            // InternalMoba.g:4356:5: ( (lv_formatString_17_0= RULE_STRING ) )
+                            // InternalMoba.g:4357:6: (lv_formatString_17_0= RULE_STRING )
+                            {
+                            // InternalMoba.g:4357:6: (lv_formatString_17_0= RULE_STRING )
+                            // InternalMoba.g:4358:7: lv_formatString_17_0= RULE_STRING
+                            {
+                            lv_formatString_17_0=(Token)match(input,RULE_STRING,FOLLOW_31); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              							newLeafNode(lv_formatString_17_0, grammarAccess.getMobaEntityAttributeAccess().getFormatStringSTRINGTerminalRuleCall_5_2_0_0());
+                              						
+                            }
+                            if ( state.backtracking==0 ) {
+
+                              							if (current==null) {
+                              								current = createModelElement(grammarAccess.getMobaEntityAttributeRule());
+                              							}
+                              							setWithLastConsumed(
+                              								current,
+                              								"formatString",
+                              								lv_formatString_17_0,
+                              								"org.eclipse.xtext.common.Terminals.STRING");
+                              						
+                            }
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+                        case 2 :
+                            // InternalMoba.g:4375:5: ( (otherlv_18= RULE_CONSTANT ) )
+                            {
+                            // InternalMoba.g:4375:5: ( (otherlv_18= RULE_CONSTANT ) )
+                            // InternalMoba.g:4376:6: (otherlv_18= RULE_CONSTANT )
+                            {
+                            // InternalMoba.g:4376:6: (otherlv_18= RULE_CONSTANT )
+                            // InternalMoba.g:4377:7: otherlv_18= RULE_CONSTANT
+                            {
+                            if ( state.backtracking==0 ) {
+
+                              							if (current==null) {
+                              								current = createModelElement(grammarAccess.getMobaEntityAttributeRule());
+                              							}
+                              						
+                            }
+                            otherlv_18=(Token)match(input,RULE_CONSTANT,FOLLOW_31); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              							newLeafNode(otherlv_18, grammarAccess.getMobaEntityAttributeAccess().getFormatConstMobaConstantCrossReference_5_2_1_0());
+                              						
+                            }
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+                    otherlv_19=(Token)match(input,34,FOLLOW_25); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_19, grammarAccess.getMobaEntityAttributeAccess().getRightParenthesisKeyword_5_3());
+                      			
+                    }
+
+                    }
+                    break;
+
+            }
+
             if ( state.backtracking==0 ) {
 
               			if (current==null) {
               				current = createModelElement(grammarAccess.getMobaEntityAttributeRule());
               			}
-              			newCompositeNode(grammarAccess.getMobaEntityAttributeAccess().getMobaFriendsAbleParserRuleCall_5());
+              			newCompositeNode(grammarAccess.getMobaEntityAttributeAccess().getMobaFriendsAbleParserRuleCall_6());
               		
             }
             pushFollow(FOLLOW_2);
@@ -12149,7 +12123,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaSettingsFeature"
-    // InternalMoba.g:4418:1: entryRuleMobaSettingsFeature returns [EObject current=null] : iv_ruleMobaSettingsFeature= ruleMobaSettingsFeature EOF ;
+    // InternalMoba.g:4409:1: entryRuleMobaSettingsFeature returns [EObject current=null] : iv_ruleMobaSettingsFeature= ruleMobaSettingsFeature EOF ;
     public final EObject entryRuleMobaSettingsFeature() throws RecognitionException {
         EObject current = null;
 
@@ -12157,8 +12131,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:4418:60: (iv_ruleMobaSettingsFeature= ruleMobaSettingsFeature EOF )
-            // InternalMoba.g:4419:2: iv_ruleMobaSettingsFeature= ruleMobaSettingsFeature EOF
+            // InternalMoba.g:4409:60: (iv_ruleMobaSettingsFeature= ruleMobaSettingsFeature EOF )
+            // InternalMoba.g:4410:2: iv_ruleMobaSettingsFeature= ruleMobaSettingsFeature EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaSettingsFeatureRule()); 
@@ -12189,7 +12163,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaSettingsFeature"
-    // InternalMoba.g:4425:1: ruleMobaSettingsFeature returns [EObject current=null] : (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference ) ;
+    // InternalMoba.g:4416:1: ruleMobaSettingsFeature returns [EObject current=null] : (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference ) ;
     public final EObject ruleMobaSettingsFeature() throws RecognitionException {
         EObject current = null;
 
@@ -12202,29 +12176,29 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:4431:2: ( (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference ) )
-            // InternalMoba.g:4432:2: (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference )
+            // InternalMoba.g:4422:2: ( (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference ) )
+            // InternalMoba.g:4423:2: (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference )
             {
-            // InternalMoba.g:4432:2: (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference )
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // InternalMoba.g:4423:2: (this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute | this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference )
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA74_0==87) ) {
-                alt74=1;
+            if ( (LA75_0==87) ) {
+                alt75=1;
             }
-            else if ( (LA74_0==93) ) {
-                alt74=2;
+            else if ( (LA75_0==93) ) {
+                alt75=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 74, 0, input);
+                    new NoViableAltException("", 75, 0, input);
 
                 throw nvae;
             }
-            switch (alt74) {
+            switch (alt75) {
                 case 1 :
-                    // InternalMoba.g:4433:3: this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute
+                    // InternalMoba.g:4424:3: this_MobaSettingsAttribute_0= ruleMobaSettingsAttribute
                     {
                     if ( state.backtracking==0 ) {
 
@@ -12246,7 +12220,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:4442:3: this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference
+                    // InternalMoba.g:4433:3: this_MobaSettingsEntityReference_1= ruleMobaSettingsEntityReference
                     {
                     if ( state.backtracking==0 ) {
 
@@ -12292,7 +12266,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaSettingsAttribute"
-    // InternalMoba.g:4454:1: entryRuleMobaSettingsAttribute returns [EObject current=null] : iv_ruleMobaSettingsAttribute= ruleMobaSettingsAttribute EOF ;
+    // InternalMoba.g:4445:1: entryRuleMobaSettingsAttribute returns [EObject current=null] : iv_ruleMobaSettingsAttribute= ruleMobaSettingsAttribute EOF ;
     public final EObject entryRuleMobaSettingsAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -12300,8 +12274,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:4454:62: (iv_ruleMobaSettingsAttribute= ruleMobaSettingsAttribute EOF )
-            // InternalMoba.g:4455:2: iv_ruleMobaSettingsAttribute= ruleMobaSettingsAttribute EOF
+            // InternalMoba.g:4445:62: (iv_ruleMobaSettingsAttribute= ruleMobaSettingsAttribute EOF )
+            // InternalMoba.g:4446:2: iv_ruleMobaSettingsAttribute= ruleMobaSettingsAttribute EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaSettingsAttributeRule()); 
@@ -12332,7 +12306,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaSettingsAttribute"
-    // InternalMoba.g:4461:1: ruleMobaSettingsAttribute returns [EObject current=null] : (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:4452:1: ruleMobaSettingsAttribute returns [EObject current=null] : (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaSettingsAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -12343,20 +12317,20 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token lv_domainDescription_5_0=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
-        Token lv_formatString_8_0=null;
         Token otherlv_9=null;
-        Token otherlv_10=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token otherlv_14=null;
+        Token lv_name_14_0=null;
+        Token otherlv_15=null;
         Token otherlv_16=null;
-        Token otherlv_17=null;
-        Token lv_name_19_0=null;
-        EObject lv_constraints_13_0 = null;
+        Token lv_formatString_17_0=null;
+        Token otherlv_18=null;
+        Token otherlv_19=null;
+        EObject lv_constraints_8_0 = null;
 
-        EObject lv_constraints_15_0 = null;
+        EObject lv_constraints_10_0 = null;
 
-        EObject this_MobaMultiplicityAble_18 = null;
+        EObject this_MobaMultiplicityAble_13 = null;
 
         EObject this_MobaFriendsAble_20 = null;
 
@@ -12365,11 +12339,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:4467:2: ( (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:4468:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4458:2: ( (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:4459:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:4468:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:4469:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) ) ( (otherlv_17= RULE_ID ) ) this_MobaMultiplicityAble_18= ruleMobaMultiplicityAble[$current] ( (lv_name_19_0= RULE_ID ) ) this_MobaFriendsAble_20= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:4459:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4460:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )? this_MobaFriendsAble_20= ruleMobaFriendsAble[$current]
             {
             otherlv_0=(Token)match(input,87,FOLLOW_65); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12377,20 +12351,20 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaSettingsAttributeAccess().getVarKeyword_0());
               		
             }
-            // InternalMoba.g:4473:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) ) )
-            // InternalMoba.g:4474:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:4464:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) )
+            // InternalMoba.g:4465:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) )
             {
-            // InternalMoba.g:4474:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* ) )
-            // InternalMoba.g:4475:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* )
+            // InternalMoba.g:4465:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:4466:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1());
-            // InternalMoba.g:4478:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )* )
-            // InternalMoba.g:4479:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )*
+            // InternalMoba.g:4469:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* )
+            // InternalMoba.g:4470:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )*
             {
-            // InternalMoba.g:4479:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) )*
+            // InternalMoba.g:4470:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )*
             loop77:
             do {
-                int alt77=7;
+                int alt77=6;
                 int LA77_0 = input.LA(1);
 
                 if ( LA77_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 0) ) {
@@ -12405,41 +12379,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                 else if ( LA77_0 == 91 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 3) ) {
                     alt77=4;
                 }
-                else if ( LA77_0 == 92 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                else if ( LA77_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4) ) {
                     alt77=5;
-                }
-                else if ( LA77_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 5) ) {
-                    alt77=6;
                 }
 
 
                 switch (alt77) {
             	case 1 :
-            	    // InternalMoba.g:4480:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:4471:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4480:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
-            	    // InternalMoba.g:4481:5: {...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:4471:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:4472:5: {...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalMoba.g:4481:118: ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
-            	    // InternalMoba.g:4482:6: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
+            	    // InternalMoba.g:4472:118: ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:4473:6: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 0);
-            	    // InternalMoba.g:4485:9: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
-            	    // InternalMoba.g:4485:10: {...}? => ( (lv_lazy_2_0= 'lazy' ) )
+            	    // InternalMoba.g:4476:9: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
+            	    // InternalMoba.g:4476:10: {...}? => ( (lv_lazy_2_0= 'lazy' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "true");
             	    }
-            	    // InternalMoba.g:4485:19: ( (lv_lazy_2_0= 'lazy' ) )
-            	    // InternalMoba.g:4485:20: (lv_lazy_2_0= 'lazy' )
+            	    // InternalMoba.g:4476:19: ( (lv_lazy_2_0= 'lazy' ) )
+            	    // InternalMoba.g:4476:20: (lv_lazy_2_0= 'lazy' )
             	    {
-            	    // InternalMoba.g:4485:20: (lv_lazy_2_0= 'lazy' )
-            	    // InternalMoba.g:4486:10: lv_lazy_2_0= 'lazy'
+            	    // InternalMoba.g:4476:20: (lv_lazy_2_0= 'lazy' )
+            	    // InternalMoba.g:4477:10: lv_lazy_2_0= 'lazy'
             	    {
             	    lv_lazy_2_0=(Token)match(input,88,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -12475,31 +12446,31 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMoba.g:4503:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:4494:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4503:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
-            	    // InternalMoba.g:4504:5: {...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:4494:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:4495:5: {...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalMoba.g:4504:118: ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
-            	    // InternalMoba.g:4505:6: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
+            	    // InternalMoba.g:4495:118: ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:4496:6: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 1);
-            	    // InternalMoba.g:4508:9: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
-            	    // InternalMoba.g:4508:10: {...}? => ( (lv_transient_3_0= 'transient' ) )
+            	    // InternalMoba.g:4499:9: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
+            	    // InternalMoba.g:4499:10: {...}? => ( (lv_transient_3_0= 'transient' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "true");
             	    }
-            	    // InternalMoba.g:4508:19: ( (lv_transient_3_0= 'transient' ) )
-            	    // InternalMoba.g:4508:20: (lv_transient_3_0= 'transient' )
+            	    // InternalMoba.g:4499:19: ( (lv_transient_3_0= 'transient' ) )
+            	    // InternalMoba.g:4499:20: (lv_transient_3_0= 'transient' )
             	    {
-            	    // InternalMoba.g:4508:20: (lv_transient_3_0= 'transient' )
-            	    // InternalMoba.g:4509:10: lv_transient_3_0= 'transient'
+            	    // InternalMoba.g:4499:20: (lv_transient_3_0= 'transient' )
+            	    // InternalMoba.g:4500:10: lv_transient_3_0= 'transient'
             	    {
             	    lv_transient_3_0=(Token)match(input,89,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -12535,31 +12506,31 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalMoba.g:4526:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
+            	    // InternalMoba.g:4517:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4526:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
-            	    // InternalMoba.g:4527:5: {...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
+            	    // InternalMoba.g:4517:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
+            	    // InternalMoba.g:4518:5: {...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalMoba.g:4527:118: ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
-            	    // InternalMoba.g:4528:6: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
+            	    // InternalMoba.g:4518:118: ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
+            	    // InternalMoba.g:4519:6: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 2);
-            	    // InternalMoba.g:4531:9: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
-            	    // InternalMoba.g:4531:10: {...}? => ( (lv_domainKey_4_0= 'domainKey' ) )
+            	    // InternalMoba.g:4522:9: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
+            	    // InternalMoba.g:4522:10: {...}? => ( (lv_domainKey_4_0= 'domainKey' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "true");
             	    }
-            	    // InternalMoba.g:4531:19: ( (lv_domainKey_4_0= 'domainKey' ) )
-            	    // InternalMoba.g:4531:20: (lv_domainKey_4_0= 'domainKey' )
+            	    // InternalMoba.g:4522:19: ( (lv_domainKey_4_0= 'domainKey' ) )
+            	    // InternalMoba.g:4522:20: (lv_domainKey_4_0= 'domainKey' )
             	    {
-            	    // InternalMoba.g:4531:20: (lv_domainKey_4_0= 'domainKey' )
-            	    // InternalMoba.g:4532:10: lv_domainKey_4_0= 'domainKey'
+            	    // InternalMoba.g:4522:20: (lv_domainKey_4_0= 'domainKey' )
+            	    // InternalMoba.g:4523:10: lv_domainKey_4_0= 'domainKey'
             	    {
             	    lv_domainKey_4_0=(Token)match(input,90,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -12595,31 +12566,31 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalMoba.g:4549:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
+            	    // InternalMoba.g:4540:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4549:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
-            	    // InternalMoba.g:4550:5: {...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
+            	    // InternalMoba.g:4540:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
+            	    // InternalMoba.g:4541:5: {...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 3) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 3)");
             	    }
-            	    // InternalMoba.g:4550:118: ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
-            	    // InternalMoba.g:4551:6: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
+            	    // InternalMoba.g:4541:118: ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
+            	    // InternalMoba.g:4542:6: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 3);
-            	    // InternalMoba.g:4554:9: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
-            	    // InternalMoba.g:4554:10: {...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) )
+            	    // InternalMoba.g:4545:9: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
+            	    // InternalMoba.g:4545:10: {...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "true");
             	    }
-            	    // InternalMoba.g:4554:19: ( (lv_domainDescription_5_0= 'domainDescription' ) )
-            	    // InternalMoba.g:4554:20: (lv_domainDescription_5_0= 'domainDescription' )
+            	    // InternalMoba.g:4545:19: ( (lv_domainDescription_5_0= 'domainDescription' ) )
+            	    // InternalMoba.g:4545:20: (lv_domainDescription_5_0= 'domainDescription' )
             	    {
-            	    // InternalMoba.g:4554:20: (lv_domainDescription_5_0= 'domainDescription' )
-            	    // InternalMoba.g:4555:10: lv_domainDescription_5_0= 'domainDescription'
+            	    // InternalMoba.g:4545:20: (lv_domainDescription_5_0= 'domainDescription' )
+            	    // InternalMoba.g:4546:10: lv_domainDescription_5_0= 'domainDescription'
             	    {
             	    lv_domainDescription_5_0=(Token)match(input,91,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -12655,200 +12626,54 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // InternalMoba.g:4572:4: ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) )
+            	    // InternalMoba.g:4563:4: ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) )
             	    {
-            	    // InternalMoba.g:4572:4: ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) )
-            	    // InternalMoba.g:4573:5: {...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) )
+            	    // InternalMoba.g:4563:4: ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) )
+            	    // InternalMoba.g:4564:5: {...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4)");
             	    }
-            	    // InternalMoba.g:4573:118: ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) )
-            	    // InternalMoba.g:4574:6: ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) )
+            	    // InternalMoba.g:4564:118: ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) )
+            	    // InternalMoba.g:4565:6: ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 4);
-            	    // InternalMoba.g:4577:9: ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) )
-            	    // InternalMoba.g:4577:10: {...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' )
+            	    // InternalMoba.g:4568:9: ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) )
+            	    // InternalMoba.g:4568:10: {...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "true");
             	    }
-            	    // InternalMoba.g:4577:19: (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' )
-            	    // InternalMoba.g:4577:20: otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')'
+            	    // InternalMoba.g:4568:19: (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
+            	    // InternalMoba.g:4568:20: otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')'
             	    {
-            	    otherlv_6=(Token)match(input,92,FOLLOW_17); if (state.failed) return current;
+            	    otherlv_6=(Token)match(input,46,FOLLOW_17); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      									newLeafNode(otherlv_6, grammarAccess.getMobaSettingsAttributeAccess().getFormatKeyword_1_4_0());
+            	      									newLeafNode(otherlv_6, grammarAccess.getMobaSettingsAttributeAccess().getConstraintsKeyword_1_4_0());
             	      								
             	    }
-            	    otherlv_7=(Token)match(input,32,FOLLOW_14); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,32,FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getMobaSettingsAttributeAccess().getLeftParenthesisKeyword_1_4_1());
             	      								
             	    }
-            	    // InternalMoba.g:4585:9: ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) )
-            	    int alt75=2;
-            	    int LA75_0 = input.LA(1);
-
-            	    if ( (LA75_0==RULE_STRING) ) {
-            	        alt75=1;
-            	    }
-            	    else if ( (LA75_0==RULE_CONSTANT) ) {
-            	        alt75=2;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 75, 0, input);
-
-            	        throw nvae;
-            	    }
-            	    switch (alt75) {
-            	        case 1 :
-            	            // InternalMoba.g:4586:10: ( (lv_formatString_8_0= RULE_STRING ) )
-            	            {
-            	            // InternalMoba.g:4586:10: ( (lv_formatString_8_0= RULE_STRING ) )
-            	            // InternalMoba.g:4587:11: (lv_formatString_8_0= RULE_STRING )
-            	            {
-            	            // InternalMoba.g:4587:11: (lv_formatString_8_0= RULE_STRING )
-            	            // InternalMoba.g:4588:12: lv_formatString_8_0= RULE_STRING
-            	            {
-            	            lv_formatString_8_0=(Token)match(input,RULE_STRING,FOLLOW_31); if (state.failed) return current;
-            	            if ( state.backtracking==0 ) {
-
-            	              												newLeafNode(lv_formatString_8_0, grammarAccess.getMobaSettingsAttributeAccess().getFormatStringSTRINGTerminalRuleCall_1_4_2_0_0());
-            	              											
-            	            }
-            	            if ( state.backtracking==0 ) {
-
-            	              												if (current==null) {
-            	              													current = createModelElement(grammarAccess.getMobaSettingsAttributeRule());
-            	              												}
-            	              												setWithLastConsumed(
-            	              													current,
-            	              													"formatString",
-            	              													lv_formatString_8_0,
-            	              													"org.eclipse.xtext.common.Terminals.STRING");
-            	              											
-            	            }
-
-            	            }
-
-
-            	            }
-
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            // InternalMoba.g:4605:10: ( (otherlv_9= RULE_CONSTANT ) )
-            	            {
-            	            // InternalMoba.g:4605:10: ( (otherlv_9= RULE_CONSTANT ) )
-            	            // InternalMoba.g:4606:11: (otherlv_9= RULE_CONSTANT )
-            	            {
-            	            // InternalMoba.g:4606:11: (otherlv_9= RULE_CONSTANT )
-            	            // InternalMoba.g:4607:12: otherlv_9= RULE_CONSTANT
-            	            {
-            	            if ( state.backtracking==0 ) {
-
-            	              												if (current==null) {
-            	              													current = createModelElement(grammarAccess.getMobaSettingsAttributeRule());
-            	              												}
-            	              											
-            	            }
-            	            otherlv_9=(Token)match(input,RULE_CONSTANT,FOLLOW_31); if (state.failed) return current;
-            	            if ( state.backtracking==0 ) {
-
-            	              												newLeafNode(otherlv_9, grammarAccess.getMobaSettingsAttributeAccess().getFormatConstMobaConstantCrossReference_1_4_2_1_0());
-            	              											
-            	            }
-
-            	            }
-
-
-            	            }
-
-
-            	            }
-            	            break;
-
-            	    }
-
-            	    otherlv_10=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_10, grammarAccess.getMobaSettingsAttributeAccess().getRightParenthesisKeyword_1_4_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1());
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 6 :
-            	    // InternalMoba.g:4629:4: ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) )
+            	    // InternalMoba.g:4576:9: ( (lv_constraints_8_0= ruleMobaConstraint ) )
+            	    // InternalMoba.g:4577:10: (lv_constraints_8_0= ruleMobaConstraint )
             	    {
-            	    // InternalMoba.g:4629:4: ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) )
-            	    // InternalMoba.g:4630:5: {...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 5) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 5)");
-            	    }
-            	    // InternalMoba.g:4630:118: ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) )
-            	    // InternalMoba.g:4631:6: ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), 5);
-            	    // InternalMoba.g:4634:9: ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) )
-            	    // InternalMoba.g:4634:10: {...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaSettingsAttribute", "true");
-            	    }
-            	    // InternalMoba.g:4634:19: (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' )
-            	    // InternalMoba.g:4634:20: otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')'
-            	    {
-            	    otherlv_11=(Token)match(input,46,FOLLOW_17); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_11, grammarAccess.getMobaSettingsAttributeAccess().getConstraintsKeyword_1_5_0());
-            	      								
-            	    }
-            	    otherlv_12=(Token)match(input,32,FOLLOW_29); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_12, grammarAccess.getMobaSettingsAttributeAccess().getLeftParenthesisKeyword_1_5_1());
-            	      								
-            	    }
-            	    // InternalMoba.g:4642:9: ( (lv_constraints_13_0= ruleMobaConstraint ) )
-            	    // InternalMoba.g:4643:10: (lv_constraints_13_0= ruleMobaConstraint )
-            	    {
-            	    // InternalMoba.g:4643:10: (lv_constraints_13_0= ruleMobaConstraint )
-            	    // InternalMoba.g:4644:11: lv_constraints_13_0= ruleMobaConstraint
+            	    // InternalMoba.g:4577:10: (lv_constraints_8_0= ruleMobaConstraint )
+            	    // InternalMoba.g:4578:11: lv_constraints_8_0= ruleMobaConstraint
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getMobaSettingsAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_5_2_0());
+            	      											newCompositeNode(grammarAccess.getMobaSettingsAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0());
             	      										
             	    }
             	    pushFollow(FOLLOW_19);
-            	    lv_constraints_13_0=ruleMobaConstraint();
+            	    lv_constraints_8_0=ruleMobaConstraint();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -12860,7 +12685,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	      											add(
             	      												current,
             	      												"constraints",
-            	      												lv_constraints_13_0,
+            	      												lv_constraints_8_0,
             	      												"org.mobadsl.grammar.Moba.MobaConstraint");
             	      											afterParserOrEnumRuleCall();
             	      										
@@ -12871,7 +12696,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMoba.g:4661:9: (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )*
+            	    // InternalMoba.g:4595:9: (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )*
             	    loop76:
             	    do {
             	        int alt76=2;
@@ -12884,27 +12709,27 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	        switch (alt76) {
             	    	case 1 :
-            	    	    // InternalMoba.g:4662:10: otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) )
+            	    	    // InternalMoba.g:4596:10: otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_14=(Token)match(input,33,FOLLOW_29); if (state.failed) return current;
+            	    	    otherlv_9=(Token)match(input,33,FOLLOW_29); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
 
-            	    	      										newLeafNode(otherlv_14, grammarAccess.getMobaSettingsAttributeAccess().getCommaKeyword_1_5_3_0());
+            	    	      										newLeafNode(otherlv_9, grammarAccess.getMobaSettingsAttributeAccess().getCommaKeyword_1_4_3_0());
             	    	      									
             	    	    }
-            	    	    // InternalMoba.g:4666:10: ( (lv_constraints_15_0= ruleMobaConstraint ) )
-            	    	    // InternalMoba.g:4667:11: (lv_constraints_15_0= ruleMobaConstraint )
+            	    	    // InternalMoba.g:4600:10: ( (lv_constraints_10_0= ruleMobaConstraint ) )
+            	    	    // InternalMoba.g:4601:11: (lv_constraints_10_0= ruleMobaConstraint )
             	    	    {
-            	    	    // InternalMoba.g:4667:11: (lv_constraints_15_0= ruleMobaConstraint )
-            	    	    // InternalMoba.g:4668:12: lv_constraints_15_0= ruleMobaConstraint
+            	    	    // InternalMoba.g:4601:11: (lv_constraints_10_0= ruleMobaConstraint )
+            	    	    // InternalMoba.g:4602:12: lv_constraints_10_0= ruleMobaConstraint
             	    	    {
             	    	    if ( state.backtracking==0 ) {
 
-            	    	      												newCompositeNode(grammarAccess.getMobaSettingsAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_5_3_1_0());
+            	    	      												newCompositeNode(grammarAccess.getMobaSettingsAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0());
             	    	      											
             	    	    }
             	    	    pushFollow(FOLLOW_19);
-            	    	    lv_constraints_15_0=ruleMobaConstraint();
+            	    	    lv_constraints_10_0=ruleMobaConstraint();
 
             	    	    state._fsp--;
             	    	    if (state.failed) return current;
@@ -12916,7 +12741,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	      												add(
             	    	      													current,
             	    	      													"constraints",
-            	    	      													lv_constraints_15_0,
+            	    	      													lv_constraints_10_0,
             	    	      													"org.mobadsl.grammar.Moba.MobaConstraint");
             	    	      												afterParserOrEnumRuleCall();
             	    	      											
@@ -12936,10 +12761,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	        }
             	    } while (true);
 
-            	    otherlv_16=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      									newLeafNode(otherlv_16, grammarAccess.getMobaSettingsAttributeAccess().getRightParenthesisKeyword_1_5_4());
+            	      									newLeafNode(otherlv_11, grammarAccess.getMobaSettingsAttributeAccess().getRightParenthesisKeyword_1_4_4());
             	      								
             	    }
 
@@ -12974,11 +12799,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:4703:3: ( (otherlv_17= RULE_ID ) )
-            // InternalMoba.g:4704:4: (otherlv_17= RULE_ID )
+            // InternalMoba.g:4637:3: ( (otherlv_12= RULE_ID ) )
+            // InternalMoba.g:4638:4: (otherlv_12= RULE_ID )
             {
-            // InternalMoba.g:4704:4: (otherlv_17= RULE_ID )
-            // InternalMoba.g:4705:5: otherlv_17= RULE_ID
+            // InternalMoba.g:4638:4: (otherlv_12= RULE_ID )
+            // InternalMoba.g:4639:5: otherlv_12= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -12987,10 +12812,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					}
               				
             }
-            otherlv_17=(Token)match(input,RULE_ID,FOLLOW_66); if (state.failed) return current;
+            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_66); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_17, grammarAccess.getMobaSettingsAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
+              					newLeafNode(otherlv_12, grammarAccess.getMobaSettingsAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
               				
             }
 
@@ -13008,26 +12833,26 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               		
             }
             pushFollow(FOLLOW_4);
-            this_MobaMultiplicityAble_18=ruleMobaMultiplicityAble(current);
+            this_MobaMultiplicityAble_13=ruleMobaMultiplicityAble(current);
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			current = this_MobaMultiplicityAble_18;
+              			current = this_MobaMultiplicityAble_13;
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:4727:3: ( (lv_name_19_0= RULE_ID ) )
-            // InternalMoba.g:4728:4: (lv_name_19_0= RULE_ID )
+            // InternalMoba.g:4661:3: ( (lv_name_14_0= RULE_ID ) )
+            // InternalMoba.g:4662:4: (lv_name_14_0= RULE_ID )
             {
-            // InternalMoba.g:4728:4: (lv_name_19_0= RULE_ID )
-            // InternalMoba.g:4729:5: lv_name_19_0= RULE_ID
+            // InternalMoba.g:4662:4: (lv_name_14_0= RULE_ID )
+            // InternalMoba.g:4663:5: lv_name_14_0= RULE_ID
             {
-            lv_name_19_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
+            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_67); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_name_19_0, grammarAccess.getMobaSettingsAttributeAccess().getNameIDTerminalRuleCall_4_0());
+              					newLeafNode(lv_name_14_0, grammarAccess.getMobaSettingsAttributeAccess().getNameIDTerminalRuleCall_4_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -13038,7 +12863,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					setWithLastConsumed(
               						current,
               						"name",
-              						lv_name_19_0,
+              						lv_name_14_0,
               						"org.mobadsl.grammar.Moba.ID");
               				
             }
@@ -13048,12 +12873,135 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            // InternalMoba.g:4679:3: (otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')' )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
+
+            if ( (LA79_0==92) ) {
+                alt79=1;
+            }
+            switch (alt79) {
+                case 1 :
+                    // InternalMoba.g:4680:4: otherlv_15= 'format' otherlv_16= '(' ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) ) otherlv_19= ')'
+                    {
+                    otherlv_15=(Token)match(input,92,FOLLOW_17); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_15, grammarAccess.getMobaSettingsAttributeAccess().getFormatKeyword_5_0());
+                      			
+                    }
+                    otherlv_16=(Token)match(input,32,FOLLOW_14); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_16, grammarAccess.getMobaSettingsAttributeAccess().getLeftParenthesisKeyword_5_1());
+                      			
+                    }
+                    // InternalMoba.g:4688:4: ( ( (lv_formatString_17_0= RULE_STRING ) ) | ( (otherlv_18= RULE_CONSTANT ) ) )
+                    int alt78=2;
+                    int LA78_0 = input.LA(1);
+
+                    if ( (LA78_0==RULE_STRING) ) {
+                        alt78=1;
+                    }
+                    else if ( (LA78_0==RULE_CONSTANT) ) {
+                        alt78=2;
+                    }
+                    else {
+                        if (state.backtracking>0) {state.failed=true; return current;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 78, 0, input);
+
+                        throw nvae;
+                    }
+                    switch (alt78) {
+                        case 1 :
+                            // InternalMoba.g:4689:5: ( (lv_formatString_17_0= RULE_STRING ) )
+                            {
+                            // InternalMoba.g:4689:5: ( (lv_formatString_17_0= RULE_STRING ) )
+                            // InternalMoba.g:4690:6: (lv_formatString_17_0= RULE_STRING )
+                            {
+                            // InternalMoba.g:4690:6: (lv_formatString_17_0= RULE_STRING )
+                            // InternalMoba.g:4691:7: lv_formatString_17_0= RULE_STRING
+                            {
+                            lv_formatString_17_0=(Token)match(input,RULE_STRING,FOLLOW_31); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              							newLeafNode(lv_formatString_17_0, grammarAccess.getMobaSettingsAttributeAccess().getFormatStringSTRINGTerminalRuleCall_5_2_0_0());
+                              						
+                            }
+                            if ( state.backtracking==0 ) {
+
+                              							if (current==null) {
+                              								current = createModelElement(grammarAccess.getMobaSettingsAttributeRule());
+                              							}
+                              							setWithLastConsumed(
+                              								current,
+                              								"formatString",
+                              								lv_formatString_17_0,
+                              								"org.eclipse.xtext.common.Terminals.STRING");
+                              						
+                            }
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+                        case 2 :
+                            // InternalMoba.g:4708:5: ( (otherlv_18= RULE_CONSTANT ) )
+                            {
+                            // InternalMoba.g:4708:5: ( (otherlv_18= RULE_CONSTANT ) )
+                            // InternalMoba.g:4709:6: (otherlv_18= RULE_CONSTANT )
+                            {
+                            // InternalMoba.g:4709:6: (otherlv_18= RULE_CONSTANT )
+                            // InternalMoba.g:4710:7: otherlv_18= RULE_CONSTANT
+                            {
+                            if ( state.backtracking==0 ) {
+
+                              							if (current==null) {
+                              								current = createModelElement(grammarAccess.getMobaSettingsAttributeRule());
+                              							}
+                              						
+                            }
+                            otherlv_18=(Token)match(input,RULE_CONSTANT,FOLLOW_31); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              							newLeafNode(otherlv_18, grammarAccess.getMobaSettingsAttributeAccess().getFormatConstMobaConstantCrossReference_5_2_1_0());
+                              						
+                            }
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+                    otherlv_19=(Token)match(input,34,FOLLOW_25); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_19, grammarAccess.getMobaSettingsAttributeAccess().getRightParenthesisKeyword_5_3());
+                      			
+                    }
+
+                    }
+                    break;
+
+            }
+
             if ( state.backtracking==0 ) {
 
               			if (current==null) {
               				current = createModelElement(grammarAccess.getMobaSettingsAttributeRule());
               			}
-              			newCompositeNode(grammarAccess.getMobaSettingsAttributeAccess().getMobaFriendsAbleParserRuleCall_5());
+              			newCompositeNode(grammarAccess.getMobaSettingsAttributeAccess().getMobaFriendsAbleParserRuleCall_6());
               		
             }
             pushFollow(FOLLOW_2);
@@ -13092,7 +13040,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaSettingsEntityReference"
-    // InternalMoba.g:4760:1: entryRuleMobaSettingsEntityReference returns [EObject current=null] : iv_ruleMobaSettingsEntityReference= ruleMobaSettingsEntityReference EOF ;
+    // InternalMoba.g:4742:1: entryRuleMobaSettingsEntityReference returns [EObject current=null] : iv_ruleMobaSettingsEntityReference= ruleMobaSettingsEntityReference EOF ;
     public final EObject entryRuleMobaSettingsEntityReference() throws RecognitionException {
         EObject current = null;
 
@@ -13100,8 +13048,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:4760:68: (iv_ruleMobaSettingsEntityReference= ruleMobaSettingsEntityReference EOF )
-            // InternalMoba.g:4761:2: iv_ruleMobaSettingsEntityReference= ruleMobaSettingsEntityReference EOF
+            // InternalMoba.g:4742:68: (iv_ruleMobaSettingsEntityReference= ruleMobaSettingsEntityReference EOF )
+            // InternalMoba.g:4743:2: iv_ruleMobaSettingsEntityReference= ruleMobaSettingsEntityReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaSettingsEntityReferenceRule()); 
@@ -13132,7 +13080,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaSettingsEntityReference"
-    // InternalMoba.g:4767:1: ruleMobaSettingsEntityReference returns [EObject current=null] : (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:4749:1: ruleMobaSettingsEntityReference returns [EObject current=null] : (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaSettingsEntityReference() throws RecognitionException {
         EObject current = null;
 
@@ -13151,74 +13099,74 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:4773:2: ( (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:4774:2: (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4755:2: ( (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:4756:2: (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:4774:2: (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:4775:3: otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:4756:2: (otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4757:3: otherlv_0= 'refEntity' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,93,FOLLOW_67); if (state.failed) return current;
+            otherlv_0=(Token)match(input,93,FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getRefEntityKeyword_0());
               		
             }
-            // InternalMoba.g:4779:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
-            // InternalMoba.g:4780:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:4761:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
+            // InternalMoba.g:4762:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
             {
-            // InternalMoba.g:4780:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
-            // InternalMoba.g:4781:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:4762:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:4763:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
-            // InternalMoba.g:4784:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
-            // InternalMoba.g:4785:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            // InternalMoba.g:4766:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:4767:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
             {
-            // InternalMoba.g:4785:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
-            loop78:
+            // InternalMoba.g:4767:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            loop80:
             do {
-                int alt78=4;
-                int LA78_0 = input.LA(1);
+                int alt80=4;
+                int LA80_0 = input.LA(1);
 
-                if ( LA78_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
-                    alt78=1;
+                if ( LA80_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                    alt80=1;
                 }
-                else if ( LA78_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
-                    alt78=2;
+                else if ( LA80_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                    alt80=2;
                 }
-                else if ( LA78_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
-                    alt78=3;
+                else if ( LA80_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                    alt80=3;
                 }
 
 
-                switch (alt78) {
+                switch (alt80) {
             	case 1 :
-            	    // InternalMoba.g:4786:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:4768:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4786:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
-            	    // InternalMoba.g:4787:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:4768:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:4769:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsEntityReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalMoba.g:4787:124: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
-            	    // InternalMoba.g:4788:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:4769:124: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:4770:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0);
-            	    // InternalMoba.g:4791:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
-            	    // InternalMoba.g:4791:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:4773:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:4773:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsEntityReference", "true");
             	    }
-            	    // InternalMoba.g:4791:19: ( (lv_cascading_2_0= 'cascading' ) )
-            	    // InternalMoba.g:4791:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:4773:19: ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:4773:20: (lv_cascading_2_0= 'cascading' )
             	    {
-            	    // InternalMoba.g:4791:20: (lv_cascading_2_0= 'cascading' )
-            	    // InternalMoba.g:4792:10: lv_cascading_2_0= 'cascading'
+            	    // InternalMoba.g:4773:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:4774:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_67); if (state.failed) return current;
+            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0());
@@ -13252,33 +13200,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMoba.g:4809:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:4791:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4809:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
-            	    // InternalMoba.g:4810:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:4791:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:4792:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsEntityReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalMoba.g:4810:124: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
-            	    // InternalMoba.g:4811:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:4792:124: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:4793:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1);
-            	    // InternalMoba.g:4814:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
-            	    // InternalMoba.g:4814:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:4796:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:4796:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsEntityReference", "true");
             	    }
-            	    // InternalMoba.g:4814:19: ( (lv_lazy_3_0= 'lazy' ) )
-            	    // InternalMoba.g:4814:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:4796:19: ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:4796:20: (lv_lazy_3_0= 'lazy' )
             	    {
-            	    // InternalMoba.g:4814:20: (lv_lazy_3_0= 'lazy' )
-            	    // InternalMoba.g:4815:10: lv_lazy_3_0= 'lazy'
+            	    // InternalMoba.g:4796:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:4797:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_67); if (state.failed) return current;
+            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyLazyKeyword_1_1_0());
@@ -13312,33 +13260,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalMoba.g:4832:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:4814:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4832:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
-            	    // InternalMoba.g:4833:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:4814:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:4815:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsEntityReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalMoba.g:4833:124: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
-            	    // InternalMoba.g:4834:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:4815:124: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:4816:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2);
-            	    // InternalMoba.g:4837:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
-            	    // InternalMoba.g:4837:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:4819:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:4819:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaSettingsEntityReference", "true");
             	    }
-            	    // InternalMoba.g:4837:19: ( (lv_transient_4_0= 'transient' ) )
-            	    // InternalMoba.g:4837:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:4819:19: ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:4819:20: (lv_transient_4_0= 'transient' )
             	    {
-            	    // InternalMoba.g:4837:20: (lv_transient_4_0= 'transient' )
-            	    // InternalMoba.g:4838:10: lv_transient_4_0= 'transient'
+            	    // InternalMoba.g:4819:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:4820:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_67); if (state.failed) return current;
+            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_transient_4_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientTransientKeyword_1_2_0());
@@ -13373,7 +13321,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop78;
+            	    break loop80;
                 }
             } while (true);
 
@@ -13387,11 +13335,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:4862:3: ( (otherlv_5= RULE_ID ) )
-            // InternalMoba.g:4863:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:4844:3: ( (otherlv_5= RULE_ID ) )
+            // InternalMoba.g:4845:4: (otherlv_5= RULE_ID )
             {
-            // InternalMoba.g:4863:4: (otherlv_5= RULE_ID )
-            // InternalMoba.g:4864:5: otherlv_5= RULE_ID
+            // InternalMoba.g:4845:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:4846:5: otherlv_5= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -13431,11 +13379,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:4886:3: ( (lv_name_7_0= RULE_ID ) )
-            // InternalMoba.g:4887:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:4868:3: ( (lv_name_7_0= RULE_ID ) )
+            // InternalMoba.g:4869:4: (lv_name_7_0= RULE_ID )
             {
-            // InternalMoba.g:4887:4: (lv_name_7_0= RULE_ID )
-            // InternalMoba.g:4888:5: lv_name_7_0= RULE_ID
+            // InternalMoba.g:4869:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:4870:5: lv_name_7_0= RULE_ID
             {
             lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13505,7 +13453,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaMultiplicityAble"
-    // InternalMoba.g:4920:1: ruleMobaMultiplicityAble[EObject in_current] returns [EObject current=in_current] : ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )? ;
+    // InternalMoba.g:4902:1: ruleMobaMultiplicityAble[EObject in_current] returns [EObject current=in_current] : ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )? ;
     public final EObject ruleMobaMultiplicityAble(EObject in_current) throws RecognitionException {
         EObject current = in_current;
 
@@ -13516,22 +13464,22 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:4926:2: ( ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )? )
-            // InternalMoba.g:4927:2: ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )?
+            // InternalMoba.g:4908:2: ( ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )? )
+            // InternalMoba.g:4909:2: ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )?
             {
-            // InternalMoba.g:4927:2: ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // InternalMoba.g:4909:2: ( (lv_multiplicity_0_0= ruleMobaMuliplicity ) )?
+            int alt81=2;
+            int LA81_0 = input.LA(1);
 
-            if ( (LA79_0==63) ) {
-                alt79=1;
+            if ( (LA81_0==63) ) {
+                alt81=1;
             }
-            switch (alt79) {
+            switch (alt81) {
                 case 1 :
-                    // InternalMoba.g:4928:3: (lv_multiplicity_0_0= ruleMobaMuliplicity )
+                    // InternalMoba.g:4910:3: (lv_multiplicity_0_0= ruleMobaMuliplicity )
                     {
-                    // InternalMoba.g:4928:3: (lv_multiplicity_0_0= ruleMobaMuliplicity )
-                    // InternalMoba.g:4929:4: lv_multiplicity_0_0= ruleMobaMuliplicity
+                    // InternalMoba.g:4910:3: (lv_multiplicity_0_0= ruleMobaMuliplicity )
+                    // InternalMoba.g:4911:4: lv_multiplicity_0_0= ruleMobaMuliplicity
                     {
                     if ( state.backtracking==0 ) {
 
@@ -13587,7 +13535,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaEntityReference"
-    // InternalMoba.g:4949:1: entryRuleMobaEntityReference returns [EObject current=null] : iv_ruleMobaEntityReference= ruleMobaEntityReference EOF ;
+    // InternalMoba.g:4931:1: entryRuleMobaEntityReference returns [EObject current=null] : iv_ruleMobaEntityReference= ruleMobaEntityReference EOF ;
     public final EObject entryRuleMobaEntityReference() throws RecognitionException {
         EObject current = null;
 
@@ -13595,8 +13543,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:4949:60: (iv_ruleMobaEntityReference= ruleMobaEntityReference EOF )
-            // InternalMoba.g:4950:2: iv_ruleMobaEntityReference= ruleMobaEntityReference EOF
+            // InternalMoba.g:4931:60: (iv_ruleMobaEntityReference= ruleMobaEntityReference EOF )
+            // InternalMoba.g:4932:2: iv_ruleMobaEntityReference= ruleMobaEntityReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaEntityReferenceRule()); 
@@ -13627,7 +13575,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaEntityReference"
-    // InternalMoba.g:4956:1: ruleMobaEntityReference returns [EObject current=null] : (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:4938:1: ruleMobaEntityReference returns [EObject current=null] : (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaEntityReference() throws RecognitionException {
         EObject current = null;
 
@@ -13648,74 +13596,74 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:4962:2: ( (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:4963:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4944:2: ( (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:4945:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:4963:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:4964:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:4945:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:4946:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,95,FOLLOW_67); if (state.failed) return current;
+            otherlv_0=(Token)match(input,95,FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaEntityReferenceAccess().getRefKeyword_0());
               		
             }
-            // InternalMoba.g:4968:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
-            // InternalMoba.g:4969:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:4950:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
+            // InternalMoba.g:4951:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
             {
-            // InternalMoba.g:4969:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
-            // InternalMoba.g:4970:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:4951:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:4952:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1());
-            // InternalMoba.g:4973:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
-            // InternalMoba.g:4974:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            // InternalMoba.g:4955:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:4956:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
             {
-            // InternalMoba.g:4974:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
-            loop80:
+            // InternalMoba.g:4956:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            loop82:
             do {
-                int alt80=4;
-                int LA80_0 = input.LA(1);
+                int alt82=4;
+                int LA82_0 = input.LA(1);
 
-                if ( LA80_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
-                    alt80=1;
+                if ( LA82_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                    alt82=1;
                 }
-                else if ( LA80_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
-                    alt80=2;
+                else if ( LA82_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                    alt82=2;
                 }
-                else if ( LA80_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
-                    alt80=3;
+                else if ( LA82_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                    alt82=3;
                 }
 
 
-                switch (alt80) {
+                switch (alt82) {
             	case 1 :
-            	    // InternalMoba.g:4975:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:4957:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4975:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
-            	    // InternalMoba.g:4976:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:4957:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:4958:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalMoba.g:4976:116: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
-            	    // InternalMoba.g:4977:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:4958:116: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:4959:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 0);
-            	    // InternalMoba.g:4980:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
-            	    // InternalMoba.g:4980:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:4962:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:4962:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityReference", "true");
             	    }
-            	    // InternalMoba.g:4980:19: ( (lv_cascading_2_0= 'cascading' ) )
-            	    // InternalMoba.g:4980:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:4962:19: ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:4962:20: (lv_cascading_2_0= 'cascading' )
             	    {
-            	    // InternalMoba.g:4980:20: (lv_cascading_2_0= 'cascading' )
-            	    // InternalMoba.g:4981:10: lv_cascading_2_0= 'cascading'
+            	    // InternalMoba.g:4962:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:4963:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_67); if (state.failed) return current;
+            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0());
@@ -13749,33 +13697,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMoba.g:4998:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:4980:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:4998:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
-            	    // InternalMoba.g:4999:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:4980:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:4981:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalMoba.g:4999:116: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
-            	    // InternalMoba.g:5000:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:4981:116: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:4982:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 1);
-            	    // InternalMoba.g:5003:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
-            	    // InternalMoba.g:5003:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:4985:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:4985:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityReference", "true");
             	    }
-            	    // InternalMoba.g:5003:19: ( (lv_lazy_3_0= 'lazy' ) )
-            	    // InternalMoba.g:5003:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:4985:19: ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:4985:20: (lv_lazy_3_0= 'lazy' )
             	    {
-            	    // InternalMoba.g:5003:20: (lv_lazy_3_0= 'lazy' )
-            	    // InternalMoba.g:5004:10: lv_lazy_3_0= 'lazy'
+            	    // InternalMoba.g:4985:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:4986:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_67); if (state.failed) return current;
+            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaEntityReferenceAccess().getLazyLazyKeyword_1_1_0());
@@ -13809,33 +13757,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalMoba.g:5021:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:5003:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5021:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
-            	    // InternalMoba.g:5022:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:5003:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:5004:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalMoba.g:5022:116: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
-            	    // InternalMoba.g:5023:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:5004:116: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:5005:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), 2);
-            	    // InternalMoba.g:5026:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
-            	    // InternalMoba.g:5026:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:5008:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:5008:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaEntityReference", "true");
             	    }
-            	    // InternalMoba.g:5026:19: ( (lv_transient_4_0= 'transient' ) )
-            	    // InternalMoba.g:5026:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:5008:19: ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:5008:20: (lv_transient_4_0= 'transient' )
             	    {
-            	    // InternalMoba.g:5026:20: (lv_transient_4_0= 'transient' )
-            	    // InternalMoba.g:5027:10: lv_transient_4_0= 'transient'
+            	    // InternalMoba.g:5008:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:5009:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_67); if (state.failed) return current;
+            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_transient_4_0, grammarAccess.getMobaEntityReferenceAccess().getTransientTransientKeyword_1_2_0());
@@ -13870,7 +13818,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop80;
+            	    break loop82;
                 }
             } while (true);
 
@@ -13884,11 +13832,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5051:3: ( (otherlv_5= RULE_ID ) )
-            // InternalMoba.g:5052:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:5033:3: ( (otherlv_5= RULE_ID ) )
+            // InternalMoba.g:5034:4: (otherlv_5= RULE_ID )
             {
-            // InternalMoba.g:5052:4: (otherlv_5= RULE_ID )
-            // InternalMoba.g:5053:5: otherlv_5= RULE_ID
+            // InternalMoba.g:5034:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:5035:5: otherlv_5= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -13928,13 +13876,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:5075:3: ( (lv_name_7_0= RULE_ID ) )
-            // InternalMoba.g:5076:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:5057:3: ( (lv_name_7_0= RULE_ID ) )
+            // InternalMoba.g:5058:4: (lv_name_7_0= RULE_ID )
             {
-            // InternalMoba.g:5076:4: (lv_name_7_0= RULE_ID )
-            // InternalMoba.g:5077:5: lv_name_7_0= RULE_ID
+            // InternalMoba.g:5058:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:5059:5: lv_name_7_0= RULE_ID
             {
-            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_68); if (state.failed) return current;
+            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_69); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_7_0, grammarAccess.getMobaEntityReferenceAccess().getNameIDTerminalRuleCall_4_0());
@@ -13958,16 +13906,16 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5093:3: (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // InternalMoba.g:5075:3: (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )?
+            int alt83=2;
+            int LA83_0 = input.LA(1);
 
-            if ( (LA81_0==96) ) {
-                alt81=1;
+            if ( (LA83_0==96) ) {
+                alt83=1;
             }
-            switch (alt81) {
+            switch (alt83) {
                 case 1 :
-                    // InternalMoba.g:5094:4: otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) )
+                    // InternalMoba.g:5076:4: otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) )
                     {
                     otherlv_8=(Token)match(input,96,FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -13975,11 +13923,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_8, grammarAccess.getMobaEntityReferenceAccess().getOppositeKeyword_5_0());
                       			
                     }
-                    // InternalMoba.g:5098:4: ( (otherlv_9= RULE_ID ) )
-                    // InternalMoba.g:5099:5: (otherlv_9= RULE_ID )
+                    // InternalMoba.g:5080:4: ( (otherlv_9= RULE_ID ) )
+                    // InternalMoba.g:5081:5: (otherlv_9= RULE_ID )
                     {
-                    // InternalMoba.g:5099:5: (otherlv_9= RULE_ID )
-                    // InternalMoba.g:5100:6: otherlv_9= RULE_ID
+                    // InternalMoba.g:5081:5: (otherlv_9= RULE_ID )
+                    // InternalMoba.g:5082:6: otherlv_9= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14050,7 +13998,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaEntityEmbeddable"
-    // InternalMoba.g:5127:1: entryRuleMobaEntityEmbeddable returns [EObject current=null] : iv_ruleMobaEntityEmbeddable= ruleMobaEntityEmbeddable EOF ;
+    // InternalMoba.g:5109:1: entryRuleMobaEntityEmbeddable returns [EObject current=null] : iv_ruleMobaEntityEmbeddable= ruleMobaEntityEmbeddable EOF ;
     public final EObject entryRuleMobaEntityEmbeddable() throws RecognitionException {
         EObject current = null;
 
@@ -14058,8 +14006,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5127:61: (iv_ruleMobaEntityEmbeddable= ruleMobaEntityEmbeddable EOF )
-            // InternalMoba.g:5128:2: iv_ruleMobaEntityEmbeddable= ruleMobaEntityEmbeddable EOF
+            // InternalMoba.g:5109:61: (iv_ruleMobaEntityEmbeddable= ruleMobaEntityEmbeddable EOF )
+            // InternalMoba.g:5110:2: iv_ruleMobaEntityEmbeddable= ruleMobaEntityEmbeddable EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaEntityEmbeddableRule()); 
@@ -14090,7 +14038,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaEntityEmbeddable"
-    // InternalMoba.g:5134:1: ruleMobaEntityEmbeddable returns [EObject current=null] : (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:5116:1: ruleMobaEntityEmbeddable returns [EObject current=null] : (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaEntityEmbeddable() throws RecognitionException {
         EObject current = null;
 
@@ -14107,31 +14055,31 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:5140:2: ( (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:5141:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5122:2: ( (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:5123:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:5141:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:5142:3: otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:5123:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5124:3: otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,97,FOLLOW_69); if (state.failed) return current;
+            otherlv_0=(Token)match(input,97,FOLLOW_70); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaEntityEmbeddableAccess().getEmbedKeyword_0());
               		
             }
-            // InternalMoba.g:5146:3: ( (lv_transient_1_0= 'transient' ) )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // InternalMoba.g:5128:3: ( (lv_transient_1_0= 'transient' ) )?
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( (LA82_0==89) ) {
-                alt82=1;
+            if ( (LA84_0==89) ) {
+                alt84=1;
             }
-            switch (alt82) {
+            switch (alt84) {
                 case 1 :
-                    // InternalMoba.g:5147:4: (lv_transient_1_0= 'transient' )
+                    // InternalMoba.g:5129:4: (lv_transient_1_0= 'transient' )
                     {
-                    // InternalMoba.g:5147:4: (lv_transient_1_0= 'transient' )
-                    // InternalMoba.g:5148:5: lv_transient_1_0= 'transient'
+                    // InternalMoba.g:5129:4: (lv_transient_1_0= 'transient' )
+                    // InternalMoba.g:5130:5: lv_transient_1_0= 'transient'
                     {
                     lv_transient_1_0=(Token)match(input,89,FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14156,11 +14104,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5160:3: ( (otherlv_2= RULE_ID ) )
-            // InternalMoba.g:5161:4: (otherlv_2= RULE_ID )
+            // InternalMoba.g:5142:3: ( (otherlv_2= RULE_ID ) )
+            // InternalMoba.g:5143:4: (otherlv_2= RULE_ID )
             {
-            // InternalMoba.g:5161:4: (otherlv_2= RULE_ID )
-            // InternalMoba.g:5162:5: otherlv_2= RULE_ID
+            // InternalMoba.g:5143:4: (otherlv_2= RULE_ID )
+            // InternalMoba.g:5144:5: otherlv_2= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -14200,11 +14148,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:5184:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalMoba.g:5185:4: (lv_name_4_0= RULE_ID )
+            // InternalMoba.g:5166:3: ( (lv_name_4_0= RULE_ID ) )
+            // InternalMoba.g:5167:4: (lv_name_4_0= RULE_ID )
             {
-            // InternalMoba.g:5185:4: (lv_name_4_0= RULE_ID )
-            // InternalMoba.g:5186:5: lv_name_4_0= RULE_ID
+            // InternalMoba.g:5167:4: (lv_name_4_0= RULE_ID )
+            // InternalMoba.g:5168:5: lv_name_4_0= RULE_ID
             {
             lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14274,7 +14222,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaDtoFeature"
-    // InternalMoba.g:5217:1: entryRuleMobaDtoFeature returns [EObject current=null] : iv_ruleMobaDtoFeature= ruleMobaDtoFeature EOF ;
+    // InternalMoba.g:5199:1: entryRuleMobaDtoFeature returns [EObject current=null] : iv_ruleMobaDtoFeature= ruleMobaDtoFeature EOF ;
     public final EObject entryRuleMobaDtoFeature() throws RecognitionException {
         EObject current = null;
 
@@ -14282,8 +14230,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5217:55: (iv_ruleMobaDtoFeature= ruleMobaDtoFeature EOF )
-            // InternalMoba.g:5218:2: iv_ruleMobaDtoFeature= ruleMobaDtoFeature EOF
+            // InternalMoba.g:5199:55: (iv_ruleMobaDtoFeature= ruleMobaDtoFeature EOF )
+            // InternalMoba.g:5200:2: iv_ruleMobaDtoFeature= ruleMobaDtoFeature EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaDtoFeatureRule()); 
@@ -14314,7 +14262,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaDtoFeature"
-    // InternalMoba.g:5224:1: ruleMobaDtoFeature returns [EObject current=null] : (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable ) ;
+    // InternalMoba.g:5206:1: ruleMobaDtoFeature returns [EObject current=null] : (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable ) ;
     public final EObject ruleMobaDtoFeature() throws RecognitionException {
         EObject current = null;
 
@@ -14329,38 +14277,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:5230:2: ( (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable ) )
-            // InternalMoba.g:5231:2: (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable )
+            // InternalMoba.g:5212:2: ( (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable ) )
+            // InternalMoba.g:5213:2: (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable )
             {
-            // InternalMoba.g:5231:2: (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable )
-            int alt83=3;
+            // InternalMoba.g:5213:2: (this_MobaDtoAttribute_0= ruleMobaDtoAttribute | this_MobaDtoReference_1= ruleMobaDtoReference | this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable )
+            int alt85=3;
             switch ( input.LA(1) ) {
             case 87:
                 {
-                alt83=1;
+                alt85=1;
                 }
                 break;
             case 95:
                 {
-                alt83=2;
+                alt85=2;
                 }
                 break;
             case 97:
                 {
-                alt83=3;
+                alt85=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 83, 0, input);
+                    new NoViableAltException("", 85, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt83) {
+            switch (alt85) {
                 case 1 :
-                    // InternalMoba.g:5232:3: this_MobaDtoAttribute_0= ruleMobaDtoAttribute
+                    // InternalMoba.g:5214:3: this_MobaDtoAttribute_0= ruleMobaDtoAttribute
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14382,7 +14330,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:5241:3: this_MobaDtoReference_1= ruleMobaDtoReference
+                    // InternalMoba.g:5223:3: this_MobaDtoReference_1= ruleMobaDtoReference
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14404,7 +14352,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:5250:3: this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable
+                    // InternalMoba.g:5232:3: this_MobaDtoEmbeddable_2= ruleMobaDtoEmbeddable
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14450,7 +14398,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaDtoAttribute"
-    // InternalMoba.g:5262:1: entryRuleMobaDtoAttribute returns [EObject current=null] : iv_ruleMobaDtoAttribute= ruleMobaDtoAttribute EOF ;
+    // InternalMoba.g:5244:1: entryRuleMobaDtoAttribute returns [EObject current=null] : iv_ruleMobaDtoAttribute= ruleMobaDtoAttribute EOF ;
     public final EObject entryRuleMobaDtoAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -14458,8 +14406,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5262:57: (iv_ruleMobaDtoAttribute= ruleMobaDtoAttribute EOF )
-            // InternalMoba.g:5263:2: iv_ruleMobaDtoAttribute= ruleMobaDtoAttribute EOF
+            // InternalMoba.g:5244:57: (iv_ruleMobaDtoAttribute= ruleMobaDtoAttribute EOF )
+            // InternalMoba.g:5245:2: iv_ruleMobaDtoAttribute= ruleMobaDtoAttribute EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaDtoAttributeRule()); 
@@ -14490,7 +14438,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaDtoAttribute"
-    // InternalMoba.g:5269:1: ruleMobaDtoAttribute returns [EObject current=null] : (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) ) ) ( (otherlv_21= RULE_ID ) ) this_MobaMultiplicityAble_22= ruleMobaMultiplicityAble[$current] ( (lv_name_23_0= RULE_ID ) ) this_MobaFriendsAble_24= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:5251:1: ruleMobaDtoAttribute returns [EObject current=null] : (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) ) ) this_MobaFriendsAble_25= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaDtoAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -14501,112 +14449,106 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token lv_domainDescription_5_0=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
-        Token lv_formatString_8_0=null;
         Token otherlv_9=null;
-        Token otherlv_10=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token otherlv_14=null;
+        Token lv_name_14_0=null;
         Token otherlv_16=null;
         Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token lv_alias_19_0=null;
+        Token lv_alias_18_0=null;
+        Token otherlv_19=null;
         Token otherlv_20=null;
         Token otherlv_21=null;
-        Token lv_name_23_0=null;
-        EObject lv_constraints_13_0 = null;
+        Token lv_formatString_22_0=null;
+        Token otherlv_23=null;
+        Token otherlv_24=null;
+        EObject lv_constraints_8_0 = null;
 
-        EObject lv_constraints_15_0 = null;
+        EObject lv_constraints_10_0 = null;
 
-        EObject this_MobaMultiplicityAble_22 = null;
+        EObject this_MobaMultiplicityAble_13 = null;
 
-        EObject this_MobaFriendsAble_24 = null;
+        EObject this_MobaFriendsAble_25 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalMoba.g:5275:2: ( (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) ) ) ( (otherlv_21= RULE_ID ) ) this_MobaMultiplicityAble_22= ruleMobaMultiplicityAble[$current] ( (lv_name_23_0= RULE_ID ) ) this_MobaFriendsAble_24= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:5276:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) ) ) ( (otherlv_21= RULE_ID ) ) this_MobaMultiplicityAble_22= ruleMobaMultiplicityAble[$current] ( (lv_name_23_0= RULE_ID ) ) this_MobaFriendsAble_24= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5257:2: ( (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) ) ) this_MobaFriendsAble_25= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:5258:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) ) ) this_MobaFriendsAble_25= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:5276:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) ) ) ( (otherlv_21= RULE_ID ) ) this_MobaMultiplicityAble_22= ruleMobaMultiplicityAble[$current] ( (lv_name_23_0= RULE_ID ) ) this_MobaFriendsAble_24= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:5277:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) ) ) ( (otherlv_21= RULE_ID ) ) this_MobaMultiplicityAble_22= ruleMobaMultiplicityAble[$current] ( (lv_name_23_0= RULE_ID ) ) this_MobaFriendsAble_24= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:5258:2: (otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) ) ) this_MobaFriendsAble_25= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5259:3: otherlv_0= 'var' ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) ) ( (otherlv_12= RULE_ID ) ) this_MobaMultiplicityAble_13= ruleMobaMultiplicityAble[$current] ( (lv_name_14_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) ) ) this_MobaFriendsAble_25= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,87,FOLLOW_70); if (state.failed) return current;
+            otherlv_0=(Token)match(input,87,FOLLOW_65); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaDtoAttributeAccess().getVarKeyword_0());
               		
             }
-            // InternalMoba.g:5281:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) ) )
-            // InternalMoba.g:5282:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:5263:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) ) )
+            // InternalMoba.g:5264:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) )
             {
-            // InternalMoba.g:5282:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* ) )
-            // InternalMoba.g:5283:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* )
+            // InternalMoba.g:5264:4: ( ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:5265:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1());
-            // InternalMoba.g:5286:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )* )
-            // InternalMoba.g:5287:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )*
+            // InternalMoba.g:5268:5: ( ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )* )
+            // InternalMoba.g:5269:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )*
             {
-            // InternalMoba.g:5287:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) ) )*
-            loop86:
+            // InternalMoba.g:5269:6: ( ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) ) )*
+            loop87:
             do {
-                int alt86=8;
-                int LA86_0 = input.LA(1);
+                int alt87=6;
+                int LA87_0 = input.LA(1);
 
-                if ( LA86_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
-                    alt86=1;
+                if ( LA87_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
+                    alt87=1;
                 }
-                else if ( LA86_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
-                    alt86=2;
+                else if ( LA87_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
+                    alt87=2;
                 }
-                else if ( LA86_0 == 90 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
-                    alt86=3;
+                else if ( LA87_0 == 90 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
+                    alt87=3;
                 }
-                else if ( LA86_0 == 91 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
-                    alt86=4;
+                else if ( LA87_0 == 91 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
+                    alt87=4;
                 }
-                else if ( LA86_0 == 92 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
-                    alt86=5;
-                }
-                else if ( LA86_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
-                    alt86=6;
-                }
-                else if ( LA86_0 == 98 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 6) ) {
-                    alt86=7;
+                else if ( LA87_0 == 46 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
+                    alt87=5;
                 }
 
 
-                switch (alt86) {
+                switch (alt87) {
             	case 1 :
-            	    // InternalMoba.g:5288:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:5270:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5288:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
-            	    // InternalMoba.g:5289:5: {...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:5270:4: ({...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:5271:5: {...}? => ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalMoba.g:5289:113: ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
-            	    // InternalMoba.g:5290:6: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
+            	    // InternalMoba.g:5271:113: ( ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:5272:6: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 0);
-            	    // InternalMoba.g:5293:9: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
-            	    // InternalMoba.g:5293:10: {...}? => ( (lv_lazy_2_0= 'lazy' ) )
+            	    // InternalMoba.g:5275:9: ({...}? => ( (lv_lazy_2_0= 'lazy' ) ) )
+            	    // InternalMoba.g:5275:10: {...}? => ( (lv_lazy_2_0= 'lazy' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
             	    }
-            	    // InternalMoba.g:5293:19: ( (lv_lazy_2_0= 'lazy' ) )
-            	    // InternalMoba.g:5293:20: (lv_lazy_2_0= 'lazy' )
+            	    // InternalMoba.g:5275:19: ( (lv_lazy_2_0= 'lazy' ) )
+            	    // InternalMoba.g:5275:20: (lv_lazy_2_0= 'lazy' )
             	    {
-            	    // InternalMoba.g:5293:20: (lv_lazy_2_0= 'lazy' )
-            	    // InternalMoba.g:5294:10: lv_lazy_2_0= 'lazy'
+            	    // InternalMoba.g:5275:20: (lv_lazy_2_0= 'lazy' )
+            	    // InternalMoba.g:5276:10: lv_lazy_2_0= 'lazy'
             	    {
-            	    lv_lazy_2_0=(Token)match(input,88,FOLLOW_70); if (state.failed) return current;
+            	    lv_lazy_2_0=(Token)match(input,88,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_lazy_2_0, grammarAccess.getMobaDtoAttributeAccess().getLazyLazyKeyword_1_0_0());
@@ -14640,33 +14582,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMoba.g:5311:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:5293:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5311:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
-            	    // InternalMoba.g:5312:5: {...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:5293:4: ({...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:5294:5: {...}? => ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalMoba.g:5312:113: ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
-            	    // InternalMoba.g:5313:6: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
+            	    // InternalMoba.g:5294:113: ( ({...}? => ( (lv_transient_3_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:5295:6: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 1);
-            	    // InternalMoba.g:5316:9: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
-            	    // InternalMoba.g:5316:10: {...}? => ( (lv_transient_3_0= 'transient' ) )
+            	    // InternalMoba.g:5298:9: ({...}? => ( (lv_transient_3_0= 'transient' ) ) )
+            	    // InternalMoba.g:5298:10: {...}? => ( (lv_transient_3_0= 'transient' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
             	    }
-            	    // InternalMoba.g:5316:19: ( (lv_transient_3_0= 'transient' ) )
-            	    // InternalMoba.g:5316:20: (lv_transient_3_0= 'transient' )
+            	    // InternalMoba.g:5298:19: ( (lv_transient_3_0= 'transient' ) )
+            	    // InternalMoba.g:5298:20: (lv_transient_3_0= 'transient' )
             	    {
-            	    // InternalMoba.g:5316:20: (lv_transient_3_0= 'transient' )
-            	    // InternalMoba.g:5317:10: lv_transient_3_0= 'transient'
+            	    // InternalMoba.g:5298:20: (lv_transient_3_0= 'transient' )
+            	    // InternalMoba.g:5299:10: lv_transient_3_0= 'transient'
             	    {
-            	    lv_transient_3_0=(Token)match(input,89,FOLLOW_70); if (state.failed) return current;
+            	    lv_transient_3_0=(Token)match(input,89,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_transient_3_0, grammarAccess.getMobaDtoAttributeAccess().getTransientTransientKeyword_1_1_0());
@@ -14700,33 +14642,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalMoba.g:5334:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
+            	    // InternalMoba.g:5316:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5334:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
-            	    // InternalMoba.g:5335:5: {...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
+            	    // InternalMoba.g:5316:4: ({...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) ) )
+            	    // InternalMoba.g:5317:5: {...}? => ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalMoba.g:5335:113: ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
-            	    // InternalMoba.g:5336:6: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
+            	    // InternalMoba.g:5317:113: ( ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) ) )
+            	    // InternalMoba.g:5318:6: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 2);
-            	    // InternalMoba.g:5339:9: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
-            	    // InternalMoba.g:5339:10: {...}? => ( (lv_domainKey_4_0= 'domainKey' ) )
+            	    // InternalMoba.g:5321:9: ({...}? => ( (lv_domainKey_4_0= 'domainKey' ) ) )
+            	    // InternalMoba.g:5321:10: {...}? => ( (lv_domainKey_4_0= 'domainKey' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
             	    }
-            	    // InternalMoba.g:5339:19: ( (lv_domainKey_4_0= 'domainKey' ) )
-            	    // InternalMoba.g:5339:20: (lv_domainKey_4_0= 'domainKey' )
+            	    // InternalMoba.g:5321:19: ( (lv_domainKey_4_0= 'domainKey' ) )
+            	    // InternalMoba.g:5321:20: (lv_domainKey_4_0= 'domainKey' )
             	    {
-            	    // InternalMoba.g:5339:20: (lv_domainKey_4_0= 'domainKey' )
-            	    // InternalMoba.g:5340:10: lv_domainKey_4_0= 'domainKey'
+            	    // InternalMoba.g:5321:20: (lv_domainKey_4_0= 'domainKey' )
+            	    // InternalMoba.g:5322:10: lv_domainKey_4_0= 'domainKey'
             	    {
-            	    lv_domainKey_4_0=(Token)match(input,90,FOLLOW_70); if (state.failed) return current;
+            	    lv_domainKey_4_0=(Token)match(input,90,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_domainKey_4_0, grammarAccess.getMobaDtoAttributeAccess().getDomainKeyDomainKeyKeyword_1_2_0());
@@ -14760,33 +14702,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalMoba.g:5357:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
+            	    // InternalMoba.g:5339:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5357:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
-            	    // InternalMoba.g:5358:5: {...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
+            	    // InternalMoba.g:5339:4: ({...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) ) )
+            	    // InternalMoba.g:5340:5: {...}? => ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3)");
             	    }
-            	    // InternalMoba.g:5358:113: ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
-            	    // InternalMoba.g:5359:6: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
+            	    // InternalMoba.g:5340:113: ( ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) ) )
+            	    // InternalMoba.g:5341:6: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 3);
-            	    // InternalMoba.g:5362:9: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
-            	    // InternalMoba.g:5362:10: {...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) )
+            	    // InternalMoba.g:5344:9: ({...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) ) )
+            	    // InternalMoba.g:5344:10: {...}? => ( (lv_domainDescription_5_0= 'domainDescription' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
             	    }
-            	    // InternalMoba.g:5362:19: ( (lv_domainDescription_5_0= 'domainDescription' ) )
-            	    // InternalMoba.g:5362:20: (lv_domainDescription_5_0= 'domainDescription' )
+            	    // InternalMoba.g:5344:19: ( (lv_domainDescription_5_0= 'domainDescription' ) )
+            	    // InternalMoba.g:5344:20: (lv_domainDescription_5_0= 'domainDescription' )
             	    {
-            	    // InternalMoba.g:5362:20: (lv_domainDescription_5_0= 'domainDescription' )
-            	    // InternalMoba.g:5363:10: lv_domainDescription_5_0= 'domainDescription'
+            	    // InternalMoba.g:5344:20: (lv_domainDescription_5_0= 'domainDescription' )
+            	    // InternalMoba.g:5345:10: lv_domainDescription_5_0= 'domainDescription'
             	    {
-            	    lv_domainDescription_5_0=(Token)match(input,91,FOLLOW_70); if (state.failed) return current;
+            	    lv_domainDescription_5_0=(Token)match(input,91,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_domainDescription_5_0, grammarAccess.getMobaDtoAttributeAccess().getDomainDescriptionDomainDescriptionKeyword_1_3_0());
@@ -14820,200 +14762,54 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // InternalMoba.g:5380:4: ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) )
+            	    // InternalMoba.g:5362:4: ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) )
             	    {
-            	    // InternalMoba.g:5380:4: ({...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) ) )
-            	    // InternalMoba.g:5381:5: {...}? => ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) )
+            	    // InternalMoba.g:5362:4: ({...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) ) )
+            	    // InternalMoba.g:5363:5: {...}? => ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4)");
             	    }
-            	    // InternalMoba.g:5381:113: ( ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) ) )
-            	    // InternalMoba.g:5382:6: ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) )
+            	    // InternalMoba.g:5363:113: ( ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) ) )
+            	    // InternalMoba.g:5364:6: ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 4);
-            	    // InternalMoba.g:5385:9: ({...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' ) )
-            	    // InternalMoba.g:5385:10: {...}? => (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' )
+            	    // InternalMoba.g:5367:9: ({...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' ) )
+            	    // InternalMoba.g:5367:10: {...}? => (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
             	    }
-            	    // InternalMoba.g:5385:19: (otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')' )
-            	    // InternalMoba.g:5385:20: otherlv_6= 'format' otherlv_7= '(' ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) ) otherlv_10= ')'
+            	    // InternalMoba.g:5367:19: (otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')' )
+            	    // InternalMoba.g:5367:20: otherlv_6= 'constraints' otherlv_7= '(' ( (lv_constraints_8_0= ruleMobaConstraint ) ) (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )* otherlv_11= ')'
             	    {
-            	    otherlv_6=(Token)match(input,92,FOLLOW_17); if (state.failed) return current;
+            	    otherlv_6=(Token)match(input,46,FOLLOW_17); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      									newLeafNode(otherlv_6, grammarAccess.getMobaDtoAttributeAccess().getFormatKeyword_1_4_0());
+            	      									newLeafNode(otherlv_6, grammarAccess.getMobaDtoAttributeAccess().getConstraintsKeyword_1_4_0());
             	      								
             	    }
-            	    otherlv_7=(Token)match(input,32,FOLLOW_14); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,32,FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_4_1());
             	      								
             	    }
-            	    // InternalMoba.g:5393:9: ( ( (lv_formatString_8_0= RULE_STRING ) ) | ( (otherlv_9= RULE_CONSTANT ) ) )
-            	    int alt84=2;
-            	    int LA84_0 = input.LA(1);
-
-            	    if ( (LA84_0==RULE_STRING) ) {
-            	        alt84=1;
-            	    }
-            	    else if ( (LA84_0==RULE_CONSTANT) ) {
-            	        alt84=2;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 84, 0, input);
-
-            	        throw nvae;
-            	    }
-            	    switch (alt84) {
-            	        case 1 :
-            	            // InternalMoba.g:5394:10: ( (lv_formatString_8_0= RULE_STRING ) )
-            	            {
-            	            // InternalMoba.g:5394:10: ( (lv_formatString_8_0= RULE_STRING ) )
-            	            // InternalMoba.g:5395:11: (lv_formatString_8_0= RULE_STRING )
-            	            {
-            	            // InternalMoba.g:5395:11: (lv_formatString_8_0= RULE_STRING )
-            	            // InternalMoba.g:5396:12: lv_formatString_8_0= RULE_STRING
-            	            {
-            	            lv_formatString_8_0=(Token)match(input,RULE_STRING,FOLLOW_31); if (state.failed) return current;
-            	            if ( state.backtracking==0 ) {
-
-            	              												newLeafNode(lv_formatString_8_0, grammarAccess.getMobaDtoAttributeAccess().getFormatStringSTRINGTerminalRuleCall_1_4_2_0_0());
-            	              											
-            	            }
-            	            if ( state.backtracking==0 ) {
-
-            	              												if (current==null) {
-            	              													current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
-            	              												}
-            	              												setWithLastConsumed(
-            	              													current,
-            	              													"formatString",
-            	              													lv_formatString_8_0,
-            	              													"org.eclipse.xtext.common.Terminals.STRING");
-            	              											
-            	            }
-
-            	            }
-
-
-            	            }
-
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            // InternalMoba.g:5413:10: ( (otherlv_9= RULE_CONSTANT ) )
-            	            {
-            	            // InternalMoba.g:5413:10: ( (otherlv_9= RULE_CONSTANT ) )
-            	            // InternalMoba.g:5414:11: (otherlv_9= RULE_CONSTANT )
-            	            {
-            	            // InternalMoba.g:5414:11: (otherlv_9= RULE_CONSTANT )
-            	            // InternalMoba.g:5415:12: otherlv_9= RULE_CONSTANT
-            	            {
-            	            if ( state.backtracking==0 ) {
-
-            	              												if (current==null) {
-            	              													current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
-            	              												}
-            	              											
-            	            }
-            	            otherlv_9=(Token)match(input,RULE_CONSTANT,FOLLOW_31); if (state.failed) return current;
-            	            if ( state.backtracking==0 ) {
-
-            	              												newLeafNode(otherlv_9, grammarAccess.getMobaDtoAttributeAccess().getFormatConstMobaConstantCrossReference_1_4_2_1_0());
-            	              											
-            	            }
-
-            	            }
-
-
-            	            }
-
-
-            	            }
-            	            break;
-
-            	    }
-
-            	    otherlv_10=(Token)match(input,34,FOLLOW_70); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_10, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_4_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1());
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 6 :
-            	    // InternalMoba.g:5437:4: ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) )
+            	    // InternalMoba.g:5375:9: ( (lv_constraints_8_0= ruleMobaConstraint ) )
+            	    // InternalMoba.g:5376:10: (lv_constraints_8_0= ruleMobaConstraint )
             	    {
-            	    // InternalMoba.g:5437:4: ({...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) ) )
-            	    // InternalMoba.g:5438:5: {...}? => ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5)");
-            	    }
-            	    // InternalMoba.g:5438:113: ( ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) ) )
-            	    // InternalMoba.g:5439:6: ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 5);
-            	    // InternalMoba.g:5442:9: ({...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' ) )
-            	    // InternalMoba.g:5442:10: {...}? => (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
-            	    }
-            	    // InternalMoba.g:5442:19: (otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')' )
-            	    // InternalMoba.g:5442:20: otherlv_11= 'constraints' otherlv_12= '(' ( (lv_constraints_13_0= ruleMobaConstraint ) ) (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )* otherlv_16= ')'
-            	    {
-            	    otherlv_11=(Token)match(input,46,FOLLOW_17); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_11, grammarAccess.getMobaDtoAttributeAccess().getConstraintsKeyword_1_5_0());
-            	      								
-            	    }
-            	    otherlv_12=(Token)match(input,32,FOLLOW_29); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_12, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_5_1());
-            	      								
-            	    }
-            	    // InternalMoba.g:5450:9: ( (lv_constraints_13_0= ruleMobaConstraint ) )
-            	    // InternalMoba.g:5451:10: (lv_constraints_13_0= ruleMobaConstraint )
-            	    {
-            	    // InternalMoba.g:5451:10: (lv_constraints_13_0= ruleMobaConstraint )
-            	    // InternalMoba.g:5452:11: lv_constraints_13_0= ruleMobaConstraint
+            	    // InternalMoba.g:5376:10: (lv_constraints_8_0= ruleMobaConstraint )
+            	    // InternalMoba.g:5377:11: lv_constraints_8_0= ruleMobaConstraint
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_5_2_0());
+            	      											newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_2_0());
             	      										
             	    }
             	    pushFollow(FOLLOW_19);
-            	    lv_constraints_13_0=ruleMobaConstraint();
+            	    lv_constraints_8_0=ruleMobaConstraint();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -15025,7 +14821,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	      											add(
             	      												current,
             	      												"constraints",
-            	      												lv_constraints_13_0,
+            	      												lv_constraints_8_0,
             	      												"org.mobadsl.grammar.Moba.MobaConstraint");
             	      											afterParserOrEnumRuleCall();
             	      										
@@ -15036,40 +14832,40 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMoba.g:5469:9: (otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) ) )*
-            	    loop85:
+            	    // InternalMoba.g:5394:9: (otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) ) )*
+            	    loop86:
             	    do {
-            	        int alt85=2;
-            	        int LA85_0 = input.LA(1);
+            	        int alt86=2;
+            	        int LA86_0 = input.LA(1);
 
-            	        if ( (LA85_0==33) ) {
-            	            alt85=1;
+            	        if ( (LA86_0==33) ) {
+            	            alt86=1;
             	        }
 
 
-            	        switch (alt85) {
+            	        switch (alt86) {
             	    	case 1 :
-            	    	    // InternalMoba.g:5470:10: otherlv_14= ',' ( (lv_constraints_15_0= ruleMobaConstraint ) )
+            	    	    // InternalMoba.g:5395:10: otherlv_9= ',' ( (lv_constraints_10_0= ruleMobaConstraint ) )
             	    	    {
-            	    	    otherlv_14=(Token)match(input,33,FOLLOW_29); if (state.failed) return current;
+            	    	    otherlv_9=(Token)match(input,33,FOLLOW_29); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
 
-            	    	      										newLeafNode(otherlv_14, grammarAccess.getMobaDtoAttributeAccess().getCommaKeyword_1_5_3_0());
+            	    	      										newLeafNode(otherlv_9, grammarAccess.getMobaDtoAttributeAccess().getCommaKeyword_1_4_3_0());
             	    	      									
             	    	    }
-            	    	    // InternalMoba.g:5474:10: ( (lv_constraints_15_0= ruleMobaConstraint ) )
-            	    	    // InternalMoba.g:5475:11: (lv_constraints_15_0= ruleMobaConstraint )
+            	    	    // InternalMoba.g:5399:10: ( (lv_constraints_10_0= ruleMobaConstraint ) )
+            	    	    // InternalMoba.g:5400:11: (lv_constraints_10_0= ruleMobaConstraint )
             	    	    {
-            	    	    // InternalMoba.g:5475:11: (lv_constraints_15_0= ruleMobaConstraint )
-            	    	    // InternalMoba.g:5476:12: lv_constraints_15_0= ruleMobaConstraint
+            	    	    // InternalMoba.g:5400:11: (lv_constraints_10_0= ruleMobaConstraint )
+            	    	    // InternalMoba.g:5401:12: lv_constraints_10_0= ruleMobaConstraint
             	    	    {
             	    	    if ( state.backtracking==0 ) {
 
-            	    	      												newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_5_3_1_0());
+            	    	      												newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getConstraintsMobaConstraintParserRuleCall_1_4_3_1_0());
             	    	      											
             	    	    }
             	    	    pushFollow(FOLLOW_19);
-            	    	    lv_constraints_15_0=ruleMobaConstraint();
+            	    	    lv_constraints_10_0=ruleMobaConstraint();
 
             	    	    state._fsp--;
             	    	    if (state.failed) return current;
@@ -15081,7 +14877,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	      												add(
             	    	      													current,
             	    	      													"constraints",
-            	    	      													lv_constraints_15_0,
+            	    	      													lv_constraints_10_0,
             	    	      													"org.mobadsl.grammar.Moba.MobaConstraint");
             	    	      												afterParserOrEnumRuleCall();
             	    	      											
@@ -15097,102 +14893,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    break loop85;
+            	    	    break loop86;
             	        }
             	    } while (true);
 
-            	    otherlv_16=(Token)match(input,34,FOLLOW_70); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,34,FOLLOW_65); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      									newLeafNode(otherlv_16, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_5_4());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1());
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 7 :
-            	    // InternalMoba.g:5504:4: ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) )
-            	    {
-            	    // InternalMoba.g:5504:4: ({...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) ) )
-            	    // InternalMoba.g:5505:5: {...}? => ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 6) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 6)");
-            	    }
-            	    // InternalMoba.g:5505:113: ( ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) ) )
-            	    // InternalMoba.g:5506:6: ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), 6);
-            	    // InternalMoba.g:5509:9: ({...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' ) )
-            	    // InternalMoba.g:5509:10: {...}? => (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
-            	    }
-            	    // InternalMoba.g:5509:19: (otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')' )
-            	    // InternalMoba.g:5509:20: otherlv_17= 'alias' otherlv_18= '(' ( (lv_alias_19_0= RULE_ID ) ) otherlv_20= ')'
-            	    {
-            	    otherlv_17=(Token)match(input,98,FOLLOW_17); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_17, grammarAccess.getMobaDtoAttributeAccess().getAliasKeyword_1_6_0());
-            	      								
-            	    }
-            	    otherlv_18=(Token)match(input,32,FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_18, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_1_6_1());
-            	      								
-            	    }
-            	    // InternalMoba.g:5517:9: ( (lv_alias_19_0= RULE_ID ) )
-            	    // InternalMoba.g:5518:10: (lv_alias_19_0= RULE_ID )
-            	    {
-            	    // InternalMoba.g:5518:10: (lv_alias_19_0= RULE_ID )
-            	    // InternalMoba.g:5519:11: lv_alias_19_0= RULE_ID
-            	    {
-            	    lv_alias_19_0=(Token)match(input,RULE_ID,FOLLOW_31); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      											newLeafNode(lv_alias_19_0, grammarAccess.getMobaDtoAttributeAccess().getAliasIDTerminalRuleCall_1_6_2_0());
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											if (current==null) {
-            	      												current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
-            	      											}
-            	      											setWithLastConsumed(
-            	      												current,
-            	      												"alias",
-            	      												lv_alias_19_0,
-            	      												"org.mobadsl.grammar.Moba.ID");
-            	      										
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_20=(Token)match(input,34,FOLLOW_70); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_20, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_6_3());
+            	      									newLeafNode(otherlv_11, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_1_4_4());
             	      								
             	    }
 
@@ -15213,7 +14921,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop86;
+            	    break loop87;
                 }
             } while (true);
 
@@ -15227,11 +14935,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5552:3: ( (otherlv_21= RULE_ID ) )
-            // InternalMoba.g:5553:4: (otherlv_21= RULE_ID )
+            // InternalMoba.g:5436:3: ( (otherlv_12= RULE_ID ) )
+            // InternalMoba.g:5437:4: (otherlv_12= RULE_ID )
             {
-            // InternalMoba.g:5553:4: (otherlv_21= RULE_ID )
-            // InternalMoba.g:5554:5: otherlv_21= RULE_ID
+            // InternalMoba.g:5437:4: (otherlv_12= RULE_ID )
+            // InternalMoba.g:5438:5: otherlv_12= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -15240,10 +14948,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					}
               				
             }
-            otherlv_21=(Token)match(input,RULE_ID,FOLLOW_66); if (state.failed) return current;
+            otherlv_12=(Token)match(input,RULE_ID,FOLLOW_66); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_21, grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
+              					newLeafNode(otherlv_12, grammarAccess.getMobaDtoAttributeAccess().getTypeMobaDataTypeCrossReference_2_0());
               				
             }
 
@@ -15261,26 +14969,26 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               		
             }
             pushFollow(FOLLOW_4);
-            this_MobaMultiplicityAble_22=ruleMobaMultiplicityAble(current);
+            this_MobaMultiplicityAble_13=ruleMobaMultiplicityAble(current);
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			current = this_MobaMultiplicityAble_22;
+              			current = this_MobaMultiplicityAble_13;
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:5576:3: ( (lv_name_23_0= RULE_ID ) )
-            // InternalMoba.g:5577:4: (lv_name_23_0= RULE_ID )
+            // InternalMoba.g:5460:3: ( (lv_name_14_0= RULE_ID ) )
+            // InternalMoba.g:5461:4: (lv_name_14_0= RULE_ID )
             {
-            // InternalMoba.g:5577:4: (lv_name_23_0= RULE_ID )
-            // InternalMoba.g:5578:5: lv_name_23_0= RULE_ID
+            // InternalMoba.g:5461:4: (lv_name_14_0= RULE_ID )
+            // InternalMoba.g:5462:5: lv_name_14_0= RULE_ID
             {
-            lv_name_23_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
+            lv_name_14_0=(Token)match(input,RULE_ID,FOLLOW_71); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_name_23_0, grammarAccess.getMobaDtoAttributeAccess().getNameIDTerminalRuleCall_4_0());
+              					newLeafNode(lv_name_14_0, grammarAccess.getMobaDtoAttributeAccess().getNameIDTerminalRuleCall_4_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -15291,7 +14999,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					setWithLastConsumed(
               						current,
               						"name",
-              						lv_name_23_0,
+              						lv_name_14_0,
               						"org.mobadsl.grammar.Moba.ID");
               				
             }
@@ -15301,22 +15009,297 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            // InternalMoba.g:5478:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) ) )
+            // InternalMoba.g:5479:4: ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) )
+            {
+            // InternalMoba.g:5479:4: ( ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* ) )
+            // InternalMoba.g:5480:5: ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* )
+            {
+            getUnorderedGroupHelper().enter(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5());
+            // InternalMoba.g:5483:5: ( ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )* )
+            // InternalMoba.g:5484:6: ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )*
+            {
+            // InternalMoba.g:5484:6: ( ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) ) )*
+            loop89:
+            do {
+                int alt89=3;
+                int LA89_0 = input.LA(1);
+
+                if ( LA89_0 == 98 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 0) ) {
+                    alt89=1;
+                }
+                else if ( LA89_0 == 92 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 1) ) {
+                    alt89=2;
+                }
+
+
+                switch (alt89) {
+            	case 1 :
+            	    // InternalMoba.g:5485:4: ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) )
+            	    {
+            	    // InternalMoba.g:5485:4: ({...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) ) )
+            	    // InternalMoba.g:5486:5: {...}? => ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 0) ) {
+            	        if (state.backtracking>0) {state.failed=true; return current;}
+            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 0)");
+            	    }
+            	    // InternalMoba.g:5486:113: ( ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) ) )
+            	    // InternalMoba.g:5487:6: ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) )
+            	    {
+            	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 0);
+            	    // InternalMoba.g:5490:9: ({...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' ) )
+            	    // InternalMoba.g:5490:10: {...}? => (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' )
+            	    {
+            	    if ( !((true)) ) {
+            	        if (state.backtracking>0) {state.failed=true; return current;}
+            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
+            	    }
+            	    // InternalMoba.g:5490:19: (otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')' )
+            	    // InternalMoba.g:5490:20: otherlv_16= 'alias' otherlv_17= '(' ( (lv_alias_18_0= RULE_ID ) ) otherlv_19= ')'
+            	    {
+            	    otherlv_16=(Token)match(input,98,FOLLOW_17); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      									newLeafNode(otherlv_16, grammarAccess.getMobaDtoAttributeAccess().getAliasKeyword_5_0_0());
+            	      								
+            	    }
+            	    otherlv_17=(Token)match(input,32,FOLLOW_4); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      									newLeafNode(otherlv_17, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_5_0_1());
+            	      								
+            	    }
+            	    // InternalMoba.g:5498:9: ( (lv_alias_18_0= RULE_ID ) )
+            	    // InternalMoba.g:5499:10: (lv_alias_18_0= RULE_ID )
+            	    {
+            	    // InternalMoba.g:5499:10: (lv_alias_18_0= RULE_ID )
+            	    // InternalMoba.g:5500:11: lv_alias_18_0= RULE_ID
+            	    {
+            	    lv_alias_18_0=(Token)match(input,RULE_ID,FOLLOW_31); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      											newLeafNode(lv_alias_18_0, grammarAccess.getMobaDtoAttributeAccess().getAliasIDTerminalRuleCall_5_0_2_0());
+            	      										
+            	    }
+            	    if ( state.backtracking==0 ) {
+
+            	      											if (current==null) {
+            	      												current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
+            	      											}
+            	      											setWithLastConsumed(
+            	      												current,
+            	      												"alias",
+            	      												lv_alias_18_0,
+            	      												"org.mobadsl.grammar.Moba.ID");
+            	      										
+            	    }
+
+            	    }
+
+
+            	    }
+
+            	    otherlv_19=(Token)match(input,34,FOLLOW_71); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      									newLeafNode(otherlv_19, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_5_0_3());
+            	      								
+            	    }
+
+            	    }
+
+
+            	    }
+
+            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5());
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // InternalMoba.g:5526:4: ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) )
+            	    {
+            	    // InternalMoba.g:5526:4: ({...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) ) )
+            	    // InternalMoba.g:5527:5: {...}? => ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 1) ) {
+            	        if (state.backtracking>0) {state.failed=true; return current;}
+            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 1)");
+            	    }
+            	    // InternalMoba.g:5527:113: ( ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) ) )
+            	    // InternalMoba.g:5528:6: ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) )
+            	    {
+            	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), 1);
+            	    // InternalMoba.g:5531:9: ({...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' ) )
+            	    // InternalMoba.g:5531:10: {...}? => (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' )
+            	    {
+            	    if ( !((true)) ) {
+            	        if (state.backtracking>0) {state.failed=true; return current;}
+            	        throw new FailedPredicateException(input, "ruleMobaDtoAttribute", "true");
+            	    }
+            	    // InternalMoba.g:5531:19: (otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')' )
+            	    // InternalMoba.g:5531:20: otherlv_20= 'format' otherlv_21= '(' ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) ) otherlv_24= ')'
+            	    {
+            	    otherlv_20=(Token)match(input,92,FOLLOW_17); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      									newLeafNode(otherlv_20, grammarAccess.getMobaDtoAttributeAccess().getFormatKeyword_5_1_0());
+            	      								
+            	    }
+            	    otherlv_21=(Token)match(input,32,FOLLOW_14); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      									newLeafNode(otherlv_21, grammarAccess.getMobaDtoAttributeAccess().getLeftParenthesisKeyword_5_1_1());
+            	      								
+            	    }
+            	    // InternalMoba.g:5539:9: ( ( (lv_formatString_22_0= RULE_STRING ) ) | ( (otherlv_23= RULE_CONSTANT ) ) )
+            	    int alt88=2;
+            	    int LA88_0 = input.LA(1);
+
+            	    if ( (LA88_0==RULE_STRING) ) {
+            	        alt88=1;
+            	    }
+            	    else if ( (LA88_0==RULE_CONSTANT) ) {
+            	        alt88=2;
+            	    }
+            	    else {
+            	        if (state.backtracking>0) {state.failed=true; return current;}
+            	        NoViableAltException nvae =
+            	            new NoViableAltException("", 88, 0, input);
+
+            	        throw nvae;
+            	    }
+            	    switch (alt88) {
+            	        case 1 :
+            	            // InternalMoba.g:5540:10: ( (lv_formatString_22_0= RULE_STRING ) )
+            	            {
+            	            // InternalMoba.g:5540:10: ( (lv_formatString_22_0= RULE_STRING ) )
+            	            // InternalMoba.g:5541:11: (lv_formatString_22_0= RULE_STRING )
+            	            {
+            	            // InternalMoba.g:5541:11: (lv_formatString_22_0= RULE_STRING )
+            	            // InternalMoba.g:5542:12: lv_formatString_22_0= RULE_STRING
+            	            {
+            	            lv_formatString_22_0=(Token)match(input,RULE_STRING,FOLLOW_31); if (state.failed) return current;
+            	            if ( state.backtracking==0 ) {
+
+            	              												newLeafNode(lv_formatString_22_0, grammarAccess.getMobaDtoAttributeAccess().getFormatStringSTRINGTerminalRuleCall_5_1_2_0_0());
+            	              											
+            	            }
+            	            if ( state.backtracking==0 ) {
+
+            	              												if (current==null) {
+            	              													current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
+            	              												}
+            	              												setWithLastConsumed(
+            	              													current,
+            	              													"formatString",
+            	              													lv_formatString_22_0,
+            	              													"org.eclipse.xtext.common.Terminals.STRING");
+            	              											
+            	            }
+
+            	            }
+
+
+            	            }
+
+
+            	            }
+            	            break;
+            	        case 2 :
+            	            // InternalMoba.g:5559:10: ( (otherlv_23= RULE_CONSTANT ) )
+            	            {
+            	            // InternalMoba.g:5559:10: ( (otherlv_23= RULE_CONSTANT ) )
+            	            // InternalMoba.g:5560:11: (otherlv_23= RULE_CONSTANT )
+            	            {
+            	            // InternalMoba.g:5560:11: (otherlv_23= RULE_CONSTANT )
+            	            // InternalMoba.g:5561:12: otherlv_23= RULE_CONSTANT
+            	            {
+            	            if ( state.backtracking==0 ) {
+
+            	              												if (current==null) {
+            	              													current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
+            	              												}
+            	              											
+            	            }
+            	            otherlv_23=(Token)match(input,RULE_CONSTANT,FOLLOW_31); if (state.failed) return current;
+            	            if ( state.backtracking==0 ) {
+
+            	              												newLeafNode(otherlv_23, grammarAccess.getMobaDtoAttributeAccess().getFormatConstMobaConstantCrossReference_5_1_2_1_0());
+            	              											
+            	            }
+
+            	            }
+
+
+            	            }
+
+
+            	            }
+            	            break;
+
+            	    }
+
+            	    otherlv_24=(Token)match(input,34,FOLLOW_71); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      									newLeafNode(otherlv_24, grammarAccess.getMobaDtoAttributeAccess().getRightParenthesisKeyword_5_1_3());
+            	      								
+            	    }
+
+            	    }
+
+
+            	    }
+
+            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5());
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop89;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+            getUnorderedGroupHelper().leave(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5());
+
+            }
+
             if ( state.backtracking==0 ) {
 
               			if (current==null) {
               				current = createModelElement(grammarAccess.getMobaDtoAttributeRule());
               			}
-              			newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getMobaFriendsAbleParserRuleCall_5());
+              			newCompositeNode(grammarAccess.getMobaDtoAttributeAccess().getMobaFriendsAbleParserRuleCall_6());
               		
             }
             pushFollow(FOLLOW_2);
-            this_MobaFriendsAble_24=ruleMobaFriendsAble(current);
+            this_MobaFriendsAble_25=ruleMobaFriendsAble(current);
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			current = this_MobaFriendsAble_24;
+              			current = this_MobaFriendsAble_25;
               			afterParserOrEnumRuleCall();
               		
             }
@@ -15345,7 +15328,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaDtoReference"
-    // InternalMoba.g:5609:1: entryRuleMobaDtoReference returns [EObject current=null] : iv_ruleMobaDtoReference= ruleMobaDtoReference EOF ;
+    // InternalMoba.g:5605:1: entryRuleMobaDtoReference returns [EObject current=null] : iv_ruleMobaDtoReference= ruleMobaDtoReference EOF ;
     public final EObject entryRuleMobaDtoReference() throws RecognitionException {
         EObject current = null;
 
@@ -15353,8 +15336,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5609:57: (iv_ruleMobaDtoReference= ruleMobaDtoReference EOF )
-            // InternalMoba.g:5610:2: iv_ruleMobaDtoReference= ruleMobaDtoReference EOF
+            // InternalMoba.g:5605:57: (iv_ruleMobaDtoReference= ruleMobaDtoReference EOF )
+            // InternalMoba.g:5606:2: iv_ruleMobaDtoReference= ruleMobaDtoReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaDtoReferenceRule()); 
@@ -15385,7 +15368,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaDtoReference"
-    // InternalMoba.g:5616:1: ruleMobaDtoReference returns [EObject current=null] : (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:5612:1: ruleMobaDtoReference returns [EObject current=null] : (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')' )? (otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) ) )? this_MobaFriendsAble_14= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaDtoReference() throws RecognitionException {
         EObject current = null;
 
@@ -15397,83 +15380,87 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token lv_name_7_0=null;
         Token otherlv_8=null;
         Token otherlv_9=null;
+        Token lv_alias_10_0=null;
+        Token otherlv_11=null;
+        Token otherlv_12=null;
+        Token otherlv_13=null;
         EObject this_MobaMultiplicityAble_6 = null;
 
-        EObject this_MobaFriendsAble_10 = null;
+        EObject this_MobaFriendsAble_14 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalMoba.g:5622:2: ( (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:5623:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5618:2: ( (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')' )? (otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) ) )? this_MobaFriendsAble_14= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:5619:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')' )? (otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) ) )? this_MobaFriendsAble_14= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:5623:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:5624:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )? this_MobaFriendsAble_10= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:5619:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')' )? (otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) ) )? this_MobaFriendsAble_14= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5620:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) (otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')' )? (otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) ) )? this_MobaFriendsAble_14= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,95,FOLLOW_67); if (state.failed) return current;
+            otherlv_0=(Token)match(input,95,FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaDtoReferenceAccess().getRefKeyword_0());
               		
             }
-            // InternalMoba.g:5628:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
-            // InternalMoba.g:5629:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:5624:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
+            // InternalMoba.g:5625:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
             {
-            // InternalMoba.g:5629:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
-            // InternalMoba.g:5630:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:5625:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:5626:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1());
-            // InternalMoba.g:5633:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
-            // InternalMoba.g:5634:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            // InternalMoba.g:5629:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:5630:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
             {
-            // InternalMoba.g:5634:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
-            loop87:
+            // InternalMoba.g:5630:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            loop90:
             do {
-                int alt87=4;
-                int LA87_0 = input.LA(1);
+                int alt90=4;
+                int LA90_0 = input.LA(1);
 
-                if ( LA87_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
-                    alt87=1;
+                if ( LA90_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                    alt90=1;
                 }
-                else if ( LA87_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
-                    alt87=2;
+                else if ( LA90_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                    alt90=2;
                 }
-                else if ( LA87_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
-                    alt87=3;
+                else if ( LA90_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                    alt90=3;
                 }
 
 
-                switch (alt87) {
+                switch (alt90) {
             	case 1 :
-            	    // InternalMoba.g:5635:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:5631:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5635:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
-            	    // InternalMoba.g:5636:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:5631:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:5632:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalMoba.g:5636:113: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
-            	    // InternalMoba.g:5637:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:5632:113: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:5633:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 0);
-            	    // InternalMoba.g:5640:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
-            	    // InternalMoba.g:5640:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:5636:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:5636:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoReference", "true");
             	    }
-            	    // InternalMoba.g:5640:19: ( (lv_cascading_2_0= 'cascading' ) )
-            	    // InternalMoba.g:5640:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:5636:19: ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:5636:20: (lv_cascading_2_0= 'cascading' )
             	    {
-            	    // InternalMoba.g:5640:20: (lv_cascading_2_0= 'cascading' )
-            	    // InternalMoba.g:5641:10: lv_cascading_2_0= 'cascading'
+            	    // InternalMoba.g:5636:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:5637:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_67); if (state.failed) return current;
+            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaDtoReferenceAccess().getCascadingCascadingKeyword_1_0_0());
@@ -15507,33 +15494,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMoba.g:5658:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:5654:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5658:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
-            	    // InternalMoba.g:5659:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:5654:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:5655:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalMoba.g:5659:113: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
-            	    // InternalMoba.g:5660:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:5655:113: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:5656:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 1);
-            	    // InternalMoba.g:5663:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
-            	    // InternalMoba.g:5663:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:5659:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:5659:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoReference", "true");
             	    }
-            	    // InternalMoba.g:5663:19: ( (lv_lazy_3_0= 'lazy' ) )
-            	    // InternalMoba.g:5663:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:5659:19: ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:5659:20: (lv_lazy_3_0= 'lazy' )
             	    {
-            	    // InternalMoba.g:5663:20: (lv_lazy_3_0= 'lazy' )
-            	    // InternalMoba.g:5664:10: lv_lazy_3_0= 'lazy'
+            	    // InternalMoba.g:5659:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:5660:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_67); if (state.failed) return current;
+            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaDtoReferenceAccess().getLazyLazyKeyword_1_1_0());
@@ -15567,33 +15554,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalMoba.g:5681:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:5677:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5681:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
-            	    // InternalMoba.g:5682:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:5677:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:5678:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalMoba.g:5682:113: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
-            	    // InternalMoba.g:5683:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:5678:113: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:5679:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), 2);
-            	    // InternalMoba.g:5686:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
-            	    // InternalMoba.g:5686:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:5682:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:5682:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaDtoReference", "true");
             	    }
-            	    // InternalMoba.g:5686:19: ( (lv_transient_4_0= 'transient' ) )
-            	    // InternalMoba.g:5686:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:5682:19: ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:5682:20: (lv_transient_4_0= 'transient' )
             	    {
-            	    // InternalMoba.g:5686:20: (lv_transient_4_0= 'transient' )
-            	    // InternalMoba.g:5687:10: lv_transient_4_0= 'transient'
+            	    // InternalMoba.g:5682:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:5683:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_67); if (state.failed) return current;
+            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_transient_4_0, grammarAccess.getMobaDtoReferenceAccess().getTransientTransientKeyword_1_2_0());
@@ -15628,7 +15615,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop87;
+            	    break loop90;
                 }
             } while (true);
 
@@ -15642,11 +15629,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5711:3: ( (otherlv_5= RULE_ID ) )
-            // InternalMoba.g:5712:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:5707:3: ( (otherlv_5= RULE_ID ) )
+            // InternalMoba.g:5708:4: (otherlv_5= RULE_ID )
             {
-            // InternalMoba.g:5712:4: (otherlv_5= RULE_ID )
-            // InternalMoba.g:5713:5: otherlv_5= RULE_ID
+            // InternalMoba.g:5708:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:5709:5: otherlv_5= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -15686,13 +15673,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:5735:3: ( (lv_name_7_0= RULE_ID ) )
-            // InternalMoba.g:5736:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:5731:3: ( (lv_name_7_0= RULE_ID ) )
+            // InternalMoba.g:5732:4: (lv_name_7_0= RULE_ID )
             {
-            // InternalMoba.g:5736:4: (lv_name_7_0= RULE_ID )
-            // InternalMoba.g:5737:5: lv_name_7_0= RULE_ID
+            // InternalMoba.g:5732:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:5733:5: lv_name_7_0= RULE_ID
             {
-            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_68); if (state.failed) return current;
+            lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_72); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_7_0, grammarAccess.getMobaDtoReferenceAccess().getNameIDTerminalRuleCall_4_0());
@@ -15716,28 +15703,93 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5753:3: (otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) ) )?
-            int alt88=2;
-            int LA88_0 = input.LA(1);
+            // InternalMoba.g:5749:3: (otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')' )?
+            int alt91=2;
+            int LA91_0 = input.LA(1);
 
-            if ( (LA88_0==96) ) {
-                alt88=1;
+            if ( (LA91_0==98) ) {
+                alt91=1;
             }
-            switch (alt88) {
+            switch (alt91) {
                 case 1 :
-                    // InternalMoba.g:5754:4: otherlv_8= 'opposite' ( (otherlv_9= RULE_ID ) )
+                    // InternalMoba.g:5750:4: otherlv_8= 'alias' otherlv_9= '(' ( (lv_alias_10_0= RULE_ID ) ) otherlv_11= ')'
                     {
-                    otherlv_8=(Token)match(input,96,FOLLOW_4); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,98,FOLLOW_17); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_8, grammarAccess.getMobaDtoReferenceAccess().getOppositeKeyword_5_0());
+                      				newLeafNode(otherlv_8, grammarAccess.getMobaDtoReferenceAccess().getAliasKeyword_5_0());
                       			
                     }
-                    // InternalMoba.g:5758:4: ( (otherlv_9= RULE_ID ) )
-                    // InternalMoba.g:5759:5: (otherlv_9= RULE_ID )
+                    otherlv_9=(Token)match(input,32,FOLLOW_4); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_9, grammarAccess.getMobaDtoReferenceAccess().getLeftParenthesisKeyword_5_1());
+                      			
+                    }
+                    // InternalMoba.g:5758:4: ( (lv_alias_10_0= RULE_ID ) )
+                    // InternalMoba.g:5759:5: (lv_alias_10_0= RULE_ID )
                     {
-                    // InternalMoba.g:5759:5: (otherlv_9= RULE_ID )
-                    // InternalMoba.g:5760:6: otherlv_9= RULE_ID
+                    // InternalMoba.g:5759:5: (lv_alias_10_0= RULE_ID )
+                    // InternalMoba.g:5760:6: lv_alias_10_0= RULE_ID
+                    {
+                    lv_alias_10_0=(Token)match(input,RULE_ID,FOLLOW_31); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(lv_alias_10_0, grammarAccess.getMobaDtoReferenceAccess().getAliasIDTerminalRuleCall_5_2_0());
+                      					
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getMobaDtoReferenceRule());
+                      						}
+                      						setWithLastConsumed(
+                      							current,
+                      							"alias",
+                      							lv_alias_10_0,
+                      							"org.mobadsl.grammar.Moba.ID");
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_11=(Token)match(input,34,FOLLOW_69); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_11, grammarAccess.getMobaDtoReferenceAccess().getRightParenthesisKeyword_5_3());
+                      			
+                    }
+
+                    }
+                    break;
+
+            }
+
+            // InternalMoba.g:5781:3: (otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) ) )?
+            int alt92=2;
+            int LA92_0 = input.LA(1);
+
+            if ( (LA92_0==96) ) {
+                alt92=1;
+            }
+            switch (alt92) {
+                case 1 :
+                    // InternalMoba.g:5782:4: otherlv_12= 'opposite' ( (otherlv_13= RULE_ID ) )
+                    {
+                    otherlv_12=(Token)match(input,96,FOLLOW_4); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_12, grammarAccess.getMobaDtoReferenceAccess().getOppositeKeyword_6_0());
+                      			
+                    }
+                    // InternalMoba.g:5786:4: ( (otherlv_13= RULE_ID ) )
+                    // InternalMoba.g:5787:5: (otherlv_13= RULE_ID )
+                    {
+                    // InternalMoba.g:5787:5: (otherlv_13= RULE_ID )
+                    // InternalMoba.g:5788:6: otherlv_13= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15746,10 +15798,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                       						}
                       					
                     }
-                    otherlv_9=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						newLeafNode(otherlv_9, grammarAccess.getMobaDtoReferenceAccess().getOppositeMobaDtoReferenceCrossReference_5_1_0());
+                      						newLeafNode(otherlv_13, grammarAccess.getMobaDtoReferenceAccess().getOppositeMobaDtoReferenceCrossReference_6_1_0());
                       					
                     }
 
@@ -15769,17 +15821,17 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			if (current==null) {
               				current = createModelElement(grammarAccess.getMobaDtoReferenceRule());
               			}
-              			newCompositeNode(grammarAccess.getMobaDtoReferenceAccess().getMobaFriendsAbleParserRuleCall_6());
+              			newCompositeNode(grammarAccess.getMobaDtoReferenceAccess().getMobaFriendsAbleParserRuleCall_7());
               		
             }
             pushFollow(FOLLOW_2);
-            this_MobaFriendsAble_10=ruleMobaFriendsAble(current);
+            this_MobaFriendsAble_14=ruleMobaFriendsAble(current);
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			current = this_MobaFriendsAble_10;
+              			current = this_MobaFriendsAble_14;
               			afterParserOrEnumRuleCall();
               		
             }
@@ -15808,7 +15860,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaDtoEmbeddable"
-    // InternalMoba.g:5787:1: entryRuleMobaDtoEmbeddable returns [EObject current=null] : iv_ruleMobaDtoEmbeddable= ruleMobaDtoEmbeddable EOF ;
+    // InternalMoba.g:5815:1: entryRuleMobaDtoEmbeddable returns [EObject current=null] : iv_ruleMobaDtoEmbeddable= ruleMobaDtoEmbeddable EOF ;
     public final EObject entryRuleMobaDtoEmbeddable() throws RecognitionException {
         EObject current = null;
 
@@ -15816,8 +15868,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5787:58: (iv_ruleMobaDtoEmbeddable= ruleMobaDtoEmbeddable EOF )
-            // InternalMoba.g:5788:2: iv_ruleMobaDtoEmbeddable= ruleMobaDtoEmbeddable EOF
+            // InternalMoba.g:5815:58: (iv_ruleMobaDtoEmbeddable= ruleMobaDtoEmbeddable EOF )
+            // InternalMoba.g:5816:2: iv_ruleMobaDtoEmbeddable= ruleMobaDtoEmbeddable EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaDtoEmbeddableRule()); 
@@ -15848,7 +15900,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaDtoEmbeddable"
-    // InternalMoba.g:5794:1: ruleMobaDtoEmbeddable returns [EObject current=null] : (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:5822:1: ruleMobaDtoEmbeddable returns [EObject current=null] : (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) (otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')' )? this_MobaFriendsAble_9= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaDtoEmbeddable() throws RecognitionException {
         EObject current = null;
 
@@ -15856,40 +15908,44 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token lv_transient_1_0=null;
         Token otherlv_2=null;
         Token lv_name_4_0=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token lv_alias_7_0=null;
+        Token otherlv_8=null;
         EObject this_MobaMultiplicityAble_3 = null;
 
-        EObject this_MobaFriendsAble_5 = null;
+        EObject this_MobaFriendsAble_9 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalMoba.g:5800:2: ( (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:5801:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5828:2: ( (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) (otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')' )? this_MobaFriendsAble_9= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:5829:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) (otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')' )? this_MobaFriendsAble_9= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:5801:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:5802:3: otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:5829:2: (otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) (otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')' )? this_MobaFriendsAble_9= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5830:3: otherlv_0= 'embed' ( (lv_transient_1_0= 'transient' ) )? ( (otherlv_2= RULE_ID ) ) this_MobaMultiplicityAble_3= ruleMobaMultiplicityAble[$current] ( (lv_name_4_0= RULE_ID ) ) (otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')' )? this_MobaFriendsAble_9= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,97,FOLLOW_69); if (state.failed) return current;
+            otherlv_0=(Token)match(input,97,FOLLOW_70); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaDtoEmbeddableAccess().getEmbedKeyword_0());
               		
             }
-            // InternalMoba.g:5806:3: ( (lv_transient_1_0= 'transient' ) )?
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // InternalMoba.g:5834:3: ( (lv_transient_1_0= 'transient' ) )?
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( (LA89_0==89) ) {
-                alt89=1;
+            if ( (LA93_0==89) ) {
+                alt93=1;
             }
-            switch (alt89) {
+            switch (alt93) {
                 case 1 :
-                    // InternalMoba.g:5807:4: (lv_transient_1_0= 'transient' )
+                    // InternalMoba.g:5835:4: (lv_transient_1_0= 'transient' )
                     {
-                    // InternalMoba.g:5807:4: (lv_transient_1_0= 'transient' )
-                    // InternalMoba.g:5808:5: lv_transient_1_0= 'transient'
+                    // InternalMoba.g:5835:4: (lv_transient_1_0= 'transient' )
+                    // InternalMoba.g:5836:5: lv_transient_1_0= 'transient'
                     {
                     lv_transient_1_0=(Token)match(input,89,FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15914,11 +15970,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:5820:3: ( (otherlv_2= RULE_ID ) )
-            // InternalMoba.g:5821:4: (otherlv_2= RULE_ID )
+            // InternalMoba.g:5848:3: ( (otherlv_2= RULE_ID ) )
+            // InternalMoba.g:5849:4: (otherlv_2= RULE_ID )
             {
-            // InternalMoba.g:5821:4: (otherlv_2= RULE_ID )
-            // InternalMoba.g:5822:5: otherlv_2= RULE_ID
+            // InternalMoba.g:5849:4: (otherlv_2= RULE_ID )
+            // InternalMoba.g:5850:5: otherlv_2= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -15958,13 +16014,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:5844:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalMoba.g:5845:4: (lv_name_4_0= RULE_ID )
+            // InternalMoba.g:5872:3: ( (lv_name_4_0= RULE_ID ) )
+            // InternalMoba.g:5873:4: (lv_name_4_0= RULE_ID )
             {
-            // InternalMoba.g:5845:4: (lv_name_4_0= RULE_ID )
-            // InternalMoba.g:5846:5: lv_name_4_0= RULE_ID
+            // InternalMoba.g:5873:4: (lv_name_4_0= RULE_ID )
+            // InternalMoba.g:5874:5: lv_name_4_0= RULE_ID
             {
-            lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
+            lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_73); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_4_0, grammarAccess.getMobaDtoEmbeddableAccess().getNameIDTerminalRuleCall_4_0());
@@ -15988,22 +16044,87 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            // InternalMoba.g:5890:3: (otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')' )?
+            int alt94=2;
+            int LA94_0 = input.LA(1);
+
+            if ( (LA94_0==98) ) {
+                alt94=1;
+            }
+            switch (alt94) {
+                case 1 :
+                    // InternalMoba.g:5891:4: otherlv_5= 'alias' otherlv_6= '(' ( (lv_alias_7_0= RULE_ID ) ) otherlv_8= ')'
+                    {
+                    otherlv_5=(Token)match(input,98,FOLLOW_17); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_5, grammarAccess.getMobaDtoEmbeddableAccess().getAliasKeyword_5_0());
+                      			
+                    }
+                    otherlv_6=(Token)match(input,32,FOLLOW_4); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_6, grammarAccess.getMobaDtoEmbeddableAccess().getLeftParenthesisKeyword_5_1());
+                      			
+                    }
+                    // InternalMoba.g:5899:4: ( (lv_alias_7_0= RULE_ID ) )
+                    // InternalMoba.g:5900:5: (lv_alias_7_0= RULE_ID )
+                    {
+                    // InternalMoba.g:5900:5: (lv_alias_7_0= RULE_ID )
+                    // InternalMoba.g:5901:6: lv_alias_7_0= RULE_ID
+                    {
+                    lv_alias_7_0=(Token)match(input,RULE_ID,FOLLOW_31); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(lv_alias_7_0, grammarAccess.getMobaDtoEmbeddableAccess().getAliasIDTerminalRuleCall_5_2_0());
+                      					
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getMobaDtoEmbeddableRule());
+                      						}
+                      						setWithLastConsumed(
+                      							current,
+                      							"alias",
+                      							lv_alias_7_0,
+                      							"org.mobadsl.grammar.Moba.ID");
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_8=(Token)match(input,34,FOLLOW_25); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_8, grammarAccess.getMobaDtoEmbeddableAccess().getRightParenthesisKeyword_5_3());
+                      			
+                    }
+
+                    }
+                    break;
+
+            }
+
             if ( state.backtracking==0 ) {
 
               			if (current==null) {
               				current = createModelElement(grammarAccess.getMobaDtoEmbeddableRule());
               			}
-              			newCompositeNode(grammarAccess.getMobaDtoEmbeddableAccess().getMobaFriendsAbleParserRuleCall_5());
+              			newCompositeNode(grammarAccess.getMobaDtoEmbeddableAccess().getMobaFriendsAbleParserRuleCall_6());
               		
             }
             pushFollow(FOLLOW_2);
-            this_MobaFriendsAble_5=ruleMobaFriendsAble(current);
+            this_MobaFriendsAble_9=ruleMobaFriendsAble(current);
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			current = this_MobaFriendsAble_5;
+              			current = this_MobaFriendsAble_9;
               			afterParserOrEnumRuleCall();
               		
             }
@@ -16032,7 +16153,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaQueueFeature"
-    // InternalMoba.g:5877:1: entryRuleMobaQueueFeature returns [EObject current=null] : iv_ruleMobaQueueFeature= ruleMobaQueueFeature EOF ;
+    // InternalMoba.g:5937:1: entryRuleMobaQueueFeature returns [EObject current=null] : iv_ruleMobaQueueFeature= ruleMobaQueueFeature EOF ;
     public final EObject entryRuleMobaQueueFeature() throws RecognitionException {
         EObject current = null;
 
@@ -16040,8 +16161,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5877:57: (iv_ruleMobaQueueFeature= ruleMobaQueueFeature EOF )
-            // InternalMoba.g:5878:2: iv_ruleMobaQueueFeature= ruleMobaQueueFeature EOF
+            // InternalMoba.g:5937:57: (iv_ruleMobaQueueFeature= ruleMobaQueueFeature EOF )
+            // InternalMoba.g:5938:2: iv_ruleMobaQueueFeature= ruleMobaQueueFeature EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaQueueFeatureRule()); 
@@ -16072,7 +16193,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaQueueFeature"
-    // InternalMoba.g:5884:1: ruleMobaQueueFeature returns [EObject current=null] : this_MobaQueueReference_0= ruleMobaQueueReference ;
+    // InternalMoba.g:5944:1: ruleMobaQueueFeature returns [EObject current=null] : this_MobaQueueReference_0= ruleMobaQueueReference ;
     public final EObject ruleMobaQueueFeature() throws RecognitionException {
         EObject current = null;
 
@@ -16083,8 +16204,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:5890:2: (this_MobaQueueReference_0= ruleMobaQueueReference )
-            // InternalMoba.g:5891:2: this_MobaQueueReference_0= ruleMobaQueueReference
+            // InternalMoba.g:5950:2: (this_MobaQueueReference_0= ruleMobaQueueReference )
+            // InternalMoba.g:5951:2: this_MobaQueueReference_0= ruleMobaQueueReference
             {
             if ( state.backtracking==0 ) {
 
@@ -16124,7 +16245,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaQueueReference"
-    // InternalMoba.g:5902:1: entryRuleMobaQueueReference returns [EObject current=null] : iv_ruleMobaQueueReference= ruleMobaQueueReference EOF ;
+    // InternalMoba.g:5962:1: entryRuleMobaQueueReference returns [EObject current=null] : iv_ruleMobaQueueReference= ruleMobaQueueReference EOF ;
     public final EObject entryRuleMobaQueueReference() throws RecognitionException {
         EObject current = null;
 
@@ -16132,8 +16253,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:5902:59: (iv_ruleMobaQueueReference= ruleMobaQueueReference EOF )
-            // InternalMoba.g:5903:2: iv_ruleMobaQueueReference= ruleMobaQueueReference EOF
+            // InternalMoba.g:5962:59: (iv_ruleMobaQueueReference= ruleMobaQueueReference EOF )
+            // InternalMoba.g:5963:2: iv_ruleMobaQueueReference= ruleMobaQueueReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaQueueReferenceRule()); 
@@ -16164,7 +16285,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaQueueReference"
-    // InternalMoba.g:5909:1: ruleMobaQueueReference returns [EObject current=null] : (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) ;
+    // InternalMoba.g:5969:1: ruleMobaQueueReference returns [EObject current=null] : (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaQueueReference() throws RecognitionException {
         EObject current = null;
 
@@ -16183,74 +16304,74 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:5915:2: ( (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) )
-            // InternalMoba.g:5916:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5975:2: ( (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:5976:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:5916:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
-            // InternalMoba.g:5917:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current]
+            // InternalMoba.g:5976:2: (otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:5977:3: otherlv_0= 'ref' ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) ) ( (otherlv_5= RULE_ID ) ) this_MobaMultiplicityAble_6= ruleMobaMultiplicityAble[$current] ( (lv_name_7_0= RULE_ID ) ) this_MobaFriendsAble_8= ruleMobaFriendsAble[$current]
             {
-            otherlv_0=(Token)match(input,95,FOLLOW_67); if (state.failed) return current;
+            otherlv_0=(Token)match(input,95,FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaQueueReferenceAccess().getRefKeyword_0());
               		
             }
-            // InternalMoba.g:5921:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
-            // InternalMoba.g:5922:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:5981:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) ) )
+            // InternalMoba.g:5982:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
             {
-            // InternalMoba.g:5922:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
-            // InternalMoba.g:5923:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:5982:4: ( ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* ) )
+            // InternalMoba.g:5983:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
             {
             getUnorderedGroupHelper().enter(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1());
-            // InternalMoba.g:5926:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
-            // InternalMoba.g:5927:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            // InternalMoba.g:5986:5: ( ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )* )
+            // InternalMoba.g:5987:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
             {
-            // InternalMoba.g:5927:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
-            loop90:
+            // InternalMoba.g:5987:6: ( ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) ) )*
+            loop95:
             do {
-                int alt90=4;
-                int LA90_0 = input.LA(1);
+                int alt95=4;
+                int LA95_0 = input.LA(1);
 
-                if ( LA90_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0) ) {
-                    alt90=1;
+                if ( LA95_0 == 94 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0) ) {
+                    alt95=1;
                 }
-                else if ( LA90_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1) ) {
-                    alt90=2;
+                else if ( LA95_0 == 88 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1) ) {
+                    alt95=2;
                 }
-                else if ( LA90_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2) ) {
-                    alt90=3;
+                else if ( LA95_0 == 89 && getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2) ) {
+                    alt95=3;
                 }
 
 
-                switch (alt90) {
+                switch (alt95) {
             	case 1 :
-            	    // InternalMoba.g:5928:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:5988:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5928:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
-            	    // InternalMoba.g:5929:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:5988:4: ({...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) ) )
+            	    // InternalMoba.g:5989:5: {...}? => ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaQueueReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalMoba.g:5929:115: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
-            	    // InternalMoba.g:5930:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:5989:115: ( ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) ) )
+            	    // InternalMoba.g:5990:6: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 0);
-            	    // InternalMoba.g:5933:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
-            	    // InternalMoba.g:5933:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:5993:9: ({...}? => ( (lv_cascading_2_0= 'cascading' ) ) )
+            	    // InternalMoba.g:5993:10: {...}? => ( (lv_cascading_2_0= 'cascading' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaQueueReference", "true");
             	    }
-            	    // InternalMoba.g:5933:19: ( (lv_cascading_2_0= 'cascading' ) )
-            	    // InternalMoba.g:5933:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:5993:19: ( (lv_cascading_2_0= 'cascading' ) )
+            	    // InternalMoba.g:5993:20: (lv_cascading_2_0= 'cascading' )
             	    {
-            	    // InternalMoba.g:5933:20: (lv_cascading_2_0= 'cascading' )
-            	    // InternalMoba.g:5934:10: lv_cascading_2_0= 'cascading'
+            	    // InternalMoba.g:5993:20: (lv_cascading_2_0= 'cascading' )
+            	    // InternalMoba.g:5994:10: lv_cascading_2_0= 'cascading'
             	    {
-            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_67); if (state.failed) return current;
+            	    lv_cascading_2_0=(Token)match(input,94,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaQueueReferenceAccess().getCascadingCascadingKeyword_1_0_0());
@@ -16284,33 +16405,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMoba.g:5951:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:6011:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5951:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
-            	    // InternalMoba.g:5952:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:6011:4: ({...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) ) )
+            	    // InternalMoba.g:6012:5: {...}? => ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaQueueReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalMoba.g:5952:115: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
-            	    // InternalMoba.g:5953:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:6012:115: ( ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) ) )
+            	    // InternalMoba.g:6013:6: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 1);
-            	    // InternalMoba.g:5956:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
-            	    // InternalMoba.g:5956:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:6016:9: ({...}? => ( (lv_lazy_3_0= 'lazy' ) ) )
+            	    // InternalMoba.g:6016:10: {...}? => ( (lv_lazy_3_0= 'lazy' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaQueueReference", "true");
             	    }
-            	    // InternalMoba.g:5956:19: ( (lv_lazy_3_0= 'lazy' ) )
-            	    // InternalMoba.g:5956:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:6016:19: ( (lv_lazy_3_0= 'lazy' ) )
+            	    // InternalMoba.g:6016:20: (lv_lazy_3_0= 'lazy' )
             	    {
-            	    // InternalMoba.g:5956:20: (lv_lazy_3_0= 'lazy' )
-            	    // InternalMoba.g:5957:10: lv_lazy_3_0= 'lazy'
+            	    // InternalMoba.g:6016:20: (lv_lazy_3_0= 'lazy' )
+            	    // InternalMoba.g:6017:10: lv_lazy_3_0= 'lazy'
             	    {
-            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_67); if (state.failed) return current;
+            	    lv_lazy_3_0=(Token)match(input,88,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaQueueReferenceAccess().getLazyLazyKeyword_1_1_0());
@@ -16344,33 +16465,33 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalMoba.g:5974:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:6034:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
             	    {
-            	    // InternalMoba.g:5974:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
-            	    // InternalMoba.g:5975:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:6034:4: ({...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) ) )
+            	    // InternalMoba.g:6035:5: {...}? => ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaQueueReference", "getUnorderedGroupHelper().canSelect(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalMoba.g:5975:115: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
-            	    // InternalMoba.g:5976:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:6035:115: ( ({...}? => ( (lv_transient_4_0= 'transient' ) ) ) )
+            	    // InternalMoba.g:6036:6: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
             	    {
             	    getUnorderedGroupHelper().select(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), 2);
-            	    // InternalMoba.g:5979:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
-            	    // InternalMoba.g:5979:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:6039:9: ({...}? => ( (lv_transient_4_0= 'transient' ) ) )
+            	    // InternalMoba.g:6039:10: {...}? => ( (lv_transient_4_0= 'transient' ) )
             	    {
             	    if ( !((true)) ) {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        throw new FailedPredicateException(input, "ruleMobaQueueReference", "true");
             	    }
-            	    // InternalMoba.g:5979:19: ( (lv_transient_4_0= 'transient' ) )
-            	    // InternalMoba.g:5979:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:6039:19: ( (lv_transient_4_0= 'transient' ) )
+            	    // InternalMoba.g:6039:20: (lv_transient_4_0= 'transient' )
             	    {
-            	    // InternalMoba.g:5979:20: (lv_transient_4_0= 'transient' )
-            	    // InternalMoba.g:5980:10: lv_transient_4_0= 'transient'
+            	    // InternalMoba.g:6039:20: (lv_transient_4_0= 'transient' )
+            	    // InternalMoba.g:6040:10: lv_transient_4_0= 'transient'
             	    {
-            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_67); if (state.failed) return current;
+            	    lv_transient_4_0=(Token)match(input,89,FOLLOW_68); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(lv_transient_4_0, grammarAccess.getMobaQueueReferenceAccess().getTransientTransientKeyword_1_2_0());
@@ -16405,7 +16526,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop90;
+            	    break loop95;
                 }
             } while (true);
 
@@ -16419,11 +16540,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:6004:3: ( (otherlv_5= RULE_ID ) )
-            // InternalMoba.g:6005:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:6064:3: ( (otherlv_5= RULE_ID ) )
+            // InternalMoba.g:6065:4: (otherlv_5= RULE_ID )
             {
-            // InternalMoba.g:6005:4: (otherlv_5= RULE_ID )
-            // InternalMoba.g:6006:5: otherlv_5= RULE_ID
+            // InternalMoba.g:6065:4: (otherlv_5= RULE_ID )
+            // InternalMoba.g:6066:5: otherlv_5= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -16463,11 +16584,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalMoba.g:6028:3: ( (lv_name_7_0= RULE_ID ) )
-            // InternalMoba.g:6029:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:6088:3: ( (lv_name_7_0= RULE_ID ) )
+            // InternalMoba.g:6089:4: (lv_name_7_0= RULE_ID )
             {
-            // InternalMoba.g:6029:4: (lv_name_7_0= RULE_ID )
-            // InternalMoba.g:6030:5: lv_name_7_0= RULE_ID
+            // InternalMoba.g:6089:4: (lv_name_7_0= RULE_ID )
+            // InternalMoba.g:6090:5: lv_name_7_0= RULE_ID
             {
             lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -16537,7 +16658,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaMuliplicity"
-    // InternalMoba.g:6061:1: entryRuleMobaMuliplicity returns [EObject current=null] : iv_ruleMobaMuliplicity= ruleMobaMuliplicity EOF ;
+    // InternalMoba.g:6121:1: entryRuleMobaMuliplicity returns [EObject current=null] : iv_ruleMobaMuliplicity= ruleMobaMuliplicity EOF ;
     public final EObject entryRuleMobaMuliplicity() throws RecognitionException {
         EObject current = null;
 
@@ -16545,8 +16666,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6061:56: (iv_ruleMobaMuliplicity= ruleMobaMuliplicity EOF )
-            // InternalMoba.g:6062:2: iv_ruleMobaMuliplicity= ruleMobaMuliplicity EOF
+            // InternalMoba.g:6121:56: (iv_ruleMobaMuliplicity= ruleMobaMuliplicity EOF )
+            // InternalMoba.g:6122:2: iv_ruleMobaMuliplicity= ruleMobaMuliplicity EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaMuliplicityRule()); 
@@ -16577,7 +16698,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaMuliplicity"
-    // InternalMoba.g:6068:1: ruleMobaMuliplicity returns [EObject current=null] : (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' ) ;
+    // InternalMoba.g:6128:1: ruleMobaMuliplicity returns [EObject current=null] : (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' ) ;
     public final EObject ruleMobaMuliplicity() throws RecognitionException {
         EObject current = null;
 
@@ -16593,30 +16714,30 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6074:2: ( (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' ) )
-            // InternalMoba.g:6075:2: (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' )
+            // InternalMoba.g:6134:2: ( (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' ) )
+            // InternalMoba.g:6135:2: (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' )
             {
-            // InternalMoba.g:6075:2: (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' )
-            // InternalMoba.g:6076:3: otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']'
+            // InternalMoba.g:6135:2: (otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']' )
+            // InternalMoba.g:6136:3: otherlv_0= '[' ( (lv_lower_1_0= ruleMobaLowerBound ) ) (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )? otherlv_4= ']'
             {
-            otherlv_0=(Token)match(input,63,FOLLOW_71); if (state.failed) return current;
+            otherlv_0=(Token)match(input,63,FOLLOW_74); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getMobaMuliplicityAccess().getLeftSquareBracketKeyword_0());
               		
             }
-            // InternalMoba.g:6080:3: ( (lv_lower_1_0= ruleMobaLowerBound ) )
-            // InternalMoba.g:6081:4: (lv_lower_1_0= ruleMobaLowerBound )
+            // InternalMoba.g:6140:3: ( (lv_lower_1_0= ruleMobaLowerBound ) )
+            // InternalMoba.g:6141:4: (lv_lower_1_0= ruleMobaLowerBound )
             {
-            // InternalMoba.g:6081:4: (lv_lower_1_0= ruleMobaLowerBound )
-            // InternalMoba.g:6082:5: lv_lower_1_0= ruleMobaLowerBound
+            // InternalMoba.g:6141:4: (lv_lower_1_0= ruleMobaLowerBound )
+            // InternalMoba.g:6142:5: lv_lower_1_0= ruleMobaLowerBound
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getMobaMuliplicityAccess().getLowerMobaLowerBoundEnumRuleCall_1_0());
               				
             }
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_75);
             lv_lower_1_0=ruleMobaLowerBound();
 
             state._fsp--;
@@ -16640,35 +16761,35 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:6099:3: (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )?
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            // InternalMoba.g:6159:3: (otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) ) )?
+            int alt96=2;
+            int LA96_0 = input.LA(1);
 
-            if ( (LA91_0==99) ) {
-                alt91=1;
+            if ( (LA96_0==99) ) {
+                alt96=1;
             }
-            switch (alt91) {
+            switch (alt96) {
                 case 1 :
-                    // InternalMoba.g:6100:4: otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) )
+                    // InternalMoba.g:6160:4: otherlv_2= '..' ( (lv_upper_3_0= ruleMobaUpperBound ) )
                     {
-                    otherlv_2=(Token)match(input,99,FOLLOW_73); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,99,FOLLOW_76); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_2, grammarAccess.getMobaMuliplicityAccess().getFullStopFullStopKeyword_2_0());
                       			
                     }
-                    // InternalMoba.g:6104:4: ( (lv_upper_3_0= ruleMobaUpperBound ) )
-                    // InternalMoba.g:6105:5: (lv_upper_3_0= ruleMobaUpperBound )
+                    // InternalMoba.g:6164:4: ( (lv_upper_3_0= ruleMobaUpperBound ) )
+                    // InternalMoba.g:6165:5: (lv_upper_3_0= ruleMobaUpperBound )
                     {
-                    // InternalMoba.g:6105:5: (lv_upper_3_0= ruleMobaUpperBound )
-                    // InternalMoba.g:6106:6: lv_upper_3_0= ruleMobaUpperBound
+                    // InternalMoba.g:6165:5: (lv_upper_3_0= ruleMobaUpperBound )
+                    // InternalMoba.g:6166:6: lv_upper_3_0= ruleMobaUpperBound
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getMobaMuliplicityAccess().getUpperMobaUpperBoundEnumRuleCall_2_1_0());
                       					
                     }
-                    pushFollow(FOLLOW_74);
+                    pushFollow(FOLLOW_77);
                     lv_upper_3_0=ruleMobaUpperBound();
 
                     state._fsp--;
@@ -16729,7 +16850,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaConstraint"
-    // InternalMoba.g:6132:1: entryRuleMobaConstraint returns [EObject current=null] : iv_ruleMobaConstraint= ruleMobaConstraint EOF ;
+    // InternalMoba.g:6192:1: entryRuleMobaConstraint returns [EObject current=null] : iv_ruleMobaConstraint= ruleMobaConstraint EOF ;
     public final EObject entryRuleMobaConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -16737,8 +16858,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6132:55: (iv_ruleMobaConstraint= ruleMobaConstraint EOF )
-            // InternalMoba.g:6133:2: iv_ruleMobaConstraint= ruleMobaConstraint EOF
+            // InternalMoba.g:6192:55: (iv_ruleMobaConstraint= ruleMobaConstraint EOF )
+            // InternalMoba.g:6193:2: iv_ruleMobaConstraint= ruleMobaConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaConstraintRule()); 
@@ -16769,7 +16890,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaConstraint"
-    // InternalMoba.g:6139:1: ruleMobaConstraint returns [EObject current=null] : (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint ) ;
+    // InternalMoba.g:6199:1: ruleMobaConstraint returns [EObject current=null] : (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint ) ;
     public final EObject ruleMobaConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -16794,63 +16915,63 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6145:2: ( (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint ) )
-            // InternalMoba.g:6146:2: (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint )
+            // InternalMoba.g:6205:2: ( (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint ) )
+            // InternalMoba.g:6206:2: (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint )
             {
-            // InternalMoba.g:6146:2: (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint )
-            int alt92=8;
+            // InternalMoba.g:6206:2: (this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint | this_MobaMinConstraint_1= ruleMobaMinConstraint | this_MobaMaxConstraint_2= ruleMobaMaxConstraint | this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint | this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint | this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint | this_MobaNullConstraint_6= ruleMobaNullConstraint | this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint )
+            int alt97=8;
             switch ( input.LA(1) ) {
             case 100:
                 {
-                alt92=1;
+                alt97=1;
                 }
                 break;
             case 101:
                 {
-                alt92=2;
+                alt97=2;
                 }
                 break;
             case 102:
                 {
-                alt92=3;
+                alt97=3;
                 }
                 break;
             case 103:
                 {
-                alt92=4;
+                alt97=4;
                 }
                 break;
             case 104:
                 {
-                alt92=5;
+                alt97=5;
                 }
                 break;
             case 105:
                 {
-                alt92=6;
+                alt97=6;
                 }
                 break;
             case 106:
                 {
-                alt92=7;
+                alt97=7;
                 }
                 break;
             case 107:
                 {
-                alt92=8;
+                alt97=8;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 92, 0, input);
+                    new NoViableAltException("", 97, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt92) {
+            switch (alt97) {
                 case 1 :
-                    // InternalMoba.g:6147:3: this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint
+                    // InternalMoba.g:6207:3: this_MobaRegexpConstraint_0= ruleMobaRegexpConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16872,7 +16993,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6156:3: this_MobaMinConstraint_1= ruleMobaMinConstraint
+                    // InternalMoba.g:6216:3: this_MobaMinConstraint_1= ruleMobaMinConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16894,7 +17015,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:6165:3: this_MobaMaxConstraint_2= ruleMobaMaxConstraint
+                    // InternalMoba.g:6225:3: this_MobaMaxConstraint_2= ruleMobaMaxConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16916,7 +17037,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:6174:3: this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint
+                    // InternalMoba.g:6234:3: this_MobaMinLengthConstraint_3= ruleMobaMinLengthConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16938,7 +17059,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMoba.g:6183:3: this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint
+                    // InternalMoba.g:6243:3: this_MobaMaxLengthConstraint_4= ruleMobaMaxLengthConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16960,7 +17081,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalMoba.g:6192:3: this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint
+                    // InternalMoba.g:6252:3: this_MobaDigitsConstraint_5= ruleMobaDigitsConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16982,7 +17103,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalMoba.g:6201:3: this_MobaNullConstraint_6= ruleMobaNullConstraint
+                    // InternalMoba.g:6261:3: this_MobaNullConstraint_6= ruleMobaNullConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17004,7 +17125,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalMoba.g:6210:3: this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint
+                    // InternalMoba.g:6270:3: this_MobaNotNullConstraint_7= ruleMobaNotNullConstraint
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17050,7 +17171,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaRegexpConstraint"
-    // InternalMoba.g:6222:1: entryRuleMobaRegexpConstraint returns [EObject current=null] : iv_ruleMobaRegexpConstraint= ruleMobaRegexpConstraint EOF ;
+    // InternalMoba.g:6282:1: entryRuleMobaRegexpConstraint returns [EObject current=null] : iv_ruleMobaRegexpConstraint= ruleMobaRegexpConstraint EOF ;
     public final EObject entryRuleMobaRegexpConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17058,8 +17179,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6222:61: (iv_ruleMobaRegexpConstraint= ruleMobaRegexpConstraint EOF )
-            // InternalMoba.g:6223:2: iv_ruleMobaRegexpConstraint= ruleMobaRegexpConstraint EOF
+            // InternalMoba.g:6282:61: (iv_ruleMobaRegexpConstraint= ruleMobaRegexpConstraint EOF )
+            // InternalMoba.g:6283:2: iv_ruleMobaRegexpConstraint= ruleMobaRegexpConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaRegexpConstraintRule()); 
@@ -17090,7 +17211,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaRegexpConstraint"
-    // InternalMoba.g:6229:1: ruleMobaRegexpConstraint returns [EObject current=null] : (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
+    // InternalMoba.g:6289:1: ruleMobaRegexpConstraint returns [EObject current=null] : (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
     public final EObject ruleMobaRegexpConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17103,11 +17224,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6235:2: ( (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
-            // InternalMoba.g:6236:2: (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6295:2: ( (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
+            // InternalMoba.g:6296:2: (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
             {
-            // InternalMoba.g:6236:2: (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
-            // InternalMoba.g:6237:3: otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            // InternalMoba.g:6296:2: (otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6297:3: otherlv_0= 'regexp' otherlv_1= '=' ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
             {
             otherlv_0=(Token)match(input,100,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17121,32 +17242,32 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getMobaRegexpConstraintAccess().getEqualsSignKeyword_1());
               		
             }
-            // InternalMoba.g:6245:3: ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
-            int alt93=2;
-            int LA93_0 = input.LA(1);
+            // InternalMoba.g:6305:3: ( ( (lv_filterString_2_0= RULE_STRING ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            int alt98=2;
+            int LA98_0 = input.LA(1);
 
-            if ( (LA93_0==RULE_STRING) ) {
-                alt93=1;
+            if ( (LA98_0==RULE_STRING) ) {
+                alt98=1;
             }
-            else if ( (LA93_0==RULE_CONSTANT) ) {
-                alt93=2;
+            else if ( (LA98_0==RULE_CONSTANT) ) {
+                alt98=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 93, 0, input);
+                    new NoViableAltException("", 98, 0, input);
 
                 throw nvae;
             }
-            switch (alt93) {
+            switch (alt98) {
                 case 1 :
-                    // InternalMoba.g:6246:4: ( (lv_filterString_2_0= RULE_STRING ) )
+                    // InternalMoba.g:6306:4: ( (lv_filterString_2_0= RULE_STRING ) )
                     {
-                    // InternalMoba.g:6246:4: ( (lv_filterString_2_0= RULE_STRING ) )
-                    // InternalMoba.g:6247:5: (lv_filterString_2_0= RULE_STRING )
+                    // InternalMoba.g:6306:4: ( (lv_filterString_2_0= RULE_STRING ) )
+                    // InternalMoba.g:6307:5: (lv_filterString_2_0= RULE_STRING )
                     {
-                    // InternalMoba.g:6247:5: (lv_filterString_2_0= RULE_STRING )
-                    // InternalMoba.g:6248:6: lv_filterString_2_0= RULE_STRING
+                    // InternalMoba.g:6307:5: (lv_filterString_2_0= RULE_STRING )
+                    // InternalMoba.g:6308:6: lv_filterString_2_0= RULE_STRING
                     {
                     lv_filterString_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17176,13 +17297,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6265:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6325:4: ( (otherlv_3= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6265:4: ( (otherlv_3= RULE_CONSTANT ) )
-                    // InternalMoba.g:6266:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6325:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6326:5: (otherlv_3= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6266:5: (otherlv_3= RULE_CONSTANT )
-                    // InternalMoba.g:6267:6: otherlv_3= RULE_CONSTANT
+                    // InternalMoba.g:6326:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6327:6: otherlv_3= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17234,7 +17355,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaMinConstraint"
-    // InternalMoba.g:6283:1: entryRuleMobaMinConstraint returns [EObject current=null] : iv_ruleMobaMinConstraint= ruleMobaMinConstraint EOF ;
+    // InternalMoba.g:6343:1: entryRuleMobaMinConstraint returns [EObject current=null] : iv_ruleMobaMinConstraint= ruleMobaMinConstraint EOF ;
     public final EObject entryRuleMobaMinConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17242,8 +17363,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6283:58: (iv_ruleMobaMinConstraint= ruleMobaMinConstraint EOF )
-            // InternalMoba.g:6284:2: iv_ruleMobaMinConstraint= ruleMobaMinConstraint EOF
+            // InternalMoba.g:6343:58: (iv_ruleMobaMinConstraint= ruleMobaMinConstraint EOF )
+            // InternalMoba.g:6344:2: iv_ruleMobaMinConstraint= ruleMobaMinConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaMinConstraintRule()); 
@@ -17274,7 +17395,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaMinConstraint"
-    // InternalMoba.g:6290:1: ruleMobaMinConstraint returns [EObject current=null] : (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
+    // InternalMoba.g:6350:1: ruleMobaMinConstraint returns [EObject current=null] : (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
     public final EObject ruleMobaMinConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17287,11 +17408,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6296:2: ( (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
-            // InternalMoba.g:6297:2: (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6356:2: ( (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
+            // InternalMoba.g:6357:2: (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
             {
-            // InternalMoba.g:6297:2: (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
-            // InternalMoba.g:6298:3: otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            // InternalMoba.g:6357:2: (otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6358:3: otherlv_0= 'min' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
             {
             otherlv_0=(Token)match(input,101,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17299,38 +17420,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaMinConstraintAccess().getMinKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,22,FOLLOW_75); if (state.failed) return current;
+            otherlv_1=(Token)match(input,22,FOLLOW_78); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getMobaMinConstraintAccess().getEqualsSignKeyword_1());
               		
             }
-            // InternalMoba.g:6306:3: ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
-            int alt94=2;
-            int LA94_0 = input.LA(1);
+            // InternalMoba.g:6366:3: ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            int alt99=2;
+            int LA99_0 = input.LA(1);
 
-            if ( (LA94_0==RULE_DOUBLE) ) {
-                alt94=1;
+            if ( (LA99_0==RULE_DOUBLE) ) {
+                alt99=1;
             }
-            else if ( (LA94_0==RULE_CONSTANT) ) {
-                alt94=2;
+            else if ( (LA99_0==RULE_CONSTANT) ) {
+                alt99=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 94, 0, input);
+                    new NoViableAltException("", 99, 0, input);
 
                 throw nvae;
             }
-            switch (alt94) {
+            switch (alt99) {
                 case 1 :
-                    // InternalMoba.g:6307:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
+                    // InternalMoba.g:6367:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
                     {
-                    // InternalMoba.g:6307:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
-                    // InternalMoba.g:6308:5: (lv_filterValue_2_0= RULE_DOUBLE )
+                    // InternalMoba.g:6367:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
+                    // InternalMoba.g:6368:5: (lv_filterValue_2_0= RULE_DOUBLE )
                     {
-                    // InternalMoba.g:6308:5: (lv_filterValue_2_0= RULE_DOUBLE )
-                    // InternalMoba.g:6309:6: lv_filterValue_2_0= RULE_DOUBLE
+                    // InternalMoba.g:6368:5: (lv_filterValue_2_0= RULE_DOUBLE )
+                    // InternalMoba.g:6369:6: lv_filterValue_2_0= RULE_DOUBLE
                     {
                     lv_filterValue_2_0=(Token)match(input,RULE_DOUBLE,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17360,13 +17481,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6326:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6386:4: ( (otherlv_3= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6326:4: ( (otherlv_3= RULE_CONSTANT ) )
-                    // InternalMoba.g:6327:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6386:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6387:5: (otherlv_3= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6327:5: (otherlv_3= RULE_CONSTANT )
-                    // InternalMoba.g:6328:6: otherlv_3= RULE_CONSTANT
+                    // InternalMoba.g:6387:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6388:6: otherlv_3= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17418,7 +17539,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaMaxConstraint"
-    // InternalMoba.g:6344:1: entryRuleMobaMaxConstraint returns [EObject current=null] : iv_ruleMobaMaxConstraint= ruleMobaMaxConstraint EOF ;
+    // InternalMoba.g:6404:1: entryRuleMobaMaxConstraint returns [EObject current=null] : iv_ruleMobaMaxConstraint= ruleMobaMaxConstraint EOF ;
     public final EObject entryRuleMobaMaxConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17426,8 +17547,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6344:58: (iv_ruleMobaMaxConstraint= ruleMobaMaxConstraint EOF )
-            // InternalMoba.g:6345:2: iv_ruleMobaMaxConstraint= ruleMobaMaxConstraint EOF
+            // InternalMoba.g:6404:58: (iv_ruleMobaMaxConstraint= ruleMobaMaxConstraint EOF )
+            // InternalMoba.g:6405:2: iv_ruleMobaMaxConstraint= ruleMobaMaxConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaMaxConstraintRule()); 
@@ -17458,7 +17579,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaMaxConstraint"
-    // InternalMoba.g:6351:1: ruleMobaMaxConstraint returns [EObject current=null] : (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
+    // InternalMoba.g:6411:1: ruleMobaMaxConstraint returns [EObject current=null] : (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
     public final EObject ruleMobaMaxConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17471,11 +17592,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6357:2: ( (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
-            // InternalMoba.g:6358:2: (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6417:2: ( (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
+            // InternalMoba.g:6418:2: (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
             {
-            // InternalMoba.g:6358:2: (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
-            // InternalMoba.g:6359:3: otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            // InternalMoba.g:6418:2: (otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6419:3: otherlv_0= 'max' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
             {
             otherlv_0=(Token)match(input,102,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17483,38 +17604,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaMaxConstraintAccess().getMaxKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,22,FOLLOW_75); if (state.failed) return current;
+            otherlv_1=(Token)match(input,22,FOLLOW_78); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getMobaMaxConstraintAccess().getEqualsSignKeyword_1());
               		
             }
-            // InternalMoba.g:6367:3: ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
-            int alt95=2;
-            int LA95_0 = input.LA(1);
+            // InternalMoba.g:6427:3: ( ( (lv_filterValue_2_0= RULE_DOUBLE ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            int alt100=2;
+            int LA100_0 = input.LA(1);
 
-            if ( (LA95_0==RULE_DOUBLE) ) {
-                alt95=1;
+            if ( (LA100_0==RULE_DOUBLE) ) {
+                alt100=1;
             }
-            else if ( (LA95_0==RULE_CONSTANT) ) {
-                alt95=2;
+            else if ( (LA100_0==RULE_CONSTANT) ) {
+                alt100=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 95, 0, input);
+                    new NoViableAltException("", 100, 0, input);
 
                 throw nvae;
             }
-            switch (alt95) {
+            switch (alt100) {
                 case 1 :
-                    // InternalMoba.g:6368:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
+                    // InternalMoba.g:6428:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
                     {
-                    // InternalMoba.g:6368:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
-                    // InternalMoba.g:6369:5: (lv_filterValue_2_0= RULE_DOUBLE )
+                    // InternalMoba.g:6428:4: ( (lv_filterValue_2_0= RULE_DOUBLE ) )
+                    // InternalMoba.g:6429:5: (lv_filterValue_2_0= RULE_DOUBLE )
                     {
-                    // InternalMoba.g:6369:5: (lv_filterValue_2_0= RULE_DOUBLE )
-                    // InternalMoba.g:6370:6: lv_filterValue_2_0= RULE_DOUBLE
+                    // InternalMoba.g:6429:5: (lv_filterValue_2_0= RULE_DOUBLE )
+                    // InternalMoba.g:6430:6: lv_filterValue_2_0= RULE_DOUBLE
                     {
                     lv_filterValue_2_0=(Token)match(input,RULE_DOUBLE,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17544,13 +17665,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6387:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6447:4: ( (otherlv_3= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6387:4: ( (otherlv_3= RULE_CONSTANT ) )
-                    // InternalMoba.g:6388:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6447:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6448:5: (otherlv_3= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6388:5: (otherlv_3= RULE_CONSTANT )
-                    // InternalMoba.g:6389:6: otherlv_3= RULE_CONSTANT
+                    // InternalMoba.g:6448:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6449:6: otherlv_3= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17602,7 +17723,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaMinLengthConstraint"
-    // InternalMoba.g:6405:1: entryRuleMobaMinLengthConstraint returns [EObject current=null] : iv_ruleMobaMinLengthConstraint= ruleMobaMinLengthConstraint EOF ;
+    // InternalMoba.g:6465:1: entryRuleMobaMinLengthConstraint returns [EObject current=null] : iv_ruleMobaMinLengthConstraint= ruleMobaMinLengthConstraint EOF ;
     public final EObject entryRuleMobaMinLengthConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17610,8 +17731,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6405:64: (iv_ruleMobaMinLengthConstraint= ruleMobaMinLengthConstraint EOF )
-            // InternalMoba.g:6406:2: iv_ruleMobaMinLengthConstraint= ruleMobaMinLengthConstraint EOF
+            // InternalMoba.g:6465:64: (iv_ruleMobaMinLengthConstraint= ruleMobaMinLengthConstraint EOF )
+            // InternalMoba.g:6466:2: iv_ruleMobaMinLengthConstraint= ruleMobaMinLengthConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaMinLengthConstraintRule()); 
@@ -17642,7 +17763,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaMinLengthConstraint"
-    // InternalMoba.g:6412:1: ruleMobaMinLengthConstraint returns [EObject current=null] : (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
+    // InternalMoba.g:6472:1: ruleMobaMinLengthConstraint returns [EObject current=null] : (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
     public final EObject ruleMobaMinLengthConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17655,11 +17776,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6418:2: ( (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
-            // InternalMoba.g:6419:2: (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6478:2: ( (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
+            // InternalMoba.g:6479:2: (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
             {
-            // InternalMoba.g:6419:2: (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
-            // InternalMoba.g:6420:3: otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            // InternalMoba.g:6479:2: (otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6480:3: otherlv_0= 'minLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
             {
             otherlv_0=(Token)match(input,103,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17667,38 +17788,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaMinLengthConstraintAccess().getMinLengthKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,22,FOLLOW_76); if (state.failed) return current;
+            otherlv_1=(Token)match(input,22,FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getMobaMinLengthConstraintAccess().getEqualsSignKeyword_1());
               		
             }
-            // InternalMoba.g:6428:3: ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // InternalMoba.g:6488:3: ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            int alt101=2;
+            int LA101_0 = input.LA(1);
 
-            if ( (LA96_0==RULE_INT) ) {
-                alt96=1;
+            if ( (LA101_0==RULE_INT) ) {
+                alt101=1;
             }
-            else if ( (LA96_0==RULE_CONSTANT) ) {
-                alt96=2;
+            else if ( (LA101_0==RULE_CONSTANT) ) {
+                alt101=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 96, 0, input);
+                    new NoViableAltException("", 101, 0, input);
 
                 throw nvae;
             }
-            switch (alt96) {
+            switch (alt101) {
                 case 1 :
-                    // InternalMoba.g:6429:4: ( (lv_filterValue_2_0= RULE_INT ) )
+                    // InternalMoba.g:6489:4: ( (lv_filterValue_2_0= RULE_INT ) )
                     {
-                    // InternalMoba.g:6429:4: ( (lv_filterValue_2_0= RULE_INT ) )
-                    // InternalMoba.g:6430:5: (lv_filterValue_2_0= RULE_INT )
+                    // InternalMoba.g:6489:4: ( (lv_filterValue_2_0= RULE_INT ) )
+                    // InternalMoba.g:6490:5: (lv_filterValue_2_0= RULE_INT )
                     {
-                    // InternalMoba.g:6430:5: (lv_filterValue_2_0= RULE_INT )
-                    // InternalMoba.g:6431:6: lv_filterValue_2_0= RULE_INT
+                    // InternalMoba.g:6490:5: (lv_filterValue_2_0= RULE_INT )
+                    // InternalMoba.g:6491:6: lv_filterValue_2_0= RULE_INT
                     {
                     lv_filterValue_2_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17728,13 +17849,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6448:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6508:4: ( (otherlv_3= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6448:4: ( (otherlv_3= RULE_CONSTANT ) )
-                    // InternalMoba.g:6449:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6508:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6509:5: (otherlv_3= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6449:5: (otherlv_3= RULE_CONSTANT )
-                    // InternalMoba.g:6450:6: otherlv_3= RULE_CONSTANT
+                    // InternalMoba.g:6509:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6510:6: otherlv_3= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17786,7 +17907,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaMaxLengthConstraint"
-    // InternalMoba.g:6466:1: entryRuleMobaMaxLengthConstraint returns [EObject current=null] : iv_ruleMobaMaxLengthConstraint= ruleMobaMaxLengthConstraint EOF ;
+    // InternalMoba.g:6526:1: entryRuleMobaMaxLengthConstraint returns [EObject current=null] : iv_ruleMobaMaxLengthConstraint= ruleMobaMaxLengthConstraint EOF ;
     public final EObject entryRuleMobaMaxLengthConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17794,8 +17915,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6466:64: (iv_ruleMobaMaxLengthConstraint= ruleMobaMaxLengthConstraint EOF )
-            // InternalMoba.g:6467:2: iv_ruleMobaMaxLengthConstraint= ruleMobaMaxLengthConstraint EOF
+            // InternalMoba.g:6526:64: (iv_ruleMobaMaxLengthConstraint= ruleMobaMaxLengthConstraint EOF )
+            // InternalMoba.g:6527:2: iv_ruleMobaMaxLengthConstraint= ruleMobaMaxLengthConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaMaxLengthConstraintRule()); 
@@ -17826,7 +17947,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaMaxLengthConstraint"
-    // InternalMoba.g:6473:1: ruleMobaMaxLengthConstraint returns [EObject current=null] : (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
+    // InternalMoba.g:6533:1: ruleMobaMaxLengthConstraint returns [EObject current=null] : (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) ;
     public final EObject ruleMobaMaxLengthConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17839,11 +17960,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6479:2: ( (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
-            // InternalMoba.g:6480:2: (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6539:2: ( (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) ) )
+            // InternalMoba.g:6540:2: (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
             {
-            // InternalMoba.g:6480:2: (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
-            // InternalMoba.g:6481:3: otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            // InternalMoba.g:6540:2: (otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) )
+            // InternalMoba.g:6541:3: otherlv_0= 'maxLength' otherlv_1= '=' ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
             {
             otherlv_0=(Token)match(input,104,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17851,38 +17972,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaMaxLengthConstraintAccess().getMaxLengthKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,22,FOLLOW_76); if (state.failed) return current;
+            otherlv_1=(Token)match(input,22,FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getMobaMaxLengthConstraintAccess().getEqualsSignKeyword_1());
               		
             }
-            // InternalMoba.g:6489:3: ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // InternalMoba.g:6549:3: ( ( (lv_filterValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            int alt102=2;
+            int LA102_0 = input.LA(1);
 
-            if ( (LA97_0==RULE_INT) ) {
-                alt97=1;
+            if ( (LA102_0==RULE_INT) ) {
+                alt102=1;
             }
-            else if ( (LA97_0==RULE_CONSTANT) ) {
-                alt97=2;
+            else if ( (LA102_0==RULE_CONSTANT) ) {
+                alt102=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 97, 0, input);
+                    new NoViableAltException("", 102, 0, input);
 
                 throw nvae;
             }
-            switch (alt97) {
+            switch (alt102) {
                 case 1 :
-                    // InternalMoba.g:6490:4: ( (lv_filterValue_2_0= RULE_INT ) )
+                    // InternalMoba.g:6550:4: ( (lv_filterValue_2_0= RULE_INT ) )
                     {
-                    // InternalMoba.g:6490:4: ( (lv_filterValue_2_0= RULE_INT ) )
-                    // InternalMoba.g:6491:5: (lv_filterValue_2_0= RULE_INT )
+                    // InternalMoba.g:6550:4: ( (lv_filterValue_2_0= RULE_INT ) )
+                    // InternalMoba.g:6551:5: (lv_filterValue_2_0= RULE_INT )
                     {
-                    // InternalMoba.g:6491:5: (lv_filterValue_2_0= RULE_INT )
-                    // InternalMoba.g:6492:6: lv_filterValue_2_0= RULE_INT
+                    // InternalMoba.g:6551:5: (lv_filterValue_2_0= RULE_INT )
+                    // InternalMoba.g:6552:6: lv_filterValue_2_0= RULE_INT
                     {
                     lv_filterValue_2_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17912,13 +18033,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6509:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6569:4: ( (otherlv_3= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6509:4: ( (otherlv_3= RULE_CONSTANT ) )
-                    // InternalMoba.g:6510:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6569:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6570:5: (otherlv_3= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6510:5: (otherlv_3= RULE_CONSTANT )
-                    // InternalMoba.g:6511:6: otherlv_3= RULE_CONSTANT
+                    // InternalMoba.g:6570:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6571:6: otherlv_3= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17970,7 +18091,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaDigitsConstraint"
-    // InternalMoba.g:6527:1: entryRuleMobaDigitsConstraint returns [EObject current=null] : iv_ruleMobaDigitsConstraint= ruleMobaDigitsConstraint EOF ;
+    // InternalMoba.g:6587:1: entryRuleMobaDigitsConstraint returns [EObject current=null] : iv_ruleMobaDigitsConstraint= ruleMobaDigitsConstraint EOF ;
     public final EObject entryRuleMobaDigitsConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -17978,8 +18099,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6527:61: (iv_ruleMobaDigitsConstraint= ruleMobaDigitsConstraint EOF )
-            // InternalMoba.g:6528:2: iv_ruleMobaDigitsConstraint= ruleMobaDigitsConstraint EOF
+            // InternalMoba.g:6587:61: (iv_ruleMobaDigitsConstraint= ruleMobaDigitsConstraint EOF )
+            // InternalMoba.g:6588:2: iv_ruleMobaDigitsConstraint= ruleMobaDigitsConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaDigitsConstraintRule()); 
@@ -18010,7 +18131,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaDigitsConstraint"
-    // InternalMoba.g:6534:1: ruleMobaDigitsConstraint returns [EObject current=null] : (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' ) ;
+    // InternalMoba.g:6594:1: ruleMobaDigitsConstraint returns [EObject current=null] : (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' ) ;
     public final EObject ruleMobaDigitsConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -18027,11 +18148,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6540:2: ( (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' ) )
-            // InternalMoba.g:6541:2: (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' )
+            // InternalMoba.g:6600:2: ( (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' ) )
+            // InternalMoba.g:6601:2: (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' )
             {
-            // InternalMoba.g:6541:2: (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' )
-            // InternalMoba.g:6542:3: otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')'
+            // InternalMoba.g:6601:2: (otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')' )
+            // InternalMoba.g:6602:3: otherlv_0= 'digits' otherlv_1= '(' ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) ) otherlv_4= ',' ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) ) otherlv_7= ')'
             {
             otherlv_0=(Token)match(input,105,FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18039,38 +18160,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaDigitsConstraintAccess().getDigitsKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,32,FOLLOW_76); if (state.failed) return current;
+            otherlv_1=(Token)match(input,32,FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getMobaDigitsConstraintAccess().getLeftParenthesisKeyword_1());
               		
             }
-            // InternalMoba.g:6550:3: ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
-            int alt98=2;
-            int LA98_0 = input.LA(1);
+            // InternalMoba.g:6610:3: ( ( (lv_filterIntegerValue_2_0= RULE_INT ) ) | ( (otherlv_3= RULE_CONSTANT ) ) )
+            int alt103=2;
+            int LA103_0 = input.LA(1);
 
-            if ( (LA98_0==RULE_INT) ) {
-                alt98=1;
+            if ( (LA103_0==RULE_INT) ) {
+                alt103=1;
             }
-            else if ( (LA98_0==RULE_CONSTANT) ) {
-                alt98=2;
+            else if ( (LA103_0==RULE_CONSTANT) ) {
+                alt103=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 98, 0, input);
+                    new NoViableAltException("", 103, 0, input);
 
                 throw nvae;
             }
-            switch (alt98) {
+            switch (alt103) {
                 case 1 :
-                    // InternalMoba.g:6551:4: ( (lv_filterIntegerValue_2_0= RULE_INT ) )
+                    // InternalMoba.g:6611:4: ( (lv_filterIntegerValue_2_0= RULE_INT ) )
                     {
-                    // InternalMoba.g:6551:4: ( (lv_filterIntegerValue_2_0= RULE_INT ) )
-                    // InternalMoba.g:6552:5: (lv_filterIntegerValue_2_0= RULE_INT )
+                    // InternalMoba.g:6611:4: ( (lv_filterIntegerValue_2_0= RULE_INT ) )
+                    // InternalMoba.g:6612:5: (lv_filterIntegerValue_2_0= RULE_INT )
                     {
-                    // InternalMoba.g:6552:5: (lv_filterIntegerValue_2_0= RULE_INT )
-                    // InternalMoba.g:6553:6: lv_filterIntegerValue_2_0= RULE_INT
+                    // InternalMoba.g:6612:5: (lv_filterIntegerValue_2_0= RULE_INT )
+                    // InternalMoba.g:6613:6: lv_filterIntegerValue_2_0= RULE_INT
                     {
                     lv_filterIntegerValue_2_0=(Token)match(input,RULE_INT,FOLLOW_35); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18100,13 +18221,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6570:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6630:4: ( (otherlv_3= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6570:4: ( (otherlv_3= RULE_CONSTANT ) )
-                    // InternalMoba.g:6571:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6630:4: ( (otherlv_3= RULE_CONSTANT ) )
+                    // InternalMoba.g:6631:5: (otherlv_3= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6571:5: (otherlv_3= RULE_CONSTANT )
-                    // InternalMoba.g:6572:6: otherlv_3= RULE_CONSTANT
+                    // InternalMoba.g:6631:5: (otherlv_3= RULE_CONSTANT )
+                    // InternalMoba.g:6632:6: otherlv_3= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18133,38 +18254,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,33,FOLLOW_76); if (state.failed) return current;
+            otherlv_4=(Token)match(input,33,FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_4, grammarAccess.getMobaDigitsConstraintAccess().getCommaKeyword_3());
               		
             }
-            // InternalMoba.g:6588:3: ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) )
-            int alt99=2;
-            int LA99_0 = input.LA(1);
+            // InternalMoba.g:6648:3: ( ( (lv_filterFractionValue_5_0= RULE_INT ) ) | ( (otherlv_6= RULE_CONSTANT ) ) )
+            int alt104=2;
+            int LA104_0 = input.LA(1);
 
-            if ( (LA99_0==RULE_INT) ) {
-                alt99=1;
+            if ( (LA104_0==RULE_INT) ) {
+                alt104=1;
             }
-            else if ( (LA99_0==RULE_CONSTANT) ) {
-                alt99=2;
+            else if ( (LA104_0==RULE_CONSTANT) ) {
+                alt104=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 99, 0, input);
+                    new NoViableAltException("", 104, 0, input);
 
                 throw nvae;
             }
-            switch (alt99) {
+            switch (alt104) {
                 case 1 :
-                    // InternalMoba.g:6589:4: ( (lv_filterFractionValue_5_0= RULE_INT ) )
+                    // InternalMoba.g:6649:4: ( (lv_filterFractionValue_5_0= RULE_INT ) )
                     {
-                    // InternalMoba.g:6589:4: ( (lv_filterFractionValue_5_0= RULE_INT ) )
-                    // InternalMoba.g:6590:5: (lv_filterFractionValue_5_0= RULE_INT )
+                    // InternalMoba.g:6649:4: ( (lv_filterFractionValue_5_0= RULE_INT ) )
+                    // InternalMoba.g:6650:5: (lv_filterFractionValue_5_0= RULE_INT )
                     {
-                    // InternalMoba.g:6590:5: (lv_filterFractionValue_5_0= RULE_INT )
-                    // InternalMoba.g:6591:6: lv_filterFractionValue_5_0= RULE_INT
+                    // InternalMoba.g:6650:5: (lv_filterFractionValue_5_0= RULE_INT )
+                    // InternalMoba.g:6651:6: lv_filterFractionValue_5_0= RULE_INT
                     {
                     lv_filterFractionValue_5_0=(Token)match(input,RULE_INT,FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18194,13 +18315,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6608:4: ( (otherlv_6= RULE_CONSTANT ) )
+                    // InternalMoba.g:6668:4: ( (otherlv_6= RULE_CONSTANT ) )
                     {
-                    // InternalMoba.g:6608:4: ( (otherlv_6= RULE_CONSTANT ) )
-                    // InternalMoba.g:6609:5: (otherlv_6= RULE_CONSTANT )
+                    // InternalMoba.g:6668:4: ( (otherlv_6= RULE_CONSTANT ) )
+                    // InternalMoba.g:6669:5: (otherlv_6= RULE_CONSTANT )
                     {
-                    // InternalMoba.g:6609:5: (otherlv_6= RULE_CONSTANT )
-                    // InternalMoba.g:6610:6: otherlv_6= RULE_CONSTANT
+                    // InternalMoba.g:6669:5: (otherlv_6= RULE_CONSTANT )
+                    // InternalMoba.g:6670:6: otherlv_6= RULE_CONSTANT
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18258,7 +18379,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaNullConstraint"
-    // InternalMoba.g:6630:1: entryRuleMobaNullConstraint returns [EObject current=null] : iv_ruleMobaNullConstraint= ruleMobaNullConstraint EOF ;
+    // InternalMoba.g:6690:1: entryRuleMobaNullConstraint returns [EObject current=null] : iv_ruleMobaNullConstraint= ruleMobaNullConstraint EOF ;
     public final EObject entryRuleMobaNullConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -18266,8 +18387,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6630:59: (iv_ruleMobaNullConstraint= ruleMobaNullConstraint EOF )
-            // InternalMoba.g:6631:2: iv_ruleMobaNullConstraint= ruleMobaNullConstraint EOF
+            // InternalMoba.g:6690:59: (iv_ruleMobaNullConstraint= ruleMobaNullConstraint EOF )
+            // InternalMoba.g:6691:2: iv_ruleMobaNullConstraint= ruleMobaNullConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaNullConstraintRule()); 
@@ -18298,7 +18419,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaNullConstraint"
-    // InternalMoba.g:6637:1: ruleMobaNullConstraint returns [EObject current=null] : ( () otherlv_1= 'isNull' ) ;
+    // InternalMoba.g:6697:1: ruleMobaNullConstraint returns [EObject current=null] : ( () otherlv_1= 'isNull' ) ;
     public final EObject ruleMobaNullConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -18308,14 +18429,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6643:2: ( ( () otherlv_1= 'isNull' ) )
-            // InternalMoba.g:6644:2: ( () otherlv_1= 'isNull' )
+            // InternalMoba.g:6703:2: ( ( () otherlv_1= 'isNull' ) )
+            // InternalMoba.g:6704:2: ( () otherlv_1= 'isNull' )
             {
-            // InternalMoba.g:6644:2: ( () otherlv_1= 'isNull' )
-            // InternalMoba.g:6645:3: () otherlv_1= 'isNull'
+            // InternalMoba.g:6704:2: ( () otherlv_1= 'isNull' )
+            // InternalMoba.g:6705:3: () otherlv_1= 'isNull'
             {
-            // InternalMoba.g:6645:3: ()
-            // InternalMoba.g:6646:4: 
+            // InternalMoba.g:6705:3: ()
+            // InternalMoba.g:6706:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -18358,7 +18479,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaNotNullConstraint"
-    // InternalMoba.g:6660:1: entryRuleMobaNotNullConstraint returns [EObject current=null] : iv_ruleMobaNotNullConstraint= ruleMobaNotNullConstraint EOF ;
+    // InternalMoba.g:6720:1: entryRuleMobaNotNullConstraint returns [EObject current=null] : iv_ruleMobaNotNullConstraint= ruleMobaNotNullConstraint EOF ;
     public final EObject entryRuleMobaNotNullConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -18366,8 +18487,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6660:62: (iv_ruleMobaNotNullConstraint= ruleMobaNotNullConstraint EOF )
-            // InternalMoba.g:6661:2: iv_ruleMobaNotNullConstraint= ruleMobaNotNullConstraint EOF
+            // InternalMoba.g:6720:62: (iv_ruleMobaNotNullConstraint= ruleMobaNotNullConstraint EOF )
+            // InternalMoba.g:6721:2: iv_ruleMobaNotNullConstraint= ruleMobaNotNullConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaNotNullConstraintRule()); 
@@ -18398,7 +18519,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaNotNullConstraint"
-    // InternalMoba.g:6667:1: ruleMobaNotNullConstraint returns [EObject current=null] : ( () otherlv_1= 'isNotNull' ) ;
+    // InternalMoba.g:6727:1: ruleMobaNotNullConstraint returns [EObject current=null] : ( () otherlv_1= 'isNotNull' ) ;
     public final EObject ruleMobaNotNullConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -18408,14 +18529,14 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6673:2: ( ( () otherlv_1= 'isNotNull' ) )
-            // InternalMoba.g:6674:2: ( () otherlv_1= 'isNotNull' )
+            // InternalMoba.g:6733:2: ( ( () otherlv_1= 'isNotNull' ) )
+            // InternalMoba.g:6734:2: ( () otherlv_1= 'isNotNull' )
             {
-            // InternalMoba.g:6674:2: ( () otherlv_1= 'isNotNull' )
-            // InternalMoba.g:6675:3: () otherlv_1= 'isNotNull'
+            // InternalMoba.g:6734:2: ( () otherlv_1= 'isNotNull' )
+            // InternalMoba.g:6735:3: () otherlv_1= 'isNotNull'
             {
-            // InternalMoba.g:6675:3: ()
-            // InternalMoba.g:6676:4: 
+            // InternalMoba.g:6735:3: ()
+            // InternalMoba.g:6736:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -18458,7 +18579,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaGeneratorSlot"
-    // InternalMoba.g:6690:1: entryRuleMobaGeneratorSlot returns [EObject current=null] : iv_ruleMobaGeneratorSlot= ruleMobaGeneratorSlot EOF ;
+    // InternalMoba.g:6750:1: entryRuleMobaGeneratorSlot returns [EObject current=null] : iv_ruleMobaGeneratorSlot= ruleMobaGeneratorSlot EOF ;
     public final EObject entryRuleMobaGeneratorSlot() throws RecognitionException {
         EObject current = null;
 
@@ -18466,8 +18587,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6690:58: (iv_ruleMobaGeneratorSlot= ruleMobaGeneratorSlot EOF )
-            // InternalMoba.g:6691:2: iv_ruleMobaGeneratorSlot= ruleMobaGeneratorSlot EOF
+            // InternalMoba.g:6750:58: (iv_ruleMobaGeneratorSlot= ruleMobaGeneratorSlot EOF )
+            // InternalMoba.g:6751:2: iv_ruleMobaGeneratorSlot= ruleMobaGeneratorSlot EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaGeneratorSlotRule()); 
@@ -18498,7 +18619,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaGeneratorSlot"
-    // InternalMoba.g:6697:1: ruleMobaGeneratorSlot returns [EObject current=null] : (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? ) ;
+    // InternalMoba.g:6757:1: ruleMobaGeneratorSlot returns [EObject current=null] : (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? ) ;
     public final EObject ruleMobaGeneratorSlot() throws RecognitionException {
         EObject current = null;
 
@@ -18511,11 +18632,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6703:2: ( (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? ) )
-            // InternalMoba.g:6704:2: (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? )
+            // InternalMoba.g:6763:2: ( (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? ) )
+            // InternalMoba.g:6764:2: (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? )
             {
-            // InternalMoba.g:6704:2: (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? )
-            // InternalMoba.g:6705:3: otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )?
+            // InternalMoba.g:6764:2: (otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )? )
+            // InternalMoba.g:6765:3: otherlv_0= 'slot' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )?
             {
             otherlv_0=(Token)match(input,108,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18523,13 +18644,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaGeneratorSlotAccess().getSlotKeyword_0());
               		
             }
-            // InternalMoba.g:6709:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:6710:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6769:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6770:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:6710:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:6711:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:6770:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6771:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_77); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_80); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getMobaGeneratorSlotAccess().getNameIDTerminalRuleCall_1_0());
@@ -18553,16 +18674,16 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMoba.g:6727:3: (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )?
-            int alt100=2;
-            int LA100_0 = input.LA(1);
+            // InternalMoba.g:6787:3: (otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) ) )?
+            int alt105=2;
+            int LA105_0 = input.LA(1);
 
-            if ( (LA100_0==67) ) {
-                alt100=1;
+            if ( (LA105_0==67) ) {
+                alt105=1;
             }
-            switch (alt100) {
+            switch (alt105) {
                 case 1 :
-                    // InternalMoba.g:6728:4: otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) )
+                    // InternalMoba.g:6788:4: otherlv_2= 'type' ( (lv_type_3_0= RULE_STRING ) )
                     {
                     otherlv_2=(Token)match(input,67,FOLLOW_34); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18570,11 +18691,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getMobaGeneratorSlotAccess().getTypeKeyword_2_0());
                       			
                     }
-                    // InternalMoba.g:6732:4: ( (lv_type_3_0= RULE_STRING ) )
-                    // InternalMoba.g:6733:5: (lv_type_3_0= RULE_STRING )
+                    // InternalMoba.g:6792:4: ( (lv_type_3_0= RULE_STRING ) )
+                    // InternalMoba.g:6793:5: (lv_type_3_0= RULE_STRING )
                     {
-                    // InternalMoba.g:6733:5: (lv_type_3_0= RULE_STRING )
-                    // InternalMoba.g:6734:6: lv_type_3_0= RULE_STRING
+                    // InternalMoba.g:6793:5: (lv_type_3_0= RULE_STRING )
+                    // InternalMoba.g:6794:6: lv_type_3_0= RULE_STRING
                     {
                     lv_type_3_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18631,7 +18752,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaTrigger"
-    // InternalMoba.g:6755:1: entryRuleMobaTrigger returns [EObject current=null] : iv_ruleMobaTrigger= ruleMobaTrigger EOF ;
+    // InternalMoba.g:6815:1: entryRuleMobaTrigger returns [EObject current=null] : iv_ruleMobaTrigger= ruleMobaTrigger EOF ;
     public final EObject entryRuleMobaTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -18639,8 +18760,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6755:52: (iv_ruleMobaTrigger= ruleMobaTrigger EOF )
-            // InternalMoba.g:6756:2: iv_ruleMobaTrigger= ruleMobaTrigger EOF
+            // InternalMoba.g:6815:52: (iv_ruleMobaTrigger= ruleMobaTrigger EOF )
+            // InternalMoba.g:6816:2: iv_ruleMobaTrigger= ruleMobaTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaTriggerRule()); 
@@ -18671,7 +18792,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaTrigger"
-    // InternalMoba.g:6762:1: ruleMobaTrigger returns [EObject current=null] : (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger ) ;
+    // InternalMoba.g:6822:1: ruleMobaTrigger returns [EObject current=null] : (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger ) ;
     public final EObject ruleMobaTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -18694,58 +18815,58 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6768:2: ( (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger ) )
-            // InternalMoba.g:6769:2: (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger )
+            // InternalMoba.g:6828:2: ( (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger ) )
+            // InternalMoba.g:6829:2: (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger )
             {
-            // InternalMoba.g:6769:2: (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger )
-            int alt101=7;
+            // InternalMoba.g:6829:2: (this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger | this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger | this_MobaEmailTrigger_2= ruleMobaEmailTrigger | this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger | this_MobaSMSTrigger_4= ruleMobaSMSTrigger | this_MobaPushTrigger_5= ruleMobaPushTrigger | this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger )
+            int alt106=7;
             switch ( input.LA(1) ) {
             case 109:
                 {
-                alt101=1;
+                alt106=1;
                 }
                 break;
             case 110:
                 {
-                alt101=2;
+                alt106=2;
                 }
                 break;
             case 111:
                 {
-                alt101=3;
+                alt106=3;
                 }
                 break;
             case 112:
                 {
-                alt101=4;
+                alt106=4;
                 }
                 break;
             case 113:
                 {
-                alt101=5;
+                alt106=5;
                 }
                 break;
             case 114:
                 {
-                alt101=6;
+                alt106=6;
                 }
                 break;
             case 115:
                 {
-                alt101=7;
+                alt106=7;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 101, 0, input);
+                    new NoViableAltException("", 106, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt101) {
+            switch (alt106) {
                 case 1 :
-                    // InternalMoba.g:6770:3: this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger
+                    // InternalMoba.g:6830:3: this_MobaAppInstallTrigger_0= ruleMobaAppInstallTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18767,7 +18888,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:6779:3: this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger
+                    // InternalMoba.g:6839:3: this_MobaAppUpdateTrigger_1= ruleMobaAppUpdateTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18789,7 +18910,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:6788:3: this_MobaEmailTrigger_2= ruleMobaEmailTrigger
+                    // InternalMoba.g:6848:3: this_MobaEmailTrigger_2= ruleMobaEmailTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18811,7 +18932,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:6797:3: this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger
+                    // InternalMoba.g:6857:3: this_MobaDeviceStartupTrigger_3= ruleMobaDeviceStartupTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18833,7 +18954,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMoba.g:6806:3: this_MobaSMSTrigger_4= ruleMobaSMSTrigger
+                    // InternalMoba.g:6866:3: this_MobaSMSTrigger_4= ruleMobaSMSTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18855,7 +18976,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalMoba.g:6815:3: this_MobaPushTrigger_5= ruleMobaPushTrigger
+                    // InternalMoba.g:6875:3: this_MobaPushTrigger_5= ruleMobaPushTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18877,7 +18998,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalMoba.g:6824:3: this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger
+                    // InternalMoba.g:6884:3: this_MobaGeofenceTrigger_6= ruleMobaGeofenceTrigger
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18923,7 +19044,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaAppInstallTrigger"
-    // InternalMoba.g:6836:1: entryRuleMobaAppInstallTrigger returns [EObject current=null] : iv_ruleMobaAppInstallTrigger= ruleMobaAppInstallTrigger EOF ;
+    // InternalMoba.g:6896:1: entryRuleMobaAppInstallTrigger returns [EObject current=null] : iv_ruleMobaAppInstallTrigger= ruleMobaAppInstallTrigger EOF ;
     public final EObject entryRuleMobaAppInstallTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -18931,8 +19052,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6836:62: (iv_ruleMobaAppInstallTrigger= ruleMobaAppInstallTrigger EOF )
-            // InternalMoba.g:6837:2: iv_ruleMobaAppInstallTrigger= ruleMobaAppInstallTrigger EOF
+            // InternalMoba.g:6896:62: (iv_ruleMobaAppInstallTrigger= ruleMobaAppInstallTrigger EOF )
+            // InternalMoba.g:6897:2: iv_ruleMobaAppInstallTrigger= ruleMobaAppInstallTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaAppInstallTriggerRule()); 
@@ -18963,7 +19084,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaAppInstallTrigger"
-    // InternalMoba.g:6843:1: ruleMobaAppInstallTrigger returns [EObject current=null] : (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:6903:1: ruleMobaAppInstallTrigger returns [EObject current=null] : (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaAppInstallTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -18974,11 +19095,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6849:2: ( (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:6850:2: (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:6909:2: ( (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:6910:2: (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:6850:2: (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:6851:3: otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6910:2: (otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:6911:3: otherlv_0= 'trigger app install' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,109,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18986,11 +19107,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaAppInstallTriggerAccess().getTriggerAppInstallKeyword_0());
               		
             }
-            // InternalMoba.g:6855:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:6856:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6915:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6916:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:6856:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:6857:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:6916:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6917:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19041,7 +19162,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaAppUpdateTrigger"
-    // InternalMoba.g:6877:1: entryRuleMobaAppUpdateTrigger returns [EObject current=null] : iv_ruleMobaAppUpdateTrigger= ruleMobaAppUpdateTrigger EOF ;
+    // InternalMoba.g:6937:1: entryRuleMobaAppUpdateTrigger returns [EObject current=null] : iv_ruleMobaAppUpdateTrigger= ruleMobaAppUpdateTrigger EOF ;
     public final EObject entryRuleMobaAppUpdateTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19049,8 +19170,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6877:61: (iv_ruleMobaAppUpdateTrigger= ruleMobaAppUpdateTrigger EOF )
-            // InternalMoba.g:6878:2: iv_ruleMobaAppUpdateTrigger= ruleMobaAppUpdateTrigger EOF
+            // InternalMoba.g:6937:61: (iv_ruleMobaAppUpdateTrigger= ruleMobaAppUpdateTrigger EOF )
+            // InternalMoba.g:6938:2: iv_ruleMobaAppUpdateTrigger= ruleMobaAppUpdateTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaAppUpdateTriggerRule()); 
@@ -19081,7 +19202,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaAppUpdateTrigger"
-    // InternalMoba.g:6884:1: ruleMobaAppUpdateTrigger returns [EObject current=null] : (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:6944:1: ruleMobaAppUpdateTrigger returns [EObject current=null] : (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaAppUpdateTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19092,11 +19213,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6890:2: ( (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:6891:2: (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:6950:2: ( (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:6951:2: (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:6891:2: (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:6892:3: otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6951:2: (otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:6952:3: otherlv_0= 'trigger app update' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,110,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19104,11 +19225,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaAppUpdateTriggerAccess().getTriggerAppUpdateKeyword_0());
               		
             }
-            // InternalMoba.g:6896:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:6897:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6956:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6957:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:6897:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:6898:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:6957:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6958:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19159,7 +19280,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaEmailTrigger"
-    // InternalMoba.g:6918:1: entryRuleMobaEmailTrigger returns [EObject current=null] : iv_ruleMobaEmailTrigger= ruleMobaEmailTrigger EOF ;
+    // InternalMoba.g:6978:1: entryRuleMobaEmailTrigger returns [EObject current=null] : iv_ruleMobaEmailTrigger= ruleMobaEmailTrigger EOF ;
     public final EObject entryRuleMobaEmailTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19167,8 +19288,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6918:57: (iv_ruleMobaEmailTrigger= ruleMobaEmailTrigger EOF )
-            // InternalMoba.g:6919:2: iv_ruleMobaEmailTrigger= ruleMobaEmailTrigger EOF
+            // InternalMoba.g:6978:57: (iv_ruleMobaEmailTrigger= ruleMobaEmailTrigger EOF )
+            // InternalMoba.g:6979:2: iv_ruleMobaEmailTrigger= ruleMobaEmailTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaEmailTriggerRule()); 
@@ -19199,7 +19320,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaEmailTrigger"
-    // InternalMoba.g:6925:1: ruleMobaEmailTrigger returns [EObject current=null] : (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:6985:1: ruleMobaEmailTrigger returns [EObject current=null] : (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaEmailTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19210,11 +19331,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6931:2: ( (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:6932:2: (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:6991:2: ( (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:6992:2: (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:6932:2: (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:6933:3: otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6992:2: (otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:6993:3: otherlv_0= 'trigger email' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,111,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19222,11 +19343,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaEmailTriggerAccess().getTriggerEmailKeyword_0());
               		
             }
-            // InternalMoba.g:6937:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:6938:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6997:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:6998:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:6938:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:6939:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:6998:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:6999:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19277,7 +19398,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaDeviceStartupTrigger"
-    // InternalMoba.g:6959:1: entryRuleMobaDeviceStartupTrigger returns [EObject current=null] : iv_ruleMobaDeviceStartupTrigger= ruleMobaDeviceStartupTrigger EOF ;
+    // InternalMoba.g:7019:1: entryRuleMobaDeviceStartupTrigger returns [EObject current=null] : iv_ruleMobaDeviceStartupTrigger= ruleMobaDeviceStartupTrigger EOF ;
     public final EObject entryRuleMobaDeviceStartupTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19285,8 +19406,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:6959:65: (iv_ruleMobaDeviceStartupTrigger= ruleMobaDeviceStartupTrigger EOF )
-            // InternalMoba.g:6960:2: iv_ruleMobaDeviceStartupTrigger= ruleMobaDeviceStartupTrigger EOF
+            // InternalMoba.g:7019:65: (iv_ruleMobaDeviceStartupTrigger= ruleMobaDeviceStartupTrigger EOF )
+            // InternalMoba.g:7020:2: iv_ruleMobaDeviceStartupTrigger= ruleMobaDeviceStartupTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaDeviceStartupTriggerRule()); 
@@ -19317,7 +19438,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaDeviceStartupTrigger"
-    // InternalMoba.g:6966:1: ruleMobaDeviceStartupTrigger returns [EObject current=null] : (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:7026:1: ruleMobaDeviceStartupTrigger returns [EObject current=null] : (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaDeviceStartupTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19328,11 +19449,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:6972:2: ( (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:6973:2: (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7032:2: ( (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:7033:2: (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:6973:2: (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:6974:3: otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7033:2: (otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7034:3: otherlv_0= 'trigger device start' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,112,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19340,11 +19461,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaDeviceStartupTriggerAccess().getTriggerDeviceStartKeyword_0());
               		
             }
-            // InternalMoba.g:6978:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:6979:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7038:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7039:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:6979:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:6980:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7039:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7040:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19395,7 +19516,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaSMSTrigger"
-    // InternalMoba.g:7000:1: entryRuleMobaSMSTrigger returns [EObject current=null] : iv_ruleMobaSMSTrigger= ruleMobaSMSTrigger EOF ;
+    // InternalMoba.g:7060:1: entryRuleMobaSMSTrigger returns [EObject current=null] : iv_ruleMobaSMSTrigger= ruleMobaSMSTrigger EOF ;
     public final EObject entryRuleMobaSMSTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19403,8 +19524,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7000:55: (iv_ruleMobaSMSTrigger= ruleMobaSMSTrigger EOF )
-            // InternalMoba.g:7001:2: iv_ruleMobaSMSTrigger= ruleMobaSMSTrigger EOF
+            // InternalMoba.g:7060:55: (iv_ruleMobaSMSTrigger= ruleMobaSMSTrigger EOF )
+            // InternalMoba.g:7061:2: iv_ruleMobaSMSTrigger= ruleMobaSMSTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaSMSTriggerRule()); 
@@ -19435,7 +19556,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaSMSTrigger"
-    // InternalMoba.g:7007:1: ruleMobaSMSTrigger returns [EObject current=null] : (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:7067:1: ruleMobaSMSTrigger returns [EObject current=null] : (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaSMSTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19446,11 +19567,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7013:2: ( (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:7014:2: (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7073:2: ( (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:7074:2: (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:7014:2: (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:7015:3: otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7074:2: (otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7075:3: otherlv_0= 'trigger sms' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,113,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19458,11 +19579,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaSMSTriggerAccess().getTriggerSmsKeyword_0());
               		
             }
-            // InternalMoba.g:7019:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7020:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7079:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7080:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7020:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7021:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7080:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7081:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19513,7 +19634,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaPushTrigger"
-    // InternalMoba.g:7041:1: entryRuleMobaPushTrigger returns [EObject current=null] : iv_ruleMobaPushTrigger= ruleMobaPushTrigger EOF ;
+    // InternalMoba.g:7101:1: entryRuleMobaPushTrigger returns [EObject current=null] : iv_ruleMobaPushTrigger= ruleMobaPushTrigger EOF ;
     public final EObject entryRuleMobaPushTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19521,8 +19642,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7041:56: (iv_ruleMobaPushTrigger= ruleMobaPushTrigger EOF )
-            // InternalMoba.g:7042:2: iv_ruleMobaPushTrigger= ruleMobaPushTrigger EOF
+            // InternalMoba.g:7101:56: (iv_ruleMobaPushTrigger= ruleMobaPushTrigger EOF )
+            // InternalMoba.g:7102:2: iv_ruleMobaPushTrigger= ruleMobaPushTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaPushTriggerRule()); 
@@ -19553,7 +19674,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaPushTrigger"
-    // InternalMoba.g:7048:1: ruleMobaPushTrigger returns [EObject current=null] : (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:7108:1: ruleMobaPushTrigger returns [EObject current=null] : (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaPushTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19564,11 +19685,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7054:2: ( (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:7055:2: (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7114:2: ( (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:7115:2: (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:7055:2: (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:7056:3: otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7115:2: (otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7116:3: otherlv_0= 'trigger push' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,114,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19576,11 +19697,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaPushTriggerAccess().getTriggerPushKeyword_0());
               		
             }
-            // InternalMoba.g:7060:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7061:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7120:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7121:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7061:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7062:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7121:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7122:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19631,7 +19752,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaGeofenceTrigger"
-    // InternalMoba.g:7082:1: entryRuleMobaGeofenceTrigger returns [EObject current=null] : iv_ruleMobaGeofenceTrigger= ruleMobaGeofenceTrigger EOF ;
+    // InternalMoba.g:7142:1: entryRuleMobaGeofenceTrigger returns [EObject current=null] : iv_ruleMobaGeofenceTrigger= ruleMobaGeofenceTrigger EOF ;
     public final EObject entryRuleMobaGeofenceTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19639,8 +19760,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7082:60: (iv_ruleMobaGeofenceTrigger= ruleMobaGeofenceTrigger EOF )
-            // InternalMoba.g:7083:2: iv_ruleMobaGeofenceTrigger= ruleMobaGeofenceTrigger EOF
+            // InternalMoba.g:7142:60: (iv_ruleMobaGeofenceTrigger= ruleMobaGeofenceTrigger EOF )
+            // InternalMoba.g:7143:2: iv_ruleMobaGeofenceTrigger= ruleMobaGeofenceTrigger EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaGeofenceTriggerRule()); 
@@ -19671,7 +19792,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaGeofenceTrigger"
-    // InternalMoba.g:7089:1: ruleMobaGeofenceTrigger returns [EObject current=null] : (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) ) ;
+    // InternalMoba.g:7149:1: ruleMobaGeofenceTrigger returns [EObject current=null] : (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) ) ;
     public final EObject ruleMobaGeofenceTrigger() throws RecognitionException {
         EObject current = null;
 
@@ -19686,11 +19807,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7095:2: ( (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) ) )
-            // InternalMoba.g:7096:2: (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) )
+            // InternalMoba.g:7155:2: ( (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) ) )
+            // InternalMoba.g:7156:2: (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) )
             {
-            // InternalMoba.g:7096:2: (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) )
-            // InternalMoba.g:7097:3: otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) )
+            // InternalMoba.g:7156:2: (otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) ) )
+            // InternalMoba.g:7157:3: otherlv_0= 'trigger geofence' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'event' otherlv_3= '=' ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) )
             {
             otherlv_0=(Token)match(input,115,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19698,13 +19819,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaGeofenceTriggerAccess().getTriggerGeofenceKeyword_0());
               		
             }
-            // InternalMoba.g:7101:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7102:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7161:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7162:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7102:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7103:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7162:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7163:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_78); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_81); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getMobaGeofenceTriggerAccess().getNameIDTerminalRuleCall_1_0());
@@ -19734,17 +19855,17 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getMobaGeofenceTriggerAccess().getEventKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,22,FOLLOW_79); if (state.failed) return current;
+            otherlv_3=(Token)match(input,22,FOLLOW_82); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getMobaGeofenceTriggerAccess().getEqualsSignKeyword_3());
               		
             }
-            // InternalMoba.g:7127:3: ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) )
-            // InternalMoba.g:7128:4: (lv_eventType_4_0= ruleMobaGeofenceEvent )
+            // InternalMoba.g:7187:3: ( (lv_eventType_4_0= ruleMobaGeofenceEvent ) )
+            // InternalMoba.g:7188:4: (lv_eventType_4_0= ruleMobaGeofenceEvent )
             {
-            // InternalMoba.g:7128:4: (lv_eventType_4_0= ruleMobaGeofenceEvent )
-            // InternalMoba.g:7129:5: lv_eventType_4_0= ruleMobaGeofenceEvent
+            // InternalMoba.g:7188:4: (lv_eventType_4_0= ruleMobaGeofenceEvent )
+            // InternalMoba.g:7189:5: lv_eventType_4_0= ruleMobaGeofenceEvent
             {
             if ( state.backtracking==0 ) {
 
@@ -19800,7 +19921,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaExternalModule"
-    // InternalMoba.g:7150:1: entryRuleMobaExternalModule returns [EObject current=null] : iv_ruleMobaExternalModule= ruleMobaExternalModule EOF ;
+    // InternalMoba.g:7210:1: entryRuleMobaExternalModule returns [EObject current=null] : iv_ruleMobaExternalModule= ruleMobaExternalModule EOF ;
     public final EObject entryRuleMobaExternalModule() throws RecognitionException {
         EObject current = null;
 
@@ -19808,8 +19929,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7150:59: (iv_ruleMobaExternalModule= ruleMobaExternalModule EOF )
-            // InternalMoba.g:7151:2: iv_ruleMobaExternalModule= ruleMobaExternalModule EOF
+            // InternalMoba.g:7210:59: (iv_ruleMobaExternalModule= ruleMobaExternalModule EOF )
+            // InternalMoba.g:7211:2: iv_ruleMobaExternalModule= ruleMobaExternalModule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaExternalModuleRule()); 
@@ -19840,7 +19961,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaExternalModule"
-    // InternalMoba.g:7157:1: ruleMobaExternalModule returns [EObject current=null] : (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule ) ;
+    // InternalMoba.g:7217:1: ruleMobaExternalModule returns [EObject current=null] : (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule ) ;
     public final EObject ruleMobaExternalModule() throws RecognitionException {
         EObject current = null;
 
@@ -19855,38 +19976,38 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7163:2: ( (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule ) )
-            // InternalMoba.g:7164:2: (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule )
+            // InternalMoba.g:7223:2: ( (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule ) )
+            // InternalMoba.g:7224:2: (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule )
             {
-            // InternalMoba.g:7164:2: (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule )
-            int alt102=3;
+            // InternalMoba.g:7224:2: (this_MobaBluetoothModule_0= ruleMobaBluetoothModule | this_MobaPushModule_1= ruleMobaPushModule | this_MobaNFCModule_2= ruleMobaNFCModule )
+            int alt107=3;
             switch ( input.LA(1) ) {
             case 117:
                 {
-                alt102=1;
+                alt107=1;
                 }
                 break;
             case 118:
                 {
-                alt102=2;
+                alt107=2;
                 }
                 break;
             case 119:
                 {
-                alt102=3;
+                alt107=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 102, 0, input);
+                    new NoViableAltException("", 107, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt102) {
+            switch (alt107) {
                 case 1 :
-                    // InternalMoba.g:7165:3: this_MobaBluetoothModule_0= ruleMobaBluetoothModule
+                    // InternalMoba.g:7225:3: this_MobaBluetoothModule_0= ruleMobaBluetoothModule
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19908,7 +20029,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7174:3: this_MobaPushModule_1= ruleMobaPushModule
+                    // InternalMoba.g:7234:3: this_MobaPushModule_1= ruleMobaPushModule
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19930,7 +20051,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7183:3: this_MobaNFCModule_2= ruleMobaNFCModule
+                    // InternalMoba.g:7243:3: this_MobaNFCModule_2= ruleMobaNFCModule
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19976,7 +20097,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaBluetoothModule"
-    // InternalMoba.g:7195:1: entryRuleMobaBluetoothModule returns [EObject current=null] : iv_ruleMobaBluetoothModule= ruleMobaBluetoothModule EOF ;
+    // InternalMoba.g:7255:1: entryRuleMobaBluetoothModule returns [EObject current=null] : iv_ruleMobaBluetoothModule= ruleMobaBluetoothModule EOF ;
     public final EObject entryRuleMobaBluetoothModule() throws RecognitionException {
         EObject current = null;
 
@@ -19984,8 +20105,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7195:60: (iv_ruleMobaBluetoothModule= ruleMobaBluetoothModule EOF )
-            // InternalMoba.g:7196:2: iv_ruleMobaBluetoothModule= ruleMobaBluetoothModule EOF
+            // InternalMoba.g:7255:60: (iv_ruleMobaBluetoothModule= ruleMobaBluetoothModule EOF )
+            // InternalMoba.g:7256:2: iv_ruleMobaBluetoothModule= ruleMobaBluetoothModule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaBluetoothModuleRule()); 
@@ -20016,7 +20137,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaBluetoothModule"
-    // InternalMoba.g:7202:1: ruleMobaBluetoothModule returns [EObject current=null] : (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) ) ;
+    // InternalMoba.g:7262:1: ruleMobaBluetoothModule returns [EObject current=null] : (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) ) ;
     public final EObject ruleMobaBluetoothModule() throws RecognitionException {
         EObject current = null;
 
@@ -20031,11 +20152,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7208:2: ( (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) ) )
-            // InternalMoba.g:7209:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) )
+            // InternalMoba.g:7268:2: ( (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) ) )
+            // InternalMoba.g:7269:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) )
             {
-            // InternalMoba.g:7209:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) )
-            // InternalMoba.g:7210:3: otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) )
+            // InternalMoba.g:7269:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) )
+            // InternalMoba.g:7270:3: otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) )
             {
             otherlv_0=(Token)match(input,117,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20043,13 +20164,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaBluetoothModuleAccess().getModuleBluetoothKeyword_0());
               		
             }
-            // InternalMoba.g:7214:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7215:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7274:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7275:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7215:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7216:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7275:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7276:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_80); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_83); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getMobaBluetoothModuleAccess().getNameIDTerminalRuleCall_1_0());
@@ -20079,17 +20200,17 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getMobaBluetoothModuleAccess().getTypeKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,22,FOLLOW_81); if (state.failed) return current;
+            otherlv_3=(Token)match(input,22,FOLLOW_84); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getMobaBluetoothModuleAccess().getEqualsSignKeyword_3());
               		
             }
-            // InternalMoba.g:7240:3: ( (lv_type_4_0= ruleMobaBlueToothModuleType ) )
-            // InternalMoba.g:7241:4: (lv_type_4_0= ruleMobaBlueToothModuleType )
+            // InternalMoba.g:7300:3: ( (lv_type_4_0= ruleMobaBlueToothModuleType ) )
+            // InternalMoba.g:7301:4: (lv_type_4_0= ruleMobaBlueToothModuleType )
             {
-            // InternalMoba.g:7241:4: (lv_type_4_0= ruleMobaBlueToothModuleType )
-            // InternalMoba.g:7242:5: lv_type_4_0= ruleMobaBlueToothModuleType
+            // InternalMoba.g:7301:4: (lv_type_4_0= ruleMobaBlueToothModuleType )
+            // InternalMoba.g:7302:5: lv_type_4_0= ruleMobaBlueToothModuleType
             {
             if ( state.backtracking==0 ) {
 
@@ -20145,7 +20266,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaPushModule"
-    // InternalMoba.g:7263:1: entryRuleMobaPushModule returns [EObject current=null] : iv_ruleMobaPushModule= ruleMobaPushModule EOF ;
+    // InternalMoba.g:7323:1: entryRuleMobaPushModule returns [EObject current=null] : iv_ruleMobaPushModule= ruleMobaPushModule EOF ;
     public final EObject entryRuleMobaPushModule() throws RecognitionException {
         EObject current = null;
 
@@ -20153,8 +20274,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7263:55: (iv_ruleMobaPushModule= ruleMobaPushModule EOF )
-            // InternalMoba.g:7264:2: iv_ruleMobaPushModule= ruleMobaPushModule EOF
+            // InternalMoba.g:7323:55: (iv_ruleMobaPushModule= ruleMobaPushModule EOF )
+            // InternalMoba.g:7324:2: iv_ruleMobaPushModule= ruleMobaPushModule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaPushModuleRule()); 
@@ -20185,7 +20306,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaPushModule"
-    // InternalMoba.g:7270:1: ruleMobaPushModule returns [EObject current=null] : (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:7330:1: ruleMobaPushModule returns [EObject current=null] : (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleMobaPushModule() throws RecognitionException {
         EObject current = null;
 
@@ -20196,11 +20317,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7276:2: ( (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:7277:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7336:2: ( (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalMoba.g:7337:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalMoba.g:7277:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:7278:3: otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7337:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7338:3: otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,118,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20208,11 +20329,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaPushModuleAccess().getModulePushKeyword_0());
               		
             }
-            // InternalMoba.g:7282:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7283:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7342:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7343:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7283:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7284:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7343:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7344:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20263,7 +20384,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaNFCModule"
-    // InternalMoba.g:7304:1: entryRuleMobaNFCModule returns [EObject current=null] : iv_ruleMobaNFCModule= ruleMobaNFCModule EOF ;
+    // InternalMoba.g:7364:1: entryRuleMobaNFCModule returns [EObject current=null] : iv_ruleMobaNFCModule= ruleMobaNFCModule EOF ;
     public final EObject entryRuleMobaNFCModule() throws RecognitionException {
         EObject current = null;
 
@@ -20271,8 +20392,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7304:54: (iv_ruleMobaNFCModule= ruleMobaNFCModule EOF )
-            // InternalMoba.g:7305:2: iv_ruleMobaNFCModule= ruleMobaNFCModule EOF
+            // InternalMoba.g:7364:54: (iv_ruleMobaNFCModule= ruleMobaNFCModule EOF )
+            // InternalMoba.g:7365:2: iv_ruleMobaNFCModule= ruleMobaNFCModule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaNFCModuleRule()); 
@@ -20303,7 +20424,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaNFCModule"
-    // InternalMoba.g:7311:1: ruleMobaNFCModule returns [EObject current=null] : (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) ) ;
+    // InternalMoba.g:7371:1: ruleMobaNFCModule returns [EObject current=null] : (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) ) ;
     public final EObject ruleMobaNFCModule() throws RecognitionException {
         EObject current = null;
 
@@ -20318,11 +20439,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7317:2: ( (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) ) )
-            // InternalMoba.g:7318:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) )
+            // InternalMoba.g:7377:2: ( (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) ) )
+            // InternalMoba.g:7378:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) )
             {
-            // InternalMoba.g:7318:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) )
-            // InternalMoba.g:7319:3: otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) )
+            // InternalMoba.g:7378:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) )
+            // InternalMoba.g:7379:3: otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) )
             {
             otherlv_0=(Token)match(input,119,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20330,13 +20451,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaNFCModuleAccess().getModuleNFCKeyword_0());
               		
             }
-            // InternalMoba.g:7323:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7324:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7383:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7384:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7324:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7325:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7384:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7385:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_80); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_83); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getMobaNFCModuleAccess().getNameIDTerminalRuleCall_1_0());
@@ -20366,17 +20487,17 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getMobaNFCModuleAccess().getTypeKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,22,FOLLOW_82); if (state.failed) return current;
+            otherlv_3=(Token)match(input,22,FOLLOW_85); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getMobaNFCModuleAccess().getEqualsSignKeyword_3());
               		
             }
-            // InternalMoba.g:7349:3: ( (lv_type_4_0= ruleMobaNFCModuleType ) )
-            // InternalMoba.g:7350:4: (lv_type_4_0= ruleMobaNFCModuleType )
+            // InternalMoba.g:7409:3: ( (lv_type_4_0= ruleMobaNFCModuleType ) )
+            // InternalMoba.g:7410:4: (lv_type_4_0= ruleMobaNFCModuleType )
             {
-            // InternalMoba.g:7350:4: (lv_type_4_0= ruleMobaNFCModuleType )
-            // InternalMoba.g:7351:5: lv_type_4_0= ruleMobaNFCModuleType
+            // InternalMoba.g:7410:4: (lv_type_4_0= ruleMobaNFCModuleType )
+            // InternalMoba.g:7411:5: lv_type_4_0= ruleMobaNFCModuleType
             {
             if ( state.backtracking==0 ) {
 
@@ -20432,7 +20553,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaConstantValueFunction"
-    // InternalMoba.g:7372:1: ruleMobaConstantValueFunction returns [Enumerator current=null] : ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) ;
+    // InternalMoba.g:7432:1: ruleMobaConstantValueFunction returns [Enumerator current=null] : ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) ;
     public final Enumerator ruleMobaConstantValueFunction() throws RecognitionException {
         Enumerator current = null;
 
@@ -20445,46 +20566,46 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7378:2: ( ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) )
-            // InternalMoba.g:7379:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
+            // InternalMoba.g:7438:2: ( ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) )
+            // InternalMoba.g:7439:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
             {
-            // InternalMoba.g:7379:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
-            int alt103=4;
+            // InternalMoba.g:7439:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
+            int alt108=4;
             switch ( input.LA(1) ) {
             case 120:
                 {
-                alt103=1;
+                alt108=1;
                 }
                 break;
             case 121:
                 {
-                alt103=2;
+                alt108=2;
                 }
                 break;
             case 122:
                 {
-                alt103=3;
+                alt108=3;
                 }
                 break;
             case 123:
                 {
-                alt103=4;
+                alt108=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 103, 0, input);
+                    new NoViableAltException("", 108, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt103) {
+            switch (alt108) {
                 case 1 :
-                    // InternalMoba.g:7380:3: (enumLiteral_0= 'toFirstLower' )
+                    // InternalMoba.g:7440:3: (enumLiteral_0= 'toFirstLower' )
                     {
-                    // InternalMoba.g:7380:3: (enumLiteral_0= 'toFirstLower' )
-                    // InternalMoba.g:7381:4: enumLiteral_0= 'toFirstLower'
+                    // InternalMoba.g:7440:3: (enumLiteral_0= 'toFirstLower' )
+                    // InternalMoba.g:7441:4: enumLiteral_0= 'toFirstLower'
                     {
                     enumLiteral_0=(Token)match(input,120,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20500,10 +20621,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7388:3: (enumLiteral_1= 'toFirstUpper' )
+                    // InternalMoba.g:7448:3: (enumLiteral_1= 'toFirstUpper' )
                     {
-                    // InternalMoba.g:7388:3: (enumLiteral_1= 'toFirstUpper' )
-                    // InternalMoba.g:7389:4: enumLiteral_1= 'toFirstUpper'
+                    // InternalMoba.g:7448:3: (enumLiteral_1= 'toFirstUpper' )
+                    // InternalMoba.g:7449:4: enumLiteral_1= 'toFirstUpper'
                     {
                     enumLiteral_1=(Token)match(input,121,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20519,10 +20640,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7396:3: (enumLiteral_2= 'toLowerCase' )
+                    // InternalMoba.g:7456:3: (enumLiteral_2= 'toLowerCase' )
                     {
-                    // InternalMoba.g:7396:3: (enumLiteral_2= 'toLowerCase' )
-                    // InternalMoba.g:7397:4: enumLiteral_2= 'toLowerCase'
+                    // InternalMoba.g:7456:3: (enumLiteral_2= 'toLowerCase' )
+                    // InternalMoba.g:7457:4: enumLiteral_2= 'toLowerCase'
                     {
                     enumLiteral_2=(Token)match(input,122,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20538,10 +20659,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:7404:3: (enumLiteral_3= 'toUpperCase' )
+                    // InternalMoba.g:7464:3: (enumLiteral_3= 'toUpperCase' )
                     {
-                    // InternalMoba.g:7404:3: (enumLiteral_3= 'toUpperCase' )
-                    // InternalMoba.g:7405:4: enumLiteral_3= 'toUpperCase'
+                    // InternalMoba.g:7464:3: (enumLiteral_3= 'toUpperCase' )
+                    // InternalMoba.g:7465:4: enumLiteral_3= 'toUpperCase'
                     {
                     enumLiteral_3=(Token)match(input,123,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20581,7 +20702,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaGeofenceEvent"
-    // InternalMoba.g:7415:1: ruleMobaGeofenceEvent returns [Enumerator current=null] : ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) ;
+    // InternalMoba.g:7475:1: ruleMobaGeofenceEvent returns [Enumerator current=null] : ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) ;
     public final Enumerator ruleMobaGeofenceEvent() throws RecognitionException {
         Enumerator current = null;
 
@@ -20592,32 +20713,32 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7421:2: ( ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) )
-            // InternalMoba.g:7422:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
+            // InternalMoba.g:7481:2: ( ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) )
+            // InternalMoba.g:7482:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
             {
-            // InternalMoba.g:7422:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
-            int alt104=2;
-            int LA104_0 = input.LA(1);
+            // InternalMoba.g:7482:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
+            int alt109=2;
+            int LA109_0 = input.LA(1);
 
-            if ( (LA104_0==124) ) {
-                alt104=1;
+            if ( (LA109_0==124) ) {
+                alt109=1;
             }
-            else if ( (LA104_0==125) ) {
-                alt104=2;
+            else if ( (LA109_0==125) ) {
+                alt109=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 104, 0, input);
+                    new NoViableAltException("", 109, 0, input);
 
                 throw nvae;
             }
-            switch (alt104) {
+            switch (alt109) {
                 case 1 :
-                    // InternalMoba.g:7423:3: (enumLiteral_0= 'enter' )
+                    // InternalMoba.g:7483:3: (enumLiteral_0= 'enter' )
                     {
-                    // InternalMoba.g:7423:3: (enumLiteral_0= 'enter' )
-                    // InternalMoba.g:7424:4: enumLiteral_0= 'enter'
+                    // InternalMoba.g:7483:3: (enumLiteral_0= 'enter' )
+                    // InternalMoba.g:7484:4: enumLiteral_0= 'enter'
                     {
                     enumLiteral_0=(Token)match(input,124,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20633,10 +20754,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7431:3: (enumLiteral_1= 'leave' )
+                    // InternalMoba.g:7491:3: (enumLiteral_1= 'leave' )
                     {
-                    // InternalMoba.g:7431:3: (enumLiteral_1= 'leave' )
-                    // InternalMoba.g:7432:4: enumLiteral_1= 'leave'
+                    // InternalMoba.g:7491:3: (enumLiteral_1= 'leave' )
+                    // InternalMoba.g:7492:4: enumLiteral_1= 'leave'
                     {
                     enumLiteral_1=(Token)match(input,125,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20676,7 +20797,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaBlueToothModuleType"
-    // InternalMoba.g:7442:1: ruleMobaBlueToothModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) ;
+    // InternalMoba.g:7502:1: ruleMobaBlueToothModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) ;
     public final Enumerator ruleMobaBlueToothModuleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -20688,41 +20809,41 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7448:2: ( ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) )
-            // InternalMoba.g:7449:2: ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
+            // InternalMoba.g:7508:2: ( ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) )
+            // InternalMoba.g:7509:2: ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
             {
-            // InternalMoba.g:7449:2: ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
-            int alt105=3;
+            // InternalMoba.g:7509:2: ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
+            int alt110=3;
             switch ( input.LA(1) ) {
             case 126:
                 {
-                alt105=1;
+                alt110=1;
                 }
                 break;
             case 127:
                 {
-                alt105=2;
+                alt110=2;
                 }
                 break;
             case 128:
                 {
-                alt105=3;
+                alt110=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 105, 0, input);
+                    new NoViableAltException("", 110, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt105) {
+            switch (alt110) {
                 case 1 :
-                    // InternalMoba.g:7450:3: (enumLiteral_0= 'low energy' )
+                    // InternalMoba.g:7510:3: (enumLiteral_0= 'low energy' )
                     {
-                    // InternalMoba.g:7450:3: (enumLiteral_0= 'low energy' )
-                    // InternalMoba.g:7451:4: enumLiteral_0= 'low energy'
+                    // InternalMoba.g:7510:3: (enumLiteral_0= 'low energy' )
+                    // InternalMoba.g:7511:4: enumLiteral_0= 'low energy'
                     {
                     enumLiteral_0=(Token)match(input,126,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20738,10 +20859,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7458:3: (enumLiteral_1= 'spp' )
+                    // InternalMoba.g:7518:3: (enumLiteral_1= 'spp' )
                     {
-                    // InternalMoba.g:7458:3: (enumLiteral_1= 'spp' )
-                    // InternalMoba.g:7459:4: enumLiteral_1= 'spp'
+                    // InternalMoba.g:7518:3: (enumLiteral_1= 'spp' )
+                    // InternalMoba.g:7519:4: enumLiteral_1= 'spp'
                     {
                     enumLiteral_1=(Token)match(input,127,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20757,10 +20878,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7466:3: (enumLiteral_2= 'beacon' )
+                    // InternalMoba.g:7526:3: (enumLiteral_2= 'beacon' )
                     {
-                    // InternalMoba.g:7466:3: (enumLiteral_2= 'beacon' )
-                    // InternalMoba.g:7467:4: enumLiteral_2= 'beacon'
+                    // InternalMoba.g:7526:3: (enumLiteral_2= 'beacon' )
+                    // InternalMoba.g:7527:4: enumLiteral_2= 'beacon'
                     {
                     enumLiteral_2=(Token)match(input,128,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20800,7 +20921,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaNFCModuleType"
-    // InternalMoba.g:7477:1: ruleMobaNFCModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) ;
+    // InternalMoba.g:7537:1: ruleMobaNFCModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) ;
     public final Enumerator ruleMobaNFCModuleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -20812,41 +20933,41 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7483:2: ( ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) )
-            // InternalMoba.g:7484:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
+            // InternalMoba.g:7543:2: ( ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) )
+            // InternalMoba.g:7544:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
             {
-            // InternalMoba.g:7484:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
-            int alt106=3;
+            // InternalMoba.g:7544:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
+            int alt111=3;
             switch ( input.LA(1) ) {
             case 129:
                 {
-                alt106=1;
+                alt111=1;
                 }
                 break;
             case 130:
                 {
-                alt106=2;
+                alt111=2;
                 }
                 break;
             case 131:
                 {
-                alt106=3;
+                alt111=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 106, 0, input);
+                    new NoViableAltException("", 111, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt106) {
+            switch (alt111) {
                 case 1 :
-                    // InternalMoba.g:7485:3: (enumLiteral_0= 'id' )
+                    // InternalMoba.g:7545:3: (enumLiteral_0= 'id' )
                     {
-                    // InternalMoba.g:7485:3: (enumLiteral_0= 'id' )
-                    // InternalMoba.g:7486:4: enumLiteral_0= 'id'
+                    // InternalMoba.g:7545:3: (enumLiteral_0= 'id' )
+                    // InternalMoba.g:7546:4: enumLiteral_0= 'id'
                     {
                     enumLiteral_0=(Token)match(input,129,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20862,10 +20983,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7493:3: (enumLiteral_1= 'custom' )
+                    // InternalMoba.g:7553:3: (enumLiteral_1= 'custom' )
                     {
-                    // InternalMoba.g:7493:3: (enumLiteral_1= 'custom' )
-                    // InternalMoba.g:7494:4: enumLiteral_1= 'custom'
+                    // InternalMoba.g:7553:3: (enumLiteral_1= 'custom' )
+                    // InternalMoba.g:7554:4: enumLiteral_1= 'custom'
                     {
                     enumLiteral_1=(Token)match(input,130,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20881,10 +21002,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7501:3: (enumLiteral_2= 'text' )
+                    // InternalMoba.g:7561:3: (enumLiteral_2= 'text' )
                     {
-                    // InternalMoba.g:7501:3: (enumLiteral_2= 'text' )
-                    // InternalMoba.g:7502:4: enumLiteral_2= 'text'
+                    // InternalMoba.g:7561:3: (enumLiteral_2= 'text' )
+                    // InternalMoba.g:7562:4: enumLiteral_2= 'text'
                     {
                     enumLiteral_2=(Token)match(input,131,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20924,7 +21045,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaLowerBound"
-    // InternalMoba.g:7512:1: ruleMobaLowerBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) ;
+    // InternalMoba.g:7572:1: ruleMobaLowerBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) ;
     public final Enumerator ruleMobaLowerBound() throws RecognitionException {
         Enumerator current = null;
 
@@ -20938,51 +21059,51 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7518:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) )
-            // InternalMoba.g:7519:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
+            // InternalMoba.g:7578:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) )
+            // InternalMoba.g:7579:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
             {
-            // InternalMoba.g:7519:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
-            int alt107=5;
+            // InternalMoba.g:7579:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
+            int alt112=5;
             switch ( input.LA(1) ) {
             case 132:
                 {
-                alt107=1;
+                alt112=1;
                 }
                 break;
             case 133:
                 {
-                alt107=2;
+                alt112=2;
                 }
                 break;
             case 134:
                 {
-                alt107=3;
+                alt112=3;
                 }
                 break;
             case 61:
                 {
-                alt107=4;
+                alt112=4;
                 }
                 break;
             case 135:
                 {
-                alt107=5;
+                alt112=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 107, 0, input);
+                    new NoViableAltException("", 112, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt107) {
+            switch (alt112) {
                 case 1 :
-                    // InternalMoba.g:7520:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7580:3: (enumLiteral_0= '*' )
                     {
-                    // InternalMoba.g:7520:3: (enumLiteral_0= '*' )
-                    // InternalMoba.g:7521:4: enumLiteral_0= '*'
+                    // InternalMoba.g:7580:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7581:4: enumLiteral_0= '*'
                     {
                     enumLiteral_0=(Token)match(input,132,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20998,10 +21119,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7528:3: (enumLiteral_1= '0' )
+                    // InternalMoba.g:7588:3: (enumLiteral_1= '0' )
                     {
-                    // InternalMoba.g:7528:3: (enumLiteral_1= '0' )
-                    // InternalMoba.g:7529:4: enumLiteral_1= '0'
+                    // InternalMoba.g:7588:3: (enumLiteral_1= '0' )
+                    // InternalMoba.g:7589:4: enumLiteral_1= '0'
                     {
                     enumLiteral_1=(Token)match(input,133,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21017,10 +21138,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7536:3: (enumLiteral_2= '?' )
+                    // InternalMoba.g:7596:3: (enumLiteral_2= '?' )
                     {
-                    // InternalMoba.g:7536:3: (enumLiteral_2= '?' )
-                    // InternalMoba.g:7537:4: enumLiteral_2= '?'
+                    // InternalMoba.g:7596:3: (enumLiteral_2= '?' )
+                    // InternalMoba.g:7597:4: enumLiteral_2= '?'
                     {
                     enumLiteral_2=(Token)match(input,134,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21036,10 +21157,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:7544:3: (enumLiteral_3= '+' )
+                    // InternalMoba.g:7604:3: (enumLiteral_3= '+' )
                     {
-                    // InternalMoba.g:7544:3: (enumLiteral_3= '+' )
-                    // InternalMoba.g:7545:4: enumLiteral_3= '+'
+                    // InternalMoba.g:7604:3: (enumLiteral_3= '+' )
+                    // InternalMoba.g:7605:4: enumLiteral_3= '+'
                     {
                     enumLiteral_3=(Token)match(input,61,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21055,10 +21176,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMoba.g:7552:3: (enumLiteral_4= '1' )
+                    // InternalMoba.g:7612:3: (enumLiteral_4= '1' )
                     {
-                    // InternalMoba.g:7552:3: (enumLiteral_4= '1' )
-                    // InternalMoba.g:7553:4: enumLiteral_4= '1'
+                    // InternalMoba.g:7612:3: (enumLiteral_4= '1' )
+                    // InternalMoba.g:7613:4: enumLiteral_4= '1'
                     {
                     enumLiteral_4=(Token)match(input,135,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21098,7 +21219,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaUpperBound"
-    // InternalMoba.g:7563:1: ruleMobaUpperBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) ;
+    // InternalMoba.g:7623:1: ruleMobaUpperBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) ;
     public final Enumerator ruleMobaUpperBound() throws RecognitionException {
         Enumerator current = null;
 
@@ -21109,32 +21230,32 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7569:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) )
-            // InternalMoba.g:7570:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
+            // InternalMoba.g:7629:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) )
+            // InternalMoba.g:7630:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
             {
-            // InternalMoba.g:7570:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
-            int alt108=2;
-            int LA108_0 = input.LA(1);
+            // InternalMoba.g:7630:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
+            int alt113=2;
+            int LA113_0 = input.LA(1);
 
-            if ( (LA108_0==132) ) {
-                alt108=1;
+            if ( (LA113_0==132) ) {
+                alt113=1;
             }
-            else if ( (LA108_0==135) ) {
-                alt108=2;
+            else if ( (LA113_0==135) ) {
+                alt113=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 108, 0, input);
+                    new NoViableAltException("", 113, 0, input);
 
                 throw nvae;
             }
-            switch (alt108) {
+            switch (alt113) {
                 case 1 :
-                    // InternalMoba.g:7571:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7631:3: (enumLiteral_0= '*' )
                     {
-                    // InternalMoba.g:7571:3: (enumLiteral_0= '*' )
-                    // InternalMoba.g:7572:4: enumLiteral_0= '*'
+                    // InternalMoba.g:7631:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7632:4: enumLiteral_0= '*'
                     {
                     enumLiteral_0=(Token)match(input,132,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21150,10 +21271,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7579:3: (enumLiteral_1= '1' )
+                    // InternalMoba.g:7639:3: (enumLiteral_1= '1' )
                     {
-                    // InternalMoba.g:7579:3: (enumLiteral_1= '1' )
-                    // InternalMoba.g:7580:4: enumLiteral_1= '1'
+                    // InternalMoba.g:7639:3: (enumLiteral_1= '1' )
+                    // InternalMoba.g:7640:4: enumLiteral_1= '1'
                     {
                     enumLiteral_1=(Token)match(input,135,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21193,7 +21314,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaRESTMethods"
-    // InternalMoba.g:7590:1: ruleMobaRESTMethods returns [Enumerator current=null] : ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) ) ;
+    // InternalMoba.g:7650:1: ruleMobaRESTMethods returns [Enumerator current=null] : ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) ) ;
     public final Enumerator ruleMobaRESTMethods() throws RecognitionException {
         Enumerator current = null;
 
@@ -21206,46 +21327,46 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7596:2: ( ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) ) )
-            // InternalMoba.g:7597:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) )
+            // InternalMoba.g:7656:2: ( ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) ) )
+            // InternalMoba.g:7657:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) )
             {
-            // InternalMoba.g:7597:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) )
-            int alt109=4;
+            // InternalMoba.g:7657:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= ' PUT' ) | (enumLiteral_3= 'DELETE' ) )
+            int alt114=4;
             switch ( input.LA(1) ) {
             case 136:
                 {
-                alt109=1;
+                alt114=1;
                 }
                 break;
             case 137:
                 {
-                alt109=2;
+                alt114=2;
                 }
                 break;
             case 138:
                 {
-                alt109=3;
+                alt114=3;
                 }
                 break;
             case 139:
                 {
-                alt109=4;
+                alt114=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 109, 0, input);
+                    new NoViableAltException("", 114, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt109) {
+            switch (alt114) {
                 case 1 :
-                    // InternalMoba.g:7598:3: (enumLiteral_0= 'GET' )
+                    // InternalMoba.g:7658:3: (enumLiteral_0= 'GET' )
                     {
-                    // InternalMoba.g:7598:3: (enumLiteral_0= 'GET' )
-                    // InternalMoba.g:7599:4: enumLiteral_0= 'GET'
+                    // InternalMoba.g:7658:3: (enumLiteral_0= 'GET' )
+                    // InternalMoba.g:7659:4: enumLiteral_0= 'GET'
                     {
                     enumLiteral_0=(Token)match(input,136,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21261,10 +21382,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7606:3: (enumLiteral_1= 'POST' )
+                    // InternalMoba.g:7666:3: (enumLiteral_1= 'POST' )
                     {
-                    // InternalMoba.g:7606:3: (enumLiteral_1= 'POST' )
-                    // InternalMoba.g:7607:4: enumLiteral_1= 'POST'
+                    // InternalMoba.g:7666:3: (enumLiteral_1= 'POST' )
+                    // InternalMoba.g:7667:4: enumLiteral_1= 'POST'
                     {
                     enumLiteral_1=(Token)match(input,137,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21280,10 +21401,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7614:3: (enumLiteral_2= ' PUT' )
+                    // InternalMoba.g:7674:3: (enumLiteral_2= ' PUT' )
                     {
-                    // InternalMoba.g:7614:3: (enumLiteral_2= ' PUT' )
-                    // InternalMoba.g:7615:4: enumLiteral_2= ' PUT'
+                    // InternalMoba.g:7674:3: (enumLiteral_2= ' PUT' )
+                    // InternalMoba.g:7675:4: enumLiteral_2= ' PUT'
                     {
                     enumLiteral_2=(Token)match(input,138,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21299,10 +21420,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:7622:3: (enumLiteral_3= 'DELETE' )
+                    // InternalMoba.g:7682:3: (enumLiteral_3= 'DELETE' )
                     {
-                    // InternalMoba.g:7622:3: (enumLiteral_3= 'DELETE' )
-                    // InternalMoba.g:7623:4: enumLiteral_3= 'DELETE'
+                    // InternalMoba.g:7682:3: (enumLiteral_3= 'DELETE' )
+                    // InternalMoba.g:7683:4: enumLiteral_3= 'DELETE'
                     {
                     enumLiteral_3=(Token)match(input,139,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21508,23 +21629,26 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000400002L});
     public static final BitSet FOLLOW_63 = new BitSet(new long[]{0xC000000040000000L});
     public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000004000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000400000000010L,0x000000001F000000L});
+    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000400000000010L,0x000000000F000000L});
     public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x8000000000000010L});
-    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000010L,0x0000000043000000L});
-    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0xC000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000010L,0x0000000002000000L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000400000000010L,0x000000041F000000L});
-    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x2000000000000000L,0x0000000000000000L,0x00000000000000F0L});
-    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000001L});
-    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000090L});
-    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000001100L});
-    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000900L});
-    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
-    public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000000L,0x0010000000000000L});
-    public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000000L,0x3000000000000000L});
-    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000000L,0xC000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000000EL});
+    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0xC000000000000000L,0x0000000010000000L});
+    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000010L,0x0000000043000000L});
+    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0xC000000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000010L,0x0000000002000000L});
+    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0xC000000000000000L,0x0000000410000000L});
+    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0xC000000000000000L,0x0000000500000000L});
+    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0xC000000000000000L,0x0000000400000000L});
+    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x2000000000000000L,0x0000000000000000L,0x00000000000000F0L});
+    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000001L});
+    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000090L});
+    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000001100L});
+    public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000900L});
+    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
+    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000000L,0x0010000000000000L});
+    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x3000000000000000L});
+    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0xC000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000000EL});
 
 }
