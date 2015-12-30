@@ -181,6 +181,30 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
     acceptor.accept(_doCreateProposal_4);
   }
   
+  @Override
+  public void completeMobaDtoAttribute_Alias(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    super.completeMobaDtoAttribute_Alias(model, assignment, context, acceptor);
+    Image _image = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal("aliasName", null, _image, 1000, context);
+    acceptor.accept(_doCreateProposal);
+  }
+  
+  @Override
+  public void completeMobaDtoReference_Alias(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    super.completeMobaDtoReference_Alias(model, assignment, context, acceptor);
+    Image _image = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal("aliasName", null, _image, 1000, context);
+    acceptor.accept(_doCreateProposal);
+  }
+  
+  @Override
+  public void completeMobaDtoEmbeddable_Alias(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+    super.completeMobaDtoEmbeddable_Alias(model, assignment, context, acceptor);
+    Image _image = this.getImage(model);
+    ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal("aliasName", null, _image, 1000, context);
+    acceptor.accept(_doCreateProposal);
+  }
+  
   public StyledString getDisplayString_Multiplicity(final String value, final String description) {
     final StyledString string = new StyledString((value + " - "));
     string.append(description, StyledString.QUALIFIER_STYLER);
