@@ -57,6 +57,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaRestHeaderAccess().getAlternatives_3_1(), "rule__MobaRestHeader__Alternatives_3_1");
 					put(grammarAccess.getMobaEntityFeatureAccess().getAlternatives(), "rule__MobaEntityFeature__Alternatives");
 					put(grammarAccess.getMobaEntityAttributeAccess().getAlternatives_1_4_2(), "rule__MobaEntityAttribute__Alternatives_1_4_2");
+					put(grammarAccess.getMobaSettingsFeatureAccess().getAlternatives(), "rule__MobaSettingsFeature__Alternatives");
 					put(grammarAccess.getMobaSettingsAttributeAccess().getAlternatives_1_4_2(), "rule__MobaSettingsAttribute__Alternatives_1_4_2");
 					put(grammarAccess.getMobaDtoFeatureAccess().getAlternatives(), "rule__MobaDtoFeature__Alternatives");
 					put(grammarAccess.getMobaDtoAttributeAccess().getAlternatives_1_4_2(), "rule__MobaDtoAttribute__Alternatives_1_4_2");
@@ -158,6 +159,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaSettingsAttributeAccess().getGroup_1_4(), "rule__MobaSettingsAttribute__Group_1_4__0");
 					put(grammarAccess.getMobaSettingsAttributeAccess().getGroup_1_5(), "rule__MobaSettingsAttribute__Group_1_5__0");
 					put(grammarAccess.getMobaSettingsAttributeAccess().getGroup_1_5_3(), "rule__MobaSettingsAttribute__Group_1_5_3__0");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getGroup(), "rule__MobaSettingsEntityReference__Group__0");
 					put(grammarAccess.getMobaEntityReferenceAccess().getGroup(), "rule__MobaEntityReference__Group__0");
 					put(grammarAccess.getMobaEntityReferenceAccess().getGroup_5(), "rule__MobaEntityReference__Group_5__0");
 					put(grammarAccess.getMobaEntityEmbeddableAccess().getGroup(), "rule__MobaEntityEmbeddable__Group__0");
@@ -335,6 +337,11 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaSettingsAttributeAccess().getConstraintsAssignment_1_5_3_1(), "rule__MobaSettingsAttribute__ConstraintsAssignment_1_5_3_1");
 					put(grammarAccess.getMobaSettingsAttributeAccess().getTypeAssignment_2(), "rule__MobaSettingsAttribute__TypeAssignment_2");
 					put(grammarAccess.getMobaSettingsAttributeAccess().getNameAssignment_4(), "rule__MobaSettingsAttribute__NameAssignment_4");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingAssignment_1_0(), "rule__MobaSettingsEntityReference__CascadingAssignment_1_0");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyAssignment_1_1(), "rule__MobaSettingsEntityReference__LazyAssignment_1_1");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientAssignment_1_2(), "rule__MobaSettingsEntityReference__TransientAssignment_1_2");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeAssignment_2(), "rule__MobaSettingsEntityReference__TypeAssignment_2");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getNameAssignment_4(), "rule__MobaSettingsEntityReference__NameAssignment_4");
 					put(grammarAccess.getMobaMultiplicityAbleAccess().getMultiplicityAssignment(), "rule__MobaMultiplicityAble__MultiplicityAssignment");
 					put(grammarAccess.getMobaEntityReferenceAccess().getCascadingAssignment_1_0(), "rule__MobaEntityReference__CascadingAssignment_1_0");
 					put(grammarAccess.getMobaEntityReferenceAccess().getLazyAssignment_1_1(), "rule__MobaEntityReference__LazyAssignment_1_1");
@@ -412,6 +419,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaRESTPayloadDefinitionAccess().getUnorderedGroup_1(), "rule__MobaRESTPayloadDefinition__UnorderedGroup_1");
 					put(grammarAccess.getMobaEntityAttributeAccess().getUnorderedGroup_1(), "rule__MobaEntityAttribute__UnorderedGroup_1");
 					put(grammarAccess.getMobaSettingsAttributeAccess().getUnorderedGroup_1(), "rule__MobaSettingsAttribute__UnorderedGroup_1");
+					put(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), "rule__MobaSettingsEntityReference__UnorderedGroup_1");
 					put(grammarAccess.getMobaEntityReferenceAccess().getUnorderedGroup_1(), "rule__MobaEntityReference__UnorderedGroup_1");
 					put(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), "rule__MobaDtoAttribute__UnorderedGroup_1");
 					put(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), "rule__MobaDtoReference__UnorderedGroup_1");

@@ -79,7 +79,8 @@ MobaEnum:
 	'}';
 
 MobaEnumLiteral:
-	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT ((',' default?='isDefault')? & (',' undefined?='isUndefined')?)')';
+	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT ((',' default?='isDefault')? & (','
+	undefined?='isUndefined')?) ')';
 
 MobaConstant:
 	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaFriendsAble;
@@ -131,7 +132,8 @@ MobaEntity:
 	'}';
 
 MobaEntityIndex:
-	(unique?='unique')? 'index' name=ID '(' attributes+=[MobaEntityAttribute|ID] (',' attributes+=[MobaEntityAttribute|ID])* ')';
+	(unique?='unique')? 'index' name=ID '(' attributes+=[MobaEntityAttribute|ID] (','
+	attributes+=[MobaEntityAttribute|ID])* ')';
 
 MobaDto:
 	'dto' name=ID ('extends' superType=[MobaDto])? MobaFriendsAble '{'
@@ -187,22 +189,27 @@ MobaEntityFeature:
 
 MobaEntityAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? 
+	(domainDescription?='domainDescription')?
 	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')?
 	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
 
 MobaSettingsFeature:
-	MobaSettingsAttribute;
+	MobaSettingsAttribute | MobaSettingsEntityReference;
 
 MobaSettingsAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? 
+	(domainDescription?='domainDescription')?
 	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')?
 	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
+
+MobaSettingsEntityReference:
+	'refEntity' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity] MobaMultiplicityAble
+	name=ID
+	MobaFriendsAble;
 
 fragment MobaMultiplicityAble:
 	(multiplicity=MobaMuliplicity)?;
@@ -211,8 +218,8 @@ MobaEntityReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity] MobaMultiplicityAble
 	name=ID ('opposite' opposite=[MobaEntityReference])?
 	MobaFriendsAble;
-	
-MobaEntityEmbeddable: 
+
+MobaEntityEmbeddable:
 	'embed' (transient?='transient')? type=[MobaEntity] MobaMultiplicityAble
 	name=ID
 	MobaFriendsAble;
@@ -222,8 +229,8 @@ MobaDtoFeature:
 
 MobaDtoAttribute:
 	'var' ((lazy?='lazy')? & (transient?='transient')? & (domainKey?='domainKey')? &
-	(domainDescription?='domainDescription')? 
-	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')? 
+	(domainDescription?='domainDescription')?
+	& ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')?
 	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')? & ('alias' '(' alias=ID ')')?)
 	type=[MobaDataType] MobaMultiplicityAble name=ID MobaFriendsAble;
@@ -233,7 +240,7 @@ MobaDtoReference:
 	MobaMultiplicityAble
 	name=ID ('opposite' opposite=[MobaDtoReference])?
 	MobaFriendsAble;
-	
+
 MobaDtoEmbeddable:
 	'embed' (transient?='transient')? type=[MobaDto]
 	MobaMultiplicityAble

@@ -70,6 +70,7 @@ import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 
@@ -255,6 +256,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE:
 				sequence_MobaFriendsAble_MobaMultiplicityAble_MobaSettingsAttribute(context, (MobaSettingsAttribute) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE:
+				sequence_MobaFriendsAble_MobaMultiplicityAble_MobaSettingsEntityReference(context, (MobaSettingsEntityReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_TEMPLATE:
 				sequence_MobaTemplate(context, (MobaTemplate) semanticObject); 
@@ -748,6 +752,25 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 */
 	protected void sequence_MobaFriendsAble_MobaMultiplicityAble_MobaSettingsAttribute(ISerializationContext context, MobaSettingsAttribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaSettingsFeature returns MobaSettingsEntityReference
+	 *     MobaSettingsEntityReference returns MobaSettingsEntityReference
+	 *
+	 * Constraint:
+	 *     (
+	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
+	 *         type=[MobaEntity|ID] 
+	 *         multiplicity=MobaMuliplicity? 
+	 *         name=ID 
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
+	 *     )
+	 */
+	protected void sequence_MobaFriendsAble_MobaMultiplicityAble_MobaSettingsEntityReference(ISerializationContext context, MobaSettingsEntityReference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

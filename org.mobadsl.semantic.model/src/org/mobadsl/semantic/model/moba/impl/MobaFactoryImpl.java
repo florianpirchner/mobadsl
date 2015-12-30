@@ -136,6 +136,8 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_CONSTANT_VALUE: return createMobaConstantValue();
 			case MobaPackage.MOBA_PROPERTY: return createMobaProperty();
 			case MobaPackage.MOBA_SETTINGS: return createMobaSettings();
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: return createMobaSettingsAttribute();
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE: return createMobaSettingsEntityReference();
 			case MobaPackage.MOBA_CACHE: return createMobaCache();
 			case MobaPackage.MOBA_ENTITY: return createMobaEntity();
 			case MobaPackage.MOBA_ENTITY_INDEX: return createMobaEntityIndex();
@@ -154,7 +156,6 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_DTO_EMBEDDABLE: return createMobaDtoEmbeddable();
 			case MobaPackage.MOBA_QUEUE_REFERENCE: return createMobaQueueReference();
 			case MobaPackage.MOBA_MULIPLICITY: return createMobaMuliplicity();
-			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: return createMobaSettingsAttribute();
 			case MobaPackage.MOBA_REGEXP_CONSTRAINT: return createMobaRegexpConstraint();
 			case MobaPackage.MOBA_MIN_CONSTRAINT: return createMobaMinConstraint();
 			case MobaPackage.MOBA_MAX_CONSTRAINT: return createMobaMaxConstraint();
@@ -576,6 +577,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaSettingsAttribute createMobaSettingsAttribute() {
 		MobaSettingsAttributeImpl mobaSettingsAttribute = new MobaSettingsAttributeImpl();
 		return mobaSettingsAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaSettingsEntityReference createMobaSettingsEntityReference() {
+		MobaSettingsEntityReferenceImpl mobaSettingsEntityReference = new MobaSettingsEntityReferenceImpl();
+		return mobaSettingsEntityReference;
 	}
 
 	/**

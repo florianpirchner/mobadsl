@@ -310,6 +310,39 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_SETTINGS_FEATURE: {
+				MobaSettingsFeature mobaSettingsFeature = (MobaSettingsFeature)theEObject;
+				T result = caseMobaSettingsFeature(mobaSettingsFeature);
+				if (result == null) result = caseMobaFeature(mobaSettingsFeature);
+				if (result == null) result = caseMobaFriendsAble(mobaSettingsFeature);
+				if (result == null) result = caseMobaPropertiesAble(mobaSettingsFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: {
+				MobaSettingsAttribute mobaSettingsAttribute = (MobaSettingsAttribute)theEObject;
+				T result = caseMobaSettingsAttribute(mobaSettingsAttribute);
+				if (result == null) result = caseMobaSettingsFeature(mobaSettingsAttribute);
+				if (result == null) result = caseMobaMultiplicityAble(mobaSettingsAttribute);
+				if (result == null) result = caseMobaConstraintable(mobaSettingsAttribute);
+				if (result == null) result = caseMobaFeature(mobaSettingsAttribute);
+				if (result == null) result = caseMobaFriendsAble(mobaSettingsAttribute);
+				if (result == null) result = caseMobaPropertiesAble(mobaSettingsAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE: {
+				MobaSettingsEntityReference mobaSettingsEntityReference = (MobaSettingsEntityReference)theEObject;
+				T result = caseMobaSettingsEntityReference(mobaSettingsEntityReference);
+				if (result == null) result = caseMobaSettingsFeature(mobaSettingsEntityReference);
+				if (result == null) result = caseMobaMultiplicityAble(mobaSettingsEntityReference);
+				if (result == null) result = caseMobaConstraintable(mobaSettingsEntityReference);
+				if (result == null) result = caseMobaFeature(mobaSettingsEntityReference);
+				if (result == null) result = caseMobaFriendsAble(mobaSettingsEntityReference);
+				if (result == null) result = caseMobaPropertiesAble(mobaSettingsEntityReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_CACHE: {
 				MobaCache mobaCache = (MobaCache)theEObject;
 				T result = caseMobaCache(mobaCache);
@@ -526,27 +559,6 @@ public class MobaSwitch<T> extends Switch<T> {
 			case MobaPackage.MOBA_MULIPLICITY: {
 				MobaMuliplicity mobaMuliplicity = (MobaMuliplicity)theEObject;
 				T result = caseMobaMuliplicity(mobaMuliplicity);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MobaPackage.MOBA_SETTINGS_FEATURE: {
-				MobaSettingsFeature mobaSettingsFeature = (MobaSettingsFeature)theEObject;
-				T result = caseMobaSettingsFeature(mobaSettingsFeature);
-				if (result == null) result = caseMobaFeature(mobaSettingsFeature);
-				if (result == null) result = caseMobaFriendsAble(mobaSettingsFeature);
-				if (result == null) result = caseMobaPropertiesAble(mobaSettingsFeature);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: {
-				MobaSettingsAttribute mobaSettingsAttribute = (MobaSettingsAttribute)theEObject;
-				T result = caseMobaSettingsAttribute(mobaSettingsAttribute);
-				if (result == null) result = caseMobaSettingsFeature(mobaSettingsAttribute);
-				if (result == null) result = caseMobaMultiplicityAble(mobaSettingsAttribute);
-				if (result == null) result = caseMobaConstraintable(mobaSettingsAttribute);
-				if (result == null) result = caseMobaFeature(mobaSettingsAttribute);
-				if (result == null) result = caseMobaFriendsAble(mobaSettingsAttribute);
-				if (result == null) result = caseMobaPropertiesAble(mobaSettingsAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1479,6 +1491,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaSettingsAttribute(MobaSettingsAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Settings Entity Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Settings Entity Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaSettingsEntityReference(MobaSettingsEntityReference object) {
 		return null;
 	}
 

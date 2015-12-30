@@ -1766,7 +1766,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//MobaEntityIndex:
-		//	unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute])* ')';
+		//	unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (','
+		//	attributes+=[MobaEntityAttribute])* ')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute])* ')'
@@ -2751,14 +2752,22 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class MobaSettingsFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaSettingsFeature");
-		private final RuleCall cMobaSettingsAttributeParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cMobaSettingsAttributeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cMobaSettingsEntityReferenceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//MobaSettingsFeature:
-		//	MobaSettingsAttribute;
+		//	MobaSettingsAttribute | MobaSettingsEntityReference;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//MobaSettingsAttribute | MobaSettingsEntityReference
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
 		//MobaSettingsAttribute
-		public RuleCall getMobaSettingsAttributeParserRuleCall() { return cMobaSettingsAttributeParserRuleCall; }
+		public RuleCall getMobaSettingsAttributeParserRuleCall_0() { return cMobaSettingsAttributeParserRuleCall_0; }
+		
+		//MobaSettingsEntityReference
+		public RuleCall getMobaSettingsEntityReferenceParserRuleCall_1() { return cMobaSettingsEntityReferenceParserRuleCall_1; }
 	}
 	public class MobaSettingsAttributeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaSettingsAttribute");
@@ -2914,6 +2923,80 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getTypeMobaDataTypeIDTerminalRuleCall_2_0_1() { return cTypeMobaDataTypeIDTerminalRuleCall_2_0_1; }
+		
+		//MobaMultiplicityAble
+		public RuleCall getMobaMultiplicityAbleParserRuleCall_3() { return cMobaMultiplicityAbleParserRuleCall_3; }
+		
+		//name=ID
+		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_4_0() { return cNameIDTerminalRuleCall_4_0; }
+		
+		//MobaFriendsAble
+		public RuleCall getMobaFriendsAbleParserRuleCall_5() { return cMobaFriendsAbleParserRuleCall_5; }
+	}
+	public class MobaSettingsEntityReferenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaSettingsEntityReference");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRefEntityKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1 = (UnorderedGroup)cGroup.eContents().get(1);
+		private final Assignment cCascadingAssignment_1_0 = (Assignment)cUnorderedGroup_1.eContents().get(0);
+		private final Keyword cCascadingCascadingKeyword_1_0_0 = (Keyword)cCascadingAssignment_1_0.eContents().get(0);
+		private final Assignment cLazyAssignment_1_1 = (Assignment)cUnorderedGroup_1.eContents().get(1);
+		private final Keyword cLazyLazyKeyword_1_1_0 = (Keyword)cLazyAssignment_1_1.eContents().get(0);
+		private final Assignment cTransientAssignment_1_2 = (Assignment)cUnorderedGroup_1.eContents().get(2);
+		private final Keyword cTransientTransientKeyword_1_2_0 = (Keyword)cTransientAssignment_1_2.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTypeMobaEntityCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
+		private final RuleCall cTypeMobaEntityIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeMobaEntityCrossReference_2_0.eContents().get(1);
+		private final RuleCall cMobaMultiplicityAbleParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cNameIDTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
+		private final RuleCall cMobaFriendsAbleParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		
+		//MobaSettingsEntityReference:
+		//	'refEntity' (cascading?='cascading'? & lazy?='lazy'? & transient?='transient'?) type=[MobaEntity] MobaMultiplicityAble
+		//	name=ID
+		//	MobaFriendsAble;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'refEntity' (cascading?='cascading'? & lazy?='lazy'? & transient?='transient'?) type=[MobaEntity] MobaMultiplicityAble
+		//name=ID MobaFriendsAble
+		public Group getGroup() { return cGroup; }
+		
+		//'refEntity'
+		public Keyword getRefEntityKeyword_0() { return cRefEntityKeyword_0; }
+		
+		//(cascading?='cascading'? & lazy?='lazy'? & transient?='transient'?)
+		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
+		
+		//cascading?='cascading'?
+		public Assignment getCascadingAssignment_1_0() { return cCascadingAssignment_1_0; }
+		
+		//'cascading'
+		public Keyword getCascadingCascadingKeyword_1_0_0() { return cCascadingCascadingKeyword_1_0_0; }
+		
+		//lazy?='lazy'?
+		public Assignment getLazyAssignment_1_1() { return cLazyAssignment_1_1; }
+		
+		//'lazy'
+		public Keyword getLazyLazyKeyword_1_1_0() { return cLazyLazyKeyword_1_1_0; }
+		
+		//transient?='transient'?
+		public Assignment getTransientAssignment_1_2() { return cTransientAssignment_1_2; }
+		
+		//'transient'
+		public Keyword getTransientTransientKeyword_1_2_0() { return cTransientTransientKeyword_1_2_0; }
+		
+		//type=[MobaEntity]
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		
+		//[MobaEntity]
+		public CrossReference getTypeMobaEntityCrossReference_2_0() { return cTypeMobaEntityCrossReference_2_0; }
+		
+		//ID
+		public RuleCall getTypeMobaEntityIDTerminalRuleCall_2_0_1() { return cTypeMobaEntityIDTerminalRuleCall_2_0_1; }
 		
 		//MobaMultiplicityAble
 		public RuleCall getMobaMultiplicityAbleParserRuleCall_3() { return cMobaMultiplicityAbleParserRuleCall_3; }
@@ -4642,6 +4725,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	private final MobaEntityAttributeElements pMobaEntityAttribute;
 	private final MobaSettingsFeatureElements pMobaSettingsFeature;
 	private final MobaSettingsAttributeElements pMobaSettingsAttribute;
+	private final MobaSettingsEntityReferenceElements pMobaSettingsEntityReference;
 	private final MobaMultiplicityAbleElements pMobaMultiplicityAble;
 	private final MobaEntityReferenceElements pMobaEntityReference;
 	private final MobaEntityEmbeddableElements pMobaEntityEmbeddable;
@@ -4739,6 +4823,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMobaEntityAttribute = new MobaEntityAttributeElements();
 		this.pMobaSettingsFeature = new MobaSettingsFeatureElements();
 		this.pMobaSettingsAttribute = new MobaSettingsAttributeElements();
+		this.pMobaSettingsEntityReference = new MobaSettingsEntityReferenceElements();
 		this.pMobaMultiplicityAble = new MobaMultiplicityAbleElements();
 		this.pMobaEntityReference = new MobaEntityReferenceElements();
 		this.pMobaEntityEmbeddable = new MobaEntityEmbeddableElements();
@@ -5110,7 +5195,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaEntityIndex:
-	//	unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute])* ')';
+	//	unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (','
+	//	attributes+=[MobaEntityAttribute])* ')';
 	public MobaEntityIndexElements getMobaEntityIndexAccess() {
 		return pMobaEntityIndex;
 	}
@@ -5248,7 +5334,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaSettingsFeature:
-	//	MobaSettingsAttribute;
+	//	MobaSettingsAttribute | MobaSettingsEntityReference;
 	public MobaSettingsFeatureElements getMobaSettingsFeatureAccess() {
 		return pMobaSettingsFeature;
 	}
@@ -5268,6 +5354,18 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMobaSettingsAttributeRule() {
 		return getMobaSettingsAttributeAccess().getRule();
+	}
+	
+	//MobaSettingsEntityReference:
+	//	'refEntity' (cascading?='cascading'? & lazy?='lazy'? & transient?='transient'?) type=[MobaEntity] MobaMultiplicityAble
+	//	name=ID
+	//	MobaFriendsAble;
+	public MobaSettingsEntityReferenceElements getMobaSettingsEntityReferenceAccess() {
+		return pMobaSettingsEntityReference;
+	}
+	
+	public ParserRule getMobaSettingsEntityReferenceRule() {
+		return getMobaSettingsEntityReferenceAccess().getRule();
 	}
 	
 	//fragment MobaMultiplicityAble:

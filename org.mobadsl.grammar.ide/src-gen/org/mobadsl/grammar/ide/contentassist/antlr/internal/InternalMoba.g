@@ -983,9 +983,9 @@ ruleMobaSettingsFeature
 	}
 	:
 	(
-		{ before(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsAttributeParserRuleCall()); }
-		ruleMobaSettingsAttribute
-		{ after(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsAttributeParserRuleCall()); }
+		{ before(grammarAccess.getMobaSettingsFeatureAccess().getAlternatives()); }
+		(rule__MobaSettingsFeature__Alternatives)
+		{ after(grammarAccess.getMobaSettingsFeatureAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -1011,6 +1011,31 @@ ruleMobaSettingsAttribute
 		{ before(grammarAccess.getMobaSettingsAttributeAccess().getGroup()); }
 		(rule__MobaSettingsAttribute__Group__0)
 		{ after(grammarAccess.getMobaSettingsAttributeAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleMobaSettingsEntityReference
+entryRuleMobaSettingsEntityReference
+:
+{ before(grammarAccess.getMobaSettingsEntityReferenceRule()); }
+	 ruleMobaSettingsEntityReference
+{ after(grammarAccess.getMobaSettingsEntityReferenceRule()); } 
+	 EOF 
+;
+
+// Rule MobaSettingsEntityReference
+ruleMobaSettingsEntityReference 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getGroup()); }
+		(rule__MobaSettingsEntityReference__Group__0)
+		{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getGroup()); }
 	)
 ;
 finally {
@@ -2527,6 +2552,27 @@ rule__MobaEntityAttribute__Alternatives_1_4_2
 		{ before(grammarAccess.getMobaEntityAttributeAccess().getFormatConstAssignment_1_4_2_1()); }
 		(rule__MobaEntityAttribute__FormatConstAssignment_1_4_2_1)
 		{ after(grammarAccess.getMobaEntityAttributeAccess().getFormatConstAssignment_1_4_2_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsFeature__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsAttributeParserRuleCall_0()); }
+		ruleMobaSettingsAttribute
+		{ after(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsAttributeParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsEntityReferenceParserRuleCall_1()); }
+		ruleMobaSettingsEntityReference
+		{ after(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsEntityReferenceParserRuleCall_1()); }
 	)
 ;
 finally {
@@ -11266,6 +11312,168 @@ finally {
 }
 
 
+rule__MobaSettingsEntityReference__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__Group__0__Impl
+	rule__MobaSettingsEntityReference__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getRefEntityKeyword_0()); }
+	'refEntity'
+	{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getRefEntityKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__Group__1__Impl
+	rule__MobaSettingsEntityReference__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1()); }
+	(rule__MobaSettingsEntityReference__UnorderedGroup_1)
+	{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__Group__2__Impl
+	rule__MobaSettingsEntityReference__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeAssignment_2()); }
+	(rule__MobaSettingsEntityReference__TypeAssignment_2)
+	{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__Group__3__Impl
+	rule__MobaSettingsEntityReference__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); }
+	ruleMobaMultiplicityAble
+	{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__Group__4__Impl
+	rule__MobaSettingsEntityReference__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getNameAssignment_4()); }
+	(rule__MobaSettingsEntityReference__NameAssignment_4)
+	{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getNameAssignment_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getMobaFriendsAbleParserRuleCall_5()); }
+	ruleMobaFriendsAble
+	{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getMobaFriendsAbleParserRuleCall_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 rule__MobaEntityReference__Group__0
 	@init {
 		int stackSize = keepStackSize();
@@ -15824,6 +16032,116 @@ finally {
 }
 
 
+rule__MobaSettingsEntityReference__UnorderedGroup_1
+	@init {
+		int stackSize = keepStackSize();
+		getUnorderedGroupHelper().enter(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+	}
+:
+	rule__MobaSettingsEntityReference__UnorderedGroup_1__0
+	?
+;
+finally {
+	getUnorderedGroupHelper().leave(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl
+	@init {
+		int stackSize = keepStackSize();
+		boolean selected = false;
+	}
+:
+		(
+		( 
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0);
+				}
+				{
+					selected = true;
+				}
+				(
+					{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingAssignment_1_0()); }
+					(rule__MobaSettingsEntityReference__CascadingAssignment_1_0)
+					{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingAssignment_1_0()); }
+				)
+			)
+		)|
+		( 
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1);
+				}
+				{
+					selected = true;
+				}
+				(
+					{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyAssignment_1_1()); }
+					(rule__MobaSettingsEntityReference__LazyAssignment_1_1)
+					{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyAssignment_1_1()); }
+				)
+			)
+		)|
+		( 
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2)}?=>(
+				{
+					getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2);
+				}
+				{
+					selected = true;
+				}
+				(
+					{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientAssignment_1_2()); }
+					(rule__MobaSettingsEntityReference__TransientAssignment_1_2)
+					{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientAssignment_1_2()); }
+				)
+			)
+		)
+		)
+;
+finally {
+	if (selected)
+		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__UnorderedGroup_1__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl
+	rule__MobaSettingsEntityReference__UnorderedGroup_1__1?
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__UnorderedGroup_1__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl
+	rule__MobaSettingsEntityReference__UnorderedGroup_1__2?
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__UnorderedGroup_1__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 rule__MobaEntityReference__UnorderedGroup_1
 	@init {
 		int stackSize = keepStackSize();
@@ -18779,6 +19097,97 @@ rule__MobaSettingsAttribute__NameAssignment_4
 		{ before(grammarAccess.getMobaSettingsAttributeAccess().getNameIDTerminalRuleCall_4_0()); }
 		RULE_ID
 		{ after(grammarAccess.getMobaSettingsAttributeAccess().getNameIDTerminalRuleCall_4_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__CascadingAssignment_1_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); }
+		(
+			{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); }
+			'cascading'
+			{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); }
+		)
+		{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__LazyAssignment_1_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); }
+		(
+			{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); }
+			'lazy'
+			{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); }
+		)
+		{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyLazyKeyword_1_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__TransientAssignment_1_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); }
+		(
+			{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); }
+			'transient'
+			{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); }
+		)
+		{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientTransientKeyword_1_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__TypeAssignment_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeMobaEntityCrossReference_2_0()); }
+		(
+			{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeMobaEntityIDTerminalRuleCall_2_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeMobaEntityIDTerminalRuleCall_2_0_1()); }
+		)
+		{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeMobaEntityCrossReference_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaSettingsEntityReference__NameAssignment_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getMobaSettingsEntityReferenceAccess().getNameIDTerminalRuleCall_4_0()); }
+		RULE_ID
+		{ after(grammarAccess.getMobaSettingsEntityReferenceAccess().getNameIDTerminalRuleCall_4_0()); }
 	)
 ;
 finally {

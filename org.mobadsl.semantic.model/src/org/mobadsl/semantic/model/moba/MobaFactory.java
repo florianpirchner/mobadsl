@@ -328,6 +328,15 @@ public interface MobaFactory extends EFactory {
 	MobaSettingsAttribute createMobaSettingsAttribute();
 
 	/**
+	 * Returns a new object of class '<em>Settings Entity Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Settings Entity Reference</em>'.
+	 * @generated
+	 */
+	MobaSettingsEntityReference createMobaSettingsEntityReference();
+
+	/**
 	 * Returns a new object of class '<em>Regexp Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

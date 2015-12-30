@@ -4429,14 +4429,25 @@ ruleMobaSettingsFeature returns [EObject current=null]
 @after {
 	leaveRule();
 }:
-	{
-		newCompositeNode(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsAttributeParserRuleCall());
-	}
-	this_MobaSettingsAttribute_0=ruleMobaSettingsAttribute
-	{
-		$current = $this_MobaSettingsAttribute_0.current;
-		afterParserOrEnumRuleCall();
-	}
+	(
+		{
+			newCompositeNode(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsAttributeParserRuleCall_0());
+		}
+		this_MobaSettingsAttribute_0=ruleMobaSettingsAttribute
+		{
+			$current = $this_MobaSettingsAttribute_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getMobaSettingsFeatureAccess().getMobaSettingsEntityReferenceParserRuleCall_1());
+		}
+		this_MobaSettingsEntityReference_1=ruleMobaSettingsEntityReference
+		{
+			$current = $this_MobaSettingsEntityReference_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
 ;
 
 // Entry rule entryRuleMobaSettingsAttribute
@@ -4740,6 +4751,165 @@ ruleMobaSettingsAttribute returns [EObject current=null]
 		this_MobaFriendsAble_20=ruleMobaFriendsAble[$current]
 		{
 			$current = $this_MobaFriendsAble_20.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleMobaSettingsEntityReference
+entryRuleMobaSettingsEntityReference returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMobaSettingsEntityReferenceRule()); }
+	iv_ruleMobaSettingsEntityReference=ruleMobaSettingsEntityReference
+	{ $current=$iv_ruleMobaSettingsEntityReference.current; }
+	EOF;
+
+// Rule MobaSettingsEntityReference
+ruleMobaSettingsEntityReference returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='refEntity'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getRefEntityKeyword_0());
+		}
+		(
+			(
+				{ 
+				  getUnorderedGroupHelper().enter(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+				}
+				(
+					(
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 0);
+					}
+								({true}?=>((
+									lv_cascading_2_0='cascading'
+									{
+										newLeafNode(lv_cascading_2_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getCascadingCascadingKeyword_1_0_0());
+									}
+									{
+										if ($current==null) {
+											$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+										}
+										setWithLastConsumed($current, "cascading", true, "cascading");
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 1);
+					}
+								({true}?=>((
+									lv_lazy_3_0='lazy'
+									{
+										newLeafNode(lv_lazy_3_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getLazyLazyKeyword_1_1_0());
+									}
+									{
+										if ($current==null) {
+											$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+										}
+										setWithLastConsumed($current, "lazy", true, "lazy");
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1(), 2);
+					}
+								({true}?=>((
+									lv_transient_4_0='transient'
+									{
+										newLeafNode(lv_transient_4_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getTransientTransientKeyword_1_2_0());
+									}
+									{
+										if ($current==null) {
+											$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+										}
+										setWithLastConsumed($current, "transient", true, "transient");
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+					}
+				)
+			)
+					)*
+				)
+			)
+				{ 
+				  getUnorderedGroupHelper().leave(grammarAccess.getMobaSettingsEntityReferenceAccess().getUnorderedGroup_1());
+				}
+		)
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+					}
+				}
+				otherlv_5=RULE_ID
+				{
+					newLeafNode(otherlv_5, grammarAccess.getMobaSettingsEntityReferenceAccess().getTypeMobaEntityCrossReference_2_0());
+				}
+			)
+		)
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+			}
+			newCompositeNode(grammarAccess.getMobaSettingsEntityReferenceAccess().getMobaMultiplicityAbleParserRuleCall_3());
+		}
+		this_MobaMultiplicityAble_6=ruleMobaMultiplicityAble[$current]
+		{
+			$current = $this_MobaMultiplicityAble_6.current;
+			afterParserOrEnumRuleCall();
+		}
+		(
+			(
+				lv_name_7_0=RULE_ID
+				{
+					newLeafNode(lv_name_7_0, grammarAccess.getMobaSettingsEntityReferenceAccess().getNameIDTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_7_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getMobaSettingsEntityReferenceRule());
+			}
+			newCompositeNode(grammarAccess.getMobaSettingsEntityReferenceAccess().getMobaFriendsAbleParserRuleCall_5());
+		}
+		this_MobaFriendsAble_8=ruleMobaFriendsAble[$current]
+		{
+			$current = $this_MobaFriendsAble_8.current;
 			afterParserOrEnumRuleCall();
 		}
 	)

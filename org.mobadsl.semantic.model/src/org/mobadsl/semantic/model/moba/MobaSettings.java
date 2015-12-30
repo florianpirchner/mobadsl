@@ -128,6 +128,13 @@ public interface MobaSettings extends MobaApplicationFeature {
 	 * @return
 	 */
 	List<MobaSettingsAttribute> getAttributes();
+	
+	/**
+	 * Returns the values for the current instance. Excluding the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaSettingsEntityReference> getEntityReferences();
 
 	/**
 	 * Returns the values for the current instance. Including the "super types".
@@ -142,6 +149,13 @@ public interface MobaSettings extends MobaApplicationFeature {
 	 * @return
 	 */
 	List<MobaSettingsAttribute> getAllAttributes();
+	
+	/**
+	 * Returns the values for the current instance. Including the "super types".
+	 * 
+	 * @return
+	 */
+	List<MobaSettingsEntityReference> getAllEntityReferences();
 
 	/**
 	 * Returns the generator specific values for the current instance. Including
@@ -168,6 +182,19 @@ public interface MobaSettings extends MobaApplicationFeature {
 	 * @return
 	 */
 	List<MobaSettingsAttribute> getGenAttributes();
+	
+	/**
+	 * Returns the generator specific values for the current instance. Including
+	 * the "super types".
+	 * <p>
+	 * The difference to getAll...() is, that shadowed values are replaces with
+	 * their new representation. For instance, if a feature #name is defined in
+	 * superType and in this instance, then the #name value from this instance
+	 * will be put at the original index from #name in the superType.
+	 * 
+	 * @return
+	 */
+	List<MobaSettingsEntityReference> getGenEntityReferences();
 
 	/**
 	 * Returns all supertypes of this instance.

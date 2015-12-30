@@ -224,6 +224,18 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaSettingsAdapter();
 			}
 			@Override
+			public Adapter caseMobaSettingsFeature(MobaSettingsFeature object) {
+				return createMobaSettingsFeatureAdapter();
+			}
+			@Override
+			public Adapter caseMobaSettingsAttribute(MobaSettingsAttribute object) {
+				return createMobaSettingsAttributeAdapter();
+			}
+			@Override
+			public Adapter caseMobaSettingsEntityReference(MobaSettingsEntityReference object) {
+				return createMobaSettingsEntityReferenceAdapter();
+			}
+			@Override
 			public Adapter caseMobaCache(MobaCache object) {
 				return createMobaCacheAdapter();
 			}
@@ -318,14 +330,6 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMobaMuliplicity(MobaMuliplicity object) {
 				return createMobaMuliplicityAdapter();
-			}
-			@Override
-			public Adapter caseMobaSettingsFeature(MobaSettingsFeature object) {
-				return createMobaSettingsFeatureAdapter();
-			}
-			@Override
-			public Adapter caseMobaSettingsAttribute(MobaSettingsAttribute object) {
-				return createMobaSettingsAttributeAdapter();
 			}
 			@Override
 			public Adapter caseMobaConstraintable(MobaConstraintable object) {
@@ -1104,6 +1108,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaSettingsAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaSettingsEntityReference <em>Settings Entity Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaSettingsEntityReference
+	 * @generated
+	 */
+	public Adapter createMobaSettingsEntityReferenceAdapter() {
 		return null;
 	}
 
