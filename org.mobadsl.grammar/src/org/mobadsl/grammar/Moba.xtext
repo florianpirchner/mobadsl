@@ -342,7 +342,7 @@ enum MobaUpperBound:
 	MANY='*' | ONE='1';
 
 enum MobaRESTMethods:
-	GET="GET" | POST="POST" | PUT=" PUT" | DELETE="DELETE";
+	GET="GET" | POST="POST" | PUT="PUT" | DELETE="DELETE";
 
 	// if this is removed, antlr detects an error. INT and FLOAT can not become created since the are not unique definitions. 
 terminal INT returns ecore::EInt:

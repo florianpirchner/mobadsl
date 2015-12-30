@@ -3117,7 +3117,7 @@ rule__MobaRESTMethods__Alternatives
 	|
 	(
 		{ before(grammarAccess.getMobaRESTMethodsAccess().getPUTEnumLiteralDeclaration_2()); }
-		(' PUT')
+		('PUT')
 		{ after(grammarAccess.getMobaRESTMethodsAccess().getPUTEnumLiteralDeclaration_2()); }
 	)
 	|

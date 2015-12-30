@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalMobaParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VERSION", "RULE_ID_VERSION", "RULE_STRING", "RULE_CONSTANT", "RULE_DOWNLOAD_TEMPLATE", "RULE_FQN", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "SUPER_ID", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'toFirstLower'", "'toFirstUpper'", "'toLowerCase'", "'toUpperCase'", "'enter'", "'leave'", "'low energy'", "'spp'", "'beacon'", "'id'", "'custom'", "'text'", "'*'", "'0'", "'?'", "'+'", "'1'", "'GET'", "'POST'", "' PUT'", "'DELETE'", "'project'", "'version'", "'='", "'{'", "'}'", "'uiApp'", "'backgroundApp'", "'application'", "'server'", "'url'", "'extends'", "'autorizations'", "'('", "')'", "','", "'services'", "'use template'", "'generator'", "'extensionPoint'", "':'", "'mixin'", "'authorization'", "'serialization'", "'datatype'", "'constraints'", "'enum'", "'lit'", "'const'", "'->'", "'friends'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'index'", "'dto'", "'queue'", "'rest'", "'headers'", "'parameters'", "'requestDto'", "'responseDto'", "'errorDto'", "'method'", "'as'", "'param'", "'restCrud'", "'restWorkflow'", "'service'", "'var'", "'format'", "'refEntity'", "'ref'", "'opposite'", "'embed'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'slot'", "'trigger app install'", "'trigger app update'", "'trigger email'", "'trigger device start'", "'trigger sms'", "'trigger push'", "'trigger geofence'", "'event'", "'module bluetooth'", "'module push'", "'module NFC'", "'active'", "'isArray'", "'isDate'", "'isTime'", "'isTimestamp'", "'isString'", "'isPrimitive'", "'isBool'", "'isNumeric'", "'isDecimal'", "'isDefault'", "'isUndefined'", "'unique'", "'bigData'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'cascading'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VERSION", "RULE_ID_VERSION", "RULE_STRING", "RULE_CONSTANT", "RULE_DOWNLOAD_TEMPLATE", "RULE_FQN", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "SUPER_ID", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'toFirstLower'", "'toFirstUpper'", "'toLowerCase'", "'toUpperCase'", "'enter'", "'leave'", "'low energy'", "'spp'", "'beacon'", "'id'", "'custom'", "'text'", "'*'", "'0'", "'?'", "'+'", "'1'", "'GET'", "'POST'", "'PUT'", "'DELETE'", "'project'", "'version'", "'='", "'{'", "'}'", "'uiApp'", "'backgroundApp'", "'application'", "'server'", "'url'", "'extends'", "'autorizations'", "'('", "')'", "','", "'services'", "'use template'", "'generator'", "'extensionPoint'", "':'", "'mixin'", "'authorization'", "'serialization'", "'datatype'", "'constraints'", "'enum'", "'lit'", "'const'", "'->'", "'friends'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'index'", "'dto'", "'queue'", "'rest'", "'headers'", "'parameters'", "'requestDto'", "'responseDto'", "'errorDto'", "'method'", "'as'", "'param'", "'restCrud'", "'restWorkflow'", "'service'", "'var'", "'format'", "'refEntity'", "'ref'", "'opposite'", "'embed'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'slot'", "'trigger app install'", "'trigger app update'", "'trigger email'", "'trigger device start'", "'trigger sms'", "'trigger push'", "'trigger geofence'", "'event'", "'module bluetooth'", "'module push'", "'module NFC'", "'active'", "'isArray'", "'isDate'", "'isTime'", "'isTimestamp'", "'isString'", "'isPrimitive'", "'isBool'", "'isNumeric'", "'isDecimal'", "'isDefault'", "'isUndefined'", "'unique'", "'bigData'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'cascading'"
     };
     public static final int T__50=50;
     public static final int RULE_VERSION=5;
@@ -11988,13 +11988,13 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaRESTMethods__Alternatives"
-    // InternalMoba.g:3101:1: rule__MobaRESTMethods__Alternatives : ( ( ( 'GET' ) ) | ( ( 'POST' ) ) | ( ( ' PUT' ) ) | ( ( 'DELETE' ) ) );
+    // InternalMoba.g:3101:1: rule__MobaRESTMethods__Alternatives : ( ( ( 'GET' ) ) | ( ( 'POST' ) ) | ( ( 'PUT' ) ) | ( ( 'DELETE' ) ) );
     public final void rule__MobaRESTMethods__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:3105:1: ( ( ( 'GET' ) ) | ( ( 'POST' ) ) | ( ( ' PUT' ) ) | ( ( 'DELETE' ) ) )
+            // InternalMoba.g:3105:1: ( ( ( 'GET' ) ) | ( ( 'POST' ) ) | ( ( 'PUT' ) ) | ( ( 'DELETE' ) ) )
             int alt45=4;
             switch ( input.LA(1) ) {
             case 37:
@@ -12077,16 +12077,16 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:3118:2: ( ( ' PUT' ) )
+                    // InternalMoba.g:3118:2: ( ( 'PUT' ) )
                     {
-                    // InternalMoba.g:3118:2: ( ( ' PUT' ) )
-                    // InternalMoba.g:3119:3: ( ' PUT' )
+                    // InternalMoba.g:3118:2: ( ( 'PUT' ) )
+                    // InternalMoba.g:3119:3: ( 'PUT' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMobaRESTMethodsAccess().getPUTEnumLiteralDeclaration_2()); 
                     }
-                    // InternalMoba.g:3120:3: ( ' PUT' )
-                    // InternalMoba.g:3120:4: ' PUT'
+                    // InternalMoba.g:3120:3: ( 'PUT' )
+                    // InternalMoba.g:3120:4: 'PUT'
                     {
                     match(input,39,FOLLOW_2); if (state.failed) return ;
 

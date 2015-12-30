@@ -4702,10 +4702,10 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDELETEDELETEKeyword_3_0 = (Keyword)cDELETEEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum MobaRESTMethods:
-		//	GET | POST | PUT=" PUT" | DELETE;
+		//	GET | POST | PUT | DELETE;
 		public EnumRule getRule() { return rule; }
 		
-		//GET | POST | PUT=" PUT" | DELETE
+		//GET | POST | PUT | DELETE
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//GET
@@ -4720,10 +4720,10 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//"POST"
 		public Keyword getPOSTPOSTKeyword_1_0() { return cPOSTPOSTKeyword_1_0; }
 		
-		//PUT=" PUT"
+		//PUT
 		public EnumLiteralDeclaration getPUTEnumLiteralDeclaration_2() { return cPUTEnumLiteralDeclaration_2; }
 		
-		//" PUT"
+		//"PUT"
 		public Keyword getPUTPUTKeyword_2_0() { return cPUTPUTKeyword_2_0; }
 		
 		//DELETE
@@ -5805,7 +5805,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum MobaRESTMethods:
-	//	GET | POST | PUT=" PUT" | DELETE;
+	//	GET | POST | PUT | DELETE;
 	public MobaRESTMethodsElements getMobaRESTMethodsAccess() {
 		return eMobaRESTMethods;
 	}

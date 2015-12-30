@@ -7672,7 +7672,7 @@ ruleMobaRESTMethods returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_2=' PUT'
+			enumLiteral_2='PUT'
 			{
 				$current = grammarAccess.getMobaRESTMethodsAccess().getPUTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_2, grammarAccess.getMobaRESTMethodsAccess().getPUTEnumLiteralDeclaration_2());
