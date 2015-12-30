@@ -2991,7 +2991,7 @@ rule__MobaBlueToothModuleType__Alternatives
 :
 	(
 		{ before(grammarAccess.getMobaBlueToothModuleTypeAccess().getLEEnumLiteralDeclaration_0()); }
-		('low energy')
+		('lowEnergy')
 		{ after(grammarAccess.getMobaBlueToothModuleTypeAccess().getLEEnumLiteralDeclaration_0()); }
 	)
 	|
@@ -14909,6 +14909,7 @@ rule__MobaBluetoothModule__Group__4
 	}
 :
 	rule__MobaBluetoothModule__Group__4__Impl
+	rule__MobaBluetoothModule__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -14923,6 +14924,32 @@ rule__MobaBluetoothModule__Group__4__Impl
 	{ before(grammarAccess.getMobaBluetoothModuleAccess().getTypeAssignment_4()); }
 	(rule__MobaBluetoothModule__TypeAssignment_4)
 	{ after(grammarAccess.getMobaBluetoothModuleAccess().getTypeAssignment_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaBluetoothModule__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaBluetoothModule__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaBluetoothModule__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaBluetoothModuleAccess().getMobaFriendsAbleParserRuleCall_5()); }
+	ruleMobaFriendsAble
+	{ after(grammarAccess.getMobaBluetoothModuleAccess().getMobaFriendsAbleParserRuleCall_5()); }
 )
 ;
 finally {
@@ -14963,6 +14990,7 @@ rule__MobaPushModule__Group__1
 	}
 :
 	rule__MobaPushModule__Group__1__Impl
+	rule__MobaPushModule__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -14977,6 +15005,32 @@ rule__MobaPushModule__Group__1__Impl
 	{ before(grammarAccess.getMobaPushModuleAccess().getNameAssignment_1()); }
 	(rule__MobaPushModule__NameAssignment_1)
 	{ after(grammarAccess.getMobaPushModuleAccess().getNameAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushModule__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaPushModule__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaPushModule__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaPushModuleAccess().getMobaFriendsAbleParserRuleCall_2()); }
+	ruleMobaFriendsAble
+	{ after(grammarAccess.getMobaPushModuleAccess().getMobaFriendsAbleParserRuleCall_2()); }
 )
 ;
 finally {
@@ -15098,6 +15152,7 @@ rule__MobaNFCModule__Group__4
 	}
 :
 	rule__MobaNFCModule__Group__4__Impl
+	rule__MobaNFCModule__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -15112,6 +15167,32 @@ rule__MobaNFCModule__Group__4__Impl
 	{ before(grammarAccess.getMobaNFCModuleAccess().getTypeAssignment_4()); }
 	(rule__MobaNFCModule__TypeAssignment_4)
 	{ after(grammarAccess.getMobaNFCModuleAccess().getTypeAssignment_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaNFCModule__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__MobaNFCModule__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MobaNFCModule__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getMobaNFCModuleAccess().getMobaFriendsAbleParserRuleCall_5()); }
+	ruleMobaFriendsAble
+	{ after(grammarAccess.getMobaNFCModuleAccess().getMobaFriendsAbleParserRuleCall_5()); }
 )
 ;
 finally {

@@ -4377,12 +4377,13 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cTypeMobaBlueToothModuleTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final RuleCall cMobaFriendsAbleParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//MobaBluetoothModule:
-		//	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType;
+		//	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType MobaFriendsAble;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType
+		//'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType MobaFriendsAble
 		public Group getGroup() { return cGroup; }
 		
 		//'module bluetooth'
@@ -4405,6 +4406,9 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//MobaBlueToothModuleType
 		public RuleCall getTypeMobaBlueToothModuleTypeEnumRuleCall_4_0() { return cTypeMobaBlueToothModuleTypeEnumRuleCall_4_0; }
+		
+		//MobaFriendsAble
+		public RuleCall getMobaFriendsAbleParserRuleCall_5() { return cMobaFriendsAbleParserRuleCall_5; }
 	}
 	public class MobaPushModuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaPushModule");
@@ -4412,12 +4416,13 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModulePushKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cMobaFriendsAbleParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		//MobaPushModule:
-		//	'module push' name=ID;
+		//	'module push' name=ID MobaFriendsAble;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'module push' name=ID
+		//'module push' name=ID MobaFriendsAble
 		public Group getGroup() { return cGroup; }
 		
 		//'module push'
@@ -4428,6 +4433,9 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//MobaFriendsAble
+		public RuleCall getMobaFriendsAbleParserRuleCall_2() { return cMobaFriendsAbleParserRuleCall_2; }
 	}
 	public class MobaNFCModuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaNFCModule");
@@ -4439,12 +4447,13 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cTypeMobaNFCModuleTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final RuleCall cMobaFriendsAbleParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//MobaNFCModule:
-		//	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType;
+		//	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType MobaFriendsAble;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'module NFC' name=ID 'type' '=' type=MobaNFCModuleType
+		//'module NFC' name=ID 'type' '=' type=MobaNFCModuleType MobaFriendsAble
 		public Group getGroup() { return cGroup; }
 		
 		//'module NFC'
@@ -4467,6 +4476,9 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//MobaNFCModuleType
 		public RuleCall getTypeMobaNFCModuleTypeEnumRuleCall_4_0() { return cTypeMobaNFCModuleTypeEnumRuleCall_4_0; }
+		
+		//MobaFriendsAble
+		public RuleCall getMobaFriendsAbleParserRuleCall_5() { return cMobaFriendsAbleParserRuleCall_5; }
 	}
 	
 	public class MobaConstantValueFunctionElements extends AbstractEnumRuleElementFinder {
@@ -4552,16 +4564,16 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cBEACONBeaconKeyword_2_0 = (Keyword)cBEACONEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum MobaBlueToothModuleType:
-		//	LE="low energy" | SPP="spp" | BEACON="beacon";
+		//	LE="lowEnergy" | SPP="spp" | BEACON="beacon";
 		public EnumRule getRule() { return rule; }
 		
-		//LE="low energy" | SPP="spp" | BEACON="beacon"
+		//LE="lowEnergy" | SPP="spp" | BEACON="beacon"
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//LE="low energy"
+		//LE="lowEnergy"
 		public EnumLiteralDeclaration getLEEnumLiteralDeclaration_0() { return cLEEnumLiteralDeclaration_0; }
 		
-		//"low energy"
+		//"lowEnergy"
 		public Keyword getLELowEnergyKeyword_0_0() { return cLELowEnergyKeyword_0_0; }
 		
 		//SPP="spp"
@@ -5735,7 +5747,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaBluetoothModule:
-	//	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType;
+	//	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType MobaFriendsAble;
 	public MobaBluetoothModuleElements getMobaBluetoothModuleAccess() {
 		return pMobaBluetoothModule;
 	}
@@ -5745,7 +5757,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum MobaBlueToothModuleType:
-	//	LE="low energy" | SPP="spp" | BEACON="beacon";
+	//	LE="lowEnergy" | SPP="spp" | BEACON="beacon";
 	public MobaBlueToothModuleTypeElements getMobaBlueToothModuleTypeAccess() {
 		return eMobaBlueToothModuleType;
 	}
@@ -5755,7 +5767,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaPushModule:
-	//	'module push' name=ID;
+	//	'module push' name=ID MobaFriendsAble;
 	public MobaPushModuleElements getMobaPushModuleAccess() {
 		return pMobaPushModule;
 	}
@@ -5765,7 +5777,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaNFCModule:
-	//	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType;
+	//	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType MobaFriendsAble;
 	public MobaNFCModuleElements getMobaNFCModuleAccess() {
 		return pMobaNFCModule;
 	}

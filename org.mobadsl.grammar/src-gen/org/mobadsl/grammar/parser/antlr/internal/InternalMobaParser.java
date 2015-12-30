@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalMobaParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VERSION", "RULE_ID_VERSION", "RULE_STRING", "RULE_CONSTANT", "RULE_DOWNLOAD_TEMPLATE", "RULE_FQN", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "SUPER_ID", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'project'", "'version'", "'='", "'{'", "'uiApp'", "'backgroundApp'", "'}'", "'application'", "'server'", "'url'", "'extends'", "'autorizations'", "'('", "','", "')'", "'services'", "'use template'", "'active'", "'generator'", "'extensionPoint'", "':'", "'mixin'", "'authorization'", "'serialization'", "'datatype'", "'isArray'", "'constraints'", "'isDate'", "'isTime'", "'isTimestamp'", "'isString'", "'isPrimitive'", "'isBool'", "'isNumeric'", "'isDecimal'", "'enum'", "'lit'", "'isDefault'", "'isUndefined'", "'const'", "'->'", "'+'", "'friends'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'unique'", "'index'", "'dto'", "'queue'", "'rest'", "'bigData'", "'headers'", "'parameters'", "'requestDto'", "'responseDto'", "'errorDto'", "'method'", "'as'", "'param'", "'restCrud'", "'restWorkflow'", "'service'", "'var'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'format'", "'refEntity'", "'cascading'", "'ref'", "'opposite'", "'embed'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'slot'", "'trigger app install'", "'trigger app update'", "'trigger email'", "'trigger device start'", "'trigger sms'", "'trigger push'", "'trigger geofence'", "'event'", "'module bluetooth'", "'module push'", "'module NFC'", "'toFirstLower'", "'toFirstUpper'", "'toLowerCase'", "'toUpperCase'", "'enter'", "'leave'", "'low energy'", "'spp'", "'beacon'", "'id'", "'custom'", "'text'", "'*'", "'0'", "'?'", "'1'", "'GET'", "'POST'", "'PUT'", "'DELETE'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VERSION", "RULE_ID_VERSION", "RULE_STRING", "RULE_CONSTANT", "RULE_DOWNLOAD_TEMPLATE", "RULE_FQN", "RULE_INT", "RULE_DOUBLE", "SUPER_INT", "SUPER_ID", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'project'", "'version'", "'='", "'{'", "'uiApp'", "'backgroundApp'", "'}'", "'application'", "'server'", "'url'", "'extends'", "'autorizations'", "'('", "','", "')'", "'services'", "'use template'", "'active'", "'generator'", "'extensionPoint'", "':'", "'mixin'", "'authorization'", "'serialization'", "'datatype'", "'isArray'", "'constraints'", "'isDate'", "'isTime'", "'isTimestamp'", "'isString'", "'isPrimitive'", "'isBool'", "'isNumeric'", "'isDecimal'", "'enum'", "'lit'", "'isDefault'", "'isUndefined'", "'const'", "'->'", "'+'", "'friends'", "'['", "']'", "'settings'", "'cache'", "'type'", "'strategy'", "'entity'", "'unique'", "'index'", "'dto'", "'queue'", "'rest'", "'bigData'", "'headers'", "'parameters'", "'requestDto'", "'responseDto'", "'errorDto'", "'method'", "'as'", "'param'", "'restCrud'", "'restWorkflow'", "'service'", "'var'", "'lazy'", "'transient'", "'domainKey'", "'domainDescription'", "'format'", "'refEntity'", "'cascading'", "'ref'", "'opposite'", "'embed'", "'alias'", "'..'", "'regexp'", "'min'", "'max'", "'minLength'", "'maxLength'", "'digits'", "'isNull'", "'isNotNull'", "'slot'", "'trigger app install'", "'trigger app update'", "'trigger email'", "'trigger device start'", "'trigger sms'", "'trigger push'", "'trigger geofence'", "'event'", "'module bluetooth'", "'module push'", "'module NFC'", "'toFirstLower'", "'toFirstUpper'", "'toLowerCase'", "'toUpperCase'", "'enter'", "'leave'", "'lowEnergy'", "'spp'", "'beacon'", "'id'", "'custom'", "'text'", "'*'", "'0'", "'?'", "'1'", "'GET'", "'POST'", "'PUT'", "'DELETE'"
     };
     public static final int T__50=50;
     public static final int RULE_VERSION=5;
@@ -20137,7 +20137,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaBluetoothModule"
-    // InternalMoba.g:7262:1: ruleMobaBluetoothModule returns [EObject current=null] : (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) ) ;
+    // InternalMoba.g:7262:1: ruleMobaBluetoothModule returns [EObject current=null] : (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaBluetoothModule() throws RecognitionException {
         EObject current = null;
 
@@ -20147,16 +20147,18 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Enumerator lv_type_4_0 = null;
 
+        EObject this_MobaFriendsAble_5 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalMoba.g:7268:2: ( (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) ) )
-            // InternalMoba.g:7269:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) )
+            // InternalMoba.g:7268:2: ( (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:7269:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:7269:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) )
-            // InternalMoba.g:7270:3: otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) )
+            // InternalMoba.g:7269:2: (otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:7270:3: otherlv_0= 'module bluetooth' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaBlueToothModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current]
             {
             otherlv_0=(Token)match(input,117,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20217,7 +20219,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getMobaBluetoothModuleAccess().getTypeMobaBlueToothModuleTypeEnumRuleCall_4_0());
               				
             }
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_25);
             lv_type_4_0=ruleMobaBlueToothModuleType();
 
             state._fsp--;
@@ -20241,6 +20243,25 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            if ( state.backtracking==0 ) {
+
+              			if (current==null) {
+              				current = createModelElement(grammarAccess.getMobaBluetoothModuleRule());
+              			}
+              			newCompositeNode(grammarAccess.getMobaBluetoothModuleAccess().getMobaFriendsAbleParserRuleCall_5());
+              		
+            }
+            pushFollow(FOLLOW_2);
+            this_MobaFriendsAble_5=ruleMobaFriendsAble(current);
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			current = this_MobaFriendsAble_5;
+              			afterParserOrEnumRuleCall();
+              		
+            }
 
             }
 
@@ -20266,7 +20287,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaPushModule"
-    // InternalMoba.g:7323:1: entryRuleMobaPushModule returns [EObject current=null] : iv_ruleMobaPushModule= ruleMobaPushModule EOF ;
+    // InternalMoba.g:7334:1: entryRuleMobaPushModule returns [EObject current=null] : iv_ruleMobaPushModule= ruleMobaPushModule EOF ;
     public final EObject entryRuleMobaPushModule() throws RecognitionException {
         EObject current = null;
 
@@ -20274,8 +20295,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7323:55: (iv_ruleMobaPushModule= ruleMobaPushModule EOF )
-            // InternalMoba.g:7324:2: iv_ruleMobaPushModule= ruleMobaPushModule EOF
+            // InternalMoba.g:7334:55: (iv_ruleMobaPushModule= ruleMobaPushModule EOF )
+            // InternalMoba.g:7335:2: iv_ruleMobaPushModule= ruleMobaPushModule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaPushModuleRule()); 
@@ -20306,22 +20327,24 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaPushModule"
-    // InternalMoba.g:7330:1: ruleMobaPushModule returns [EObject current=null] : (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalMoba.g:7341:1: ruleMobaPushModule returns [EObject current=null] : (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) this_MobaFriendsAble_2= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaPushModule() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
+        EObject this_MobaFriendsAble_2 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalMoba.g:7336:2: ( (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalMoba.g:7337:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalMoba.g:7347:2: ( (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) this_MobaFriendsAble_2= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:7348:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) this_MobaFriendsAble_2= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:7337:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalMoba.g:7338:3: otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7348:2: (otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) this_MobaFriendsAble_2= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:7349:3: otherlv_0= 'module push' ( (lv_name_1_0= RULE_ID ) ) this_MobaFriendsAble_2= ruleMobaFriendsAble[$current]
             {
             otherlv_0=(Token)match(input,118,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20329,13 +20352,13 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaPushModuleAccess().getModulePushKeyword_0());
               		
             }
-            // InternalMoba.g:7342:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7343:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7353:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7354:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7343:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7344:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7354:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7355:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_25); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getMobaPushModuleAccess().getNameIDTerminalRuleCall_1_0());
@@ -20359,6 +20382,25 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            if ( state.backtracking==0 ) {
+
+              			if (current==null) {
+              				current = createModelElement(grammarAccess.getMobaPushModuleRule());
+              			}
+              			newCompositeNode(grammarAccess.getMobaPushModuleAccess().getMobaFriendsAbleParserRuleCall_2());
+              		
+            }
+            pushFollow(FOLLOW_2);
+            this_MobaFriendsAble_2=ruleMobaFriendsAble(current);
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			current = this_MobaFriendsAble_2;
+              			afterParserOrEnumRuleCall();
+              		
+            }
 
             }
 
@@ -20384,7 +20426,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMobaNFCModule"
-    // InternalMoba.g:7364:1: entryRuleMobaNFCModule returns [EObject current=null] : iv_ruleMobaNFCModule= ruleMobaNFCModule EOF ;
+    // InternalMoba.g:7386:1: entryRuleMobaNFCModule returns [EObject current=null] : iv_ruleMobaNFCModule= ruleMobaNFCModule EOF ;
     public final EObject entryRuleMobaNFCModule() throws RecognitionException {
         EObject current = null;
 
@@ -20392,8 +20434,8 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMoba.g:7364:54: (iv_ruleMobaNFCModule= ruleMobaNFCModule EOF )
-            // InternalMoba.g:7365:2: iv_ruleMobaNFCModule= ruleMobaNFCModule EOF
+            // InternalMoba.g:7386:54: (iv_ruleMobaNFCModule= ruleMobaNFCModule EOF )
+            // InternalMoba.g:7387:2: iv_ruleMobaNFCModule= ruleMobaNFCModule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMobaNFCModuleRule()); 
@@ -20424,7 +20466,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaNFCModule"
-    // InternalMoba.g:7371:1: ruleMobaNFCModule returns [EObject current=null] : (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) ) ;
+    // InternalMoba.g:7393:1: ruleMobaNFCModule returns [EObject current=null] : (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) ;
     public final EObject ruleMobaNFCModule() throws RecognitionException {
         EObject current = null;
 
@@ -20434,16 +20476,18 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Enumerator lv_type_4_0 = null;
 
+        EObject this_MobaFriendsAble_5 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalMoba.g:7377:2: ( (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) ) )
-            // InternalMoba.g:7378:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) )
+            // InternalMoba.g:7399:2: ( (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] ) )
+            // InternalMoba.g:7400:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
             {
-            // InternalMoba.g:7378:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) )
-            // InternalMoba.g:7379:3: otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) )
+            // InternalMoba.g:7400:2: (otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current] )
+            // InternalMoba.g:7401:3: otherlv_0= 'module NFC' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'type' otherlv_3= '=' ( (lv_type_4_0= ruleMobaNFCModuleType ) ) this_MobaFriendsAble_5= ruleMobaFriendsAble[$current]
             {
             otherlv_0=(Token)match(input,119,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20451,11 +20495,11 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getMobaNFCModuleAccess().getModuleNFCKeyword_0());
               		
             }
-            // InternalMoba.g:7383:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalMoba.g:7384:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7405:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalMoba.g:7406:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalMoba.g:7384:4: (lv_name_1_0= RULE_ID )
-            // InternalMoba.g:7385:5: lv_name_1_0= RULE_ID
+            // InternalMoba.g:7406:4: (lv_name_1_0= RULE_ID )
+            // InternalMoba.g:7407:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_83); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20493,18 +20537,18 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getMobaNFCModuleAccess().getEqualsSignKeyword_3());
               		
             }
-            // InternalMoba.g:7409:3: ( (lv_type_4_0= ruleMobaNFCModuleType ) )
-            // InternalMoba.g:7410:4: (lv_type_4_0= ruleMobaNFCModuleType )
+            // InternalMoba.g:7431:3: ( (lv_type_4_0= ruleMobaNFCModuleType ) )
+            // InternalMoba.g:7432:4: (lv_type_4_0= ruleMobaNFCModuleType )
             {
-            // InternalMoba.g:7410:4: (lv_type_4_0= ruleMobaNFCModuleType )
-            // InternalMoba.g:7411:5: lv_type_4_0= ruleMobaNFCModuleType
+            // InternalMoba.g:7432:4: (lv_type_4_0= ruleMobaNFCModuleType )
+            // InternalMoba.g:7433:5: lv_type_4_0= ruleMobaNFCModuleType
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getMobaNFCModuleAccess().getTypeMobaNFCModuleTypeEnumRuleCall_4_0());
               				
             }
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_25);
             lv_type_4_0=ruleMobaNFCModuleType();
 
             state._fsp--;
@@ -20528,6 +20572,25 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             }
 
+            if ( state.backtracking==0 ) {
+
+              			if (current==null) {
+              				current = createModelElement(grammarAccess.getMobaNFCModuleRule());
+              			}
+              			newCompositeNode(grammarAccess.getMobaNFCModuleAccess().getMobaFriendsAbleParserRuleCall_5());
+              		
+            }
+            pushFollow(FOLLOW_2);
+            this_MobaFriendsAble_5=ruleMobaFriendsAble(current);
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			current = this_MobaFriendsAble_5;
+              			afterParserOrEnumRuleCall();
+              		
+            }
 
             }
 
@@ -20553,7 +20616,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaConstantValueFunction"
-    // InternalMoba.g:7432:1: ruleMobaConstantValueFunction returns [Enumerator current=null] : ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) ;
+    // InternalMoba.g:7465:1: ruleMobaConstantValueFunction returns [Enumerator current=null] : ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) ;
     public final Enumerator ruleMobaConstantValueFunction() throws RecognitionException {
         Enumerator current = null;
 
@@ -20566,10 +20629,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7438:2: ( ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) )
-            // InternalMoba.g:7439:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
+            // InternalMoba.g:7471:2: ( ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) ) )
+            // InternalMoba.g:7472:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
             {
-            // InternalMoba.g:7439:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
+            // InternalMoba.g:7472:2: ( (enumLiteral_0= 'toFirstLower' ) | (enumLiteral_1= 'toFirstUpper' ) | (enumLiteral_2= 'toLowerCase' ) | (enumLiteral_3= 'toUpperCase' ) )
             int alt108=4;
             switch ( input.LA(1) ) {
             case 120:
@@ -20602,10 +20665,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             switch (alt108) {
                 case 1 :
-                    // InternalMoba.g:7440:3: (enumLiteral_0= 'toFirstLower' )
+                    // InternalMoba.g:7473:3: (enumLiteral_0= 'toFirstLower' )
                     {
-                    // InternalMoba.g:7440:3: (enumLiteral_0= 'toFirstLower' )
-                    // InternalMoba.g:7441:4: enumLiteral_0= 'toFirstLower'
+                    // InternalMoba.g:7473:3: (enumLiteral_0= 'toFirstLower' )
+                    // InternalMoba.g:7474:4: enumLiteral_0= 'toFirstLower'
                     {
                     enumLiteral_0=(Token)match(input,120,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20621,10 +20684,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7448:3: (enumLiteral_1= 'toFirstUpper' )
+                    // InternalMoba.g:7481:3: (enumLiteral_1= 'toFirstUpper' )
                     {
-                    // InternalMoba.g:7448:3: (enumLiteral_1= 'toFirstUpper' )
-                    // InternalMoba.g:7449:4: enumLiteral_1= 'toFirstUpper'
+                    // InternalMoba.g:7481:3: (enumLiteral_1= 'toFirstUpper' )
+                    // InternalMoba.g:7482:4: enumLiteral_1= 'toFirstUpper'
                     {
                     enumLiteral_1=(Token)match(input,121,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20640,10 +20703,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7456:3: (enumLiteral_2= 'toLowerCase' )
+                    // InternalMoba.g:7489:3: (enumLiteral_2= 'toLowerCase' )
                     {
-                    // InternalMoba.g:7456:3: (enumLiteral_2= 'toLowerCase' )
-                    // InternalMoba.g:7457:4: enumLiteral_2= 'toLowerCase'
+                    // InternalMoba.g:7489:3: (enumLiteral_2= 'toLowerCase' )
+                    // InternalMoba.g:7490:4: enumLiteral_2= 'toLowerCase'
                     {
                     enumLiteral_2=(Token)match(input,122,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20659,10 +20722,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:7464:3: (enumLiteral_3= 'toUpperCase' )
+                    // InternalMoba.g:7497:3: (enumLiteral_3= 'toUpperCase' )
                     {
-                    // InternalMoba.g:7464:3: (enumLiteral_3= 'toUpperCase' )
-                    // InternalMoba.g:7465:4: enumLiteral_3= 'toUpperCase'
+                    // InternalMoba.g:7497:3: (enumLiteral_3= 'toUpperCase' )
+                    // InternalMoba.g:7498:4: enumLiteral_3= 'toUpperCase'
                     {
                     enumLiteral_3=(Token)match(input,123,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20702,7 +20765,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaGeofenceEvent"
-    // InternalMoba.g:7475:1: ruleMobaGeofenceEvent returns [Enumerator current=null] : ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) ;
+    // InternalMoba.g:7508:1: ruleMobaGeofenceEvent returns [Enumerator current=null] : ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) ;
     public final Enumerator ruleMobaGeofenceEvent() throws RecognitionException {
         Enumerator current = null;
 
@@ -20713,10 +20776,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7481:2: ( ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) )
-            // InternalMoba.g:7482:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
+            // InternalMoba.g:7514:2: ( ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) ) )
+            // InternalMoba.g:7515:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
             {
-            // InternalMoba.g:7482:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
+            // InternalMoba.g:7515:2: ( (enumLiteral_0= 'enter' ) | (enumLiteral_1= 'leave' ) )
             int alt109=2;
             int LA109_0 = input.LA(1);
 
@@ -20735,10 +20798,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             }
             switch (alt109) {
                 case 1 :
-                    // InternalMoba.g:7483:3: (enumLiteral_0= 'enter' )
+                    // InternalMoba.g:7516:3: (enumLiteral_0= 'enter' )
                     {
-                    // InternalMoba.g:7483:3: (enumLiteral_0= 'enter' )
-                    // InternalMoba.g:7484:4: enumLiteral_0= 'enter'
+                    // InternalMoba.g:7516:3: (enumLiteral_0= 'enter' )
+                    // InternalMoba.g:7517:4: enumLiteral_0= 'enter'
                     {
                     enumLiteral_0=(Token)match(input,124,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20754,10 +20817,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7491:3: (enumLiteral_1= 'leave' )
+                    // InternalMoba.g:7524:3: (enumLiteral_1= 'leave' )
                     {
-                    // InternalMoba.g:7491:3: (enumLiteral_1= 'leave' )
-                    // InternalMoba.g:7492:4: enumLiteral_1= 'leave'
+                    // InternalMoba.g:7524:3: (enumLiteral_1= 'leave' )
+                    // InternalMoba.g:7525:4: enumLiteral_1= 'leave'
                     {
                     enumLiteral_1=(Token)match(input,125,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20797,7 +20860,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaBlueToothModuleType"
-    // InternalMoba.g:7502:1: ruleMobaBlueToothModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) ;
+    // InternalMoba.g:7535:1: ruleMobaBlueToothModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'lowEnergy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) ;
     public final Enumerator ruleMobaBlueToothModuleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -20809,10 +20872,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7508:2: ( ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) )
-            // InternalMoba.g:7509:2: ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
+            // InternalMoba.g:7541:2: ( ( (enumLiteral_0= 'lowEnergy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) ) )
+            // InternalMoba.g:7542:2: ( (enumLiteral_0= 'lowEnergy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
             {
-            // InternalMoba.g:7509:2: ( (enumLiteral_0= 'low energy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
+            // InternalMoba.g:7542:2: ( (enumLiteral_0= 'lowEnergy' ) | (enumLiteral_1= 'spp' ) | (enumLiteral_2= 'beacon' ) )
             int alt110=3;
             switch ( input.LA(1) ) {
             case 126:
@@ -20840,10 +20903,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             switch (alt110) {
                 case 1 :
-                    // InternalMoba.g:7510:3: (enumLiteral_0= 'low energy' )
+                    // InternalMoba.g:7543:3: (enumLiteral_0= 'lowEnergy' )
                     {
-                    // InternalMoba.g:7510:3: (enumLiteral_0= 'low energy' )
-                    // InternalMoba.g:7511:4: enumLiteral_0= 'low energy'
+                    // InternalMoba.g:7543:3: (enumLiteral_0= 'lowEnergy' )
+                    // InternalMoba.g:7544:4: enumLiteral_0= 'lowEnergy'
                     {
                     enumLiteral_0=(Token)match(input,126,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20859,10 +20922,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7518:3: (enumLiteral_1= 'spp' )
+                    // InternalMoba.g:7551:3: (enumLiteral_1= 'spp' )
                     {
-                    // InternalMoba.g:7518:3: (enumLiteral_1= 'spp' )
-                    // InternalMoba.g:7519:4: enumLiteral_1= 'spp'
+                    // InternalMoba.g:7551:3: (enumLiteral_1= 'spp' )
+                    // InternalMoba.g:7552:4: enumLiteral_1= 'spp'
                     {
                     enumLiteral_1=(Token)match(input,127,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20878,10 +20941,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7526:3: (enumLiteral_2= 'beacon' )
+                    // InternalMoba.g:7559:3: (enumLiteral_2= 'beacon' )
                     {
-                    // InternalMoba.g:7526:3: (enumLiteral_2= 'beacon' )
-                    // InternalMoba.g:7527:4: enumLiteral_2= 'beacon'
+                    // InternalMoba.g:7559:3: (enumLiteral_2= 'beacon' )
+                    // InternalMoba.g:7560:4: enumLiteral_2= 'beacon'
                     {
                     enumLiteral_2=(Token)match(input,128,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20921,7 +20984,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaNFCModuleType"
-    // InternalMoba.g:7537:1: ruleMobaNFCModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) ;
+    // InternalMoba.g:7570:1: ruleMobaNFCModuleType returns [Enumerator current=null] : ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) ;
     public final Enumerator ruleMobaNFCModuleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -20933,10 +20996,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7543:2: ( ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) )
-            // InternalMoba.g:7544:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
+            // InternalMoba.g:7576:2: ( ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) ) )
+            // InternalMoba.g:7577:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
             {
-            // InternalMoba.g:7544:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
+            // InternalMoba.g:7577:2: ( (enumLiteral_0= 'id' ) | (enumLiteral_1= 'custom' ) | (enumLiteral_2= 'text' ) )
             int alt111=3;
             switch ( input.LA(1) ) {
             case 129:
@@ -20964,10 +21027,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             switch (alt111) {
                 case 1 :
-                    // InternalMoba.g:7545:3: (enumLiteral_0= 'id' )
+                    // InternalMoba.g:7578:3: (enumLiteral_0= 'id' )
                     {
-                    // InternalMoba.g:7545:3: (enumLiteral_0= 'id' )
-                    // InternalMoba.g:7546:4: enumLiteral_0= 'id'
+                    // InternalMoba.g:7578:3: (enumLiteral_0= 'id' )
+                    // InternalMoba.g:7579:4: enumLiteral_0= 'id'
                     {
                     enumLiteral_0=(Token)match(input,129,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20983,10 +21046,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7553:3: (enumLiteral_1= 'custom' )
+                    // InternalMoba.g:7586:3: (enumLiteral_1= 'custom' )
                     {
-                    // InternalMoba.g:7553:3: (enumLiteral_1= 'custom' )
-                    // InternalMoba.g:7554:4: enumLiteral_1= 'custom'
+                    // InternalMoba.g:7586:3: (enumLiteral_1= 'custom' )
+                    // InternalMoba.g:7587:4: enumLiteral_1= 'custom'
                     {
                     enumLiteral_1=(Token)match(input,130,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21002,10 +21065,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7561:3: (enumLiteral_2= 'text' )
+                    // InternalMoba.g:7594:3: (enumLiteral_2= 'text' )
                     {
-                    // InternalMoba.g:7561:3: (enumLiteral_2= 'text' )
-                    // InternalMoba.g:7562:4: enumLiteral_2= 'text'
+                    // InternalMoba.g:7594:3: (enumLiteral_2= 'text' )
+                    // InternalMoba.g:7595:4: enumLiteral_2= 'text'
                     {
                     enumLiteral_2=(Token)match(input,131,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21045,7 +21108,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaLowerBound"
-    // InternalMoba.g:7572:1: ruleMobaLowerBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) ;
+    // InternalMoba.g:7605:1: ruleMobaLowerBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) ;
     public final Enumerator ruleMobaLowerBound() throws RecognitionException {
         Enumerator current = null;
 
@@ -21059,10 +21122,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7578:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) )
-            // InternalMoba.g:7579:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
+            // InternalMoba.g:7611:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) ) )
+            // InternalMoba.g:7612:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
             {
-            // InternalMoba.g:7579:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
+            // InternalMoba.g:7612:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '0' ) | (enumLiteral_2= '?' ) | (enumLiteral_3= '+' ) | (enumLiteral_4= '1' ) )
             int alt112=5;
             switch ( input.LA(1) ) {
             case 132:
@@ -21100,10 +21163,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             switch (alt112) {
                 case 1 :
-                    // InternalMoba.g:7580:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7613:3: (enumLiteral_0= '*' )
                     {
-                    // InternalMoba.g:7580:3: (enumLiteral_0= '*' )
-                    // InternalMoba.g:7581:4: enumLiteral_0= '*'
+                    // InternalMoba.g:7613:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7614:4: enumLiteral_0= '*'
                     {
                     enumLiteral_0=(Token)match(input,132,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21119,10 +21182,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7588:3: (enumLiteral_1= '0' )
+                    // InternalMoba.g:7621:3: (enumLiteral_1= '0' )
                     {
-                    // InternalMoba.g:7588:3: (enumLiteral_1= '0' )
-                    // InternalMoba.g:7589:4: enumLiteral_1= '0'
+                    // InternalMoba.g:7621:3: (enumLiteral_1= '0' )
+                    // InternalMoba.g:7622:4: enumLiteral_1= '0'
                     {
                     enumLiteral_1=(Token)match(input,133,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21138,10 +21201,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7596:3: (enumLiteral_2= '?' )
+                    // InternalMoba.g:7629:3: (enumLiteral_2= '?' )
                     {
-                    // InternalMoba.g:7596:3: (enumLiteral_2= '?' )
-                    // InternalMoba.g:7597:4: enumLiteral_2= '?'
+                    // InternalMoba.g:7629:3: (enumLiteral_2= '?' )
+                    // InternalMoba.g:7630:4: enumLiteral_2= '?'
                     {
                     enumLiteral_2=(Token)match(input,134,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21157,10 +21220,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:7604:3: (enumLiteral_3= '+' )
+                    // InternalMoba.g:7637:3: (enumLiteral_3= '+' )
                     {
-                    // InternalMoba.g:7604:3: (enumLiteral_3= '+' )
-                    // InternalMoba.g:7605:4: enumLiteral_3= '+'
+                    // InternalMoba.g:7637:3: (enumLiteral_3= '+' )
+                    // InternalMoba.g:7638:4: enumLiteral_3= '+'
                     {
                     enumLiteral_3=(Token)match(input,61,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21176,10 +21239,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMoba.g:7612:3: (enumLiteral_4= '1' )
+                    // InternalMoba.g:7645:3: (enumLiteral_4= '1' )
                     {
-                    // InternalMoba.g:7612:3: (enumLiteral_4= '1' )
-                    // InternalMoba.g:7613:4: enumLiteral_4= '1'
+                    // InternalMoba.g:7645:3: (enumLiteral_4= '1' )
+                    // InternalMoba.g:7646:4: enumLiteral_4= '1'
                     {
                     enumLiteral_4=(Token)match(input,135,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21219,7 +21282,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaUpperBound"
-    // InternalMoba.g:7623:1: ruleMobaUpperBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) ;
+    // InternalMoba.g:7656:1: ruleMobaUpperBound returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) ;
     public final Enumerator ruleMobaUpperBound() throws RecognitionException {
         Enumerator current = null;
 
@@ -21230,10 +21293,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7629:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) )
-            // InternalMoba.g:7630:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
+            // InternalMoba.g:7662:2: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) ) )
+            // InternalMoba.g:7663:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
             {
-            // InternalMoba.g:7630:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
+            // InternalMoba.g:7663:2: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '1' ) )
             int alt113=2;
             int LA113_0 = input.LA(1);
 
@@ -21252,10 +21315,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
             }
             switch (alt113) {
                 case 1 :
-                    // InternalMoba.g:7631:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7664:3: (enumLiteral_0= '*' )
                     {
-                    // InternalMoba.g:7631:3: (enumLiteral_0= '*' )
-                    // InternalMoba.g:7632:4: enumLiteral_0= '*'
+                    // InternalMoba.g:7664:3: (enumLiteral_0= '*' )
+                    // InternalMoba.g:7665:4: enumLiteral_0= '*'
                     {
                     enumLiteral_0=(Token)match(input,132,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21271,10 +21334,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7639:3: (enumLiteral_1= '1' )
+                    // InternalMoba.g:7672:3: (enumLiteral_1= '1' )
                     {
-                    // InternalMoba.g:7639:3: (enumLiteral_1= '1' )
-                    // InternalMoba.g:7640:4: enumLiteral_1= '1'
+                    // InternalMoba.g:7672:3: (enumLiteral_1= '1' )
+                    // InternalMoba.g:7673:4: enumLiteral_1= '1'
                     {
                     enumLiteral_1=(Token)match(input,135,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21314,7 +21377,7 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMobaRESTMethods"
-    // InternalMoba.g:7650:1: ruleMobaRESTMethods returns [Enumerator current=null] : ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) ;
+    // InternalMoba.g:7683:1: ruleMobaRESTMethods returns [Enumerator current=null] : ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) ;
     public final Enumerator ruleMobaRESTMethods() throws RecognitionException {
         Enumerator current = null;
 
@@ -21327,10 +21390,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalMoba.g:7656:2: ( ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) )
-            // InternalMoba.g:7657:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
+            // InternalMoba.g:7689:2: ( ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) ) )
+            // InternalMoba.g:7690:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
             {
-            // InternalMoba.g:7657:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
+            // InternalMoba.g:7690:2: ( (enumLiteral_0= 'GET' ) | (enumLiteral_1= 'POST' ) | (enumLiteral_2= 'PUT' ) | (enumLiteral_3= 'DELETE' ) )
             int alt114=4;
             switch ( input.LA(1) ) {
             case 136:
@@ -21363,10 +21426,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
 
             switch (alt114) {
                 case 1 :
-                    // InternalMoba.g:7658:3: (enumLiteral_0= 'GET' )
+                    // InternalMoba.g:7691:3: (enumLiteral_0= 'GET' )
                     {
-                    // InternalMoba.g:7658:3: (enumLiteral_0= 'GET' )
-                    // InternalMoba.g:7659:4: enumLiteral_0= 'GET'
+                    // InternalMoba.g:7691:3: (enumLiteral_0= 'GET' )
+                    // InternalMoba.g:7692:4: enumLiteral_0= 'GET'
                     {
                     enumLiteral_0=(Token)match(input,136,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21382,10 +21445,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMoba.g:7666:3: (enumLiteral_1= 'POST' )
+                    // InternalMoba.g:7699:3: (enumLiteral_1= 'POST' )
                     {
-                    // InternalMoba.g:7666:3: (enumLiteral_1= 'POST' )
-                    // InternalMoba.g:7667:4: enumLiteral_1= 'POST'
+                    // InternalMoba.g:7699:3: (enumLiteral_1= 'POST' )
+                    // InternalMoba.g:7700:4: enumLiteral_1= 'POST'
                     {
                     enumLiteral_1=(Token)match(input,137,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21401,10 +21464,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMoba.g:7674:3: (enumLiteral_2= 'PUT' )
+                    // InternalMoba.g:7707:3: (enumLiteral_2= 'PUT' )
                     {
-                    // InternalMoba.g:7674:3: (enumLiteral_2= 'PUT' )
-                    // InternalMoba.g:7675:4: enumLiteral_2= 'PUT'
+                    // InternalMoba.g:7707:3: (enumLiteral_2= 'PUT' )
+                    // InternalMoba.g:7708:4: enumLiteral_2= 'PUT'
                     {
                     enumLiteral_2=(Token)match(input,138,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21420,10 +21483,10 @@ public class InternalMobaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMoba.g:7682:3: (enumLiteral_3= 'DELETE' )
+                    // InternalMoba.g:7715:3: (enumLiteral_3= 'DELETE' )
                     {
-                    // InternalMoba.g:7682:3: (enumLiteral_3= 'DELETE' )
-                    // InternalMoba.g:7683:4: enumLiteral_3= 'DELETE'
+                    // InternalMoba.g:7715:3: (enumLiteral_3= 'DELETE' )
+                    // InternalMoba.g:7716:4: enumLiteral_3= 'DELETE'
                     {
                     enumLiteral_3=(Token)match(input,139,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {

@@ -101,7 +101,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaAuthorization_MobaFriendsAble(context, (MobaAuthorization) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_BLUETOOTH_MODULE:
-				sequence_MobaBluetoothModule(context, (MobaBluetoothModule) semanticObject); 
+				sequence_MobaBluetoothModule_MobaFriendsAble(context, (MobaBluetoothModule) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_CACHE:
 				sequence_MobaCache(context, (MobaCache) semanticObject); 
@@ -194,7 +194,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaMuliplicity(context, (MobaMuliplicity) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_NFC_MODULE:
-				sequence_MobaNFCModule(context, (MobaNFCModule) semanticObject); 
+				sequence_MobaFriendsAble_MobaNFCModule(context, (MobaNFCModule) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_NOT_NULL_CONSTRAINT:
 				sequence_MobaNotNullConstraint(context, (MobaNotNullConstraint) semanticObject); 
@@ -209,7 +209,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaProperty(context, (MobaProperty) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_PUSH_MODULE:
-				sequence_MobaPushModule(context, (MobaPushModule) semanticObject); 
+				sequence_MobaFriendsAble_MobaPushModule(context, (MobaPushModule) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_PUSH_TRIGGER:
 				sequence_MobaPushTrigger(context, (MobaPushTrigger) semanticObject); 
@@ -349,19 +349,10 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaBluetoothModule returns MobaBluetoothModule
 	 *
 	 * Constraint:
-	 *     (name=ID type=MobaBlueToothModuleType)
+	 *     (name=ID type=MobaBlueToothModuleType ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
 	 */
-	protected void sequence_MobaBluetoothModule(ISerializationContext context, MobaBluetoothModule semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME));
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_BLUETOOTH_MODULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_BLUETOOTH_MODULE__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaBluetoothModuleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMobaBluetoothModuleAccess().getTypeMobaBlueToothModuleTypeEnumRuleCall_4_0(), semanticObject.getType());
-		feeder.finish();
+	protected void sequence_MobaBluetoothModule_MobaFriendsAble(ISerializationContext context, MobaBluetoothModule semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -760,6 +751,20 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     MobaApplicationFeature returns MobaNFCModule
+	 *     MobaExternalModule returns MobaNFCModule
+	 *     MobaNFCModule returns MobaNFCModule
+	 *
+	 * Constraint:
+	 *     (name=ID type=MobaNFCModuleType ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
+	 */
+	protected void sequence_MobaFriendsAble_MobaNFCModule(ISerializationContext context, MobaNFCModule semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MobaModelFeature returns MobaProject
 	 *     MobaProject returns MobaProject
 	 *
@@ -772,6 +777,20 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 */
 	protected void sequence_MobaFriendsAble_MobaProject(ISerializationContext context, MobaProject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MobaApplicationFeature returns MobaPushModule
+	 *     MobaExternalModule returns MobaPushModule
+	 *     MobaPushModule returns MobaPushModule
+	 *
+	 * Constraint:
+	 *     (name=ID ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
+	 */
+	protected void sequence_MobaFriendsAble_MobaPushModule(ISerializationContext context, MobaPushModule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1075,29 +1094,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     MobaApplicationFeature returns MobaNFCModule
-	 *     MobaExternalModule returns MobaNFCModule
-	 *     MobaNFCModule returns MobaNFCModule
-	 *
-	 * Constraint:
-	 *     (name=ID type=MobaNFCModuleType)
-	 */
-	protected void sequence_MobaNFCModule(ISerializationContext context, MobaNFCModule semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME));
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_NFC_MODULE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_NFC_MODULE__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaNFCModuleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMobaNFCModuleAccess().getTypeMobaNFCModuleTypeEnumRuleCall_4_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     MobaConstraint returns MobaNotNullConstraint
 	 *     MobaNotNullConstraint returns MobaNotNullConstraint
 	 *
@@ -1131,26 +1127,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_MobaProperty(ISerializationContext context, MobaProperty semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MobaApplicationFeature returns MobaPushModule
-	 *     MobaExternalModule returns MobaPushModule
-	 *     MobaPushModule returns MobaPushModule
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_MobaPushModule(ISerializationContext context, MobaPushModule semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_EXTERNAL_MODULE__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaPushModuleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
 	}
 	
 	

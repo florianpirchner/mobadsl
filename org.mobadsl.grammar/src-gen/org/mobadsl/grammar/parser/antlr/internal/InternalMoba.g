@@ -7316,6 +7316,17 @@ ruleMobaBluetoothModule returns [EObject current=null]
 				}
 			)
 		)
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getMobaBluetoothModuleRule());
+			}
+			newCompositeNode(grammarAccess.getMobaBluetoothModuleAccess().getMobaFriendsAbleParserRuleCall_5());
+		}
+		this_MobaFriendsAble_5=ruleMobaFriendsAble[$current]
+		{
+			$current = $this_MobaFriendsAble_5.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -7357,6 +7368,17 @@ ruleMobaPushModule returns [EObject current=null]
 				}
 			)
 		)
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getMobaPushModuleRule());
+			}
+			newCompositeNode(grammarAccess.getMobaPushModuleAccess().getMobaFriendsAbleParserRuleCall_2());
+		}
+		this_MobaFriendsAble_2=ruleMobaFriendsAble[$current]
+		{
+			$current = $this_MobaFriendsAble_2.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -7425,6 +7447,17 @@ ruleMobaNFCModule returns [EObject current=null]
 				}
 			)
 		)
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getMobaNFCModuleRule());
+			}
+			newCompositeNode(grammarAccess.getMobaNFCModuleAccess().getMobaFriendsAbleParserRuleCall_5());
+		}
+		this_MobaFriendsAble_5=ruleMobaFriendsAble[$current]
+		{
+			$current = $this_MobaFriendsAble_5.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -7508,7 +7541,7 @@ ruleMobaBlueToothModuleType returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='low energy'
+			enumLiteral_0='lowEnergy'
 			{
 				$current = grammarAccess.getMobaBlueToothModuleTypeAccess().getLEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_0, grammarAccess.getMobaBlueToothModuleTypeAccess().getLEEnumLiteralDeclaration_0());

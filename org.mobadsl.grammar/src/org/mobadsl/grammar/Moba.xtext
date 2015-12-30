@@ -321,16 +321,16 @@ MobaExternalModule:
 	MobaBluetoothModule | MobaPushModule | MobaNFCModule;
 
 MobaBluetoothModule:
-	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType;
+	'module bluetooth' name=ID 'type' '=' type=MobaBlueToothModuleType MobaFriendsAble;
 
 enum MobaBlueToothModuleType:
-	LE="low energy" | SPP="spp" | BEACON="beacon";
+	LE="lowEnergy" | SPP="spp" | BEACON="beacon";
 
 MobaPushModule:
-	'module push' name=ID;
+	'module push' name=ID MobaFriendsAble;
 
 MobaNFCModule:
-	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType;
+	'module NFC' name=ID 'type' '=' type=MobaNFCModuleType MobaFriendsAble;
 
 enum MobaNFCModuleType:
 	ID="id" | CUSTOM="custom" | TEXT='text';
