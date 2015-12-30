@@ -621,7 +621,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaEntityIndex returns MobaEntityIndex
 	 *
 	 * Constraint:
-	 *     (attributes+=[MobaEntityAttribute|ID] attributes+=[MobaEntityAttribute|ID]*)
+	 *     (unique?='unique'? name=ID attributes+=[MobaEntityAttribute|ID] attributes+=[MobaEntityAttribute|ID]*)
 	 */
 	protected void sequence_MobaEntityIndex(ISerializationContext context, MobaEntityIndex semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -660,7 +660,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (superType=[MobaEntity|ID] | cache=MobaCache)* 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaEntityFeature* 
-	 *         index=MobaEntityIndex?
+	 *         indizes+=MobaEntityIndex*
 	 *     )
 	 */
 	protected void sequence_MobaEntity_MobaFriendsAble(ISerializationContext context, MobaEntity semanticObject) {

@@ -2797,22 +2797,22 @@ ruleMobaEntity returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobaEntityAccess().getIndexMobaEntityIndexParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getMobaEntityAccess().getIndizesMobaEntityIndexParserRuleCall_6_0());
 				}
-				lv_index_9_0=ruleMobaEntityIndex
+				lv_indizes_9_0=ruleMobaEntityIndex
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMobaEntityRule());
 					}
-					set(
+					add(
 						$current,
-						"index",
-						lv_index_9_0,
+						"indizes",
+						lv_indizes_9_0,
 						"org.mobadsl.grammar.Moba.MobaEntityIndex");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
+		)*
 		otherlv_10='}'
 		{
 			newLeafNode(otherlv_10, grammarAccess.getMobaEntityAccess().getRightCurlyBracketKeyword_7());
@@ -2836,9 +2836,45 @@ ruleMobaEntityIndex returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='index'
+		(
+			(
+				lv_unique_0_0='unique'
+				{
+					newLeafNode(lv_unique_0_0, grammarAccess.getMobaEntityIndexAccess().getUniqueUniqueKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaEntityIndexRule());
+					}
+					setWithLastConsumed($current, "unique", true, "unique");
+				}
+			)
+		)?
+		otherlv_1='index'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getMobaEntityIndexAccess().getIndexKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getMobaEntityIndexAccess().getIndexKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_ID
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getMobaEntityIndexAccess().getNameIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMobaEntityIndexRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.mobadsl.grammar.Moba.ID");
+				}
+			)
+		)
+		otherlv_3='('
+		{
+			newLeafNode(otherlv_3, grammarAccess.getMobaEntityIndexAccess().getLeftParenthesisKeyword_3());
 		}
 		(
 			(
@@ -2847,16 +2883,16 @@ ruleMobaEntityIndex returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getMobaEntityIndexRule());
 					}
 				}
-				otherlv_1=RULE_ID
+				otherlv_4=RULE_ID
 				{
-					newLeafNode(otherlv_1, grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_1_0());
+					newLeafNode(otherlv_4, grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_4_0());
 				}
 			)
 		)
 		(
-			otherlv_2=','
+			otherlv_5=','
 			{
-				newLeafNode(otherlv_2, grammarAccess.getMobaEntityIndexAccess().getCommaKeyword_2_0());
+				newLeafNode(otherlv_5, grammarAccess.getMobaEntityIndexAccess().getCommaKeyword_5_0());
 			}
 			(
 				(
@@ -2865,13 +2901,17 @@ ruleMobaEntityIndex returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getMobaEntityIndexRule());
 						}
 					}
-					otherlv_3=RULE_ID
+					otherlv_6=RULE_ID
 					{
-						newLeafNode(otherlv_3, grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_2_1_0());
+						newLeafNode(otherlv_6, grammarAccess.getMobaEntityIndexAccess().getAttributesMobaEntityAttributeCrossReference_5_1_0());
 					}
 				)
-			)*
-		)
+			)
+		)*
+		otherlv_7=')'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getMobaEntityIndexAccess().getRightParenthesisKeyword_6());
+		}
 	)
 ;
 

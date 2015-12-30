@@ -40,7 +40,7 @@ class MobaFormatter extends AbstractFormatter2 {
 		for (MobaEntityFeature features : mobaDto.getFeatures()) {
 			format(features, document);
 		}
-		format(mobaDto.getIndex(), document);
+		format(mobaDto.indizes, document);
 	}
 
 	def dispatch void format(MobaDto mobaPayload, extension IFormattableDocument document) {

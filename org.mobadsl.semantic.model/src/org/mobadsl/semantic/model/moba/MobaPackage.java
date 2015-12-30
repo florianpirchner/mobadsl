@@ -1945,13 +1945,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY__FEATURES = MOBA_DATA_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Index</b></em>' containment reference.
+	 * The feature id for the '<em><b>Indizes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY__INDEX = MOBA_DATA_FEATURE_COUNT + 4;
+	int MOBA_ENTITY__INDIZES = MOBA_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -1963,13 +1963,31 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY_FEATURE_COUNT = MOBA_DATA_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENTITY_INDEX__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Unique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENTITY_INDEX__UNIQUE = 1;
+
+	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_INDEX__ATTRIBUTES = 0;
+	int MOBA_ENTITY_INDEX__ATTRIBUTES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Entity Index</em>' class.
@@ -1978,7 +1996,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENTITY_INDEX_FEATURE_COUNT = 1;
+	int MOBA_ENTITY_INDEX_FEATURE_COUNT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -5685,15 +5703,15 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaEntity_Features();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaEntity#getIndex <em>Index</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaEntity#getIndizes <em>Indizes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Index</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaEntity#getIndex()
+	 * @return the meta object for the containment reference list '<em>Indizes</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaEntity#getIndizes()
 	 * @see #getMobaEntity()
 	 * @generated
 	 */
-	EReference getMobaEntity_Index();
+	EReference getMobaEntity_Indizes();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaEntityIndex <em>Entity Index</em>}'.
@@ -5704,6 +5722,28 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMobaEntityIndex();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaEntityIndex#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityIndex#getName()
+	 * @see #getMobaEntityIndex()
+	 * @generated
+	 */
+	EAttribute getMobaEntityIndex_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaEntityIndex#isUnique <em>Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unique</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaEntityIndex#isUnique()
+	 * @see #getMobaEntityIndex()
+	 * @generated
+	 */
+	EAttribute getMobaEntityIndex_Unique();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.mobadsl.semantic.model.moba.MobaEntityIndex#getAttributes <em>Attributes</em>}'.
@@ -8333,12 +8373,12 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_ENTITY__FEATURES = eINSTANCE.getMobaEntity_Features();
 
 		/**
-		 * The meta object literal for the '<em><b>Index</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Indizes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_ENTITY__INDEX = eINSTANCE.getMobaEntity_Index();
+		EReference MOBA_ENTITY__INDIZES = eINSTANCE.getMobaEntity_Indizes();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityIndexImpl <em>Entity Index</em>}' class.
@@ -8349,6 +8389,22 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MOBA_ENTITY_INDEX = eINSTANCE.getMobaEntityIndex();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_ENTITY_INDEX__NAME = eINSTANCE.getMobaEntityIndex_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Unique</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_ENTITY_INDEX__UNIQUE = eINSTANCE.getMobaEntityIndex_Unique();
 
 		/**
 		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.

@@ -127,11 +127,11 @@ MobaCache:
 MobaEntity:
 	'entity' name=ID (('extends' superType=[MobaEntity])? & (cache=MobaCache)?) MobaFriendsAble '{'
 	features+=MobaEntityFeature*
-	(index=MobaEntityIndex)?
+	(indizes+=MobaEntityIndex)*
 	'}';
 
 MobaEntityIndex:
-	'index' attributes+=[MobaEntityAttribute|ID] (',' attributes+=[MobaEntityAttribute|ID]*);
+	(unique?='unique')? 'index' name=ID '(' attributes+=[MobaEntityAttribute|ID] (',' attributes+=[MobaEntityAttribute|ID])* ')';
 
 MobaDto:
 	'dto' name=ID ('extends' superType=[MobaDto])? MobaFriendsAble '{'

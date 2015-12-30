@@ -49,6 +49,7 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			addLazyPropertyDescriptor(object);
 			addTransientPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addOppositePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -133,6 +134,28 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 				 getString("_UI_MobaDtoReference_type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_type_feature", "_UI_MobaDtoReference_type"),
 				 MobaPackage.Literals.MOBA_DTO_REFERENCE__TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Opposite feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOppositePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDtoReference_opposite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_opposite_feature", "_UI_MobaDtoReference_type"),
+				 MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE,
 				 true,
 				 false,
 				 true,

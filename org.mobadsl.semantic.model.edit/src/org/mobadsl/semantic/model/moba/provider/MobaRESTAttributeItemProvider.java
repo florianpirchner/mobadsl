@@ -66,6 +66,8 @@ public class MobaRESTAttributeItemProvider
 			addValueIntPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
+			addFormatStringPropertyDescriptor(object);
+			addFormatConstPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -269,6 +271,50 @@ public class MobaRESTAttributeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Format String feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormatStringPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaRESTAttribute_formatString_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_formatString_feature", "_UI_MobaRESTAttribute_type"),
+				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__FORMAT_STRING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Format Const feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormatConstPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaRESTAttribute_formatConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_formatConst_feature", "_UI_MobaRESTAttribute_type"),
+				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__FORMAT_CONST,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MobaRESTAttribute.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,6 +358,7 @@ public class MobaRESTAttributeItemProvider
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_INT:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE:
+			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

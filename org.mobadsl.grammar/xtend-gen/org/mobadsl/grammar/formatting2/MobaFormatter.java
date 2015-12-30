@@ -54,8 +54,8 @@ public class MobaFormatter extends AbstractFormatter2 {
     for (final MobaEntityFeature features : _features) {
       this.format(features, document);
     }
-    MobaEntityIndex _index = mobaDto.getIndex();
-    this.format(_index, document);
+    EList<MobaEntityIndex> _indizes = mobaDto.getIndizes();
+    this.format(_indizes, document);
   }
   
   protected void _format(final MobaDto mobaPayload, @Extension final IFormattableDocument document) {

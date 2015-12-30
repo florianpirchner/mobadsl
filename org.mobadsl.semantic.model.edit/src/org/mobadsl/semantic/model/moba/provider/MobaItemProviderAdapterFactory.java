@@ -714,6 +714,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaEntityEmbeddable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaEntityEmbeddableItemProvider mobaEntityEmbeddableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaEntityEmbeddable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaEntityEmbeddableAdapter() {
+		if (mobaEntityEmbeddableItemProvider == null) {
+			mobaEntityEmbeddableItemProvider = new MobaEntityEmbeddableItemProvider(this);
+		}
+
+		return mobaEntityEmbeddableItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaDtoAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,6 +780,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		}
 
 		return mobaDtoReferenceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaDtoEmbeddable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaDtoEmbeddableItemProvider mobaDtoEmbeddableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaDtoEmbeddable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaDtoEmbeddableAdapter() {
+		if (mobaDtoEmbeddableItemProvider == null) {
+			mobaDtoEmbeddableItemProvider = new MobaDtoEmbeddableItemProvider(this);
+		}
+
+		return mobaDtoEmbeddableItemProvider;
 	}
 
 	/**
@@ -1507,8 +1553,10 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaRESTCrudItemProvider != null) mobaRESTCrudItemProvider.dispose();
 		if (mobaEntityAttributeItemProvider != null) mobaEntityAttributeItemProvider.dispose();
 		if (mobaEntityReferenceItemProvider != null) mobaEntityReferenceItemProvider.dispose();
+		if (mobaEntityEmbeddableItemProvider != null) mobaEntityEmbeddableItemProvider.dispose();
 		if (mobaDtoAttributeItemProvider != null) mobaDtoAttributeItemProvider.dispose();
 		if (mobaDtoReferenceItemProvider != null) mobaDtoReferenceItemProvider.dispose();
+		if (mobaDtoEmbeddableItemProvider != null) mobaDtoEmbeddableItemProvider.dispose();
 		if (mobaQueueReferenceItemProvider != null) mobaQueueReferenceItemProvider.dispose();
 		if (mobaMuliplicityItemProvider != null) mobaMuliplicityItemProvider.dispose();
 		if (mobaSettingsAttributeItemProvider != null) mobaSettingsAttributeItemProvider.dispose();

@@ -216,6 +216,11 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_DTO__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaDtoReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_DTO__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaDtoEmbeddable()));
 	}
 
 }

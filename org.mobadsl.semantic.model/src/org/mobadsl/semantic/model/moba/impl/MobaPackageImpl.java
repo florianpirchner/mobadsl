@@ -1538,7 +1538,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaEntity_Index() {
+	public EReference getMobaEntity_Indizes() {
 		return (EReference)mobaEntityEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1556,8 +1556,26 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaEntityIndex_Name() {
+		return (EAttribute)mobaEntityIndexEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaEntityIndex_Unique() {
+		return (EAttribute)mobaEntityIndexEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMobaEntityIndex_Attributes() {
-		return (EReference)mobaEntityIndexEClass.getEStructuralFeatures().get(0);
+		return (EReference)mobaEntityIndexEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3267,9 +3285,11 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaEntityEClass, MOBA_ENTITY__SUPER_TYPE);
 		createEReference(mobaEntityEClass, MOBA_ENTITY__CACHE);
 		createEReference(mobaEntityEClass, MOBA_ENTITY__FEATURES);
-		createEReference(mobaEntityEClass, MOBA_ENTITY__INDEX);
+		createEReference(mobaEntityEClass, MOBA_ENTITY__INDIZES);
 
 		mobaEntityIndexEClass = createEClass(MOBA_ENTITY_INDEX);
+		createEAttribute(mobaEntityIndexEClass, MOBA_ENTITY_INDEX__NAME);
+		createEAttribute(mobaEntityIndexEClass, MOBA_ENTITY_INDEX__UNIQUE);
 		createEReference(mobaEntityIndexEClass, MOBA_ENTITY_INDEX__ATTRIBUTES);
 
 		mobaDtoEClass = createEClass(MOBA_DTO);
@@ -3720,9 +3740,11 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaEntity_SuperType(), this.getMobaEntity(), null, "superType", null, 0, 1, MobaEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaEntity_Cache(), this.getMobaCache(), null, "cache", null, 0, 1, MobaEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaEntity_Features(), this.getMobaEntityFeature(), null, "features", null, 0, -1, MobaEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobaEntity_Index(), this.getMobaEntityIndex(), null, "index", null, 0, 1, MobaEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaEntity_Indizes(), this.getMobaEntityIndex(), null, "indizes", null, 0, -1, MobaEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaEntityIndexEClass, MobaEntityIndex.class, "MobaEntityIndex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaEntityIndex_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaEntityIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaEntityIndex_Unique(), ecorePackage.getEBoolean(), "unique", null, 0, 1, MobaEntityIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaEntityIndex_Attributes(), this.getMobaEntityAttribute(), null, "attributes", null, 0, -1, MobaEntityIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaDtoEClass, MobaDto.class, "MobaDto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

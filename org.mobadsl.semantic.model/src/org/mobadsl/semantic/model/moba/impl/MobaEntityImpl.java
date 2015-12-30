@@ -37,7 +37,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl#getCache <em>Cache</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl#getFeatures <em>Features</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl#getIndizes <em>Indizes</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,13 +89,14 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	protected EList<MobaEntityFeature> features;
 
 	/**
-	 * The cached value of the '{@link #getIndex() <em>Index</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getIndex()
+	 * The cached value of the '{@link #getIndizes() <em>Indizes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndizes()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaEntityIndex index;
+	protected EList<MobaEntityIndex> indizes;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -220,43 +221,15 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaEntityIndex getIndex() {
-		return index;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetIndex(MobaEntityIndex newIndex, NotificationChain msgs) {
-		MobaEntityIndex oldIndex = index;
-		index = newIndex;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENTITY__INDEX, oldIndex, newIndex);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<MobaEntityIndex> getIndizes() {
+		if (indizes == null) {
+			indizes = new EObjectContainmentEList<MobaEntityIndex>(MobaEntityIndex.class, this, MobaPackage.MOBA_ENTITY__INDIZES);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIndex(MobaEntityIndex newIndex) {
-		if (newIndex != index) {
-			NotificationChain msgs = null;
-			if (index != null)
-				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_ENTITY__INDEX, null, msgs);
-			if (newIndex != null)
-				msgs = ((InternalEObject)newIndex).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_ENTITY__INDEX, null, msgs);
-			msgs = basicSetIndex(newIndex, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENTITY__INDEX, newIndex, newIndex));
+		return indizes;
 	}
 
 	/**
@@ -270,8 +243,8 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 				return basicSetCache(null, msgs);
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
-			case MobaPackage.MOBA_ENTITY__INDEX:
-				return basicSetIndex(null, msgs);
+			case MobaPackage.MOBA_ENTITY__INDIZES:
+				return ((InternalEList<?>)getIndizes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,8 +265,8 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 				return getCache();
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 				return getFeatures();
-			case MobaPackage.MOBA_ENTITY__INDEX:
-				return getIndex();
+			case MobaPackage.MOBA_ENTITY__INDIZES:
+				return getIndizes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,8 +292,9 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 				getFeatures().clear();
 				getFeatures().addAll((Collection<? extends MobaEntityFeature>)newValue);
 				return;
-			case MobaPackage.MOBA_ENTITY__INDEX:
-				setIndex((MobaEntityIndex)newValue);
+			case MobaPackage.MOBA_ENTITY__INDIZES:
+				getIndizes().clear();
+				getIndizes().addAll((Collection<? extends MobaEntityIndex>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -345,8 +319,8 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 				getFeatures().clear();
 				return;
-			case MobaPackage.MOBA_ENTITY__INDEX:
-				setIndex((MobaEntityIndex)null);
+			case MobaPackage.MOBA_ENTITY__INDIZES:
+				getIndizes().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -367,8 +341,8 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 				return cache != null;
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 				return features != null && !features.isEmpty();
-			case MobaPackage.MOBA_ENTITY__INDEX:
-				return index != null;
+			case MobaPackage.MOBA_ENTITY__INDIZES:
+				return indizes != null && !indizes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

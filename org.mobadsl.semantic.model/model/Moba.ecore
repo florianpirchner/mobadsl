@@ -137,10 +137,12 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//MobaEntityFeature" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="index" eType="#//MobaEntityIndex"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indizes" upperBound="-1"
+        eType="#//MobaEntityIndex" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaEntityIndex">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unique" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" unique="false"
         upperBound="-1" eType="#//MobaEntityAttribute"/>
   </eClassifiers>

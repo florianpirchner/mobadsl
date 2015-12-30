@@ -1677,19 +1677,19 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cFeaturesAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cFeaturesMobaEntityFeatureParserRuleCall_5_0 = (RuleCall)cFeaturesAssignment_5.eContents().get(0);
-		private final Assignment cIndexAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIndexMobaEntityIndexParserRuleCall_6_0 = (RuleCall)cIndexAssignment_6.eContents().get(0);
+		private final Assignment cIndizesAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cIndizesMobaEntityIndexParserRuleCall_6_0 = (RuleCall)cIndizesAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//MobaEntity:
 		//	'entity' name=ID (('extends' superType=[MobaEntity])? & cache=MobaCache?) MobaFriendsAble '{'
 		//	features+=MobaEntityFeature*
-		//	index=MobaEntityIndex?
+		//	indizes+=MobaEntityIndex*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'entity' name=ID (('extends' superType=[MobaEntity])? & cache=MobaCache?) MobaFriendsAble '{'
-		//features+=MobaEntityFeature* index=MobaEntityIndex? '}'
+		//features+=MobaEntityFeature* indizes+=MobaEntityIndex* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'entity'
@@ -1737,11 +1737,11 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//MobaEntityFeature
 		public RuleCall getFeaturesMobaEntityFeatureParserRuleCall_5_0() { return cFeaturesMobaEntityFeatureParserRuleCall_5_0; }
 		
-		//index=MobaEntityIndex?
-		public Assignment getIndexAssignment_6() { return cIndexAssignment_6; }
+		//indizes+=MobaEntityIndex*
+		public Assignment getIndizesAssignment_6() { return cIndizesAssignment_6; }
 		
 		//MobaEntityIndex
-		public RuleCall getIndexMobaEntityIndexParserRuleCall_6_0() { return cIndexMobaEntityIndexParserRuleCall_6_0; }
+		public RuleCall getIndizesMobaEntityIndexParserRuleCall_6_0() { return cIndizesMobaEntityIndexParserRuleCall_6_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -1749,49 +1749,73 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	public class MobaEntityIndexElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaEntityIndex");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cIndexKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cAttributesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cAttributesMobaEntityAttributeCrossReference_1_0 = (CrossReference)cAttributesAssignment_1.eContents().get(0);
-		private final RuleCall cAttributesMobaEntityAttributeIDTerminalRuleCall_1_0_1 = (RuleCall)cAttributesMobaEntityAttributeCrossReference_1_0.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cAttributesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cAttributesMobaEntityAttributeCrossReference_2_1_0 = (CrossReference)cAttributesAssignment_2_1.eContents().get(0);
-		private final RuleCall cAttributesMobaEntityAttributeIDTerminalRuleCall_2_1_0_1 = (RuleCall)cAttributesMobaEntityAttributeCrossReference_2_1_0.eContents().get(1);
+		private final Assignment cUniqueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cUniqueUniqueKeyword_0_0 = (Keyword)cUniqueAssignment_0.eContents().get(0);
+		private final Keyword cIndexKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cAttributesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cAttributesMobaEntityAttributeCrossReference_4_0 = (CrossReference)cAttributesAssignment_4.eContents().get(0);
+		private final RuleCall cAttributesMobaEntityAttributeIDTerminalRuleCall_4_0_1 = (RuleCall)cAttributesMobaEntityAttributeCrossReference_4_0.eContents().get(1);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cAttributesAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final CrossReference cAttributesMobaEntityAttributeCrossReference_5_1_0 = (CrossReference)cAttributesAssignment_5_1.eContents().get(0);
+		private final RuleCall cAttributesMobaEntityAttributeIDTerminalRuleCall_5_1_0_1 = (RuleCall)cAttributesMobaEntityAttributeCrossReference_5_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//MobaEntityIndex:
-		//	'index' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute]*);
+		//	unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute])* ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'index' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute]*)
+		//unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute])* ')'
 		public Group getGroup() { return cGroup; }
 		
+		//unique?='unique'?
+		public Assignment getUniqueAssignment_0() { return cUniqueAssignment_0; }
+		
+		//'unique'
+		public Keyword getUniqueUniqueKeyword_0_0() { return cUniqueUniqueKeyword_0_0; }
+		
 		//'index'
-		public Keyword getIndexKeyword_0() { return cIndexKeyword_0; }
+		public Keyword getIndexKeyword_1() { return cIndexKeyword_1; }
+		
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
 		
 		//attributes+=[MobaEntityAttribute]
-		public Assignment getAttributesAssignment_1() { return cAttributesAssignment_1; }
+		public Assignment getAttributesAssignment_4() { return cAttributesAssignment_4; }
 		
 		//[MobaEntityAttribute]
-		public CrossReference getAttributesMobaEntityAttributeCrossReference_1_0() { return cAttributesMobaEntityAttributeCrossReference_1_0; }
+		public CrossReference getAttributesMobaEntityAttributeCrossReference_4_0() { return cAttributesMobaEntityAttributeCrossReference_4_0; }
 		
 		//ID
-		public RuleCall getAttributesMobaEntityAttributeIDTerminalRuleCall_1_0_1() { return cAttributesMobaEntityAttributeIDTerminalRuleCall_1_0_1; }
+		public RuleCall getAttributesMobaEntityAttributeIDTerminalRuleCall_4_0_1() { return cAttributesMobaEntityAttributeIDTerminalRuleCall_4_0_1; }
 		
-		//(',' attributes+=[MobaEntityAttribute]*)
-		public Group getGroup_2() { return cGroup_2; }
+		//(',' attributes+=[MobaEntityAttribute])*
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//','
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
 		
-		//attributes+=[MobaEntityAttribute]*
-		public Assignment getAttributesAssignment_2_1() { return cAttributesAssignment_2_1; }
+		//attributes+=[MobaEntityAttribute]
+		public Assignment getAttributesAssignment_5_1() { return cAttributesAssignment_5_1; }
 		
 		//[MobaEntityAttribute]
-		public CrossReference getAttributesMobaEntityAttributeCrossReference_2_1_0() { return cAttributesMobaEntityAttributeCrossReference_2_1_0; }
+		public CrossReference getAttributesMobaEntityAttributeCrossReference_5_1_0() { return cAttributesMobaEntityAttributeCrossReference_5_1_0; }
 		
 		//ID
-		public RuleCall getAttributesMobaEntityAttributeIDTerminalRuleCall_2_1_0_1() { return cAttributesMobaEntityAttributeIDTerminalRuleCall_2_1_0_1; }
+		public RuleCall getAttributesMobaEntityAttributeIDTerminalRuleCall_5_1_0_1() { return cAttributesMobaEntityAttributeIDTerminalRuleCall_5_1_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
 	}
 	public class MobaDtoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaDto");
@@ -5075,7 +5099,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	//MobaEntity:
 	//	'entity' name=ID (('extends' superType=[MobaEntity])? & cache=MobaCache?) MobaFriendsAble '{'
 	//	features+=MobaEntityFeature*
-	//	index=MobaEntityIndex?
+	//	indizes+=MobaEntityIndex*
 	//	'}';
 	public MobaEntityElements getMobaEntityAccess() {
 		return pMobaEntity;
@@ -5086,7 +5110,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MobaEntityIndex:
-	//	'index' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute]*);
+	//	unique?='unique'? 'index' name=ID '(' attributes+=[MobaEntityAttribute] (',' attributes+=[MobaEntityAttribute])* ')';
 	public MobaEntityIndexElements getMobaEntityIndexAccess() {
 		return pMobaEntityIndex;
 	}

@@ -126,7 +126,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaEntityAccess().getGroup(), "rule__MobaEntity__Group__0");
 					put(grammarAccess.getMobaEntityAccess().getGroup_2_0(), "rule__MobaEntity__Group_2_0__0");
 					put(grammarAccess.getMobaEntityIndexAccess().getGroup(), "rule__MobaEntityIndex__Group__0");
-					put(grammarAccess.getMobaEntityIndexAccess().getGroup_2(), "rule__MobaEntityIndex__Group_2__0");
+					put(grammarAccess.getMobaEntityIndexAccess().getGroup_5(), "rule__MobaEntityIndex__Group_5__0");
 					put(grammarAccess.getMobaDtoAccess().getGroup(), "rule__MobaDto__Group__0");
 					put(grammarAccess.getMobaDtoAccess().getGroup_2(), "rule__MobaDto__Group_2__0");
 					put(grammarAccess.getMobaQueueAccess().getGroup(), "rule__MobaQueue__Group__0");
@@ -273,9 +273,11 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaEntityAccess().getSuperTypeAssignment_2_0_1(), "rule__MobaEntity__SuperTypeAssignment_2_0_1");
 					put(grammarAccess.getMobaEntityAccess().getCacheAssignment_2_1(), "rule__MobaEntity__CacheAssignment_2_1");
 					put(grammarAccess.getMobaEntityAccess().getFeaturesAssignment_5(), "rule__MobaEntity__FeaturesAssignment_5");
-					put(grammarAccess.getMobaEntityAccess().getIndexAssignment_6(), "rule__MobaEntity__IndexAssignment_6");
-					put(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_1(), "rule__MobaEntityIndex__AttributesAssignment_1");
-					put(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_2_1(), "rule__MobaEntityIndex__AttributesAssignment_2_1");
+					put(grammarAccess.getMobaEntityAccess().getIndizesAssignment_6(), "rule__MobaEntity__IndizesAssignment_6");
+					put(grammarAccess.getMobaEntityIndexAccess().getUniqueAssignment_0(), "rule__MobaEntityIndex__UniqueAssignment_0");
+					put(grammarAccess.getMobaEntityIndexAccess().getNameAssignment_2(), "rule__MobaEntityIndex__NameAssignment_2");
+					put(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_4(), "rule__MobaEntityIndex__AttributesAssignment_4");
+					put(grammarAccess.getMobaEntityIndexAccess().getAttributesAssignment_5_1(), "rule__MobaEntityIndex__AttributesAssignment_5_1");
 					put(grammarAccess.getMobaDtoAccess().getNameAssignment_1(), "rule__MobaDto__NameAssignment_1");
 					put(grammarAccess.getMobaDtoAccess().getSuperTypeAssignment_2_1(), "rule__MobaDto__SuperTypeAssignment_2_1");
 					put(grammarAccess.getMobaDtoAccess().getFeaturesAssignment_5(), "rule__MobaDto__FeaturesAssignment_5");

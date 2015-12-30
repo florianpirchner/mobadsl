@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntity#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntity#getCache <em>Cache</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntity#getFeatures <em>Features</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntity#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEntity#getIndizes <em>Indizes</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntity()
@@ -123,29 +123,20 @@ public interface MobaEntity extends MobaData {
 	EList<MobaEntityFeature> getFeatures();
 
 	/**
-	 * Returns the value of the '<em><b>Index</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Indizes</b></em>' containment reference list.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaEntityIndex}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Index</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Indizes</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Index</em>' containment reference.
-	 * @see #setIndex(MobaEntityIndex)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntity_Index()
+	 * @return the value of the '<em>Indizes</em>' containment reference list.
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntity_Indizes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	MobaEntityIndex getIndex();
-
-	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEntity#getIndex <em>Index</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' containment reference.
-	 * @see #getIndex()
-	 * @generated
-	 */
-	void setIndex(MobaEntityIndex value);
+	EList<MobaEntityIndex> getIndizes();
 
 	/**
 	 * Returns the values for the current instance. Excluding the "super types".

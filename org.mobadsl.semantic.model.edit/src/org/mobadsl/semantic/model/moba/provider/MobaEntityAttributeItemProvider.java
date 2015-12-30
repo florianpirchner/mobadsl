@@ -50,6 +50,8 @@ public class MobaEntityAttributeItemProvider extends MobaEntityFeatureItemProvid
 			addDomainKeyPropertyDescriptor(object);
 			addDomainDescriptionPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addFormatStringPropertyDescriptor(object);
+			addFormatConstPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -165,6 +167,50 @@ public class MobaEntityAttributeItemProvider extends MobaEntityFeatureItemProvid
 	}
 
 	/**
+	 * This adds a property descriptor for the Format String feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormatStringPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaEntityAttribute_formatString_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEntityAttribute_formatString_feature", "_UI_MobaEntityAttribute_type"),
+				 MobaPackage.Literals.MOBA_ENTITY_ATTRIBUTE__FORMAT_STRING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Format Const feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormatConstPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaEntityAttribute_formatConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEntityAttribute_formatConst_feature", "_UI_MobaEntityAttribute_type"),
+				 MobaPackage.Literals.MOBA_ENTITY_ATTRIBUTE__FORMAT_CONST,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -237,6 +283,7 @@ public class MobaEntityAttributeItemProvider extends MobaEntityFeatureItemProvid
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE__TRANSIENT:
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE__DOMAIN_KEY:
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE__DOMAIN_DESCRIPTION:
+			case MobaPackage.MOBA_ENTITY_ATTRIBUTE__FORMAT_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaPackage.MOBA_ENTITY_ATTRIBUTE__MULTIPLICITY:

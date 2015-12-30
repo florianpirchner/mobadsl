@@ -8,29 +8,32 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.mobadsl.semantic.model.moba.MobaEntity;
+
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 
 /**
- * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaEntity} object.
+ * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaDtoEmbeddable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobaEntityItemProvider extends MobaDataItemProvider {
+public class MobaDtoEmbeddableItemProvider extends MobaDtoFeatureItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaEntityItemProvider(AdapterFactory adapterFactory) {
+	public MobaDtoEmbeddableItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,48 +48,48 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addSuperTypePropertyDescriptor(object);
+			addTransientPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Transient feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addTransientPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaEntity_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEntity_name_feature", "_UI_MobaEntity_type"),
-				 MobaPackage.Literals.MOBA_ENTITY__NAME,
+				 getString("_UI_MobaDtoEmbeddable_transient_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoEmbeddable_transient_feature", "_UI_MobaDtoEmbeddable_type"),
+				 MobaPackage.Literals.MOBA_DTO_EMBEDDABLE__TRANSIENT,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Super Type feature.
+	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSuperTypePropertyDescriptor(Object object) {
+	protected void addTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaEntity_superType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaEntity_superType_feature", "_UI_MobaEntity_type"),
-				 MobaPackage.Literals.MOBA_ENTITY__SUPER_TYPE,
+				 getString("_UI_MobaDtoEmbeddable_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoEmbeddable_type_feature", "_UI_MobaDtoEmbeddable_type"),
+				 MobaPackage.Literals.MOBA_DTO_EMBEDDABLE__TYPE,
 				 true,
 				 false,
 				 true,
@@ -107,9 +110,7 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_ENTITY__CACHE);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_ENTITY__FEATURES);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_ENTITY__INDIZES);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY);
 		}
 		return childrenFeatures;
 	}
@@ -128,14 +129,14 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 	}
 
 	/**
-	 * This returns MobaEntity.gif.
+	 * This returns MobaDtoEmbeddable.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaEntity"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaDtoEmbeddable"));
 	}
 
 	/**
@@ -146,10 +147,10 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaEntity)object).getName();
+		String label = ((MobaDtoEmbeddable)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_MobaEntity_type") :
-			getString("_UI_MobaEntity_type") + " " + label;
+			getString("_UI_MobaDtoEmbeddable_type") :
+			getString("_UI_MobaDtoEmbeddable_type") + " " + label;
 	}
 	
 
@@ -164,13 +165,11 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(MobaEntity.class)) {
-			case MobaPackage.MOBA_ENTITY__NAME:
+		switch (notification.getFeatureID(MobaDtoEmbeddable.class)) {
+			case MobaPackage.MOBA_DTO_EMBEDDABLE__TRANSIENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_ENTITY__CACHE:
-			case MobaPackage.MOBA_ENTITY__FEATURES:
-			case MobaPackage.MOBA_ENTITY__INDIZES:
+			case MobaPackage.MOBA_DTO_EMBEDDABLE__MULTIPLICITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -190,28 +189,8 @@ public class MobaEntityItemProvider extends MobaDataItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MobaPackage.Literals.MOBA_ENTITY__CACHE,
-				 MobaFactory.eINSTANCE.createMobaCache()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_ENTITY__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaEntityAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_ENTITY__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaEntityReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_ENTITY__FEATURES,
-				 MobaFactory.eINSTANCE.createMobaEntityEmbeddable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_ENTITY__INDIZES,
-				 MobaFactory.eINSTANCE.createMobaEntityIndex()));
+				(MobaPackage.Literals.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY,
+				 MobaFactory.eINSTANCE.createMobaMuliplicity()));
 	}
 
 }
