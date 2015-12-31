@@ -11,9 +11,9 @@ MobaModelFeature:
 
 MobaProject:
 	'project' name=ID 'version' '=' version=VERSION MobaFriendsAble '{'
-	(('uiApp' '=' uiApplication=[MobaApplication|ID_VERSION])?
+	(('uiApp' '=' uiApplication=[MobaApplication|ID])?
 	&
-	('backgroundApp' '=' backgroundApplication=[MobaApplication|ID_VERSION])?)
+	('backgroundApp' '=' backgroundApplication=[MobaApplication|ID])?)
 	'}';
 
 MobaApplication:
@@ -38,7 +38,7 @@ MobaServer:
  * Will import a Moba-Application.
  */
 MobaTemplate:
-	'use template' (template=[MobaApplication|ID_VERSION] | downloadTemplate=DOWNLOAD_TEMPLATE);
+	'use template' (template=[MobaApplication|ID] | downloadTemplate=DOWNLOAD_TEMPLATE);
 
 MobaGenerator:
 	(active?='active')? 'generator' name=ID '{'
@@ -52,7 +52,7 @@ MobaGeneratorIDFeature:
 	'extensionPoint' generatorId=FQN ':' generatorVersion=VERSION;
 
 MobaGeneratorMixinFeature:
-	'mixin' generatorRef=[MobaGenerator|ID_VERSION];
+	'mixin' generatorRef=[MobaGenerator|ID];
 
 MobaAuthorization:
 	'authorization' name=CONSTANT MobaFriendsAble;

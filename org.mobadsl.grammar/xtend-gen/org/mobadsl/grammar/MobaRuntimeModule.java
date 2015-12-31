@@ -6,10 +6,12 @@ package org.mobadsl.grammar;
 import org.eclipse.xtext.conversion.IValueConverterService;
 import org.eclipse.xtext.generator.IOutputConfigurationProvider;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.resource.IDefaultResourceDescriptionStrategy;
 import org.mobadsl.grammar.AbstractMobaRuntimeModule;
 import org.mobadsl.grammar.converter.MobaQualifiedNameProvider;
 import org.mobadsl.grammar.converter.MobaValueConverterService;
 import org.mobadsl.grammar.generator.DelegatingOutputConfigurationProvider;
+import org.mobadsl.grammar.resource.MobaResourceDescriptionStrategy;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -28,5 +30,9 @@ public class MobaRuntimeModule extends AbstractMobaRuntimeModule {
   @Override
   public Class<? extends IValueConverterService> bindIValueConverterService() {
     return MobaValueConverterService.class;
+  }
+  
+  public Class<? extends IDefaultResourceDescriptionStrategy> bindIDefaultResourceDescriptionStrategy() {
+    return MobaResourceDescriptionStrategy.class;
   }
 }

@@ -4,18 +4,256 @@
 package org.mobadsl.grammar.ui.labeling;
 
 import com.google.inject.Inject;
+import java.util.Arrays;
+import java.util.List;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.viewers.StyledString;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
+import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaData;
+import org.mobadsl.semantic.model.moba.MobaDataType;
+import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
+import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEntity;
+import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityReference;
+import org.mobadsl.semantic.model.moba.MobaEnum;
+import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
+import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
+import org.mobadsl.semantic.model.moba.MobaProject;
+import org.mobadsl.semantic.model.moba.MobaQueue;
+import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
+import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
+import org.mobadsl.semantic.model.moba.MobaServer;
+import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
+import org.mobadsl.semantic.model.moba.MobaTemplate;
 
-/**
- * Provides labels for EObjects.
- * 
- * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#label-provider
- */
 @SuppressWarnings("all")
 public class MobaLabelProvider extends DefaultEObjectLabelProvider {
   @Inject
   public MobaLabelProvider(final AdapterFactoryLabelProvider delegate) {
     super(delegate);
+  }
+  
+  public StyledString text(final MobaProject project) {
+    String _name = project.getName();
+    String _version = project.getVersion();
+    return this.getDisplayString(_name, _version);
+  }
+  
+  public StyledString text(final MobaApplication app) {
+    String _name = app.getName();
+    String _version = app.getVersion();
+    return this.getDisplayString(_name, _version);
+  }
+  
+  public StyledString text(final MobaTemplate app) {
+    MobaApplication _template = app.getTemplate();
+    String _name = _template.getName();
+    MobaApplication _template_1 = app.getTemplate();
+    String _version = _template_1.getVersion();
+    return this.getDisplayString(_name, _version);
+  }
+  
+  public StyledString text(final MobaGenerator generator) {
+    EObject _eContainer = generator.eContainer();
+    final MobaApplication app = ((MobaApplication) _eContainer);
+    String _name = generator.getName();
+    String _version = app.getVersion();
+    return this.getDisplayString(_name, _version);
+  }
+  
+  public StyledString text(final MobaGeneratorMixinFeature feature) {
+    MobaGenerator _generatorRef = feature.getGeneratorRef();
+    return this.text(_generatorRef);
+  }
+  
+  public StyledString text(final MobaConstant const_) {
+    String _name = const_.getName();
+    String _value = const_.getValue();
+    return this.getDisplayString(_name, _value);
+  }
+  
+  public StyledString text(final MobaRESTAttribute att) {
+    String _name = att.getName();
+    String _value = att.getValue();
+    return this.getDisplayString(_name, _value);
+  }
+  
+  public StyledString text(final MobaDtoAttribute att) {
+    String _name = att.getName();
+    MobaDataType _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaEntityAttribute att) {
+    String _name = att.getName();
+    MobaDataType _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaSettingsAttribute att) {
+    String _name = att.getName();
+    MobaDataType _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaDtoReference att) {
+    String _name = att.getName();
+    MobaDto _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaDtoEmbeddable att) {
+    String _name = att.getName();
+    MobaDto _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaEntityReference att) {
+    String _name = att.getName();
+    MobaEntity _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaSettingsEntityReference att) {
+    String _name = att.getName();
+    MobaEntity _type = att.getType();
+    String _name_1 = _type.getName();
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaQueueReference att) {
+    String _name = att.getName();
+    MobaData _type = att.getType();
+    String _name_1 = this.name(_type);
+    return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaRESTPayloadDefinition att) {
+    MobaDto _dto = att.getDto();
+    String _name = _dto.getName();
+    String _xifexpression = null;
+    boolean _isArray = att.isArray();
+    if (_isArray) {
+      _xifexpression = "[*]";
+    } else {
+      _xifexpression = null;
+    }
+    return this.getDisplayString(_name, _xifexpression);
+  }
+  
+  protected String _name(final MobaData data) {
+    return "";
+  }
+  
+  protected String _name(final MobaDto data) {
+    return data.getName();
+  }
+  
+  protected String _name(final MobaEntity data) {
+    return data.getName();
+  }
+  
+  protected String _name(final MobaQueue data) {
+    return data.getName();
+  }
+  
+  public StyledString text(final MobaDataType dt) {
+    boolean _or = false;
+    boolean _or_1 = false;
+    boolean _isDate = dt.isDate();
+    if (_isDate) {
+      _or_1 = true;
+    } else {
+      boolean _isTime = dt.isTime();
+      _or_1 = _isTime;
+    }
+    if (_or_1) {
+      _or = true;
+    } else {
+      boolean _isTimestamp = dt.isTimestamp();
+      _or = _isTimestamp;
+    }
+    if (_or) {
+      String _name = dt.getName();
+      String _dateFormat = dt.getDateFormat();
+      return this.getDisplayString(_name, _dateFormat);
+    } else {
+      boolean _isEnum = dt.isEnum();
+      if (_isEnum) {
+        final StringBuilder bf = new StringBuilder();
+        bf.append("(");
+        MobaEnum _enumAST = dt.getEnumAST();
+        List<MobaEnumLiteral> _allLiterals = _enumAST.getAllLiterals();
+        for (final MobaEnumLiteral lit : _allLiterals) {
+          {
+            int _length = bf.length();
+            boolean _greaterThan = (_length > 1);
+            if (_greaterThan) {
+              bf.append(", ");
+            }
+            String _literal = lit.getLiteral();
+            bf.append(_literal);
+          }
+        }
+        bf.append(")");
+        String _name_1 = dt.getName();
+        String _string = bf.toString();
+        return this.getDisplayString(_name_1, _string);
+      }
+    }
+    String _name_2 = dt.getName();
+    return this.getDisplayString(_name_2, null);
+  }
+  
+  public StyledString text(final MobaServer server) {
+    String _name = server.getName();
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("(");
+    String _uRL = server.getURL();
+    _builder.append(_uRL, "");
+    _builder.append(")");
+    return this.getDisplayString(_name, _builder.toString());
+  }
+  
+  public StyledString getDisplayString(final String value, final String description) {
+    final StyledString string = new StyledString(value);
+    boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(description);
+    boolean _not = (!_isNullOrEmpty);
+    if (_not) {
+      string.append((" : " + description), StyledString.DECORATIONS_STYLER);
+    }
+    return string;
+  }
+  
+  public String name(final MobaData data) {
+    if (data instanceof MobaDto) {
+      return _name((MobaDto)data);
+    } else if (data instanceof MobaEntity) {
+      return _name((MobaEntity)data);
+    } else if (data instanceof MobaQueue) {
+      return _name((MobaQueue)data);
+    } else if (data != null) {
+      return _name(data);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(data).toString());
+    }
   }
 }

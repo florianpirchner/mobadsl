@@ -3,20 +3,19 @@
  */
 package org.mobadsl.grammar.scoping;
 
-import com.google.common.base.Function;
 import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.mobadsl.grammar.scoping.ApplicationTemplateScope;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaConstant;
@@ -36,7 +35,6 @@ import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 import org.mobadsl.semantic.model.moba.MobaTrigger;
-import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
 /**
  * This class contains custom scoping description.
@@ -126,18 +124,13 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   
   public IScope scope_MobaGenerator(final MobaApplication ctx, final EReference ref) {
     List<MobaGenerator> _allGenerators = ctx.getAllGenerators();
-    final Function<MobaGenerator, QualifiedName> _function = (MobaGenerator it) -> {
-      String _versionedId = it.getVersionedId();
-      String _versionedIdModelValue = MobaUtil.toVersionedIdModelValue(_versionedId);
-      String[] _split = _versionedIdModelValue.split("\\.");
-      return QualifiedName.create(_split);
-    };
-    return Scopes.<MobaGenerator>scopeFor(_allGenerators, _function, IScope.NULLSCOPE);
+    return Scopes.scopeFor(_allGenerators);
   }
   
   public IScope scope_MobaApplication(final MobaApplication ctx, final EReference ref) {
     Resource _eResource = ctx.eResource();
-    return this.globalScopeProvider.getScope(_eResource, ref);
+    final IScope scope = this.globalScopeProvider.getScope(_eResource, ref);
+    return new ApplicationTemplateScope(scope);
   }
   
   public IScope scope_MobaEntityReference_opposite(final MobaEntityReference ctx, final EReference ref) {

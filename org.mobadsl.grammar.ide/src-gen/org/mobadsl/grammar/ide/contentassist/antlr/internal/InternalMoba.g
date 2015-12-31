@@ -17150,9 +17150,9 @@ rule__MobaProject__UiApplicationAssignment_7_0_2
 	(
 		{ before(grammarAccess.getMobaProjectAccess().getUiApplicationMobaApplicationCrossReference_7_0_2_0()); }
 		(
-			{ before(grammarAccess.getMobaProjectAccess().getUiApplicationMobaApplicationID_VERSIONTerminalRuleCall_7_0_2_0_1()); }
-			RULE_ID_VERSION
-			{ after(grammarAccess.getMobaProjectAccess().getUiApplicationMobaApplicationID_VERSIONTerminalRuleCall_7_0_2_0_1()); }
+			{ before(grammarAccess.getMobaProjectAccess().getUiApplicationMobaApplicationIDTerminalRuleCall_7_0_2_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getMobaProjectAccess().getUiApplicationMobaApplicationIDTerminalRuleCall_7_0_2_0_1()); }
 		)
 		{ after(grammarAccess.getMobaProjectAccess().getUiApplicationMobaApplicationCrossReference_7_0_2_0()); }
 	)
@@ -17169,9 +17169,9 @@ rule__MobaProject__BackgroundApplicationAssignment_7_1_2
 	(
 		{ before(grammarAccess.getMobaProjectAccess().getBackgroundApplicationMobaApplicationCrossReference_7_1_2_0()); }
 		(
-			{ before(grammarAccess.getMobaProjectAccess().getBackgroundApplicationMobaApplicationID_VERSIONTerminalRuleCall_7_1_2_0_1()); }
-			RULE_ID_VERSION
-			{ after(grammarAccess.getMobaProjectAccess().getBackgroundApplicationMobaApplicationID_VERSIONTerminalRuleCall_7_1_2_0_1()); }
+			{ before(grammarAccess.getMobaProjectAccess().getBackgroundApplicationMobaApplicationIDTerminalRuleCall_7_1_2_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getMobaProjectAccess().getBackgroundApplicationMobaApplicationIDTerminalRuleCall_7_1_2_0_1()); }
 		)
 		{ after(grammarAccess.getMobaProjectAccess().getBackgroundApplicationMobaApplicationCrossReference_7_1_2_0()); }
 	)
@@ -17377,9 +17377,9 @@ rule__MobaTemplate__TemplateAssignment_1_0
 	(
 		{ before(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationCrossReference_1_0_0()); }
 		(
-			{ before(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationID_VERSIONTerminalRuleCall_1_0_0_1()); }
-			RULE_ID_VERSION
-			{ after(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationID_VERSIONTerminalRuleCall_1_0_0_1()); }
+			{ before(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationIDTerminalRuleCall_1_0_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationIDTerminalRuleCall_1_0_0_1()); }
 		)
 		{ after(grammarAccess.getMobaTemplateAccess().getTemplateMobaApplicationCrossReference_1_0_0()); }
 	)
@@ -17490,9 +17490,9 @@ rule__MobaGeneratorMixinFeature__GeneratorRefAssignment_1
 	(
 		{ before(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorCrossReference_1_0()); }
 		(
-			{ before(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorID_VERSIONTerminalRuleCall_1_0_1()); }
-			RULE_ID_VERSION
-			{ after(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorID_VERSIONTerminalRuleCall_1_0_1()); }
+			{ before(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1()); }
 		)
 		{ after(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorCrossReference_1_0()); }
 	)
@@ -20757,7 +20757,7 @@ RULE_VERSION : RULE_INT '.' RULE_INT '.' RULE_INT '-SNAPSHOT'?;
 
 RULE_FQN : RULE_ID ('.' RULE_ID)*;
 
-RULE_ID_VERSION : RULE_ID ':' RULE_VERSION;
+fragment RULE_ID_VERSION : RULE_ID ':' RULE_VERSION;
 
 RULE_DOWNLOAD_TEMPLATE : 'index://' ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'.'|'0'..'9')* ':' RULE_ID_VERSION;
 

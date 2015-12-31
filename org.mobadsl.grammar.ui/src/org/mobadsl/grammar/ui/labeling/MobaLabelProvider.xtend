@@ -5,16 +5,31 @@ package org.mobadsl.grammar.ui.labeling
 
 import com.google.inject.Inject
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
+import org.eclipse.jface.viewers.StyledString
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaConstant
-import org.mobadsl.semantic.model.moba.MobaSettings
+import org.mobadsl.semantic.model.moba.MobaData
+import org.mobadsl.semantic.model.moba.MobaDataType
+import org.mobadsl.semantic.model.moba.MobaDto
+import org.mobadsl.semantic.model.moba.MobaDtoAttribute
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable
+import org.mobadsl.semantic.model.moba.MobaDtoReference
+import org.mobadsl.semantic.model.moba.MobaEntity
+import org.mobadsl.semantic.model.moba.MobaEntityAttribute
+import org.mobadsl.semantic.model.moba.MobaEntityReference
+import org.mobadsl.semantic.model.moba.MobaGenerator
+import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature
+import org.mobadsl.semantic.model.moba.MobaProject
+import org.mobadsl.semantic.model.moba.MobaQueue
+import org.mobadsl.semantic.model.moba.MobaQueueReference
+import org.mobadsl.semantic.model.moba.MobaRESTAttribute
+import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition
+import org.mobadsl.semantic.model.moba.MobaServer
+import org.mobadsl.semantic.model.moba.MobaSettingsAttribute
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference
+import org.mobadsl.semantic.model.moba.MobaTemplate
 
-/**
- * Provides labels for EObjects.
- * 
- * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#label-provider
- */
 class MobaLabelProvider extends DefaultEObjectLabelProvider {
 
 	@Inject
@@ -22,22 +37,116 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 		super(delegate);
 	}
 
-	// Labels and icons can be computed like this:
-//	def text(Moba ele) {
-//		'A greeting to ' + ele.name
-//	}
-//
-//	def image(MobaApplication ele) {
-//		'application_enterprise.png'
-//	}
-//
-//	def image(MobaSettings ele) {
-//		'gear.png'
-//	}
-//
-//	def image(MobaConstant ele) {
-//		'safe.png'
-//	}
-	
-	
+	def text(MobaProject project) {
+		return project.name.getDisplayString(project.version)
+	}
+
+	def text(MobaApplication app) {
+		return app.name.getDisplayString(app.version)
+	}
+
+	def text(MobaTemplate app) {
+		return app.template.name.getDisplayString(app.template.version)
+	}
+
+	def text(MobaGenerator generator) {
+		val MobaApplication app = generator.eContainer() as MobaApplication;
+		return generator.name.getDisplayString(app.version)
+	}
+
+	def text(MobaGeneratorMixinFeature feature) {
+		return feature.generatorRef.text
+	}
+
+	def text(MobaConstant const) {
+		return const.name.getDisplayString(const.value)
+	}
+
+	def text(MobaRESTAttribute att) {
+		return att.name.getDisplayString(att.value)
+	}
+
+	def text(MobaDtoAttribute att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaEntityAttribute att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaSettingsAttribute att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaDtoReference att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaDtoEmbeddable att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaEntityReference att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaSettingsEntityReference att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaQueueReference att) {
+		return att.name.getDisplayString(att.type.name)
+	}
+
+	def text(MobaRESTPayloadDefinition att) {
+		return att.dto.name.getDisplayString(if(att.array) "[*]" else null)
+	}
+
+	def dispatch String name(MobaData data) {
+		return ""
+	}
+
+	def dispatch String name(MobaDto data) {
+		return data.name
+	}
+
+	def dispatch String name(MobaEntity data) {
+		return data.name
+	}
+
+	def dispatch String name(MobaQueue data) {
+		return data.name
+	}
+
+	def text(MobaDataType dt) {
+		if (dt.isDate || dt.isTime || dt.isTimestamp) {
+			return dt.name.getDisplayString(dt.dateFormat)
+		} else if (dt.isEnum) {
+			val bf = new StringBuilder
+			bf.append("(")
+			for (lit : dt.enumAST.allLiterals) {
+				if (bf.length > 1) {
+					bf.append(", ")
+				}
+				bf.append(lit.literal)
+			}
+			bf.append(")")
+			return dt.name.getDisplayString(bf.toString)
+		}
+
+		return dt.name.getDisplayString(null)
+	}
+
+	def text(MobaServer server) {
+		return server.name.getDisplayString('''(«server.URL»)''')
+	}
+
+	def StyledString getDisplayString(String value, String description) {
+		val StyledString string = new StyledString(value)
+		if (!description.nullOrEmpty)
+			string.append(" : " + description, StyledString.DECORATIONS_STYLER)
+
+		return string
+	}
+
 }

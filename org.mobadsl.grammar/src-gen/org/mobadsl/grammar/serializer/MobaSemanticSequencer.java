@@ -773,7 +773,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         version=VERSION 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
-	 *         (uiApplication=[MobaApplication|ID_VERSION] | backgroundApplication=[MobaApplication|ID_VERSION])*
+	 *         (uiApplication=[MobaApplication|ID] | backgroundApplication=[MobaApplication|ID])*
 	 *     )
 	 */
 	protected void sequence_MobaFriendsAble_MobaProject(ISerializationContext context, MobaProject semanticObject) {
@@ -954,7 +954,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaGeneratorMixinFeature returns MobaGeneratorMixinFeature
 	 *
 	 * Constraint:
-	 *     generatorRef=[MobaGenerator|ID_VERSION]
+	 *     generatorRef=[MobaGenerator|ID]
 	 */
 	protected void sequence_MobaGeneratorMixinFeature(ISerializationContext context, MobaGeneratorMixinFeature semanticObject) {
 		if (errorAcceptor != null) {
@@ -962,7 +962,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MobaPackage.Literals.MOBA_GENERATOR_MIXIN_FEATURE__GENERATOR_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorID_VERSIONTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
+		feeder.accept(grammarAccess.getMobaGeneratorMixinFeatureAccess().getGeneratorRefMobaGeneratorIDTerminalRuleCall_1_0_1(), semanticObject.getGeneratorRef());
 		feeder.finish();
 	}
 	
@@ -1233,7 +1233,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaTemplate returns MobaTemplate
 	 *
 	 * Constraint:
-	 *     (template=[MobaApplication|ID_VERSION] | downloadTemplate=DOWNLOAD_TEMPLATE)
+	 *     (template=[MobaApplication|ID] | downloadTemplate=DOWNLOAD_TEMPLATE)
 	 */
 	protected void sequence_MobaTemplate(ISerializationContext context, MobaTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
