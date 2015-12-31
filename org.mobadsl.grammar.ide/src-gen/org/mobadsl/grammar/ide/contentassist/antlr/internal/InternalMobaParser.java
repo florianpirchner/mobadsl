@@ -8419,7 +8419,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             if ( (LA16_0==RULE_STRING) ) {
                 alt16=1;
             }
-            else if ( (LA16_0==RULE_ID) ) {
+            else if ( (LA16_0==RULE_CONSTANT) ) {
                 alt16=2;
             }
             else {
@@ -8519,7 +8519,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             if ( (LA17_0==RULE_STRING) ) {
                 alt17=1;
             }
-            else if ( (LA17_0==RULE_ID) ) {
+            else if ( (LA17_0==RULE_CONSTANT) ) {
                 alt17=2;
             }
             else {
@@ -25993,7 +25993,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7566:1: ( rule__MobaCache__Group_2_1_0__1__Impl rule__MobaCache__Group_2_1_0__2 )
             // InternalMoba.g:7567:2: rule__MobaCache__Group_2_1_0__1__Impl rule__MobaCache__Group_2_1_0__2
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_15);
             rule__MobaCache__Group_2_1_0__1__Impl();
 
             state._fsp--;
@@ -26235,7 +26235,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7647:1: ( rule__MobaCache__Group_2_1_1__1__Impl rule__MobaCache__Group_2_1_1__2 )
             // InternalMoba.g:7648:2: rule__MobaCache__Group_2_1_1__1__Impl rule__MobaCache__Group_2_1_1__2
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_15);
             rule__MobaCache__Group_2_1_1__1__Impl();
 
             state._fsp--;
@@ -26477,7 +26477,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7728:1: ( rule__MobaEntity__Group__1__Impl rule__MobaEntity__Group__2 )
             // InternalMoba.g:7729:2: rule__MobaEntity__Group__1__Impl rule__MobaEntity__Group__2
             {
-            pushFollow(FOLLOW_52);
+            pushFollow(FOLLOW_51);
             rule__MobaEntity__Group__1__Impl();
 
             state._fsp--;
@@ -26738,7 +26738,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7809:1: ( rule__MobaEntity__Group__4__Impl rule__MobaEntity__Group__5 )
             // InternalMoba.g:7810:2: rule__MobaEntity__Group__4__Impl rule__MobaEntity__Group__5
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__MobaEntity__Group__4__Impl();
 
             state._fsp--;
@@ -26817,7 +26817,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7836:1: ( rule__MobaEntity__Group__5__Impl rule__MobaEntity__Group__6 )
             // InternalMoba.g:7837:2: rule__MobaEntity__Group__5__Impl rule__MobaEntity__Group__6
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__MobaEntity__Group__5__Impl();
 
             state._fsp--;
@@ -26876,7 +26876,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:7851:3: rule__MobaEntity__FeaturesAssignment_5
             	    {
-            	    pushFollow(FOLLOW_54);
+            	    pushFollow(FOLLOW_53);
             	    rule__MobaEntity__FeaturesAssignment_5();
 
             	    state._fsp--;
@@ -26924,7 +26924,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7863:1: ( rule__MobaEntity__Group__6__Impl rule__MobaEntity__Group__7 )
             // InternalMoba.g:7864:2: rule__MobaEntity__Group__6__Impl rule__MobaEntity__Group__7
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__MobaEntity__Group__6__Impl();
 
             state._fsp--;
@@ -26983,7 +26983,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:7878:3: rule__MobaEntity__IndizesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_55);
+            	    pushFollow(FOLLOW_54);
             	    rule__MobaEntity__IndizesAssignment_6();
 
             	    state._fsp--;
@@ -27268,7 +27268,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:7971:1: ( rule__MobaEntityIndex__Group__0__Impl rule__MobaEntityIndex__Group__1 )
             // InternalMoba.g:7972:2: rule__MobaEntityIndex__Group__0__Impl rule__MobaEntityIndex__Group__1
             {
-            pushFollow(FOLLOW_56);
+            pushFollow(FOLLOW_55);
             rule__MobaEntityIndex__Group__0__Impl();
 
             state._fsp--;
@@ -28399,7 +28399,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8322:1: ( rule__MobaDto__Group__4__Impl rule__MobaDto__Group__5 )
             // InternalMoba.g:8323:2: rule__MobaDto__Group__4__Impl rule__MobaDto__Group__5
             {
-            pushFollow(FOLLOW_57);
+            pushFollow(FOLLOW_56);
             rule__MobaDto__Group__4__Impl();
 
             state._fsp--;
@@ -28478,7 +28478,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8349:1: ( rule__MobaDto__Group__5__Impl rule__MobaDto__Group__6 )
             // InternalMoba.g:8350:2: rule__MobaDto__Group__5__Impl rule__MobaDto__Group__6
             {
-            pushFollow(FOLLOW_57);
+            pushFollow(FOLLOW_56);
             rule__MobaDto__Group__5__Impl();
 
             state._fsp--;
@@ -28537,7 +28537,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:8364:3: rule__MobaDto__FeaturesAssignment_5
             	    {
-            	    pushFollow(FOLLOW_54);
+            	    pushFollow(FOLLOW_53);
             	    rule__MobaDto__FeaturesAssignment_5();
 
             	    state._fsp--;
@@ -29173,7 +29173,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8565:1: ( rule__MobaQueue__Group__4__Impl rule__MobaQueue__Group__5 )
             // InternalMoba.g:8566:2: rule__MobaQueue__Group__4__Impl rule__MobaQueue__Group__5
             {
-            pushFollow(FOLLOW_58);
+            pushFollow(FOLLOW_57);
             rule__MobaQueue__Group__4__Impl();
 
             state._fsp--;
@@ -29252,7 +29252,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8592:1: ( rule__MobaQueue__Group__5__Impl rule__MobaQueue__Group__6 )
             // InternalMoba.g:8593:2: rule__MobaQueue__Group__5__Impl rule__MobaQueue__Group__6
             {
-            pushFollow(FOLLOW_58);
+            pushFollow(FOLLOW_57);
             rule__MobaQueue__Group__5__Impl();
 
             state._fsp--;
@@ -29311,7 +29311,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:8607:3: rule__MobaQueue__FeaturesAssignment_5
             	    {
-            	    pushFollow(FOLLOW_59);
+            	    pushFollow(FOLLOW_58);
             	    rule__MobaQueue__FeaturesAssignment_5();
 
             	    state._fsp--;
@@ -29596,7 +29596,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8700:1: ( rule__MobaRESTCustomService__Group__0__Impl rule__MobaRESTCustomService__Group__1 )
             // InternalMoba.g:8701:2: rule__MobaRESTCustomService__Group__0__Impl rule__MobaRESTCustomService__Group__1
             {
-            pushFollow(FOLLOW_60);
+            pushFollow(FOLLOW_59);
             rule__MobaRESTCustomService__Group__0__Impl();
 
             state._fsp--;
@@ -29675,7 +29675,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8727:1: ( rule__MobaRESTCustomService__Group__1__Impl rule__MobaRESTCustomService__Group__2 )
             // InternalMoba.g:8728:2: rule__MobaRESTCustomService__Group__1__Impl rule__MobaRESTCustomService__Group__2
             {
-            pushFollow(FOLLOW_60);
+            pushFollow(FOLLOW_59);
             rule__MobaRESTCustomService__Group__1__Impl();
 
             state._fsp--;
@@ -30047,7 +30047,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8835:1: ( rule__MobaRESTCustomService__Group__5__Impl rule__MobaRESTCustomService__Group__6 )
             // InternalMoba.g:8836:2: rule__MobaRESTCustomService__Group__5__Impl rule__MobaRESTCustomService__Group__6
             {
-            pushFollow(FOLLOW_61);
+            pushFollow(FOLLOW_60);
             rule__MobaRESTCustomService__Group__5__Impl();
 
             state._fsp--;
@@ -30531,7 +30531,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:8997:1: ( rule__MobaRESTCustomService__Group_6_0__1__Impl rule__MobaRESTCustomService__Group_6_0__2 )
             // InternalMoba.g:8998:2: rule__MobaRESTCustomService__Group_6_0__1__Impl rule__MobaRESTCustomService__Group_6_0__2
             {
-            pushFollow(FOLLOW_62);
+            pushFollow(FOLLOW_61);
             rule__MobaRESTCustomService__Group_6_0__1__Impl();
 
             state._fsp--;
@@ -30610,7 +30610,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9024:1: ( rule__MobaRESTCustomService__Group_6_0__2__Impl rule__MobaRESTCustomService__Group_6_0__3 )
             // InternalMoba.g:9025:2: rule__MobaRESTCustomService__Group_6_0__2__Impl rule__MobaRESTCustomService__Group_6_0__3
             {
-            pushFollow(FOLLOW_62);
+            pushFollow(FOLLOW_61);
             rule__MobaRESTCustomService__Group_6_0__2__Impl();
 
             state._fsp--;
@@ -30669,7 +30669,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:9039:3: rule__MobaRESTCustomService__HeadersAssignment_6_0_2
             	    {
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_62);
             	    rule__MobaRESTCustomService__HeadersAssignment_6_0_2();
 
             	    state._fsp--;
@@ -30870,7 +30870,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9105:1: ( rule__MobaRESTCustomService__Group_6_1__1__Impl rule__MobaRESTCustomService__Group_6_1__2 )
             // InternalMoba.g:9106:2: rule__MobaRESTCustomService__Group_6_1__1__Impl rule__MobaRESTCustomService__Group_6_1__2
             {
-            pushFollow(FOLLOW_62);
+            pushFollow(FOLLOW_61);
             rule__MobaRESTCustomService__Group_6_1__1__Impl();
 
             state._fsp--;
@@ -30949,7 +30949,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9132:1: ( rule__MobaRESTCustomService__Group_6_1__2__Impl rule__MobaRESTCustomService__Group_6_1__3 )
             // InternalMoba.g:9133:2: rule__MobaRESTCustomService__Group_6_1__2__Impl rule__MobaRESTCustomService__Group_6_1__3
             {
-            pushFollow(FOLLOW_62);
+            pushFollow(FOLLOW_61);
             rule__MobaRESTCustomService__Group_6_1__2__Impl();
 
             state._fsp--;
@@ -31008,7 +31008,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:9147:3: rule__MobaRESTCustomService__ParametersAssignment_6_1_2
             	    {
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_62);
             	    rule__MobaRESTCustomService__ParametersAssignment_6_1_2();
 
             	    state._fsp--;
@@ -31935,7 +31935,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9456:1: ( rule__MobaRESTCustomService__Group_6_5__1__Impl rule__MobaRESTCustomService__Group_6_5__2 )
             // InternalMoba.g:9457:2: rule__MobaRESTCustomService__Group_6_5__1__Impl rule__MobaRESTCustomService__Group_6_5__2
             {
-            pushFollow(FOLLOW_64);
+            pushFollow(FOLLOW_63);
             rule__MobaRESTCustomService__Group_6_5__1__Impl();
 
             state._fsp--;
@@ -32098,7 +32098,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9510:1: ( rule__MobaRESTPayloadDefinition__Group__0__Impl rule__MobaRESTPayloadDefinition__Group__1 )
             // InternalMoba.g:9511:2: rule__MobaRESTPayloadDefinition__Group__0__Impl rule__MobaRESTPayloadDefinition__Group__1
             {
-            pushFollow(FOLLOW_65);
+            pushFollow(FOLLOW_64);
             rule__MobaRESTPayloadDefinition__Group__0__Impl();
 
             state._fsp--;
@@ -32513,7 +32513,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9645:1: ( rule__MobaRestParameter__Group__1__Impl rule__MobaRestParameter__Group__2 )
             // InternalMoba.g:9646:2: rule__MobaRestParameter__Group__1__Impl rule__MobaRestParameter__Group__2
             {
-            pushFollow(FOLLOW_66);
+            pushFollow(FOLLOW_65);
             rule__MobaRestParameter__Group__1__Impl();
 
             state._fsp--;
@@ -33028,7 +33028,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:9807:1: ( rule__MobaRestHeader__Group__1__Impl rule__MobaRestHeader__Group__2 )
             // InternalMoba.g:9808:2: rule__MobaRestHeader__Group__1__Impl rule__MobaRestHeader__Group__2
             {
-            pushFollow(FOLLOW_66);
+            pushFollow(FOLLOW_65);
             rule__MobaRestHeader__Group__1__Impl();
 
             state._fsp--;
@@ -34324,7 +34324,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10212:1: ( rule__MobaRESTWorkflow__Group__4__Impl rule__MobaRESTWorkflow__Group__5 )
             // InternalMoba.g:10213:2: rule__MobaRESTWorkflow__Group__4__Impl rule__MobaRESTWorkflow__Group__5
             {
-            pushFollow(FOLLOW_67);
+            pushFollow(FOLLOW_66);
             rule__MobaRESTWorkflow__Group__4__Impl();
 
             state._fsp--;
@@ -34403,7 +34403,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10239:1: ( rule__MobaRESTWorkflow__Group__5__Impl rule__MobaRESTWorkflow__Group__6 )
             // InternalMoba.g:10240:2: rule__MobaRESTWorkflow__Group__5__Impl rule__MobaRESTWorkflow__Group__6
             {
-            pushFollow(FOLLOW_67);
+            pushFollow(FOLLOW_66);
             rule__MobaRESTWorkflow__Group__5__Impl();
 
             state._fsp--;
@@ -34462,7 +34462,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalMoba.g:10254:3: rule__MobaRESTWorkflow__Group_5__0
             	    {
-            	    pushFollow(FOLLOW_68);
+            	    pushFollow(FOLLOW_67);
             	    rule__MobaRESTWorkflow__Group_5__0();
 
             	    state._fsp--;
@@ -34910,7 +34910,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10401:1: ( rule__MobaEntityAttribute__Group__0__Impl rule__MobaEntityAttribute__Group__1 )
             // InternalMoba.g:10402:2: rule__MobaEntityAttribute__Group__0__Impl rule__MobaEntityAttribute__Group__1
             {
-            pushFollow(FOLLOW_69);
+            pushFollow(FOLLOW_68);
             rule__MobaEntityAttribute__Group__0__Impl();
 
             state._fsp--;
@@ -35078,7 +35078,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10455:1: ( rule__MobaEntityAttribute__Group__2__Impl rule__MobaEntityAttribute__Group__3 )
             // InternalMoba.g:10456:2: rule__MobaEntityAttribute__Group__2__Impl rule__MobaEntityAttribute__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaEntityAttribute__Group__2__Impl();
 
             state._fsp--;
@@ -35250,7 +35250,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10509:1: ( rule__MobaEntityAttribute__Group__4__Impl rule__MobaEntityAttribute__Group__5 )
             // InternalMoba.g:10510:2: rule__MobaEntityAttribute__Group__4__Impl rule__MobaEntityAttribute__Group__5
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__MobaEntityAttribute__Group__4__Impl();
 
             state._fsp--;
@@ -35339,7 +35339,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10536:1: ( rule__MobaEntityAttribute__Group__5__Impl rule__MobaEntityAttribute__Group__6 )
             // InternalMoba.g:10537:2: rule__MobaEntityAttribute__Group__5__Impl rule__MobaEntityAttribute__Group__6
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__MobaEntityAttribute__Group__5__Impl();
 
             state._fsp--;
@@ -36429,7 +36429,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10887:1: ( rule__MobaSettingsAttribute__Group__0__Impl rule__MobaSettingsAttribute__Group__1 )
             // InternalMoba.g:10888:2: rule__MobaSettingsAttribute__Group__0__Impl rule__MobaSettingsAttribute__Group__1
             {
-            pushFollow(FOLLOW_69);
+            pushFollow(FOLLOW_68);
             rule__MobaSettingsAttribute__Group__0__Impl();
 
             state._fsp--;
@@ -36597,7 +36597,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10941:1: ( rule__MobaSettingsAttribute__Group__2__Impl rule__MobaSettingsAttribute__Group__3 )
             // InternalMoba.g:10942:2: rule__MobaSettingsAttribute__Group__2__Impl rule__MobaSettingsAttribute__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaSettingsAttribute__Group__2__Impl();
 
             state._fsp--;
@@ -36769,7 +36769,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:10995:1: ( rule__MobaSettingsAttribute__Group__4__Impl rule__MobaSettingsAttribute__Group__5 )
             // InternalMoba.g:10996:2: rule__MobaSettingsAttribute__Group__4__Impl rule__MobaSettingsAttribute__Group__5
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__MobaSettingsAttribute__Group__4__Impl();
 
             state._fsp--;
@@ -36858,7 +36858,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11022:1: ( rule__MobaSettingsAttribute__Group__5__Impl rule__MobaSettingsAttribute__Group__6 )
             // InternalMoba.g:11023:2: rule__MobaSettingsAttribute__Group__5__Impl rule__MobaSettingsAttribute__Group__6
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__MobaSettingsAttribute__Group__5__Impl();
 
             state._fsp--;
@@ -37948,7 +37948,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11373:1: ( rule__MobaSettingsEntityReference__Group__0__Impl rule__MobaSettingsEntityReference__Group__1 )
             // InternalMoba.g:11374:2: rule__MobaSettingsEntityReference__Group__0__Impl rule__MobaSettingsEntityReference__Group__1
             {
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_71);
             rule__MobaSettingsEntityReference__Group__0__Impl();
 
             state._fsp--;
@@ -38116,7 +38116,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11427:1: ( rule__MobaSettingsEntityReference__Group__2__Impl rule__MobaSettingsEntityReference__Group__3 )
             // InternalMoba.g:11428:2: rule__MobaSettingsEntityReference__Group__2__Impl rule__MobaSettingsEntityReference__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaSettingsEntityReference__Group__2__Impl();
 
             state._fsp--;
@@ -38455,7 +38455,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11535:1: ( rule__MobaEntityReference__Group__0__Impl rule__MobaEntityReference__Group__1 )
             // InternalMoba.g:11536:2: rule__MobaEntityReference__Group__0__Impl rule__MobaEntityReference__Group__1
             {
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_71);
             rule__MobaEntityReference__Group__0__Impl();
 
             state._fsp--;
@@ -38623,7 +38623,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11589:1: ( rule__MobaEntityReference__Group__2__Impl rule__MobaEntityReference__Group__3 )
             // InternalMoba.g:11590:2: rule__MobaEntityReference__Group__2__Impl rule__MobaEntityReference__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaEntityReference__Group__2__Impl();
 
             state._fsp--;
@@ -38795,7 +38795,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11643:1: ( rule__MobaEntityReference__Group__4__Impl rule__MobaEntityReference__Group__5 )
             // InternalMoba.g:11644:2: rule__MobaEntityReference__Group__4__Impl rule__MobaEntityReference__Group__5
             {
-            pushFollow(FOLLOW_73);
+            pushFollow(FOLLOW_72);
             rule__MobaEntityReference__Group__4__Impl();
 
             state._fsp--;
@@ -38884,7 +38884,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11670:1: ( rule__MobaEntityReference__Group__5__Impl rule__MobaEntityReference__Group__6 )
             // InternalMoba.g:11671:2: rule__MobaEntityReference__Group__5__Impl rule__MobaEntityReference__Group__6
             {
-            pushFollow(FOLLOW_73);
+            pushFollow(FOLLOW_72);
             rule__MobaEntityReference__Group__5__Impl();
 
             state._fsp--;
@@ -39225,7 +39225,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11778:1: ( rule__MobaEntityEmbeddable__Group__0__Impl rule__MobaEntityEmbeddable__Group__1 )
             // InternalMoba.g:11779:2: rule__MobaEntityEmbeddable__Group__0__Impl rule__MobaEntityEmbeddable__Group__1
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__MobaEntityEmbeddable__Group__0__Impl();
 
             state._fsp--;
@@ -39304,7 +39304,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11805:1: ( rule__MobaEntityEmbeddable__Group__1__Impl rule__MobaEntityEmbeddable__Group__2 )
             // InternalMoba.g:11806:2: rule__MobaEntityEmbeddable__Group__1__Impl rule__MobaEntityEmbeddable__Group__2
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__MobaEntityEmbeddable__Group__1__Impl();
 
             state._fsp--;
@@ -39404,7 +39404,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11832:1: ( rule__MobaEntityEmbeddable__Group__2__Impl rule__MobaEntityEmbeddable__Group__3 )
             // InternalMoba.g:11833:2: rule__MobaEntityEmbeddable__Group__2__Impl rule__MobaEntityEmbeddable__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaEntityEmbeddable__Group__2__Impl();
 
             state._fsp--;
@@ -39743,7 +39743,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11940:1: ( rule__MobaDtoAttribute__Group__0__Impl rule__MobaDtoAttribute__Group__1 )
             // InternalMoba.g:11941:2: rule__MobaDtoAttribute__Group__0__Impl rule__MobaDtoAttribute__Group__1
             {
-            pushFollow(FOLLOW_69);
+            pushFollow(FOLLOW_68);
             rule__MobaDtoAttribute__Group__0__Impl();
 
             state._fsp--;
@@ -39911,7 +39911,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:11994:1: ( rule__MobaDtoAttribute__Group__2__Impl rule__MobaDtoAttribute__Group__3 )
             // InternalMoba.g:11995:2: rule__MobaDtoAttribute__Group__2__Impl rule__MobaDtoAttribute__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaDtoAttribute__Group__2__Impl();
 
             state._fsp--;
@@ -40083,7 +40083,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12048:1: ( rule__MobaDtoAttribute__Group__4__Impl rule__MobaDtoAttribute__Group__5 )
             // InternalMoba.g:12049:2: rule__MobaDtoAttribute__Group__4__Impl rule__MobaDtoAttribute__Group__5
             {
-            pushFollow(FOLLOW_75);
+            pushFollow(FOLLOW_74);
             rule__MobaDtoAttribute__Group__4__Impl();
 
             state._fsp--;
@@ -41572,7 +41572,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12534:1: ( rule__MobaDtoReference__Group__0__Impl rule__MobaDtoReference__Group__1 )
             // InternalMoba.g:12535:2: rule__MobaDtoReference__Group__0__Impl rule__MobaDtoReference__Group__1
             {
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_71);
             rule__MobaDtoReference__Group__0__Impl();
 
             state._fsp--;
@@ -41740,7 +41740,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12588:1: ( rule__MobaDtoReference__Group__2__Impl rule__MobaDtoReference__Group__3 )
             // InternalMoba.g:12589:2: rule__MobaDtoReference__Group__2__Impl rule__MobaDtoReference__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaDtoReference__Group__2__Impl();
 
             state._fsp--;
@@ -41912,7 +41912,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12642:1: ( rule__MobaDtoReference__Group__4__Impl rule__MobaDtoReference__Group__5 )
             // InternalMoba.g:12643:2: rule__MobaDtoReference__Group__4__Impl rule__MobaDtoReference__Group__5
             {
-            pushFollow(FOLLOW_76);
+            pushFollow(FOLLOW_75);
             rule__MobaDtoReference__Group__4__Impl();
 
             state._fsp--;
@@ -42001,7 +42001,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12669:1: ( rule__MobaDtoReference__Group__5__Impl rule__MobaDtoReference__Group__6 )
             // InternalMoba.g:12670:2: rule__MobaDtoReference__Group__5__Impl rule__MobaDtoReference__Group__6
             {
-            pushFollow(FOLLOW_76);
+            pushFollow(FOLLOW_75);
             rule__MobaDtoReference__Group__5__Impl();
 
             state._fsp--;
@@ -42101,7 +42101,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12696:1: ( rule__MobaDtoReference__Group__6__Impl rule__MobaDtoReference__Group__7 )
             // InternalMoba.g:12697:2: rule__MobaDtoReference__Group__6__Impl rule__MobaDtoReference__Group__7
             {
-            pushFollow(FOLLOW_76);
+            pushFollow(FOLLOW_75);
             rule__MobaDtoReference__Group__6__Impl();
 
             state._fsp--;
@@ -42763,7 +42763,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12912:1: ( rule__MobaDtoEmbeddable__Group__0__Impl rule__MobaDtoEmbeddable__Group__1 )
             // InternalMoba.g:12913:2: rule__MobaDtoEmbeddable__Group__0__Impl rule__MobaDtoEmbeddable__Group__1
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__MobaDtoEmbeddable__Group__0__Impl();
 
             state._fsp--;
@@ -42842,7 +42842,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12939:1: ( rule__MobaDtoEmbeddable__Group__1__Impl rule__MobaDtoEmbeddable__Group__2 )
             // InternalMoba.g:12940:2: rule__MobaDtoEmbeddable__Group__1__Impl rule__MobaDtoEmbeddable__Group__2
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__MobaDtoEmbeddable__Group__1__Impl();
 
             state._fsp--;
@@ -42942,7 +42942,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:12966:1: ( rule__MobaDtoEmbeddable__Group__2__Impl rule__MobaDtoEmbeddable__Group__3 )
             // InternalMoba.g:12967:2: rule__MobaDtoEmbeddable__Group__2__Impl rule__MobaDtoEmbeddable__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaDtoEmbeddable__Group__2__Impl();
 
             state._fsp--;
@@ -43114,7 +43114,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13020:1: ( rule__MobaDtoEmbeddable__Group__4__Impl rule__MobaDtoEmbeddable__Group__5 )
             // InternalMoba.g:13021:2: rule__MobaDtoEmbeddable__Group__4__Impl rule__MobaDtoEmbeddable__Group__5
             {
-            pushFollow(FOLLOW_77);
+            pushFollow(FOLLOW_76);
             rule__MobaDtoEmbeddable__Group__4__Impl();
 
             state._fsp--;
@@ -43203,7 +43203,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13047:1: ( rule__MobaDtoEmbeddable__Group__5__Impl rule__MobaDtoEmbeddable__Group__6 )
             // InternalMoba.g:13048:2: rule__MobaDtoEmbeddable__Group__5__Impl rule__MobaDtoEmbeddable__Group__6
             {
-            pushFollow(FOLLOW_77);
+            pushFollow(FOLLOW_76);
             rule__MobaDtoEmbeddable__Group__5__Impl();
 
             state._fsp--;
@@ -43702,7 +43702,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13209:1: ( rule__MobaQueueReference__Group__0__Impl rule__MobaQueueReference__Group__1 )
             // InternalMoba.g:13210:2: rule__MobaQueueReference__Group__0__Impl rule__MobaQueueReference__Group__1
             {
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_71);
             rule__MobaQueueReference__Group__0__Impl();
 
             state._fsp--;
@@ -43870,7 +43870,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13263:1: ( rule__MobaQueueReference__Group__2__Impl rule__MobaQueueReference__Group__3 )
             // InternalMoba.g:13264:2: rule__MobaQueueReference__Group__2__Impl rule__MobaQueueReference__Group__3
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__MobaQueueReference__Group__2__Impl();
 
             state._fsp--;
@@ -44209,7 +44209,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13371:1: ( rule__MobaMuliplicity__Group__0__Impl rule__MobaMuliplicity__Group__1 )
             // InternalMoba.g:13372:2: rule__MobaMuliplicity__Group__0__Impl rule__MobaMuliplicity__Group__1
             {
-            pushFollow(FOLLOW_78);
+            pushFollow(FOLLOW_77);
             rule__MobaMuliplicity__Group__0__Impl();
 
             state._fsp--;
@@ -44288,7 +44288,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13398:1: ( rule__MobaMuliplicity__Group__1__Impl rule__MobaMuliplicity__Group__2 )
             // InternalMoba.g:13399:2: rule__MobaMuliplicity__Group__1__Impl rule__MobaMuliplicity__Group__2
             {
-            pushFollow(FOLLOW_79);
+            pushFollow(FOLLOW_78);
             rule__MobaMuliplicity__Group__1__Impl();
 
             state._fsp--;
@@ -44377,7 +44377,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13425:1: ( rule__MobaMuliplicity__Group__2__Impl rule__MobaMuliplicity__Group__3 )
             // InternalMoba.g:13426:2: rule__MobaMuliplicity__Group__2__Impl rule__MobaMuliplicity__Group__3
             {
-            pushFollow(FOLLOW_79);
+            pushFollow(FOLLOW_78);
             rule__MobaMuliplicity__Group__2__Impl();
 
             state._fsp--;
@@ -44551,7 +44551,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13479:1: ( rule__MobaMuliplicity__Group_2__0__Impl rule__MobaMuliplicity__Group_2__1 )
             // InternalMoba.g:13480:2: rule__MobaMuliplicity__Group_2__0__Impl rule__MobaMuliplicity__Group_2__1
             {
-            pushFollow(FOLLOW_80);
+            pushFollow(FOLLOW_79);
             rule__MobaMuliplicity__Group_2__0__Impl();
 
             state._fsp--;
@@ -45035,7 +45035,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13641:1: ( rule__MobaMinConstraint__Group__1__Impl rule__MobaMinConstraint__Group__2 )
             // InternalMoba.g:13642:2: rule__MobaMinConstraint__Group__1__Impl rule__MobaMinConstraint__Group__2
             {
-            pushFollow(FOLLOW_81);
+            pushFollow(FOLLOW_80);
             rule__MobaMinConstraint__Group__1__Impl();
 
             state._fsp--;
@@ -45277,7 +45277,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13722:1: ( rule__MobaMaxConstraint__Group__1__Impl rule__MobaMaxConstraint__Group__2 )
             // InternalMoba.g:13723:2: rule__MobaMaxConstraint__Group__1__Impl rule__MobaMaxConstraint__Group__2
             {
-            pushFollow(FOLLOW_81);
+            pushFollow(FOLLOW_80);
             rule__MobaMaxConstraint__Group__1__Impl();
 
             state._fsp--;
@@ -45519,7 +45519,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13803:1: ( rule__MobaMinLengthConstraint__Group__1__Impl rule__MobaMinLengthConstraint__Group__2 )
             // InternalMoba.g:13804:2: rule__MobaMinLengthConstraint__Group__1__Impl rule__MobaMinLengthConstraint__Group__2
             {
-            pushFollow(FOLLOW_82);
+            pushFollow(FOLLOW_81);
             rule__MobaMinLengthConstraint__Group__1__Impl();
 
             state._fsp--;
@@ -45761,7 +45761,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13884:1: ( rule__MobaMaxLengthConstraint__Group__1__Impl rule__MobaMaxLengthConstraint__Group__2 )
             // InternalMoba.g:13885:2: rule__MobaMaxLengthConstraint__Group__1__Impl rule__MobaMaxLengthConstraint__Group__2
             {
-            pushFollow(FOLLOW_82);
+            pushFollow(FOLLOW_81);
             rule__MobaMaxLengthConstraint__Group__1__Impl();
 
             state._fsp--;
@@ -46003,7 +46003,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:13965:1: ( rule__MobaDigitsConstraint__Group__1__Impl rule__MobaDigitsConstraint__Group__2 )
             // InternalMoba.g:13966:2: rule__MobaDigitsConstraint__Group__1__Impl rule__MobaDigitsConstraint__Group__2
             {
-            pushFollow(FOLLOW_82);
+            pushFollow(FOLLOW_81);
             rule__MobaDigitsConstraint__Group__1__Impl();
 
             state._fsp--;
@@ -46171,7 +46171,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14019:1: ( rule__MobaDigitsConstraint__Group__3__Impl rule__MobaDigitsConstraint__Group__4 )
             // InternalMoba.g:14020:2: rule__MobaDigitsConstraint__Group__3__Impl rule__MobaDigitsConstraint__Group__4
             {
-            pushFollow(FOLLOW_82);
+            pushFollow(FOLLOW_81);
             rule__MobaDigitsConstraint__Group__3__Impl();
 
             state._fsp--;
@@ -46413,7 +46413,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14100:1: ( rule__MobaNullConstraint__Group__0__Impl rule__MobaNullConstraint__Group__1 )
             // InternalMoba.g:14101:2: rule__MobaNullConstraint__Group__0__Impl rule__MobaNullConstraint__Group__1
             {
-            pushFollow(FOLLOW_83);
+            pushFollow(FOLLOW_82);
             rule__MobaNullConstraint__Group__0__Impl();
 
             state._fsp--;
@@ -46798,7 +46798,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14235:1: ( rule__MobaGeneratorSlot__Group__1__Impl rule__MobaGeneratorSlot__Group__2 )
             // InternalMoba.g:14236:2: rule__MobaGeneratorSlot__Group__1__Impl rule__MobaGeneratorSlot__Group__2
             {
-            pushFollow(FOLLOW_84);
+            pushFollow(FOLLOW_83);
             rule__MobaGeneratorSlot__Group__1__Impl();
 
             state._fsp--;
@@ -48202,7 +48202,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14694:1: ( rule__MobaGeofenceTrigger__Group__1__Impl rule__MobaGeofenceTrigger__Group__2 )
             // InternalMoba.g:14695:2: rule__MobaGeofenceTrigger__Group__1__Impl rule__MobaGeofenceTrigger__Group__2
             {
-            pushFollow(FOLLOW_85);
+            pushFollow(FOLLOW_84);
             rule__MobaGeofenceTrigger__Group__1__Impl();
 
             state._fsp--;
@@ -48370,7 +48370,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14748:1: ( rule__MobaGeofenceTrigger__Group__3__Impl rule__MobaGeofenceTrigger__Group__4 )
             // InternalMoba.g:14749:2: rule__MobaGeofenceTrigger__Group__3__Impl rule__MobaGeofenceTrigger__Group__4
             {
-            pushFollow(FOLLOW_86);
+            pushFollow(FOLLOW_85);
             rule__MobaGeofenceTrigger__Group__3__Impl();
 
             state._fsp--;
@@ -48612,7 +48612,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14829:1: ( rule__MobaBluetoothModule__Group__1__Impl rule__MobaBluetoothModule__Group__2 )
             // InternalMoba.g:14830:2: rule__MobaBluetoothModule__Group__1__Impl rule__MobaBluetoothModule__Group__2
             {
-            pushFollow(FOLLOW_84);
+            pushFollow(FOLLOW_83);
             rule__MobaBluetoothModule__Group__1__Impl();
 
             state._fsp--;
@@ -48780,7 +48780,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:14883:1: ( rule__MobaBluetoothModule__Group__3__Impl rule__MobaBluetoothModule__Group__4 )
             // InternalMoba.g:14884:2: rule__MobaBluetoothModule__Group__3__Impl rule__MobaBluetoothModule__Group__4
             {
-            pushFollow(FOLLOW_87);
+            pushFollow(FOLLOW_86);
             rule__MobaBluetoothModule__Group__3__Impl();
 
             state._fsp--;
@@ -49351,7 +49351,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15072:1: ( rule__MobaNFCModule__Group__1__Impl rule__MobaNFCModule__Group__2 )
             // InternalMoba.g:15073:2: rule__MobaNFCModule__Group__1__Impl rule__MobaNFCModule__Group__2
             {
-            pushFollow(FOLLOW_84);
+            pushFollow(FOLLOW_83);
             rule__MobaNFCModule__Group__1__Impl();
 
             state._fsp--;
@@ -49519,7 +49519,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15126:1: ( rule__MobaNFCModule__Group__3__Impl rule__MobaNFCModule__Group__4 )
             // InternalMoba.g:15127:2: rule__MobaNFCModule__Group__3__Impl rule__MobaNFCModule__Group__4
             {
-            pushFollow(FOLLOW_88);
+            pushFollow(FOLLOW_87);
             rule__MobaNFCModule__Group__3__Impl();
 
             state._fsp--;
@@ -49966,7 +49966,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15266:1: ( rule__MobaProject__UnorderedGroup_7__Impl ( rule__MobaProject__UnorderedGroup_7__1 )? )
             // InternalMoba.g:15267:2: rule__MobaProject__UnorderedGroup_7__Impl ( rule__MobaProject__UnorderedGroup_7__1 )?
             {
-            pushFollow(FOLLOW_89);
+            pushFollow(FOLLOW_88);
             rule__MobaProject__UnorderedGroup_7__Impl();
 
             state._fsp--;
@@ -50258,7 +50258,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15349:1: ( rule__MobaServer__UnorderedGroup_8__Impl ( rule__MobaServer__UnorderedGroup_8__1 )? )
             // InternalMoba.g:15350:2: rule__MobaServer__UnorderedGroup_8__Impl ( rule__MobaServer__UnorderedGroup_8__1 )?
             {
-            pushFollow(FOLLOW_90);
+            pushFollow(FOLLOW_89);
             rule__MobaServer__UnorderedGroup_8__Impl();
 
             state._fsp--;
@@ -50584,7 +50584,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15447:1: ( rule__MobaDataType__UnorderedGroup_3__Impl ( rule__MobaDataType__UnorderedGroup_3__1 )? )
             // InternalMoba.g:15448:2: rule__MobaDataType__UnorderedGroup_3__Impl ( rule__MobaDataType__UnorderedGroup_3__1 )?
             {
-            pushFollow(FOLLOW_91);
+            pushFollow(FOLLOW_90);
             rule__MobaDataType__UnorderedGroup_3__Impl();
 
             state._fsp--;
@@ -50635,7 +50635,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15459:1: ( rule__MobaDataType__UnorderedGroup_3__Impl ( rule__MobaDataType__UnorderedGroup_3__2 )? )
             // InternalMoba.g:15460:2: rule__MobaDataType__UnorderedGroup_3__Impl ( rule__MobaDataType__UnorderedGroup_3__2 )?
             {
-            pushFollow(FOLLOW_91);
+            pushFollow(FOLLOW_90);
             rule__MobaDataType__UnorderedGroup_3__Impl();
 
             state._fsp--;
@@ -51217,7 +51217,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15625:1: ( rule__MobaFriendsAble__UnorderedGroup__Impl ( rule__MobaFriendsAble__UnorderedGroup__1 )? )
             // InternalMoba.g:15626:2: rule__MobaFriendsAble__UnorderedGroup__Impl ( rule__MobaFriendsAble__UnorderedGroup__1 )?
             {
-            pushFollow(FOLLOW_92);
+            pushFollow(FOLLOW_91);
             rule__MobaFriendsAble__UnorderedGroup__Impl();
 
             state._fsp--;
@@ -51509,7 +51509,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15708:1: ( rule__MobaCache__UnorderedGroup_2_1__Impl ( rule__MobaCache__UnorderedGroup_2_1__1 )? )
             // InternalMoba.g:15709:2: rule__MobaCache__UnorderedGroup_2_1__Impl ( rule__MobaCache__UnorderedGroup_2_1__1 )?
             {
-            pushFollow(FOLLOW_93);
+            pushFollow(FOLLOW_92);
             rule__MobaCache__UnorderedGroup_2_1__Impl();
 
             state._fsp--;
@@ -51801,7 +51801,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15791:1: ( rule__MobaEntity__UnorderedGroup_2__Impl ( rule__MobaEntity__UnorderedGroup_2__1 )? )
             // InternalMoba.g:15792:2: rule__MobaEntity__UnorderedGroup_2__Impl ( rule__MobaEntity__UnorderedGroup_2__1 )?
             {
-            pushFollow(FOLLOW_94);
+            pushFollow(FOLLOW_93);
             rule__MobaEntity__UnorderedGroup_2__Impl();
 
             state._fsp--;
@@ -52305,7 +52305,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15934:1: ( rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__1 )? )
             // InternalMoba.g:15935:2: rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__1 )?
             {
-            pushFollow(FOLLOW_95);
+            pushFollow(FOLLOW_94);
             rule__MobaRESTCustomService__UnorderedGroup_6__Impl();
 
             state._fsp--;
@@ -52375,7 +52375,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15946:1: ( rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__2 )? )
             // InternalMoba.g:15947:2: rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__2 )?
             {
-            pushFollow(FOLLOW_95);
+            pushFollow(FOLLOW_94);
             rule__MobaRESTCustomService__UnorderedGroup_6__Impl();
 
             state._fsp--;
@@ -52445,7 +52445,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15958:1: ( rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__3 )? )
             // InternalMoba.g:15959:2: rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__3 )?
             {
-            pushFollow(FOLLOW_95);
+            pushFollow(FOLLOW_94);
             rule__MobaRESTCustomService__UnorderedGroup_6__Impl();
 
             state._fsp--;
@@ -52515,7 +52515,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15970:1: ( rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__4 )? )
             // InternalMoba.g:15971:2: rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__4 )?
             {
-            pushFollow(FOLLOW_95);
+            pushFollow(FOLLOW_94);
             rule__MobaRESTCustomService__UnorderedGroup_6__Impl();
 
             state._fsp--;
@@ -52585,7 +52585,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:15982:1: ( rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__5 )? )
             // InternalMoba.g:15983:2: rule__MobaRESTCustomService__UnorderedGroup_6__Impl ( rule__MobaRESTCustomService__UnorderedGroup_6__5 )?
             {
-            pushFollow(FOLLOW_95);
+            pushFollow(FOLLOW_94);
             rule__MobaRESTCustomService__UnorderedGroup_6__Impl();
 
             state._fsp--;
@@ -52889,7 +52889,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16065:1: ( rule__MobaRESTPayloadDefinition__UnorderedGroup_1__Impl ( rule__MobaRESTPayloadDefinition__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16066:2: rule__MobaRESTPayloadDefinition__UnorderedGroup_1__Impl ( rule__MobaRESTPayloadDefinition__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_96);
+            pushFollow(FOLLOW_95);
             rule__MobaRESTPayloadDefinition__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -53340,7 +53340,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16193:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16194:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -53407,7 +53407,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16205:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__2 )? )
             // InternalMoba.g:16206:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -53474,7 +53474,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16217:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__3 )? )
             // InternalMoba.g:16218:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__3 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -53541,7 +53541,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16229:1: ( rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__4 )? )
             // InternalMoba.g:16230:2: rule__MobaEntityAttribute__UnorderedGroup_1__Impl ( rule__MobaEntityAttribute__UnorderedGroup_1__4 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaEntityAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54001,7 +54001,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16357:1: ( rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16358:2: rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaSettingsAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54068,7 +54068,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16369:1: ( rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__2 )? )
             // InternalMoba.g:16370:2: rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaSettingsAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54135,7 +54135,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16381:1: ( rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__3 )? )
             // InternalMoba.g:16382:2: rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__3 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaSettingsAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54202,7 +54202,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16393:1: ( rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__4 )? )
             // InternalMoba.g:16394:2: rule__MobaSettingsAttribute__UnorderedGroup_1__Impl ( rule__MobaSettingsAttribute__UnorderedGroup_1__4 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaSettingsAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54556,7 +54556,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16491:1: ( rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl ( rule__MobaSettingsEntityReference__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16492:2: rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl ( rule__MobaSettingsEntityReference__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54617,7 +54617,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16503:1: ( rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl ( rule__MobaSettingsEntityReference__UnorderedGroup_1__2 )? )
             // InternalMoba.g:16504:2: rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl ( rule__MobaSettingsEntityReference__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaSettingsEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -54965,7 +54965,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16601:1: ( rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16602:2: rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -55026,7 +55026,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16613:1: ( rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__2 )? )
             // InternalMoba.g:16614:2: rule__MobaEntityReference__UnorderedGroup_1__Impl ( rule__MobaEntityReference__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaEntityReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -55480,7 +55480,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16741:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16742:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -55547,7 +55547,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16753:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__2 )? )
             // InternalMoba.g:16754:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -55614,7 +55614,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16765:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__3 )? )
             // InternalMoba.g:16766:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__3 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -55681,7 +55681,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16777:1: ( rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__4 )? )
             // InternalMoba.g:16778:2: rule__MobaDtoAttribute__UnorderedGroup_1__Impl ( rule__MobaDtoAttribute__UnorderedGroup_1__4 )?
             {
-            pushFollow(FOLLOW_97);
+            pushFollow(FOLLOW_96);
             rule__MobaDtoAttribute__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -55982,7 +55982,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16860:1: ( rule__MobaDtoAttribute__UnorderedGroup_5__Impl ( rule__MobaDtoAttribute__UnorderedGroup_5__1 )? )
             // InternalMoba.g:16861:2: rule__MobaDtoAttribute__UnorderedGroup_5__Impl ( rule__MobaDtoAttribute__UnorderedGroup_5__1 )?
             {
-            pushFollow(FOLLOW_99);
+            pushFollow(FOLLOW_98);
             rule__MobaDtoAttribute__UnorderedGroup_5__Impl();
 
             state._fsp--;
@@ -56327,7 +56327,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16958:1: ( rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__1 )? )
             // InternalMoba.g:16959:2: rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaDtoReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -56388,7 +56388,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:16970:1: ( rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__2 )? )
             // InternalMoba.g:16971:2: rule__MobaDtoReference__UnorderedGroup_1__Impl ( rule__MobaDtoReference__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaDtoReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -56736,7 +56736,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:17068:1: ( rule__MobaQueueReference__UnorderedGroup_1__Impl ( rule__MobaQueueReference__UnorderedGroup_1__1 )? )
             // InternalMoba.g:17069:2: rule__MobaQueueReference__UnorderedGroup_1__Impl ( rule__MobaQueueReference__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaQueueReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -56797,7 +56797,7 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
             // InternalMoba.g:17080:1: ( rule__MobaQueueReference__UnorderedGroup_1__Impl ( rule__MobaQueueReference__UnorderedGroup_1__2 )? )
             // InternalMoba.g:17081:2: rule__MobaQueueReference__UnorderedGroup_1__Impl ( rule__MobaQueueReference__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_98);
+            pushFollow(FOLLOW_97);
             rule__MobaQueueReference__UnorderedGroup_1__Impl();
 
             state._fsp--;
@@ -60372,30 +60372,30 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaCache__CacheTypeConstAssignment_2_1_0_2_1"
-    // InternalMoba.g:18342:1: rule__MobaCache__CacheTypeConstAssignment_2_1_0_2_1 : ( ( RULE_ID ) ) ;
+    // InternalMoba.g:18342:1: rule__MobaCache__CacheTypeConstAssignment_2_1_0_2_1 : ( ( RULE_CONSTANT ) ) ;
     public final void rule__MobaCache__CacheTypeConstAssignment_2_1_0_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:18346:1: ( ( ( RULE_ID ) ) )
-            // InternalMoba.g:18347:2: ( ( RULE_ID ) )
+            // InternalMoba.g:18346:1: ( ( ( RULE_CONSTANT ) ) )
+            // InternalMoba.g:18347:2: ( ( RULE_CONSTANT ) )
             {
-            // InternalMoba.g:18347:2: ( ( RULE_ID ) )
-            // InternalMoba.g:18348:3: ( RULE_ID )
+            // InternalMoba.g:18347:2: ( ( RULE_CONSTANT ) )
+            // InternalMoba.g:18348:3: ( RULE_CONSTANT )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0()); 
             }
-            // InternalMoba.g:18349:3: ( RULE_ID )
-            // InternalMoba.g:18350:4: RULE_ID
+            // InternalMoba.g:18349:3: ( RULE_CONSTANT )
+            // InternalMoba.g:18350:4: RULE_CONSTANT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1()); 
+               before(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_CONSTANT,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1()); 
+               after(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1()); 
             }
 
             }
@@ -60466,30 +60466,30 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MobaCache__CacheStrategyConstAssignment_2_1_1_2_1"
-    // InternalMoba.g:18376:1: rule__MobaCache__CacheStrategyConstAssignment_2_1_1_2_1 : ( ( RULE_ID ) ) ;
+    // InternalMoba.g:18376:1: rule__MobaCache__CacheStrategyConstAssignment_2_1_1_2_1 : ( ( RULE_CONSTANT ) ) ;
     public final void rule__MobaCache__CacheStrategyConstAssignment_2_1_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMoba.g:18380:1: ( ( ( RULE_ID ) ) )
-            // InternalMoba.g:18381:2: ( ( RULE_ID ) )
+            // InternalMoba.g:18380:1: ( ( ( RULE_CONSTANT ) ) )
+            // InternalMoba.g:18381:2: ( ( RULE_CONSTANT ) )
             {
-            // InternalMoba.g:18381:2: ( ( RULE_ID ) )
-            // InternalMoba.g:18382:3: ( RULE_ID )
+            // InternalMoba.g:18381:2: ( ( RULE_CONSTANT ) )
+            // InternalMoba.g:18382:3: ( RULE_CONSTANT )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0()); 
             }
-            // InternalMoba.g:18383:3: ( RULE_ID )
-            // InternalMoba.g:18384:4: RULE_ID
+            // InternalMoba.g:18383:3: ( RULE_CONSTANT )
+            // InternalMoba.g:18384:4: RULE_CONSTANT
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1()); 
+               before(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_CONSTANT,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1()); 
+               after(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1()); 
             }
 
             }
@@ -70984,54 +70984,53 @@ public class InternalMobaParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000002L,0x00000000A0000000L});
     public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
     public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001800L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0008000000000000L,0x0000000000000400L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000200000000000L,0x0000000520004000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000002L,0x0000000520000000L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000200000000000L,0x0000000520000000L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000200000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000000L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000000000000L,0x0000000000FC0000L});
-    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000200000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000000002L,0x0000000002000000L});
-    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x000001E000000000L});
-    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000000L,0x0400000001000000L});
-    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000090L});
-    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000200000000000L,0x0000000010000000L});
-    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000002L,0x0000000010000000L});
-    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L,0x0000000000000780L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000000L,0x00000000400000C0L});
-    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000980L});
-    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x00000002000000C0L});
-    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000000L,0x0000000000000100L});
-    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000840000000L});
-    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x0000000A000000C0L});
-    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x00000008000000C0L});
-    public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000001F00000000L});
-    public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000100L});
-    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000001100000000L});
-    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000880L});
-    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000480L});
-    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
-    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0020000000000000L});
-    public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x000000001C000000L});
-    public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x00000000E0000000L});
-    public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000C00000000002L});
-    public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0110000000000002L});
-    public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x0008000000000002L,0x7C00000000000006L,0x0000000000000007L});
-    public static final BitSet FOLLOW_92 = new BitSet(new long[]{0x0000000000000002L,0x00000000000000C0L});
-    public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001800L});
-    public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x0008000000000002L,0x0000000000000400L});
-    public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x0000000000000002L,0x0000000000FC0000L});
-    public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000000002L,0x0400000001000000L});
-    public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L,0x0000000000000780L});
-    public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000980L});
-    public static final BitSet FOLLOW_99 = new BitSet(new long[]{0x0000000000000002L,0x0000000840000000L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0008000000000000L,0x0000000000000400L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000200000000000L,0x0000000520004000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000002L,0x0000000520000000L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000200000000000L,0x0000000520000000L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000200000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000000L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x0000000000FC0000L});
+    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000200000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000002L,0x0000000002000000L});
+    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x000001E000000000L});
+    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000000000000L,0x0400000001000000L});
+    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000090L});
+    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000200000000000L,0x0000000010000000L});
+    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000002L,0x0000000010000000L});
+    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L,0x0000000000000780L});
+    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x00000000400000C0L});
+    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000980L});
+    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x00000002000000C0L});
+    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000000000L,0x0000000840000000L});
+    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000A000000C0L});
+    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x00000008000000C0L});
+    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000001F00000000L});
+    public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000100L});
+    public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000001100000000L});
+    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000880L});
+    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000480L});
+    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0020000000000000L});
+    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000003000000L});
+    public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x000000001C000000L});
+    public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x00000000E0000000L});
+    public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000C00000000002L});
+    public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0110000000000002L});
+    public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0008000000000002L,0x7C00000000000006L,0x0000000000000007L});
+    public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x0000000000000002L,0x00000000000000C0L});
+    public static final BitSet FOLLOW_92 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001800L});
+    public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0008000000000002L,0x0000000000000400L});
+    public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x0000000000000002L,0x0000000000FC0000L});
+    public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x0000000000000002L,0x0400000001000000L});
+    public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L,0x0000000000000780L});
+    public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000980L});
+    public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x0000000000000002L,0x0000000840000000L});
 
 }

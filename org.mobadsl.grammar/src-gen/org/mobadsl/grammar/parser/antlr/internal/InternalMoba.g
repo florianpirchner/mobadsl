@@ -2571,7 +2571,7 @@ ruleMobaCache returns [EObject current=null]
 														$current = createModelElement(grammarAccess.getMobaCacheRule());
 													}
 												}
-												otherlv_7=RULE_ID
+												otherlv_7=RULE_CONSTANT
 												{
 													newLeafNode(otherlv_7, grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0());
 												}
@@ -2624,7 +2624,7 @@ ruleMobaCache returns [EObject current=null]
 														$current = createModelElement(grammarAccess.getMobaCacheRule());
 													}
 												}
-												otherlv_11=RULE_ID
+												otherlv_11=RULE_CONSTANT
 												{
 													newLeafNode(otherlv_11, grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0());
 												}

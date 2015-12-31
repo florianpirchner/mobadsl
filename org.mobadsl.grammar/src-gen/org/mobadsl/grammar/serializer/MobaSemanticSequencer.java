@@ -361,7 +361,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaCache returns MobaCache
 	 *
 	 * Constraint:
-	 *     (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|ID] | cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|ID])*
+	 *     (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT] | cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT])*
 	 */
 	protected void sequence_MobaCache(ISerializationContext context, MobaCache semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

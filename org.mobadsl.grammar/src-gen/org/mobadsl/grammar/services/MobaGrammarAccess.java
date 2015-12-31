@@ -1559,7 +1559,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCacheTypeStringSTRINGTerminalRuleCall_2_1_0_2_0_0 = (RuleCall)cCacheTypeStringAssignment_2_1_0_2_0.eContents().get(0);
 		private final Assignment cCacheTypeConstAssignment_2_1_0_2_1 = (Assignment)cAlternatives_2_1_0_2.eContents().get(1);
 		private final CrossReference cCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0 = (CrossReference)cCacheTypeConstAssignment_2_1_0_2_1.eContents().get(0);
-		private final RuleCall cCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1 = (RuleCall)cCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0.eContents().get(1);
+		private final RuleCall cCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1 = (RuleCall)cCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0.eContents().get(1);
 		private final Group cGroup_2_1_1 = (Group)cUnorderedGroup_2_1.eContents().get(1);
 		private final Keyword cStrategyKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2_1_1_1 = (Keyword)cGroup_2_1_1.eContents().get(1);
@@ -1568,18 +1568,18 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCacheStrategyStringSTRINGTerminalRuleCall_2_1_1_2_0_0 = (RuleCall)cCacheStrategyStringAssignment_2_1_1_2_0.eContents().get(0);
 		private final Assignment cCacheStrategyConstAssignment_2_1_1_2_1 = (Assignment)cAlternatives_2_1_1_2.eContents().get(1);
 		private final CrossReference cCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0 = (CrossReference)cCacheStrategyConstAssignment_2_1_1_2_1.eContents().get(0);
-		private final RuleCall cCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1 = (RuleCall)cCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0.eContents().get(1);
+		private final RuleCall cCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1 = (RuleCall)cCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//MobaCache:
 		//	{MobaCache}
-		//	'cache' ('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant]))?
+		//	'cache' ('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT]))?
 		//	// strategy
-		//	& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant]))?) ')')?;
+		//	& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT]))?) ')')?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{MobaCache} 'cache' ('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant]))? // strategy
-		//& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant]))?) ')')?
+		//{MobaCache} 'cache' ('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT]))? // strategy
+		//& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT]))?) ')')?
 		public Group getGroup() { return cGroup; }
 		
 		//{MobaCache}
@@ -1588,18 +1588,18 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'cache'
 		public Keyword getCacheKeyword_1() { return cCacheKeyword_1; }
 		
-		//('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant]))? // strategy
-		//& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant]))?) ')')?
+		//('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT]))? // strategy
+		//& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT]))?) ')')?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 		
-		//(('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant]))? // strategy
-		//& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant]))?)
+		//(('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT]))? // strategy
+		//& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT]))?)
 		public UnorderedGroup getUnorderedGroup_2_1() { return cUnorderedGroup_2_1; }
 		
-		//('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant]))?
+		//('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT]))?
 		public Group getGroup_2_1_0() { return cGroup_2_1_0; }
 		
 		//'type'
@@ -1608,7 +1608,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_2_1_0_1() { return cEqualsSignKeyword_2_1_0_1; }
 		
-		//(cacheTypeString=STRING | cacheTypeConst=[MobaConstant])
+		//(cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT])
 		public Alternatives getAlternatives_2_1_0_2() { return cAlternatives_2_1_0_2; }
 		
 		//cacheTypeString=STRING
@@ -1617,16 +1617,16 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getCacheTypeStringSTRINGTerminalRuleCall_2_1_0_2_0_0() { return cCacheTypeStringSTRINGTerminalRuleCall_2_1_0_2_0_0; }
 		
-		//cacheTypeConst=[MobaConstant]
+		//cacheTypeConst=[MobaConstant|CONSTANT]
 		public Assignment getCacheTypeConstAssignment_2_1_0_2_1() { return cCacheTypeConstAssignment_2_1_0_2_1; }
 		
-		//[MobaConstant]
+		//[MobaConstant|CONSTANT]
 		public CrossReference getCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0() { return cCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0; }
 		
-		//ID
-		public RuleCall getCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1() { return cCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1; }
+		//CONSTANT
+		public RuleCall getCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1() { return cCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1; }
 		
-		//('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant]))?
+		//('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT]))?
 		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
 		
 		//'strategy'
@@ -1635,7 +1635,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_2_1_1_1() { return cEqualsSignKeyword_2_1_1_1; }
 		
-		//(cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant])
+		//(cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT])
 		public Alternatives getAlternatives_2_1_1_2() { return cAlternatives_2_1_1_2; }
 		
 		//cacheStrategyString=STRING
@@ -1644,14 +1644,14 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getCacheStrategyStringSTRINGTerminalRuleCall_2_1_1_2_0_0() { return cCacheStrategyStringSTRINGTerminalRuleCall_2_1_1_2_0_0; }
 		
-		//cacheStrategyConst=[MobaConstant]
+		//cacheStrategyConst=[MobaConstant|CONSTANT]
 		public Assignment getCacheStrategyConstAssignment_2_1_1_2_1() { return cCacheStrategyConstAssignment_2_1_1_2_1; }
 		
-		//[MobaConstant]
+		//[MobaConstant|CONSTANT]
 		public CrossReference getCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0() { return cCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0; }
 		
-		//ID
-		public RuleCall getCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1() { return cCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1; }
+		//CONSTANT
+		public RuleCall getCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1() { return cCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
@@ -5226,9 +5226,9 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//MobaCache:
 	//	{MobaCache}
-	//	'cache' ('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant]))?
+	//	'cache' ('(' (('type' '=' (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT]))?
 	//	// strategy
-	//	& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant]))?) ')')?;
+	//	& ('strategy' '=' (cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT]))?) ')')?;
 	public MobaCacheElements getMobaCacheAccess() {
 		return pMobaCache;
 	}

@@ -18347,9 +18347,9 @@ rule__MobaCache__CacheTypeConstAssignment_2_1_0_2_1
 	(
 		{ before(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0()); }
 		(
-			{ before(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1()); }
-			RULE_ID
-			{ after(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantIDTerminalRuleCall_2_1_0_2_1_0_1()); }
+			{ before(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1()); }
+			RULE_CONSTANT
+			{ after(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_2_1_0_1()); }
 		)
 		{ after(grammarAccess.getMobaCacheAccess().getCacheTypeConstMobaConstantCrossReference_2_1_0_2_1_0()); }
 	)
@@ -18381,9 +18381,9 @@ rule__MobaCache__CacheStrategyConstAssignment_2_1_1_2_1
 	(
 		{ before(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0()); }
 		(
-			{ before(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1()); }
-			RULE_ID
-			{ after(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantIDTerminalRuleCall_2_1_1_2_1_0_1()); }
+			{ before(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1()); }
+			RULE_CONSTANT
+			{ after(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCONSTANTTerminalRuleCall_2_1_1_2_1_0_1()); }
 		)
 		{ after(grammarAccess.getMobaCacheAccess().getCacheStrategyConstMobaConstantCrossReference_2_1_1_2_1_0()); }
 	)
