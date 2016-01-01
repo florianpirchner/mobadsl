@@ -50,6 +50,7 @@ public class MobaDtoEmbeddableItemProvider extends MobaDtoFeatureItemProvider {
 
 			addTransientPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addAliasPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,6 +95,28 @@ public class MobaDtoEmbeddableItemProvider extends MobaDtoFeatureItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Alias feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAliasPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDtoEmbeddable_alias_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoEmbeddable_alias_feature", "_UI_MobaDtoEmbeddable_type"),
+				 MobaPackage.Literals.MOBA_DTO_EMBEDDABLE__ALIAS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -167,6 +190,7 @@ public class MobaDtoEmbeddableItemProvider extends MobaDtoFeatureItemProvider {
 
 		switch (notification.getFeatureID(MobaDtoEmbeddable.class)) {
 			case MobaPackage.MOBA_DTO_EMBEDDABLE__TRANSIENT:
+			case MobaPackage.MOBA_DTO_EMBEDDABLE__ALIAS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaPackage.MOBA_DTO_EMBEDDABLE__MULTIPLICITY:

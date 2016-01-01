@@ -12,9 +12,8 @@ import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Cache</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Cache</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -23,6 +22,8 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheTypeConst <em>Cache Type Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheStrategyString <em>Cache Strategy String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheStrategyConst <em>Cache Strategy Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheIntervalInt <em>Cache Interval Int</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheIntervalConst <em>Cache Interval Const</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,8 +31,8 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
 public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaCache {
 	/**
 	 * The default value of the '{@link #getCacheTypeString() <em>Cache Type String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getCacheTypeString()
 	 * @generated
 	 * @ordered
@@ -40,8 +41,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 
 	/**
 	 * The cached value of the '{@link #getCacheTypeString() <em>Cache Type String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getCacheTypeString()
 	 * @generated
 	 * @ordered
@@ -50,8 +51,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 
 	/**
 	 * The cached value of the '{@link #getCacheTypeConst() <em>Cache Type Const</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getCacheTypeConst()
 	 * @generated
 	 * @ordered
@@ -60,8 +61,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 
 	/**
 	 * The default value of the '{@link #getCacheStrategyString() <em>Cache Strategy String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getCacheStrategyString()
 	 * @generated
 	 * @ordered
@@ -70,8 +71,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 
 	/**
 	 * The cached value of the '{@link #getCacheStrategyString() <em>Cache Strategy String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getCacheStrategyString()
 	 * @generated
 	 * @ordered
@@ -80,8 +81,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 
 	/**
 	 * The cached value of the '{@link #getCacheStrategyConst() <em>Cache Strategy Const</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getCacheStrategyConst()
 	 * @generated
 	 * @ordered
@@ -89,8 +90,37 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	protected MobaConstant cacheStrategyConst;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The default value of the '{@link #getCacheIntervalInt() <em>Cache Interval Int</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getCacheIntervalInt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CACHE_INTERVAL_INT_EDEFAULT = -1;
+
+	/**
+	 * The cached value of the '{@link #getCacheIntervalInt() <em>Cache Interval Int</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getCacheIntervalInt()
+	 * @generated
+	 * @ordered
+	 */
+	protected int cacheIntervalInt = CACHE_INTERVAL_INT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCacheIntervalConst() <em>Cache Interval Const</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @see #getCacheIntervalConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaConstant cacheIntervalConst;
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected MobaCacheImpl() {
@@ -98,8 +128,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -108,8 +137,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getCacheTypeString() {
@@ -117,8 +145,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCacheTypeString(String newCacheTypeString) {
@@ -129,8 +156,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaConstant getCacheTypeConst() {
@@ -146,8 +172,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaConstant basicGetCacheTypeConst() {
@@ -155,8 +180,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCacheTypeConst(MobaConstant newCacheTypeConst) {
@@ -167,8 +191,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getCacheStrategyString() {
@@ -176,8 +199,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCacheStrategyString(String newCacheStrategyString) {
@@ -188,8 +210,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaConstant getCacheStrategyConst() {
@@ -205,8 +226,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaConstant basicGetCacheStrategyConst() {
@@ -214,8 +234,7 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCacheStrategyConst(MobaConstant newCacheStrategyConst) {
@@ -226,8 +245,61 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getCacheIntervalInt() {
+		return cacheIntervalInt;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCacheIntervalInt(int newCacheIntervalInt) {
+		int oldCacheIntervalInt = cacheIntervalInt;
+		cacheIntervalInt = newCacheIntervalInt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_CACHE__CACHE_INTERVAL_INT, oldCacheIntervalInt, cacheIntervalInt));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant getCacheIntervalConst() {
+		if (cacheIntervalConst != null && cacheIntervalConst.eIsProxy()) {
+			InternalEObject oldCacheIntervalConst = (InternalEObject)cacheIntervalConst;
+			cacheIntervalConst = (MobaConstant)eResolveProxy(oldCacheIntervalConst);
+			if (cacheIntervalConst != oldCacheIntervalConst) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST, oldCacheIntervalConst, cacheIntervalConst));
+			}
+		}
+		return cacheIntervalConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaConstant basicGetCacheIntervalConst() {
+		return cacheIntervalConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCacheIntervalConst(MobaConstant newCacheIntervalConst) {
+		MobaConstant oldCacheIntervalConst = cacheIntervalConst;
+		cacheIntervalConst = newCacheIntervalConst;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST, oldCacheIntervalConst, cacheIntervalConst));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -243,13 +315,17 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 			case MobaPackage.MOBA_CACHE__CACHE_STRATEGY_CONST:
 				if (resolve) return getCacheStrategyConst();
 				return basicGetCacheStrategyConst();
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_INT:
+				return getCacheIntervalInt();
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
+				if (resolve) return getCacheIntervalConst();
+				return basicGetCacheIntervalConst();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -267,13 +343,18 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 			case MobaPackage.MOBA_CACHE__CACHE_STRATEGY_CONST:
 				setCacheStrategyConst((MobaConstant)newValue);
 				return;
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_INT:
+				setCacheIntervalInt((Integer)newValue);
+				return;
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
+				setCacheIntervalConst((MobaConstant)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -291,13 +372,18 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 			case MobaPackage.MOBA_CACHE__CACHE_STRATEGY_CONST:
 				setCacheStrategyConst((MobaConstant)null);
 				return;
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_INT:
+				setCacheIntervalInt(CACHE_INTERVAL_INT_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
+				setCacheIntervalConst((MobaConstant)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -311,13 +397,16 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 				return CACHE_STRATEGY_STRING_EDEFAULT == null ? cacheStrategyString != null : !CACHE_STRATEGY_STRING_EDEFAULT.equals(cacheStrategyString);
 			case MobaPackage.MOBA_CACHE__CACHE_STRATEGY_CONST:
 				return cacheStrategyConst != null;
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_INT:
+				return cacheIntervalInt != CACHE_INTERVAL_INT_EDEFAULT;
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
+				return cacheIntervalConst != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -329,10 +418,12 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 		result.append(cacheTypeString);
 		result.append(", cacheStrategyString: ");
 		result.append(cacheStrategyString);
+		result.append(", cacheIntervalInt: ");
+		result.append(cacheIntervalInt);
 		result.append(')');
 		return result.toString();
 	}
-	
+
 	@Override
 	public String getCacheType() {
 		if (getCacheTypeConst() != null) {
@@ -349,4 +440,12 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 		return getCacheStrategyString();
 	}
 
-} //MobaCacheImpl
+	@Override
+	public int getCacheInterval() {
+		if (getCacheIntervalConst() != null) {
+			return getCacheIntervalConst().getValueAST().getValueInt();
+		}
+		return getCacheIntervalInt();
+	}
+
+} // MobaCacheImpl

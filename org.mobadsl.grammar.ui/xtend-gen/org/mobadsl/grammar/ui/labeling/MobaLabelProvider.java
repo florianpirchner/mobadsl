@@ -118,6 +118,9 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
     _builder.append(" / ");
     String _cacheType = cache.getCacheType();
     _builder.append(_cacheType, "");
+    _builder.append(" / ");
+    int _cacheInterval = cache.getCacheInterval();
+    _builder.append(_cacheInterval, "");
     _builder.append(")");
     return this.getDisplayString("Cache", _builder.toString());
   }

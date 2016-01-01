@@ -853,8 +853,17 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaApplication_Features() {
+	public EReference getMobaApplication_Cache() {
 		return (EReference)mobaApplicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaApplication_Features() {
+		return (EReference)mobaApplicationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1494,6 +1503,24 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EReference getMobaCache_CacheStrategyConst() {
 		return (EReference)mobaCacheEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaCache_CacheIntervalInt() {
+		return (EAttribute)mobaCacheEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaCache_CacheIntervalConst() {
+		return (EReference)mobaCacheEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3256,6 +3283,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaProjectEClass, MOBA_PROJECT__BACKGROUND_APPLICATION);
 
 		mobaApplicationEClass = createEClass(MOBA_APPLICATION);
+		createEReference(mobaApplicationEClass, MOBA_APPLICATION__CACHE);
 		createEReference(mobaApplicationEClass, MOBA_APPLICATION__FEATURES);
 
 		mobaApplicationFeatureEClass = createEClass(MOBA_APPLICATION_FEATURE);
@@ -3367,6 +3395,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaCacheEClass, MOBA_CACHE__CACHE_TYPE_CONST);
 		createEAttribute(mobaCacheEClass, MOBA_CACHE__CACHE_STRATEGY_STRING);
 		createEReference(mobaCacheEClass, MOBA_CACHE__CACHE_STRATEGY_CONST);
+		createEAttribute(mobaCacheEClass, MOBA_CACHE__CACHE_INTERVAL_INT);
+		createEReference(mobaCacheEClass, MOBA_CACHE__CACHE_INTERVAL_CONST);
 
 		mobaEntityEClass = createEClass(MOBA_ENTITY);
 		createEAttribute(mobaEntityEClass, MOBA_ENTITY__NAME);
@@ -3722,6 +3752,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaProject_BackgroundApplication(), this.getMobaApplication(), null, "backgroundApplication", null, 0, 1, MobaProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaApplicationEClass, MobaApplication.class, "MobaApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaApplication_Cache(), this.getMobaCache(), null, "cache", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaApplication_Features(), this.getMobaApplicationFeature(), null, "features", null, 0, -1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaApplicationFeatureEClass, MobaApplicationFeature.class, "MobaApplicationFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3833,6 +3864,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaCache_CacheTypeConst(), this.getMobaConstant(), null, "cacheTypeConst", null, 0, 1, MobaCache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaCache_CacheStrategyString(), ecorePackage.getEString(), "cacheStrategyString", null, 0, 1, MobaCache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaCache_CacheStrategyConst(), this.getMobaConstant(), null, "cacheStrategyConst", null, 0, 1, MobaCache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaCache_CacheIntervalInt(), ecorePackage.getEInt(), "cacheIntervalInt", "-1", 0, 1, MobaCache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaCache_CacheIntervalConst(), this.getMobaConstant(), null, "cacheIntervalConst", null, 0, 1, MobaCache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaEntityEClass, MobaEntity.class, "MobaEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

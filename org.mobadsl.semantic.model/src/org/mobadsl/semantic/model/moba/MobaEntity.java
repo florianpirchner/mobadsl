@@ -123,14 +123,16 @@ public interface MobaEntity extends MobaData {
 	EList<MobaEntityFeature> getFeatures();
 
 	/**
-	 * Returns the value of the '<em><b>Indizes</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaEntityIndex}.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Indizes</b></em>' containment reference
+	 * list. The list contents are of type
+	 * {@link org.mobadsl.semantic.model.moba.MobaEntityIndex}. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Indizes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
+	 * If the meaning of the '<em>Indizes</em>' containment reference list isn't
+	 * clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Indizes</em>' containment reference list.
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntity_Indizes()
 	 * @model containment="true"
@@ -151,7 +153,7 @@ public interface MobaEntity extends MobaData {
 	 * @return
 	 */
 	List<MobaEntityReference> getReferences();
-	
+
 	/**
 	 * Returns the values for the current instance. Excluding the "super types".
 	 * 
@@ -179,7 +181,7 @@ public interface MobaEntity extends MobaData {
 	 * @return
 	 */
 	List<MobaEntityReference> getAllReferences();
-	
+
 	/**
 	 * Returns the values for the current instance. Including the "super types".
 	 * 
@@ -238,7 +240,7 @@ public interface MobaEntity extends MobaData {
 	 * @return
 	 */
 	List<MobaEntityReference> getGenReferences();
-	
+
 	/**
 	 * Returns the generator specific values for the current instance. Including
 	 * the "super types".
@@ -251,5 +253,13 @@ public interface MobaEntity extends MobaData {
 	 * @return
 	 */
 	List<MobaEntityEmbeddable> getGenEmbeddables();
+
+	/**
+	 * Returns the cache of this entity if not null. Otherwise the cache from
+	 * the containing application.
+	 * 
+	 * @return
+	 */
+	MobaCache getGenCache();
 
 } // MobaDto

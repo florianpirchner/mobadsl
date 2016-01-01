@@ -60,6 +60,7 @@ public class MobaApplicationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_APPLICATION__CACHE);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_APPLICATION__FEATURES);
 		}
 		return childrenFeatures;
@@ -116,6 +117,7 @@ public class MobaApplicationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaApplication.class)) {
+			case MobaPackage.MOBA_APPLICATION__CACHE:
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -133,6 +135,11 @@ public class MobaApplicationItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__CACHE,
+				 MobaFactory.eINSTANCE.createMobaCache()));
 
 		newChildDescriptors.add
 			(createChildParameter

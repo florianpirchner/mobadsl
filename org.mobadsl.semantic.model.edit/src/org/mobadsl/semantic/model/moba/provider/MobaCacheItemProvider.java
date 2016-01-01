@@ -61,6 +61,8 @@ public class MobaCacheItemProvider
 			addCacheTypeConstPropertyDescriptor(object);
 			addCacheStrategyStringPropertyDescriptor(object);
 			addCacheStrategyConstPropertyDescriptor(object);
+			addCacheIntervalIntPropertyDescriptor(object);
+			addCacheIntervalConstPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -154,6 +156,50 @@ public class MobaCacheItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Cache Interval Int feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCacheIntervalIntPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaCache_cacheIntervalInt_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaCache_cacheIntervalInt_feature", "_UI_MobaCache_type"),
+				 MobaPackage.Literals.MOBA_CACHE__CACHE_INTERVAL_INT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Cache Interval Const feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCacheIntervalConstPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaCache_cacheIntervalConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaCache_cacheIntervalConst_feature", "_UI_MobaCache_type"),
+				 MobaPackage.Literals.MOBA_CACHE__CACHE_INTERVAL_CONST,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MobaCache.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,6 +239,7 @@ public class MobaCacheItemProvider
 		switch (notification.getFeatureID(MobaCache.class)) {
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_STRING:
 			case MobaPackage.MOBA_CACHE__CACHE_STRATEGY_STRING:
+			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_INT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

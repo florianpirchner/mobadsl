@@ -875,6 +875,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaSettingsEntityReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaSettingsEntityReferenceItemProvider mobaSettingsEntityReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaSettingsEntityReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaSettingsEntityReferenceAdapter() {
+		if (mobaSettingsEntityReferenceItemProvider == null) {
+			mobaSettingsEntityReferenceItemProvider = new MobaSettingsEntityReferenceItemProvider(this);
+		}
+
+		return mobaSettingsEntityReferenceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRegexpConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1541,6 +1564,8 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaConstantValueItemProvider != null) mobaConstantValueItemProvider.dispose();
 		if (mobaPropertyItemProvider != null) mobaPropertyItemProvider.dispose();
 		if (mobaSettingsItemProvider != null) mobaSettingsItemProvider.dispose();
+		if (mobaSettingsAttributeItemProvider != null) mobaSettingsAttributeItemProvider.dispose();
+		if (mobaSettingsEntityReferenceItemProvider != null) mobaSettingsEntityReferenceItemProvider.dispose();
 		if (mobaCacheItemProvider != null) mobaCacheItemProvider.dispose();
 		if (mobaEntityItemProvider != null) mobaEntityItemProvider.dispose();
 		if (mobaEntityIndexItemProvider != null) mobaEntityIndexItemProvider.dispose();
@@ -1559,7 +1584,6 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaDtoEmbeddableItemProvider != null) mobaDtoEmbeddableItemProvider.dispose();
 		if (mobaQueueReferenceItemProvider != null) mobaQueueReferenceItemProvider.dispose();
 		if (mobaMuliplicityItemProvider != null) mobaMuliplicityItemProvider.dispose();
-		if (mobaSettingsAttributeItemProvider != null) mobaSettingsAttributeItemProvider.dispose();
 		if (mobaRegexpConstraintItemProvider != null) mobaRegexpConstraintItemProvider.dispose();
 		if (mobaMinConstraintItemProvider != null) mobaMinConstraintItemProvider.dispose();
 		if (mobaMaxConstraintItemProvider != null) mobaMaxConstraintItemProvider.dispose();

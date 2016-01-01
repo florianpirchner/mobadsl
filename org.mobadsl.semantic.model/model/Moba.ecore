@@ -17,6 +17,8 @@
         eType="#//MobaApplication"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaApplication" eSuperTypes="#//MobaModelFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cache" eType="#//MobaCache"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//MobaApplicationFeature" containment="true"/>
   </eClassifiers>
@@ -146,6 +148,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cacheTypeConst" eType="#//MobaConstant"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheStrategyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cacheStrategyConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheIntervalInt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cacheIntervalConst" eType="#//MobaConstant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaEntity" eSuperTypes="#//MobaData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

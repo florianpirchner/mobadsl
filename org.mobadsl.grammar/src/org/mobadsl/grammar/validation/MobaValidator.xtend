@@ -15,6 +15,7 @@ import org.eclipse.xtext.Constants
 import org.eclipse.xtext.validation.Check
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate
 import org.mobadsl.semantic.model.moba.MobaApplication
+import org.mobadsl.semantic.model.moba.MobaCache
 import org.mobadsl.semantic.model.moba.MobaConstant
 import org.mobadsl.semantic.model.moba.MobaConstantValue
 import org.mobadsl.semantic.model.moba.MobaDataType
@@ -588,6 +589,14 @@ class MobaValidator extends AbstractMobaValidator {
 		if (ref.opposite != null && ref.opposite.opposite == null) {
 			error("Opposite references must be defined on both sides", ref,
 				MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE)
+		}
+	}
+
+	@Check
+	def void checkCacheInterval(MobaCache cache) {
+		if (cache.cacheIntervalConst != null && cache.cacheIntervalConst.valueAST.valueType != ValueType.NUMERIC) {
+			error("The constant for interval needs to be a numeric type constant.", cache,
+				MobaPackage.Literals.MOBA_CACHE__CACHE_INTERVAL_CONST)
 		}
 	}
 }

@@ -17,7 +17,7 @@ MobaProject:
 	'}';
 
 MobaApplication:
-	'application' name=ID 'version' '=' version=VERSION MobaFriendsAble '{'
+	'application' name=ID 'version' '=' version=VERSION (cache=MobaCache)? MobaFriendsAble '{'
 	(features+=MobaApplicationFeature*)
 	'}';
 
@@ -120,10 +120,14 @@ MobaCache:
 	('('
 	// type
 	(('type' '=' (cacheTypeString=STRING |
-	cacheTypeConst=[MobaConstant|CONSTANT]))?
+	cacheTypeConst=[MobaConstant|CONSTANT]))
 	// strategy
 	& ('strategy' '=' (cacheStrategyString=STRING |
-	cacheStrategyConst=[MobaConstant|CONSTANT]))?) ')')?;
+	cacheStrategyConst=[MobaConstant|CONSTANT]))
+	// strategy
+	& ('interval' '=' (cacheIntervalInt=INT |
+	cacheIntervalConst=[MobaConstant|CONSTANT]))?
+	) ')')?;
 
 MobaEntity:
 	'entity' name=ID (('extends' superType=[MobaEntity])? & (cache=MobaCache)?) MobaFriendsAble '{'

@@ -999,13 +999,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_APPLICATION__VERSION = MOBA_MODEL_FEATURE__VERSION;
 
 	/**
+	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__CACHE = MOBA_MODEL_FEATURE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION__FEATURES = MOBA_MODEL_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_APPLICATION__FEATURES = MOBA_MODEL_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -1014,7 +1023,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_MODEL_FEATURE_FEATURE_COUNT + 1;
+	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_MODEL_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2191,13 +2200,31 @@ public interface MobaPackage extends EPackage {
 	int MOBA_CACHE__CACHE_STRATEGY_CONST = 3;
 
 	/**
+	 * The feature id for the '<em><b>Cache Interval Int</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_INTERVAL_INT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Cache Interval Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_INTERVAL_CONST = 5;
+
+	/**
 	 * The number of structural features of the '<em>Cache</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_CACHE_FEATURE_COUNT = 4;
+	int MOBA_CACHE_FEATURE_COUNT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -4992,6 +5019,17 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaApplication();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaApplication#getCache <em>Cache</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cache</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaApplication#getCache()
+	 * @see #getMobaApplication()
+	 * @generated
+	 */
+	EReference getMobaApplication_Cache();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5765,6 +5803,28 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMobaCache_CacheStrategyConst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalInt <em>Cache Interval Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cache Interval Int</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalInt()
+	 * @see #getMobaCache()
+	 * @generated
+	 */
+	EAttribute getMobaCache_CacheIntervalInt();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalConst <em>Cache Interval Const</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Cache Interval Const</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalConst()
+	 * @see #getMobaCache()
+	 * @generated
+	 */
+	EReference getMobaCache_CacheIntervalConst();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaEntity <em>Entity</em>}'.
@@ -7915,6 +7975,14 @@ public interface MobaPackage extends EPackage {
 		EClass MOBA_APPLICATION = eINSTANCE.getMobaApplication();
 
 		/**
+		 * The meta object literal for the '<em><b>Cache</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_APPLICATION__CACHE = eINSTANCE.getMobaApplication_Cache();
+
+		/**
 		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8523,6 +8591,22 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_CACHE__CACHE_STRATEGY_CONST = eINSTANCE.getMobaCache_CacheStrategyConst();
+
+		/**
+		 * The meta object literal for the '<em><b>Cache Interval Int</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_CACHE__CACHE_INTERVAL_INT = eINSTANCE.getMobaCache_CacheIntervalInt();
+
+		/**
+		 * The meta object literal for the '<em><b>Cache Interval Const</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_CACHE__CACHE_INTERVAL_CONST = eINSTANCE.getMobaCache_CacheIntervalConst();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl <em>Entity</em>}' class.

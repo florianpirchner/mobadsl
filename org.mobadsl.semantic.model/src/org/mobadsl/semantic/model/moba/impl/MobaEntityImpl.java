@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
@@ -90,8 +91,7 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 
 	/**
 	 * The cached value of the '{@link #getIndizes() <em>Indizes</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getIndizes()
 	 * @generated
 	 * @ordered
@@ -221,8 +221,7 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<MobaEntityIndex> getIndizes() {
@@ -424,7 +423,7 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	public List<MobaEntityReference> getGenReferences() {
 		return collectGen(this, MobaEntityReference.class);
 	}
-	
+
 	@Override
 	public List<MobaEntityEmbeddable> getEmbeddables() {
 		return collect(MobaEntityEmbeddable.class);
@@ -453,5 +452,13 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	@Override
 	public List<MobaProperty> getGenProperties() {
 		return MobaUtil.getGenFeatures(getAllProperties(), MobaPackage.Literals.MOBA_PROPERTY__KEY);
+	}
+
+	@Override
+	public MobaCache getGenCache() {
+		if (getCache() != null) {
+			return getCache();
+		}
+		return ((MobaApplication) eContainer()).getCache();
 	}
 } // MobaDtoImpl

@@ -361,27 +361,46 @@ ruleMobaApplication returns [EObject current=null]
 				}
 			)
 		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMobaApplicationAccess().getCacheMobaCacheParserRuleCall_5_0());
+				}
+				lv_cache_5_0=ruleMobaCache
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMobaApplicationRule());
+					}
+					set(
+						$current,
+						"cache",
+						lv_cache_5_0,
+						"org.mobadsl.grammar.Moba.MobaCache");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
 		{
 			if ($current==null) {
 				$current = createModelElement(grammarAccess.getMobaApplicationRule());
 			}
-			newCompositeNode(grammarAccess.getMobaApplicationAccess().getMobaFriendsAbleParserRuleCall_5());
+			newCompositeNode(grammarAccess.getMobaApplicationAccess().getMobaFriendsAbleParserRuleCall_6());
 		}
-		this_MobaFriendsAble_5=ruleMobaFriendsAble[$current]
+		this_MobaFriendsAble_6=ruleMobaFriendsAble[$current]
 		{
-			$current = $this_MobaFriendsAble_5.current;
+			$current = $this_MobaFriendsAble_6.current;
 			afterParserOrEnumRuleCall();
 		}
-		otherlv_6='{'
+		otherlv_7='{'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getMobaApplicationAccess().getLeftCurlyBracketKeyword_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_8_0());
 				}
-				lv_features_7_0=ruleMobaApplicationFeature
+				lv_features_8_0=ruleMobaApplicationFeature
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMobaApplicationRule());
@@ -389,15 +408,15 @@ ruleMobaApplication returns [EObject current=null]
 					add(
 						$current,
 						"features",
-						lv_features_7_0,
+						lv_features_8_0,
 						"org.mobadsl.grammar.Moba.MobaApplicationFeature");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_8='}'
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_8());
+			newLeafNode(otherlv_9, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;
@@ -2636,17 +2655,71 @@ ruleMobaCache returns [EObject current=null]
 							getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1());
 						}
 					)
+				)|
+				(
+					{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1(), 2)}?=>(
+						{
+							getUnorderedGroupHelper().select(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1(), 2);
+						}
+									({true}?=>(otherlv_12='interval'
+									{
+										newLeafNode(otherlv_12, grammarAccess.getMobaCacheAccess().getIntervalKeyword_2_1_2_0());
+									}
+									otherlv_13='='
+									{
+										newLeafNode(otherlv_13, grammarAccess.getMobaCacheAccess().getEqualsSignKeyword_2_1_2_1());
+									}
+									(
+										(
+											(
+												lv_cacheIntervalInt_14_0=RULE_INT
+												{
+													newLeafNode(lv_cacheIntervalInt_14_0, grammarAccess.getMobaCacheAccess().getCacheIntervalIntINTTerminalRuleCall_2_1_2_2_0_0());
+												}
+												{
+													if ($current==null) {
+														$current = createModelElement(grammarAccess.getMobaCacheRule());
+													}
+													setWithLastConsumed(
+														$current,
+														"cacheIntervalInt",
+														lv_cacheIntervalInt_14_0,
+														"org.mobadsl.grammar.Moba.INT");
+												}
+											)
+										)
+										    |
+										(
+											(
+												{
+													if ($current==null) {
+														$current = createModelElement(grammarAccess.getMobaCacheRule());
+													}
+												}
+												otherlv_15=RULE_CONSTANT
+												{
+													newLeafNode(otherlv_15, grammarAccess.getMobaCacheAccess().getCacheIntervalConstMobaConstantCrossReference_2_1_2_2_1_0());
+												}
+											)
+										)
+									)
+									))
+						{ 
+							getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1());
+						}
+					)
 				)
-						)*
+						)+
+						{getUnorderedGroupHelper().canLeave(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1())}?
 					)
 				)
 					{ 
 					  getUnorderedGroupHelper().leave(grammarAccess.getMobaCacheAccess().getUnorderedGroup_2_1());
 					}
 			)
-			otherlv_12=')'
+			otherlv_16=')'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getMobaCacheAccess().getRightParenthesisKeyword_2_2());
+				newLeafNode(otherlv_16, grammarAccess.getMobaCacheAccess().getRightParenthesisKeyword_2_2());
 			}
 		)?
 	)

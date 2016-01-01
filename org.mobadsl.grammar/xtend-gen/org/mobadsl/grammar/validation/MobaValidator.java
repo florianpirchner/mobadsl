@@ -32,6 +32,7 @@ import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
 import org.mobadsl.grammar.validation.AbstractMobaValidator;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaConstantValue;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -1140,6 +1141,26 @@ public class MobaValidator extends AbstractMobaValidator {
     if (_and_2) {
       this.error("Opposite references must be defined on both sides", ref, 
         MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE);
+    }
+  }
+  
+  @Check
+  public void checkCacheInterval(final MobaCache cache) {
+    boolean _and = false;
+    MobaConstant _cacheIntervalConst = cache.getCacheIntervalConst();
+    boolean _notEquals = (!Objects.equal(_cacheIntervalConst, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      MobaConstant _cacheIntervalConst_1 = cache.getCacheIntervalConst();
+      MobaConstantValue _valueAST = _cacheIntervalConst_1.getValueAST();
+      ValueType _valueType = _valueAST.getValueType();
+      boolean _notEquals_1 = (!Objects.equal(_valueType, ValueType.NUMERIC));
+      _and = _notEquals_1;
+    }
+    if (_and) {
+      this.error("The constant for interval needs to be a numeric type constant.", cache, 
+        MobaPackage.Literals.MOBA_CACHE__CACHE_INTERVAL_CONST);
     }
   }
 }

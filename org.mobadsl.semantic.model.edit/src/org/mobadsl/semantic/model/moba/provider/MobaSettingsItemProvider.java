@@ -212,6 +212,11 @@ public class MobaSettingsItemProvider extends MobaApplicationFeatureItemProvider
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_SETTINGS__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaSettingsAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_SETTINGS__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaSettingsEntityReference()));
 	}
 
 }

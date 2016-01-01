@@ -80,9 +80,9 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 	def text(MobaEntityAttribute att) {
 		return att.name.getDisplayString(att.type.name)
 	}
-	
+
 	def text(MobaCache cache) {
-		return "Cache".getDisplayString('''(«cache.cacheStrategy» / «cache.cacheType»)''')
+		return "Cache".getDisplayString('''(«cache.cacheStrategy» / «cache.cacheType» / «cache.cacheInterval»)''')
 	}
 
 	def text(MobaSettingsAttribute att) {
@@ -234,11 +234,11 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 	def image(MobaQueueReference ele) {
 		return super.doGetImage(ele.type)
 	}
-	
+
 	def image(MobaRESTPayloadDefinition ele) {
 		return "MobaDto.png"
 	}
-	
+
 	def image(MobaRESTAttribute ele) {
 		return "MobaFeature.png"
 	}

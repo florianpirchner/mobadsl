@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheTypeConst <em>Cache Type Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheStrategyString <em>Cache Strategy String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheStrategyConst <em>Cache Strategy Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalInt <em>Cache Interval Int</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalConst <em>Cache Interval Const</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaCache()
@@ -128,6 +130,59 @@ public interface MobaCache extends EObject {
 	void setCacheStrategyConst(MobaConstant value);
 
 	/**
+	 * Returns the value of the '<em><b>Cache Interval Int</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cache Interval Int</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cache Interval Int</em>' attribute.
+	 * @see #setCacheIntervalInt(int)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaCache_CacheIntervalInt()
+	 * @model default="-1"
+	 * @generated
+	 */
+	int getCacheIntervalInt();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalInt <em>Cache Interval Int</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cache Interval Int</em>' attribute.
+	 * @see #getCacheIntervalInt()
+	 * @generated
+	 */
+	void setCacheIntervalInt(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Cache Interval Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cache Interval Const</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cache Interval Const</em>' reference.
+	 * @see #setCacheIntervalConst(MobaConstant)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaCache_CacheIntervalConst()
+	 * @model
+	 * @generated
+	 */
+	MobaConstant getCacheIntervalConst();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalConst <em>Cache Interval Const</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cache Interval Const</em>' reference.
+	 * @see #getCacheIntervalConst()
+	 * @generated
+	 */
+	void setCacheIntervalConst(MobaConstant value);
+
+	/**
 	 * Returns the key cacheType. From {@link #getCacheTypeString()} or
 	 * {@link #getCacheTypeConst()}
 	 * 
@@ -142,5 +197,13 @@ public interface MobaCache extends EObject {
 	 * @return
 	 */
 	String getCacheStrategy();
+	
+	/**
+	 * Returns the cache strategy. From {@link #getCacheIntervalInt()} or
+	 * {@link #getCacheIntervalConst()}
+	 * 
+	 * @return
+	 */
+	int getCacheInterval();
 
 } // MobaCache

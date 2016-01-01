@@ -320,6 +320,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         version=VERSION 
+	 *         cache=MobaCache? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaApplicationFeature*
 	 *     )
@@ -361,7 +362,14 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaCache returns MobaCache
 	 *
 	 * Constraint:
-	 *     (cacheTypeString=STRING | cacheTypeConst=[MobaConstant|CONSTANT] | cacheStrategyString=STRING | cacheStrategyConst=[MobaConstant|CONSTANT])*
+	 *     (
+	 *         cacheTypeString=STRING | 
+	 *         cacheTypeConst=[MobaConstant|CONSTANT] | 
+	 *         cacheStrategyString=STRING | 
+	 *         cacheStrategyConst=[MobaConstant|CONSTANT] | 
+	 *         cacheIntervalInt=INT | 
+	 *         cacheIntervalConst=[MobaConstant|CONSTANT]
+	 *     )*
 	 */
 	protected void sequence_MobaCache(ISerializationContext context, MobaCache semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

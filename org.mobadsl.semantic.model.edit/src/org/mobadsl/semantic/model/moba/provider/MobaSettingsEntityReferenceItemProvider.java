@@ -8,29 +8,32 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.mobadsl.semantic.model.moba.MobaDtoReference;
+
 import org.mobadsl.semantic.model.moba.MobaFactory;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
 
 /**
- * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaDtoReference} object.
+ * This is the item provider adapter for a {@link org.mobadsl.semantic.model.moba.MobaSettingsEntityReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
+public class MobaSettingsEntityReferenceItemProvider extends MobaSettingsFeatureItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaDtoReferenceItemProvider(AdapterFactory adapterFactory) {
+	public MobaSettingsEntityReferenceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -49,8 +52,6 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			addLazyPropertyDescriptor(object);
 			addTransientPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addOppositePropertyDescriptor(object);
-			addAliasPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,9 +67,9 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaDtoReference_cascading_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_cascading_feature", "_UI_MobaDtoReference_type"),
-				 MobaPackage.Literals.MOBA_DTO_REFERENCE__CASCADING,
+				 getString("_UI_MobaSettingsEntityReference_cascading_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaSettingsEntityReference_cascading_feature", "_UI_MobaSettingsEntityReference_type"),
+				 MobaPackage.Literals.MOBA_SETTINGS_ENTITY_REFERENCE__CASCADING,
 				 true,
 				 false,
 				 false,
@@ -88,9 +89,9 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaDtoReference_lazy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_lazy_feature", "_UI_MobaDtoReference_type"),
-				 MobaPackage.Literals.MOBA_DTO_REFERENCE__LAZY,
+				 getString("_UI_MobaSettingsEntityReference_lazy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaSettingsEntityReference_lazy_feature", "_UI_MobaSettingsEntityReference_type"),
+				 MobaPackage.Literals.MOBA_SETTINGS_ENTITY_REFERENCE__LAZY,
 				 true,
 				 false,
 				 false,
@@ -110,9 +111,9 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaDtoReference_transient_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_transient_feature", "_UI_MobaDtoReference_type"),
-				 MobaPackage.Literals.MOBA_DTO_REFERENCE__TRANSIENT,
+				 getString("_UI_MobaSettingsEntityReference_transient_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaSettingsEntityReference_transient_feature", "_UI_MobaSettingsEntityReference_type"),
+				 MobaPackage.Literals.MOBA_SETTINGS_ENTITY_REFERENCE__TRANSIENT,
 				 true,
 				 false,
 				 false,
@@ -132,57 +133,13 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaDtoReference_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_type_feature", "_UI_MobaDtoReference_type"),
-				 MobaPackage.Literals.MOBA_DTO_REFERENCE__TYPE,
+				 getString("_UI_MobaSettingsEntityReference_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaSettingsEntityReference_type_feature", "_UI_MobaSettingsEntityReference_type"),
+				 MobaPackage.Literals.MOBA_SETTINGS_ENTITY_REFERENCE__TYPE,
 				 true,
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Opposite feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOppositePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaDtoReference_opposite_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_opposite_feature", "_UI_MobaDtoReference_type"),
-				 MobaPackage.Literals.MOBA_DTO_REFERENCE__OPPOSITE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Alias feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAliasPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaDtoReference_alias_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDtoReference_alias_feature", "_UI_MobaDtoReference_type"),
-				 MobaPackage.Literals.MOBA_DTO_REFERENCE__ALIAS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -200,6 +157,7 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS);
 		}
 		return childrenFeatures;
 	}
@@ -218,14 +176,14 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 	}
 
 	/**
-	 * This returns MobaDtoReference.gif.
+	 * This returns MobaSettingsEntityReference.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaDtoReference"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MobaSettingsEntityReference"));
 	}
 
 	/**
@@ -236,10 +194,10 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaDtoReference)object).getName();
+		String label = ((MobaSettingsEntityReference)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_MobaDtoReference_type") :
-			getString("_UI_MobaDtoReference_type") + " " + label;
+			getString("_UI_MobaSettingsEntityReference_type") :
+			getString("_UI_MobaSettingsEntityReference_type") + " " + label;
 	}
 	
 
@@ -254,14 +212,14 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(MobaDtoReference.class)) {
-			case MobaPackage.MOBA_DTO_REFERENCE__CASCADING:
-			case MobaPackage.MOBA_DTO_REFERENCE__LAZY:
-			case MobaPackage.MOBA_DTO_REFERENCE__TRANSIENT:
-			case MobaPackage.MOBA_DTO_REFERENCE__ALIAS:
+		switch (notification.getFeatureID(MobaSettingsEntityReference.class)) {
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE__CASCADING:
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE__LAZY:
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE__TRANSIENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_DTO_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE__MULTIPLICITY:
+			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE__CONSTRAINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -283,6 +241,56 @@ public class MobaDtoReferenceItemProvider extends MobaDtoFeatureItemProvider {
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_MULTIPLICITY_ABLE__MULTIPLICITY,
 				 MobaFactory.eINSTANCE.createMobaMuliplicity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaRegexpConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaMinConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaMaxConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaFutureConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaPastConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaNotNullConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaNullConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaMinLengthConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaMaxLengthConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_CONSTRAINTABLE__CONSTRAINTS,
+				 MobaFactory.eINSTANCE.createMobaDigitsConstraint()));
 	}
 
 }

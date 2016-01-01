@@ -148,13 +148,11 @@ public class MobaFriendImpl extends MinimalEObjectImpl.Container implements Moba
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public String getValue() {
 		if(getValueConst() != null) {
 			return getValueConst().getValue();
 		}
-		
 		return getValueString();
 	}
 
