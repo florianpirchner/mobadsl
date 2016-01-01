@@ -13,6 +13,8 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.mobadsl.semantic.model.moba.MobaApplication;
+import org.mobadsl.semantic.model.moba.MobaApplicationFeature;
+import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -25,17 +27,22 @@ import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
 import org.mobadsl.semantic.model.moba.MobaEnumLiteral;
+import org.mobadsl.semantic.model.moba.MobaExternalModule;
+import org.mobadsl.semantic.model.moba.MobaFeature;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
 import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
+import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaServer;
+import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
 import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
+import org.mobadsl.semantic.model.moba.MobaTrigger;
 
 @SuppressWarnings("all")
 public class MobaLabelProvider extends DefaultEObjectLabelProvider {
@@ -101,6 +108,18 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
     MobaDataType _type = att.getType();
     String _name_1 = _type.getName();
     return this.getDisplayString(_name, _name_1);
+  }
+  
+  public StyledString text(final MobaCache cache) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("(");
+    String _cacheStrategy = cache.getCacheStrategy();
+    _builder.append(_cacheStrategy, "");
+    _builder.append(" / ");
+    String _cacheType = cache.getCacheType();
+    _builder.append(_cacheType, "");
+    _builder.append(")");
+    return this.getDisplayString("Cache", _builder.toString());
   }
   
   public StyledString text(final MobaSettingsAttribute att) {
@@ -240,6 +259,87 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
       string.append((" : " + description), StyledString.DECORATIONS_STYLER);
     }
     return string;
+  }
+  
+  public String image(final MobaApplication ele) {
+    return "MobaApplication.png";
+  }
+  
+  public String image(final MobaQueue ele) {
+    return "MobaQueue.png";
+  }
+  
+  public String image(final MobaApplicationFeature ele) {
+    return "MobaApplicationFeature.png";
+  }
+  
+  public String image(final MobaDataType ele) {
+    return "MobaFeature.png";
+  }
+  
+  public String image(final MobaFeature ele) {
+    return "MobaFeature.png";
+  }
+  
+  public String image(final MobaProject ele) {
+    return "MobaProject.png";
+  }
+  
+  public String image(final MobaServer ele) {
+    return "MobaServer.png";
+  }
+  
+  public String image(final MobaDto ele) {
+    return "MobaDto.png";
+  }
+  
+  public String image(final MobaSettings ele) {
+    return "MobaSettings.gif";
+  }
+  
+  public String image(final MobaExternalModule ele) {
+    return "MobaExternalModule.png";
+  }
+  
+  public String image(final MobaTrigger ele) {
+    return "MobaTrigger.png";
+  }
+  
+  public String image(final MobaCache ele) {
+    return "MobaCache.png";
+  }
+  
+  public String image(final MobaREST ele) {
+    return "MobaREST.png";
+  }
+  
+  public String image(final MobaTemplate ele) {
+    return "MobaTemplate.png";
+  }
+  
+  public String image(final MobaConstant ele) {
+    return "MobaConstant.png";
+  }
+  
+  public String image(final MobaEntity ele) {
+    return "MobaEntity.gif";
+  }
+  
+  public String image(final MobaGenerator ele) {
+    return "MobaGenerator.gif";
+  }
+  
+  public Object image(final MobaQueueReference ele) {
+    MobaData _type = ele.getType();
+    return super.doGetImage(_type);
+  }
+  
+  public String image(final MobaRESTPayloadDefinition ele) {
+    return "MobaDto.png";
+  }
+  
+  public String image(final MobaRESTAttribute ele) {
+    return "MobaFeature.png";
   }
   
   public String name(final MobaData data) {

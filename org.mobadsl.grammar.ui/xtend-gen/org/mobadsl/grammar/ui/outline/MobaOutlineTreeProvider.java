@@ -4,6 +4,8 @@
 package org.mobadsl.grammar.ui.outline;
 
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import org.mobadsl.semantic.model.moba.MobaConstant;
+import org.mobadsl.semantic.model.moba.MobaDataType;
 
 /**
  * Customization of the default outline structure.
@@ -12,4 +14,11 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
  */
 @SuppressWarnings("all")
 public class MobaOutlineTreeProvider extends DefaultOutlineTreeProvider {
+  public boolean _isLeaf(final MobaDataType modelElement) {
+    return true;
+  }
+  
+  public boolean _isLeaf(final MobaConstant modelElement) {
+    return true;
+  }
 }
