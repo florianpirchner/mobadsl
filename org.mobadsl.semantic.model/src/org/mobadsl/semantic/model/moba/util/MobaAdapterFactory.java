@@ -176,6 +176,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaTransportSerializationTypeAdapter();
 			}
 			@Override
+			public Adapter caseMobaPersistenceType(MobaPersistenceType object) {
+				return createMobaPersistenceTypeAdapter();
+			}
+			@Override
 			public Adapter caseMobaGenerator(MobaGenerator object) {
 				return createMobaGeneratorAdapter();
 			}
@@ -590,6 +594,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaTransportSerializationTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaPersistenceType <em>Persistence Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaPersistenceType
+	 * @generated
+	 */
+	public Adapter createMobaPersistenceTypeAdapter() {
 		return null;
 	}
 

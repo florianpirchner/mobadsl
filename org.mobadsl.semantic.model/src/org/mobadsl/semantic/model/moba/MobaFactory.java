@@ -85,6 +85,15 @@ public interface MobaFactory extends EFactory {
 	MobaTransportSerializationType createMobaTransportSerializationType();
 
 	/**
+	 * Returns a new object of class '<em>Persistence Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Persistence Type</em>'.
+	 * @generated
+	 */
+	MobaPersistenceType createMobaPersistenceType();
+
+	/**
 	 * Returns a new object of class '<em>Generator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

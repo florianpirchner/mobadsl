@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheStrategyConst <em>Cache Strategy Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalInt <em>Cache Interval Int</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheIntervalConst <em>Cache Interval Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaCache#getCachePersistence <em>Cache Persistence</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaCache()
@@ -181,6 +182,32 @@ public interface MobaCache extends EObject {
 	 * @generated
 	 */
 	void setCacheIntervalConst(MobaConstant value);
+
+	/**
+	 * Returns the value of the '<em><b>Cache Persistence</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cache Persistence</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cache Persistence</em>' reference.
+	 * @see #setCachePersistence(MobaPersistenceType)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaCache_CachePersistence()
+	 * @model
+	 * @generated
+	 */
+	MobaPersistenceType getCachePersistence();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaCache#getCachePersistence <em>Cache Persistence</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cache Persistence</em>' reference.
+	 * @see #getCachePersistence()
+	 * @generated
+	 */
+	void setCachePersistence(MobaPersistenceType value);
 
 	/**
 	 * Returns the key cacheType. From {@link #getCacheTypeString()} or

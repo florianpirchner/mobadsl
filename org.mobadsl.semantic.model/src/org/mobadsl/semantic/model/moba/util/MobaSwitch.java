@@ -217,6 +217,15 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_PERSISTENCE_TYPE: {
+				MobaPersistenceType mobaPersistenceType = (MobaPersistenceType)theEObject;
+				T result = caseMobaPersistenceType(mobaPersistenceType);
+				if (result == null) result = caseMobaApplicationFeature(mobaPersistenceType);
+				if (result == null) result = caseMobaFriendsAble(mobaPersistenceType);
+				if (result == null) result = caseMobaPropertiesAble(mobaPersistenceType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_GENERATOR: {
 				MobaGenerator mobaGenerator = (MobaGenerator)theEObject;
 				T result = caseMobaGenerator(mobaGenerator);
@@ -936,6 +945,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaTransportSerializationType(MobaTransportSerializationType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Persistence Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Persistence Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaPersistenceType(MobaPersistenceType object) {
 		return null;
 	}
 

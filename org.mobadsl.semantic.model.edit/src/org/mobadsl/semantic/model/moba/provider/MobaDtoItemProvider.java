@@ -47,6 +47,7 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 
 			addNamePropertyDescriptor(object);
 			addSuperTypePropertyDescriptor(object);
+			addWrappedEntityPropertyDescriptor(object);
 			addSerializationTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -88,6 +89,28 @@ public class MobaDtoItemProvider extends MobaDataItemProvider {
 				 getString("_UI_MobaDto_superType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDto_superType_feature", "_UI_MobaDto_type"),
 				 MobaPackage.Literals.MOBA_DTO__SUPER_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Wrapped Entity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWrappedEntityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaDto_wrappedEntity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaDto_wrappedEntity_feature", "_UI_MobaDto_type"),
+				 MobaPackage.Literals.MOBA_DTO__WRAPPED_ENTITY,
 				 true,
 				 false,
 				 true,

@@ -3,6 +3,7 @@
  */
 package org.mobadsl.grammar.ui.labeling;
 
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import java.util.Arrays;
 import java.util.List;
@@ -31,6 +32,7 @@ import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaFeature;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
@@ -121,8 +123,23 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
     _builder.append(" / ");
     int _cacheInterval = cache.getCacheInterval();
     _builder.append(_cacheInterval, "");
+    _builder.append(" / ");
+    MobaPersistenceType _cachePersistence = cache.getCachePersistence();
+    String _toName = this.getToName(_cachePersistence);
+    _builder.append(_toName, "");
     _builder.append(")");
     return this.getDisplayString("Cache", _builder.toString());
+  }
+  
+  public String getToName(final MobaPersistenceType type) {
+    String _xifexpression = null;
+    boolean _equals = Objects.equal(type, null);
+    if (_equals) {
+      _xifexpression = "default";
+    } else {
+      return type.getName();
+    }
+    return _xifexpression;
   }
   
   public StyledString text(final MobaSettingsAttribute att) {

@@ -14,9 +14,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType
+ * <em>Super Type</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getCache <em>Cache</em>}
+ * </li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaQueue#getFeatures
+ * <em>Features</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaQueue()
@@ -42,9 +47,12 @@ public interface MobaQueue extends MobaData {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getName <em>Name</em>}'
+	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
 	 */
@@ -68,14 +76,46 @@ public interface MobaQueue extends MobaData {
 	MobaQueue getSuperType();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType <em>Super Type</em>}' reference.
-	 * <!-- begin-user-doc --> <!--
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getSuperType
+	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @param value the new value of the '<em>Super Type</em>' reference.
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */
 	void setSuperType(MobaQueue value);
+
+	/**
+	 * Returns the value of the '<em><b>Cache</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cache</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * 
+	 * @return the value of the '<em>Cache</em>' containment reference.
+	 * @see #setCache(MobaCache)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaQueue_Cache()
+	 * @model containment="true"
+	 * @generated
+	 */
+	MobaCache getCache();
+
+	/**
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaQueue#getCache <em>Cache</em>}
+	 * ' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Cache</em>' containment reference.
+	 * @see #getCache()
+	 * @generated
+	 */
+	void setCache(MobaCache value);
 
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference
@@ -150,5 +190,13 @@ public interface MobaQueue extends MobaData {
 	 *             if a recursion was found
 	 */
 	List<MobaQueue> getAllSuperTypes() throws RecursionException;
+
+	/**
+	 * Returns the cache of this entity if not null. Otherwise the cache from
+	 * the containing application.
+	 * 
+	 * @return
+	 */
+	MobaCache getGenCache();
 
 } // MobaQueue

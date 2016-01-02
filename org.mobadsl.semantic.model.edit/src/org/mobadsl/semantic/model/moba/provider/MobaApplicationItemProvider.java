@@ -164,6 +164,11 @@ public class MobaApplicationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaPersistenceType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaGenerator()));
 
 		newChildDescriptors.add

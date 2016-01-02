@@ -127,6 +127,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_SERVER: return createMobaServer();
 			case MobaPackage.MOBA_AUTHORIZATION: return createMobaAuthorization();
 			case MobaPackage.MOBA_TRANSPORT_SERIALIZATION_TYPE: return createMobaTransportSerializationType();
+			case MobaPackage.MOBA_PERSISTENCE_TYPE: return createMobaPersistenceType();
 			case MobaPackage.MOBA_GENERATOR: return createMobaGenerator();
 			case MobaPackage.MOBA_GENERATOR_MIXIN_FEATURE: return createMobaGeneratorMixinFeature();
 			case MobaPackage.MOBA_GENERATOR_ID_FEATURE: return createMobaGeneratorIDFeature();
@@ -307,6 +308,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaTransportSerializationType createMobaTransportSerializationType() {
 		MobaTransportSerializationTypeImpl mobaTransportSerializationType = new MobaTransportSerializationTypeImpl();
 		return mobaTransportSerializationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaPersistenceType createMobaPersistenceType() {
+		MobaPersistenceTypeImpl mobaPersistenceType = new MobaPersistenceTypeImpl();
+		return mobaPersistenceType;
 	}
 
 	/**

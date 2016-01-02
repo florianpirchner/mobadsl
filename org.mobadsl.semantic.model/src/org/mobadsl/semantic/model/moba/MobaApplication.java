@@ -89,15 +89,7 @@ public interface MobaApplication extends MobaModelFeature {
 	 * 
 	 * @return
 	 */
-	List<MobaEntity> getDtos();
-
-	/**
-	 * Returns the moba payloads for the current application. Excluding the
-	 * "used templates".
-	 * 
-	 * @return
-	 */
-	List<MobaDto> getPayloads();
+	List<MobaDto> getDtos();
 
 	/**
 	 * Returns the moba queues for the current application. Excluding the
@@ -163,6 +155,21 @@ public interface MobaApplication extends MobaModelFeature {
 	 */
 	List<MobaTemplate> getTemplates();
 
+	
+	/**
+	 * Returns the moba transportSerializationType for the current application.
+	 * 
+	 * @return
+	 */
+	List<MobaTransportSerializationType> getTransportSerializationTypes();
+	
+	/**
+	 * Returns the moba persistenceType for the current application.
+	 * 
+	 * @return
+	 */
+	List<MobaPersistenceType> getPersistenceTypes();
+	
 	/**
 	 * Returns the moba external modules for the current application. Excluding
 	 * the "used templates".
@@ -221,15 +228,7 @@ public interface MobaApplication extends MobaModelFeature {
 	 * 
 	 * @return
 	 */
-	List<MobaEntity> getGenDtos();
-
-	/**
-	 * Returns the moba payloads for the current application. Excluding the
-	 * "used templates".
-	 * 
-	 * @return
-	 */
-	List<MobaDto> getGenPayloads();
+	List<MobaDto> getGenDtos();
 
 	/**
 	 * Returns the moba queues for the current application. Excluding the
@@ -253,6 +252,20 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaGenerator> getGenGenerators();
+	
+	/**
+	 * Returns the moba transportSerializationType for the current application.
+	 * 
+	 * @return
+	 */
+	List<MobaTransportSerializationType> getGenTransportSerializationTypes();
+	
+	/**
+	 * Returns the moba persistenceType for the current application.
+	 * 
+	 * @return
+	 */
+	List<MobaPersistenceType> getGenPersistenceTypes();
 
 	/**
 	 * Returns the moba services for the current application. Excluding the
@@ -432,6 +445,14 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaTransportSerializationType> getAllTransportSerializationTypes();
+	
+	/**
+	 * Returns the moba persistenceType for the current application.
+	 * Including the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaPersistenceType> getAllPersistenceTypes();
 
 	/**
 	 * Returns the active generator.

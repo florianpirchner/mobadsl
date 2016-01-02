@@ -24,6 +24,7 @@ import org.mobadsl.semantic.model.moba.MobaExternalModule
 import org.mobadsl.semantic.model.moba.MobaFeature
 import org.mobadsl.semantic.model.moba.MobaGenerator
 import org.mobadsl.semantic.model.moba.MobaGeneratorMixinFeature
+import org.mobadsl.semantic.model.moba.MobaPersistenceType
 import org.mobadsl.semantic.model.moba.MobaProject
 import org.mobadsl.semantic.model.moba.MobaQueue
 import org.mobadsl.semantic.model.moba.MobaQueueReference
@@ -82,7 +83,12 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	def text(MobaCache cache) {
-		return "Cache".getDisplayString('''(«cache.cacheStrategy» / «cache.cacheType» / «cache.cacheInterval»)''')
+		return "Cache".
+			getDisplayString('''(«cache.cacheStrategy» / «cache.cacheType» / «cache.cacheInterval» / «cache.cachePersistence.toName»)''')
+	}
+
+	def String getToName(MobaPersistenceType type) {
+		return if(type == null) "default" else return type.name
 	}
 
 	def text(MobaSettingsAttribute att) {

@@ -19,6 +19,7 @@ import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
+import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
 import org.mobadsl.semantic.model.moba.RecursionException;
@@ -33,6 +34,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getWrappedEntity <em>Wrapped Entity</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getFeatures <em>Features</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDtoImpl#getSerializationType <em>Serialization Type</em>}</li>
  * </ul>
@@ -66,6 +68,16 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	 * @ordered
 	 */
 	protected MobaDto superType;
+
+	/**
+	 * The cached value of the '{@link #getWrappedEntity() <em>Wrapped Entity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWrappedEntity()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaEntity wrappedEntity;
 
 	/**
 	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
@@ -158,6 +170,44 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaEntity getWrappedEntity() {
+		if (wrappedEntity != null && wrappedEntity.eIsProxy()) {
+			InternalEObject oldWrappedEntity = (InternalEObject)wrappedEntity;
+			wrappedEntity = (MobaEntity)eResolveProxy(oldWrappedEntity);
+			if (wrappedEntity != oldWrappedEntity) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_DTO__WRAPPED_ENTITY, oldWrappedEntity, wrappedEntity));
+			}
+		}
+		return wrappedEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaEntity basicGetWrappedEntity() {
+		return wrappedEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWrappedEntity(MobaEntity newWrappedEntity) {
+		MobaEntity oldWrappedEntity = wrappedEntity;
+		wrappedEntity = newWrappedEntity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DTO__WRAPPED_ENTITY, oldWrappedEntity, wrappedEntity));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -228,6 +278,9 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 			case MobaPackage.MOBA_DTO__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
+			case MobaPackage.MOBA_DTO__WRAPPED_ENTITY:
+				if (resolve) return getWrappedEntity();
+				return basicGetWrappedEntity();
 			case MobaPackage.MOBA_DTO__FEATURES:
 				return getFeatures();
 			case MobaPackage.MOBA_DTO__SERIALIZATION_TYPE:
@@ -250,6 +303,9 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 				return;
 			case MobaPackage.MOBA_DTO__SUPER_TYPE:
 				setSuperType((MobaDto)newValue);
+				return;
+			case MobaPackage.MOBA_DTO__WRAPPED_ENTITY:
+				setWrappedEntity((MobaEntity)newValue);
 				return;
 			case MobaPackage.MOBA_DTO__FEATURES:
 				getFeatures().clear();
@@ -275,6 +331,9 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 			case MobaPackage.MOBA_DTO__SUPER_TYPE:
 				setSuperType((MobaDto)null);
 				return;
+			case MobaPackage.MOBA_DTO__WRAPPED_ENTITY:
+				setWrappedEntity((MobaEntity)null);
+				return;
 			case MobaPackage.MOBA_DTO__FEATURES:
 				getFeatures().clear();
 				return;
@@ -296,6 +355,8 @@ public class MobaDtoImpl extends MobaDataImpl implements MobaDto {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MobaPackage.MOBA_DTO__SUPER_TYPE:
 				return superType != null;
+			case MobaPackage.MOBA_DTO__WRAPPED_ENTITY:
+				return wrappedEntity != null;
 			case MobaPackage.MOBA_DTO__FEATURES:
 				return features != null && !features.isEmpty();
 			case MobaPackage.MOBA_DTO__SERIALIZATION_TYPE:

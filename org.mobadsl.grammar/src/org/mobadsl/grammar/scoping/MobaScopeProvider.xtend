@@ -46,6 +46,10 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 	def IScope scope_MobaQueue(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allQueues);
 	}
+	
+	def IScope scope_MobaPersistenceType(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allPersistenceTypes);
+	}
 
 	def IScope scope_MobaSettings(MobaApplication ctx, EReference ref) {
 		return Scopes.scopeFor(ctx.allSettings);

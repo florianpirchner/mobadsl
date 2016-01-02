@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getWrappedEntity <em>Wrapped Entity</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getFeatures <em>Features</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDto#getSerializationType <em>Serialization Type</em>}</li>
  * </ul>
@@ -77,6 +78,32 @@ public interface MobaDto extends MobaData {
 	 * @generated
 	 */
 	void setSuperType(MobaDto value);
+
+	/**
+	 * Returns the value of the '<em><b>Wrapped Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Wrapped Entity</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wrapped Entity</em>' reference.
+	 * @see #setWrappedEntity(MobaEntity)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDto_WrappedEntity()
+	 * @model
+	 * @generated
+	 */
+	MobaEntity getWrappedEntity();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDto#getWrappedEntity <em>Wrapped Entity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Wrapped Entity</em>' reference.
+	 * @see #getWrappedEntity()
+	 * @generated
+	 */
+	void setWrappedEntity(MobaEntity value);
 
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference list.

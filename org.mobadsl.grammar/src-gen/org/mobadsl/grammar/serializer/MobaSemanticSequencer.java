@@ -54,6 +54,7 @@ import org.mobadsl.semantic.model.moba.MobaNFCModule;
 import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaPushModule;
@@ -201,6 +202,9 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case MobaPackage.MOBA_NULL_CONSTRAINT:
 				sequence_MobaNullConstraint(context, (MobaNullConstraint) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_PERSISTENCE_TYPE:
+				sequence_MobaFriendsAble_MobaPersistenceType(context, (MobaPersistenceType) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_PROJECT:
 				sequence_MobaFriendsAble_MobaProject(context, (MobaProject) semanticObject); 
@@ -368,7 +372,8 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         cacheStrategyString=STRING | 
 	 *         cacheStrategyConst=[MobaConstant|CONSTANT] | 
 	 *         cacheIntervalInt=INT | 
-	 *         cacheIntervalConst=[MobaConstant|CONSTANT]
+	 *         cacheIntervalConst=[MobaConstant|CONSTANT] | 
+	 *         cachePersistence=[MobaPersistenceType|CONSTANT]
 	 *     )*
 	 */
 	protected void sequence_MobaCache(ISerializationContext context, MobaCache semanticObject) {
@@ -537,6 +542,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         superType=[MobaDto|ID]? 
+	 *         wrappedEntity=[MobaEntity|ID]? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaDtoFeature*
 	 *     )
@@ -773,6 +779,19 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     MobaApplicationFeature returns MobaPersistenceType
+	 *     MobaPersistenceType returns MobaPersistenceType
+	 *
+	 * Constraint:
+	 *     (name=CONSTANT ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
+	 */
+	protected void sequence_MobaFriendsAble_MobaPersistenceType(ISerializationContext context, MobaPersistenceType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MobaModelFeature returns MobaProject
 	 *     MobaProject returns MobaProject
 	 *
@@ -813,6 +832,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         superType=[MobaQueue|ID]? 
+	 *         cache=MobaCache? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaQueueFeature*
 	 *     )

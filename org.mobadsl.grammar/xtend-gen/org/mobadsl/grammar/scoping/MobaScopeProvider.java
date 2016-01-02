@@ -27,6 +27,7 @@ import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
@@ -75,6 +76,11 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_MobaQueue(final MobaApplication ctx, final EReference ref) {
     List<MobaQueue> _allQueues = ctx.getAllQueues();
     return Scopes.scopeFor(_allQueues);
+  }
+  
+  public IScope scope_MobaPersistenceType(final MobaApplication ctx, final EReference ref) {
+    List<MobaPersistenceType> _allPersistenceTypes = ctx.getAllPersistenceTypes();
+    return Scopes.scopeFor(_allPersistenceTypes);
   }
   
   public IScope scope_MobaSettings(final MobaApplication ctx, final EReference ref) {

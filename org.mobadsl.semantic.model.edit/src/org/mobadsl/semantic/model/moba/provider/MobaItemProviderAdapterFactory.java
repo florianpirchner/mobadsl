@@ -231,6 +231,29 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaPersistenceType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaPersistenceTypeItemProvider mobaPersistenceTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaPersistenceType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaPersistenceTypeAdapter() {
+		if (mobaPersistenceTypeItemProvider == null) {
+			mobaPersistenceTypeItemProvider = new MobaPersistenceTypeItemProvider(this);
+		}
+
+		return mobaPersistenceTypeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaGenerator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1555,6 +1578,7 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaServerItemProvider != null) mobaServerItemProvider.dispose();
 		if (mobaAuthorizationItemProvider != null) mobaAuthorizationItemProvider.dispose();
 		if (mobaTransportSerializationTypeItemProvider != null) mobaTransportSerializationTypeItemProvider.dispose();
+		if (mobaPersistenceTypeItemProvider != null) mobaPersistenceTypeItemProvider.dispose();
 		if (mobaGeneratorItemProvider != null) mobaGeneratorItemProvider.dispose();
 		if (mobaGeneratorMixinFeatureItemProvider != null) mobaGeneratorMixinFeatureItemProvider.dispose();
 		if (mobaGeneratorIDFeatureItemProvider != null) mobaGeneratorIDFeatureItemProvider.dispose();

@@ -31,6 +31,7 @@ import org.mobadsl.semantic.model.moba.MobaExternalModule;
 import org.mobadsl.semantic.model.moba.MobaGenerator;
 import org.mobadsl.semantic.model.moba.MobaGeneratorSlot;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
@@ -57,8 +58,7 @@ import org.mobadsl.semantic.model.moba.MobaTrigger;
 public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApplication {
 	/**
 	 * The cached value of the '{@link #getCache() <em>Cache</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getCache()
 	 * @generated
 	 * @ordered
@@ -91,8 +91,7 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaCache getCache() {
@@ -100,8 +99,7 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public NotificationChain basicSetCache(MobaCache newCache, NotificationChain msgs) {
@@ -115,8 +113,7 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setCache(MobaCache newCache) {
@@ -263,13 +260,18 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	}
 
 	@Override
-	public List<MobaEntity> getDtos() {
-		return collect(MobaEntity.class);
+	public List<MobaDto> getDtos() {
+		return collect(MobaDto.class);
 	}
 
 	@Override
-	public List<MobaDto> getPayloads() {
-		return collect(MobaDto.class);
+	public List<MobaTransportSerializationType> getTransportSerializationTypes() {
+		return collect(MobaTransportSerializationType.class);
+	}
+
+	@Override
+	public List<MobaPersistenceType> getPersistenceTypes() {
+		return collect(MobaPersistenceType.class);
 	}
 
 	@Override
@@ -388,6 +390,11 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	}
 
 	@Override
+	public List<MobaPersistenceType> getAllPersistenceTypes() {
+		return collectAll(this, MobaPersistenceType.class);
+	}
+
+	@Override
 	public List<MobaExternalModule> getExternalModules() {
 		return collect(MobaExternalModule.class);
 	}
@@ -438,13 +445,8 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	}
 
 	@Override
-	public List<MobaEntity> getGenDtos() {
+	public List<MobaDto> getGenDtos() {
 		return getDtos();
-	}
-
-	@Override
-	public List<MobaDto> getGenPayloads() {
-		return getPayloads();
 	}
 
 	@Override
@@ -490,6 +492,16 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public List<MobaExternalModule> getGenExternalModules() {
 		return getExternalModules();
+	}
+
+	@Override
+	public List<MobaTransportSerializationType> getGenTransportSerializationTypes() {
+		return getTransportSerializationTypes();
+	}
+
+	@Override
+	public List<MobaPersistenceType> getGenPersistenceTypes() {
+		return getPersistenceTypes();
 	}
 
 	@Override

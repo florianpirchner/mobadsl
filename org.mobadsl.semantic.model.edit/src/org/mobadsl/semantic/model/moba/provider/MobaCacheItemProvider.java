@@ -63,6 +63,7 @@ public class MobaCacheItemProvider
 			addCacheStrategyConstPropertyDescriptor(object);
 			addCacheIntervalIntPropertyDescriptor(object);
 			addCacheIntervalConstPropertyDescriptor(object);
+			addCachePersistencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -191,6 +192,28 @@ public class MobaCacheItemProvider
 				 getString("_UI_MobaCache_cacheIntervalConst_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaCache_cacheIntervalConst_feature", "_UI_MobaCache_type"),
 				 MobaPackage.Literals.MOBA_CACHE__CACHE_INTERVAL_CONST,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Cache Persistence feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCachePersistencePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaCache_cachePersistence_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaCache_cachePersistence_feature", "_UI_MobaCache_type"),
+				 MobaPackage.Literals.MOBA_CACHE__CACHE_PERSISTENCE,
 				 true,
 				 false,
 				 true,

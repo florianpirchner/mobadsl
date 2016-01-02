@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -24,6 +25,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheStrategyConst <em>Cache Strategy Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheIntervalInt <em>Cache Interval Int</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheIntervalConst <em>Cache Interval Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCachePersistence <em>Cache Persistence</em>}</li>
  * </ul>
  *
  * @generated
@@ -118,6 +120,16 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	 * @ordered
 	 */
 	protected MobaConstant cacheIntervalConst;
+
+	/**
+	 * The cached value of the '{@link #getCachePersistence() <em>Cache Persistence</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCachePersistence()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaPersistenceType cachePersistence;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -299,6 +311,44 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaPersistenceType getCachePersistence() {
+		if (cachePersistence != null && cachePersistence.eIsProxy()) {
+			InternalEObject oldCachePersistence = (InternalEObject)cachePersistence;
+			cachePersistence = (MobaPersistenceType)eResolveProxy(oldCachePersistence);
+			if (cachePersistence != oldCachePersistence) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_CACHE__CACHE_PERSISTENCE, oldCachePersistence, cachePersistence));
+			}
+		}
+		return cachePersistence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaPersistenceType basicGetCachePersistence() {
+		return cachePersistence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCachePersistence(MobaPersistenceType newCachePersistence) {
+		MobaPersistenceType oldCachePersistence = cachePersistence;
+		cachePersistence = newCachePersistence;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_CACHE__CACHE_PERSISTENCE, oldCachePersistence, cachePersistence));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -320,6 +370,9 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
 				if (resolve) return getCacheIntervalConst();
 				return basicGetCacheIntervalConst();
+			case MobaPackage.MOBA_CACHE__CACHE_PERSISTENCE:
+				if (resolve) return getCachePersistence();
+				return basicGetCachePersistence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -348,6 +401,9 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 				return;
 			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
 				setCacheIntervalConst((MobaConstant)newValue);
+				return;
+			case MobaPackage.MOBA_CACHE__CACHE_PERSISTENCE:
+				setCachePersistence((MobaPersistenceType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -378,6 +434,9 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
 				setCacheIntervalConst((MobaConstant)null);
 				return;
+			case MobaPackage.MOBA_CACHE__CACHE_PERSISTENCE:
+				setCachePersistence((MobaPersistenceType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -401,6 +460,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 				return cacheIntervalInt != CACHE_INTERVAL_INT_EDEFAULT;
 			case MobaPackage.MOBA_CACHE__CACHE_INTERVAL_CONST:
 				return cacheIntervalConst != null;
+			case MobaPackage.MOBA_CACHE__CACHE_PERSISTENCE:
+				return cachePersistence != null;
 		}
 		return super.eIsSet(featureID);
 	}
