@@ -324,7 +324,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         version=VERSION 
-	 *         cache=MobaCache? 
+	 *         defaultCache=[MobaCache|ID]? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaApplicationFeature*
 	 *     )
@@ -363,18 +363,22 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     MobaApplicationFeature returns MobaCache
 	 *     MobaCache returns MobaCache
 	 *
 	 * Constraint:
 	 *     (
-	 *         cacheTypeString=STRING | 
-	 *         cacheTypeConst=[MobaConstant|CONSTANT] | 
-	 *         cacheStrategyString=STRING | 
-	 *         cacheStrategyConst=[MobaConstant|CONSTANT] | 
-	 *         cacheIntervalInt=INT | 
-	 *         cacheIntervalConst=[MobaConstant|CONSTANT] | 
-	 *         cachePersistence=[MobaPersistenceType|CONSTANT]
-	 *     )*
+	 *         name=ID 
+	 *         (
+	 *             cacheTypeString=STRING | 
+	 *             cacheTypeConst=[MobaConstant|CONSTANT] | 
+	 *             cacheStrategyString=STRING | 
+	 *             cacheStrategyConst=[MobaConstant|CONSTANT] | 
+	 *             cacheIntervalInt=INT | 
+	 *             cacheIntervalConst=[MobaConstant|CONSTANT] | 
+	 *             cachePersistence=[MobaPersistenceType|CONSTANT]
+	 *         )*
+	 *     )
 	 */
 	protected void sequence_MobaCache(ISerializationContext context, MobaCache semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -419,7 +423,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         superType=[MobaDataType|ID]? 
 	 *         (
-	 *             (array?='isArray' | enumAST=MobaEnum)? 
+	 *             (array?='isArray' | enumAST=MobaEnum | predefined?='isPredefined')? 
 	 *             (string?='isString' primitive?='isPrimitive'?)? 
 	 *             (bool?='isBool' primitive?='isPrimitive'?)? 
 	 *             (numeric?='isNumeric' primitive?='isPrimitive'?)? 
@@ -655,7 +659,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (superType=[MobaEntity|ID] | cache=MobaCache)* 
+	 *         (superType=[MobaEntity|ID] | cache=[MobaCache|ID])* 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaEntityFeature* 
 	 *         indizes+=MobaEntityIndex*
@@ -671,7 +675,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaEnumLiteral returns MobaEnumLiteral
 	 *
 	 * Constraint:
-	 *     (name=CONSTANT literal=STRING value=INT (default?='isDefault' | undefined?='isUndefined')*)
+	 *     (name=CONSTANT literal=STRING value=INT (default?='isDefault' | undefined?='isUndefined' | hidden?='isHidden')*)
 	 */
 	protected void sequence_MobaEnumLiteral(ISerializationContext context, MobaEnumLiteral semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -832,7 +836,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         superType=[MobaQueue|ID]? 
-	 *         cache=MobaCache? 
+	 *         cache=[MobaCache|ID]? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
 	 *         features+=MobaQueueFeature*
 	 *     )
@@ -871,6 +875,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             headers+=MobaRestHeader | 
 	 *             parameters+=MobaRestParameter | 
+	 *             authorization=[MobaAuthorization|CONSTANT] | 
 	 *             requestDto=MobaRESTPayloadDefinition | 
 	 *             responseDto=MobaRESTPayloadDefinition | 
 	 *             errorDto=MobaRESTPayloadDefinition | 
@@ -912,9 +917,8 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         (urlString=STRING | urlConst=[MobaConstant|CONSTANT]) 
 	 *         superType=[MobaServer|ID]? 
-	 *         (properties+=MobaProperty properties+=MobaProperty*)? 
-	 *         ((friends+=MobaFriend friends+=MobaFriend*)? (properties+=MobaProperty properties+=MobaProperty*)?)* 
-	 *         ((authorization+=[MobaAuthorization|CONSTANT] authorization+=[MobaAuthorization|CONSTANT]*) | (services+=[MobaREST|ID] services+=[MobaREST|ID]*))*
+	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
+	 *         (authorization=[MobaAuthorization|CONSTANT]? (services+=[MobaREST|ID] services+=[MobaREST|ID]*)?)+
 	 *     )
 	 */
 	protected void sequence_MobaFriendsAble_MobaServer(ISerializationContext context, MobaServer semanticObject) {

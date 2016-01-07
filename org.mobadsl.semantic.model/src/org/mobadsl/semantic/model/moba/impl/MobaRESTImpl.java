@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
@@ -37,6 +38,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getResponseDto <em>Response Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getErrorDto <em>Error Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getHeaders <em>Headers</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getAuthorization <em>Authorization</em>}</li>
  * </ul>
  *
  * @generated
@@ -141,6 +143,16 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * @ordered
 	 */
 	protected EList<MobaRESTAttribute> headers;
+
+	/**
+	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorization()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaAuthorization authorization;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -370,6 +382,44 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaAuthorization getAuthorization() {
+		if (authorization != null && authorization.eIsProxy()) {
+			InternalEObject oldAuthorization = (InternalEObject)authorization;
+			authorization = (MobaAuthorization)eResolveProxy(oldAuthorization);
+			if (authorization != oldAuthorization) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST__AUTHORIZATION, oldAuthorization, authorization));
+			}
+		}
+		return authorization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaAuthorization basicGetAuthorization() {
+		return authorization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAuthorization(MobaAuthorization newAuthorization) {
+		MobaAuthorization oldAuthorization = authorization;
+		authorization = newAuthorization;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__AUTHORIZATION, oldAuthorization, authorization));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -407,6 +457,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return getErrorDto();
 			case MobaPackage.MOBA_REST__HEADERS:
 				return getHeaders();
+			case MobaPackage.MOBA_REST__AUTHORIZATION:
+				if (resolve) return getAuthorization();
+				return basicGetAuthorization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -442,6 +495,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				getHeaders().clear();
 				getHeaders().addAll((Collection<? extends MobaRESTAttribute>)newValue);
 				return;
+			case MobaPackage.MOBA_REST__AUTHORIZATION:
+				setAuthorization((MobaAuthorization)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -475,6 +531,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__HEADERS:
 				getHeaders().clear();
 				return;
+			case MobaPackage.MOBA_REST__AUTHORIZATION:
+				setAuthorization((MobaAuthorization)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -501,6 +560,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return errorDto != null;
 			case MobaPackage.MOBA_REST__HEADERS:
 				return headers != null && !headers.isEmpty();
+			case MobaPackage.MOBA_REST__AUTHORIZATION:
+				return authorization != null;
 		}
 		return super.eIsSet(featureID);
 	}

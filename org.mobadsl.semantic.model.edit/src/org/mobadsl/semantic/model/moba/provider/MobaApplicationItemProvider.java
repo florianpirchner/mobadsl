@@ -9,6 +9,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.mobadsl.semantic.model.moba.MobaApplication;
@@ -44,8 +45,31 @@ public class MobaApplicationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDefaultCachePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Cache feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCachePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaApplication_defaultCache_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaApplication_defaultCache_feature", "_UI_MobaApplication_type"),
+				 MobaPackage.Literals.MOBA_APPLICATION__DEFAULT_CACHE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -60,7 +84,6 @@ public class MobaApplicationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_APPLICATION__CACHE);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_APPLICATION__FEATURES);
 		}
 		return childrenFeatures;
@@ -117,7 +140,6 @@ public class MobaApplicationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaApplication.class)) {
-			case MobaPackage.MOBA_APPLICATION__CACHE:
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -135,11 +157,6 @@ public class MobaApplicationItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_APPLICATION__CACHE,
-				 MobaFactory.eINSTANCE.createMobaCache()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -185,6 +202,11 @@ public class MobaApplicationItemProvider
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
 				 MobaFactory.eINSTANCE.createMobaConstant()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_APPLICATION__FEATURES,
+				 MobaFactory.eINSTANCE.createMobaCache()));
 
 		newChildDescriptors.add
 			(createChildParameter

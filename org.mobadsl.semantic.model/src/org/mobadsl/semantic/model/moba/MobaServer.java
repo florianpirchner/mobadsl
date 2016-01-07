@@ -169,7 +169,17 @@ public interface MobaServer extends MobaApplicationFeature {
 	 * @model
 	 * @generated
 	 */
-	EList<MobaAuthorization> getAuthorization();
+	MobaAuthorization getAuthorization();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authorization</em>' reference.
+	 * @see #getAuthorization()
+	 * @generated
+	 */
+	void setAuthorization(MobaAuthorization value);
 
 	/**
 	 * Returns all services including superTypes.

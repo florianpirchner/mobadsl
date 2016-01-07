@@ -283,6 +283,15 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_CACHE: {
+				MobaCache mobaCache = (MobaCache)theEObject;
+				T result = caseMobaCache(mobaCache);
+				if (result == null) result = caseMobaApplicationFeature(mobaCache);
+				if (result == null) result = caseMobaFriendsAble(mobaCache);
+				if (result == null) result = caseMobaPropertiesAble(mobaCache);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_CONSTANT_VALUE: {
 				MobaConstantValue mobaConstantValue = (MobaConstantValue)theEObject;
 				T result = caseMobaConstantValue(mobaConstantValue);
@@ -349,12 +358,6 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMobaFeature(mobaSettingsEntityReference);
 				if (result == null) result = caseMobaFriendsAble(mobaSettingsEntityReference);
 				if (result == null) result = caseMobaPropertiesAble(mobaSettingsEntityReference);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MobaPackage.MOBA_CACHE: {
-				MobaCache mobaCache = (MobaCache)theEObject;
-				T result = caseMobaCache(mobaCache);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

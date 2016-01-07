@@ -18,6 +18,7 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.mobadsl.grammar.scoping.ApplicationTemplateScope;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaAuthorization;
+import org.mobadsl.semantic.model.moba.MobaCache;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
@@ -131,6 +132,11 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_MobaGenerator(final MobaApplication ctx, final EReference ref) {
     List<MobaGenerator> _allGenerators = ctx.getAllGenerators();
     return Scopes.scopeFor(_allGenerators);
+  }
+  
+  public IScope scope_MobaCache(final MobaApplication ctx, final EReference ref) {
+    List<MobaCache> _allCaches = ctx.getAllCaches();
+    return Scopes.scopeFor(_allCaches);
   }
   
   public IScope scope_MobaApplication(final MobaApplication ctx, final EReference ref) {

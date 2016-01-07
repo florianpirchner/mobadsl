@@ -134,12 +134,12 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_GENERATOR_SLOT: return createMobaGeneratorSlot();
 			case MobaPackage.MOBA_DATA_TYPE: return createMobaDataType();
 			case MobaPackage.MOBA_CONSTANT: return createMobaConstant();
+			case MobaPackage.MOBA_CACHE: return createMobaCache();
 			case MobaPackage.MOBA_CONSTANT_VALUE: return createMobaConstantValue();
 			case MobaPackage.MOBA_PROPERTY: return createMobaProperty();
 			case MobaPackage.MOBA_SETTINGS: return createMobaSettings();
 			case MobaPackage.MOBA_SETTINGS_ATTRIBUTE: return createMobaSettingsAttribute();
 			case MobaPackage.MOBA_SETTINGS_ENTITY_REFERENCE: return createMobaSettingsEntityReference();
-			case MobaPackage.MOBA_CACHE: return createMobaCache();
 			case MobaPackage.MOBA_ENTITY: return createMobaEntity();
 			case MobaPackage.MOBA_ENTITY_INDEX: return createMobaEntityIndex();
 			case MobaPackage.MOBA_DTO: return createMobaDto();

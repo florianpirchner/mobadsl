@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getCache <em>Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
  * </ul>
  *
@@ -24,30 +24,31 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface MobaApplication extends MobaModelFeature {
 	/**
-	 * Returns the value of the '<em><b>Cache</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Default Cache</b></em>' reference. <!--
+	 * begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cache</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Default Cache</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cache</em>' containment reference.
-	 * @see #setCache(MobaCache)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication_Cache()
-	 * @model containment="true"
+	 * 
+	 * @return the value of the '<em>Default Cache</em>' reference.
+	 * @see #setDefaultCache(MobaCache)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication_DefaultCache()
+	 * @model
 	 * @generated
 	 */
-	MobaCache getCache();
+	MobaCache getDefaultCache();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getCache <em>Cache</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cache</em>' containment reference.
-	 * @see #getCache()
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * @param value the new value of the '<em>Default Cache</em>' reference.
+	 * @see #getDefaultCache()
 	 * @generated
 	 */
-	void setCache(MobaCache value);
+	void setDefaultCache(MobaCache value);
 
 	/**
 	 * Returns the value of the '<em><b>Features</b></em>' containment reference
@@ -82,6 +83,14 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaData> getDatas();
+
+	/**
+	 * Returns the moba caches for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaCache> getCaches();
 
 	/**
 	 * Returns the moba dtos for the current application. Excluding the
@@ -155,21 +164,20 @@ public interface MobaApplication extends MobaModelFeature {
 	 */
 	List<MobaTemplate> getTemplates();
 
-	
 	/**
 	 * Returns the moba transportSerializationType for the current application.
 	 * 
 	 * @return
 	 */
 	List<MobaTransportSerializationType> getTransportSerializationTypes();
-	
+
 	/**
 	 * Returns the moba persistenceType for the current application.
 	 * 
 	 * @return
 	 */
 	List<MobaPersistenceType> getPersistenceTypes();
-	
+
 	/**
 	 * Returns the moba external modules for the current application. Excluding
 	 * the "used templates".
@@ -193,7 +201,7 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaTrigger> getTriggers();
-	
+
 	/**
 	 * Returns the moba servers for the current application. Excluding the
 	 * "used templates".
@@ -221,6 +229,14 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaData> getGenDatas();
+
+	/**
+	 * Returns the moba caches for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaCache> getGenCaches();
 
 	/**
 	 * Returns the moba dtos for the current application. Excluding the
@@ -252,14 +268,14 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaGenerator> getGenGenerators();
-	
+
 	/**
 	 * Returns the moba transportSerializationType for the current application.
 	 * 
 	 * @return
 	 */
 	List<MobaTransportSerializationType> getGenTransportSerializationTypes();
-	
+
 	/**
 	 * Returns the moba persistenceType for the current application.
 	 * 
@@ -349,6 +365,14 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaData> getAllDatas();
+
+	/**
+	 * Returns the moba caches for the current application. Including the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaCache> getAllCaches();
 
 	/**
 	 * Returns the moba dtos for the current application. Including the
@@ -445,10 +469,10 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	List<MobaTransportSerializationType> getAllTransportSerializationTypes();
-	
+
 	/**
-	 * Returns the moba persistenceType for the current application.
-	 * Including the "used templates".
+	 * Returns the moba persistenceType for the current application. Including
+	 * the "used templates".
 	 * 
 	 * @return
 	 */

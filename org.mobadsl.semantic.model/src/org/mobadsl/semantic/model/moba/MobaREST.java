@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getHeaders <em>Headers</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getAuthorization <em>Authorization</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST()
@@ -202,6 +203,32 @@ public interface MobaREST extends MobaApplicationFeature {
 	 */
 	EList<MobaRESTAttribute> getHeaders();
 	
+	/**
+	 * Returns the value of the '<em><b>Authorization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Authorization</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authorization</em>' reference.
+	 * @see #setAuthorization(MobaAuthorization)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_Authorization()
+	 * @model
+	 * @generated
+	 */
+	MobaAuthorization getAuthorization();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getAuthorization <em>Authorization</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authorization</em>' reference.
+	 * @see #getAuthorization()
+	 * @generated
+	 */
+	void setAuthorization(MobaAuthorization value);
+
 	/**
 	 * Returns the values for the current instance. Including the
 	 * "super types".

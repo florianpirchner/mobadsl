@@ -64,7 +64,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaPropertiesAble()
 	 * @generated
 	 */
-	int MOBA_PROPERTIES_ABLE = 18;
+	int MOBA_PROPERTIES_ABLE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -222,7 +222,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaConstantValue()
 	 * @generated
 	 */
-	int MOBA_CONSTANT_VALUE = 17;
+	int MOBA_CONSTANT_VALUE = 18;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaPropertyImpl <em>Property</em>}' class.
@@ -232,7 +232,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaProperty()
 	 * @generated
 	 */
-	int MOBA_PROPERTY = 19;
+	int MOBA_PROPERTY = 20;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDataImpl <em>Data</em>}' class.
@@ -242,7 +242,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaData()
 	 * @generated
 	 */
-	int MOBA_DATA = 20;
+	int MOBA_DATA = 21;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsImpl <em>Settings</em>}' class.
@@ -252,7 +252,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettings()
 	 * @generated
 	 */
-	int MOBA_SETTINGS = 21;
+	int MOBA_SETTINGS = 22;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl <em>Cache</em>}' class.
@@ -262,7 +262,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaCache()
 	 * @generated
 	 */
-	int MOBA_CACHE = 25;
+	int MOBA_CACHE = 17;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityImpl <em>Entity</em>}' class.
@@ -482,7 +482,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsFeature()
 	 * @generated
 	 */
-	int MOBA_SETTINGS_FEATURE = 22;
+	int MOBA_SETTINGS_FEATURE = 23;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsAttributeImpl <em>Settings Attribute</em>}' class.
@@ -492,7 +492,7 @@ public interface MobaPackage extends EPackage {
 	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsAttribute()
 	 * @generated
 	 */
-	int MOBA_SETTINGS_ATTRIBUTE = 23;
+	int MOBA_SETTINGS_ATTRIBUTE = 24;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.MobaConstraintable <em>Constraintable</em>}' class.
@@ -999,13 +999,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_APPLICATION__VERSION = MOBA_MODEL_FEATURE__VERSION;
 
 	/**
-	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
+	 * The feature id for the '<em><b>Default Cache</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION__CACHE = MOBA_MODEL_FEATURE_FEATURE_COUNT + 0;
+	int MOBA_APPLICATION__DEFAULT_CACHE = MOBA_MODEL_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1161,7 +1161,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_SERVER__SERVICES = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Authorization</b></em>' reference list.
+	 * The feature id for the '<em><b>Authorization</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1622,13 +1622,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_DATA_TYPE__BOOL = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 14;
 
 	/**
+	 * The feature id for the '<em><b>Predefined</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_DATA_TYPE__PREDEFINED = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_DATA_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 15;
+	int MOBA_DATA_TYPE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1674,6 +1683,135 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_CONSTANT_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__PROPERTIES = MOBA_APPLICATION_FEATURE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Friends</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__FRIENDS = MOBA_APPLICATION_FEATURE__FRIENDS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__NAME = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityEmbeddableImpl <em>Entity Embeddable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityEmbeddableImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityEmbeddable()
+	 * @generated
+	 */
+	int MOBA_ENTITY_EMBEDDABLE = 41;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoEmbeddableImpl <em>Dto Embeddable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoEmbeddableImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoEmbeddable()
+	 * @generated
+	 */
+	int MOBA_DTO_EMBEDDABLE = 45;
+
+	/**
+	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsEntityReferenceImpl <em>Settings Entity Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsEntityReferenceImpl
+	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsEntityReference()
+	 * @generated
+	 */
+	int MOBA_SETTINGS_ENTITY_REFERENCE = 25;
+
+	/**
+	 * The feature id for the '<em><b>Cache Type String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_TYPE_STRING = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Cache Type Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_TYPE_CONST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Cache Strategy String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_STRATEGY_STRING = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Cache Strategy Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_STRATEGY_CONST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Cache Interval Int</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_INTERVAL_INT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Cache Interval Const</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_INTERVAL_CONST = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Cache Persistence</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE__CACHE_PERSISTENCE = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Cache</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_CACHE_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Value String</b></em>' attribute.
@@ -1937,26 +2075,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_FEATURE_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaEntityEmbeddableImpl <em>Entity Embeddable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaEntityEmbeddableImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaEntityEmbeddable()
-	 * @generated
-	 */
-	int MOBA_ENTITY_EMBEDDABLE = 41;
-
-	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaDtoEmbeddableImpl <em>Dto Embeddable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaDtoEmbeddableImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaDtoEmbeddable()
-	 * @generated
-	 */
-	int MOBA_DTO_EMBEDDABLE = 45;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2110,16 +2228,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_SETTINGS_ATTRIBUTE_FEATURE_COUNT = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 9;
 
 	/**
-	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaSettingsEntityReferenceImpl <em>Settings Entity Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaSettingsEntityReferenceImpl
-	 * @see org.mobadsl.semantic.model.moba.impl.MobaPackageImpl#getMobaSettingsEntityReference()
-	 * @generated
-	 */
-	int MOBA_SETTINGS_ENTITY_REFERENCE = 24;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2210,78 +2318,6 @@ public interface MobaPackage extends EPackage {
 	int MOBA_SETTINGS_ENTITY_REFERENCE_FEATURE_COUNT = MOBA_SETTINGS_FEATURE_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Cache Type String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_TYPE_STRING = 0;
-
-	/**
-	 * The feature id for the '<em><b>Cache Type Const</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_TYPE_CONST = 1;
-
-	/**
-	 * The feature id for the '<em><b>Cache Strategy String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_STRATEGY_STRING = 2;
-
-	/**
-	 * The feature id for the '<em><b>Cache Strategy Const</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_STRATEGY_CONST = 3;
-
-	/**
-	 * The feature id for the '<em><b>Cache Interval Int</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_INTERVAL_INT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Cache Interval Const</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_INTERVAL_CONST = 5;
-
-	/**
-	 * The feature id for the '<em><b>Cache Persistence</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE__CACHE_PERSISTENCE = 6;
-
-	/**
-	 * The number of structural features of the '<em>Cache</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_CACHE_FEATURE_COUNT = 7;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2318,7 +2354,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENTITY__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
+	 * The feature id for the '<em><b>Cache</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2498,7 +2534,7 @@ public interface MobaPackage extends EPackage {
 	int MOBA_QUEUE__SUPER_TYPE = MOBA_DATA_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
+	 * The feature id for the '<em><b>Cache</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2606,13 +2642,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST__HEADERS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Authorization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST__AUTHORIZATION = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>REST</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_REST_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Dto</b></em>' reference.
@@ -2840,6 +2885,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CUSTOM_SERVICE__HEADERS = MOBA_REST__HEADERS;
 
 	/**
+	 * The feature id for the '<em><b>Authorization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_CUSTOM_SERVICE__AUTHORIZATION = MOBA_REST__AUTHORIZATION;
+
+	/**
 	 * The feature id for the '<em><b>Operation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2957,6 +3011,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_WORKFLOW__HEADERS = MOBA_REST__HEADERS;
 
 	/**
+	 * The feature id for the '<em><b>Authorization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_WORKFLOW__AUTHORIZATION = MOBA_REST__AUTHORIZATION;
+
+	/**
 	 * The feature id for the '<em><b>Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3063,6 +3126,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_REST_CRUD__HEADERS = MOBA_REST__HEADERS;
+
+	/**
+	 * The feature id for the '<em><b>Authorization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_CRUD__AUTHORIZATION = MOBA_REST__AUTHORIZATION;
 
 	/**
 	 * The feature id for the '<em><b>Operations</b></em>' attribute list.
@@ -4217,13 +4289,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_ENUM_LITERAL__UNDEFINED = 4;
 
 	/**
+	 * The feature id for the '<em><b>Hidden</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_ENUM_LITERAL__HIDDEN = 5;
+
+	/**
 	 * The number of structural features of the '<em>Enum Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_ENUM_LITERAL_FEATURE_COUNT = 5;
+	int MOBA_ENUM_LITERAL_FEATURE_COUNT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -5092,15 +5173,15 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaApplication();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaApplication#getCache <em>Cache</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cache</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaApplication#getCache()
+	 * @return the meta object for the reference '<em>Default Cache</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache()
 	 * @see #getMobaApplication()
 	 * @generated
 	 */
-	EReference getMobaApplication_Cache();
+	EReference getMobaApplication_DefaultCache();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}'.
@@ -5221,10 +5302,10 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaServer_Services();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaServer#getAuthorization <em>Authorization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Authorization</em>'.
+	 * @return the meta object for the reference '<em>Authorization</em>'.
 	 * @see org.mobadsl.semantic.model.moba.MobaServer#getAuthorization()
 	 * @see #getMobaServer()
 	 * @generated
@@ -5530,6 +5611,17 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMobaDataType_Bool();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaDataType#isPredefined <em>Predefined</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Predefined</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaDataType#isPredefined()
+	 * @see #getMobaDataType()
+	 * @generated
+	 */
+	EAttribute getMobaDataType_Predefined();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaDataType#getEnumAST <em>Enum AST</em>}'.
@@ -5855,6 +5947,17 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaCache();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaCache#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaCache#getName()
+	 * @see #getMobaCache()
+	 * @generated
+	 */
+	EAttribute getMobaCache_Name();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaCache#getCacheTypeString <em>Cache Type String</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5964,10 +6067,10 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaEntity_SuperType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaEntity#getCache <em>Cache</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaEntity#getCache <em>Cache</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cache</em>'.
+	 * @return the meta object for the reference '<em>Cache</em>'.
 	 * @see org.mobadsl.semantic.model.moba.MobaEntity#getCache()
 	 * @see #getMobaEntity()
 	 * @generated
@@ -6137,10 +6240,10 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaQueue_SuperType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaQueue#getCache <em>Cache</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaQueue#getCache <em>Cache</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cache</em>'.
+	 * @return the meta object for the reference '<em>Cache</em>'.
 	 * @see org.mobadsl.semantic.model.moba.MobaQueue#getCache()
 	 * @see #getMobaQueue()
 	 * @generated
@@ -6244,6 +6347,17 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMobaREST_Headers();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getAuthorization <em>Authorization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Authorization</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaREST#getAuthorization()
+	 * @see #getMobaREST()
+	 * @generated
+	 */
+	EReference getMobaREST_Authorization();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition <em>REST Payload Definition</em>}'.
@@ -7608,6 +7722,17 @@ public interface MobaPackage extends EPackage {
 	EAttribute getMobaEnumLiteral_Undefined();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isHidden <em>Hidden</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hidden</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaEnumLiteral#isHidden()
+	 * @see #getMobaEnumLiteral()
+	 * @generated
+	 */
+	EAttribute getMobaEnumLiteral_Hidden();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaTrigger <em>Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8102,12 +8227,12 @@ public interface MobaPackage extends EPackage {
 		EClass MOBA_APPLICATION = eINSTANCE.getMobaApplication();
 
 		/**
-		 * The meta object literal for the '<em><b>Cache</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Default Cache</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MOBA_APPLICATION__CACHE = eINSTANCE.getMobaApplication_Cache();
+		EReference MOBA_APPLICATION__DEFAULT_CACHE = eINSTANCE.getMobaApplication_DefaultCache();
 
 		/**
 		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
@@ -8204,7 +8329,7 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_SERVER__SERVICES = eINSTANCE.getMobaServer_Services();
 
 		/**
-		 * The meta object literal for the '<em><b>Authorization</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Authorization</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8450,6 +8575,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOBA_DATA_TYPE__BOOL = eINSTANCE.getMobaDataType_Bool();
+
+		/**
+		 * The meta object literal for the '<em><b>Predefined</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_DATA_TYPE__PREDEFINED = eINSTANCE.getMobaDataType_Predefined();
 
 		/**
 		 * The meta object literal for the '<em><b>Enum AST</b></em>' containment reference feature.
@@ -8706,6 +8839,14 @@ public interface MobaPackage extends EPackage {
 		EClass MOBA_CACHE = eINSTANCE.getMobaCache();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_CACHE__NAME = eINSTANCE.getMobaCache_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Cache Type String</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8788,7 +8929,7 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_ENTITY__SUPER_TYPE = eINSTANCE.getMobaEntity_SuperType();
 
 		/**
-		 * The meta object literal for the '<em><b>Cache</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Cache</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8922,7 +9063,7 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_QUEUE__SUPER_TYPE = eINSTANCE.getMobaQueue_SuperType();
 
 		/**
-		 * The meta object literal for the '<em><b>Cache</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Cache</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -9002,6 +9143,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_REST__HEADERS = eINSTANCE.getMobaREST_Headers();
+
+		/**
+		 * The meta object literal for the '<em><b>Authorization</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_REST__AUTHORIZATION = eINSTANCE.getMobaREST_Authorization();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaRESTPayloadDefinitionImpl <em>REST Payload Definition</em>}' class.
@@ -10088,6 +10237,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MOBA_ENUM_LITERAL__UNDEFINED = eINSTANCE.getMobaEnumLiteral_Undefined();
+
+		/**
+		 * The meta object literal for the '<em><b>Hidden</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_ENUM_LITERAL__HIDDEN = eINSTANCE.getMobaEnumLiteral_Hidden();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaTriggerImpl <em>Trigger</em>}' class.

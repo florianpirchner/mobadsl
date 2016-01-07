@@ -26,6 +26,7 @@ import java.util.List;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isBool <em>Bool</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaDataType#isPredefined <em>Predefined</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType()
@@ -323,6 +324,32 @@ public interface MobaDataType extends MobaApplicationFeature, MobaConstraintable
 	 * @generated
 	 */
 	void setBool(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Predefined</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Predefined</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Predefined</em>' attribute.
+	 * @see #setPredefined(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaDataType_Predefined()
+	 * @model
+	 * @generated
+	 */
+	boolean isPredefined();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaDataType#isPredefined <em>Predefined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Predefined</em>' attribute.
+	 * @see #isPredefined()
+	 * @generated
+	 */
+	void setPredefined(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Enum AST</b></em>' containment reference.

@@ -47,6 +47,7 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 
 			addNamePropertyDescriptor(object);
 			addSuperTypePropertyDescriptor(object);
+			addCachePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,6 +97,28 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Cache feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCachePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaQueue_cache_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaQueue_cache_feature", "_UI_MobaQueue_type"),
+				 MobaPackage.Literals.MOBA_QUEUE__CACHE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -107,7 +130,6 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MobaPackage.Literals.MOBA_QUEUE__CACHE);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_QUEUE__FEATURES);
 		}
 		return childrenFeatures;
@@ -167,7 +189,6 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 			case MobaPackage.MOBA_QUEUE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MobaPackage.MOBA_QUEUE__CACHE:
 			case MobaPackage.MOBA_QUEUE__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -185,11 +206,6 @@ public class MobaQueueItemProvider extends MobaDataItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MobaPackage.Literals.MOBA_QUEUE__CACHE,
-				 MobaFactory.eINSTANCE.createMobaCache()));
 
 		newChildDescriptors.add
 			(createChildParameter

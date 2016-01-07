@@ -2,8 +2,11 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -19,6 +22,7 @@ import org.mobadsl.semantic.model.moba.MobaPersistenceType;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheTypeString <em>Cache Type String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheTypeConst <em>Cache Type Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaCacheImpl#getCacheStrategyString <em>Cache Strategy String</em>}</li>
@@ -30,7 +34,27 @@ import org.mobadsl.semantic.model.moba.MobaPersistenceType;
  *
  * @generated
  */
-public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaCache {
+public class MobaCacheImpl extends MobaApplicationFeatureImpl implements MobaCache {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCacheTypeString() <em>Cache Type String</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
@@ -146,6 +170,27 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	@Override
 	protected EClass eStaticClass() {
 		return MobaPackage.Literals.MOBA_CACHE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_CACHE__NAME, oldName, name));
 	}
 
 	/**
@@ -355,6 +400,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case MobaPackage.MOBA_CACHE__NAME:
+				return getName();
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_STRING:
 				return getCacheTypeString();
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_CONST:
@@ -384,6 +431,9 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case MobaPackage.MOBA_CACHE__NAME:
+				setName((String)newValue);
+				return;
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_STRING:
 				setCacheTypeString((String)newValue);
 				return;
@@ -416,6 +466,9 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case MobaPackage.MOBA_CACHE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_STRING:
 				setCacheTypeString(CACHE_TYPE_STRING_EDEFAULT);
 				return;
@@ -448,6 +501,8 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case MobaPackage.MOBA_CACHE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_STRING:
 				return CACHE_TYPE_STRING_EDEFAULT == null ? cacheTypeString != null : !CACHE_TYPE_STRING_EDEFAULT.equals(cacheTypeString);
 			case MobaPackage.MOBA_CACHE__CACHE_TYPE_CONST:
@@ -475,7 +530,9 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (cacheTypeString: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", cacheTypeString: ");
 		result.append(cacheTypeString);
 		result.append(", cacheStrategyString: ");
 		result.append(cacheStrategyString);
@@ -507,6 +564,12 @@ public class MobaCacheImpl extends MinimalEObjectImpl.Container implements MobaC
 			return getCacheIntervalConst().getValueAST().getValueInt();
 		}
 		return getCacheIntervalInt();
+	}
+
+	@Override
+	public <T extends EObject> List<T> getAllSuperTypes() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 } // MobaCacheImpl

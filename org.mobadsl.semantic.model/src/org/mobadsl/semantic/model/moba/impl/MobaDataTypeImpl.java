@@ -44,6 +44,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getDateFormatConst <em>Date Format Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isBool <em>Bool</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaDataTypeImpl#isPredefined <em>Predefined</em>}</li>
  * </ul>
  *
  * @generated
@@ -295,6 +296,26 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	 * @ordered
 	 */
 	protected boolean bool = BOOL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPredefined() <em>Predefined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPredefined()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PREDEFINED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPredefined() <em>Predefined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPredefined()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean predefined = PREDEFINED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -574,6 +595,27 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isPredefined() {
+		return predefined;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPredefined(boolean newPredefined) {
+		boolean oldPredefined = predefined;
+		predefined = newPredefined;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_DATA_TYPE__PREDEFINED, oldPredefined, predefined));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -705,6 +747,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return basicGetSuperType();
 			case MobaPackage.MOBA_DATA_TYPE__BOOL:
 				return isBool();
+			case MobaPackage.MOBA_DATA_TYPE__PREDEFINED:
+				return isPredefined();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -763,6 +807,9 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__BOOL:
 				setBool((Boolean)newValue);
 				return;
+			case MobaPackage.MOBA_DATA_TYPE__PREDEFINED:
+				setPredefined((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -819,6 +866,9 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 			case MobaPackage.MOBA_DATA_TYPE__BOOL:
 				setBool(BOOL_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_DATA_TYPE__PREDEFINED:
+				setPredefined(PREDEFINED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -860,6 +910,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 				return superType != null;
 			case MobaPackage.MOBA_DATA_TYPE__BOOL:
 				return bool != BOOL_EDEFAULT;
+			case MobaPackage.MOBA_DATA_TYPE__PREDEFINED:
+				return predefined != PREDEFINED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -925,6 +977,8 @@ public class MobaDataTypeImpl extends MobaApplicationFeatureImpl implements Moba
 		result.append(dateFormatString);
 		result.append(", bool: ");
 		result.append(bool);
+		result.append(", predefined: ");
+		result.append(predefined);
 		result.append(')');
 		return result.toString();
 	}

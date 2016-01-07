@@ -22,6 +22,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#isDefault <em>Default</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#isUndefined <em>Undefined</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaEnumLiteralImpl#isHidden <em>Hidden</em>}</li>
  * </ul>
  *
  * @generated
@@ -126,6 +127,26 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected boolean undefined = UNDEFINED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHidden()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean HIDDEN_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isHidden() <em>Hidden</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isHidden()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean hidden = HIDDEN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -256,6 +277,27 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isHidden() {
+		return hidden;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHidden(boolean newHidden) {
+		boolean oldHidden = hidden;
+		hidden = newHidden;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENUM_LITERAL__HIDDEN, oldHidden, hidden));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -269,6 +311,8 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 				return isDefault();
 			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
 				return isUndefined();
+			case MobaPackage.MOBA_ENUM_LITERAL__HIDDEN:
+				return isHidden();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,6 +339,9 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
 				setUndefined((Boolean)newValue);
+				return;
+			case MobaPackage.MOBA_ENUM_LITERAL__HIDDEN:
+				setHidden((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -323,6 +370,9 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
 				setUndefined(UNDEFINED_EDEFAULT);
 				return;
+			case MobaPackage.MOBA_ENUM_LITERAL__HIDDEN:
+				setHidden(HIDDEN_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -345,6 +395,8 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 				return default_ != DEFAULT_EDEFAULT;
 			case MobaPackage.MOBA_ENUM_LITERAL__UNDEFINED:
 				return undefined != UNDEFINED_EDEFAULT;
+			case MobaPackage.MOBA_ENUM_LITERAL__HIDDEN:
+				return hidden != HIDDEN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -369,6 +421,8 @@ public class MobaEnumLiteralImpl extends MinimalEObjectImpl.Container implements
 		result.append(default_);
 		result.append(", undefined: ");
 		result.append(undefined);
+		result.append(", hidden: ");
+		result.append(hidden);
 		result.append(')');
 		return result.toString();
 	}

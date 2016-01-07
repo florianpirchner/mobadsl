@@ -30,14 +30,10 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getName
- * <em>Name</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getSuperType
- * <em>Super Type</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getCache
- * <em>Cache</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getFeatures
- * <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getCache <em>Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaQueueImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,7 +42,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -56,7 +51,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -64,9 +58,8 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSuperType()
 	 * @generated
 	 * @ordered
@@ -74,9 +67,8 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	protected MobaQueue superType;
 
 	/**
-	 * The cached value of the '{@link #getCache() <em>Cache</em>}' containment
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getCache() <em>Cache</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getCache()
 	 * @generated
 	 * @ordered
@@ -84,9 +76,8 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 	protected MobaCache cache;
 
 	/**
-	 * The cached value of the '{@link #getFeatures() <em>Features</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
@@ -95,7 +86,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaQueueImpl() {
@@ -104,7 +94,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -114,7 +103,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -123,7 +111,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -135,17 +122,15 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaQueue getSuperType() {
 		if (superType != null && superType.eIsProxy()) {
-			InternalEObject oldSuperType = (InternalEObject) superType;
-			superType = (MobaQueue) eResolveProxy(oldSuperType);
+			InternalEObject oldSuperType = (InternalEObject)superType;
+			superType = (MobaQueue)eResolveProxy(oldSuperType);
 			if (superType != oldSuperType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_QUEUE__SUPER_TYPE,
-							oldSuperType, superType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_QUEUE__SUPER_TYPE, oldSuperType, superType));
 			}
 		}
 		return superType;
@@ -153,7 +138,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaQueue basicGetSuperType() {
@@ -162,196 +146,170 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setSuperType(MobaQueue newSuperType) {
 		MobaQueue oldSuperType = superType;
 		superType = newSuperType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_QUEUE__SUPER_TYPE, oldSuperType,
-					superType));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_QUEUE__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaCache getCache() {
+		if (cache != null && cache.eIsProxy()) {
+			InternalEObject oldCache = (InternalEObject)cache;
+			cache = (MobaCache)eResolveProxy(oldCache);
+			if (cache != oldCache) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_QUEUE__CACHE, oldCache, cache));
+			}
+		}
+		return cache;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaCache basicGetCache() {
 		return cache;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public NotificationChain basicSetCache(MobaCache newCache, NotificationChain msgs) {
-		MobaCache oldCache = cache;
-		cache = newCache;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					MobaPackage.MOBA_QUEUE__CACHE, oldCache, newCache);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setCache(MobaCache newCache) {
-		if (newCache != cache) {
-			NotificationChain msgs = null;
-			if (cache != null)
-				msgs = ((InternalEObject) cache).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_QUEUE__CACHE, null, msgs);
-			if (newCache != null)
-				msgs = ((InternalEObject) newCache).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_QUEUE__CACHE, null, msgs);
-			msgs = basicSetCache(newCache, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_QUEUE__CACHE, newCache, newCache));
+		MobaCache oldCache = cache;
+		cache = newCache;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_QUEUE__CACHE, oldCache, cache));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaQueueFeature> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentEList<MobaQueueFeature>(MobaQueueFeature.class, this,
-					MobaPackage.MOBA_QUEUE__FEATURES);
+			features = new EObjectContainmentEList<MobaQueueFeature>(MobaQueueFeature.class, this, MobaPackage.MOBA_QUEUE__FEATURES);
 		}
 		return features;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MobaPackage.MOBA_QUEUE__CACHE:
-			return basicSetCache(null, msgs);
-		case MobaPackage.MOBA_QUEUE__FEATURES:
-			return ((InternalEList<?>) getFeatures()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_QUEUE__FEATURES:
+				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_QUEUE__NAME:
-			return getName();
-		case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
-			if (resolve)
-				return getSuperType();
-			return basicGetSuperType();
-		case MobaPackage.MOBA_QUEUE__CACHE:
-			return getCache();
-		case MobaPackage.MOBA_QUEUE__FEATURES:
-			return getFeatures();
+			case MobaPackage.MOBA_QUEUE__NAME:
+				return getName();
+			case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
+				if (resolve) return getSuperType();
+				return basicGetSuperType();
+			case MobaPackage.MOBA_QUEUE__CACHE:
+				if (resolve) return getCache();
+				return basicGetCache();
+			case MobaPackage.MOBA_QUEUE__FEATURES:
+				return getFeatures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_QUEUE__NAME:
-			setName((String) newValue);
-			return;
-		case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
-			setSuperType((MobaQueue) newValue);
-			return;
-		case MobaPackage.MOBA_QUEUE__CACHE:
-			setCache((MobaCache) newValue);
-			return;
-		case MobaPackage.MOBA_QUEUE__FEATURES:
-			getFeatures().clear();
-			getFeatures().addAll((Collection<? extends MobaQueueFeature>) newValue);
-			return;
+			case MobaPackage.MOBA_QUEUE__NAME:
+				setName((String)newValue);
+				return;
+			case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
+				setSuperType((MobaQueue)newValue);
+				return;
+			case MobaPackage.MOBA_QUEUE__CACHE:
+				setCache((MobaCache)newValue);
+				return;
+			case MobaPackage.MOBA_QUEUE__FEATURES:
+				getFeatures().clear();
+				getFeatures().addAll((Collection<? extends MobaQueueFeature>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_QUEUE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
-			setSuperType((MobaQueue) null);
-			return;
-		case MobaPackage.MOBA_QUEUE__CACHE:
-			setCache((MobaCache) null);
-			return;
-		case MobaPackage.MOBA_QUEUE__FEATURES:
-			getFeatures().clear();
-			return;
+			case MobaPackage.MOBA_QUEUE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
+				setSuperType((MobaQueue)null);
+				return;
+			case MobaPackage.MOBA_QUEUE__CACHE:
+				setCache((MobaCache)null);
+				return;
+			case MobaPackage.MOBA_QUEUE__FEATURES:
+				getFeatures().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_QUEUE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
-			return superType != null;
-		case MobaPackage.MOBA_QUEUE__CACHE:
-			return cache != null;
-		case MobaPackage.MOBA_QUEUE__FEATURES:
-			return features != null && !features.isEmpty();
+			case MobaPackage.MOBA_QUEUE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MobaPackage.MOBA_QUEUE__SUPER_TYPE:
+				return superType != null;
+			case MobaPackage.MOBA_QUEUE__CACHE:
+				return cache != null;
+			case MobaPackage.MOBA_QUEUE__FEATURES:
+				return features != null && !features.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
@@ -412,6 +370,6 @@ public class MobaQueueImpl extends MobaDataImpl implements MobaQueue {
 		if (getCache() != null) {
 			return getCache();
 		}
-		return ((MobaApplication) eContainer()).getCache();
+		return ((MobaApplication) eContainer()).getDefaultCache();
 	}
 } // MobaQueueImpl

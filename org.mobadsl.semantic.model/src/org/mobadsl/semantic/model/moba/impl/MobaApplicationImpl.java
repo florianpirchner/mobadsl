@@ -49,7 +49,7 @@ import org.mobadsl.semantic.model.moba.MobaTrigger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getCache <em>Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getDefaultCache <em>Default Cache</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  *
@@ -57,13 +57,13 @@ import org.mobadsl.semantic.model.moba.MobaTrigger;
  */
 public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApplication {
 	/**
-	 * The cached value of the '{@link #getCache() <em>Cache</em>}' containment reference.
+	 * The cached value of the '{@link #getDefaultCache() <em>Default Cache</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getCache()
+	 * @see #getDefaultCache()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaCache cache;
+	protected MobaCache defaultCache;
 	/**
 	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -94,40 +94,35 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaCache getCache() {
-		return cache;
+	public MobaCache getDefaultCache() {
+		if (defaultCache != null && defaultCache.eIsProxy()) {
+			InternalEObject oldDefaultCache = (InternalEObject)defaultCache;
+			defaultCache = (MobaCache)eResolveProxy(oldDefaultCache);
+			if (defaultCache != oldDefaultCache) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE, oldDefaultCache, defaultCache));
+			}
+		}
+		return defaultCache;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCache(MobaCache newCache, NotificationChain msgs) {
-		MobaCache oldCache = cache;
-		cache = newCache;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__CACHE, oldCache, newCache);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public MobaCache basicGetDefaultCache() {
+		return defaultCache;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCache(MobaCache newCache) {
-		if (newCache != cache) {
-			NotificationChain msgs = null;
-			if (cache != null)
-				msgs = ((InternalEObject)cache).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_APPLICATION__CACHE, null, msgs);
-			if (newCache != null)
-				msgs = ((InternalEObject)newCache).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_APPLICATION__CACHE, null, msgs);
-			msgs = basicSetCache(newCache, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__CACHE, newCache, newCache));
+	public void setDefaultCache(MobaCache newDefaultCache) {
+		MobaCache oldDefaultCache = defaultCache;
+		defaultCache = newDefaultCache;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE, oldDefaultCache, defaultCache));
 	}
 
 	/**
@@ -148,8 +143,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__CACHE:
-				return basicSetCache(null, msgs);
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
@@ -163,8 +156,9 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__CACHE:
-				return getCache();
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				if (resolve) return getDefaultCache();
+				return basicGetDefaultCache();
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				return getFeatures();
 		}
@@ -179,8 +173,8 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__CACHE:
-				setCache((MobaCache)newValue);
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				setDefaultCache((MobaCache)newValue);
 				return;
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				getFeatures().clear();
@@ -197,8 +191,8 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__CACHE:
-				setCache((MobaCache)null);
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				setDefaultCache((MobaCache)null);
 				return;
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				getFeatures().clear();
@@ -214,8 +208,8 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobaPackage.MOBA_APPLICATION__CACHE:
-				return cache != null;
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				return defaultCache != null;
 			case MobaPackage.MOBA_APPLICATION__FEATURES:
 				return features != null && !features.isEmpty();
 		}
@@ -257,6 +251,11 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public List<MobaData> getDatas() {
 		return collect(MobaData.class);
+	}
+
+	@Override
+	public List<MobaCache> getCaches() {
+		return collect(MobaCache.class);
 	}
 
 	@Override
@@ -327,6 +326,11 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public List<MobaData> getAllDatas() {
 		return collectAll(this, MobaData.class);
+	}
+
+	@Override
+	public List<MobaCache> getAllCaches() {
+		return collectAll(this, MobaCache.class);
 	}
 
 	@Override
@@ -442,6 +446,11 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	@Override
 	public List<MobaData> getGenDatas() {
 		return getDatas();
+	}
+
+	@Override
+	public List<MobaCache> getGenCaches() {
+		return getCaches();
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-grammar org.mobadsl.^grammar.Moba with org.eclipse.xtext.common.Terminals
+grammar org.mobadsl.^grammar.Moba hidden(WS, ML_COMMENT, SL_COMMENT)
 
 import "platform:/resource/org.mobadsl.semantic.model/model/Moba.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
@@ -17,20 +17,19 @@ MobaProject:
 	'}';
 
 MobaApplication:
-	'application' name=ID 'version' '=' version=VERSION (cache=MobaCache)? MobaFriendsAble '{'
+	'application' name=ID 'version' '=' version=VERSION ('cache' '=' defaultCache=[MobaCache])? MobaFriendsAble '{'
 	(features+=MobaApplicationFeature*)
 	'}';
 
 MobaApplicationFeature:
 	MobaDataType | MobaTemplate | MobaConstant | MobaSettings | MobaData | MobaREST | MobaGenerator | MobaAuthorization |
 	MobaTransportSerializationType | MobaExternalModule | MobaTrigger |
-	MobaGeneratorSlot | MobaServer | MobaPersistenceType;
+	MobaGeneratorSlot | MobaServer | MobaPersistenceType | MobaCache;
 
 MobaServer:
 	'server' name=ID 'url' '=' (urlString=STRING | urlConst=[MobaConstant|CONSTANT]) ('extends' superType=[MobaServer])?
 	MobaFriendsAble '{'
-	(('autorizations' '=' '(' authorization+=[MobaAuthorization|CONSTANT] (','
-	authorization+=[MobaAuthorization|CONSTANT])* ')')? &
+	(('authorization' '=' authorization=[MobaAuthorization|CONSTANT])? &
 	('services' '=' '(' services+=[MobaREST] (',' services+=[MobaREST])* ')')?)
 	'}';
 
@@ -70,6 +69,7 @@ MobaDataType:
 	& (((date?='isDate' | time?='isTime' | timestamp?='isTimestamp') ('(' (dateFormatString=STRING |
 	dateFormatConst=[MobaConstant|CONSTANT]) ')')?)
 	| (enumAST=MobaEnum)
+	| (predefined?='isPredefined')
 	| (string?="isString" (primitive?='isPrimitive')?)
 	| (bool?="isBool" (primitive?='isPrimitive')?)
 	| (numeric?="isNumeric" (primitive?='isPrimitive')?)
@@ -83,7 +83,8 @@ MobaEnum:
 
 MobaEnumLiteral:
 	'lit' name=CONSTANT '=' '(' literal=STRING ',' value=INT ((',' default?='isDefault')? & (','
-	undefined?='isUndefined')?) ')';
+	undefined?='isUndefined')? & (','
+	^hidden?='isHidden')?) ')';
 
 MobaConstant:
 	'const' name=CONSTANT '=' valueAST=MobaConstantValue MobaFriendsAble;
@@ -118,7 +119,7 @@ MobaSettings:
 
 MobaCache:
 	{MobaCache}
-	'cache'
+	'cache' name=ID
 	// optional
 	('('
 	// type
@@ -130,13 +131,12 @@ MobaCache:
 	// strategy
 	& ('interval' '=' (cacheIntervalInt=INT |
 	cacheIntervalConst=[MobaConstant|CONSTANT]))?
-		// strategy
+	// strategy
 	& ('using'
-	cachePersistence=[MobaPersistenceType|CONSTANT])?
-	) ')')?;
+	cachePersistence=[MobaPersistenceType|CONSTANT])?) ')')?;
 
 MobaEntity:
-	'entity' name=ID (('extends' superType=[MobaEntity])? & (cache=MobaCache)?) MobaFriendsAble '{'
+	'entity' name=ID (('extends' superType=[MobaEntity])? & ('cache' '=' cache=[MobaCache])?) MobaFriendsAble '{'
 	features+=MobaEntityFeature*
 	(indizes+=MobaEntityIndex)*
 	'}';
@@ -151,7 +151,7 @@ MobaDto:
 	'}';
 
 MobaQueue:
-	'queue' name=ID ('extends' superType=[MobaQueue])? (cache=MobaCache)? MobaFriendsAble '{'
+	'queue' name=ID ('extends' superType=[MobaQueue])? ('cache' '=' cache=[MobaCache])? MobaFriendsAble '{'
 	features+=MobaQueueFeature*
 	'}';
 
@@ -166,6 +166,8 @@ MobaRESTCustomService:
 	('parameters' '{'
 	parameters+=MobaRestParameter*
 	'}')? &
+	('autorization' '=' authorization=[MobaAuthorization|CONSTANT])?
+	&
 	('requestDto' '=' requestDto=MobaRESTPayloadDefinition)?
 	&
 	('responseDto' '=' responseDto=MobaRESTPayloadDefinition)?
@@ -202,7 +204,8 @@ MobaEntityAttribute:
 	(domainDescription?='domainDescription')?
 	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
-	type=[MobaDataType] MobaMultiplicityAble name=ID ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')? MobaFriendsAble;
+	type=[MobaDataType] MobaMultiplicityAble name=ID ('format' '(' (formatString=STRING |
+	formatConst=[MobaConstant|CONSTANT]) ')')? MobaFriendsAble;
 
 MobaSettingsFeature:
 	MobaSettingsAttribute | MobaSettingsEntityReference;
@@ -212,10 +215,12 @@ MobaSettingsAttribute:
 	(domainDescription?='domainDescription')?
 	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
-	type=[MobaDataType] MobaMultiplicityAble name=ID ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')? MobaFriendsAble;
+	type=[MobaDataType] MobaMultiplicityAble name=ID ('format' '(' (formatString=STRING |
+	formatConst=[MobaConstant|CONSTANT]) ')')? MobaFriendsAble;
 
 MobaSettingsEntityReference:
-	'refEntity' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity] MobaMultiplicityAble
+	'refEntity' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaEntity]
+	MobaMultiplicityAble
 	name=ID
 	MobaFriendsAble;
 
@@ -240,7 +245,8 @@ MobaDtoAttribute:
 	(domainDescription?='domainDescription')?
 	& ('constraints' '(' constraints+=MobaConstraint (','
 	constraints+=MobaConstraint)* ')')?)
-	type=[MobaDataType] MobaMultiplicityAble name=ID (('alias' '(' alias=ID ')')? & ('format' '(' (formatString=STRING | formatConst=[MobaConstant|CONSTANT]) ')')?) MobaFriendsAble;
+	type=[MobaDataType] MobaMultiplicityAble name=ID (('alias' '(' alias=ID ')')? & ('format' '(' (formatString=STRING |
+	formatConst=[MobaConstant|CONSTANT]) ')')?) MobaFriendsAble;
 
 MobaDtoReference:
 	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaDto]
@@ -285,7 +291,8 @@ MobaMaxLengthConstraint:
 	'maxLength' '=' (filterValue=INT | filterConst=[MobaConstant|CONSTANT]);
 
 MobaDigitsConstraint:
-	'digits' '(' (filterIntegerValue=INT | filterIntegerConst=[MobaConstant|CONSTANT]) ',' (filterFractionValue=INT |
+	'digits' '(' (filterIntegerValue=INT | filterIntegerConst=[MobaConstant|CONSTANT]) ','
+	(filterFractionValue=INT |
 	filterFractionConst=[MobaConstant|CONSTANT]) ')';
 
 MobaNullConstraint:
@@ -354,21 +361,42 @@ enum MobaUpperBound:
 enum MobaRESTMethods:
 	GET="GET" | POST="POST" | PUT="PUT" | DELETE="DELETE";
 
-	// if this is removed, antlr detects an error. INT and FLOAT can not become created since the are not unique definitions. 
-terminal INT returns ecore::EInt:
-	super::INT;
-
-terminal DOUBLE returns ecore::EDouble:
-	('+' | '-')? INT ('.' INT)?;
-
 terminal CONSTANT:
-	('A'..'Z') ('A'..'Z' | '_' | '0'..'9')*;
+	('A'..'Z') ('A'..'Z' | '_' | DIGIT)*;
 
 terminal ID:
-	super::ID;
+	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+
+terminal SIGN:
+	('+' | '-');
+
+terminal DIGIT:
+	('0'..'9');
+	
+terminal DOUBLE returns ecore::EDouble:
+	SIGN? DIGIT+ '.' DIGIT+;
+
+terminal INT returns ecore::EInt:
+	SIGN? DIGIT+;
+
+terminal STRING:
+	'"' ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\' | '"'))* '"' |
+	"'" ('\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\' | "'"))* "'";
+
+terminal ML_COMMENT:
+	'/*'->'*/';
+
+terminal SL_COMMENT:
+	'//' !('\n' | '\r')* ('\r'? '\n')?;
+
+terminal WS:
+	(' ' | '\t' | '\r' | '\n')+;
+
+terminal ANY_OTHER:
+	.;
 
 terminal VERSION:
-	INT '.' INT '.' INT ('-SNAPSHOT')?;
+	DIGIT+ '.' DIGIT+ '.' DIGIT+ ('-SNAPSHOT')?;
 
 terminal FQN:
 	ID ('.' ID)*;
@@ -378,8 +406,3 @@ terminal ID_VERSION:
 
 terminal DOWNLOAD_TEMPLATE:
 	'index://' ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '.' | '0'..'9')* ':' ID_VERSION;
-
-terminal FLOAT returns ecore::EFloat:
-	INT
-	(('e' | 'E') ('+' | '-')? INT)?
-	(('b' | 'B') ('i' | 'I' | 'd' | 'D') | ('l' | 'L' | 'd' | 'D' | 'f' | 'F'))?;

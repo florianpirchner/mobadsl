@@ -103,14 +103,14 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	protected EList<MobaREST> services;
 
 	/**
-	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference list.
+	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @see #getAuthorization()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MobaAuthorization> authorization;
+	protected MobaAuthorization authorization;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -252,11 +252,37 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MobaAuthorization> getAuthorization() {
-		if (authorization == null) {
-			authorization = new EObjectResolvingEList<MobaAuthorization>(MobaAuthorization.class, this, MobaPackage.MOBA_SERVER__AUTHORIZATION);
+	public MobaAuthorization getAuthorization() {
+		if (authorization != null && authorization.eIsProxy()) {
+			InternalEObject oldAuthorization = (InternalEObject)authorization;
+			authorization = (MobaAuthorization)eResolveProxy(oldAuthorization);
+			if (authorization != oldAuthorization) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_SERVER__AUTHORIZATION, oldAuthorization, authorization));
+			}
 		}
 		return authorization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaAuthorization basicGetAuthorization() {
+		return authorization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAuthorization(MobaAuthorization newAuthorization) {
+		MobaAuthorization oldAuthorization = authorization;
+		authorization = newAuthorization;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_SERVER__AUTHORIZATION, oldAuthorization, authorization));
 	}
 
 	/**
@@ -279,7 +305,8 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 			case MobaPackage.MOBA_SERVER__SERVICES:
 				return getServices();
 			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-				return getAuthorization();
+				if (resolve) return getAuthorization();
+				return basicGetAuthorization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -309,8 +336,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 				getServices().addAll((Collection<? extends MobaREST>)newValue);
 				return;
 			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-				getAuthorization().clear();
-				getAuthorization().addAll((Collection<? extends MobaAuthorization>)newValue);
+				setAuthorization((MobaAuthorization)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -339,7 +365,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 				getServices().clear();
 				return;
 			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-				getAuthorization().clear();
+				setAuthorization((MobaAuthorization)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -363,7 +389,7 @@ public class MobaServerImpl extends MobaApplicationFeatureImpl implements MobaSe
 			case MobaPackage.MOBA_SERVER__SERVICES:
 				return services != null && !services.isEmpty();
 			case MobaPackage.MOBA_SERVER__AUTHORIZATION:
-				return authorization != null && !authorization.isEmpty();
+				return authorization != null;
 		}
 		return super.eIsSet(featureID);
 	}

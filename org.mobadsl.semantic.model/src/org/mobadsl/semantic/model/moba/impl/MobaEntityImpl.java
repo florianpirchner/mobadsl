@@ -72,7 +72,7 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	protected MobaEntity superType;
 
 	/**
-	 * The cached value of the '{@link #getCache() <em>Cache</em>}' containment reference.
+	 * The cached value of the '{@link #getCache() <em>Cache</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getCache()
 	 * @generated
@@ -174,6 +174,14 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	 * @generated
 	 */
 	public MobaCache getCache() {
+		if (cache != null && cache.eIsProxy()) {
+			InternalEObject oldCache = (InternalEObject)cache;
+			cache = (MobaCache)eResolveProxy(oldCache);
+			if (cache != oldCache) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_ENTITY__CACHE, oldCache, cache));
+			}
+		}
 		return cache;
 	}
 
@@ -181,14 +189,8 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCache(MobaCache newCache, NotificationChain msgs) {
-		MobaCache oldCache = cache;
-		cache = newCache;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENTITY__CACHE, oldCache, newCache);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public MobaCache basicGetCache() {
+		return cache;
 	}
 
 	/**
@@ -196,17 +198,10 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	 * @generated
 	 */
 	public void setCache(MobaCache newCache) {
-		if (newCache != cache) {
-			NotificationChain msgs = null;
-			if (cache != null)
-				msgs = ((InternalEObject)cache).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_ENTITY__CACHE, null, msgs);
-			if (newCache != null)
-				msgs = ((InternalEObject)newCache).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_ENTITY__CACHE, null, msgs);
-			msgs = basicSetCache(newCache, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENTITY__CACHE, newCache, newCache));
+		MobaCache oldCache = cache;
+		cache = newCache;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_ENTITY__CACHE, oldCache, cache));
 	}
 
 	/**
@@ -238,8 +233,6 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MobaPackage.MOBA_ENTITY__CACHE:
-				return basicSetCache(null, msgs);
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 			case MobaPackage.MOBA_ENTITY__INDIZES:
@@ -261,7 +254,8 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
 			case MobaPackage.MOBA_ENTITY__CACHE:
-				return getCache();
+				if (resolve) return getCache();
+				return basicGetCache();
 			case MobaPackage.MOBA_ENTITY__FEATURES:
 				return getFeatures();
 			case MobaPackage.MOBA_ENTITY__INDIZES:
@@ -459,6 +453,6 @@ public class MobaEntityImpl extends MobaDataImpl implements MobaEntity {
 		if (getCache() != null) {
 			return getCache();
 		}
-		return ((MobaApplication) eContainer()).getCache();
+		return ((MobaApplication) eContainer()).getDefaultCache();
 	}
 } // MobaDtoImpl

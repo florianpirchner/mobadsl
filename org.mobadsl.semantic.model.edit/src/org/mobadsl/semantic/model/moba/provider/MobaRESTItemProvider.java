@@ -48,6 +48,7 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			addNamePropertyDescriptor(object);
 			addUrlPropertyDescriptor(object);
 			addBigDataPropertyDescriptor(object);
+			addAuthorizationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -114,6 +115,28 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Authorization feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthorizationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaREST_authorization_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaREST_authorization_feature", "_UI_MobaREST_type"),
+				 MobaPackage.Literals.MOBA_REST__AUTHORIZATION,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

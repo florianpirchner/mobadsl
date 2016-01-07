@@ -1585,12 +1585,12 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaGeneratorSlotItemProvider != null) mobaGeneratorSlotItemProvider.dispose();
 		if (mobaDataTypeItemProvider != null) mobaDataTypeItemProvider.dispose();
 		if (mobaConstantItemProvider != null) mobaConstantItemProvider.dispose();
+		if (mobaCacheItemProvider != null) mobaCacheItemProvider.dispose();
 		if (mobaConstantValueItemProvider != null) mobaConstantValueItemProvider.dispose();
 		if (mobaPropertyItemProvider != null) mobaPropertyItemProvider.dispose();
 		if (mobaSettingsItemProvider != null) mobaSettingsItemProvider.dispose();
 		if (mobaSettingsAttributeItemProvider != null) mobaSettingsAttributeItemProvider.dispose();
 		if (mobaSettingsEntityReferenceItemProvider != null) mobaSettingsEntityReferenceItemProvider.dispose();
-		if (mobaCacheItemProvider != null) mobaCacheItemProvider.dispose();
 		if (mobaEntityItemProvider != null) mobaEntityItemProvider.dispose();
 		if (mobaEntityIndexItemProvider != null) mobaEntityIndexItemProvider.dispose();
 		if (mobaDtoItemProvider != null) mobaDtoItemProvider.dispose();

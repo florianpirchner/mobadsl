@@ -80,25 +80,25 @@ public interface MobaEntity extends MobaData {
 	void setSuperType(MobaEntity value);
 
 	/**
-	 * Returns the value of the '<em><b>Cache</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Cache</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cache</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cache</em>' containment reference.
+	 * @return the value of the '<em>Cache</em>' reference.
 	 * @see #setCache(MobaCache)
 	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEntity_Cache()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	MobaCache getCache();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEntity#getCache <em>Cache</em>}' containment reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEntity#getCache <em>Cache</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cache</em>' containment reference.
+	 * @param value the new value of the '<em>Cache</em>' reference.
 	 * @see #getCache()
 	 * @generated
 	 */

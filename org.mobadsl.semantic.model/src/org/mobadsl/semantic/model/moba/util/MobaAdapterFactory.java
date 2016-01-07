@@ -208,6 +208,10 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaConstantAdapter();
 			}
 			@Override
+			public Adapter caseMobaCache(MobaCache object) {
+				return createMobaCacheAdapter();
+			}
+			@Override
 			public Adapter caseMobaConstantValue(MobaConstantValue object) {
 				return createMobaConstantValueAdapter();
 			}
@@ -238,10 +242,6 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMobaSettingsEntityReference(MobaSettingsEntityReference object) {
 				return createMobaSettingsEntityReferenceAdapter();
-			}
-			@Override
-			public Adapter caseMobaCache(MobaCache object) {
-				return createMobaCacheAdapter();
 			}
 			@Override
 			public Adapter caseMobaEntity(MobaEntity object) {

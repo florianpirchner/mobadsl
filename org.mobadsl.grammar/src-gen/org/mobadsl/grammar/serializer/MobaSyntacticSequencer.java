@@ -22,7 +22,7 @@ import org.mobadsl.grammar.services.MobaGrammarAccess;
 public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected MobaGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_MobaCache___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
+	protected AbstractElementAlias match_MobaCache___LeftParenthesisKeyword_3_0_RightParenthesisKeyword_3_2__q;
 	protected AbstractElementAlias match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__a__a;
 	protected AbstractElementAlias match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3__a;
 	protected AbstractElementAlias match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a___or_____HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a_RightCurlyBracketKeyword_6_0_3__q___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__p_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a___RightCurlyBracketKeyword_6_0_3___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__p_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a__a__;
@@ -36,7 +36,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (MobaGrammarAccess) access;
-		match_MobaCache___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMobaCacheAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getMobaCacheAccess().getRightParenthesisKeyword_2_2()));
+		match_MobaCache___LeftParenthesisKeyword_3_0_RightParenthesisKeyword_3_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMobaCacheAccess().getLeftParenthesisKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getMobaCacheAccess().getRightParenthesisKeyword_3_2()));
 		match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__a__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getParametersKeyword_6_1_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_1_1()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_1_3())));
 		match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()));
 		match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a___or_____HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a_RightCurlyBracketKeyword_6_0_3__q___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__p_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a___RightCurlyBracketKeyword_6_0_3___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__p_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1___RightCurlyBracketKeyword_6_0_3_HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1__a__a__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1())), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3())), new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getParametersKeyword_6_1_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_1_1()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_1_3())), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1())), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()), new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getParametersKeyword_6_1_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_1_1()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_1_3())), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1())))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()), new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getRightCurlyBracketKeyword_6_0_3()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getHeadersKeyword_6_0_0()), new TokenAlias(false, false, grammarAccess.getMobaRESTCustomServiceAccess().getLeftCurlyBracketKeyword_6_0_1()))));
@@ -60,8 +60,8 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_MobaCache___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
-				emit_MobaCache___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_MobaCache___LeftParenthesisKeyword_3_0_RightParenthesisKeyword_3_2__q.equals(syntax))
+				emit_MobaCache___LeftParenthesisKeyword_3_0_RightParenthesisKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__a__a.equals(syntax))
 				emit_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3___ParametersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__a__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_MobaRESTCustomService___HeadersKeyword_6_0_0_LeftCurlyBracketKeyword_6_0_1_RightCurlyBracketKeyword_6_0_3__a.equals(syntax))
@@ -89,9 +89,9 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('(' ')')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'cache' (ambiguity) (rule start)
+	 *     name=ID (ambiguity) (rule end)
 	 */
-	protected void emit_MobaCache___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_MobaCache___LeftParenthesisKeyword_3_0_RightParenthesisKeyword_3_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -100,6 +100,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('headers' '{' '}' ('parameters' '{' '}')*)*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     headers+=MobaRestHeader '}' ('parameters' '{' '}')* (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     headers+=MobaRestHeader '}' ('parameters' '{' '}')* (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' ('parameters' '{' '}')* (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     headers+=MobaRestHeader '}' ('parameters' '{' '}')* (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
@@ -115,10 +116,12 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('headers' '{' '}')*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     name=ID '{' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
 	 *     operation=MobaRESTMethods (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRestParameter
+	 *     parameters+=MobaRestParameter '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     parameters+=MobaRestParameter '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     parameters+=MobaRestParameter '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
 	 *     parameters+=MobaRestParameter '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
@@ -159,6 +162,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('parameters' '{' '}' ('headers' '{' '}')*)*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     parameters+=MobaRestParameter '}' ('headers' '{' '}')* (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     parameters+=MobaRestParameter '}' ('headers' '{' '}')* (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     parameters+=MobaRestParameter '}' ('headers' '{' '}')* (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     parameters+=MobaRestParameter '}' ('headers' '{' '}')* (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
@@ -174,8 +178,10 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('parameters' '{' '}')*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
+	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
@@ -218,6 +224,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' ('parameters' '{' '}')* 'headers' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     authorization=[MobaAuthorization|CONSTANT] ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     errorDto=MobaRESTPayloadDefinition ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     friends+=MobaFriend ')' '{' ('parameters' '{' '}')* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     headers+=MobaRestHeader (ambiguity) headers+=MobaRestHeader
@@ -237,6 +244,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' ('headers' '{' '}')* 'parameters' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     authorization=[MobaAuthorization|CONSTANT] ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
 	 *     errorDto=MobaRESTPayloadDefinition ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
 	 *     friends+=MobaFriend ')' '{' ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
 	 *     name=ID '{' ('headers' '{' '}')* 'parameters' '{' (ambiguity) parameters+=MobaRestParameter
@@ -256,41 +264,55 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (('headers' '{' '}') | ('parameters' '{' '}'))*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'method' '=' operation=MobaRESTMethods
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) '}' (rule end)
+	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     friends+=MobaFriend ')' '{' (ambiguity) '}' (rule end)
+	 *     name=ID '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     name=ID '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     name=ID '{' (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) '}' (rule end)
+	 *     operation=MobaRESTMethods (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     operation=MobaRESTMethods (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     operation=MobaRESTMethods (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     operation=MobaRESTMethods (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     operation=MobaRESTMethods (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     operation=MobaRESTMethods (ambiguity) '}' (rule end)
+	 *     properties+=MobaProperty ']' '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     properties+=MobaProperty ']' '{' (ambiguity) '}' (rule end)
+	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
+	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
+	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition

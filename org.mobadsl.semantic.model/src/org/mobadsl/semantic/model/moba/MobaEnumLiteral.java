@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#getValue <em>Value</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isDefault <em>Default</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isUndefined <em>Undefined</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isHidden <em>Hidden</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnumLiteral()
@@ -154,5 +155,31 @@ public interface MobaEnumLiteral extends EObject {
 	 * @generated
 	 */
 	void setUndefined(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Hidden</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hidden</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hidden</em>' attribute.
+	 * @see #setHidden(boolean)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaEnumLiteral_Hidden()
+	 * @model
+	 * @generated
+	 */
+	boolean isHidden();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaEnumLiteral#isHidden <em>Hidden</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hidden</em>' attribute.
+	 * @see #isHidden()
+	 * @generated
+	 */
+	void setHidden(boolean value);
 
 } // MobaEnumLiteral

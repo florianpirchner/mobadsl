@@ -91,11 +91,15 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 		return Scopes.scopeFor(ctx.allGenerators);
 	}
 
+	def IScope scope_MobaCache(MobaApplication ctx, EReference ref) {
+		return Scopes.scopeFor(ctx.allCaches);
+	}
+
 	def IScope scope_MobaApplication(MobaApplication ctx, EReference ref) {
 		val scope = globalScopeProvider.getScope(ctx.eResource, ref)
 		return new ApplicationTemplateScope(scope)
 	}
-
+	
 	def IScope scope_MobaEntityReference_opposite(MobaEntityReference ctx, EReference ref) {
 		if (ctx.type != null) {
 			return Scopes.scopeFor(ctx.type.genReferences.filter [
