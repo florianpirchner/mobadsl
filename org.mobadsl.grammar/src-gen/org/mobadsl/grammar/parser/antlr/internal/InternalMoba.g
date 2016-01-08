@@ -78,23 +78,49 @@ ruleMobaModel returns [EObject current=null]
 }:
 	(
 		(
+			otherlv_0='copyright'
 			{
-				newCompositeNode(grammarAccess.getMobaModelAccess().getFeaturesMobaModelFeatureParserRuleCall_0());
+				newLeafNode(otherlv_0, grammarAccess.getMobaModelAccess().getCopyrightKeyword_0_0());
 			}
-			lv_features_0_0=ruleMobaModelFeature
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getMobaModelRule());
+			(
+				(
+					lv_copyright_1_0=RULE_STRING
+					{
+						newLeafNode(lv_copyright_1_0, grammarAccess.getMobaModelAccess().getCopyrightSTRINGTerminalRuleCall_0_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getMobaModelRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"copyright",
+							lv_copyright_1_0,
+							"org.mobadsl.grammar.Moba.STRING");
+					}
+				)
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMobaModelAccess().getFeaturesMobaModelFeatureParserRuleCall_1_0());
 				}
-				add(
-					$current,
-					"features",
-					lv_features_0_0,
-					"org.mobadsl.grammar.Moba.MobaModelFeature");
-				afterParserOrEnumRuleCall();
-			}
-		)
-	)*
+				lv_features_2_0=ruleMobaModelFeature
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMobaModelRule());
+					}
+					add(
+						$current,
+						"features",
+						lv_features_2_0,
+						"org.mobadsl.grammar.Moba.MobaModelFeature");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+	)
 ;
 
 // Entry rule entryRuleMobaModelFeature

@@ -29,18 +29,39 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class MobaModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaModel");
-		private final Assignment cFeaturesAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cFeaturesMobaModelFeatureParserRuleCall_0 = (RuleCall)cFeaturesAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cCopyrightKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cCopyrightAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cCopyrightSTRINGTerminalRuleCall_0_1_0 = (RuleCall)cCopyrightAssignment_0_1.eContents().get(0);
+		private final Assignment cFeaturesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFeaturesMobaModelFeatureParserRuleCall_1_0 = (RuleCall)cFeaturesAssignment_1.eContents().get(0);
 		
 		//MobaModel:
+		//	('copyright' copyright=STRING)?
 		//	features+=MobaModelFeature*;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//('copyright' copyright=STRING)? features+=MobaModelFeature*
+		public Group getGroup() { return cGroup; }
+		
+		//('copyright' copyright=STRING)?
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//'copyright'
+		public Keyword getCopyrightKeyword_0_0() { return cCopyrightKeyword_0_0; }
+		
+		//copyright=STRING
+		public Assignment getCopyrightAssignment_0_1() { return cCopyrightAssignment_0_1; }
+		
+		//STRING
+		public RuleCall getCopyrightSTRINGTerminalRuleCall_0_1_0() { return cCopyrightSTRINGTerminalRuleCall_0_1_0; }
+		
 		//features+=MobaModelFeature*
-		public Assignment getFeaturesAssignment() { return cFeaturesAssignment; }
+		public Assignment getFeaturesAssignment_1() { return cFeaturesAssignment_1; }
 		
 		//MobaModelFeature
-		public RuleCall getFeaturesMobaModelFeatureParserRuleCall_0() { return cFeaturesMobaModelFeatureParserRuleCall_0; }
+		public RuleCall getFeaturesMobaModelFeatureParserRuleCall_1_0() { return cFeaturesMobaModelFeatureParserRuleCall_1_0; }
 	}
 	public class MobaModelFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaModelFeature");
@@ -5203,6 +5224,7 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//MobaModel:
+	//	('copyright' copyright=STRING)?
 	//	features+=MobaModelFeature*;
 	public MobaModelElements getMobaModelAccess() {
 		return pMobaModel;

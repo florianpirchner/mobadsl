@@ -800,13 +800,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_MODEL__FRIENDS = MOBA_FRIENDS_ABLE__FRIENDS;
 
 	/**
+	 * The feature id for the '<em><b>Copyright</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_MODEL__COPYRIGHT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_MODEL__FEATURES = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 0;
+	int MOBA_MODEL__FEATURES = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -815,7 +824,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_MODEL_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 1;
+	int MOBA_MODEL_FEATURE_COUNT = MOBA_FRIENDS_ABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.mobadsl.semantic.model.moba.impl.MobaModelFeatureImpl <em>Model Feature</em>}' class.
@@ -5086,6 +5095,17 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaModel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaModel#getCopyright <em>Copyright</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Copyright</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaModel#getCopyright()
+	 * @see #getMobaModel()
+	 * @generated
+	 */
+	EAttribute getMobaModel_Copyright();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaModel#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8167,6 +8187,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MOBA_MODEL = eINSTANCE.getMobaModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Copyright</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_MODEL__COPYRIGHT = eINSTANCE.getMobaModel_Copyright();
 
 		/**
 		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.

@@ -79,6 +79,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaLowerBoundAccess().getAlternatives(), "rule__MobaLowerBound__Alternatives");
 					put(grammarAccess.getMobaUpperBoundAccess().getAlternatives(), "rule__MobaUpperBound__Alternatives");
 					put(grammarAccess.getMobaRESTMethodsAccess().getAlternatives(), "rule__MobaRESTMethods__Alternatives");
+					put(grammarAccess.getMobaModelAccess().getGroup(), "rule__MobaModel__Group__0");
+					put(grammarAccess.getMobaModelAccess().getGroup_0(), "rule__MobaModel__Group_0__0");
 					put(grammarAccess.getMobaProjectAccess().getGroup(), "rule__MobaProject__Group__0");
 					put(grammarAccess.getMobaProjectAccess().getGroup_7_0(), "rule__MobaProject__Group_7_0__0");
 					put(grammarAccess.getMobaProjectAccess().getGroup_7_1(), "rule__MobaProject__Group_7_1__0");
@@ -206,7 +208,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaBluetoothModuleAccess().getGroup(), "rule__MobaBluetoothModule__Group__0");
 					put(grammarAccess.getMobaPushModuleAccess().getGroup(), "rule__MobaPushModule__Group__0");
 					put(grammarAccess.getMobaNFCModuleAccess().getGroup(), "rule__MobaNFCModule__Group__0");
-					put(grammarAccess.getMobaModelAccess().getFeaturesAssignment(), "rule__MobaModel__FeaturesAssignment");
+					put(grammarAccess.getMobaModelAccess().getCopyrightAssignment_0_1(), "rule__MobaModel__CopyrightAssignment_0_1");
+					put(grammarAccess.getMobaModelAccess().getFeaturesAssignment_1(), "rule__MobaModel__FeaturesAssignment_1");
 					put(grammarAccess.getMobaProjectAccess().getNameAssignment_1(), "rule__MobaProject__NameAssignment_1");
 					put(grammarAccess.getMobaProjectAccess().getVersionAssignment_4(), "rule__MobaProject__VersionAssignment_4");
 					put(grammarAccess.getMobaProjectAccess().getUiApplicationAssignment_7_0_2(), "rule__MobaProject__UiApplicationAssignment_7_0_2");

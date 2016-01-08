@@ -1105,7 +1105,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MobaModel returns MobaModel
 	 *
 	 * Constraint:
-	 *     features+=MobaModelFeature+
+	 *     ((copyright=STRING features+=MobaModelFeature+) | features+=MobaModelFeature+)?
 	 */
 	protected void sequence_MobaModel(ISerializationContext context, MobaModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

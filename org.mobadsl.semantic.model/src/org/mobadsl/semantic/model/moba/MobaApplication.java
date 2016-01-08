@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2015 - 2016, Lunifera GmbH (Wien), Ekkehard Gentz (Rosenheim)
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *         Florian Pirchner - Initial implementation
  */
 package org.mobadsl.semantic.model.moba;
 
@@ -14,12 +22,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache
- * <em>Default Cache</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
- * <em>Features</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage
- * <em>Java Package</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage <em>Java Package</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
@@ -45,13 +50,10 @@ public interface MobaApplication extends MobaModelFeature {
 	MobaCache getDefaultCache();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache
-	 * <em>Default Cache</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Default Cache</em>' reference.
+	 * @param value the new value of the '<em>Default Cache</em>' reference.
 	 * @see #getDefaultCache()
 	 * @generated
 	 */
@@ -93,13 +95,10 @@ public interface MobaApplication extends MobaModelFeature {
 	String getJavaPackage();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage
-	 * <em>Java Package</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage <em>Java Package</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Java Package</em>' attribute.
+	 * @param value the new value of the '<em>Java Package</em>' attribute.
 	 * @see #getJavaPackage()
 	 * @generated
 	 */

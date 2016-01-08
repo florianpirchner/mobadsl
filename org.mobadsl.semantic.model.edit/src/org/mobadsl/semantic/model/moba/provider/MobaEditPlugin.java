@@ -4,6 +4,7 @@ package org.mobadsl.semantic.model.moba.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.osgi.framework.BundleActivator;
 
 /**
  * This is the central singleton for the Moba edit plugin.
@@ -82,6 +83,19 @@ public final class MobaEditPlugin extends EMFPlugin {
 			// Remember the static instance.
 			//
 			plugin = this;
+		}
+
+		/**
+		 * The actual implementation of the purely OSGi-compatible <b>Bundle Activator</b>.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final class Activator extends EMFPlugin.OSGiDelegatingBundleActivator {
+			@Override
+			protected BundleActivator createBundle() {
+				return new Implementation();
+			}
 		}
 	}
 

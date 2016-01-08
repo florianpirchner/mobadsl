@@ -51,33 +51,25 @@ import org.mobadsl.semantic.model.moba.MobaTrigger;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getDefaultCache
- * <em>Default Cache</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getFeatures
- * <em>Features</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getJavaPackage
- * <em>Java Package</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getDefaultCache <em>Default Cache</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationImpl#getJavaPackage <em>Java Package</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApplication {
 	/**
-	 * The cached value of the '{@link #getDefaultCache() <em>Default Cache</em>
-	 * }' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getDefaultCache() <em>Default Cache</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getDefaultCache()
 	 * @generated
 	 * @ordered
 	 */
 	protected MobaCache defaultCache;
 	/**
-	 * The cached value of the '{@link #getFeatures() <em>Features</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
@@ -85,18 +77,16 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 	protected EList<MobaApplicationFeature> features;
 
 	/**
-	 * The default value of the '{@link #getJavaPackage() <em>Java Package</em>}
-	 * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getJavaPackage() <em>Java Package</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getJavaPackage()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final String JAVA_PACKAGE_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getJavaPackage() <em>Java Package</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getJavaPackage() <em>Java Package</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getJavaPackage()
 	 * @generated
 	 * @ordered
@@ -105,7 +95,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaApplicationImpl() {
@@ -114,7 +103,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -124,17 +112,15 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaCache getDefaultCache() {
 		if (defaultCache != null && defaultCache.eIsProxy()) {
-			InternalEObject oldDefaultCache = (InternalEObject) defaultCache;
-			defaultCache = (MobaCache) eResolveProxy(oldDefaultCache);
+			InternalEObject oldDefaultCache = (InternalEObject)defaultCache;
+			defaultCache = (MobaCache)eResolveProxy(oldDefaultCache);
 			if (defaultCache != oldDefaultCache) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE, oldDefaultCache, defaultCache));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE, oldDefaultCache, defaultCache));
 			}
 		}
 		return defaultCache;
@@ -142,7 +128,6 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaCache basicGetDefaultCache() {
@@ -151,33 +136,28 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setDefaultCache(MobaCache newDefaultCache) {
 		MobaCache oldDefaultCache = defaultCache;
 		defaultCache = newDefaultCache;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE,
-					oldDefaultCache, defaultCache));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE, oldDefaultCache, defaultCache));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaApplicationFeature> getFeatures() {
 		if (features == null) {
-			features = new EObjectContainmentEList<MobaApplicationFeature>(MobaApplicationFeature.class, this,
-					MobaPackage.MOBA_APPLICATION__FEATURES);
+			features = new EObjectContainmentEList<MobaApplicationFeature>(MobaApplicationFeature.class, this, MobaPackage.MOBA_APPLICATION__FEATURES);
 		}
 		return features;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getJavaPackage() {
@@ -186,122 +166,112 @@ public class MobaApplicationImpl extends MobaModelFeatureImpl implements MobaApp
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setJavaPackage(String newJavaPackage) {
 		String oldJavaPackage = javaPackage;
 		javaPackage = newJavaPackage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE,
-					oldJavaPackage, javaPackage));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE, oldJavaPackage, javaPackage));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			return ((InternalEList<?>) getFeatures()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
-			if (resolve)
-				return getDefaultCache();
-			return basicGetDefaultCache();
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			return getFeatures();
-		case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
-			return getJavaPackage();
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				if (resolve) return getDefaultCache();
+				return basicGetDefaultCache();
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				return getFeatures();
+			case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
+				return getJavaPackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
-			setDefaultCache((MobaCache) newValue);
-			return;
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			getFeatures().clear();
-			getFeatures().addAll((Collection<? extends MobaApplicationFeature>) newValue);
-			return;
-		case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
-			setJavaPackage((String) newValue);
-			return;
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				setDefaultCache((MobaCache)newValue);
+				return;
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				getFeatures().clear();
+				getFeatures().addAll((Collection<? extends MobaApplicationFeature>)newValue);
+				return;
+			case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
+				setJavaPackage((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
-			setDefaultCache((MobaCache) null);
-			return;
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			getFeatures().clear();
-			return;
-		case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
-			setJavaPackage(JAVA_PACKAGE_EDEFAULT);
-			return;
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				setDefaultCache((MobaCache)null);
+				return;
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				getFeatures().clear();
+				return;
+			case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
+				setJavaPackage(JAVA_PACKAGE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
-			return defaultCache != null;
-		case MobaPackage.MOBA_APPLICATION__FEATURES:
-			return features != null && !features.isEmpty();
-		case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
-			return JAVA_PACKAGE_EDEFAULT == null ? javaPackage != null : !JAVA_PACKAGE_EDEFAULT.equals(javaPackage);
+			case MobaPackage.MOBA_APPLICATION__DEFAULT_CACHE:
+				return defaultCache != null;
+			case MobaPackage.MOBA_APPLICATION__FEATURES:
+				return features != null && !features.isEmpty();
+			case MobaPackage.MOBA_APPLICATION__JAVA_PACKAGE:
+				return JAVA_PACKAGE_EDEFAULT == null ? javaPackage != null : !JAVA_PACKAGE_EDEFAULT.equals(javaPackage);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (javaPackage: ");

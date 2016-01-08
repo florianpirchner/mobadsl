@@ -780,8 +780,17 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaModel_Copyright() {
+		return (EAttribute)mobaModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMobaModel_Features() {
-		return (EReference)mobaModelEClass.getEStructuralFeatures().get(0);
+		return (EReference)mobaModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3369,6 +3378,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		// Create classes and their features
 		mobaModelEClass = createEClass(MOBA_MODEL);
+		createEAttribute(mobaModelEClass, MOBA_MODEL__COPYRIGHT);
 		createEReference(mobaModelEClass, MOBA_MODEL__FEATURES);
 
 		mobaModelFeatureEClass = createEClass(MOBA_MODEL_FEATURE);
@@ -3851,6 +3861,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(mobaModelEClass, MobaModel.class, "MobaModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaModel_Copyright(), ecorePackage.getEString(), "copyright", null, 0, 1, MobaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaModel_Features(), this.getMobaModelFeature(), null, "features", null, 0, -1, MobaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaModelFeatureEClass, MobaModelFeature.class, "MobaModelFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

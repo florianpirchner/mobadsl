@@ -2,6 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="moba" nsURI="http://www.mobadsl.org/model/Moba" nsPrefix="moba">
   <eClassifiers xsi:type="ecore:EClass" name="MobaModel" eSuperTypes="#//MobaFriendsAble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="copyright" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//MobaModelFeature" containment="true"/>
   </eClassifiers>
