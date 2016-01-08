@@ -4,6 +4,8 @@
 package org.mobadsl.grammar.generator
 
 import com.google.inject.Inject
+import java.util.Calendar
+import java.util.Date
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.documentation.IEObjectDocumentationProvider
@@ -36,6 +38,7 @@ class MobaConstantsGenerator extends AbstractGenerator {
 
 	def CharSequence toConstantsClass(
 		MobaApplication application) '''
+		«toCopyright()»
 		package «application.toPackageName»;
 		
 		/**
@@ -65,6 +68,23 @@ class MobaConstantsGenerator extends AbstractGenerator {
 			«toTriggers(application)»
 		}
 	'''
+	
+	def toCopyright() '''
+		/**
+		 * Copyright (c) 2015 - «toCurrentYear()», Lunifera GmbH (Wien), Ekkehard-Gentz (Rosenheim)
+		 * All rights reserved. This program and the accompanying materials
+		 * are made available under the terms of the Eclipse Public License v1.0
+		 * which accompanies this distribution, and is available at
+		 * http://www.eclipse.org/legal/epl-v10.html
+		 *
+		 * Contributors:
+		 *         Florian Pirchner - Initial implementation
+		 */
+	'''
+	
+	def toCurrentYear() {
+		return Calendar.instance.get(Calendar.YEAR)
+	}
 
 	def toTriggers(MobaApplication application) '''«IF !application.triggers.empty»
 			//

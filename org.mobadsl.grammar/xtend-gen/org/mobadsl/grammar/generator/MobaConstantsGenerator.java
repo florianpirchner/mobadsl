@@ -5,6 +5,7 @@ package org.mobadsl.grammar.generator;
 
 import com.google.common.base.Objects;
 import com.google.inject.Inject;
+import java.util.Calendar;
 import java.util.List;
 import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
@@ -70,6 +71,9 @@ public class MobaConstantsGenerator extends AbstractGenerator {
   
   public CharSequence toConstantsClass(final MobaApplication application) {
     StringConcatenation _builder = new StringConcatenation();
+    CharSequence _copyright = this.toCopyright();
+    _builder.append(_copyright, "");
+    _builder.newLineIfNotEmpty();
     _builder.append("package ");
     String _packageName = this.toPackageName(application);
     _builder.append(_packageName, "");
@@ -185,6 +189,48 @@ public class MobaConstantsGenerator extends AbstractGenerator {
     _builder.append("}");
     _builder.newLine();
     return _builder;
+  }
+  
+  public CharSequence toCopyright() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("/**");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("* Copyright (c) 2015 - ");
+    int _currentYear = this.toCurrentYear();
+    _builder.append(_currentYear, " ");
+    _builder.append(", Lunifera GmbH (Wien), Ekkehard-Gentz (Rosenheim)");
+    _builder.newLineIfNotEmpty();
+    _builder.append(" ");
+    _builder.append("* All rights reserved. This program and the accompanying materials");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("* are made available under the terms of the Eclipse Public License v1.0");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("* which accompanies this distribution, and is available at");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("* http://www.eclipse.org/legal/epl-v10.html");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("*");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("* Contributors:");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("*         Florian Pirchner - Initial implementation");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.append("*/");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public int toCurrentYear() {
+    Calendar _instance = Calendar.getInstance();
+    return _instance.get(Calendar.YEAR);
   }
   
   public CharSequence toTriggers(final MobaApplication application) {
