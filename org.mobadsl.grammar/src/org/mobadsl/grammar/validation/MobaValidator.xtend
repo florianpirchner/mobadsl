@@ -37,8 +37,15 @@ import org.mobadsl.semantic.model.moba.MobaSettings
 import org.mobadsl.semantic.model.moba.MobaTemplate
 import org.mobadsl.semantic.model.moba.RecursionException
 import org.mobadsl.semantic.model.moba.ValueType
+import org.eclipse.xtext.resource.IResourceDescription
+import org.eclipse.xtext.resource.IContainer
 
 class MobaValidator extends AbstractMobaValidator {
+
+	@Inject
+	private IContainer.Manager containerManager;
+	@Inject
+	private IResourceDescription.Manager descriptionManager;
 
 	@Inject ExtensionGeneratorDelegate generatorDelegate
 	@Inject @Named(Constants.LANGUAGE_NAME) String grammarName

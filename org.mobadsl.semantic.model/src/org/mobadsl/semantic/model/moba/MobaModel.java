@@ -2,6 +2,8 @@
  */
 package org.mobadsl.semantic.model.moba;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 
 
@@ -37,5 +39,17 @@ public interface MobaModel extends MobaFriendsAble {
 	 * @generated
 	 */
 	EList<MobaModelFeature> getFeatures();
+	
+	/**
+	 * Returns the moba applications contained in this model.
+	 * @return
+	 */
+	List<MobaApplication> getApplications();
+	
+	/**
+	 * Returns the moba projects contained in this model.
+	 * @return
+	 */
+	List<MobaProject> getProjects();
 
 } // MobaModel

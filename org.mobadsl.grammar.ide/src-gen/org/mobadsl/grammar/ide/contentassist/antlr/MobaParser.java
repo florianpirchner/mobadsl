@@ -84,6 +84,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaProjectAccess().getGroup_7_1(), "rule__MobaProject__Group_7_1__0");
 					put(grammarAccess.getMobaApplicationAccess().getGroup(), "rule__MobaApplication__Group__0");
 					put(grammarAccess.getMobaApplicationAccess().getGroup_5(), "rule__MobaApplication__Group_5__0");
+					put(grammarAccess.getMobaApplicationAccess().getGroup_8_0(), "rule__MobaApplication__Group_8_0__0");
 					put(grammarAccess.getMobaServerAccess().getGroup(), "rule__MobaServer__Group__0");
 					put(grammarAccess.getMobaServerAccess().getGroup_5(), "rule__MobaServer__Group_5__0");
 					put(grammarAccess.getMobaServerAccess().getGroup_8_0(), "rule__MobaServer__Group_8_0__0");
@@ -213,7 +214,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaApplicationAccess().getNameAssignment_1(), "rule__MobaApplication__NameAssignment_1");
 					put(grammarAccess.getMobaApplicationAccess().getVersionAssignment_4(), "rule__MobaApplication__VersionAssignment_4");
 					put(grammarAccess.getMobaApplicationAccess().getDefaultCacheAssignment_5_2(), "rule__MobaApplication__DefaultCacheAssignment_5_2");
-					put(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_8(), "rule__MobaApplication__FeaturesAssignment_8");
+					put(grammarAccess.getMobaApplicationAccess().getJavaPackageAssignment_8_0_1(), "rule__MobaApplication__JavaPackageAssignment_8_0_1");
+					put(grammarAccess.getMobaApplicationAccess().getFeaturesAssignment_8_1(), "rule__MobaApplication__FeaturesAssignment_8_1");
 					put(grammarAccess.getMobaServerAccess().getNameAssignment_1(), "rule__MobaServer__NameAssignment_1");
 					put(grammarAccess.getMobaServerAccess().getUrlStringAssignment_4_0(), "rule__MobaServer__UrlStringAssignment_4_0");
 					put(grammarAccess.getMobaServerAccess().getUrlConstAssignment_4_1(), "rule__MobaServer__UrlConstAssignment_4_1");
@@ -432,6 +434,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaNFCModuleAccess().getNameAssignment_1(), "rule__MobaNFCModule__NameAssignment_1");
 					put(grammarAccess.getMobaNFCModuleAccess().getTypeAssignment_4(), "rule__MobaNFCModule__TypeAssignment_4");
 					put(grammarAccess.getMobaProjectAccess().getUnorderedGroup_7(), "rule__MobaProject__UnorderedGroup_7");
+					put(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8(), "rule__MobaApplication__UnorderedGroup_8");
 					put(grammarAccess.getMobaServerAccess().getUnorderedGroup_8(), "rule__MobaServer__UnorderedGroup_8");
 					put(grammarAccess.getMobaDataTypeAccess().getUnorderedGroup_3(), "rule__MobaDataType__UnorderedGroup_3");
 					put(grammarAccess.getMobaEnumLiteralAccess().getUnorderedGroup_7(), "rule__MobaEnumLiteral__UnorderedGroup_7");

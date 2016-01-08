@@ -401,26 +401,82 @@ ruleMobaApplication returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_8_0());
+				{ 
+				  getUnorderedGroupHelper().enter(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8());
 				}
-				lv_features_10_0=ruleMobaApplicationFeature
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMobaApplicationRule());
+				(
+					(
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8(), 0)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8(), 0);
 					}
-					add(
-						$current,
-						"features",
-						lv_features_10_0,
-						"org.mobadsl.grammar.Moba.MobaApplicationFeature");
-					afterParserOrEnumRuleCall();
-				}
+								({true}?=>(otherlv_11='javaPackage'
+								{
+									newLeafNode(otherlv_11, grammarAccess.getMobaApplicationAccess().getJavaPackageKeyword_8_0_0());
+								}
+								(
+									(
+										lv_javaPackage_12_0=RULE_FQN
+										{
+											newLeafNode(lv_javaPackage_12_0, grammarAccess.getMobaApplicationAccess().getJavaPackageFQNTerminalRuleCall_8_0_1_0());
+										}
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getMobaApplicationRule());
+											}
+											setWithLastConsumed(
+												$current,
+												"javaPackage",
+												lv_javaPackage_12_0,
+												"org.mobadsl.grammar.Moba.FQN");
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8(), 1)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8(), 1);
+					}
+								({true}?=>((
+									{
+										newCompositeNode(grammarAccess.getMobaApplicationAccess().getFeaturesMobaApplicationFeatureParserRuleCall_8_1_0());
+									}
+									lv_features_13_0=ruleMobaApplicationFeature
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getMobaApplicationRule());
+										}
+										add(
+											$current,
+											"features",
+											lv_features_13_0,
+											"org.mobadsl.grammar.Moba.MobaApplicationFeature");
+										afterParserOrEnumRuleCall();
+									}
+								)
+								))+
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8());
+					}
+				)
 			)
-		)*
-		otherlv_11='}'
+					)*
+				)
+			)
+				{ 
+				  getUnorderedGroupHelper().leave(grammarAccess.getMobaApplicationAccess().getUnorderedGroup_8());
+				}
+		)
+		otherlv_14='}'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_9());
+			newLeafNode(otherlv_14, grammarAccess.getMobaApplicationAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;

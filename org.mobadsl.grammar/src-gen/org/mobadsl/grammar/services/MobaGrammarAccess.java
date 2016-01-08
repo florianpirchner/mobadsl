@@ -185,17 +185,23 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDefaultCacheMobaCacheIDTerminalRuleCall_5_2_0_1 = (RuleCall)cDefaultCacheMobaCacheCrossReference_5_2_0.eContents().get(1);
 		private final RuleCall cMobaFriendsAbleParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		private final Keyword cLeftCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cFeaturesAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cFeaturesMobaApplicationFeatureParserRuleCall_8_0 = (RuleCall)cFeaturesAssignment_8.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_8 = (UnorderedGroup)cGroup.eContents().get(8);
+		private final Group cGroup_8_0 = (Group)cUnorderedGroup_8.eContents().get(0);
+		private final Keyword cJavaPackageKeyword_8_0_0 = (Keyword)cGroup_8_0.eContents().get(0);
+		private final Assignment cJavaPackageAssignment_8_0_1 = (Assignment)cGroup_8_0.eContents().get(1);
+		private final RuleCall cJavaPackageFQNTerminalRuleCall_8_0_1_0 = (RuleCall)cJavaPackageAssignment_8_0_1.eContents().get(0);
+		private final Assignment cFeaturesAssignment_8_1 = (Assignment)cUnorderedGroup_8.eContents().get(1);
+		private final RuleCall cFeaturesMobaApplicationFeatureParserRuleCall_8_1_0 = (RuleCall)cFeaturesAssignment_8_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//MobaApplication:
 		//	'application' name=ID 'version' '=' version=VERSION ('cache' '=' defaultCache=[MobaCache])? MobaFriendsAble '{'
-		//	features+=MobaApplicationFeature* '}';
+		//	(('javaPackage' javaPackage=FQN)? & features+=MobaApplicationFeature*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'application' name=ID 'version' '=' version=VERSION ('cache' '=' defaultCache=[MobaCache])? MobaFriendsAble '{'
-		//features+=MobaApplicationFeature* '}'
+		//(('javaPackage' javaPackage=FQN)? & features+=MobaApplicationFeature*) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'application'
@@ -243,11 +249,26 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_7() { return cLeftCurlyBracketKeyword_7; }
 		
+		//(('javaPackage' javaPackage=FQN)? & features+=MobaApplicationFeature*)
+		public UnorderedGroup getUnorderedGroup_8() { return cUnorderedGroup_8; }
+		
+		//('javaPackage' javaPackage=FQN)?
+		public Group getGroup_8_0() { return cGroup_8_0; }
+		
+		//'javaPackage'
+		public Keyword getJavaPackageKeyword_8_0_0() { return cJavaPackageKeyword_8_0_0; }
+		
+		//javaPackage=FQN
+		public Assignment getJavaPackageAssignment_8_0_1() { return cJavaPackageAssignment_8_0_1; }
+		
+		//FQN
+		public RuleCall getJavaPackageFQNTerminalRuleCall_8_0_1_0() { return cJavaPackageFQNTerminalRuleCall_8_0_1_0; }
+		
 		//features+=MobaApplicationFeature*
-		public Assignment getFeaturesAssignment_8() { return cFeaturesAssignment_8; }
+		public Assignment getFeaturesAssignment_8_1() { return cFeaturesAssignment_8_1; }
 		
 		//MobaApplicationFeature
-		public RuleCall getFeaturesMobaApplicationFeatureParserRuleCall_8_0() { return cFeaturesMobaApplicationFeatureParserRuleCall_8_0; }
+		public RuleCall getFeaturesMobaApplicationFeatureParserRuleCall_8_1_0() { return cFeaturesMobaApplicationFeatureParserRuleCall_8_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
@@ -5215,7 +5236,8 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//MobaApplication:
 	//	'application' name=ID 'version' '=' version=VERSION ('cache' '=' defaultCache=[MobaCache])? MobaFriendsAble '{'
-	//	features+=MobaApplicationFeature* '}';
+	//	(('javaPackage' javaPackage=FQN)? & features+=MobaApplicationFeature*)
+	//	'}';
 	public MobaApplicationElements getMobaApplicationAccess() {
 		return pMobaApplication;
 	}

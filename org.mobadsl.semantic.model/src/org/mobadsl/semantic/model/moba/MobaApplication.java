@@ -14,8 +14,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache
+ * <em>Default Cache</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getFeatures
+ * <em>Features</em>}</li>
+ * <li>{@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage
+ * <em>Java Package</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication()
@@ -41,10 +45,13 @@ public interface MobaApplication extends MobaModelFeature {
 	MobaCache getDefaultCache();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache <em>Default Cache</em>}' reference.
-	 * <!-- begin-user-doc --> <!--
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getDefaultCache
+	 * <em>Default Cache</em>}' reference. <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * @param value the new value of the '<em>Default Cache</em>' reference.
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Default Cache</em>' reference.
 	 * @see #getDefaultCache()
 	 * @generated
 	 */
@@ -67,6 +74,36 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @generated
 	 */
 	EList<MobaApplicationFeature> getFeatures();
+
+	/**
+	 * Returns the value of the '<em><b>Java Package</b></em>' attribute. <!--
+	 * begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Java Package</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * 
+	 * @return the value of the '<em>Java Package</em>' attribute.
+	 * @see #setJavaPackage(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaApplication_JavaPackage()
+	 * @model
+	 * @generated
+	 */
+	String getJavaPackage();
+
+	/**
+	 * Sets the value of the '
+	 * {@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage
+	 * <em>Java Package</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @param value
+	 *            the new value of the '<em>Java Package</em>' attribute.
+	 * @see #getJavaPackage()
+	 * @generated
+	 */
+	void setJavaPackage(String value);
 
 	/**
 	 * Returns the moba constants for the current application. Excluding the
@@ -93,12 +130,28 @@ public interface MobaApplication extends MobaModelFeature {
 	List<MobaCache> getCaches();
 
 	/**
+	 * Returns the moba authorization for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaAuthorization> getAuthorizations();
+
+	/**
 	 * Returns the moba dtos for the current application. Excluding the
 	 * "used templates".
 	 * 
 	 * @return
 	 */
 	List<MobaDto> getDtos();
+
+	/**
+	 * Returns the moba entities for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaEntity> getEntities();
 
 	/**
 	 * Returns the moba queues for the current application. Excluding the
@@ -239,12 +292,28 @@ public interface MobaApplication extends MobaModelFeature {
 	List<MobaCache> getGenCaches();
 
 	/**
+	 * Returns the moba authorization for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaAuthorization> getGenAuthorizations();
+
+	/**
 	 * Returns the moba dtos for the current application. Excluding the
 	 * "used templates".
 	 * 
 	 * @return
 	 */
 	List<MobaDto> getGenDtos();
+
+	/**
+	 * Returns the moba entities for the current application. Excluding the
+	 * "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaEntity> getGenEntities();
 
 	/**
 	 * Returns the moba queues for the current application. Excluding the
@@ -531,5 +600,53 @@ public interface MobaApplication extends MobaModelFeature {
 	 * @return
 	 */
 	public List<MobaServer> getGenServers();
+
+	/**
+	 * Returns the moba restWorkflows for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaRESTWorkflow> getRESTWorkflows();
+
+	/**
+	 * Returns the moba restWorkflows for the current application. Including
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaRESTWorkflow> getAllRESTWorkflows();
+
+	/**
+	 * Returns the moba restWorkflows for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaRESTWorkflow> getGenRESTWorkflows();
+	
+	/**
+	 * Returns the moba enums for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaEnum> getEnums();
+
+	/**
+	 * Returns the moba enums for the current application. Including
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaEnum> getAllEnums();
+
+	/**
+	 * Returns the moba enums services for the current application. Excluding
+	 * the "used templates".
+	 * 
+	 * @return
+	 */
+	List<MobaEnum> getGenEnums();
 
 } // MobaApplication

@@ -326,7 +326,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         version=VERSION 
 	 *         defaultCache=[MobaCache|ID]? 
 	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))* 
-	 *         features+=MobaApplicationFeature*
+	 *         (javaPackage=FQN | features+=MobaApplicationFeature)*
 	 *     )
 	 */
 	protected void sequence_MobaApplication_MobaFriendsAble(ISerializationContext context, MobaApplication semanticObject) {

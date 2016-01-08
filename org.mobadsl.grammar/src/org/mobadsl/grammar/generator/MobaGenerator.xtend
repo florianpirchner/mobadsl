@@ -12,6 +12,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaModel
+import org.eclipse.xtext.generator.IFileSystemAccess
 
 /**
  * Generates code from your model files on save.
@@ -20,9 +21,14 @@ import org.mobadsl.semantic.model.moba.MobaModel
  */
 class MobaGenerator extends AbstractGenerator {
 
-	@Inject ExtensionGeneratorDelegate generatorDelegate;
+	@Inject ExtensionGeneratorDelegate generatorDelegate
+	@Inject MobaConstantsGenerator constantsGenerator
 
 	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		
+		// generate constants for Xtend
+		constantsGenerator.doGenerate(input, fsa, context)
+		
 		val List<String> generatorIds = input.collectGeneratorIds();
 		if (generatorIds == null) {
 			return

@@ -183,7 +183,7 @@ public class MobaEnumImpl extends MobaApplicationFeatureImpl implements MobaEnum
 		MobaDataType dt = (MobaDataType) type.eContainer();
 		MobaDataType dtSuperType = dt.getSuperType();
 
-		MobaEnum superType = (MobaEnum) dtSuperType == null ? null : dtSuperType.getEnumAST();
+		MobaEnum superType = dtSuperType == null ? null : dtSuperType.getEnumAST();
 		if (superType == null) {
 			return;
 		}

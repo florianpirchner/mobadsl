@@ -5,6 +5,7 @@ package org.mobadsl.semantic.model.moba.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -13,14 +14,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaModel;
 import org.mobadsl.semantic.model.moba.MobaModelFeature;
 import org.mobadsl.semantic.model.moba.MobaPackage;
+import org.mobadsl.semantic.model.moba.MobaProject;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Model</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -33,8 +35,7 @@ import org.mobadsl.semantic.model.moba.MobaPackage;
 public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	/**
 	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
@@ -42,8 +43,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	protected EList<MobaModelFeature> features;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected MobaModelImpl() {
@@ -51,8 +51,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -61,8 +60,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<MobaModelFeature> getFeatures() {
@@ -73,8 +71,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -87,8 +84,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -101,8 +97,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -118,8 +113,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -133,8 +127,7 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -151,4 +144,20 @@ public class MobaModelImpl extends MobaFriendsAbleImpl implements MobaModel {
 		return new ArrayList<T>();
 	}
 
-} //MobaModelImpl
+	@SuppressWarnings("unchecked")
+	protected <T> List<T> collect(Class<T> clazz) {
+		return getFeatures().stream().filter(e -> clazz.isAssignableFrom(e.getClass())).map(e -> (T) e)
+				.collect(Collectors.<T> toList());
+	}
+
+	@Override
+	public List<MobaApplication> getApplications() {
+		return collect(MobaApplication.class);
+	}
+
+	@Override
+	public List<MobaProject> getProjects() {
+		return collect(MobaProject.class);
+	}
+
+} // MobaModelImpl

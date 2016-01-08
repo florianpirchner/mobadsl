@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.Constants;
+import org.eclipse.xtext.resource.IContainer;
+import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.validation.Check;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Exceptions;
@@ -63,6 +65,12 @@ import org.mobadsl.semantic.model.moba.util.Bounds;
 
 @SuppressWarnings("all")
 public class MobaValidator extends AbstractMobaValidator {
+  @Inject
+  private IContainer.Manager containerManager;
+  
+  @Inject
+  private IResourceDescription.Manager descriptionManager;
+  
   @Inject
   private ExtensionGeneratorDelegate generatorDelegate;
   

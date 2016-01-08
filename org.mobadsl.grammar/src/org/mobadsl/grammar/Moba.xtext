@@ -18,7 +18,8 @@ MobaProject:
 
 MobaApplication:
 	'application' name=ID 'version' '=' version=VERSION ('cache' '=' defaultCache=[MobaCache])? MobaFriendsAble '{'
-	(features+=MobaApplicationFeature*)
+	(('javaPackage' javaPackage=FQN)? &
+	(features+=MobaApplicationFeature*))
 	'}';
 
 MobaApplicationFeature:

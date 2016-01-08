@@ -19,6 +19,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.mobadsl.grammar.generator.ExtensionGeneratorDelegate;
+import org.mobadsl.grammar.generator.MobaConstantsGenerator;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaModel;
 import org.mobadsl.semantic.model.moba.MobaModelFeature;
@@ -33,8 +34,12 @@ public class MobaGenerator extends AbstractGenerator {
   @Inject
   private ExtensionGeneratorDelegate generatorDelegate;
   
+  @Inject
+  private MobaConstantsGenerator constantsGenerator;
+  
   @Override
   public void doGenerate(final Resource input, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    this.constantsGenerator.doGenerate(input, fsa, context);
     final List<String> generatorIds = this.collectGeneratorIds(input);
     boolean _equals = Objects.equal(generatorIds, null);
     if (_equals) {

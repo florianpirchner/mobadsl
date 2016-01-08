@@ -879,6 +879,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaApplication_JavaPackage() {
+		return (EAttribute)mobaApplicationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaApplicationFeature() {
 		return mobaApplicationFeatureEClass;
 	}
@@ -3374,6 +3383,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaApplicationEClass = createEClass(MOBA_APPLICATION);
 		createEReference(mobaApplicationEClass, MOBA_APPLICATION__DEFAULT_CACHE);
 		createEReference(mobaApplicationEClass, MOBA_APPLICATION__FEATURES);
+		createEAttribute(mobaApplicationEClass, MOBA_APPLICATION__JAVA_PACKAGE);
 
 		mobaApplicationFeatureEClass = createEClass(MOBA_APPLICATION_FEATURE);
 
@@ -3855,6 +3865,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaApplicationEClass, MobaApplication.class, "MobaApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaApplication_DefaultCache(), this.getMobaCache(), null, "defaultCache", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaApplication_Features(), this.getMobaApplicationFeature(), null, "features", null, 0, -1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaApplication_JavaPackage(), ecorePackage.getEString(), "javaPackage", null, 0, 1, MobaApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaApplicationFeatureEClass, MobaApplicationFeature.class, "MobaApplicationFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

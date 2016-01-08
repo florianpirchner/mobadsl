@@ -1017,13 +1017,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_APPLICATION__FEATURES = MOBA_MODEL_FEATURE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Java Package</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_APPLICATION__JAVA_PACKAGE = MOBA_MODEL_FEATURE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_MODEL_FEATURE_FEATURE_COUNT + 2;
+	int MOBA_APPLICATION_FEATURE_COUNT = MOBA_MODEL_FEATURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -5195,6 +5204,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaApplication_Features();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage <em>Java Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Java Package</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaApplication#getJavaPackage()
+	 * @see #getMobaApplication()
+	 * @generated
+	 */
+	EAttribute getMobaApplication_JavaPackage();
+
+	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaApplicationFeature <em>Application Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8241,6 +8261,14 @@ public interface MobaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MOBA_APPLICATION__FEATURES = eINSTANCE.getMobaApplication_Features();
+
+		/**
+		 * The meta object literal for the '<em><b>Java Package</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBA_APPLICATION__JAVA_PACKAGE = eINSTANCE.getMobaApplication_JavaPackage();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaApplicationFeatureImpl <em>Application Feature</em>}' class.

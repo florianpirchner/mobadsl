@@ -2,6 +2,7 @@
  */
 package org.mobadsl.semantic.model.moba.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -568,8 +569,7 @@ public class MobaCacheImpl extends MobaApplicationFeatureImpl implements MobaCac
 
 	@Override
 	public <T extends EObject> List<T> getAllSuperTypes() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<T>();
 	}
 
 } // MobaCacheImpl
