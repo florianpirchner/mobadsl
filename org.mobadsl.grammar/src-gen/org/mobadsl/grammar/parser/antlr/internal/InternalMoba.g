@@ -4131,69 +4131,117 @@ ruleMobaRestHeader returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='param'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getMobaRestHeaderAccess().getParamKeyword_0());
-		}
 		(
 			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
-					}
-				}
-				otherlv_1=RULE_ID
-				{
-					newLeafNode(otherlv_1, grammarAccess.getMobaRestHeaderAccess().getTypeMobaDataTypeCrossReference_1_0());
-				}
-			)
-		)
-		(
-			(
-				(RULE_ID)=>
 				(
-					lv_nameString_2_0=RULE_ID
+					lv_contentTypeHeader_0_0='ContentTypeHeader'
 					{
-						newLeafNode(lv_nameString_2_0, grammarAccess.getMobaRestHeaderAccess().getNameStringIDTerminalRuleCall_2_0_0());
+						newLeafNode(lv_contentTypeHeader_0_0, grammarAccess.getMobaRestHeaderAccess().getContentTypeHeaderContentTypeHeaderKeyword_0_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
 						}
-						setWithLastConsumed(
-							$current,
-							"nameString",
-							lv_nameString_2_0,
-							"org.mobadsl.grammar.Moba.ID");
+						setWithLastConsumed($current, "contentTypeHeader", true, "ContentTypeHeader");
 					}
 				)
 			)
-			    |
 			(
 				(
+					(RULE_ID)=>
+					(
+						lv_nameString_1_0=RULE_ID
+						{
+							newLeafNode(lv_nameString_1_0, grammarAccess.getMobaRestHeaderAccess().getNameStringIDTerminalRuleCall_0_1_0_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"nameString",
+								lv_nameString_1_0,
+								"org.mobadsl.grammar.Moba.ID");
+						}
+					)
+				)
+				    |
+				(
+					(
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
+							}
+						}
+						otherlv_2=RULE_CONSTANT
+						{
+							newLeafNode(otherlv_2, grammarAccess.getMobaRestHeaderAccess().getNameConstMobaConstantCrossReference_0_1_1_0());
+						}
+					)
+				)
+			)
+		)
+		    |
+		(
+			(
+				(
+					lv_rawHeader_3_0='RawHeader'
+					{
+						newLeafNode(lv_rawHeader_3_0, grammarAccess.getMobaRestHeaderAccess().getRawHeaderRawHeaderKeyword_1_0_0());
+					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
 						}
-					}
-					otherlv_3=RULE_CONSTANT
-					{
-						newLeafNode(otherlv_3, grammarAccess.getMobaRestHeaderAccess().getNameConstMobaConstantCrossReference_2_1_0());
+						setWithLastConsumed($current, "rawHeader", true, "RawHeader");
 					}
 				)
 			)
-		)
-		(
-			otherlv_4='='
+			(
+				(
+					(
+						lv_nameString_4_0=RULE_ID
+						{
+							newLeafNode(lv_nameString_4_0, grammarAccess.getMobaRestHeaderAccess().getNameStringIDTerminalRuleCall_1_1_0_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"nameString",
+								lv_nameString_4_0,
+								"org.mobadsl.grammar.Moba.ID");
+						}
+					)
+				)
+				    |
+				(
+					(
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
+							}
+						}
+						otherlv_5=RULE_CONSTANT
+						{
+							newLeafNode(otherlv_5, grammarAccess.getMobaRestHeaderAccess().getNameConstMobaConstantCrossReference_1_1_1_0());
+						}
+					)
+				)
+			)
+			otherlv_6='='
 			{
-				newLeafNode(otherlv_4, grammarAccess.getMobaRestHeaderAccess().getEqualsSignKeyword_3_0());
+				newLeafNode(otherlv_6, grammarAccess.getMobaRestHeaderAccess().getEqualsSignKeyword_1_2());
 			}
 			(
 				(
 					(
-						lv_valueString_5_0=RULE_STRING
+						lv_valueString_7_0=RULE_STRING
 						{
-							newLeafNode(lv_valueString_5_0, grammarAccess.getMobaRestHeaderAccess().getValueStringSTRINGTerminalRuleCall_3_1_0_0());
+							newLeafNode(lv_valueString_7_0, grammarAccess.getMobaRestHeaderAccess().getValueStringSTRINGTerminalRuleCall_1_3_0_0());
 						}
 						{
 							if ($current==null) {
@@ -4202,7 +4250,7 @@ ruleMobaRestHeader returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"valueString",
-								lv_valueString_5_0,
+								lv_valueString_7_0,
 								"org.mobadsl.grammar.Moba.STRING");
 						}
 					)
@@ -4210,9 +4258,9 @@ ruleMobaRestHeader returns [EObject current=null]
 				    |
 				(
 					(
-						lv_valueInt_6_0=RULE_INT
+						lv_valueInt_8_0=RULE_INT
 						{
-							newLeafNode(lv_valueInt_6_0, grammarAccess.getMobaRestHeaderAccess().getValueIntINTTerminalRuleCall_3_1_1_0());
+							newLeafNode(lv_valueInt_8_0, grammarAccess.getMobaRestHeaderAccess().getValueIntINTTerminalRuleCall_1_3_1_0());
 						}
 						{
 							if ($current==null) {
@@ -4221,7 +4269,7 @@ ruleMobaRestHeader returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"valueInt",
-								lv_valueInt_6_0,
+								lv_valueInt_8_0,
 								"org.mobadsl.grammar.Moba.INT");
 						}
 					)
@@ -4229,9 +4277,9 @@ ruleMobaRestHeader returns [EObject current=null]
 				    |
 				(
 					(
-						lv_valueDouble_7_0=RULE_DOUBLE
+						lv_valueDouble_9_0=RULE_DOUBLE
 						{
-							newLeafNode(lv_valueDouble_7_0, grammarAccess.getMobaRestHeaderAccess().getValueDoubleDOUBLETerminalRuleCall_3_1_2_0());
+							newLeafNode(lv_valueDouble_9_0, grammarAccess.getMobaRestHeaderAccess().getValueDoubleDOUBLETerminalRuleCall_1_3_2_0());
 						}
 						{
 							if ($current==null) {
@@ -4240,7 +4288,7 @@ ruleMobaRestHeader returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"valueDouble",
-								lv_valueDouble_7_0,
+								lv_valueDouble_9_0,
 								"org.mobadsl.grammar.Moba.DOUBLE");
 						}
 					)
@@ -4253,14 +4301,14 @@ ruleMobaRestHeader returns [EObject current=null]
 								$current = createModelElement(grammarAccess.getMobaRestHeaderRule());
 							}
 						}
-						otherlv_8=RULE_CONSTANT
+						otherlv_10=RULE_CONSTANT
 						{
-							newLeafNode(otherlv_8, grammarAccess.getMobaRestHeaderAccess().getValueConstMobaConstantCrossReference_3_1_3_0());
+							newLeafNode(otherlv_10, grammarAccess.getMobaRestHeaderAccess().getValueConstMobaConstantCrossReference_1_3_3_0());
 						}
 					)
 				)
 			)
-		)?
+		)
 	)
 ;
 

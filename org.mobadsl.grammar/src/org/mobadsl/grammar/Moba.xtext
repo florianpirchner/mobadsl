@@ -196,9 +196,11 @@ MobaRestParameter returns MobaRESTAttribute:
 	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
 	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
-MobaRestHeader returns MobaRESTAttribute:
-	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
-	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
+MobaRestHeader returns MobaRESTHeader:
+	((contentTypeHeader?='ContentTypeHeader' (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]))
+	|
+	(rawHeader?='RawHeader' (nameString=ID | nameConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING |
+	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT])));
 
 MobaRESTCrud:
 	'restCrud' name=ID ('extends' superType=[MobaRESTCrud])? MobaFriendsAble;
@@ -384,7 +386,7 @@ terminal SIGN:
 
 terminal DIGIT:
 	('0'..'9');
-	
+
 terminal DOUBLE returns ecore::EDouble:
 	SIGN? DIGIT+ '.' DIGIT+;
 

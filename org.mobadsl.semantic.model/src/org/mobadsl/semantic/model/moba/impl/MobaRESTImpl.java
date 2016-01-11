@@ -20,6 +20,7 @@ import org.mobadsl.semantic.model.moba.MobaAuthorization;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
+import org.mobadsl.semantic.model.moba.MobaRESTHeader;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.util.MobaUtil;
 
@@ -142,7 +143,7 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MobaRESTAttribute> headers;
+	protected EList<MobaRESTHeader> headers;
 
 	/**
 	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' reference.
@@ -370,9 +371,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MobaRESTAttribute> getHeaders() {
+	public EList<MobaRESTHeader> getHeaders() {
 		if (headers == null) {
-			headers = new EObjectContainmentEList<MobaRESTAttribute>(MobaRESTAttribute.class, this, MobaPackage.MOBA_REST__HEADERS);
+			headers = new EObjectContainmentEList<MobaRESTHeader>(MobaRESTHeader.class, this, MobaPackage.MOBA_REST__HEADERS);
 		}
 		return headers;
 	}
@@ -493,7 +494,7 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return;
 			case MobaPackage.MOBA_REST__HEADERS:
 				getHeaders().clear();
-				getHeaders().addAll((Collection<? extends MobaRESTAttribute>)newValue);
+				getHeaders().addAll((Collection<? extends MobaRESTHeader>)newValue);
 				return;
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
 				setAuthorization((MobaAuthorization)newValue);

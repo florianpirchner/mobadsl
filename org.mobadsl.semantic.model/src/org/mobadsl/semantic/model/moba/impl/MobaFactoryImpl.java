@@ -146,6 +146,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_QUEUE: return createMobaQueue();
 			case MobaPackage.MOBA_REST_PAYLOAD_DEFINITION: return createMobaRESTPayloadDefinition();
 			case MobaPackage.MOBA_REST_ATTRIBUTE: return createMobaRESTAttribute();
+			case MobaPackage.MOBA_REST_HEADER: return createMobaRESTHeader();
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE: return createMobaRESTCustomService();
 			case MobaPackage.MOBA_REST_WORKFLOW: return createMobaRESTWorkflow();
 			case MobaPackage.MOBA_REST_CRUD: return createMobaRESTCrud();
@@ -468,6 +469,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaRESTAttribute createMobaRESTAttribute() {
 		MobaRESTAttributeImpl mobaRESTAttribute = new MobaRESTAttributeImpl();
 		return mobaRESTAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTHeader createMobaRESTHeader() {
+		MobaRESTHeaderImpl mobaRESTHeader = new MobaRESTHeaderImpl();
+		return mobaRESTHeader;
 	}
 
 	/**

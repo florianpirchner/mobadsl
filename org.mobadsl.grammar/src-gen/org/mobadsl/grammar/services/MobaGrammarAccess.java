@@ -2594,104 +2594,135 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class MobaRestHeaderElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaRestHeader");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cParamKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cTypeMobaDataTypeCrossReference_1_0 = (CrossReference)cTypeAssignment_1.eContents().get(0);
-		private final RuleCall cTypeMobaDataTypeIDTerminalRuleCall_1_0_1 = (RuleCall)cTypeMobaDataTypeCrossReference_1_0.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cNameStringAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cNameStringIDTerminalRuleCall_2_0_0 = (RuleCall)cNameStringAssignment_2_0.eContents().get(0);
-		private final Assignment cNameConstAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final CrossReference cNameConstMobaConstantCrossReference_2_1_0 = (CrossReference)cNameConstAssignment_2_1.eContents().get(0);
-		private final RuleCall cNameConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_1 = (RuleCall)cNameConstMobaConstantCrossReference_2_1_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
-		private final Assignment cValueStringAssignment_3_1_0 = (Assignment)cAlternatives_3_1.eContents().get(0);
-		private final RuleCall cValueStringSTRINGTerminalRuleCall_3_1_0_0 = (RuleCall)cValueStringAssignment_3_1_0.eContents().get(0);
-		private final Assignment cValueIntAssignment_3_1_1 = (Assignment)cAlternatives_3_1.eContents().get(1);
-		private final RuleCall cValueIntINTTerminalRuleCall_3_1_1_0 = (RuleCall)cValueIntAssignment_3_1_1.eContents().get(0);
-		private final Assignment cValueDoubleAssignment_3_1_2 = (Assignment)cAlternatives_3_1.eContents().get(2);
-		private final RuleCall cValueDoubleDOUBLETerminalRuleCall_3_1_2_0 = (RuleCall)cValueDoubleAssignment_3_1_2.eContents().get(0);
-		private final Assignment cValueConstAssignment_3_1_3 = (Assignment)cAlternatives_3_1.eContents().get(3);
-		private final CrossReference cValueConstMobaConstantCrossReference_3_1_3_0 = (CrossReference)cValueConstAssignment_3_1_3.eContents().get(0);
-		private final RuleCall cValueConstMobaConstantCONSTANTTerminalRuleCall_3_1_3_0_1 = (RuleCall)cValueConstMobaConstantCrossReference_3_1_3_0.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Assignment cContentTypeHeaderAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final Keyword cContentTypeHeaderContentTypeHeaderKeyword_0_0_0 = (Keyword)cContentTypeHeaderAssignment_0_0.eContents().get(0);
+		private final Alternatives cAlternatives_0_1 = (Alternatives)cGroup_0.eContents().get(1);
+		private final Assignment cNameStringAssignment_0_1_0 = (Assignment)cAlternatives_0_1.eContents().get(0);
+		private final RuleCall cNameStringIDTerminalRuleCall_0_1_0_0 = (RuleCall)cNameStringAssignment_0_1_0.eContents().get(0);
+		private final Assignment cNameConstAssignment_0_1_1 = (Assignment)cAlternatives_0_1.eContents().get(1);
+		private final CrossReference cNameConstMobaConstantCrossReference_0_1_1_0 = (CrossReference)cNameConstAssignment_0_1_1.eContents().get(0);
+		private final RuleCall cNameConstMobaConstantCONSTANTTerminalRuleCall_0_1_1_0_1 = (RuleCall)cNameConstMobaConstantCrossReference_0_1_1_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cRawHeaderAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cRawHeaderRawHeaderKeyword_1_0_0 = (Keyword)cRawHeaderAssignment_1_0.eContents().get(0);
+		private final Alternatives cAlternatives_1_1 = (Alternatives)cGroup_1.eContents().get(1);
+		private final Assignment cNameStringAssignment_1_1_0 = (Assignment)cAlternatives_1_1.eContents().get(0);
+		private final RuleCall cNameStringIDTerminalRuleCall_1_1_0_0 = (RuleCall)cNameStringAssignment_1_1_0.eContents().get(0);
+		private final Assignment cNameConstAssignment_1_1_1 = (Assignment)cAlternatives_1_1.eContents().get(1);
+		private final CrossReference cNameConstMobaConstantCrossReference_1_1_1_0 = (CrossReference)cNameConstAssignment_1_1_1.eContents().get(0);
+		private final RuleCall cNameConstMobaConstantCONSTANTTerminalRuleCall_1_1_1_0_1 = (RuleCall)cNameConstMobaConstantCrossReference_1_1_1_0.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Alternatives cAlternatives_1_3 = (Alternatives)cGroup_1.eContents().get(3);
+		private final Assignment cValueStringAssignment_1_3_0 = (Assignment)cAlternatives_1_3.eContents().get(0);
+		private final RuleCall cValueStringSTRINGTerminalRuleCall_1_3_0_0 = (RuleCall)cValueStringAssignment_1_3_0.eContents().get(0);
+		private final Assignment cValueIntAssignment_1_3_1 = (Assignment)cAlternatives_1_3.eContents().get(1);
+		private final RuleCall cValueIntINTTerminalRuleCall_1_3_1_0 = (RuleCall)cValueIntAssignment_1_3_1.eContents().get(0);
+		private final Assignment cValueDoubleAssignment_1_3_2 = (Assignment)cAlternatives_1_3.eContents().get(2);
+		private final RuleCall cValueDoubleDOUBLETerminalRuleCall_1_3_2_0 = (RuleCall)cValueDoubleAssignment_1_3_2.eContents().get(0);
+		private final Assignment cValueConstAssignment_1_3_3 = (Assignment)cAlternatives_1_3.eContents().get(3);
+		private final CrossReference cValueConstMobaConstantCrossReference_1_3_3_0 = (CrossReference)cValueConstAssignment_1_3_3.eContents().get(0);
+		private final RuleCall cValueConstMobaConstantCONSTANTTerminalRuleCall_1_3_3_0_1 = (RuleCall)cValueConstMobaConstantCrossReference_1_3_3_0.eContents().get(1);
 		
-		//MobaRestHeader MobaRESTAttribute:
-		//	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
-		//	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?
+		//MobaRestHeader MobaRESTHeader:
+		//	contentTypeHeader?='ContentTypeHeader' (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) | rawHeader?='RawHeader'
+		//	(nameString=ID | nameConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING | valueInt=INT | valueDouble=DOUBLE |
+		//	valueConst=[MobaConstant|CONSTANT])
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
-		//valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?
-		public Group getGroup() { return cGroup; }
+		//contentTypeHeader?='ContentTypeHeader' (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) | rawHeader?='RawHeader'
+		//(nameString=ID | nameConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING | valueInt=INT | valueDouble=DOUBLE |
+		//valueConst=[MobaConstant|CONSTANT])
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'param'
-		public Keyword getParamKeyword_0() { return cParamKeyword_0; }
+		//contentTypeHeader?='ContentTypeHeader' (-> nameString=ID | nameConst=[MobaConstant|CONSTANT])
+		public Group getGroup_0() { return cGroup_0; }
 		
-		//type=[MobaDataType]
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		//contentTypeHeader?='ContentTypeHeader'
+		public Assignment getContentTypeHeaderAssignment_0_0() { return cContentTypeHeaderAssignment_0_0; }
 		
-		//[MobaDataType]
-		public CrossReference getTypeMobaDataTypeCrossReference_1_0() { return cTypeMobaDataTypeCrossReference_1_0; }
-		
-		//ID
-		public RuleCall getTypeMobaDataTypeIDTerminalRuleCall_1_0_1() { return cTypeMobaDataTypeIDTerminalRuleCall_1_0_1; }
+		//'ContentTypeHeader'
+		public Keyword getContentTypeHeaderContentTypeHeaderKeyword_0_0_0() { return cContentTypeHeaderContentTypeHeaderKeyword_0_0_0; }
 		
 		//(-> nameString=ID | nameConst=[MobaConstant|CONSTANT])
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		public Alternatives getAlternatives_0_1() { return cAlternatives_0_1; }
 		
 		//-> nameString=ID
-		public Assignment getNameStringAssignment_2_0() { return cNameStringAssignment_2_0; }
+		public Assignment getNameStringAssignment_0_1_0() { return cNameStringAssignment_0_1_0; }
 		
 		//ID
-		public RuleCall getNameStringIDTerminalRuleCall_2_0_0() { return cNameStringIDTerminalRuleCall_2_0_0; }
+		public RuleCall getNameStringIDTerminalRuleCall_0_1_0_0() { return cNameStringIDTerminalRuleCall_0_1_0_0; }
 		
 		//nameConst=[MobaConstant|CONSTANT]
-		public Assignment getNameConstAssignment_2_1() { return cNameConstAssignment_2_1; }
+		public Assignment getNameConstAssignment_0_1_1() { return cNameConstAssignment_0_1_1; }
 		
 		//[MobaConstant|CONSTANT]
-		public CrossReference getNameConstMobaConstantCrossReference_2_1_0() { return cNameConstMobaConstantCrossReference_2_1_0; }
+		public CrossReference getNameConstMobaConstantCrossReference_0_1_1_0() { return cNameConstMobaConstantCrossReference_0_1_1_0; }
 		
 		//CONSTANT
-		public RuleCall getNameConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_1() { return cNameConstMobaConstantCONSTANTTerminalRuleCall_2_1_0_1; }
+		public RuleCall getNameConstMobaConstantCONSTANTTerminalRuleCall_0_1_1_0_1() { return cNameConstMobaConstantCONSTANTTerminalRuleCall_0_1_1_0_1; }
 		
-		//('=' (valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?
-		public Group getGroup_3() { return cGroup_3; }
+		//rawHeader?='RawHeader' (nameString=ID | nameConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING | valueInt=INT |
+		//valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT])
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//rawHeader?='RawHeader'
+		public Assignment getRawHeaderAssignment_1_0() { return cRawHeaderAssignment_1_0; }
+		
+		//'RawHeader'
+		public Keyword getRawHeaderRawHeaderKeyword_1_0_0() { return cRawHeaderRawHeaderKeyword_1_0_0; }
+		
+		//(nameString=ID | nameConst=[MobaConstant|CONSTANT])
+		public Alternatives getAlternatives_1_1() { return cAlternatives_1_1; }
+		
+		//nameString=ID
+		public Assignment getNameStringAssignment_1_1_0() { return cNameStringAssignment_1_1_0; }
+		
+		//ID
+		public RuleCall getNameStringIDTerminalRuleCall_1_1_0_0() { return cNameStringIDTerminalRuleCall_1_1_0_0; }
+		
+		//nameConst=[MobaConstant|CONSTANT]
+		public Assignment getNameConstAssignment_1_1_1() { return cNameConstAssignment_1_1_1; }
+		
+		//[MobaConstant|CONSTANT]
+		public CrossReference getNameConstMobaConstantCrossReference_1_1_1_0() { return cNameConstMobaConstantCrossReference_1_1_1_0; }
+		
+		//CONSTANT
+		public RuleCall getNameConstMobaConstantCONSTANTTerminalRuleCall_1_1_1_0_1() { return cNameConstMobaConstantCONSTANTTerminalRuleCall_1_1_1_0_1; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_3_0() { return cEqualsSignKeyword_3_0; }
+		public Keyword getEqualsSignKeyword_1_2() { return cEqualsSignKeyword_1_2; }
 		
 		//(valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT])
-		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
+		public Alternatives getAlternatives_1_3() { return cAlternatives_1_3; }
 		
 		//valueString=STRING
-		public Assignment getValueStringAssignment_3_1_0() { return cValueStringAssignment_3_1_0; }
+		public Assignment getValueStringAssignment_1_3_0() { return cValueStringAssignment_1_3_0; }
 		
 		//STRING
-		public RuleCall getValueStringSTRINGTerminalRuleCall_3_1_0_0() { return cValueStringSTRINGTerminalRuleCall_3_1_0_0; }
+		public RuleCall getValueStringSTRINGTerminalRuleCall_1_3_0_0() { return cValueStringSTRINGTerminalRuleCall_1_3_0_0; }
 		
 		//valueInt=INT
-		public Assignment getValueIntAssignment_3_1_1() { return cValueIntAssignment_3_1_1; }
+		public Assignment getValueIntAssignment_1_3_1() { return cValueIntAssignment_1_3_1; }
 		
 		//INT
-		public RuleCall getValueIntINTTerminalRuleCall_3_1_1_0() { return cValueIntINTTerminalRuleCall_3_1_1_0; }
+		public RuleCall getValueIntINTTerminalRuleCall_1_3_1_0() { return cValueIntINTTerminalRuleCall_1_3_1_0; }
 		
 		//valueDouble=DOUBLE
-		public Assignment getValueDoubleAssignment_3_1_2() { return cValueDoubleAssignment_3_1_2; }
+		public Assignment getValueDoubleAssignment_1_3_2() { return cValueDoubleAssignment_1_3_2; }
 		
 		//DOUBLE
-		public RuleCall getValueDoubleDOUBLETerminalRuleCall_3_1_2_0() { return cValueDoubleDOUBLETerminalRuleCall_3_1_2_0; }
+		public RuleCall getValueDoubleDOUBLETerminalRuleCall_1_3_2_0() { return cValueDoubleDOUBLETerminalRuleCall_1_3_2_0; }
 		
 		//valueConst=[MobaConstant|CONSTANT]
-		public Assignment getValueConstAssignment_3_1_3() { return cValueConstAssignment_3_1_3; }
+		public Assignment getValueConstAssignment_1_3_3() { return cValueConstAssignment_1_3_3; }
 		
 		//[MobaConstant|CONSTANT]
-		public CrossReference getValueConstMobaConstantCrossReference_3_1_3_0() { return cValueConstMobaConstantCrossReference_3_1_3_0; }
+		public CrossReference getValueConstMobaConstantCrossReference_1_3_3_0() { return cValueConstMobaConstantCrossReference_1_3_3_0; }
 		
 		//CONSTANT
-		public RuleCall getValueConstMobaConstantCONSTANTTerminalRuleCall_3_1_3_0_1() { return cValueConstMobaConstantCONSTANTTerminalRuleCall_3_1_3_0_1; }
+		public RuleCall getValueConstMobaConstantCONSTANTTerminalRuleCall_1_3_3_0_1() { return cValueConstMobaConstantCONSTANTTerminalRuleCall_1_3_3_0_1; }
 	}
 	public class MobaRESTCrudElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mobadsl.grammar.Moba.MobaRESTCrud");
@@ -5617,9 +5648,10 @@ public class MobaGrammarAccess extends AbstractGrammarElementFinder {
 		return getMobaRestParameterAccess().getRule();
 	}
 	
-	//MobaRestHeader MobaRESTAttribute:
-	//	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
-	//	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?
+	//MobaRestHeader MobaRESTHeader:
+	//	contentTypeHeader?='ContentTypeHeader' (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) | rawHeader?='RawHeader'
+	//	(nameString=ID | nameConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING | valueInt=INT | valueDouble=DOUBLE |
+	//	valueConst=[MobaConstant|CONSTANT])
 	public MobaRestHeaderElements getMobaRestHeaderAccess() {
 		return pMobaRestHeader;
 	}

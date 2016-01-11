@@ -418,6 +418,12 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_REST_HEADER: {
+				MobaRESTHeader mobaRESTHeader = (MobaRESTHeader)theEObject;
+				T result = caseMobaRESTHeader(mobaRESTHeader);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE: {
 				MobaRESTCustomService mobaRESTCustomService = (MobaRESTCustomService)theEObject;
 				T result = caseMobaRESTCustomService(mobaRESTCustomService);
@@ -1248,6 +1254,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaRESTAttribute(MobaRESTAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>REST Header</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>REST Header</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaRESTHeader(MobaRESTHeader object) {
 		return null;
 	}
 

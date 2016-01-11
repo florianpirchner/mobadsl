@@ -189,7 +189,7 @@ public interface MobaREST extends MobaApplicationFeature {
 
 	/**
 	 * Returns the value of the '<em><b>Headers</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaRESTAttribute}.
+	 * The list contents are of type {@link org.mobadsl.semantic.model.moba.MobaRESTHeader}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Headers</em>' containment reference list isn't clear,
@@ -201,7 +201,7 @@ public interface MobaREST extends MobaApplicationFeature {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<MobaRESTAttribute> getHeaders();
+	EList<MobaRESTHeader> getHeaders();
 	
 	/**
 	 * Returns the value of the '<em><b>Authorization</b></em>' reference.

@@ -64,6 +64,7 @@ import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTHeader;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
@@ -225,20 +226,16 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaFriendsAble_MobaMultiplicityAble_MobaQueueReference(context, (MobaQueueReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_ATTRIBUTE:
-				if (rule == grammarAccess.getMobaRestHeaderRule()) {
-					sequence_MobaRestHeader(context, (MobaRESTAttribute) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getMobaRestParameterRule()) {
-					sequence_MobaRestParameter(context, (MobaRESTAttribute) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_MobaRestParameter(context, (MobaRESTAttribute) semanticObject); 
+				return; 
 			case MobaPackage.MOBA_REST_CRUD:
 				sequence_MobaFriendsAble_MobaRESTCrud(context, (MobaRESTCrud) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE:
 				sequence_MobaFriendsAble_MobaRESTCustomService(context, (MobaRESTCustomService) semanticObject); 
+				return; 
+			case MobaPackage.MOBA_REST_HEADER:
+				sequence_MobaRestHeader(context, (MobaRESTHeader) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_PAYLOAD_DEFINITION:
 				sequence_MobaRESTPayloadDefinition(context, (MobaRESTPayloadDefinition) semanticObject); 
@@ -1209,16 +1206,19 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     MobaRestHeader returns MobaRESTAttribute
+	 *     MobaRestHeader returns MobaRESTHeader
 	 *
 	 * Constraint:
 	 *     (
-	 *         type=[MobaDataType|ID] 
-	 *         (nameString=ID | nameConst=[MobaConstant|CONSTANT]) 
-	 *         (valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT])?
+	 *         (contentTypeHeader?='ContentTypeHeader' (nameString=ID | nameConst=[MobaConstant|CONSTANT])) | 
+	 *         (
+	 *             rawHeader?='RawHeader' 
+	 *             (nameString=ID | nameConst=[MobaConstant|CONSTANT]) 
+	 *             (valueString=STRING | valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT])
+	 *         )
 	 *     )
 	 */
-	protected void sequence_MobaRestHeader(ISerializationContext context, MobaRESTAttribute semanticObject) {
+	protected void sequence_MobaRestHeader(ISerializationContext context, MobaRESTHeader semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
