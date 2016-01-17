@@ -23,13 +23,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#isContentTypeHeader <em>Content Type Header</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#isRawHeader <em>Raw Header</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getNameString <em>Name String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getNameConst <em>Name Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getKeyString <em>Key String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getKeyConst <em>Key Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValueConst <em>Value Const</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValueDouble <em>Value Double</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValueInt <em>Value Int</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getKey <em>Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -91,56 +89,56 @@ public interface MobaRESTHeader extends EObject {
 	void setRawHeader(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Name String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Key String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Key String</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name String</em>' attribute.
-	 * @see #setNameString(String)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_NameString()
+	 * @return the value of the '<em>Key String</em>' attribute.
+	 * @see #setKeyString(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_KeyString()
 	 * @model
 	 * @generated
 	 */
-	String getNameString();
+	String getKeyString();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getNameString <em>Name String</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getKeyString <em>Key String</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name String</em>' attribute.
-	 * @see #getNameString()
+	 * @param value the new value of the '<em>Key String</em>' attribute.
+	 * @see #getKeyString()
 	 * @generated
 	 */
-	void setNameString(String value);
+	void setKeyString(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Name Const</b></em>' reference.
+	 * Returns the value of the '<em><b>Key Const</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name Const</em>' reference isn't clear,
+	 * If the meaning of the '<em>Key Const</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name Const</em>' reference.
-	 * @see #setNameConst(MobaConstant)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_NameConst()
+	 * @return the value of the '<em>Key Const</em>' reference.
+	 * @see #setKeyConst(MobaConstant)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_KeyConst()
 	 * @model
 	 * @generated
 	 */
-	MobaConstant getNameConst();
+	MobaConstant getKeyConst();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getNameConst <em>Name Const</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getKeyConst <em>Key Const</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name Const</em>' reference.
-	 * @see #getNameConst()
+	 * @param value the new value of the '<em>Key Const</em>' reference.
+	 * @see #getKeyConst()
 	 * @generated
 	 */
-	void setNameConst(MobaConstant value);
+	void setKeyConst(MobaConstant value);
 
 	/**
 	 * Returns the value of the '<em><b>Value String</b></em>' attribute.
@@ -195,71 +193,19 @@ public interface MobaRESTHeader extends EObject {
 	void setValueConst(MobaConstant value);
 
 	/**
-	 * Returns the value of the '<em><b>Value Double</b></em>' attribute.
+	 * Returns the value of the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value Double</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Key</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value Double</em>' attribute.
-	 * @see #setValueDouble(Double)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_ValueDouble()
-	 * @model
-	 * @generated
-	 */
-	Double getValueDouble();
-
-	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValueDouble <em>Value Double</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value Double</em>' attribute.
-	 * @see #getValueDouble()
-	 * @generated
-	 */
-	void setValueDouble(Double value);
-
-	/**
-	 * Returns the value of the '<em><b>Value Int</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value Int</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value Int</em>' attribute.
-	 * @see #setValueInt(Integer)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_ValueInt()
-	 * @model
-	 * @generated
-	 */
-	Integer getValueInt();
-
-	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTHeader#getValueInt <em>Value Int</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value Int</em>' attribute.
-	 * @see #getValueInt()
-	 * @generated
-	 */
-	void setValueInt(Integer value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_Name()
+	 * @return the value of the '<em>Key</em>' attribute.
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTHeader_Key()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	String getName();
+	String getKey();
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

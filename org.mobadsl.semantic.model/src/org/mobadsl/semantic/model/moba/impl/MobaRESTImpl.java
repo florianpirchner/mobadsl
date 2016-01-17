@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -40,6 +41,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getErrorDto <em>Error Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getHeaders <em>Headers</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getAuthorization <em>Authorization</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getPath <em>Path</em>}</li>
  * </ul>
  *
  * @generated
@@ -154,6 +156,26 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * @ordered
 	 */
 	protected MobaAuthorization authorization;
+
+	/**
+	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String path = PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -421,6 +443,27 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPath() {
+		return path;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPath(String newPath) {
+		String oldPath = path;
+		path = newPath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__PATH, oldPath, path));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -461,6 +504,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
 				if (resolve) return getAuthorization();
 				return basicGetAuthorization();
+			case MobaPackage.MOBA_REST__PATH:
+				return getPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -499,6 +544,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
 				setAuthorization((MobaAuthorization)newValue);
 				return;
+			case MobaPackage.MOBA_REST__PATH:
+				setPath((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -535,6 +583,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
 				setAuthorization((MobaAuthorization)null);
 				return;
+			case MobaPackage.MOBA_REST__PATH:
+				setPath(PATH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -563,6 +614,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return headers != null && !headers.isEmpty();
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
 				return authorization != null;
+			case MobaPackage.MOBA_REST__PATH:
+				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -583,6 +636,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 		result.append(url);
 		result.append(", bigData: ");
 		result.append(bigData);
+		result.append(", path: ");
+		result.append(path);
 		result.append(')');
 		return result.toString();
 	}
@@ -602,19 +657,19 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	}
 
 	protected <T extends EObject> List<T> collectGen(MobaREST instance, Class<T> clazz,
-			EReference collectionFeture, EAttribute nameAtt) {
+			EReference collectionFeture, EStructuralFeature nameAtt) {
 		return MobaUtil.getGenFeatures(collectAll(this, clazz, collectionFeture), nameAtt);
 	}
 	
 	@Override
-	public List<MobaRESTAttribute> getAllHeaders() {
-		return collectAll(this, MobaRESTAttribute.class, MobaPackage.Literals.MOBA_REST__HEADERS);
+	public List<MobaRESTHeader> getAllHeaders() {
+		return collectAll(this, MobaRESTHeader.class, MobaPackage.Literals.MOBA_REST__HEADERS);
 	}
 
 	@Override
-	public List<MobaRESTAttribute> getGenHeaders() {
-		return collectGen(this, MobaRESTAttribute.class, MobaPackage.Literals.MOBA_REST__HEADERS,
-				MobaPackage.Literals.MOBA_REST_ATTRIBUTE__NAME);
+	public List<MobaRESTHeader> getGenHeaders() {
+		return collectGen(this, MobaRESTHeader.class, MobaPackage.Literals.MOBA_REST__HEADERS,
+				MobaPackage.Literals.MOBA_REST_ATTRIBUTE__KEY);
 	}
 	
 } //MobaRESTImpl

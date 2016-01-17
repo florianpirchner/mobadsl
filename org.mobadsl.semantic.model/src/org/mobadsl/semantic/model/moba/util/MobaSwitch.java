@@ -23,11 +23,13 @@ import org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEmailTrigger;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaEntityFeature;
 import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
@@ -57,6 +59,7 @@ import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
@@ -66,9 +69,12 @@ import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTAbstractAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaRESTHeader;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
@@ -76,6 +82,7 @@ import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
@@ -412,9 +419,23 @@ public class MobaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MobaPackage.MOBA_REST_ABSTRACT_ATTRIBUTE: {
+				MobaRESTAbstractAttribute mobaRESTAbstractAttribute = (MobaRESTAbstractAttribute)theEObject;
+				T result = caseMobaRESTAbstractAttribute(mobaRESTAbstractAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MobaPackage.MOBA_REST_ATTRIBUTE: {
 				MobaRESTAttribute mobaRESTAttribute = (MobaRESTAttribute)theEObject;
 				T result = caseMobaRESTAttribute(mobaRESTAttribute);
+				if (result == null) result = caseMobaRESTAbstractAttribute(mobaRESTAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MobaPackage.MOBA_REST_DTO_ATTRIBUTE: {
+				MobaRESTDtoAttribute mobaRESTDtoAttribute = (MobaRESTDtoAttribute)theEObject;
+				T result = caseMobaRESTDtoAttribute(mobaRESTDtoAttribute);
+				if (result == null) result = caseMobaRESTAbstractAttribute(mobaRESTDtoAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1243,6 +1264,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>REST Abstract Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>REST Abstract Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaRESTAbstractAttribute(MobaRESTAbstractAttribute object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>REST Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1254,6 +1290,21 @@ public class MobaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMobaRESTAttribute(MobaRESTAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>REST Dto Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>REST Dto Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMobaRESTDtoAttribute(MobaRESTDtoAttribute object) {
 		return null;
 	}
 

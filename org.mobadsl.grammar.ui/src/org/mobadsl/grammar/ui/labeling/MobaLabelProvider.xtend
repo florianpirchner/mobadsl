@@ -78,7 +78,7 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	def text(MobaRESTAttribute att) {
-		return att.name.getDisplayString(att.value)
+		return att.key.getDisplayString(att.value)
 	}
 
 	def text(MobaDtoAttribute att) {

@@ -49,6 +49,7 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			addUrlPropertyDescriptor(object);
 			addBigDataPropertyDescriptor(object);
 			addAuthorizationPropertyDescriptor(object);
+			addPathPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -142,6 +143,28 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Path feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPathPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaREST_path_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaREST_path_feature", "_UI_MobaREST_type"),
+				 MobaPackage.Literals.MOBA_REST__PATH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -204,6 +227,7 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			case MobaPackage.MOBA_REST__NAME:
 			case MobaPackage.MOBA_REST__URL:
 			case MobaPackage.MOBA_REST__BIG_DATA:
+			case MobaPackage.MOBA_REST__PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaPackage.MOBA_REST__REQUEST_DTO:
@@ -245,7 +269,7 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_REST__HEADERS,
-				 MobaFactory.eINSTANCE.createMobaRESTAttribute()));
+				 MobaFactory.eINSTANCE.createMobaRESTHeader()));
 	}
 
 	/**

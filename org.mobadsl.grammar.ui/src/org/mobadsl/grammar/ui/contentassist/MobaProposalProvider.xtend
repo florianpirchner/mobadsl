@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
  *         Florian Pirchner - Initial implementation
  */
@@ -85,7 +85,7 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 		]
 	}
 
-	override void completeMobaRestParameter_NameString(EObject model, Assignment assignment,
+	override void completeMobaRESTAttribute_KeyString(EObject model, Assignment assignment,
 		ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		acceptor.accept(doCreateProposal("param1", getDisplayString_KeyString, model.image, 1000, context))
 	}
@@ -134,14 +134,14 @@ class MobaProposalProvider extends AbstractMobaProposalProvider {
 	override void completeMobaDtoReference_Alias(EObject model, Assignment assignment, ContentAssistContext context,
 		ICompletionProposalAcceptor acceptor) {
 		super.completeMobaDtoReference_Alias(model, assignment, context, acceptor)
-		
+
 		acceptor.accept(doCreateProposal("aliasName", null, model.image, 1000, context))
 	}
 
 	override void completeMobaDtoEmbeddable_Alias(EObject model, Assignment assignment, ContentAssistContext context,
 		ICompletionProposalAcceptor acceptor) {
 		super.completeMobaDtoEmbeddable_Alias(model, assignment, context, acceptor)
-		
+
 		acceptor.accept(doCreateProposal("aliasName", null, model.image, 1000, context))
 	}
 

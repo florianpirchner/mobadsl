@@ -2,8 +2,6 @@
  */
 package org.mobadsl.semantic.model.moba;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>REST Attribute</b></em>'.
@@ -14,13 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getType <em>Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getNameString <em>Name String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getNameConst <em>Name Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getKeyString <em>Key String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getKeyConst <em>Key Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getKey <em>Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValueConst <em>Value Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValueDouble <em>Value Double</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValueInt <em>Value Int</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getValue <em>Value</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getFormatString <em>Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getFormatConst <em>Format Const</em>}</li>
@@ -30,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MobaRESTAttribute extends EObject {
+public interface MobaRESTAttribute extends MobaRESTAbstractAttribute {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -58,56 +56,71 @@ public interface MobaRESTAttribute extends EObject {
 	void setType(MobaDataType value);
 
 	/**
-	 * Returns the value of the '<em><b>Name String</b></em>' attribute.
+	 * Returns the value of the '<em><b>Key String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name String</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Key String</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name String</em>' attribute.
-	 * @see #setNameString(String)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_NameString()
+	 * @return the value of the '<em>Key String</em>' attribute.
+	 * @see #setKeyString(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_KeyString()
 	 * @model
 	 * @generated
 	 */
-	String getNameString();
+	String getKeyString();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getNameString <em>Name String</em>}' attribute.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getKeyString <em>Key String</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name String</em>' attribute.
-	 * @see #getNameString()
+	 * @param value the new value of the '<em>Key String</em>' attribute.
+	 * @see #getKeyString()
 	 * @generated
 	 */
-	void setNameString(String value);
+	void setKeyString(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Name Const</b></em>' reference.
+	 * Returns the value of the '<em><b>Key Const</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name Const</em>' reference isn't clear,
+	 * If the meaning of the '<em>Key Const</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name Const</em>' reference.
-	 * @see #setNameConst(MobaConstant)
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_NameConst()
+	 * @return the value of the '<em>Key Const</em>' reference.
+	 * @see #setKeyConst(MobaConstant)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_KeyConst()
 	 * @model
 	 * @generated
 	 */
-	MobaConstant getNameConst();
+	MobaConstant getKeyConst();
 
 	/**
-	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getNameConst <em>Name Const</em>}' reference.
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute#getKeyConst <em>Key Const</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name Const</em>' reference.
-	 * @see #getNameConst()
+	 * @param value the new value of the '<em>Key Const</em>' reference.
+	 * @see #getKeyConst()
 	 * @generated
 	 */
-	void setNameConst(MobaConstant value);
+	void setKeyConst(MobaConstant value);
+
+	/**
+	 * Returns the value of the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Key</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Key</em>' attribute.
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_Key()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getKey();
 
 	/**
 	 * Returns the value of the '<em><b>Value String</b></em>' attribute.
@@ -212,21 +225,6 @@ public interface MobaRESTAttribute extends EObject {
 	 * @generated
 	 */
 	void setValueInt(Integer value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTAttribute_Name()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 * @generated
-	 */
-	String getName();
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

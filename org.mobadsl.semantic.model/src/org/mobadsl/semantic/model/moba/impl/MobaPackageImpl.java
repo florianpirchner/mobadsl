@@ -77,9 +77,11 @@ import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTAbstractAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTHeader;
 import org.mobadsl.semantic.model.moba.MobaRESTMethods;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
@@ -307,7 +309,21 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass mobaRESTAbstractAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass mobaRESTAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mobaRESTDtoAttributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1877,6 +1893,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaREST_Path() {
+		return (EAttribute)mobaRESTEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaRESTPayloadDefinition() {
 		return mobaRESTPayloadDefinitionEClass;
 	}
@@ -1913,6 +1938,51 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMobaRESTAbstractAttribute() {
+		return mobaRESTAbstractAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaRESTAbstractAttribute_AliasString() {
+		return (EAttribute)mobaRESTAbstractAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaRESTAbstractAttribute_AliasConst() {
+		return (EReference)mobaRESTAbstractAttributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaRESTAbstractAttribute_Alias() {
+		return (EAttribute)mobaRESTAbstractAttributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMobaRESTAbstractAttribute_Attachment() {
+		return (EAttribute)mobaRESTAbstractAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaRESTAttribute() {
 		return mobaRESTAttributeEClass;
 	}
@@ -1931,7 +2001,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRESTAttribute_NameString() {
+	public EAttribute getMobaRESTAttribute_KeyString() {
 		return (EAttribute)mobaRESTAttributeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1940,7 +2010,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaRESTAttribute_NameConst() {
+	public EReference getMobaRESTAttribute_KeyConst() {
 		return (EReference)mobaRESTAttributeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1949,7 +2019,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRESTAttribute_ValueString() {
+	public EAttribute getMobaRESTAttribute_Key() {
 		return (EAttribute)mobaRESTAttributeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1958,8 +2028,17 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMobaRESTAttribute_ValueString() {
+		return (EAttribute)mobaRESTAttributeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getMobaRESTAttribute_ValueConst() {
-		return (EReference)mobaRESTAttributeEClass.getEStructuralFeatures().get(4);
+		return (EReference)mobaRESTAttributeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1968,15 +2047,6 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * @generated
 	 */
 	public EAttribute getMobaRESTAttribute_ValueDouble() {
-		return (EAttribute)mobaRESTAttributeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMobaRESTAttribute_ValueInt() {
 		return (EAttribute)mobaRESTAttributeEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1985,7 +2055,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRESTAttribute_Name() {
+	public EAttribute getMobaRESTAttribute_ValueInt() {
 		return (EAttribute)mobaRESTAttributeEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -2021,6 +2091,24 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMobaRESTDtoAttribute() {
+		return mobaRESTDtoAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaRESTDtoAttribute_DtoFeature() {
+		return (EReference)mobaRESTDtoAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMobaRESTHeader() {
 		return mobaRESTHeaderEClass;
 	}
@@ -2048,7 +2136,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRESTHeader_NameString() {
+	public EAttribute getMobaRESTHeader_KeyString() {
 		return (EAttribute)mobaRESTHeaderEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2057,7 +2145,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaRESTHeader_NameConst() {
+	public EReference getMobaRESTHeader_KeyConst() {
 		return (EReference)mobaRESTHeaderEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2084,7 +2172,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRESTHeader_ValueDouble() {
+	public EAttribute getMobaRESTHeader_Key() {
 		return (EAttribute)mobaRESTHeaderEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2093,26 +2181,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaRESTHeader_ValueInt() {
-		return (EAttribute)mobaRESTHeaderEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMobaRESTHeader_Name() {
-		return (EAttribute)mobaRESTHeaderEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getMobaRESTHeader_Value() {
-		return (EAttribute)mobaRESTHeaderEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)mobaRESTHeaderEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2149,6 +2219,15 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 */
 	public EReference getMobaRESTCustomService_SuperType() {
 		return (EReference)mobaRESTCustomServiceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobaRESTCustomService_MultipartParameters() {
+		return (EReference)mobaRESTCustomServiceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3654,41 +3733,50 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaRESTEClass, MOBA_REST__ERROR_DTO);
 		createEReference(mobaRESTEClass, MOBA_REST__HEADERS);
 		createEReference(mobaRESTEClass, MOBA_REST__AUTHORIZATION);
+		createEAttribute(mobaRESTEClass, MOBA_REST__PATH);
 
 		mobaRESTPayloadDefinitionEClass = createEClass(MOBA_REST_PAYLOAD_DEFINITION);
 		createEReference(mobaRESTPayloadDefinitionEClass, MOBA_REST_PAYLOAD_DEFINITION__DTO);
 		createEAttribute(mobaRESTPayloadDefinitionEClass, MOBA_REST_PAYLOAD_DEFINITION__ARRAY);
 		createEReference(mobaRESTPayloadDefinitionEClass, MOBA_REST_PAYLOAD_DEFINITION__SERIALIZATION_TYPE);
 
+		mobaRESTAbstractAttributeEClass = createEClass(MOBA_REST_ABSTRACT_ATTRIBUTE);
+		createEAttribute(mobaRESTAbstractAttributeEClass, MOBA_REST_ABSTRACT_ATTRIBUTE__ALIAS_STRING);
+		createEReference(mobaRESTAbstractAttributeEClass, MOBA_REST_ABSTRACT_ATTRIBUTE__ALIAS_CONST);
+		createEAttribute(mobaRESTAbstractAttributeEClass, MOBA_REST_ABSTRACT_ATTRIBUTE__ALIAS);
+		createEAttribute(mobaRESTAbstractAttributeEClass, MOBA_REST_ABSTRACT_ATTRIBUTE__ATTACHMENT);
+
 		mobaRESTAttributeEClass = createEClass(MOBA_REST_ATTRIBUTE);
 		createEReference(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__TYPE);
-		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__NAME_STRING);
-		createEReference(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__NAME_CONST);
+		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__KEY_STRING);
+		createEReference(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__KEY_CONST);
+		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__KEY);
 		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__VALUE_STRING);
 		createEReference(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__VALUE_CONST);
 		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__VALUE_DOUBLE);
 		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__VALUE_INT);
-		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__NAME);
 		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__VALUE);
 		createEAttribute(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__FORMAT_STRING);
 		createEReference(mobaRESTAttributeEClass, MOBA_REST_ATTRIBUTE__FORMAT_CONST);
 
+		mobaRESTDtoAttributeEClass = createEClass(MOBA_REST_DTO_ATTRIBUTE);
+		createEReference(mobaRESTDtoAttributeEClass, MOBA_REST_DTO_ATTRIBUTE__DTO_FEATURE);
+
 		mobaRESTHeaderEClass = createEClass(MOBA_REST_HEADER);
 		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__CONTENT_TYPE_HEADER);
 		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__RAW_HEADER);
-		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__NAME_STRING);
-		createEReference(mobaRESTHeaderEClass, MOBA_REST_HEADER__NAME_CONST);
+		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__KEY_STRING);
+		createEReference(mobaRESTHeaderEClass, MOBA_REST_HEADER__KEY_CONST);
 		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__VALUE_STRING);
 		createEReference(mobaRESTHeaderEClass, MOBA_REST_HEADER__VALUE_CONST);
-		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__VALUE_DOUBLE);
-		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__VALUE_INT);
-		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__NAME);
+		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__KEY);
 		createEAttribute(mobaRESTHeaderEClass, MOBA_REST_HEADER__VALUE);
 
 		mobaRESTCustomServiceEClass = createEClass(MOBA_REST_CUSTOM_SERVICE);
 		createEAttribute(mobaRESTCustomServiceEClass, MOBA_REST_CUSTOM_SERVICE__OPERATION);
 		createEReference(mobaRESTCustomServiceEClass, MOBA_REST_CUSTOM_SERVICE__PARAMETERS);
 		createEReference(mobaRESTCustomServiceEClass, MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE);
+		createEReference(mobaRESTCustomServiceEClass, MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS);
 
 		mobaRESTWorkflowEClass = createEClass(MOBA_REST_WORKFLOW);
 		createEReference(mobaRESTWorkflowEClass, MOBA_REST_WORKFLOW__SERVICES);
@@ -3929,6 +4017,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaDtoEClass.getESuperTypes().add(this.getMobaData());
 		mobaQueueEClass.getESuperTypes().add(this.getMobaData());
 		mobaRESTEClass.getESuperTypes().add(this.getMobaApplicationFeature());
+		mobaRESTAttributeEClass.getESuperTypes().add(this.getMobaRESTAbstractAttribute());
+		mobaRESTDtoAttributeEClass.getESuperTypes().add(this.getMobaRESTAbstractAttribute());
 		mobaRESTCustomServiceEClass.getESuperTypes().add(this.getMobaREST());
 		mobaRESTWorkflowEClass.getESuperTypes().add(this.getMobaREST());
 		mobaRESTCrudEClass.getESuperTypes().add(this.getMobaREST());
@@ -4149,41 +4239,50 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaREST_ErrorDto(), this.getMobaRESTPayloadDefinition(), null, "errorDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaREST_Headers(), this.getMobaRESTHeader(), null, "headers", null, 0, -1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaREST_Authorization(), this.getMobaAuthorization(), null, "authorization", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaREST_Path(), ecorePackage.getEString(), "path", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaRESTPayloadDefinitionEClass, MobaRESTPayloadDefinition.class, "MobaRESTPayloadDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaRESTPayloadDefinition_Dto(), this.getMobaDto(), null, "dto", null, 0, 1, MobaRESTPayloadDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTPayloadDefinition_Array(), ecorePackage.getEBoolean(), "array", null, 0, 1, MobaRESTPayloadDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaRESTPayloadDefinition_SerializationType(), this.getMobaTransportSerializationType(), null, "serializationType", null, 0, 1, MobaRESTPayloadDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(mobaRESTAbstractAttributeEClass, MobaRESTAbstractAttribute.class, "MobaRESTAbstractAttribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMobaRESTAbstractAttribute_AliasString(), ecorePackage.getEString(), "aliasString", null, 0, 1, MobaRESTAbstractAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaRESTAbstractAttribute_AliasConst(), this.getMobaConstant(), null, "aliasConst", null, 0, 1, MobaRESTAbstractAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaRESTAbstractAttribute_Alias(), ecorePackage.getEString(), "alias", null, 0, 1, MobaRESTAbstractAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaRESTAbstractAttribute_Attachment(), ecorePackage.getEBoolean(), "attachment", null, 0, 1, MobaRESTAbstractAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(mobaRESTAttributeEClass, MobaRESTAttribute.class, "MobaRESTAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaRESTAttribute_Type(), this.getMobaDataType(), null, "type", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaRESTAttribute_NameString(), ecorePackage.getEString(), "nameString", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobaRESTAttribute_NameConst(), this.getMobaConstant(), null, "nameConst", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaRESTAttribute_KeyString(), ecorePackage.getEString(), "keyString", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaRESTAttribute_KeyConst(), this.getMobaConstant(), null, "keyConst", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaRESTAttribute_Key(), ecorePackage.getEString(), "key", null, 0, 1, MobaRESTAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTAttribute_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaRESTAttribute_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTAttribute_ValueDouble(), ecorePackage.getEDoubleObject(), "valueDouble", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTAttribute_ValueInt(), ecorePackage.getEIntegerObject(), "valueInt", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaRESTAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaRESTAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTAttribute_Value(), ecorePackage.getEString(), "value", null, 0, 1, MobaRESTAttribute.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTAttribute_FormatString(), ecorePackage.getEString(), "formatString", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaRESTAttribute_FormatConst(), this.getMobaConstant(), null, "formatConst", null, 0, 1, MobaRESTAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(mobaRESTDtoAttributeEClass, MobaRESTDtoAttribute.class, "MobaRESTDtoAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMobaRESTDtoAttribute_DtoFeature(), this.getMobaDtoFeature(), null, "dtoFeature", null, 0, 1, MobaRESTDtoAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(mobaRESTHeaderEClass, MobaRESTHeader.class, "MobaRESTHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaRESTHeader_ContentTypeHeader(), ecorePackage.getEBoolean(), "contentTypeHeader", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTHeader_RawHeader(), ecorePackage.getEBoolean(), "rawHeader", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaRESTHeader_NameString(), ecorePackage.getEString(), "nameString", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobaRESTHeader_NameConst(), this.getMobaConstant(), null, "nameConst", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaRESTHeader_KeyString(), ecorePackage.getEString(), "keyString", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaRESTHeader_KeyConst(), this.getMobaConstant(), null, "keyConst", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTHeader_ValueString(), ecorePackage.getEString(), "valueString", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaRESTHeader_ValueConst(), this.getMobaConstant(), null, "valueConst", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaRESTHeader_ValueDouble(), ecorePackage.getEDoubleObject(), "valueDouble", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaRESTHeader_ValueInt(), ecorePackage.getEIntegerObject(), "valueInt", null, 0, 1, MobaRESTHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaRESTHeader_Name(), ecorePackage.getEString(), "name", null, 0, 1, MobaRESTHeader.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobaRESTHeader_Key(), ecorePackage.getEString(), "key", null, 0, 1, MobaRESTHeader.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaRESTHeader_Value(), ecorePackage.getEString(), "value", null, 0, 1, MobaRESTHeader.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaRESTCustomServiceEClass, MobaRESTCustomService.class, "MobaRESTCustomService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaRESTCustomService_Operation(), this.getMobaRESTMethods(), "operation", null, 0, 1, MobaRESTCustomService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobaRESTCustomService_Parameters(), this.getMobaRESTAttribute(), null, "parameters", null, 0, -1, MobaRESTCustomService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaRESTCustomService_Parameters(), this.getMobaRESTAbstractAttribute(), null, "parameters", null, 0, -1, MobaRESTCustomService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaRESTCustomService_SuperType(), this.getMobaRESTCustomService(), null, "superType", null, 0, 1, MobaRESTCustomService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaRESTCustomService_MultipartParameters(), this.getMobaRESTAbstractAttribute(), null, "multipartParameters", null, 0, -1, MobaRESTCustomService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaRESTWorkflowEClass, MobaRESTWorkflow.class, "MobaRESTWorkflow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobaRESTWorkflow_Services(), this.getMobaREST(), null, "services", null, 0, -1, MobaRESTWorkflow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

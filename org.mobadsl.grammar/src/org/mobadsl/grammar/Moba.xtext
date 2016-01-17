@@ -172,11 +172,16 @@ MobaREST:
 
 MobaRESTCustomService:
 	'rest' (bigData?='bigData')? name=ID ('extends' superType=[MobaRESTCustomService])? MobaFriendsAble '{'
-	(('headers' '{'
+	(
+	('path' '=' path=STRING)? &
+	('headers' '{'
 	headers+=MobaRestHeader*
 	'}')? &
 	('parameters' '{'
-	parameters+=MobaRestParameter*
+		parameters+=MobaRESTAbstractAttribute*
+	'}')? &
+	('multipart' '{'
+		multipartParameters+=MobaRESTAbstractMultipartAttribute*
 	'}')? &
 	('autorization' '=' authorization=[MobaAuthorization|CONSTANT])?
 	&
@@ -192,15 +197,35 @@ MobaRESTCustomService:
 MobaRESTPayloadDefinition:
 	dto=[MobaDto] ((array?='isArray')? & ('as' serializationType=[MobaTransportSerializationType|CONSTANT])?);
 
-MobaRestParameter returns MobaRESTAttribute:
-	'param' type=[MobaDataType] (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]) ('=' (valueString=STRING |
+MobaRESTAbstractAttribute:
+	MobaRESTAttribute | MobaRESTDtoAttribute
+;
+
+MobaRESTDtoAttribute:
+	'refParam' dtoFeature=[MobaDtoFeature] ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT]) ')')?
+;
+
+MobaRESTAttribute returns MobaRESTAttribute:
+	'param' type=[MobaDataType] (keyString=ID | keyConst=[MobaConstant|CONSTANT]) ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT])')')? ('=' (valueString=STRING |
+	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
+
+MobaRESTAbstractMultipartAttribute returns MobaRESTAbstractAttribute:
+	MobaRESTMultipartAttribute | MobaRESTMultipartDtoAttribute
+;
+
+MobaRESTMultipartDtoAttribute returns MobaRESTDtoAttribute:
+	'refParam' (attachment?='attachment')? dtoFeature=[MobaDtoFeature] ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT]) ')')?
+;
+
+MobaRESTMultipartAttribute returns MobaRESTAttribute:
+	'param' (attachment?='attachment')? type=[MobaDataType] (keyString=ID | keyConst=[MobaConstant|CONSTANT]) ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT])')')? ('=' (valueString=STRING |
 	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
 MobaRestHeader returns MobaRESTHeader:
-	((contentTypeHeader?='ContentTypeHeader' (-> nameString=ID | nameConst=[MobaConstant|CONSTANT]))
+	((contentTypeHeader?='ContentTypeHeader' (keyString=STRING | keyConst=[MobaConstant|CONSTANT]))
 	|
-	(rawHeader?='RawHeader' (nameString=ID | nameConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING |
-	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT])));
+	(rawHeader?='RawHeader' (keyString=STRING | keyConst=[MobaConstant|CONSTANT]) '=' (valueString=STRING |
+	valueConst=[MobaConstant|CONSTANT])));
 
 MobaRESTCrud:
 	'restCrud' name=ID ('extends' superType=[MobaRESTCrud])? MobaFriendsAble;

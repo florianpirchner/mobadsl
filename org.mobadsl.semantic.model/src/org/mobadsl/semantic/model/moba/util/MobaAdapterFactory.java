@@ -24,11 +24,13 @@ import org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEmailTrigger;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaEntityFeature;
 import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
@@ -58,6 +60,7 @@ import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaPropertiesAble;
 import org.mobadsl.semantic.model.moba.MobaProperty;
@@ -67,9 +70,12 @@ import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaQueueFeature;
 import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaREST;
+import org.mobadsl.semantic.model.moba.MobaRESTAbstractAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaRESTHeader;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
 import org.mobadsl.semantic.model.moba.MobaRegexpConstraint;
@@ -77,6 +83,7 @@ import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
 import org.mobadsl.semantic.model.moba.MobaSettingsFeature;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
@@ -268,8 +275,16 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 				return createMobaRESTPayloadDefinitionAdapter();
 			}
 			@Override
+			public Adapter caseMobaRESTAbstractAttribute(MobaRESTAbstractAttribute object) {
+				return createMobaRESTAbstractAttributeAdapter();
+			}
+			@Override
 			public Adapter caseMobaRESTAttribute(MobaRESTAttribute object) {
 				return createMobaRESTAttributeAdapter();
+			}
+			@Override
+			public Adapter caseMobaRESTDtoAttribute(MobaRESTDtoAttribute object) {
+				return createMobaRESTDtoAttributeAdapter();
 			}
 			@Override
 			public Adapter caseMobaRESTHeader(MobaRESTHeader object) {
@@ -868,6 +883,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTAbstractAttribute <em>REST Abstract Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTAbstractAttribute
+	 * @generated
+	 */
+	public Adapter createMobaRESTAbstractAttributeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTAttribute <em>REST Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -878,6 +907,20 @@ public class MobaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMobaRESTAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute <em>REST Dto Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute
+	 * @generated
+	 */
+	public Adapter createMobaRESTDtoAttributeAdapter() {
 		return null;
 	}
 

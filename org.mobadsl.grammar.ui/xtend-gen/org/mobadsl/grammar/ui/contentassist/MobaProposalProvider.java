@@ -117,7 +117,7 @@ public class MobaProposalProvider extends AbstractMobaProposalProvider {
   }
   
   @Override
-  public void completeMobaRestParameter_NameString(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
+  public void completeMobaRESTAttribute_KeyString(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     StyledString _displayString_KeyString = this.getDisplayString_KeyString();
     Image _image = this.getImage(model);
     ConfigurableCompletionProposal _doCreateProposal = this.doCreateProposal("param1", _displayString_KeyString, _image, 1000, context);

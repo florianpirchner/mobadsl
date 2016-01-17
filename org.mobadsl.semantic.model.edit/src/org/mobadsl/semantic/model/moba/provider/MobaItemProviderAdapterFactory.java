@@ -622,6 +622,52 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaRESTDtoAttributeItemProvider mobaRESTDtoAttributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaRESTDtoAttributeAdapter() {
+		if (mobaRESTDtoAttributeItemProvider == null) {
+			mobaRESTDtoAttributeItemProvider = new MobaRESTDtoAttributeItemProvider(this);
+		}
+
+		return mobaRESTDtoAttributeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTHeader} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobaRESTHeaderItemProvider mobaRESTHeaderItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mobadsl.semantic.model.moba.MobaRESTHeader}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobaRESTHeaderAdapter() {
+		if (mobaRESTHeaderItemProvider == null) {
+			mobaRESTHeaderItemProvider = new MobaRESTHeaderItemProvider(this);
+		}
+
+		return mobaRESTHeaderItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.mobadsl.semantic.model.moba.MobaRESTCustomService} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1597,6 +1643,8 @@ public class MobaItemProviderAdapterFactory extends MobaAdapterFactory implement
 		if (mobaQueueItemProvider != null) mobaQueueItemProvider.dispose();
 		if (mobaRESTPayloadDefinitionItemProvider != null) mobaRESTPayloadDefinitionItemProvider.dispose();
 		if (mobaRESTAttributeItemProvider != null) mobaRESTAttributeItemProvider.dispose();
+		if (mobaRESTDtoAttributeItemProvider != null) mobaRESTDtoAttributeItemProvider.dispose();
+		if (mobaRESTHeaderItemProvider != null) mobaRESTHeaderItemProvider.dispose();
 		if (mobaRESTCustomServiceItemProvider != null) mobaRESTCustomServiceItemProvider.dispose();
 		if (mobaRESTWorkflowItemProvider != null) mobaRESTWorkflowItemProvider.dispose();
 		if (mobaRESTCrudItemProvider != null) mobaRESTCrudItemProvider.dispose();

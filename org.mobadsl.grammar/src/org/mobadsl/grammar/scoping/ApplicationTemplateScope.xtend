@@ -41,7 +41,9 @@ class ApplicationTemplateScope implements IScope {
 
 	override Iterable<IEObjectDescription> getElements(QualifiedName name) {
 		resolve();
-		return resolved.values.filter[it.name.equals(name)].map[it.object]
+		return resolved.values.filter[
+			it.name.equals(name)
+		].map[it.object]
 	}
 
 	override IEObjectDescription getSingleElement(EObject object) {

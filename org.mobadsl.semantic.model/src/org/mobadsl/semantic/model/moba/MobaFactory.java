@@ -229,6 +229,15 @@ public interface MobaFactory extends EFactory {
 	MobaRESTAttribute createMobaRESTAttribute();
 
 	/**
+	 * Returns a new object of class '<em>REST Dto Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>REST Dto Attribute</em>'.
+	 * @generated
+	 */
+	MobaRESTDtoAttribute createMobaRESTDtoAttribute();
+
+	/**
 	 * Returns a new object of class '<em>REST Header</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

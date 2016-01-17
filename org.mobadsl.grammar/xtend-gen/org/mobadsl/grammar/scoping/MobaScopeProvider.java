@@ -30,6 +30,7 @@ import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaData;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaDto;
+import org.mobadsl.semantic.model.moba.MobaDtoFeature;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
@@ -40,6 +41,7 @@ import org.mobadsl.semantic.model.moba.MobaQueue;
 import org.mobadsl.semantic.model.moba.MobaREST;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
@@ -150,6 +152,21 @@ public class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
     Resource _eResource = ctx.eResource();
     final IScope scope = this.globalScopeProvider.getScope(_eResource, ref);
     return new ApplicationTemplateScope(scope);
+  }
+  
+  public IScope scope_MobaRESTDtoAttribute_dtoFeature(final MobaRESTCustomService ctx, final EReference ref) {
+    MobaRESTPayloadDefinition _requestDto = ctx.getRequestDto();
+    MobaDto _dto = null;
+    if (_requestDto!=null) {
+      _dto=_requestDto.getDto();
+    }
+    final MobaDto dto = _dto;
+    boolean _equals = Objects.equal(dto, null);
+    if (_equals) {
+      return IScope.NULLSCOPE;
+    }
+    List<MobaDtoFeature> _genFeatures = dto.getGenFeatures();
+    return Scopes.scopeFor(_genFeatures);
   }
   
   public IScope scope_MobaEntityReference_opposite(final MobaEntityReference ctx, final EReference ref) {

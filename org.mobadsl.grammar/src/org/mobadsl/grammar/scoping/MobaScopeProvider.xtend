@@ -19,6 +19,7 @@ import org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider
 import org.mobadsl.semantic.model.moba.MobaApplication
 import org.mobadsl.semantic.model.moba.MobaDtoReference
 import org.mobadsl.semantic.model.moba.MobaEntityReference
+import org.mobadsl.semantic.model.moba.MobaRESTCustomService
 
 /**
  * This class contains custom scoping description.
@@ -105,6 +106,14 @@ class MobaScopeProvider extends AbstractDeclarativeScopeProvider {
 	def IScope scope_MobaApplication(MobaApplication ctx, EReference ref) {
 		val scope = globalScopeProvider.getScope(ctx.eResource, ref)
 		return new ApplicationTemplateScope(scope)
+	}
+	
+	def IScope scope_MobaRESTDtoAttribute_dtoFeature(MobaRESTCustomService ctx, EReference ref) {
+		val dto = ctx.requestDto?.dto
+		if(dto == null) {
+			return IScope.NULLSCOPE
+		}
+		return Scopes.scopeFor(dto.genFeatures);
 	}
 	
 	def IScope scope_MobaEntityReference_opposite(MobaEntityReference ctx, EReference ref) {

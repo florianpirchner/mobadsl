@@ -24,10 +24,12 @@ import org.mobadsl.semantic.model.moba.MobaDeviceStartupTrigger;
 import org.mobadsl.semantic.model.moba.MobaDigitsConstraint;
 import org.mobadsl.semantic.model.moba.MobaDto;
 import org.mobadsl.semantic.model.moba.MobaDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaDtoEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaDtoReference;
 import org.mobadsl.semantic.model.moba.MobaEmailTrigger;
 import org.mobadsl.semantic.model.moba.MobaEntity;
 import org.mobadsl.semantic.model.moba.MobaEntityAttribute;
+import org.mobadsl.semantic.model.moba.MobaEntityEmbeddable;
 import org.mobadsl.semantic.model.moba.MobaEntityIndex;
 import org.mobadsl.semantic.model.moba.MobaEntityReference;
 import org.mobadsl.semantic.model.moba.MobaEnum;
@@ -54,6 +56,7 @@ import org.mobadsl.semantic.model.moba.MobaNotNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaNullConstraint;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaPastConstraint;
+import org.mobadsl.semantic.model.moba.MobaPersistenceType;
 import org.mobadsl.semantic.model.moba.MobaProject;
 import org.mobadsl.semantic.model.moba.MobaProperty;
 import org.mobadsl.semantic.model.moba.MobaPushModule;
@@ -63,6 +66,8 @@ import org.mobadsl.semantic.model.moba.MobaQueueReference;
 import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
 import org.mobadsl.semantic.model.moba.MobaRESTCrud;
 import org.mobadsl.semantic.model.moba.MobaRESTCustomService;
+import org.mobadsl.semantic.model.moba.MobaRESTDtoAttribute;
+import org.mobadsl.semantic.model.moba.MobaRESTHeader;
 import org.mobadsl.semantic.model.moba.MobaRESTMethods;
 import org.mobadsl.semantic.model.moba.MobaRESTPayloadDefinition;
 import org.mobadsl.semantic.model.moba.MobaRESTWorkflow;
@@ -71,6 +76,7 @@ import org.mobadsl.semantic.model.moba.MobaSMSTrigger;
 import org.mobadsl.semantic.model.moba.MobaServer;
 import org.mobadsl.semantic.model.moba.MobaSettings;
 import org.mobadsl.semantic.model.moba.MobaSettingsAttribute;
+import org.mobadsl.semantic.model.moba.MobaSettingsEntityReference;
 import org.mobadsl.semantic.model.moba.MobaTemplate;
 import org.mobadsl.semantic.model.moba.MobaTimerTrigger;
 import org.mobadsl.semantic.model.moba.MobaTransportSerializationType;
@@ -146,6 +152,7 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 			case MobaPackage.MOBA_QUEUE: return createMobaQueue();
 			case MobaPackage.MOBA_REST_PAYLOAD_DEFINITION: return createMobaRESTPayloadDefinition();
 			case MobaPackage.MOBA_REST_ATTRIBUTE: return createMobaRESTAttribute();
+			case MobaPackage.MOBA_REST_DTO_ATTRIBUTE: return createMobaRESTDtoAttribute();
 			case MobaPackage.MOBA_REST_HEADER: return createMobaRESTHeader();
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE: return createMobaRESTCustomService();
 			case MobaPackage.MOBA_REST_WORKFLOW: return createMobaRESTWorkflow();
@@ -469,6 +476,16 @@ public class MobaFactoryImpl extends EFactoryImpl implements MobaFactory {
 	public MobaRESTAttribute createMobaRESTAttribute() {
 		MobaRESTAttributeImpl mobaRESTAttribute = new MobaRESTAttributeImpl();
 		return mobaRESTAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobaRESTDtoAttribute createMobaRESTDtoAttribute() {
+		MobaRESTDtoAttributeImpl mobaRESTDtoAttribute = new MobaRESTDtoAttributeImpl();
+		return mobaRESTDtoAttribute;
 	}
 
 	/**

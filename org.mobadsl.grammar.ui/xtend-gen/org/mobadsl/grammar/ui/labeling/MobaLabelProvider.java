@@ -100,9 +100,9 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
   }
   
   public StyledString text(final MobaRESTAttribute att) {
-    String _name = att.getName();
+    String _key = att.getKey();
     String _value = att.getValue();
-    return this.getDisplayString(_name, _value);
+    return this.getDisplayString(_key, _value);
   }
   
   public StyledString text(final MobaDtoAttribute att) {

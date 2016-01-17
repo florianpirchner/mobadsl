@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getHeaders <em>Headers</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getAuthorization <em>Authorization</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getPath <em>Path</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST()
@@ -230,12 +231,38 @@ public interface MobaREST extends MobaApplicationFeature {
 	void setAuthorization(MobaAuthorization value);
 
 	/**
+	 * Returns the value of the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Path</em>' attribute.
+	 * @see #setPath(String)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_Path()
+	 * @model
+	 * @generated
+	 */
+	String getPath();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getPath <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Path</em>' attribute.
+	 * @see #getPath()
+	 * @generated
+	 */
+	void setPath(String value);
+
+	/**
 	 * Returns the values for the current instance. Including the
 	 * "super types".
 	 * 
 	 * @return
 	 */
-	List<MobaRESTAttribute> getAllHeaders();
+	List<MobaRESTHeader> getAllHeaders();
 	
 	/**
 	 * Returns the generator specific values for the current instance. Including
@@ -248,7 +275,7 @@ public interface MobaREST extends MobaApplicationFeature {
 	 * 
 	 * @return
 	 */
-	List<MobaRESTAttribute> getGenHeaders();
+	List<MobaRESTHeader> getGenHeaders();
 	
 	/**
 	 * Returns all supertypes for this instance.

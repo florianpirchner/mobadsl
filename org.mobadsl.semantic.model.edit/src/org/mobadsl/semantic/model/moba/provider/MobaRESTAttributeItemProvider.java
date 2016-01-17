@@ -29,13 +29,7 @@ import org.mobadsl.semantic.model.moba.MobaRESTAttribute;
  * @generated
  */
 public class MobaRESTAttributeItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends MobaRESTAbstractAttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,13 +52,13 @@ public class MobaRESTAttributeItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
-			addNameStringPropertyDescriptor(object);
-			addNameConstPropertyDescriptor(object);
+			addKeyStringPropertyDescriptor(object);
+			addKeyConstPropertyDescriptor(object);
+			addKeyPropertyDescriptor(object);
 			addValueStringPropertyDescriptor(object);
 			addValueConstPropertyDescriptor(object);
 			addValueDoublePropertyDescriptor(object);
 			addValueIntPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
 			addFormatStringPropertyDescriptor(object);
 			addFormatConstPropertyDescriptor(object);
@@ -95,19 +89,19 @@ public class MobaRESTAttributeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name String feature.
+	 * This adds a property descriptor for the Key String feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNameStringPropertyDescriptor(Object object) {
+	protected void addKeyStringPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaRESTAttribute_nameString_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_nameString_feature", "_UI_MobaRESTAttribute_type"),
-				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__NAME_STRING,
+				 getString("_UI_MobaRESTAttribute_keyString_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_keyString_feature", "_UI_MobaRESTAttribute_type"),
+				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__KEY_STRING,
 				 true,
 				 false,
 				 false,
@@ -117,23 +111,45 @@ public class MobaRESTAttributeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name Const feature.
+	 * This adds a property descriptor for the Key Const feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNameConstPropertyDescriptor(Object object) {
+	protected void addKeyConstPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MobaRESTAttribute_nameConst_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_nameConst_feature", "_UI_MobaRESTAttribute_type"),
-				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__NAME_CONST,
+				 getString("_UI_MobaRESTAttribute_keyConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_keyConst_feature", "_UI_MobaRESTAttribute_type"),
+				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__KEY_CONST,
 				 true,
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MobaRESTAttribute_key_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_key_feature", "_UI_MobaRESTAttribute_type"),
+				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__KEY,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -227,28 +243,6 @@ public class MobaRESTAttributeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MobaRESTAttribute_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAttribute_name_feature", "_UI_MobaRESTAttribute_type"),
-				 MobaPackage.Literals.MOBA_REST_ATTRIBUTE__NAME,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -333,7 +327,7 @@ public class MobaRESTAttributeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MobaRESTAttribute)object).getName();
+		String label = ((MobaRESTAttribute)object).getAliasString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MobaRESTAttribute_type") :
 			getString("_UI_MobaRESTAttribute_type") + " " + label;
@@ -352,11 +346,11 @@ public class MobaRESTAttributeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobaRESTAttribute.class)) {
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_STRING:
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_STRING:
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_STRING:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_DOUBLE:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_INT:
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE:
 			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -375,17 +369,6 @@ public class MobaRESTAttributeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return MobaEditPlugin.INSTANCE;
 	}
 
 }

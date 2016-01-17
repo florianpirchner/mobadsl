@@ -11,13 +11,10 @@
 package org.mobadsl.semantic.model.moba.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaPackage;
 import org.mobadsl.semantic.model.moba.MobaRESTHeader;
@@ -33,13 +30,11 @@ import org.mobadsl.semantic.model.moba.ValueType;
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#isContentTypeHeader <em>Content Type Header</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#isRawHeader <em>Raw Header</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getNameString <em>Name String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getNameConst <em>Name Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getKeyString <em>Key String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getKeyConst <em>Key Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getValueConst <em>Value Const</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getValueDouble <em>Value Double</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getValueInt <em>Value Int</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTHeaderImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -87,34 +82,34 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	protected boolean rawHeader = RAW_HEADER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNameString() <em>Name String</em>}' attribute.
+	 * The default value of the '{@link #getKeyString() <em>Key String</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNameString()
+	 * @see #getKeyString()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_STRING_EDEFAULT = null;
+	protected static final String KEY_STRING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNameString() <em>Name String</em>}' attribute.
+	 * The cached value of the '{@link #getKeyString() <em>Key String</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNameString()
+	 * @see #getKeyString()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nameString = NAME_STRING_EDEFAULT;
+	protected String keyString = KEY_STRING_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getNameConst() <em>Name Const</em>}' reference.
+	 * The cached value of the '{@link #getKeyConst() <em>Key Const</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNameConst()
+	 * @see #getKeyConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaConstant nameConst;
+	protected MobaConstant keyConst;
 
 	/**
 	 * The default value of the '{@link #getValueString() <em>Value String</em>}' attribute.
@@ -147,54 +142,14 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	protected MobaConstant valueConst;
 
 	/**
-	 * The default value of the '{@link #getValueDouble() <em>Value Double</em>}' attribute.
+	 * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValueDouble()
+	 * @see #getKey()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Double VALUE_DOUBLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValueDouble() <em>Value Double</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueDouble()
-	 * @generated
-	 * @ordered
-	 */
-	protected Double valueDouble = VALUE_DOUBLE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getValueInt() <em>Value Int</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueInt()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer VALUE_INT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValueInt() <em>Value Int</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueInt()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer valueInt = VALUE_INT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String KEY_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -272,8 +227,8 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNameString() {
-		return nameString;
+	public String getKeyString() {
+		return keyString;
 	}
 
 	/**
@@ -281,11 +236,11 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNameString(String newNameString) {
-		String oldNameString = nameString;
-		nameString = newNameString;
+	public void setKeyString(String newKeyString) {
+		String oldKeyString = keyString;
+		keyString = newKeyString;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_HEADER__NAME_STRING, oldNameString, nameString));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_HEADER__KEY_STRING, oldKeyString, keyString));
 	}
 
 	/**
@@ -293,16 +248,16 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaConstant getNameConst() {
-		if (nameConst != null && nameConst.eIsProxy()) {
-			InternalEObject oldNameConst = (InternalEObject)nameConst;
-			nameConst = (MobaConstant)eResolveProxy(oldNameConst);
-			if (nameConst != oldNameConst) {
+	public MobaConstant getKeyConst() {
+		if (keyConst != null && keyConst.eIsProxy()) {
+			InternalEObject oldKeyConst = (InternalEObject)keyConst;
+			keyConst = (MobaConstant)eResolveProxy(oldKeyConst);
+			if (keyConst != oldKeyConst) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_HEADER__NAME_CONST, oldNameConst, nameConst));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_HEADER__KEY_CONST, oldKeyConst, keyConst));
 			}
 		}
-		return nameConst;
+		return keyConst;
 	}
 
 	/**
@@ -310,8 +265,8 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaConstant basicGetNameConst() {
-		return nameConst;
+	public MobaConstant basicGetKeyConst() {
+		return keyConst;
 	}
 
 	/**
@@ -319,11 +274,11 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNameConst(MobaConstant newNameConst) {
-		MobaConstant oldNameConst = nameConst;
-		nameConst = newNameConst;
+	public void setKeyConst(MobaConstant newKeyConst) {
+		MobaConstant oldKeyConst = keyConst;
+		keyConst = newKeyConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_HEADER__NAME_CONST, oldNameConst, nameConst));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_HEADER__KEY_CONST, oldKeyConst, keyConst));
 	}
 
 	/**
@@ -388,55 +343,13 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
-	public Double getValueDouble() {
-		return valueDouble;
-	}
+	public String getKey() {
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValueDouble(Double newValueDouble) {
-		Double oldValueDouble = valueDouble;
-		valueDouble = newValueDouble;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_HEADER__VALUE_DOUBLE, oldValueDouble, valueDouble));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Integer getValueInt() {
-		return valueInt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValueInt(Integer newValueInt) {
-		Integer oldValueInt = valueInt;
-		valueInt = newValueInt;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_HEADER__VALUE_INT, oldValueInt, valueInt));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public String getName() {
-
-		if (getNameConst() != null) {
-			return getNameConst().getValue();
+		if (getKeyConst() != null) {
+			return getKeyConst().getValue();
 		}
-		return getNameString();
+		return getKeyString();
 	}
 
 	/**
@@ -462,22 +375,18 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 				return isContentTypeHeader();
 			case MobaPackage.MOBA_REST_HEADER__RAW_HEADER:
 				return isRawHeader();
-			case MobaPackage.MOBA_REST_HEADER__NAME_STRING:
-				return getNameString();
-			case MobaPackage.MOBA_REST_HEADER__NAME_CONST:
-				if (resolve) return getNameConst();
-				return basicGetNameConst();
+			case MobaPackage.MOBA_REST_HEADER__KEY_STRING:
+				return getKeyString();
+			case MobaPackage.MOBA_REST_HEADER__KEY_CONST:
+				if (resolve) return getKeyConst();
+				return basicGetKeyConst();
 			case MobaPackage.MOBA_REST_HEADER__VALUE_STRING:
 				return getValueString();
 			case MobaPackage.MOBA_REST_HEADER__VALUE_CONST:
 				if (resolve) return getValueConst();
 				return basicGetValueConst();
-			case MobaPackage.MOBA_REST_HEADER__VALUE_DOUBLE:
-				return getValueDouble();
-			case MobaPackage.MOBA_REST_HEADER__VALUE_INT:
-				return getValueInt();
-			case MobaPackage.MOBA_REST_HEADER__NAME:
-				return getName();
+			case MobaPackage.MOBA_REST_HEADER__KEY:
+				return getKey();
 			case MobaPackage.MOBA_REST_HEADER__VALUE:
 				return getValue();
 		}
@@ -498,23 +407,17 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 			case MobaPackage.MOBA_REST_HEADER__RAW_HEADER:
 				setRawHeader((Boolean)newValue);
 				return;
-			case MobaPackage.MOBA_REST_HEADER__NAME_STRING:
-				setNameString((String)newValue);
+			case MobaPackage.MOBA_REST_HEADER__KEY_STRING:
+				setKeyString((String)newValue);
 				return;
-			case MobaPackage.MOBA_REST_HEADER__NAME_CONST:
-				setNameConst((MobaConstant)newValue);
+			case MobaPackage.MOBA_REST_HEADER__KEY_CONST:
+				setKeyConst((MobaConstant)newValue);
 				return;
 			case MobaPackage.MOBA_REST_HEADER__VALUE_STRING:
 				setValueString((String)newValue);
 				return;
 			case MobaPackage.MOBA_REST_HEADER__VALUE_CONST:
 				setValueConst((MobaConstant)newValue);
-				return;
-			case MobaPackage.MOBA_REST_HEADER__VALUE_DOUBLE:
-				setValueDouble((Double)newValue);
-				return;
-			case MobaPackage.MOBA_REST_HEADER__VALUE_INT:
-				setValueInt((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -534,23 +437,17 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 			case MobaPackage.MOBA_REST_HEADER__RAW_HEADER:
 				setRawHeader(RAW_HEADER_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_REST_HEADER__NAME_STRING:
-				setNameString(NAME_STRING_EDEFAULT);
+			case MobaPackage.MOBA_REST_HEADER__KEY_STRING:
+				setKeyString(KEY_STRING_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_REST_HEADER__NAME_CONST:
-				setNameConst((MobaConstant)null);
+			case MobaPackage.MOBA_REST_HEADER__KEY_CONST:
+				setKeyConst((MobaConstant)null);
 				return;
 			case MobaPackage.MOBA_REST_HEADER__VALUE_STRING:
 				setValueString(VALUE_STRING_EDEFAULT);
 				return;
 			case MobaPackage.MOBA_REST_HEADER__VALUE_CONST:
 				setValueConst((MobaConstant)null);
-				return;
-			case MobaPackage.MOBA_REST_HEADER__VALUE_DOUBLE:
-				setValueDouble(VALUE_DOUBLE_EDEFAULT);
-				return;
-			case MobaPackage.MOBA_REST_HEADER__VALUE_INT:
-				setValueInt(VALUE_INT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -568,20 +465,16 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 				return contentTypeHeader != CONTENT_TYPE_HEADER_EDEFAULT;
 			case MobaPackage.MOBA_REST_HEADER__RAW_HEADER:
 				return rawHeader != RAW_HEADER_EDEFAULT;
-			case MobaPackage.MOBA_REST_HEADER__NAME_STRING:
-				return NAME_STRING_EDEFAULT == null ? nameString != null : !NAME_STRING_EDEFAULT.equals(nameString);
-			case MobaPackage.MOBA_REST_HEADER__NAME_CONST:
-				return nameConst != null;
+			case MobaPackage.MOBA_REST_HEADER__KEY_STRING:
+				return KEY_STRING_EDEFAULT == null ? keyString != null : !KEY_STRING_EDEFAULT.equals(keyString);
+			case MobaPackage.MOBA_REST_HEADER__KEY_CONST:
+				return keyConst != null;
 			case MobaPackage.MOBA_REST_HEADER__VALUE_STRING:
 				return VALUE_STRING_EDEFAULT == null ? valueString != null : !VALUE_STRING_EDEFAULT.equals(valueString);
 			case MobaPackage.MOBA_REST_HEADER__VALUE_CONST:
 				return valueConst != null;
-			case MobaPackage.MOBA_REST_HEADER__VALUE_DOUBLE:
-				return VALUE_DOUBLE_EDEFAULT == null ? valueDouble != null : !VALUE_DOUBLE_EDEFAULT.equals(valueDouble);
-			case MobaPackage.MOBA_REST_HEADER__VALUE_INT:
-				return VALUE_INT_EDEFAULT == null ? valueInt != null : !VALUE_INT_EDEFAULT.equals(valueInt);
-			case MobaPackage.MOBA_REST_HEADER__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+			case MobaPackage.MOBA_REST_HEADER__KEY:
+				return KEY_EDEFAULT == null ? getKey() != null : !KEY_EDEFAULT.equals(getKey());
 			case MobaPackage.MOBA_REST_HEADER__VALUE:
 				return VALUE_EDEFAULT == null ? getValue() != null : !VALUE_EDEFAULT.equals(getValue());
 		}
@@ -602,14 +495,10 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 		result.append(contentTypeHeader);
 		result.append(", rawHeader: ");
 		result.append(rawHeader);
-		result.append(", nameString: ");
-		result.append(nameString);
+		result.append(", keyString: ");
+		result.append(keyString);
 		result.append(", valueString: ");
 		result.append(valueString);
-		result.append(", valueDouble: ");
-		result.append(valueDouble);
-		result.append(", valueInt: ");
-		result.append(valueInt);
 		result.append(')');
 		return result.toString();
 	}
@@ -618,10 +507,6 @@ public class MobaRESTHeaderImpl extends MinimalEObjectImpl.Container implements 
 	public ValueType getValueType() {
 		if (getValueConst() != null) {
 			return ValueType.CONSTANT;
-		} else if (getValueInt() != null) {
-			return ValueType.NUMERIC;
-		} else if (getValueDouble() != null) {
-			return ValueType.DECIMAL;
 		} else {
 			return ValueType.STRING;
 		}

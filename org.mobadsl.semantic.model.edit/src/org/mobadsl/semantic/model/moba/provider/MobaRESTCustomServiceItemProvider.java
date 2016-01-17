@@ -108,6 +108,7 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS);
 		}
 		return childrenFeatures;
 	}
@@ -167,6 +168,7 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -188,6 +190,21 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 			(createChildParameter
 				(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS,
 				 MobaFactory.eINSTANCE.createMobaRESTAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS,
+				 MobaFactory.eINSTANCE.createMobaRESTDtoAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS,
+				 MobaFactory.eINSTANCE.createMobaRESTAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS,
+				 MobaFactory.eINSTANCE.createMobaRESTDtoAttribute()));
 	}
 
 	/**
@@ -205,8 +222,8 @@ public class MobaRESTCustomServiceItemProvider extends MobaRESTItemProvider {
 			childFeature == MobaPackage.Literals.MOBA_REST__REQUEST_DTO ||
 			childFeature == MobaPackage.Literals.MOBA_REST__RESPONSE_DTO ||
 			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO ||
-			childFeature == MobaPackage.Literals.MOBA_REST__HEADERS ||
-			childFeature == MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS;
+			childFeature == MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__PARAMETERS ||
+			childFeature == MobaPackage.Literals.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS;
 
 		if (qualify) {
 			return getString

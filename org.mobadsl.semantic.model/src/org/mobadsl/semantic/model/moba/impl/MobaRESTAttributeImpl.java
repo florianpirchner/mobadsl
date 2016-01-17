@@ -6,7 +6,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mobadsl.semantic.model.moba.MobaConstant;
 import org.mobadsl.semantic.model.moba.MobaDataType;
 import org.mobadsl.semantic.model.moba.MobaPackage;
@@ -21,13 +20,13 @@ import org.mobadsl.semantic.model.moba.ValueType;
  * </p>
  * <ul>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getNameString <em>Name String</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getNameConst <em>Name Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getKeyString <em>Key String</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getKeyConst <em>Key Const</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValueString <em>Value String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValueConst <em>Value Const</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValueDouble <em>Value Double</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValueInt <em>Value Int</em>}</li>
- *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getFormatString <em>Format String</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTAttributeImpl#getFormatConst <em>Format Const</em>}</li>
@@ -35,7 +34,7 @@ import org.mobadsl.semantic.model.moba.ValueType;
  *
  * @generated
  */
-public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implements MobaRESTAttribute {
+public class MobaRESTAttributeImpl extends MobaRESTAbstractAttributeImpl implements MobaRESTAttribute {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -46,31 +45,44 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	protected MobaDataType type;
 
 	/**
-	 * The default value of the '{@link #getNameString() <em>Name String</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getNameString()
+	 * The default value of the '{@link #getKeyString() <em>Key String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKeyString()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_STRING_EDEFAULT = null;
+	protected static final String KEY_STRING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNameString() <em>Name String</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getNameString()
+	 * The cached value of the '{@link #getKeyString() <em>Key String</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKeyString()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nameString = NAME_STRING_EDEFAULT;
+	protected String keyString = KEY_STRING_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getNameConst() <em>Name Const</em>}' reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getNameConst()
+	 * The cached value of the '{@link #getKeyConst() <em>Key Const</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKeyConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected MobaConstant nameConst;
+	protected MobaConstant keyConst;
+
+	/**
+	 * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String KEY_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getValueString() <em>Value String</em>}' attribute.
@@ -101,8 +113,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The default value of the '{@link #getValueDouble() <em>Value Double</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueDouble()
 	 * @generated
 	 * @ordered
@@ -111,8 +122,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The cached value of the '{@link #getValueDouble() <em>Value Double</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueDouble()
 	 * @generated
 	 * @ordered
@@ -121,8 +131,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The default value of the '{@link #getValueInt() <em>Value Int</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueInt()
 	 * @generated
 	 * @ordered
@@ -131,22 +140,12 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The cached value of the '{@link #getValueInt() <em>Value Int</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValueInt()
 	 * @generated
 	 * @ordered
 	 */
 	protected Integer valueInt = VALUE_INT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -159,8 +158,8 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The default value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getFormatString()
 	 * @generated
 	 * @ordered
@@ -169,8 +168,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The cached value of the '{@link #getFormatString() <em>Format String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getFormatString()
 	 * @generated
 	 * @ordered
@@ -179,8 +177,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * The cached value of the '{@link #getFormatConst() <em>Format Const</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getFormatConst()
 	 * @generated
 	 * @ordered
@@ -240,57 +237,62 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNameString() {
-		return nameString;
+	public String getKeyString() {
+		return keyString;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNameString(String newNameString) {
-		String oldNameString = nameString;
-		nameString = newNameString;
+	public void setKeyString(String newKeyString) {
+		String oldKeyString = keyString;
+		keyString = newKeyString;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_ATTRIBUTE__NAME_STRING, oldNameString, nameString));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_ATTRIBUTE__KEY_STRING, oldKeyString, keyString));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaConstant getNameConst() {
-		if (nameConst != null && nameConst.eIsProxy()) {
-			InternalEObject oldNameConst = (InternalEObject)nameConst;
-			nameConst = (MobaConstant)eResolveProxy(oldNameConst);
-			if (nameConst != oldNameConst) {
+	public MobaConstant getKeyConst() {
+		if (keyConst != null && keyConst.eIsProxy()) {
+			InternalEObject oldKeyConst = (InternalEObject)keyConst;
+			keyConst = (MobaConstant)eResolveProxy(oldKeyConst);
+			if (keyConst != oldKeyConst) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_ATTRIBUTE__NAME_CONST, oldNameConst, nameConst));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_ATTRIBUTE__KEY_CONST, oldKeyConst, keyConst));
 			}
 		}
-		return nameConst;
+		return keyConst;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobaConstant basicGetNameConst() {
-		return nameConst;
+	public MobaConstant basicGetKeyConst() {
+		return keyConst;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNameConst(MobaConstant newNameConst) {
-		MobaConstant oldNameConst = nameConst;
-		nameConst = newNameConst;
+	public void setKeyConst(MobaConstant newKeyConst) {
+		MobaConstant oldKeyConst = keyConst;
+		keyConst = newKeyConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_ATTRIBUTE__NAME_CONST, oldNameConst, nameConst));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_ATTRIBUTE__KEY_CONST, oldKeyConst, keyConst));
 	}
 
 	/**
@@ -348,8 +350,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Double getValueDouble() {
@@ -357,8 +358,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setValueDouble(Double newValueDouble) {
@@ -369,8 +369,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Integer getValueInt() {
@@ -378,8 +377,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setValueInt(Integer newValueInt) {
@@ -392,11 +390,11 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 */
-	public String getName() {
-		if (getNameConst() != null) {
-			return getNameConst().getValue();
+	public String getKey() {
+		if (getKeyConst() != null) {
+			return getKeyConst().getValue();
 		}
-		return getNameString();
+		return getKeyString();
 	}
 
 	/**
@@ -410,8 +408,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getFormatString() {
@@ -419,8 +416,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setFormatString(String newFormatString) {
@@ -431,8 +427,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaConstant getFormatConst() {
@@ -448,8 +443,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MobaConstant basicGetFormatConst() {
@@ -457,8 +451,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setFormatConst(MobaConstant newFormatConst) {
@@ -478,11 +471,13 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case MobaPackage.MOBA_REST_ATTRIBUTE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_STRING:
-				return getNameString();
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_CONST:
-				if (resolve) return getNameConst();
-				return basicGetNameConst();
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_STRING:
+				return getKeyString();
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_CONST:
+				if (resolve) return getKeyConst();
+				return basicGetKeyConst();
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY:
+				return getKey();
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_STRING:
 				return getValueString();
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_CONST:
@@ -492,8 +487,6 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return getValueDouble();
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_INT:
 				return getValueInt();
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME:
-				return getName();
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE:
 				return getValue();
 			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
@@ -515,11 +508,11 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case MobaPackage.MOBA_REST_ATTRIBUTE__TYPE:
 				setType((MobaDataType)newValue);
 				return;
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_STRING:
-				setNameString((String)newValue);
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_STRING:
+				setKeyString((String)newValue);
 				return;
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_CONST:
-				setNameConst((MobaConstant)newValue);
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_CONST:
+				setKeyConst((MobaConstant)newValue);
 				return;
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_STRING:
 				setValueString((String)newValue);
@@ -553,11 +546,11 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case MobaPackage.MOBA_REST_ATTRIBUTE__TYPE:
 				setType((MobaDataType)null);
 				return;
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_STRING:
-				setNameString(NAME_STRING_EDEFAULT);
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_STRING:
+				setKeyString(KEY_STRING_EDEFAULT);
 				return;
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_CONST:
-				setNameConst((MobaConstant)null);
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_CONST:
+				setKeyConst((MobaConstant)null);
 				return;
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_STRING:
 				setValueString(VALUE_STRING_EDEFAULT);
@@ -590,10 +583,12 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case MobaPackage.MOBA_REST_ATTRIBUTE__TYPE:
 				return type != null;
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_STRING:
-				return NAME_STRING_EDEFAULT == null ? nameString != null : !NAME_STRING_EDEFAULT.equals(nameString);
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME_CONST:
-				return nameConst != null;
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_STRING:
+				return KEY_STRING_EDEFAULT == null ? keyString != null : !KEY_STRING_EDEFAULT.equals(keyString);
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY_CONST:
+				return keyConst != null;
+			case MobaPackage.MOBA_REST_ATTRIBUTE__KEY:
+				return KEY_EDEFAULT == null ? getKey() != null : !KEY_EDEFAULT.equals(getKey());
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_STRING:
 				return VALUE_STRING_EDEFAULT == null ? valueString != null : !VALUE_STRING_EDEFAULT.equals(valueString);
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_CONST:
@@ -602,8 +597,6 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return VALUE_DOUBLE_EDEFAULT == null ? valueDouble != null : !VALUE_DOUBLE_EDEFAULT.equals(valueDouble);
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE_INT:
 				return VALUE_INT_EDEFAULT == null ? valueInt != null : !VALUE_INT_EDEFAULT.equals(valueInt);
-			case MobaPackage.MOBA_REST_ATTRIBUTE__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case MobaPackage.MOBA_REST_ATTRIBUTE__VALUE:
 				return VALUE_EDEFAULT == null ? getValue() != null : !VALUE_EDEFAULT.equals(getValue());
 			case MobaPackage.MOBA_REST_ATTRIBUTE__FORMAT_STRING:
@@ -623,8 +616,8 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nameString: ");
-		result.append(nameString);
+		result.append(" (keyString: ");
+		result.append(keyString);
 		result.append(", valueString: ");
 		result.append(valueString);
 		result.append(", valueDouble: ");
@@ -636,7 +629,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 		result.append(')');
 		return result.toString();
 	}
-	
+
 	@Override
 	public ValueType getValueType() {
 		if (getValueConst() != null) {
@@ -649,7 +642,7 @@ public class MobaRESTAttributeImpl extends MinimalEObjectImpl.Container implemen
 			return ValueType.STRING;
 		}
 	}
-	
+
 	@Override
 	public String getFormat() {
 		if (getFormatConst() != null) {

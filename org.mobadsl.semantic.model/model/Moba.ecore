@@ -201,6 +201,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="headers" upperBound="-1"
         eType="#//MobaRESTHeader" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorization" eType="#//MobaAuthorization"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTPayloadDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dto" eType="#//MobaDto"/>
@@ -213,29 +214,39 @@
     <eLiterals name="DELETE" value="2" literal="DELETE"/>
     <eLiterals name="POST" value="3" literal="POST"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTAbstractAttribute" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aliasString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aliasConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attachment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTAttribute" eSuperTypes="#//MobaRESTAbstractAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaDataType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nameConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueConst" eType="#//MobaConstant"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueDouble" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueInt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formatConst" eType="#//MobaConstant"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaRESTDtoAttribute" eSuperTypes="#//MobaRESTAbstractAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtoFeature" eType="#//MobaDtoFeature"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTHeader">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentTypeHeader" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rawHeader" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nameConst" eType="#//MobaConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyConst" eType="#//MobaConstant"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueConst" eType="#//MobaConstant"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
@@ -243,8 +254,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTCustomService" eSuperTypes="#//MobaREST">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//MobaRESTMethods"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//MobaRESTAttribute" containment="true"/>
+        eType="#//MobaRESTAbstractAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MobaRESTCustomService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multipartParameters" upperBound="-1"
+        eType="#//MobaRESTAbstractAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaRESTWorkflow" eSuperTypes="#//MobaREST">
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"

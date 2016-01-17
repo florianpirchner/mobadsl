@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.mobadsl.semantic.model.moba.MobaApplication;
 import org.mobadsl.semantic.model.moba.MobaMultiplicityAble;
 import org.mobadsl.semantic.model.moba.RecursionException;
@@ -115,7 +116,7 @@ public class MobaUtil {
 	 * @param nameAtt
 	 * @return
 	 */
-	public static <T extends EObject> List<T> getGenFeatures(List<T> allFeatures, EAttribute nameAtt) {
+	public static <T extends EObject> List<T> getGenFeatures(List<T> allFeatures, EStructuralFeature nameAtt) {
 
 		List<T> result = new ArrayList<>(allFeatures);
 
@@ -136,7 +137,7 @@ public class MobaUtil {
 		return result;
 	}
 
-	private static <T extends EObject> int indexOfFirstOccurence(List<T> result, T feature, EAttribute valueAtt) {
+	private static <T extends EObject> int indexOfFirstOccurence(List<T> result, T feature, EStructuralFeature valueAtt) {
 		// get the value of the feature to compare
 		Object featureValue = feature.eGet(valueAtt);
 		// find the first feature with a matching value
