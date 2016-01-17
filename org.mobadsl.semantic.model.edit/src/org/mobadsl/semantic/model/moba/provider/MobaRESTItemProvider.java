@@ -179,6 +179,7 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__REQUEST_DTO);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__RESPONSE_DTO);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__ERROR_DTO);
+			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__CONTEXT_DTO);
 			childrenFeatures.add(MobaPackage.Literals.MOBA_REST__HEADERS);
 		}
 		return childrenFeatures;
@@ -233,6 +234,7 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 			case MobaPackage.MOBA_REST__REQUEST_DTO:
 			case MobaPackage.MOBA_REST__RESPONSE_DTO:
 			case MobaPackage.MOBA_REST__ERROR_DTO:
+			case MobaPackage.MOBA_REST__CONTEXT_DTO:
 			case MobaPackage.MOBA_REST__HEADERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -268,6 +270,11 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(MobaPackage.Literals.MOBA_REST__CONTEXT_DTO,
+				 MobaFactory.eINSTANCE.createMobaRESTPayloadDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(MobaPackage.Literals.MOBA_REST__HEADERS,
 				 MobaFactory.eINSTANCE.createMobaRESTHeader()));
 	}
@@ -286,7 +293,8 @@ public class MobaRESTItemProvider extends MobaApplicationFeatureItemProvider {
 		boolean qualify =
 			childFeature == MobaPackage.Literals.MOBA_REST__REQUEST_DTO ||
 			childFeature == MobaPackage.Literals.MOBA_REST__RESPONSE_DTO ||
-			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO;
+			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO ||
+			childFeature == MobaPackage.Literals.MOBA_REST__CONTEXT_DTO;
 
 		if (qualify) {
 			return getString

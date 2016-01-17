@@ -156,7 +156,8 @@ public class MobaRESTWorkflowItemProvider extends MobaRESTItemProvider {
 		boolean qualify =
 			childFeature == MobaPackage.Literals.MOBA_REST__REQUEST_DTO ||
 			childFeature == MobaPackage.Literals.MOBA_REST__RESPONSE_DTO ||
-			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO;
+			childFeature == MobaPackage.Literals.MOBA_REST__ERROR_DTO ||
+			childFeature == MobaPackage.Literals.MOBA_REST__CONTEXT_DTO;
 
 		if (qualify) {
 			return getString

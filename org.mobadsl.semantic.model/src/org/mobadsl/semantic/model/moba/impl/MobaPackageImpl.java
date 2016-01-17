@@ -1875,7 +1875,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaREST_Headers() {
+	public EReference getMobaREST_ContextDto() {
 		return (EReference)mobaRESTEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1884,7 +1884,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMobaREST_Authorization() {
+	public EReference getMobaREST_Headers() {
 		return (EReference)mobaRESTEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1893,8 +1893,17 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMobaREST_Authorization() {
+		return (EReference)mobaRESTEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getMobaREST_Path() {
-		return (EAttribute)mobaRESTEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)mobaRESTEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2694,35 +2703,8 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMobaQueueReference_Cascading() {
-		return (EAttribute)mobaQueueReferenceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMobaQueueReference_Lazy() {
-		return (EAttribute)mobaQueueReferenceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMobaQueueReference_Transient() {
-		return (EAttribute)mobaQueueReferenceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMobaQueueReference_Type() {
-		return (EReference)mobaQueueReferenceEClass.getEStructuralFeatures().get(3);
+	public EReference getMobaQueueReference_RestService() {
+		return (EReference)mobaQueueReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3731,6 +3713,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		createEReference(mobaRESTEClass, MOBA_REST__REQUEST_DTO);
 		createEReference(mobaRESTEClass, MOBA_REST__RESPONSE_DTO);
 		createEReference(mobaRESTEClass, MOBA_REST__ERROR_DTO);
+		createEReference(mobaRESTEClass, MOBA_REST__CONTEXT_DTO);
 		createEReference(mobaRESTEClass, MOBA_REST__HEADERS);
 		createEReference(mobaRESTEClass, MOBA_REST__AUTHORIZATION);
 		createEAttribute(mobaRESTEClass, MOBA_REST__PATH);
@@ -3842,10 +3825,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaQueueFeatureEClass = createEClass(MOBA_QUEUE_FEATURE);
 
 		mobaQueueReferenceEClass = createEClass(MOBA_QUEUE_REFERENCE);
-		createEAttribute(mobaQueueReferenceEClass, MOBA_QUEUE_REFERENCE__CASCADING);
-		createEAttribute(mobaQueueReferenceEClass, MOBA_QUEUE_REFERENCE__LAZY);
-		createEAttribute(mobaQueueReferenceEClass, MOBA_QUEUE_REFERENCE__TRANSIENT);
-		createEReference(mobaQueueReferenceEClass, MOBA_QUEUE_REFERENCE__TYPE);
+		createEReference(mobaQueueReferenceEClass, MOBA_QUEUE_REFERENCE__REST_SERVICE);
 
 		mobaMuliplicityEClass = createEClass(MOBA_MULIPLICITY);
 		createEAttribute(mobaMuliplicityEClass, MOBA_MULIPLICITY__LOWER);
@@ -4041,7 +4021,6 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		mobaDtoEmbeddableEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
 		mobaQueueFeatureEClass.getESuperTypes().add(this.getMobaFeature());
 		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaQueueFeature());
-		mobaQueueReferenceEClass.getESuperTypes().add(this.getMobaMultiplicityAble());
 		mobaRegexpConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
 		mobaMinConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
 		mobaMaxConstraintEClass.getESuperTypes().add(this.getMobaConstraint());
@@ -4237,6 +4216,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEReference(getMobaREST_RequestDto(), this.getMobaRESTPayloadDefinition(), null, "requestDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaREST_ResponseDto(), this.getMobaRESTPayloadDefinition(), null, "responseDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaREST_ErrorDto(), this.getMobaRESTPayloadDefinition(), null, "errorDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaREST_ContextDto(), this.getMobaRESTPayloadDefinition(), null, "contextDto", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaREST_Headers(), this.getMobaRESTHeader(), null, "headers", null, 0, -1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobaREST_Authorization(), this.getMobaAuthorization(), null, "authorization", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobaREST_Path(), ecorePackage.getEString(), "path", null, 0, 1, MobaREST.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4348,10 +4328,7 @@ public class MobaPackageImpl extends EPackageImpl implements MobaPackage {
 		initEClass(mobaQueueFeatureEClass, MobaQueueFeature.class, "MobaQueueFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mobaQueueReferenceEClass, MobaQueueReference.class, "MobaQueueReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobaQueueReference_Cascading(), ecorePackage.getEBoolean(), "cascading", null, 0, 1, MobaQueueReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaQueueReference_Lazy(), ecorePackage.getEBoolean(), "lazy", null, 0, 1, MobaQueueReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobaQueueReference_Transient(), ecorePackage.getEBoolean(), "transient", null, 0, 1, MobaQueueReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobaQueueReference_Type(), this.getMobaData(), null, "type", null, 0, 1, MobaQueueReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobaQueueReference_RestService(), this.getMobaREST(), null, "restService", null, 0, 1, MobaQueueReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobaMuliplicityEClass, MobaMuliplicity.class, "MobaMuliplicity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMobaMuliplicity_Lower(), this.getMobaLowerBound(), "lower", null, 0, 1, MobaMuliplicity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

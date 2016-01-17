@@ -153,6 +153,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'path' '=' path=STRING
@@ -169,13 +170,14 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('multipart' '{' '}' (('headers' '{' '}') | ('parameters' '{' '}'))*)*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'method' '=' operation=MobaRESTMethods
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'path' '=' path=STRING
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) '}' (rule end)
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'method' '=' operation=MobaRESTMethods
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'path' '=' path=STRING
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}') | ('parameters' '{' '}'))* (ambiguity) '}' (rule end)
 	 */
 	protected void emit_MobaRESTCustomService___MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1_RightCurlyBracketKeyword_6_3_3_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3___or___ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3____a__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -187,6 +189,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}') | ('multipart' '{' '}'))* (ambiguity) 'path' '=' path=STRING
@@ -204,6 +207,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     authorization=[MobaAuthorization|CONSTANT] (('parameters' '{' '}') | ('multipart' '{' '}'))* 'headers' '{' (ambiguity) headers+=MobaRestHeader
+	 *     contextDto=MobaRESTPayloadDefinition (('parameters' '{' '}') | ('multipart' '{' '}'))* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     errorDto=MobaRESTPayloadDefinition (('parameters' '{' '}') | ('multipart' '{' '}'))* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     friends+=MobaFriend ')' '{' (('parameters' '{' '}') | ('multipart' '{' '}'))* 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 *     headers+=MobaRestHeader (ambiguity) headers+=MobaRestHeader
@@ -235,7 +239,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' (('parameters' '{' '}')? ('multipart' '{' '}')?)+ 'headers' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('parameters' '{' '}')? ('multipart' '{' '}')?)+ 'headers' '{' (ambiguity) headers+=MobaRestHeader
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('parameters' '{' '}')? ('multipart' '{' '}')?)+ 'headers' '{' (ambiguity) headers+=MobaRestHeader
 	 */
 	protected void emit_MobaRESTCustomService___RightCurlyBracketKeyword_6_1_3_____ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3__q___MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1_RightCurlyBracketKeyword_6_3_3__q__p_HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -247,6 +251,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     authorization=[MobaAuthorization|CONSTANT] (('headers' '{' '}') | ('multipart' '{' '}'))* 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
+	 *     contextDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('multipart' '{' '}'))* 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
 	 *     errorDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('multipart' '{' '}'))* 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
 	 *     friends+=MobaFriend ')' '{' (('headers' '{' '}') | ('multipart' '{' '}'))* 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
 	 *     name=ID '{' (('headers' '{' '}') | ('multipart' '{' '}'))* 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
@@ -267,7 +272,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' (('headers' '{' '}')? ('multipart' '{' '}')?)+ 'parameters' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}')? ('multipart' '{' '}')?)+ 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (('headers' '{' '}')? ('multipart' '{' '}')?)+ 'parameters' '{' (ambiguity) parameters+=MobaRESTAbstractAttribute
 	 */
 	protected void emit_MobaRESTCustomService___RightCurlyBracketKeyword_6_2_3_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__q___MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1_RightCurlyBracketKeyword_6_3_3__q__p_ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -289,17 +294,18 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     authorization=[MobaAuthorization|CONSTANT] (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     errorDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     friends+=MobaFriend ')' '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     name=ID '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     operation=MobaRESTMethods (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     parameters+=MobaRESTAbstractMultipartAttribute (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     path=STRING (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     properties+=MobaProperty ']' '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     requestDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     responseDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
-	 *     superType=[MobaRESTCustomService|ID] '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
+	 *     authorization=[MobaAuthorization|CONSTANT] (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     contextDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     errorDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     friends+=MobaFriend ')' '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     name=ID '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     operation=MobaRESTMethods (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     path=STRING (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     properties+=MobaProperty ']' '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     requestDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     responseDto=MobaRESTPayloadDefinition (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     superType=[MobaRESTCustomService|ID] '{' (('headers' '{' '}') | ('parameters' '{' '}'))* 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
 	 */
 	protected void emit_MobaRESTCustomService___RightCurlyBracketKeyword_6_3_3_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3___or___ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3____a_MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -310,7 +316,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' (('headers' '{' '}')? ('parameters' '{' '}')?)+ 'multipart' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}')? ('parameters' '{' '}')?)+ 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
+	 *     parameters+=MobaRESTAbstractAttribute '}' (('headers' '{' '}')? ('parameters' '{' '}')?)+ 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
 	 */
 	protected void emit_MobaRESTCustomService___RightCurlyBracketKeyword_6_3_3_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__q___ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3__q__p_MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -321,7 +327,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('}' (('parameters' '{' '}')? ('headers' '{' '}')?)+ 'multipart' '{')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}')? ('headers' '{' '}')?)+ 'multipart' '{' (ambiguity) parameters+=MobaRESTAbstractMultipartAttribute
+	 *     headers+=MobaRestHeader '}' (('parameters' '{' '}')? ('headers' '{' '}')?)+ 'multipart' '{' (ambiguity) multipartParameters+=MobaRESTAbstractMultipartAttribute
 	 */
 	protected void emit_MobaRESTCustomService___RightCurlyBracketKeyword_6_3_3_____ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3__q___HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__q__p_MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -333,11 +339,13 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
 	 *     name=ID '{' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
 	 *     operation=MobaRESTMethods (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
 	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
 	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) ('parameters' '{' '}' (ambiguity))* 'path' '=' path=STRING
@@ -360,13 +368,23 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'path' '=' path=STRING
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) '}' (rule end)
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'path' '=' path=STRING
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'path' '=' path=STRING
@@ -374,6 +392,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'path' '=' path=STRING
@@ -381,6 +400,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     friends+=MobaFriend ')' '{' (ambiguity) '}' (rule end)
 	 *     name=ID '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     name=ID '{' (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     name=ID '{' (ambiguity) 'path' '=' path=STRING
@@ -388,6 +408,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     name=ID '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     name=ID '{' (ambiguity) '}' (rule end)
 	 *     operation=MobaRESTMethods (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     operation=MobaRESTMethods (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     operation=MobaRESTMethods (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     operation=MobaRESTMethods (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     operation=MobaRESTMethods (ambiguity) 'path' '=' path=STRING
@@ -395,6 +416,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     operation=MobaRESTMethods (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     operation=MobaRESTMethods (ambiguity) '}' (rule end)
 	 *     path=STRING (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     path=STRING (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     path=STRING (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     path=STRING (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     path=STRING (ambiguity) 'path' '=' path=STRING
@@ -402,6 +424,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     path=STRING (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     path=STRING (ambiguity) '}' (rule end)
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     properties+=MobaProperty ']' '{' (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'path' '=' path=STRING
@@ -409,6 +432,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     properties+=MobaProperty ']' '{' (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     properties+=MobaProperty ']' '{' (ambiguity) '}' (rule end)
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'path' '=' path=STRING
@@ -416,6 +440,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'path' '=' path=STRING
@@ -423,6 +448,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
 	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) '}' (rule end)
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'method' '=' operation=MobaRESTMethods
 	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'path' '=' path=STRING
@@ -439,23 +465,25 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (('headers' '{' '}') | ('parameters' '{' '}'))*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     friends+=MobaFriend ')' '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     name=ID '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     operation=MobaRESTMethods (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'path' '=' path=STRING
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* '}' (rule end)
-	 *     path=STRING (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     properties+=MobaProperty ']' '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
-	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
+	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     friends+=MobaFriend ')' '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'path' '=' path=STRING
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'requestDto' '=' requestDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* 'responseDto' '=' responseDto=MobaRESTPayloadDefinition
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) ('multipart' '{' '}' (ambiguity))* '}' (rule end)
+	 *     name=ID '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     operation=MobaRESTMethods (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     path=STRING (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     properties+=MobaProperty ']' '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     requestDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     responseDto=MobaRESTPayloadDefinition (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
+	 *     superType=[MobaRESTCustomService|ID] '{' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
 	 */
 	protected void emit_MobaRESTCustomService_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3___or___ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3____a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -466,7 +494,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (('headers' '{' '}')? ('multipart' '{' '}')?)+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) 'parameters' '{' ('}' (ambiguity) 'parameters' '{')* parameters+=MobaRESTAbstractAttribute
 	 */
 	protected void emit_MobaRESTCustomService_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__q___MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1_RightCurlyBracketKeyword_6_3_3__q__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -477,7 +505,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (('headers' '{' '}')? ('parameters' '{' '}')?)+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
+	 *     parameters+=MobaRESTAbstractAttribute '}' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
 	 */
 	protected void emit_MobaRESTCustomService_____HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__q___ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3__q__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -489,9 +517,11 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     authorization=[MobaAuthorization|CONSTANT] (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
+	 *     contextDto=MobaRESTPayloadDefinition (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 *     errorDto=MobaRESTPayloadDefinition (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 *     friends+=MobaFriend ')' '{' (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'autorization' '=' authorization=[MobaAuthorization|CONSTANT]
+	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'contextDto' '=' contextDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'errorDto' '=' errorDto=MobaRESTPayloadDefinition
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'method' '=' operation=MobaRESTMethods
 	 *     headers+=MobaRestHeader '}' (ambiguity) ('headers' '{' '}' (ambiguity))* 'path' '=' path=STRING
@@ -537,7 +567,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (('parameters' '{' '}')? ('headers' '{' '}')?)+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     headers+=MobaRestHeader '}' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* parameters+=MobaRESTAbstractMultipartAttribute
+	 *     headers+=MobaRestHeader '}' (ambiguity) 'multipart' '{' ('}' (ambiguity) 'multipart' '{')* multipartParameters+=MobaRESTAbstractMultipartAttribute
 	 */
 	protected void emit_MobaRESTCustomService_____ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3__q___HeadersKeyword_6_1_0_LeftCurlyBracketKeyword_6_1_1_RightCurlyBracketKeyword_6_1_3__q__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -548,7 +578,7 @@ public class MobaSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (('parameters' '{' '}')? ('multipart' '{' '}')?)+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     parameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
+	 *     multipartParameters+=MobaRESTAbstractMultipartAttribute '}' (ambiguity) 'headers' '{' ('}' (ambiguity) 'headers' '{')* headers+=MobaRestHeader
 	 */
 	protected void emit_MobaRESTCustomService_____ParametersKeyword_6_2_0_LeftCurlyBracketKeyword_6_2_1_RightCurlyBracketKeyword_6_2_3__q___MultipartKeyword_6_3_0_LeftCurlyBracketKeyword_6_3_1_RightCurlyBracketKeyword_6_3_3__q__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

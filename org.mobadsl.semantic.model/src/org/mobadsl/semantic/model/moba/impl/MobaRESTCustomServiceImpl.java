@@ -29,27 +29,18 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getOperation
- * <em>Operation</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getParameters
- * <em>Parameters</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getSuperType
- * <em>Super Type</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getMultipartParameters
- * <em>Multipart Parameters</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getOperation <em>Operation</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTCustomServiceImpl#getMultipartParameters <em>Multipart Parameters</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTCustomService {
 	/**
-	 * The default value of the '{@link #getOperation() <em>Operation</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getOperation() <em>Operation</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getOperation()
 	 * @generated
 	 * @ordered
@@ -57,9 +48,8 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	protected static final MobaRESTMethods OPERATION_EDEFAULT = MobaRESTMethods.GET;
 
 	/**
-	 * The cached value of the '{@link #getOperation() <em>Operation</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getOperation()
 	 * @generated
 	 * @ordered
@@ -67,9 +57,8 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	protected MobaRESTMethods operation = OPERATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getParameters()
 	 * @generated
 	 * @ordered
@@ -77,9 +66,8 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 	protected EList<MobaRESTAbstractAttribute> parameters;
 
 	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSuperType()
 	 * @generated
 	 * @ordered
@@ -99,7 +87,6 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected MobaRESTCustomServiceImpl() {
@@ -108,7 +95,6 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -118,7 +104,6 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaRESTMethods getOperation() {
@@ -127,43 +112,37 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setOperation(MobaRESTMethods newOperation) {
 		MobaRESTMethods oldOperation = operation;
 		operation = newOperation == null ? OPERATION_EDEFAULT : newOperation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION,
-					oldOperation, operation));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION, oldOperation, operation));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaRESTAbstractAttribute> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectContainmentEList<MobaRESTAbstractAttribute>(MobaRESTAbstractAttribute.class, this,
-					MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS);
+			parameters = new EObjectContainmentEList<MobaRESTAbstractAttribute>(MobaRESTAbstractAttribute.class, this, MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS);
 		}
 		return parameters;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaRESTCustomService getSuperType() {
 		if (superType != null && superType.eIsProxy()) {
-			InternalEObject oldSuperType = (InternalEObject) superType;
-			superType = (MobaRESTCustomService) eResolveProxy(oldSuperType);
+			InternalEObject oldSuperType = (InternalEObject)superType;
+			superType = (MobaRESTCustomService)eResolveProxy(oldSuperType);
 			if (superType != oldSuperType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE, oldSuperType, superType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE, oldSuperType, superType));
 			}
 		}
 		return superType;
@@ -171,7 +150,6 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MobaRESTCustomService basicGetSuperType() {
@@ -180,148 +158,136 @@ public class MobaRESTCustomServiceImpl extends MobaRESTImpl implements MobaRESTC
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setSuperType(MobaRESTCustomService newSuperType) {
 		MobaRESTCustomService oldSuperType = superType;
 		superType = newSuperType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE,
-					oldSuperType, superType));
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<MobaRESTAbstractAttribute> getMultipartParameters() {
 		if (multipartParameters == null) {
-			multipartParameters = new EObjectContainmentEList<MobaRESTAbstractAttribute>(
-					MobaRESTAbstractAttribute.class, this, MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS);
+			multipartParameters = new EObjectContainmentEList<MobaRESTAbstractAttribute>(MobaRESTAbstractAttribute.class, this, MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS);
 		}
 		return multipartParameters;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
-			return ((InternalEList<?>) getParameters()).basicRemove(otherEnd, msgs);
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
-			return ((InternalEList<?>) getMultipartParameters()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
+				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
+				return ((InternalEList<?>)getMultipartParameters()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
-			return getOperation();
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
-			return getParameters();
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
-			if (resolve)
-				return getSuperType();
-			return basicGetSuperType();
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
-			return getMultipartParameters();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
+				return getOperation();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
+				return getParameters();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
+				if (resolve) return getSuperType();
+				return basicGetSuperType();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
+				return getMultipartParameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
-			setOperation((MobaRESTMethods) newValue);
-			return;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
-			getParameters().clear();
-			getParameters().addAll((Collection<? extends MobaRESTAbstractAttribute>) newValue);
-			return;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
-			setSuperType((MobaRESTCustomService) newValue);
-			return;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
-			getMultipartParameters().clear();
-			getMultipartParameters().addAll((Collection<? extends MobaRESTAbstractAttribute>) newValue);
-			return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
+				setOperation((MobaRESTMethods)newValue);
+				return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
+				getParameters().clear();
+				getParameters().addAll((Collection<? extends MobaRESTAbstractAttribute>)newValue);
+				return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
+				setSuperType((MobaRESTCustomService)newValue);
+				return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
+				getMultipartParameters().clear();
+				getMultipartParameters().addAll((Collection<? extends MobaRESTAbstractAttribute>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
-			setOperation(OPERATION_EDEFAULT);
-			return;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
-			getParameters().clear();
-			return;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
-			setSuperType((MobaRESTCustomService) null);
-			return;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
-			getMultipartParameters().clear();
-			return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
+				setOperation(OPERATION_EDEFAULT);
+				return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
+				getParameters().clear();
+				return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
+				setSuperType((MobaRESTCustomService)null);
+				return;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
+				getMultipartParameters().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
-			return operation != OPERATION_EDEFAULT;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
-			return parameters != null && !parameters.isEmpty();
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
-			return superType != null;
-		case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
-			return multipartParameters != null && !multipartParameters.isEmpty();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__OPERATION:
+				return operation != OPERATION_EDEFAULT;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__PARAMETERS:
+				return parameters != null && !parameters.isEmpty();
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__SUPER_TYPE:
+				return superType != null;
+			case MobaPackage.MOBA_REST_CUSTOM_SERVICE__MULTIPART_PARAMETERS:
+				return multipartParameters != null && !multipartParameters.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (operation: ");

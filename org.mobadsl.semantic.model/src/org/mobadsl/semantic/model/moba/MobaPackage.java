@@ -2651,13 +2651,22 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST__ERROR_DTO = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Context Dto</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST__CONTEXT_DTO = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Headers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST__HEADERS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 6;
+	int MOBA_REST__HEADERS = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Authorization</b></em>' reference.
@@ -2666,7 +2675,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST__AUTHORIZATION = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 7;
+	int MOBA_REST__AUTHORIZATION = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Path</b></em>' attribute.
@@ -2675,7 +2684,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST__PATH = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 8;
+	int MOBA_REST__PATH = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>REST</em>' class.
@@ -2684,7 +2693,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_REST_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 9;
+	int MOBA_REST_FEATURE_COUNT = MOBA_APPLICATION_FEATURE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Dto</b></em>' reference.
@@ -3149,6 +3158,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_CUSTOM_SERVICE__ERROR_DTO = MOBA_REST__ERROR_DTO;
 
 	/**
+	 * The feature id for the '<em><b>Context Dto</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_CUSTOM_SERVICE__CONTEXT_DTO = MOBA_REST__CONTEXT_DTO;
+
+	/**
 	 * The feature id for the '<em><b>Headers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3293,6 +3311,15 @@ public interface MobaPackage extends EPackage {
 	int MOBA_REST_WORKFLOW__ERROR_DTO = MOBA_REST__ERROR_DTO;
 
 	/**
+	 * The feature id for the '<em><b>Context Dto</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_WORKFLOW__CONTEXT_DTO = MOBA_REST__CONTEXT_DTO;
+
+	/**
 	 * The feature id for the '<em><b>Headers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3417,6 +3444,15 @@ public interface MobaPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOBA_REST_CRUD__ERROR_DTO = MOBA_REST__ERROR_DTO;
+
+	/**
+	 * The feature id for the '<em><b>Context Dto</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOBA_REST_CRUD__CONTEXT_DTO = MOBA_REST__CONTEXT_DTO;
 
 	/**
 	 * The feature id for the '<em><b>Headers</b></em>' containment reference list.
@@ -4193,49 +4229,13 @@ public interface MobaPackage extends EPackage {
 	int MOBA_QUEUE_REFERENCE__NAME = MOBA_QUEUE_FEATURE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Multiplicity</b></em>' containment reference.
+	 * The feature id for the '<em><b>Rest Service</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE__MULTIPLICITY = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Cascading</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_QUEUE_REFERENCE__CASCADING = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Lazy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_QUEUE_REFERENCE__LAZY = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Transient</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_QUEUE_REFERENCE__TRANSIENT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOBA_QUEUE_REFERENCE__TYPE = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 4;
+	int MOBA_QUEUE_REFERENCE__REST_SERVICE = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Queue Reference</em>' class.
@@ -4244,7 +4244,7 @@ public interface MobaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBA_QUEUE_REFERENCE_FEATURE_COUNT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 5;
+	int MOBA_QUEUE_REFERENCE_FEATURE_COUNT = MOBA_QUEUE_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Lower</b></em>' attribute.
@@ -6669,6 +6669,17 @@ public interface MobaPackage extends EPackage {
 	EReference getMobaREST_ErrorDto();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.mobadsl.semantic.model.moba.MobaREST#getContextDto <em>Context Dto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Context Dto</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaREST#getContextDto()
+	 * @see #getMobaREST()
+	 * @generated
+	 */
+	EReference getMobaREST_ContextDto();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.mobadsl.semantic.model.moba.MobaREST#getHeaders <em>Headers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7650,48 +7661,15 @@ public interface MobaPackage extends EPackage {
 	EClass getMobaQueueReference();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaQueueReference#isCascading <em>Cascading</em>}'.
+	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaQueueReference#getRestService <em>Rest Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cascading</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaQueueReference#isCascading()
+	 * @return the meta object for the reference '<em>Rest Service</em>'.
+	 * @see org.mobadsl.semantic.model.moba.MobaQueueReference#getRestService()
 	 * @see #getMobaQueueReference()
 	 * @generated
 	 */
-	EAttribute getMobaQueueReference_Cascading();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaQueueReference#isLazy <em>Lazy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lazy</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaQueueReference#isLazy()
-	 * @see #getMobaQueueReference()
-	 * @generated
-	 */
-	EAttribute getMobaQueueReference_Lazy();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.mobadsl.semantic.model.moba.MobaQueueReference#isTransient <em>Transient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Transient</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaQueueReference#isTransient()
-	 * @see #getMobaQueueReference()
-	 * @generated
-	 */
-	EAttribute getMobaQueueReference_Transient();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.mobadsl.semantic.model.moba.MobaQueueReference#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see org.mobadsl.semantic.model.moba.MobaQueueReference#getType()
-	 * @see #getMobaQueueReference()
-	 * @generated
-	 */
-	EReference getMobaQueueReference_Type();
+	EReference getMobaQueueReference_RestService();
 
 	/**
 	 * Returns the meta object for class '{@link org.mobadsl.semantic.model.moba.MobaMuliplicity <em>Muliplicity</em>}'.
@@ -9679,6 +9657,14 @@ public interface MobaPackage extends EPackage {
 		EReference MOBA_REST__ERROR_DTO = eINSTANCE.getMobaREST_ErrorDto();
 
 		/**
+		 * The meta object literal for the '<em><b>Context Dto</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBA_REST__CONTEXT_DTO = eINSTANCE.getMobaREST_ContextDto();
+
+		/**
 		 * The meta object literal for the '<em><b>Headers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10447,36 +10433,12 @@ public interface MobaPackage extends EPackage {
 		EClass MOBA_QUEUE_REFERENCE = eINSTANCE.getMobaQueueReference();
 
 		/**
-		 * The meta object literal for the '<em><b>Cascading</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Rest Service</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MOBA_QUEUE_REFERENCE__CASCADING = eINSTANCE.getMobaQueueReference_Cascading();
-
-		/**
-		 * The meta object literal for the '<em><b>Lazy</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MOBA_QUEUE_REFERENCE__LAZY = eINSTANCE.getMobaQueueReference_Lazy();
-
-		/**
-		 * The meta object literal for the '<em><b>Transient</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MOBA_QUEUE_REFERENCE__TRANSIENT = eINSTANCE.getMobaQueueReference_Transient();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MOBA_QUEUE_REFERENCE__TYPE = eINSTANCE.getMobaQueueReference_Type();
+		EReference MOBA_QUEUE_REFERENCE__REST_SERVICE = eINSTANCE.getMobaQueueReference_RestService();
 
 		/**
 		 * The meta object literal for the '{@link org.mobadsl.semantic.model.moba.impl.MobaMuliplicityImpl <em>Muliplicity</em>}' class.

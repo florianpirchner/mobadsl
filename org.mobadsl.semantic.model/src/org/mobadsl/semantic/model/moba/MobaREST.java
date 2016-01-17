@@ -22,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getRequestDto <em>Request Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getResponseDto <em>Response Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getErrorDto <em>Error Dto</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getContextDto <em>Context Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getHeaders <em>Headers</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getAuthorization <em>Authorization</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.MobaREST#getPath <em>Path</em>}</li>
@@ -187,6 +188,32 @@ public interface MobaREST extends MobaApplicationFeature {
 	 * @generated
 	 */
 	void setErrorDto(MobaRESTPayloadDefinition value);
+
+	/**
+	 * Returns the value of the '<em><b>Context Dto</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Context Dto</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Context Dto</em>' containment reference.
+	 * @see #setContextDto(MobaRESTPayloadDefinition)
+	 * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaREST_ContextDto()
+	 * @model containment="true"
+	 * @generated
+	 */
+	MobaRESTPayloadDefinition getContextDto();
+
+	/**
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaREST#getContextDto <em>Context Dto</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Context Dto</em>' containment reference.
+	 * @see #getContextDto()
+	 * @generated
+	 */
+	void setContextDto(MobaRESTPayloadDefinition value);
 
 	/**
 	 * Returns the value of the '<em><b>Headers</b></em>' containment reference list.

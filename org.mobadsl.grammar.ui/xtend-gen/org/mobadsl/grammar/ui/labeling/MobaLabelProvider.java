@@ -186,8 +186,8 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
   
   public StyledString text(final MobaQueueReference att) {
     String _name = att.getName();
-    MobaData _type = att.getType();
-    String _name_1 = this.name(_type);
+    MobaREST _restService = att.getRestService();
+    String _name_1 = _restService.getName();
     return this.getDisplayString(_name, _name_1);
   }
   
@@ -357,8 +357,8 @@ public class MobaLabelProvider extends DefaultEObjectLabelProvider {
   }
   
   public Object image(final MobaQueueReference ele) {
-    MobaData _type = ele.getType();
-    return super.doGetImage(_type);
+    MobaREST _restService = ele.getRestService();
+    return super.doGetImage(_restService);
   }
   
   public String image(final MobaRESTPayloadDefinition ele) {

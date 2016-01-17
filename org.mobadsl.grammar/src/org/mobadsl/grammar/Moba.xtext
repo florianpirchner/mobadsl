@@ -172,16 +172,15 @@ MobaREST:
 
 MobaRESTCustomService:
 	'rest' (bigData?='bigData')? name=ID ('extends' superType=[MobaRESTCustomService])? MobaFriendsAble '{'
-	(
-	('path' '=' path=STRING)? &
+	(('path' '=' path=STRING)? &
 	('headers' '{'
 	headers+=MobaRestHeader*
 	'}')? &
 	('parameters' '{'
-		parameters+=MobaRESTAbstractAttribute*
+	parameters+=MobaRESTAbstractAttribute*
 	'}')? &
 	('multipart' '{'
-		multipartParameters+=MobaRESTAbstractMultipartAttribute*
+	multipartParameters+=MobaRESTAbstractMultipartAttribute*
 	'}')? &
 	('autorization' '=' authorization=[MobaAuthorization|CONSTANT])?
 	&
@@ -191,6 +190,8 @@ MobaRESTCustomService:
 	&
 	('errorDto' '=' errorDto=MobaRESTPayloadDefinition)?
 	&
+	('contextDto' '=' contextDto=MobaRESTPayloadDefinition)?
+	&
 	('method' '=' operation=MobaRESTMethods)?)
 	'}';
 
@@ -198,27 +199,26 @@ MobaRESTPayloadDefinition:
 	dto=[MobaDto] ((array?='isArray')? & ('as' serializationType=[MobaTransportSerializationType|CONSTANT])?);
 
 MobaRESTAbstractAttribute:
-	MobaRESTAttribute | MobaRESTDtoAttribute
-;
+	MobaRESTAttribute | MobaRESTDtoAttribute;
 
 MobaRESTDtoAttribute:
-	'refParam' dtoFeature=[MobaDtoFeature] ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT]) ')')?
-;
+	'refParam' dtoFeature=[MobaDtoFeature] ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT]) ')')?;
 
 MobaRESTAttribute returns MobaRESTAttribute:
-	'param' type=[MobaDataType] (keyString=ID | keyConst=[MobaConstant|CONSTANT]) ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT])')')? ('=' (valueString=STRING |
+	'param' type=[MobaDataType] (keyString=ID | keyConst=[MobaConstant|CONSTANT]) ('alias' '(' (aliasString=STRING |
+	aliasConst=[MobaConstant|CONSTANT]) ')')? ('=' (valueString=STRING |
 	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
 MobaRESTAbstractMultipartAttribute returns MobaRESTAbstractAttribute:
-	MobaRESTMultipartAttribute | MobaRESTMultipartDtoAttribute
-;
+	MobaRESTMultipartAttribute | MobaRESTMultipartDtoAttribute;
 
 MobaRESTMultipartDtoAttribute returns MobaRESTDtoAttribute:
-	'refParam' (attachment?='attachment')? dtoFeature=[MobaDtoFeature] ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT]) ')')?
-;
+	'refParam' (attachment?='attachment')? dtoFeature=[MobaDtoFeature] ('alias' '(' (aliasString=STRING |
+	aliasConst=[MobaConstant|CONSTANT]) ')')?;
 
 MobaRESTMultipartAttribute returns MobaRESTAttribute:
-	'param' (attachment?='attachment')? type=[MobaDataType] (keyString=ID | keyConst=[MobaConstant|CONSTANT]) ('alias' '(' (aliasString=STRING | aliasConst=[MobaConstant|CONSTANT])')')? ('=' (valueString=STRING |
+	'param' (attachment?='attachment')? type=[MobaDataType] (keyString=ID | keyConst=[MobaConstant|CONSTANT]) ('alias' '('
+	(aliasString=STRING | aliasConst=[MobaConstant|CONSTANT]) ')')? ('=' (valueString=STRING |
 	valueInt=INT | valueDouble=DOUBLE | valueConst=[MobaConstant|CONSTANT]))?;
 
 MobaRestHeader returns MobaRESTHeader:
@@ -303,9 +303,7 @@ MobaQueueFeature:
 	MobaQueueReference;
 
 MobaQueueReference:
-	'ref' ((cascading?='cascading')? & (lazy?='lazy')? & (transient?='transient')?) type=[MobaData] MobaMultiplicityAble
-	name=ID
-	MobaFriendsAble;
+	'ref' restService=[MobaREST] name=ID MobaFriendsAble;
 
 MobaMuliplicity:
 	'[' (lower=MobaLowerBound) ('..' upper=MobaUpperBound)? ']';

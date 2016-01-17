@@ -156,7 +156,7 @@ public class MobaRESTAbstractAttributeItemProvider
 				 getString("_UI_MobaRESTAbstractAttribute_attachment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobaRESTAbstractAttribute_attachment_feature", "_UI_MobaRESTAbstractAttribute_type"),
 				 MobaPackage.Literals.MOBA_REST_ABSTRACT_ATTRIBUTE__ATTACHMENT,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,

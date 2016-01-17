@@ -224,7 +224,7 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_MobaFriendsAble_MobaQueue(context, (MobaQueue) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_QUEUE_REFERENCE:
-				sequence_MobaFriendsAble_MobaMultiplicityAble_MobaQueueReference(context, (MobaQueueReference) semanticObject); 
+				sequence_MobaFriendsAble_MobaQueueReference(context, (MobaQueueReference) semanticObject); 
 				return; 
 			case MobaPackage.MOBA_REST_ATTRIBUTE:
 				if (rule == grammarAccess.getMobaRESTAbstractAttributeRule()
@@ -727,25 +727,6 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     MobaQueueFeature returns MobaQueueReference
-	 *     MobaQueueReference returns MobaQueueReference
-	 *
-	 * Constraint:
-	 *     (
-	 *         (cascading?='cascading' | lazy?='lazy' | transient?='transient')* 
-	 *         type=[MobaData|ID] 
-	 *         multiplicity=MobaMuliplicity? 
-	 *         name=ID 
-	 *         ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*
-	 *     )
-	 */
-	protected void sequence_MobaFriendsAble_MobaMultiplicityAble_MobaQueueReference(ISerializationContext context, MobaQueueReference semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     MobaSettingsFeature returns MobaSettingsAttribute
 	 *     MobaSettingsAttribute returns MobaSettingsAttribute
 	 *
@@ -847,6 +828,19 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     MobaQueueFeature returns MobaQueueReference
+	 *     MobaQueueReference returns MobaQueueReference
+	 *
+	 * Constraint:
+	 *     (restService=[MobaREST|ID] name=ID ((friends+=MobaFriend friends+=MobaFriend*) | (properties+=MobaProperty properties+=MobaProperty*))*)
+	 */
+	protected void sequence_MobaFriendsAble_MobaQueueReference(ISerializationContext context, MobaQueueReference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MobaApplicationFeature returns MobaQueue
 	 *     MobaData returns MobaQueue
 	 *     MobaQueue returns MobaQueue
@@ -895,11 +889,12 @@ public class MobaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             path=STRING | 
 	 *             headers+=MobaRestHeader | 
 	 *             parameters+=MobaRESTAbstractAttribute | 
-	 *             parameters+=MobaRESTAbstractMultipartAttribute | 
+	 *             multipartParameters+=MobaRESTAbstractMultipartAttribute | 
 	 *             authorization=[MobaAuthorization|CONSTANT] | 
 	 *             requestDto=MobaRESTPayloadDefinition | 
 	 *             responseDto=MobaRESTPayloadDefinition | 
 	 *             errorDto=MobaRESTPayloadDefinition | 
+	 *             contextDto=MobaRESTPayloadDefinition | 
 	 *             operation=MobaRESTMethods
 	 *         )*
 	 *     )

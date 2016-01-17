@@ -14,16 +14,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getOperation
- * <em>Operation</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getParameters
- * <em>Parameters</em>}</li>
- * <li>{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getSuperType
- * <em>Super Type</em>}</li>
- * <li>
- * {@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getMultipartParameters
- * <em>Multipart Parameters</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getOperation <em>Operation</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getMultipartParameters <em>Multipart Parameters</em>}</li>
  * </ul>
  *
  * @see org.mobadsl.semantic.model.moba.MobaPackage#getMobaRESTCustomService()
@@ -102,13 +96,10 @@ public interface MobaRESTCustomService extends MobaREST {
 	MobaRESTCustomService getSuperType();
 
 	/**
-	 * Sets the value of the '
-	 * {@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getSuperType
-	 * <em>Super Type</em>}' reference. <!-- begin-user-doc --> <!--
+	 * Sets the value of the '{@link org.mobadsl.semantic.model.moba.MobaRESTCustomService#getSuperType <em>Super Type</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Super Type</em>' reference.
+	 * @param value the new value of the '<em>Super Type</em>' reference.
 	 * @see #getSuperType()
 	 * @generated
 	 */

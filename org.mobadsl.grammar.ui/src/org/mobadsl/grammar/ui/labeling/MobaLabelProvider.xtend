@@ -119,7 +119,7 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	def text(MobaQueueReference att) {
-		return att.name.getDisplayString(att.type.name)
+		return att.name.getDisplayString(att.restService.name)
 	}
 
 	def text(MobaRESTPayloadDefinition att) {
@@ -245,7 +245,7 @@ class MobaLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	def image(MobaQueueReference ele) {
-		return super.doGetImage(ele.type)
+		return super.doGetImage(ele.restService)
 	}
 
 	def image(MobaRESTPayloadDefinition ele) {

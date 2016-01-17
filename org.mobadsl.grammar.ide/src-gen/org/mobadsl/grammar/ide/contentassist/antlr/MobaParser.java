@@ -164,6 +164,7 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getGroup_6_6(), "rule__MobaRESTCustomService__Group_6_6__0");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getGroup_6_7(), "rule__MobaRESTCustomService__Group_6_7__0");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getGroup_6_8(), "rule__MobaRESTCustomService__Group_6_8__0");
+					put(grammarAccess.getMobaRESTCustomServiceAccess().getGroup_6_9(), "rule__MobaRESTCustomService__Group_6_9__0");
 					put(grammarAccess.getMobaRESTPayloadDefinitionAccess().getGroup(), "rule__MobaRESTPayloadDefinition__Group__0");
 					put(grammarAccess.getMobaRESTPayloadDefinitionAccess().getGroup_1_1(), "rule__MobaRESTPayloadDefinition__Group_1_1__0");
 					put(grammarAccess.getMobaRESTDtoAttributeAccess().getGroup(), "rule__MobaRESTDtoAttribute__Group__0");
@@ -337,12 +338,13 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getPathAssignment_6_0_2(), "rule__MobaRESTCustomService__PathAssignment_6_0_2");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getHeadersAssignment_6_1_2(), "rule__MobaRESTCustomService__HeadersAssignment_6_1_2");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getParametersAssignment_6_2_2(), "rule__MobaRESTCustomService__ParametersAssignment_6_2_2");
-					put(grammarAccess.getMobaRESTCustomServiceAccess().getParametersAssignment_6_3_2(), "rule__MobaRESTCustomService__ParametersAssignment_6_3_2");
+					put(grammarAccess.getMobaRESTCustomServiceAccess().getMultipartParametersAssignment_6_3_2(), "rule__MobaRESTCustomService__MultipartParametersAssignment_6_3_2");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getAuthorizationAssignment_6_4_2(), "rule__MobaRESTCustomService__AuthorizationAssignment_6_4_2");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getRequestDtoAssignment_6_5_2(), "rule__MobaRESTCustomService__RequestDtoAssignment_6_5_2");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getResponseDtoAssignment_6_6_2(), "rule__MobaRESTCustomService__ResponseDtoAssignment_6_6_2");
 					put(grammarAccess.getMobaRESTCustomServiceAccess().getErrorDtoAssignment_6_7_2(), "rule__MobaRESTCustomService__ErrorDtoAssignment_6_7_2");
-					put(grammarAccess.getMobaRESTCustomServiceAccess().getOperationAssignment_6_8_2(), "rule__MobaRESTCustomService__OperationAssignment_6_8_2");
+					put(grammarAccess.getMobaRESTCustomServiceAccess().getContextDtoAssignment_6_8_2(), "rule__MobaRESTCustomService__ContextDtoAssignment_6_8_2");
+					put(grammarAccess.getMobaRESTCustomServiceAccess().getOperationAssignment_6_9_2(), "rule__MobaRESTCustomService__OperationAssignment_6_9_2");
 					put(grammarAccess.getMobaRESTPayloadDefinitionAccess().getDtoAssignment_0(), "rule__MobaRESTPayloadDefinition__DtoAssignment_0");
 					put(grammarAccess.getMobaRESTPayloadDefinitionAccess().getArrayAssignment_1_0(), "rule__MobaRESTPayloadDefinition__ArrayAssignment_1_0");
 					put(grammarAccess.getMobaRESTPayloadDefinitionAccess().getSerializationTypeAssignment_1_1_1(), "rule__MobaRESTPayloadDefinition__SerializationTypeAssignment_1_1_1");
@@ -442,11 +444,8 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaDtoEmbeddableAccess().getTypeAssignment_2(), "rule__MobaDtoEmbeddable__TypeAssignment_2");
 					put(grammarAccess.getMobaDtoEmbeddableAccess().getNameAssignment_4(), "rule__MobaDtoEmbeddable__NameAssignment_4");
 					put(grammarAccess.getMobaDtoEmbeddableAccess().getAliasAssignment_5_2(), "rule__MobaDtoEmbeddable__AliasAssignment_5_2");
-					put(grammarAccess.getMobaQueueReferenceAccess().getCascadingAssignment_1_0(), "rule__MobaQueueReference__CascadingAssignment_1_0");
-					put(grammarAccess.getMobaQueueReferenceAccess().getLazyAssignment_1_1(), "rule__MobaQueueReference__LazyAssignment_1_1");
-					put(grammarAccess.getMobaQueueReferenceAccess().getTransientAssignment_1_2(), "rule__MobaQueueReference__TransientAssignment_1_2");
-					put(grammarAccess.getMobaQueueReferenceAccess().getTypeAssignment_2(), "rule__MobaQueueReference__TypeAssignment_2");
-					put(grammarAccess.getMobaQueueReferenceAccess().getNameAssignment_4(), "rule__MobaQueueReference__NameAssignment_4");
+					put(grammarAccess.getMobaQueueReferenceAccess().getRestServiceAssignment_1(), "rule__MobaQueueReference__RestServiceAssignment_1");
+					put(grammarAccess.getMobaQueueReferenceAccess().getNameAssignment_2(), "rule__MobaQueueReference__NameAssignment_2");
 					put(grammarAccess.getMobaMuliplicityAccess().getLowerAssignment_1(), "rule__MobaMuliplicity__LowerAssignment_1");
 					put(grammarAccess.getMobaMuliplicityAccess().getUpperAssignment_2_1(), "rule__MobaMuliplicity__UpperAssignment_2_1");
 					put(grammarAccess.getMobaRegexpConstraintAccess().getFilterStringAssignment_2_0(), "rule__MobaRegexpConstraint__FilterStringAssignment_2_0");
@@ -495,7 +494,6 @@ public class MobaParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_1(), "rule__MobaDtoAttribute__UnorderedGroup_1");
 					put(grammarAccess.getMobaDtoAttributeAccess().getUnorderedGroup_5(), "rule__MobaDtoAttribute__UnorderedGroup_5");
 					put(grammarAccess.getMobaDtoReferenceAccess().getUnorderedGroup_1(), "rule__MobaDtoReference__UnorderedGroup_1");
-					put(grammarAccess.getMobaQueueReferenceAccess().getUnorderedGroup_1(), "rule__MobaQueueReference__UnorderedGroup_1");
 				}
 			};
 		}

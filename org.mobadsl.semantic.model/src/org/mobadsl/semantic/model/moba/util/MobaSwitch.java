@@ -588,7 +588,6 @@ public class MobaSwitch<T> extends Switch<T> {
 				MobaQueueReference mobaQueueReference = (MobaQueueReference)theEObject;
 				T result = caseMobaQueueReference(mobaQueueReference);
 				if (result == null) result = caseMobaQueueFeature(mobaQueueReference);
-				if (result == null) result = caseMobaMultiplicityAble(mobaQueueReference);
 				if (result == null) result = caseMobaFeature(mobaQueueReference);
 				if (result == null) result = caseMobaFriendsAble(mobaQueueReference);
 				if (result == null) result = caseMobaPropertiesAble(mobaQueueReference);

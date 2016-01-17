@@ -198,6 +198,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="errorDto" eType="#//MobaRESTPayloadDefinition"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contextDto" eType="#//MobaRESTPayloadDefinition"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="headers" upperBound="-1"
         eType="#//MobaRESTHeader" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authorization" eType="#//MobaAuthorization"/>
@@ -323,11 +325,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaQueueFeature" abstract="true" eSuperTypes="#//MobaFeature"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MobaQueueReference" eSuperTypes="#//MobaQueueFeature #//MobaMultiplicityAble">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascading" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//MobaData"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MobaQueueReference" eSuperTypes="#//MobaQueueFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="restService" eType="#//MobaREST"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MobaMuliplicity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lower" eType="#//MobaLowerBound"/>

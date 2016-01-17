@@ -39,6 +39,7 @@ import org.mobadsl.semantic.model.moba.util.MobaUtil;
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getRequestDto <em>Request Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getResponseDto <em>Response Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getErrorDto <em>Error Dto</em>}</li>
+ *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getContextDto <em>Context Dto</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getHeaders <em>Headers</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getAuthorization <em>Authorization</em>}</li>
  *   <li>{@link org.mobadsl.semantic.model.moba.impl.MobaRESTImpl#getPath <em>Path</em>}</li>
@@ -136,6 +137,16 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * @ordered
 	 */
 	protected MobaRESTPayloadDefinition errorDto;
+
+	/**
+	 * The cached value of the '{@link #getContextDto() <em>Context Dto</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContextDto()
+	 * @generated
+	 * @ordered
+	 */
+	protected MobaRESTPayloadDefinition contextDto;
 
 	/**
 	 * The cached value of the '{@link #getHeaders() <em>Headers</em>}' containment reference list.
@@ -393,6 +404,49 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MobaRESTPayloadDefinition getContextDto() {
+		return contextDto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetContextDto(MobaRESTPayloadDefinition newContextDto, NotificationChain msgs) {
+		MobaRESTPayloadDefinition oldContextDto = contextDto;
+		contextDto = newContextDto;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__CONTEXT_DTO, oldContextDto, newContextDto);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContextDto(MobaRESTPayloadDefinition newContextDto) {
+		if (newContextDto != contextDto) {
+			NotificationChain msgs = null;
+			if (contextDto != null)
+				msgs = ((InternalEObject)contextDto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__CONTEXT_DTO, null, msgs);
+			if (newContextDto != null)
+				msgs = ((InternalEObject)newContextDto).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MobaPackage.MOBA_REST__CONTEXT_DTO, null, msgs);
+			msgs = basicSetContextDto(newContextDto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MobaPackage.MOBA_REST__CONTEXT_DTO, newContextDto, newContextDto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<MobaRESTHeader> getHeaders() {
 		if (headers == null) {
 			headers = new EObjectContainmentEList<MobaRESTHeader>(MobaRESTHeader.class, this, MobaPackage.MOBA_REST__HEADERS);
@@ -473,6 +527,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return basicSetResponseDto(null, msgs);
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				return basicSetErrorDto(null, msgs);
+			case MobaPackage.MOBA_REST__CONTEXT_DTO:
+				return basicSetContextDto(null, msgs);
 			case MobaPackage.MOBA_REST__HEADERS:
 				return ((InternalEList<?>)getHeaders()).basicRemove(otherEnd, msgs);
 		}
@@ -499,6 +555,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return getResponseDto();
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				return getErrorDto();
+			case MobaPackage.MOBA_REST__CONTEXT_DTO:
+				return getContextDto();
 			case MobaPackage.MOBA_REST__HEADERS:
 				return getHeaders();
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
@@ -536,6 +594,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return;
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				setErrorDto((MobaRESTPayloadDefinition)newValue);
+				return;
+			case MobaPackage.MOBA_REST__CONTEXT_DTO:
+				setContextDto((MobaRESTPayloadDefinition)newValue);
 				return;
 			case MobaPackage.MOBA_REST__HEADERS:
 				getHeaders().clear();
@@ -577,6 +638,9 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				setErrorDto((MobaRESTPayloadDefinition)null);
 				return;
+			case MobaPackage.MOBA_REST__CONTEXT_DTO:
+				setContextDto((MobaRESTPayloadDefinition)null);
+				return;
 			case MobaPackage.MOBA_REST__HEADERS:
 				getHeaders().clear();
 				return;
@@ -610,6 +674,8 @@ public abstract class MobaRESTImpl extends MobaApplicationFeatureImpl implements
 				return responseDto != null;
 			case MobaPackage.MOBA_REST__ERROR_DTO:
 				return errorDto != null;
+			case MobaPackage.MOBA_REST__CONTEXT_DTO:
+				return contextDto != null;
 			case MobaPackage.MOBA_REST__HEADERS:
 				return headers != null && !headers.isEmpty();
 			case MobaPackage.MOBA_REST__AUTHORIZATION:
